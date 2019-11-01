@@ -1,0 +1,327 @@
+{
+  "id": "maxlab",
+  "subnet": {
+    "192.168.9.0": {
+      "domain-name": "maxlab",
+      "dns": {
+        "domain-name-servers": [
+          "192.168.9.100",
+          "192.168.9.2",
+          "1.1.1.1"
+        ]
+      },
+      "dhcp_config": [
+        "ddns-update-style interim",
+        "authoritative"
+      ],
+      "dhcp_range": {
+        "start": 200,
+        "end": 240
+      },
+      "default-lease-time": 1440,
+      "max-lease-time": 1440,
+      "dhcp_options": {
+        "ip-forwarding": "off",
+        "routers": "192.168.9.2",
+        "broadcast-address": "192.168.9.255",
+        "subnet-mask": "255.255.255.0",
+        "ntp-servers": "192.168.9.2",
+        "pxe_options": {
+          "root-path": "/var/lib/tftpboot",
+          "filename": "/pxelinux.0",
+          "next-server": "192.168.9.102"
+        }
+      },
+      "nodes": {
+        "1": {
+          "nodename": "c110z",
+          "description": "Zyxel C110Z Centurylink Gateway",
+          "type": "appliances",
+          "group": "network-infra",
+          "os:": "Proprietary",
+          "mac_address:": ""
+        },
+        "2": {
+          "nodename": "firewall",
+          "description": "Netgear WNDR3700v2 Firewall (DD-WRT)",
+          "type": "appliances",
+          "group": "network-infra",
+          "os:": "DD-WRT",
+          "mac_address:": ""
+        },
+        "3": {
+          "nodename": "wap",
+          "description": "Netgear r6200v2 Wireless Access Point (DD-WRT)",
+          "type": "appliances",
+          "group": "network-infra",
+          "os:": "DD-WRT",
+          "mac_address:": ""
+        },
+        "20": {
+          "nodename": "metric_submit",
+          "description": "VIP for submitting metrics to Graphite",
+          "type": "vip",
+          "group": "vips",
+          "os:": "n/a",
+          "mac_address:": ""
+        },
+        "21": {
+          "nodename": "metric_query",
+          "description": "VIP for querying metrics from Graphite",
+          "type": "vip",
+          "group": "vips",
+          "os:": "n/a",
+          "mac_address:": ""
+        },
+        "22": {
+          "nodename": "graphite",
+          "description": "VIP for Graphite Cluster",
+          "type": "vip",
+          "group": "vips",
+          "os:": "n/a",
+          "mac_address:": ""
+        },
+        "23": {
+          "nodename": "grafana",
+          "description": "VIP for Grafana",
+          "type": "vip",
+          "group": "vips",
+          "os:": "n/a",
+          "mac_address:": ""
+        },
+        "35": {
+          "nodename": "macbook",
+          "description": "Macbook Pro 2012 (Wired IP)",
+          "type": "node",
+          "group": "laptops",
+          "os:": "MacOS",
+          "mac_address:": "0c:4d:e9:cb:52:1c"
+        },
+        "36": {
+          "nodename": "macbookwifi",
+          "description": "Macbook Pro 2012 (Wifi IP)",
+          "type": "node",
+          "group": "laptops",
+          "os:": "MacOS",
+          "mac_address:": "a4:5e:60:cb:3f:5d"
+        },
+        "40": {
+          "nodename": "sarko",
+          "description": "Toshiba Z40 laptop (Wired IP)",
+          "type": "node",
+          "group": "laptops",
+          "os:": "Fedora Linux",
+          "mac_address:": "b8:6b:23:1e:02:c6"
+        },
+        "41": {
+          "nodename": "sarkowifi",
+          "description": "Toshiba Z40 laptop (Wifi IP)",
+          "type": "node",
+          "group": "laptops",
+          "os:": "Fedora Linux",
+          "mac_address:": "a4:34:d9:6a:63:b9"
+        },
+        "42": {
+          "nodename": "macbooknext",
+          "description": "Macbook Pro Next Logo (Wired IP)",
+          "type": "node",
+          "group": "laptops",
+          "os:": "MacOS",
+          "mac_address:": "0c:4d:e9:cb:52:1c"
+        },
+        "43": {
+          "nodename": "macbooknextwifi",
+          "description": "Macbook Pro Next Logo (Wifi IP)",
+          "type": "node",
+          "group": "laptops",
+          "os:": "MacOS",
+          "mac_address:": "a4:5e:60:cb:3f:5d"
+        },
+        "50": {
+          "nodename": "mechsarko",
+          "description": "Toshiba Z40 laptop mech logo(Wired IP)",
+          "type": "node",
+          "group": "laptops",
+          "os:": "Fedora Linux",
+          "mac_address:": "a4:34:d9:6a:63:b9"
+        },
+        "51": {
+          "nodename": "mechsarkowifi",
+          "description": "Toshiba Z40 laptop mech logo (Wifi IP)",
+          "type": "node",
+          "group": "laptops",
+          "os:": "Fedora Linux",
+          "mac_address:": "44:85:00:4D:BF:B6"
+        },
+        "61": {
+          "nodename": "maxwaxi5",
+          "description": "Apple iPhone 5",
+          "type": "mobile",
+          "group": "mobile",
+          "os:": "ios",
+          "mac_address:": "54:26:96:1b:17:a6"
+        },
+        "62": {
+          "nodename": "maxwaxxr",
+          "description": "Apple iPhone Xr",
+          "type": "mobile",
+          "group": "mobile",
+          "os:": "ios",
+          "mac_address:": "D8:1C:79:90:F1:9A"
+        },
+        "63": {
+          "nodename": "ipad",
+          "description": "Apple iPad (2019 instance)",
+          "type": "mobile",
+          "group": "mobile",
+          "os:": "ios",
+          "mac_address:": "98:46:0a:7f:1d:0c"
+        },
+        "80": {
+          "nodename": "z400",
+          "description": "HP Z400 Workstation",
+          "type": "node",
+          "group": "hypervisor",
+          "os:": "Proxmox",
+          "mac_address:": "00:1a:4b:0c:b8:d4"
+        },
+        "81": {
+          "nodename": "lenovoflash1",
+          "description": "Lenovo B590 Hypervisor",
+          "type": "node",
+          "group": "hypervisor",
+          "os:": "Proxmox",
+          "mac_address:": "3c:97:0e:a8:f2:e2"
+        },
+        "82": {
+          "nodename": "lenovoflash2",
+          "description": "Lenovo B590 Hypervisor",
+          "type": "node",
+          "group": "hypervisor",
+          "os:": "Proxmox",
+          "mac_address:": "3c:97:0e:a7:8f:b8"
+        },
+        "83": {
+          "nodename": "lenovoflash1",
+          "description": "Lenovo B590 Hypervisor",
+          "type": "node",
+          "group": "hypervisor",
+          "os:": "Proxmox",
+          "mac_address:": "3c:97:0e:a7:8f:a6"
+        },
+        "91": {
+          "nodename": "lenovohdd1",
+          "description": "Lenovo B590 Hypervisor",
+          "type": "node",
+          "group": "hypervisor",
+          "os:": "Proxmox",
+          "mac_address:": "3c:97:0e:a7:90:09"
+        },
+        "92": {
+          "nodename": "lenovohdd2",
+          "description": "Lenovo B590 Hypervisor",
+          "type": "node",
+          "group": "hypervisor",
+          "os:": "Proxmox",
+          "mac_address:": "3c:97:0e:a7:90:aa"
+        },
+        "93": {
+          "nodename": "lenovohdd3",
+          "description": "Lenovo B590 Hypervisor",
+          "type": "node",
+          "group": "hypervisor",
+          "os:": "Proxmox",
+          "mac_address:": "3c:97:0e:a7:8f:f3"
+        },
+        "94": {
+          "nodename": "lenovohdd4",
+          "description": "Lenovo B590 Hypervisor",
+          "type": "node",
+          "group": "hypervisor",
+          "os:": "Proxmox",
+          "mac_address:": "3c:97:0e:a7:90:61"
+        },
+        "100": {
+          "nodename": "core",
+          "description": "Core Infrastructure (DNS, DHCP, NTP)",
+          "type": "node",
+          "group": "vmlab",
+          "os:": "CentOS",
+          "mac_address:": "8e:28:fa:de:d7:9f"
+        },
+        "101": {
+          "nodename": "chef",
+          "description": "Chef Infrastructure",
+          "type": "node",
+          "group": "vmlab",
+          "os:": "CentOS",
+          "mac_address:": "2a:41:03:6f:54:cf"
+        },
+        "102": {
+          "nodename": "repo",
+          "description": "Repository Infrastructure (TFTP, HTTP)",
+          "type": "node",
+          "group": "vmlab",
+          "os:": "CentOS",
+          "mac_address:": "8e:28:fa:de:bb:bb"
+        },
+        "197": {
+          "nodename": "pxetestf2",
+          "description": "PXE testing VM",
+          "type": "node",
+          "group": "vmlab",
+          "os:": "CentOS",
+          "mac_address:": "32:2A:AE:44:28:68"
+        },
+        "198": {
+          "nodename": "testdhcp",
+          "description": "DHCP testing VM",
+          "type": "node",
+          "group": "vmlab",
+          "os:": "CentOS",
+          "mac_address:": "32:2A:AE:44:28:68"
+        },
+        "196": {
+          "nodename": "pxetestf3",
+          "description": "PXE testing VM on flash 3",
+          "type": "node",
+          "group": "vmlab",
+          "os:": "CentOS",
+          "mac_address:": "2E:C6:82:57:7D:E3"
+        },
+        "249": {
+          "nodename": "laptopnas",
+          "description": "Lenovo B590 for use as NAS",
+          "type": "node",
+          "group": "NAS",
+          "os:": "CentOS",
+          "mac_address:": "3c:97:0e:a7:8a:9d"
+        },
+        "250": {
+          "nodename": "filer",
+          "description": "HP Data Vault X510 (NFS, Samba)",
+          "type": "node",
+          "group": "vmlab",
+          "os:": "CentOS",
+          "mac_address:": "00:26:2d:00:04:7c"
+        },
+        "252": {
+          "nodename": "aux",
+          "description": "HP Data Vault X510 (NFS, Samba)",
+          "type": "node",
+          "group": "vmlab",
+          "os:": "CentOS",
+          "mac_address:": "00:26:2d:00:03:a9"
+        },
+        "253": {
+          "nodename": "central",
+          "description": "HP Data Vault X310 (NFS, Samba)",
+          "type": "node",
+          "group": "vmlab",
+          "os:": "CentOS",
+          "mac_address:": "00:26:2d:02:b2:58"
+        }
+      }
+    }
+  }
+}
