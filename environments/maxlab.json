@@ -1,0 +1,22 @@
+{
+  "name": "maxlab",
+  "description": "Maxlab Environment ",
+  "cookbook_versions": {
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+    "global": {
+      "repo_url": "http://repo.maxlab",
+      "chef_url": "https://chef.maxlab/organizations/maxlab",
+      "tftp_url": "http://repo.maxlab",
+      "metric_submit_vip": "http://metric_submit.maxlab",
+      "metric_query_vip": "http://metric_query.maxlab",
+      "graphite_vip": "http://graphite.maxlab",
+      "graphite_vip": "http://grafana.maxlab"
+    }
+  },
+  "override_attributes": {
+    "something": "some_value"
+  }
+}
