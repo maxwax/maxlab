@@ -1,0 +1,6 @@
+{
+  "id": "dns_server.core.maxlab",
+  "config_network_ids": [
+    "maxlab"
+  ]
+}
