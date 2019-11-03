@@ -1,11 +1,13 @@
 # maxlab-bind CHANGELOG
 
-This file is used to list changes made in each version of the maxlab-bind cookbook.
+Cookbook for deploying DNS service using BIND on Redhat platform Linux distributions
+
+Created for use in my home lab, 'maxlab'.
+
+# 0.1.1
+
+- Forward and reverse /var/named config files for 'maxlab' deployed
 
 # 0.1.0
 
-Initial release.
-
-- change 0
-- change 1
-
+Initial draft release, working on getting recipes deploying BIND config files via templates from json data bags.

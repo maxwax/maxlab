@@ -7,7 +7,7 @@
 $TTL              <%= @bind_cfg['ttl'] %>
 
 @    IN    SOA    <%= @bind_cfg['soa_domain'] %>. <%= @bind_cfg['soa_email'] %>. (
-                  <%= '%-16s' % @bind_cfg['serial'] %> ; serial, todays date + todays serial #
+                  <%= '%-16s' % @bind_serial_string %> ; serial, todays date + todays serial #
                   <%= '%-16s' % @bind_cfg['refresh'] %> ; refresh, seconds
                   <%= '%-16s' % @bind_cfg['retry'] %> ; retry, seconds
                   <%= '%-16s' % @bind_cfg['expire'] %> ; expire, seconds

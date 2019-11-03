@@ -1,58 +1,26 @@
 ;
-; BIND reverse data file for broadcast zone
+; This file deployed via chef maxlab-bind cookbook. DO NOT EDIT MANUALLY
 ;
-$TTL    604800	
-@       IN      SOA     maxlab. maxwell.maxwellspangler.com. (
-                        2019103101; serial, todays date + todays serial #
-                        28800           ; Refresh
-                        7200            ; Retry
-                        3600000         ; Expire
-                        600)            ; Minimum TTL
-                NS      core.maxlab.
-; Core Infra
-1   IN	PTR	c1100z.maxlab.       
-2   IN	PTR firewall.maxlab.
-3   IN	PTR wap.maxlab.
-; VIP Services
-20  IN  PTR metric-submit.maxlab.
-21  IN  PTR metric-query.maxlab.
-22  IN  PTR graphite.maxlab.
-23  IN  PTR grafana.maxlab.
-; Laptop
-35  IN	PTR macbook.maxlab.
-36  IN	PTR macbookwifi.maxlab.
-40  IN	PTR sarko.maxlab.
-41  IN	PTR sarkowifi.maxlab.
-42	IN	PTR macbooknext.maxlab.
-43  IN	PTR macbooknextwifi.maxlab.
-50	IN	PTR mechsarko.maxlab.
-51  IN	PTR mechsarkowifi.maxlab.
-; Mobile Devices
-61	IN	PTR maxwaxi5.maxlab.
-62	IN	PTR maxwaxxr.maxlab.
-63	IN	PTR ipad.maxlab.
-; Hypervisors
-80	IN	PTR z400.maxlab.
-81	IN	PTR lenovoflash1.maxlab.
-82	IN	PTR lenovoflash2.maxlab.
-83	IN	PTR lenovoflash3.maxlab.
-91  IN	PTR lenovohdd1.maxlab.
-92  IN	PTR lenovohdd2.maxlab.
-93  IN	PTR lenovohdd3.maxlab.
-94  IN	PTR lenovohdd4.maxlab.
-; VM Lab
-100 IN	PTR core.maxlab.
-101 IN	PTR chef.maxlab.
-102 IN	PTR repo.maxlab.
-; Testing VMs
-196 IN	PTR pxetestf1.maxlab.
-197 IN	PTR pxetestf2.maxlab.
-198 IN	PTR pxetestf3.maxlab.
-; VM Legacy
-199 IN	PTR win7.maxlab.
-; NAS Filers
-249 IN	PTR laptopnas.maxlab.
-250 IN	PTR filer.maxlab.
-#251 IN	PTR vault.maxlab.
-252 IN	PTR aux.maxlab.
-253 IN	PTR central.maxlab.
+; <%= @fname %>
+;
+
+$TTL              <%= @bind_cfg['ttl'] %>
+
+@    IN    SOA    <%= @bind_cfg['soa_domain'] %>. <%= @bind_cfg['soa_email'] %>. (
+                  <%= '%-16s' % @bind_serial_string %> ; serial, todays date + todays serial #
+                  <%= '%-16s' % @bind_cfg['refresh'] %> ; refresh, seconds
+                  <%= '%-16s' % @bind_cfg['retry'] %> ; retry, seconds
+                  <%= '%-16s' % @bind_cfg['expire'] %> ; expire, seconds
+                  <%= '%-16s' % @bind_cfg['minimum'] %> ; minimum, seconds
+                  )
+           NS     <%= @bind_cfg['NS'] %>.
+<% @groups.each do |grp| %>
+;
+; <%= grp %>
+;
+  <% @nodes.each do |ip, node_cfg| %>
+    <% if node_cfg['group'] == grp %>
+<%= '%-3s' % ip %>  IN  PTR  <%= node_cfg['node_name'] %>.<%= @domain_name %>.
+    <% end %>
+  <% end %>
+<% end %>
