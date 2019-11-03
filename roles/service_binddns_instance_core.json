@@ -1,0 +1,23 @@
+{
+  "name": "service_binddns_instance_core",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "config_bind": {
+      "instance": "dns_server.core.maxlab"
+    }
+  },
+  "description": "Primary DNS server using bind on node core.maxlab",
+  "run_list": [
+  ],
+  "env_run_lists" : {
+    "production" : [],
+    "preprod" : [],
+    "maxlab": [
+      "recipe[maxlab-bind::deploy]"
+    ]
+  },
+  "override_attributes": {
+    }
+  
+}
