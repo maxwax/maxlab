@@ -3,9 +3,9 @@
   "subnet": {
     "192.168.9.0": {
       "network_prefix": "192.168.9",
+      "network_mask": 24,
       "domain_name": "maxlab",
       "dns": {
-        "serial": "2019110201",
         "ttl": 8640,
         "soa_domain": "maxlab",
         "soa_email": "maxwell.maxwellspangler.com",
@@ -13,12 +13,36 @@
         "retry": 7200,
         "expire": 3600000,
         "minimum": 600,
-        "NS": "core.maxlab",
+        "NS": [ "pxetestf2.maxlab", "core.maxlab", "gateway.maxlab" ],
         "domain_name_servers": [
           "192.168.9.100",
           "192.168.9.2",
           "1.1.1.1"
-        ]
+        ],
+        "acl": "192.168.9.0/24",
+        "listen_on_port_ipv4": 53,
+        "listen_on_address_ipv4": "192.168.9.100",
+        "listen_on_port_ipv6": 53,
+        "listen_on_address_ipv6": "",
+        "allow_query": "192.168.9.0/24",
+        "recursion": "yes",
+        "dnssec_enable": "yes",
+        "dnssec_validation": "yes",
+        "forwarders": [
+          "1.1.1.1",
+          "8.8.8.8",
+          "8.8.4.4"
+        ],
+        "zones": { 
+          "maxlab": {
+            "type": "master",
+            "allow_update": "none"
+          },
+          "9.168.192.in-addr.arpa": {
+            "type": "master",
+            "allow_update": "none"
+          }
+        }
       },
       "dhcp_config": [
         "ddns-update-style interim",
@@ -55,12 +79,12 @@
       },
       "nodes": {
         "1": {
-          "node_name": "c1100z",
+          "node_name": "gateway",
           "description": "Zyxel C110Z Centurylink Gateway",
           "type": "appliances",
           "group": "network-infra",
           "os:": "Proprietary",
-          "mac_address:": ""
+          "mac_address:": "58:8B:F3:E2:6E:25"
         },
         "2": {
           "node_name": "firewall",
@@ -68,18 +92,18 @@
           "type": "appliances",
           "group": "network-infra",
           "os:": "DD-WRT",
-          "mac_address:": ""
+          "mac_address:": "c4:3d:c7:9d:6b:5c"
         },
         "3": {
           "node_name": "wap",
-          "description": "Netgear r6200v2 Wireless Access Point (DD-WRT)",
+          "description": "Netgear r6200v2 Wireless AP (DD-WRT)",
           "type": "appliances",
           "group": "network-infra",
           "os:": "DD-WRT",
-          "mac_address:": ""
+          "mac_address:": "e8:fc:af:9c:90:7c"
         },
         "20": {
-          "node_name": "metric_submit",
+          "node_name": "metric-submit",
           "description": "VIP for submitting metrics to Graphite",
           "type": "vip",
           "group": "vips",
@@ -87,7 +111,7 @@
           "mac_address:": ""
         },
         "21": {
-          "node_name": "metric_query",
+          "node_name": "metric-query",
           "description": "VIP for querying metrics from Graphite",
           "type": "vip",
           "group": "vips",
@@ -223,7 +247,7 @@
           "mac_address:": "3c:97:0e:a7:8f:b8"
         },
         "83": {
-          "node_name": "lenovoflash1",
+          "node_name": "lenovoflash3",
           "description": "Lenovo B590 Hypervisor",
           "type": "node",
           "group": "hypervisor",
@@ -231,7 +255,7 @@
           "mac_address:": "3c:97:0e:a7:8f:a6"
         },
         "91": {
-          "node_name": "lenovohdd1",
+          "node_name": "lenovoflash4",
           "description": "Lenovo B590 Hypervisor",
           "type": "node",
           "group": "hypervisor",
@@ -239,28 +263,20 @@
           "mac_address:": "3c:97:0e:a7:90:09"
         },
         "92": {
-          "node_name": "lenovohdd2",
+          "node_name": "lenovoflash5",
           "description": "Lenovo B590 Hypervisor",
           "type": "node",
           "group": "hypervisor",
           "os:": "Proxmox",
           "mac_address:": "3c:97:0e:a7:90:aa"
         },
-        "93": {
-          "node_name": "lenovohdd3",
-          "description": "Lenovo B590 Hypervisor",
+        "95": {
+          "node_name": "toshiprox1",
+          "description": "Toshiba Z40 Hypervisor",
           "type": "node",
           "group": "hypervisor",
           "os:": "Proxmox",
-          "mac_address:": "3c:97:0e:a7:8f:f3"
-        },
-        "94": {
-          "node_name": "lenovohdd4",
-          "description": "Lenovo B590 Hypervisor",
-          "type": "node",
-          "group": "hypervisor",
-          "os:": "Proxmox",
-          "mac_address:": "3c:97:0e:a7:90:61"
+          "mac_address:": "ec:21:e5:c0:6d:1a"
         },
         "100": {
           "node_name": "core",
@@ -286,6 +302,14 @@
           "os:": "CentOS",
           "mac_address:": "8e:28:fa:de:bb:bb"
         },
+        "196": {
+          "node_name": "pxetestf3",
+          "description": "PXE testing VM on flash 3",
+          "type": "node",
+          "group": "vmlab",
+          "os:": "CentOS",
+          "mac_address:": "2E:C6:82:57:7D:E3"
+        },
         "197": {
           "node_name": "pxetestf2",
           "description": "PXE testing VM",
@@ -301,14 +325,6 @@
           "group": "vmlab",
           "os:": "CentOS",
           "mac_address:": "32:2A:AE:44:28:68"
-        },
-        "196": {
-          "node_name": "pxetestf3",
-          "description": "PXE testing VM on flash 3",
-          "type": "node",
-          "group": "vmlab",
-          "os:": "CentOS",
-          "mac_address:": "2E:C6:82:57:7D:E3"
         },
         "249": {
           "node_name": "laptopnas",
