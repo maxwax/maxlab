@@ -1,0 +1,97 @@
+{
+  "id": "dmz",
+  "subnet": {
+    "192.168.0.0": {
+      "network_prefix": "192.168.0",
+      "network_mask": 24,
+      "domain_name": "dmz",
+      "dns": {
+        "ttl": 8640,
+        "soa_domain": "dmz",
+        "soa_email": "maxwell.maxwellspangler.com",
+        "refresh": 28880,
+        "retry": 7200,
+        "expire": 3600000,
+        "minimum": 600,
+        "NS": [ "pxetestf2.maxlab", "core.maxlab", "gateway.maxlab" ],
+        "domain_name_servers": [
+          "1.1.1.1"
+        ],
+        "acl": "192.168.0.0/24",
+        "listen_on_port_ipv4": 53,
+        "listen_on_address_ipv4": "192.168.9.100",
+        "listen_on_port_ipv6": 53,
+        "listen_on_address_ipv6": "",
+        "allow_query": "192.168.9.0/24",
+        "recursion": "yes",
+        "dnssec_enable": "yes",
+        "dnssec_validation": "yes",
+        "forwarders": [
+          "1.1.1.1",
+          "8.8.8.8",
+          "8.8.4.4"
+        ],
+        "zones": { 
+          "dmz": {
+            "type": "master",
+            "allow_update": "none"
+          },
+          "0.168.192.in-addr.arpa": {
+            "type": "master",
+            "allow_update": "none"
+          }
+        }
+      },
+      "dhcp_config": [
+        "ddns-update-style interim",
+        "authoritative"
+      ],
+      "dhcp_range": {
+        "start": 200,
+        "end": 240
+      },
+      "default_lease_time": 1440,
+      "max_lease_time": 1440,
+      "dhcp_options": {
+        "ip_forwarding": "off",
+        "routers": "192.168.9.2",
+        "broadcast_address": "192.168.9.255",
+        "subnet_mask": "255.255.255.0",
+        "ntp_servers": "192.168.9.2",
+        "pxe_options": {
+          "root_path": "/var/lib/tftpboot",
+          "filename": "/pxelinux.0",
+          "next_server": "192.168.9.102"
+        }
+      },
+      "aliases": {
+      },
+      "nodes": {
+        "1": {
+          "node_name": "gateway",
+          "description": "Zyxel C110Z Centurylink Gateway",
+          "type": "appliances",
+          "group": "network-infra",
+          "os:": "Proprietary",
+          "mac_address:": "58:8B:F3:E2:6E:25"
+        },
+        "2": {
+          "node_name": "firewall",
+          "description": "Netgear WNDR3700v2 Firewall (DD-WRT)",
+          "type": "appliances",
+          "group": "network-infra",
+          "os:": "DD-WRT",
+          "mac_address:": "c4:3d:c7:9d:6b:5c"
+        },
+        "254": {
+          "node_name": "amule",
+          "description": "Lenovo B590",
+          "type": "node",
+          "group": "laptops",
+          "os:": "CentOS",
+          "mac_address:": "3c:97:0e:a7:8c:19"
+        }
+      }
+    }
+  }
+}
