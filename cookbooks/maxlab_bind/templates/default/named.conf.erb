@@ -1,0 +1,78 @@
+//
+// named.conf
+//
+// Provided by Red Hat bind package to configure the ISC BIND named(8) DNS
+// server as a caching only nameserver (as a localhost DNS resolver only).
+//
+// See /usr/share/doc/bind*/sample/ for example named configuration files.
+//
+
+acl <%= @config_bind['domain_name'] %> { 127.0.0.0/8; <%= @config_bind['acl'] %>; };
+
+options {
+	listen-on port <%= @config_bind['listen_on_port_ipv4'] %> { 127.0.0.1; <%= @config_bind['listen_on_address_ipv4'] %> };
+	listen-on-v6 port <%= @config_bind['listen_on_port_ipv6'] %> { ::1; <%= @config_bind['listen_on_address_ipv6'] %> };
+	directory 	"/var/named";
+	dump-file 	"/var/named/data/cache_dump.db";
+	statistics-file "/var/named/data/named_stats.txt";
+	memstatistics-file "/var/named/data/named_mem_stats.txt";
+	secroots-file	"/var/named/data/named.secroots";
+	recursing-file	"/var/named/data/named.recursing";
+	allow-query { localhost; <%= @config_bind['allow_query'] %>; };
+
+	/* 
+	 - If you are building an AUTHORITATIVE DNS server, do NOT enable recursion.
+	 - If you are building a RECURSIVE (caching) DNS server, you need to enable 
+	   recursion. 
+	 - If your recursive DNS server has a public IP address, you MUST enable access 
+	   control to limit queries to your legitimate users. Failing to do so will
+	   cause your server to become part of large scale DNS amplification 
+	   attacks. Implementing BCP38 within your network would greatly
+	   reduce such attack surface 
+	*/
+	recursion <%= @config_bind['recursion'] %>;
+
+	dnssec-enable <%= @config_bind['dnssec_enable'] %>;
+	dnssec-validation <%= @config_bind['dnssec_validation'] %>;
+
+        forwarders {
+//                205.171.3.25;
+//                205.171.2.25;
+<% @config_bind['forwarders'].each do |fwd_ip| %>
+                  <%= fwd_ip %>;
+<% end %>
+        };
+
+
+	managed-keys-directory "/var/named/dynamic";
+
+	pid-file "/run/named/named.pid";
+	session-keyfile "/run/named/session.key";
+
+	/* https://fedoraproject.org/wiki/Changes/CryptoPolicy */
+	include "/etc/crypto-policies/back-ends/bind.config";
+};
+
+logging {
+        channel default_debug {
+                file "data/named.run";
+                severity dynamic;
+        };
+};
+
+zone "." IN {
+	type hint;
+	file "named.ca";
+};
+
+<% @config_zones.each do |zone, zone_cfg| %>
+zone "<%= zone %>" {
+        type <%= zone_cfg['type'] %>;
+        file "/var/named/db.<%= zone_cfg['fname'] %>";
+        allow-update { <%= zone_cfg['allow_update'] %>; };
+};
+
+<% end %>
+include "/etc/named.rfc1912.zones";
+include "/etc/named.root.key";
+

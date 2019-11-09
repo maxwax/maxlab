@@ -1,0 +1,31 @@
+;
+; This file deployed via chef maxlab_bind cookbook. DO NOT EDIT MANUALLY
+;
+; BIND reverse data file for broadcast zone
+;
+; <%= @fname %>
+;
+
+$TTL              <%= @bind_cfg['ttl'] %>
+
+@    IN    SOA    <%= @bind_cfg['soa_domain'] %>. <%= @bind_cfg['soa_email'] %>. (
+                  <%= '%-18s' % @bind_serial_string %> ; serial, todays date + todays serial #
+                  <%= '%-18s' % @bind_cfg['refresh'] %> ; refresh, seconds
+                  <%= '%-18s' % @bind_cfg['retry'] %> ; retry, seconds
+                  <%= '%-18s' % @bind_cfg['expire'] %> ; expire, seconds
+                  <%= '%-18s' % @bind_cfg['minimum'] %> ; minimum, seconds
+                  )
+<% @bind_cfg['NS'].each do |ns_fqdn| %>
+        IN NS     <%= ns_fqdn %>.
+<% end %>
+<% @groups.each do |grp| %>
+;
+; <%= grp %>
+;
+  <% @nodes.sort.each do |ip, node_cfg| %>
+    <% if node_cfg['group'] == grp %>
+    <% node_name_string = "#{node_cfg['node_name']}.#{@domain_name}." %>
+<%= '%-3s' % ip %>  IN  PTR  <%= '%-25s' % node_name_string %> ; <%= node_cfg['description'] %>
+    <% end %>
+  <% end %>
+<% end %>
