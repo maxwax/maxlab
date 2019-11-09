@@ -1,0 +1,23 @@
+{
+  "name": "service_dhcp_instance_core",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "config_dhcp": {
+      "instance": "dhcp_server.core.maxlab"
+    }
+  },
+  "description": "Primary DHCP server on node core.maxlab",
+  "run_list": [
+  ],
+  "env_run_lists" : {
+    "production" : [],
+    "preprod" : [],
+    "maxlab": [
+      "recipe[maxlab-dhcp::deploy]"
+    ]
+  },
+  "override_attributes": {
+    }
+  
+}
