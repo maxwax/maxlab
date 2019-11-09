@@ -1,0 +1,20 @@
+{
+  "name": "maxlab_base",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "description": "Base role for all nodes in maxlab",
+  "run_list": [
+  ],
+  "env_run_lists" : {
+    "production" : [],
+    "preprod" : [],
+    "maxlab": [
+      "recipe[maxlab_firewall::base_firewall]"
+    ]
+  },
+  "override_attributes": {
+    }
+  
+}
