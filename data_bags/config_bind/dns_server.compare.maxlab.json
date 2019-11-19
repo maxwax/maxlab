@@ -1,5 +1,5 @@
 {
-  "id": "dns_server.core.maxlab",
+  "id": "dns_server.compare.maxlab",
   "config_network_ids": [
     "maxlab",
     "dmz"

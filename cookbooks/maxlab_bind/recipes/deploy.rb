@@ -4,10 +4,28 @@
 #
 # Copyright:: 2019, The Authors, All Rights Reserved.
 
+=begin
+#<
+Deploy DNS services using bind.
+#>
+=end
+
 require 'date'
 
 # Calculate a precise serial number for this BIND config file update
 bind_serial_string = Time.now.strftime('%y%m%d%H%M')
+
+# Catches Redhat/Centos/Fedora/etc
+os_dist  = node['platform_family']
+os_major = node['platform_version'].split('.')[0]
+
+# Install packages for BIND
+bind_packages = node['bind']['packages'][os_dist][os_major].each do |pkg, ver|
+  package pkg do
+    version ver
+    action :install
+  end
+end
 
 # Start with empty hash of zones, add them each time we drop fwd/rev config files
 config_zones = {}
@@ -21,18 +39,11 @@ config_bind = data_bag_item('config_bind', node['config_bind']['instance']).to_h
 
 config_bind['config_network_ids'].each do |cfg_net_id|
 
-  Chef::Log.info "PROCESSING NETWORK ID #{cfg_net_id}"
-
-  # Network specific configuration
-  #config_network = data_bag_item('config_network', config_bind['config_network_ids'][0]).to_h
-  #
+  # Find network information to support deploying each bind instance
   config_network = data_bag_item('config_network', cfg_net_id).to_h
 
+  # Iterate over each subnet defined in the network data bag configuration
   config_network['subnet'].each do |network_name, subnet|
-
-    puts
-    puts "PROCESSING SUBNET #{network_name}"
-    puts
 
     # Add each forward and reverse zone config to config_zones.
     # This will be used to configure /etc/named.conf later
@@ -51,14 +62,16 @@ config_bind['config_network_ids'].each do |cfg_net_id|
       end
     end
 
-    #fname_forward = "/var/named/db.#{subnet['domain_name']}"
+    # Config file name, ex: db.maxlab
     fname_forward = "/var/named/db.#{cfg_net_id}"
 
     # Convert network prefix '192.168.9' to '9.168.192'
     reverse_network = subnet['network_prefix'].split('.')[2] + "." + subnet['network_prefix'].split('.')[1] + "." + subnet['network_prefix'].split('.')[0]
 
+    # Config file name, ex: db.9.168.192
     fname_reverse = "/var/named/db.#{reverse_network}"
 
+    # Deploy the forward resolution DNS file
     template fname_forward do
       source 'db.forward.erb'
       variables (
@@ -72,9 +85,10 @@ config_bind['config_network_ids'].each do |cfg_net_id|
           groups: groups
         }
       )
-      notifies :reload, 'service[named]', :immediately
+      notifies :reload, 'service[named]', :delayed
     end
 
+    # Deploy the reverse resolution DNS file
     template fname_reverse do
       source 'db.reverse.erb'
       variables (
@@ -87,19 +101,14 @@ config_bind['config_network_ids'].each do |cfg_net_id|
           groups: groups
         }
       )
-      notifies :reload, 'service[named]', :immediately
+      notifies :reload, 'service[named]', :delayed
     end
 
   end
 
 end
 
-puts "CONFIG BIND"
-pp config_bind
-
-puts "ZONES"
-pp config_zones
-
+# Deploy master bind config file
 template '/etc/named.conf' do
   source 'named.conf.erb'
   variables (
@@ -109,28 +118,27 @@ template '/etc/named.conf' do
     }
   )
 
-  notifies :reload, 'service[named]', :immediately
+  notifies :reload, 'service[named]', :delayed
 end
 
-## Catches Redhat/Centos/Fedora/etc
-#os_dist  = node['platform_family']
-#os_major = node['platform_version'].split('.')[0]
-#
-## Install packages for BIND
-#bind_packages = node['bind']['packages'][os_dist][os_major].each do |pkg, ver|
-#  package pkg do
-#    version ver
-#    action :install
-#  end
-#end
+# Warning - firewalld specific, won't work on Red hat < 7, Debian, etc
+#---
 
-## Should be in a firewall cookbook
-#open firewall 
-#firewall-cmd --add-service=dns
-#firewall-cmd --reload
+# Allow this service via the default interface's firewalld zone
+bind_zone = node['maxlab_firewall']['default_interface_zone']
 
+# Add the service to this node's firewalld service requirements
+# Ex: Append 'dns' to 'ssh http https' (list of already allowed services)
+if not node['maxlab_firewall']['zones'][bind_zone]['services'].include? config_bind['firewall']['firewalld']['service']
+  node.normal['maxlab_firewall']['zones'][bind_zone]['services'] << config_bind['firewall']['firewalld']['service']
+end
+
+include_recipe 'maxlab_firewall::update_firewalld'
+#---
+
+# Ensure the service starts on boot and is reloaded upon config file updates
 service 'named' do
-  subscribes :reload, 'template[/etc/named.conf]', :immediate
+  subscribes :reload, 'template[/etc/named.conf]', :delayed
 
   action [:enable, :start]
 end

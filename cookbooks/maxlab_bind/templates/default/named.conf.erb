@@ -49,8 +49,10 @@ options {
 	pid-file "/run/named/named.pid";
 	session-keyfile "/run/named/session.key";
 
+  <% if @config_bind['crypto-policies'] == true %>
 	/* https://fedoraproject.org/wiki/Changes/CryptoPolicy */
-	include "/etc/crypto-policies/back-ends/bind.config";
+	include "<%= @config_bind['crypto_policies_file'] %>";
+  <% end %>
 };
 
 logging {

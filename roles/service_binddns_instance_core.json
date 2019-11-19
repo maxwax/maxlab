@@ -9,12 +9,12 @@
   },
   "description": "Primary DNS server using bind on node core.maxlab",
   "run_list": [
+    "recipe[maxlab_bind::deploy]"
   ],
-  "env_run_lists" : {
+  "something_env_run_lists" : {
     "production" : [],
     "preprod" : [],
     "maxlab": [
-      "recipe[maxlab-bind::deploy]"
     ]
   },
   "override_attributes": {

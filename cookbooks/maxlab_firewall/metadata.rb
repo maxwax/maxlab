@@ -18,5 +18,8 @@ chef_version '>= 13.0'
 # a Supermarket.
 #
 # source_url 'https://github.com/<insert_org_here>/maxlab_firewall'
-#
-depends 'firewall'
+
+supports 'redhat', '>= 7.0'
+supports 'centos', '>= 7.0'
+supports 'oracle', '>= 7.0'
+supports 'fedora', '>= 30.0'
