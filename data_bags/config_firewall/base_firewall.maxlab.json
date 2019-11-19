@@ -1,0 +1,17 @@
+{
+  "id": "base_firewall.dmz.maxlab",
+  "description": "Core firewall config for dmz zone of lab 'maxlab'. This is applied to any node by default. Additional services are added to the node as services are deployed",
+  "default_interface_zone": "dmz",
+  "default_zone": "dmz",
+  "zones": {
+    "dmz": {
+      "services": [
+        "ssh"
+      ],
+      "sources": [
+      ],
+      "ports": [
+      ]
+    }
+  }
+}
