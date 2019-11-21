@@ -1,0 +1,55 @@
+#
+# /etc/dhcp/dhcpd.conf - DHCP server instance <%= @config_dhcp['instance'] %>
+#
+# This file deployed via Chef - DO NOT EDIT
+#
+
+<% @config_dhcp['dhcp_global_options'].each do |dhcp_option| %>
+<%= dhcp_option %>;
+<% end %>
+
+<%= @subnets.each do |sub_id, sub_info| %>
+
+subnet <%= sub_id %> netmask <%= @sub_info['netmask'] %> {
+
+	option domain-name "<%= sub_info['domain_name'] %>";
+  option domain-name-servers <%= sub_info['dns_list'] %>;
+
+	range <%= sub_info['network_prefix'] %>.<%= sub_info['dhcp_options']['dhcp_range']['start'] %> <%= sub_info['network_prefix'] %>.<%= sub_info['dhcp_options']['dhcp_range']['end'] %>;
+
+	option routers <%= sub_info['routers'] %>;
+	option broadcast-address <%= sub_info['broadcast_address'] %>;
+	option subnet-mask <%= sub_info['netmask'] %>;
+
+	default-lease-time <%= sub_info['dhcp_options']['default_lease_time'] %>;
+	max-lease-time <%= sub_info['dhcp_options']['max_lease_time'] %>;
+
+	option <%= sub_info['dhcp_options']['ip_forwarding'] %>;
+
+	option ntp-servers <%= sub_info['ntp_servers'] %>;
+
+	# PXE boot information
+	option root-path "<%= sub_info['dhcp_options']['pxe_options']['root_path'] %>";
+	filename "<%= sub_info['dhcp_options']['pxe_options']['filename'] %>";
+	next-server <%= sub_info['dhcp_options']['pxe_options']['next_server'] %>;
+
+  <% subinfo['groups'].sort.each do |each_group| %>
+
+  #
+  # <%= each_group %>
+  #
+
+  group {
+
+    <% subinfo['nodes'].sort.each do |node_ip, node_info| %>
+      <% if node_info['group'] == each_group %>
+    # <%= node_info['description'] %>
+    host <%= node_info['node_name'] %> {
+      hardware ethernet <%= node_info['mac_address'] %>;
+      fixed-address <%= subinfo['network_prefix'] %>.<%= node_ip %>;
+    }
+      <% end %>
+    <% end %>
+  }
+  <% end %>
+}
