@@ -4,6 +4,10 @@
     "192.168.0.0": {
       "network_prefix": "192.168.0",
       "network_mask": 24,
+      "netmask": "255.255.255.0",
+      "broadcast_address": "192.168.9.255",
+      "routers": "192.168.9.2",
+      "ntp_servers": "192.168.9.2",
       "domain_name": "dmz",
       "dns": {
         "ttl": 8640,
@@ -42,26 +46,18 @@
           }
         }
       },
-      "dhcp_config": [
-        "ddns-update-style interim",
-        "authoritative"
-      ],
-      "dhcp_range": {
-        "start": 200,
-        "end": 240
-      },
-      "default_lease_time": 1440,
-      "max_lease_time": 1440,
       "dhcp_options": {
+        "default_lease_time": 1440,
+        "max_lease_time": 1440,
         "ip_forwarding": "off",
-        "routers": "192.168.9.2",
-        "broadcast_address": "192.168.9.255",
-        "subnet_mask": "255.255.255.0",
-        "ntp_servers": "192.168.9.2",
         "pxe_options": {
           "root_path": "/var/lib/tftpboot",
           "filename": "/pxelinux.0",
           "next_server": "192.168.9.102"
+        },
+        "dhcp_range": {
+          "start": 200,
+          "end": 240
         }
       },
       "aliases": {
@@ -73,7 +69,7 @@
           "type": "appliances",
           "group": "network-infra",
           "os:": "Proprietary",
-          "mac_address:": "58:8B:F3:E2:6E:25"
+          "mac_address": "58:8B:F3:E2:6E:25"
         },
         "2": {
           "node_name": "firewall",
@@ -81,7 +77,7 @@
           "type": "appliances",
           "group": "network-infra",
           "os:": "DD-WRT",
-          "mac_address:": "c4:3d:c7:9d:6b:5c"
+          "mac_address": "c4:3d:c7:9d:6b:5c"
         },
         "254": {
           "node_name": "amule",
@@ -89,7 +85,7 @@
           "type": "node",
           "group": "laptops",
           "os:": "CentOS",
-          "mac_address:": "3c:97:0e:a7:8c:19"
+          "mac_address": "3c:97:0e:a7:8c:19"
         }
       }
     }
