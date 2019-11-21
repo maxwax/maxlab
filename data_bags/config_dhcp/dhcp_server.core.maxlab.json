@@ -1,10 +1,15 @@
 {
   "id": "dhcp_server.core.maxlab",
-  "config_network_ids": [
-    "maxlab"
+  "serve_dhcp_for": {
+    "maxlab": "192.168.9.0"
+  },
+  "dhcp_global_options": [
+    "ddns-update-style interim",
+    "authoritative"
   ],
-  "subnet": "192.168.9.0",
-  "network_prefix": "192.168.9",
-  "network_mask": 24,
-  "domain_name": "maxlab"
+  "firewall": {
+    "firewalld": {
+      "service": "dhcp"
+    }
+  }
 }

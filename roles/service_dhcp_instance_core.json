@@ -14,7 +14,7 @@
     "production" : [],
     "preprod" : [],
     "maxlab": [
-      "recipe[maxlab-dhcp::deploy]"
+      "recipe[maxlab_dhcp::deploy]"
     ]
   },
   "override_attributes": {
