@@ -10,6 +10,7 @@
       "repo_url": "http://repo.maxlab",
       "chef_url": "https://chef.maxlab/organizations/maxlab",
       "tftp_url": "http://repo.maxlab",
+      "upstream_ntp": "2.centos.pool.ntp.org",
       "metric_submit_vip": "http://metric_submit.maxlab",
       "metric_query_vip": "http://metric_query.maxlab",
       "graphite_vip": "http://graphite.maxlab",
@@ -17,6 +18,5 @@
     }
   },
   "override_attributes": {
-    "something": "some_value"
   }
 }
