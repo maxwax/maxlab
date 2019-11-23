@@ -1,0 +1,12 @@
+#
+# /etc/chrony.conf - NTP configuration
+#
+# This file deployed via chef maxlab_chrony::deploy - DO NOT EDIT
+#
+<% @config_chrony['options'].each do |opt, opt_val| %>
+  <% opt_val['comment'].each do |cmt| %>
+<%= cmt %>
+  <% end %>
+<%= opt_val['config'] %>
+
+<% end %>
