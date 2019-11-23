@@ -1,0 +1,23 @@
+{
+  "name": "service_binddns_instance_bank",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "config_bind": {
+      "instance": "dns_server.bank.maxlab"
+    }
+  },
+  "description": "Primary DNS server using bind on node bank.maxlab",
+  "run_list": [
+    "recipe[maxlab_bind::deploy]"
+  ],
+  "something_env_run_lists" : {
+    "production" : [],
+    "preprod" : [],
+    "maxlab": [
+    ]
+  },
+  "override_attributes": {
+    }
+  
+}
