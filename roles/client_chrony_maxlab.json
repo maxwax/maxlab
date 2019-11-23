@@ -1,0 +1,24 @@
+{
+  "name": "client_chrony_maxlab",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "config_chrony": {
+      "instance": "chrony.maxlab",
+      "instance_type": "client"
+    }
+  },
+  "description": "Standard chrony NTP client configuration",
+  "run_list": [
+  ],
+  "env_run_lists" : {
+    "production" : [],
+    "preprod" : [],
+    "maxlab": [
+      "recipe[maxlab_chrony::deploy]"
+    ]
+  },
+  "override_attributes": {
+    }
+  
+}
