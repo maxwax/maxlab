@@ -1,0 +1,46 @@
+{
+  "id": "dns_server.maxlab",
+  "config_network_ids": [
+    "maxlab",
+    "dmz"
+  ],
+  "firewall": {
+    "firewalld": {
+      "service": "dns"
+    }
+  },
+  "subnet": "192.168.9.0",
+  "network_prefix": "192.168.9",
+  "network_mask": 24,
+  "domain_name": "maxlab",
+  "acl": "192.168.9.0/24",
+  "listen_on_port_ipv4": 53,
+  "config_listen_on_address_ipv4": "ipaddress",
+  "listen_on_address_ipv4": "",
+  "listen_on_port_ipv6": 53,
+  "config_listen_on_address_ipv6": "ipaddress",
+  "listen_on_address_ipv6": "",
+  "allow_query": "192.168.9.0/24",
+  "recursion": "yes",
+  "dnssec_enable": "yes",
+  "dnssec_validation": "yes",
+  "crypto_policies": false,
+  "crypto_policies_file": "/etc/crypto-policies/back-ends/bind.config",
+  "forwarders": [
+    "1.1.1.1",
+    "8.8.8.8",
+    "8.8.4.4"
+  ],
+  "zones": { 
+    "maxlab": {
+      "type": "master",
+      "file": "/var/named/db.maxlab",
+      "allow_update": "none"
+    },
+    "9.168.192.in-addr-arpa": {
+      "type": "master",
+      "file": "/var/named/db.9.168.192",
+      "allow_update": "none"
+    }
+  }
+}
