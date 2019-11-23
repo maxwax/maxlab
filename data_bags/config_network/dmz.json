@@ -80,7 +80,7 @@
           "mac_address": "c4:3d:c7:9d:6b:5c"
         },
         "254": {
-          "node_name": "amule",
+          "node_name": "download",
           "description": "Lenovo B590",
           "type": "node",
           "group": "laptops",
