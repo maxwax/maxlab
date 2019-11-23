@@ -1,0 +1,15 @@
+{
+  "id": "dhcp_server.bank.maxlab",
+  "serve_dhcp_for": {
+    "maxlab": "192.168.9.0"
+  },
+  "dhcp_global_options": [
+    "ddns-update-style interim",
+    "authoritative"
+  ],
+  "firewall": {
+    "firewalld": {
+      "service": "dhcp"
+    }
+  }
+}
