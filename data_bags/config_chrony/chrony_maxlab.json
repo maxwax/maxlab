@@ -1,0 +1,175 @@
+{
+  "id": "chrony.maxlab",
+  "serve_chrony_for": {
+    "maxlab": "192.168.9.0"
+  },
+  "firewall": {
+    "firewalld": {
+      "service": "ntp",
+      "ports": "323/udp"
+    }
+  },
+  "client": {
+    "options": {
+      "pool": {
+        "comment": [
+          "# Use public servers from the pool.ntp.org project.",
+          "# Please consider joining the pool (http://www.pool.ntp.org/join.html)."
+        ],
+        "config": "pool",
+        "value": "2.centos.pool.ntp.org",
+        "config_options": "iburst"
+      },
+      "driftfile": {
+        "comment": [
+          "# Record the rate at which the system clock gains/losses time."
+        ],
+        "config": "driftfile /var/lib/chrony/drift"
+      },
+      "makestep": {
+        "comment": [
+          "# Allow the system clock to be stepped in the first three updates",
+          "# if its offset is larger than 1 second."
+          ],
+        "config": "makestep 1.0 3"
+      },
+      "rtcsync": {
+        "comment": [
+          "# Enable kernel synchronization of the real-time clock (RTC)."
+        ],
+        "config": "rtcsync"
+      },
+      "local_stratum": {
+        "comment": [
+          "# Serve time even if not synchronized to a time source."
+        ],
+        "config": "local stratum 10"
+      },
+      "keyfile": {
+        "comment": [
+          "# Specify file containing keys for NTP authentication."
+        ],
+        "config": "keyfile /etc/chrony.keys"
+      },
+      "leapsectz": {
+        "comment": [
+          "# Get TAI-UTC offset and leap seconds from the system tz database."
+        ],
+        "config": "leapsectz right/UTC"
+      },
+      "logdir": {
+        "comment": [
+          "# Specify directory for log files."
+        ],
+        "config": "logdir /var/log/chrony"
+      }
+    }
+  },
+  "server": {
+    "options": {
+      "pool": {
+        "comment": [
+          "# Use public servers from the pool.ntp.org project.",
+          "# Please consider joining the pool (http://www.pool.ntp.org/join.html)."
+        ],
+        "config": "pool",
+        "value": "2.centos.pool.ntp.org",
+        "config_options": "iburst"
+      },
+      "driftfile": {
+        "comment": [
+          "# Record the rate at which the system clock gains/losses time."
+        ],
+        "config": "driftfile /var/lib/chrony/drift"
+      },
+      "makestep": {
+        "comment": [
+          "# Allow the system clock to be stepped in the first three updates",
+          "# if its offset is larger than 1 second."
+          ],
+        "config": "makestep 1.0 3"
+      },
+      "rtcsync": {
+        "comment": [
+          "# Enable kernel synchronization of the real-time clock (RTC)."
+        ],
+        "config": "rtcsync"
+      },
+      "hwtimestamp": {
+        "comment": [
+          "# Enable hardware timestamping on all interfaces that support it."
+        ],
+        "config": "#hwtimestamp *"
+      },
+      "minsources": {
+        "comment": [
+          "# Increase the minimum number of selectable sources required to adjust",
+          "# the system clock."
+        ],
+        "config": "#minsources 2"
+      },
+      "allow": {
+        "comment": [
+          "# Allow NTP client access from local network."
+        ],
+        "config": "allow",
+        "enabled": true,
+        "value": "auto_subnet"
+      },
+      "bindacqaddress": {
+        "comment": [
+          "# Serve NTP clients via this address"
+        ],
+        "config": "bindacqaddress",
+        "enabled": true,
+        "value": "auto_ipaddress"
+      },
+      "cmdallow": {
+        "comment": [
+          "# Allow chronyc clients from these addresses"
+        ],
+        "config": "cmdallow",
+        "enabled": true,
+        "value": "auto_subnet"
+      },
+      "bindcmdaddress": {
+        "comment": [
+          "# Serve chronyc commands via this address"
+        ],
+        "config": "bindcmdaddress",
+        "enabled": true,
+        "value": "auto_ipaddress"
+      },
+      "local_stratum": {
+        "comment": [
+          "# Serve time even if not synchronized to a time source."
+        ],
+        "config": "local stratum 10"
+      },
+      "keyfile": {
+        "comment": [
+          "# Specify file containing keys for NTP authentication."
+        ],
+        "config": "keyfile /etc/chrony.keys"
+      },
+      "leapsectz": {
+        "comment": [
+          "# Get TAI-UTC offset and leap seconds from the system tz database."
+        ],
+        "config": "leapsectz right/UTC"
+      },
+      "logdir": {
+        "comment": [
+          "# Specify directory for log files."
+        ],
+        "config": "logdir /var/log/chrony"
+      },
+      "log_options": {
+        "comment": [
+          "# Select which information is logged."
+        ],
+        "config": "#log measurements statistics tracking"
+      }
+    }
+  }
+}
