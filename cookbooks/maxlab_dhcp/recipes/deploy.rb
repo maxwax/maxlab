@@ -107,7 +107,6 @@ if not node['maxlab_firewall']['zones'][service_zone]['services'].include? confi
   node.normal['maxlab_firewall']['zones'][service_zone]['services'] << config_dhcp['firewall']['firewalld']['service']
 end
 
-include_recipe 'maxlab_firewall::update_firewalld'
 #---
 
 # Ensure the service starts on boot and is reloaded upon config file updates

@@ -152,7 +152,6 @@ if node['config_chrony']['instance_type'] == 'server'
     node.normal['maxlab_firewall']['zones'][service_zone]['ports'] << full_config_chrony['firewall']['firewalld']['ports']
   end
 
-  include_recipe 'maxlab_firewall::update_firewalld'
 end
 #---
 

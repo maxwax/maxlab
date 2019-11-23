@@ -133,7 +133,6 @@ if not node['maxlab_firewall']['zones'][bind_zone]['services'].include? config_b
   node.normal['maxlab_firewall']['zones'][bind_zone]['services'] << config_bind['firewall']['firewalld']['service']
 end
 
-include_recipe 'maxlab_firewall::update_firewalld'
 #---
 
 # Ensure the service starts on boot and is reloaded upon config file updates
