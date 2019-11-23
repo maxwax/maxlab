@@ -1,13 +1,13 @@
 {
-  "name": "service_binddns_instance_compare",
+  "name": "service_binddns_instance_maxlab",
   "chef_type": "role",
   "json_class": "Chef::Role",
   "default_attributes": {
     "config_bind": {
-      "instance": "dns_server.compare.maxlab"
+      "instance": "dns_server.maxlab"
     }
   },
-  "description": "Primary DNS server using bind on node compare.maxlab",
+  "description": "DNS server using bind to serve network maxlab",
   "run_list": [
     "recipe[maxlab_bind::deploy]"
   ],
