@@ -1,12 +1,12 @@
 {
-  "name": "maxlab_base",
+  "name": "base_maxlab",
   "chef_type": "role",
   "json_class": "Chef::Role",
   "default_attributes": {
   },
   "description": "Base role for all nodes in maxlab",
   "run_list": [
-    "recipe[maxlab_firewall::base_firewalld]"
+    "role[base_firewall_dmz_maxlab]"
   ],
   "something_env_run_lists" : {
     "production" : [],
