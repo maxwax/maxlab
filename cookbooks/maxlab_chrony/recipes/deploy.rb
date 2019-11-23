@@ -159,5 +159,5 @@ end
 service 'chronyd' do
   subscribes :restart, 'template[/etc/chronyd.conf]', :delayed
 
-  action [:enable, :start]
+  action [:enable, :restart]
 end
