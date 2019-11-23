@@ -108,13 +108,31 @@ config_bind['config_network_ids'].each do |cfg_net_id|
 
 end
 
+# Auto configure listening IP address for ipv4 or use a specified value
+case config_bind['config_listen_on_address_ipv4']
+  when 'ipaddress'
+    cfg_listen_ipv4 = node['ipaddress']
+  else
+    cfg_listen_ipv4 = config_bind['listen_on_address_ipv4']
+end
+
+# Auto configure listening IP address for ipv6 or use a specified value
+case config_bind['config_listen_on_address_ipv6']
+  when 'ipaddress'
+    cfg_listen_ipv6 = node['ipaddress']
+  else
+    cfg_listen_ipv6 = config_bind['listen_on_address_ipv6']
+end
+
 # Deploy master bind config file
 template '/etc/named.conf' do
   source 'named.conf.erb'
   variables (
     {
       config_bind: config_bind,
-      config_zones: config_zones
+      config_zones: config_zones,
+      cfg_listen_ipv4: cfg_listen_ipv4,
+      cfg_listen_ipv6: cfg_listen_ipv6
     }
   )
 

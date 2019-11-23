@@ -10,8 +10,8 @@
 acl <%= @config_bind['domain_name'] %> { 127.0.0.0/8; <%= @config_bind['acl'] %>; };
 
 options {
-	listen-on port <%= @config_bind['listen_on_port_ipv4'] %> { 127.0.0.1; <%= @config_bind['listen_on_address_ipv4'] %> };
-	listen-on-v6 port <%= @config_bind['listen_on_port_ipv6'] %> { ::1; <%= @config_bind['listen_on_address_ipv6'] %> };
+	listen-on port <%= @config_bind['listen_on_port_ipv4'] %> { 127.0.0.1; <%= @cfg_listen_ipv4 %> };
+	listen-on-v6 port <%= @config_bind['listen_on_port_ipv6'] %> { ::1; <%= @cfg_listen_ipv6 %> };
 	directory 	"/var/named";
 	dump-file 	"/var/named/data/cache_dump.db";
 	statistics-file "/var/named/data/named_stats.txt";
