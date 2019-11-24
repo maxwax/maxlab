@@ -109,9 +109,25 @@ end
 
 #---
 
+# Acquire one node that is a dhcp-server and the primary dhcp-server
+dhcp_nodes = search(:node, "tags:dhcp-server AND tags:dhcp-primary")
+
+# We might get more than one, but we should get only one if tags are managed
+enable_dhcp = false
+dhcp_nodes.each do |this_node|
+  puts "CHECKING #{this_node}"
+  # if this node is in the list of primary-dhcp servers, then enable it.
+  if this_node['hostname'] == node['hostname']
+    enable_dhcp = true
+  end
+    
+end
+
 # Ensure the service starts on boot and is reloaded upon config file updates
 service 'dhcpd' do
   subscribes :restart, 'template[/etc/dhcp/dhcpd.conf]', :delayed
 
   action [:enable, :start]
+
+  only_if { enable_dhcp == true }
 end
