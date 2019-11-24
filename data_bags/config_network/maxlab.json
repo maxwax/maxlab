@@ -7,7 +7,7 @@
       "netmask": "255.255.255.0",
       "broadcast_address": "192.168.9.255",
       "routers": "192.168.9.2",
-      "ntp_servers": "192.168.9.2",
+      "ntp_servers": "192.168.9.100",
       "domain_name": "maxlab",
       "dns": {
         "ttl": 8640,
@@ -20,8 +20,8 @@
         "NS": [ "pxetestf2.maxlab", "core.maxlab", "gateway.maxlab" ],
         "domain_name_servers": [
           "192.168.9.100",
-          "192.168.9.2",
-          "1.1.1.1"
+          "192.168.9.105",
+          "192.168.9.2"
         ],
         "acl": "192.168.9.0/24",
         "listen_on_port_ipv4": 53,
