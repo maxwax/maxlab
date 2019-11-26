@@ -341,28 +341,36 @@
           "mac_address": "52:C8:DD:62:5C:76"
         },
         "196": {
-          "node_name": "pxetestf3",
-          "description": "PXE testing VM on flash 3",
+          "node_name": "compare",
+          "description": "Dev VM for comparing results of Chef runs with other VMs",
           "type": "node",
           "group": "vmlab",
           "os:": "CentOS",
           "mac_address": "2E:C6:82:57:7D:E3"
         },
         "197": {
-          "node_name": "pxetestf2",
-          "description": "PXE testing VM",
+          "node_name": "blue",
+          "description": "Development VM blue",
           "type": "node",
           "group": "vmlab",
           "os:": "CentOS",
           "mac_address": "32:2A:AE:44:28:68"
         },
         "198": {
-          "node_name": "testdhcp",
-          "description": "DHCP testing VM",
+          "node_name": "red",
+          "description": "Development VM testing red",
           "type": "node",
           "group": "vmlab",
           "os:": "CentOS",
-          "mac_address": "32:2A:AE:44:28:68"
+          "mac_address": "BE:0C:1C:27:6E:38"
+        },
+        "199": {
+          "node_name": "green",
+          "description": "Development VM testing green",
+          "type": "node",
+          "group": "vmlab",
+          "os:": "CentOS",
+          "mac_address": "76:12:2E:70:C2:2D"
         },
         "249": {
           "node_name": "laptopnas",
