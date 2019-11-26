@@ -17,7 +17,7 @@
         "retry": 7200,
         "expire": 3600000,
         "minimum": 600,
-        "NS": [ "pxetestf2.maxlab", "core.maxlab", "gateway.maxlab" ],
+        "NS": [ "core.maxlab", "bank.maxlab" ],
         "domain_name_servers": [
           "192.168.9.100",
           "192.168.9.105",
