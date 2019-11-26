@@ -340,6 +340,22 @@
           "os:": "CentOS",
           "mac_address": "52:C8:DD:62:5C:76"
         },
+        "120": {
+          "node_name": "graphite1",
+          "description": "Graphite Metric Server VM 1",
+          "type": "node",
+          "group": "graphite",
+          "os:": "CentOS",
+          "mac_address": "CA:74:81:61:F8:E4"
+        },
+        "121": {
+          "node_name": "graphite2",
+          "description": "Graphite Metric Server VM 2",
+          "type": "node",
+          "group": "graphite",
+          "os:": "CentOS",
+          "mac_address": "76:9B:F2:F3:EE:FB"
+        },
         "196": {
           "node_name": "compare",
           "description": "Dev VM for comparing results of Chef runs with other VMs",
