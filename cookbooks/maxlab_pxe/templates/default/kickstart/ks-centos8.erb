@@ -1,0 +1,85 @@
+# ks-centos8 - (Centos/Rhel) THIS FILE DEPLOYED VIA CHEF - DO NOT MODIFY
+#
+# Kickstart file for Centos/Redhat Linux 8.x
+#
+# 2019-11-27 Generated via Chef templates
+# 2019-10-26 Draft for home lab use
+
+install
+text
+
+# Initialize the network device using dhcp. We don't need IPV6 in my home lab
+network --bootproto dhcp --noipv6 
+
+# Get rpm packages from this repository
+url --url=<%= node['global']['repo_url'] %>/<%= @ksconfig['url'] %>/<%= @ksconfig['isodir'] %>
+
+# Let's use the English language and keyboard settings
+lang en_US
+keyboard us
+
+# Hopefully not touch anything else
+ignoredisk --only-use=<%= @ksconfig['root_device'] %>
+
+# Clear partition table
+clearpart --initlabel --drives=<%= @ksconfig['root_device'] %> --all
+
+# Clears master boot record data, a safety step against disk corruption
+zerombr
+
+# Install boot loader (grub2) on boot drive's master boot record
+# Append options to not patch for SPECTRE and MELTDOWN (home network only)
+bootloader --location=mbr --driveorder=<%= @ksconfig['root_device'] %> --append="nopti noibrs noibpb"
+
+# Create a BIOS partition for booting on non-EFI systems
+#part biosboot --fstype=biosboot --ondisk=<%= @ksconfig['root_device'] %> --size=<%= @ksconfig['partitions']['biosboot']['size'] %> <%= @ksconfig['partitions']['biosboot']['options'] %>
+
+# Create a partition to store boot kernels, initrd and config files
+part /boot --fstype=ext4 --asprimary --fsoptions="defaults,relatime,nodiratime,nodev,nosuid,noexec" --size=<%= @ksconfig['partitions']['/boot']['size'] %> --ondisk=<%= @ksconfig['root_device'] %> <%= @ksconfig['partitions']['/boot']['options'] %>
+
+# Create a minimal swap partition. We don't expect to use it.
+part swap --asprimary --size=<%= @ksconfig['partitions']['swap']['size'] %> --ondisk=<%= @ksconfig['root_device'] %> <%= @ksconfig['partitions']['swap']['options'] %>
+
+# Create an LVM2 physical volume. Must use syntax 'pv.01'
+part pv.01 --grow --size=<%= @ksconfig['partitions']['pv.01']['size'] %> --ondisk=<%= @ksconfig['root_device'] %> <%= @ksconfig['partitions']['swap']['options'] %>
+
+# Create an LVM2 volume group for the root OS filesystem
+volgroup <%= @ksconfig['volgroup']['vg_name'] %> <%= @ksconfig['volgroup']['physical_vol'] %>
+
+<% @ksconfig['volumes'].each do |vol_name, vol_cfg| %>
+logvol <%= vol_name %> --vgname=<%= vol_cfg['vg_name'] %> --size=<%= vol_cfg['size'] %> --name=<%= vol_cfg['vol_name'] %> --label=<%= vol_cfg['label'] %> --fstype=<%= vol_cfg['fstype'] %> <%= vol_cfg['options'] %>
+
+<% end %>
+# Set timezone to either UTC (production) or local (development)
+timezone <%= @ksconfig['timezone']['name'] %> <%= @ksconfig['timezone']['options'] %> --ntpservers=<%= @subnet_info['ntp_servers'] %>
+
+# Configure authorization details
+authconfig <%= @ksconfig['authconfig']['options'] %>
+
+# Enable/disble SELinux security systems
+selinux --<%= @ksconfig['selinux']['mode'] %> <%= @ksconfig['selinux']['options'] %>
+
+# Enable/disable Firewall
+firewall <%= @ksconfig['selinux']['options'] %>
+
+# Reboot system after OS installation is complete.
+# This works well on systems where the system reverts to boot to disk after
+# a single attempt to perform a network/PXE boot
+<%= @ksconfig['final_action'] %>
+
+<% @ksconfig['misc_options'].each do |opt| %>
+<%= opt %>
+<% end %>
+
+%packages
+@core
+<% @ksconfig['packages'].each do |pkg| %>
+<%= pkg %>
+<% end %>
+%end
+
+<% @ksconfig['add_ons'].each do |aon, aon_opt| %>
+%addon <%= aon %> <%= aon_opt %>
+%end
+<% end %>
+

@@ -1,0 +1,49 @@
+{
+  "id": "tools",
+  "dist_label": "Tools",
+  "tools": {
+    "1": {
+      "0": {
+        "base": {
+          "menu_label": "Tools",
+          "boot_type": "linux",
+          "tool_type": "image",
+          "group": "1",
+          "network": "maxlab",
+          "subnet": "192.168.9.0",
+          "image": {
+            "kernel": "images/tools/memdisk",
+            "append": "initrd=images/tools/fd-amibios.img"
+          },
+          "bootloader_options": ""
+        },
+        "sff7000": {
+          "menu_label": "Tools",
+          "boot_type": "linux",
+          "tool_type": "image",
+          "group": "2",
+          "network": "maxlab",
+          "subnet": "192.168.9.0",
+          "image": {
+            "kernel": "images/tools/memdisk",
+            "append": "initrd=images/tools/fd-rompaq-sff7700.img"
+          },
+          "bootloader_options": ""
+        },
+        "SAS 8433elp": {
+          "menu_label": "Tools",
+          "boot_type": "linux",
+          "tool_type": "image",
+          "group": "3",
+          "network": "maxlab",
+          "subnet": "192.168.9.0",
+          "image": {
+            "kernel": "images/tools/memdisk",
+            "append": "initrd=images/tools/fd-8433elp.img"
+          },
+          "bootloader_options": ""
+        }
+      }
+    }
+  }
+}

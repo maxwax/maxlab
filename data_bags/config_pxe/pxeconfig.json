@@ -1,0 +1,26 @@
+{
+  "id": "pxeconfig",
+  "doc": "This PXE configuration serves the Maxlab home lab",
+  "kickstart_configs": [
+    "centos",
+    "rhel"
+  ],
+  "netboot_configs": [
+    "clonezilla",
+    "tools"
+  ],
+  "default_menu_title": "Maxlab PXE Menu",
+  "local_repo_dir": "/repo",
+  "kickstart_dir": "kickstart",
+  "scripts_dir": "kickstart/build/scripts",
+  "stubs_dir": "kickstart/build/stubs",
+  "passwords_dir": "kickstart/build/passwords",
+  "user": "root",
+  "group": "root",
+  "default_kernel_fname": "vmlinuz",
+  "default_kernel_dir": "images",
+  "default_initrd_fname": "initrd.img",
+  "default_initrd_dir": "images",
+  "pxelinux_cfg_root": "/var/lib/tftpboot",
+  "pxelinux_cfg_dir": "/var/lib/tftpboot/pxelinux.cfg"
+}

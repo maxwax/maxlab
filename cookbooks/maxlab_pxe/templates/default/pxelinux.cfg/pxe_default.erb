@@ -1,0 +1,68 @@
+SERIAL 0 115200
+CONSOLE 1
+UI menu.c32
+PROMPT 0
+
+MENU TITLE <%= @config_pxe['default_menu_title'] %> (<%= node['fqdn'] %>)
+
+# Left and right side of menu
+MENU MARGIN 10
+
+# Vertical size of menus
+MENU ROWS 16
+
+# Shift n lines down from top, essentially top margin
+MENU VSHIFT 1
+
+# Tab message indicating how to navigate and row where it appears
+MENU TABMSG Press [Tab] to edit options - [F1] or [Esc+1] (on VSP) for help
+MENU TABMSGROW 24
+
+MENU HELPMSGROW 22
+MENU HELPMSGENDROW 22
+
+MENU CMDLINEROW 22
+
+# Screen colors
+MENU COLOR screen      37;44    #80ffffff #00002220 std
+MENU COLOR border    1;37;47    #40000000 #00000000 std
+MENU COLOR title     1;34;47    #c00090f0 #00000000 std
+MENU COLOR unsel       30;47    #90ffffff #00000000 std
+MENU COLOR sel       1;36;44    #e0000000 #20ff8000 all
+MENU COLOR scrollbar 1;32;40    #e0000000 #20ff8000 all
+MENU COLOR disabled    34;47    #60cccccc #00000000 std
+MENU COLOR tabmsg      33;44    #e0000000 #20ff8000 std
+MENU COLOR cmdmark   1;33;44    #e0000000 #20ff8000 std
+MENU COLOR cmdline   1;33;44    #e0000000 #20ff8000 std
+MENU COLOR help      1;33;44    #e0000000 #20ff8000 std
+
+F1 pxelinux.cfg/help.txt
+
+LABEL distro
+  MENU LABEL Community:
+  MENU DISABLE
+  
+<% @pxe_menu.each do |dist_id, dist_cfg| %>
+MENU INCLUDE pxelinux.cfg/<%= dist_id %>/main.conf  <%= dist_cfg['dist_label'] %>
+<% end %>
+
+#MENU SEPARATOR
+
+#MENU SEPARATOR
+#LABEL Clonezilla
+#  MENU LABEL Clonezilla:
+#  MENU DISABLE
+#
+#MENU INCLUDE pxelinux.cfg/clonezilla/main.conf   CloneZilla
+#
+#MENU SEPARATOR
+#LABEL tools
+#  MENU LABEL Tools:
+#  MENU DISABLE
+#
+#MENU INCLUDE pxelinux.cfg/tools/main.conf  Tools and Utilities
+
+LABEL boothd
+  MENU LABEL Boot from hard disk
+  KERNEL chain.c32
+  APPEND boot

@@ -1,0 +1,112 @@
+{
+  "id": "rhel",
+  "dist_label": "Red Hat Enterprise Linux",
+  "rhel": {
+    "8": {
+      "1": {
+        "base": {
+          "menu_label": "Red Hat Linux 8.1 'base' node",
+          "template": "ks-centos8.erb",
+          "group": "1",
+          "network": "maxlab",
+          "subnet": "192.168.9.0",
+          "url": "dist/rhel",
+          "isodir": "rhel-8.1-x86_64-dvd",
+          "interface": "eth0",
+          "root_device": "sda",
+          "bootloader_options": "nopti noibrs noibpb",
+          "serial_console": "earlyprintk=serial,ttyS0 console=tty0 console=ttyS0,115200,8n1",
+          "partitions": {
+            "biosboot": {
+              "size": "1",
+              "options": ""
+            },
+            "/boot": {
+              "size": 1024,
+              "options": ""
+            },
+            "swap": {
+              "size": 2048,
+              "options": ""
+            },
+            "pv.01": {
+              "size": 1,
+              "options": "--grow"
+            }
+          },
+          "volgroup": { 
+            "vg_name": "vg_linuxos",
+            "physical_vol": "pv.01"
+          },
+          "volumes": {
+            "/": {
+              "vol_name": "lv_root",
+              "vg_name": "lv_root",
+              "label": "root",
+              "size": 2048,
+              "fstype": "ext4",
+              "options": "--grow --fsoptions=defaults,relatime,nodiratime"
+            },
+            "/var/log": {
+              "vol_name": "lv_var.log",
+              "vg_name": "lv_var_log",
+              "label": "var.log",
+              "size": 2048,
+              "fstype": "ext4",
+              "options": "--fsoptions='defaults,relatime,nodiratime,nodev,nosuid,noexec' --mkfsoptions='-m 1'"
+            }
+          },
+          "timezone": {
+            "name": "Americas/Denver",
+            "options": "--utc"
+          },
+          "authconfig": {
+            "options": "--enableshadow --passalgo=sha512"
+          },
+          "selinux": {
+            "mode": "permissive",
+            "options": ""
+          },
+          "firewall": {
+            "options": "--enabled --ssh"
+          },
+          "final_action": "#reboot",
+          "misc_options": [
+            "skipx",
+            "eula --agree"
+          ],
+          "packages": [
+            "authconfig", 
+            "bc",
+            "wget",
+            "nc",
+            "net-tools",
+            "bzip2",
+            "bind-utils",
+            "vim"
+          ],
+          "add_ons": {
+            "com_redhat_kdump": "--disable"
+          },
+          "password_file": [
+            "kickstart-rootpw-maxlab.txt"
+          ],
+          "post_scripts": {
+            "static-hostname": {
+              "filename": "script-rhel7-static-hostname",
+              "post_options": "--nochroot --log=/mnt/sysimage/root/ks-post-hostname.log"
+            },
+            "static-ipv4": {
+              "filename": "script-rhel-static-ipv4",
+              "post_options": "--log=/mnt/sysimage/root/ks-post-static-ipv4.log"
+            },
+            "yum-update": {
+              "filename": "script-rhel-yum-update",
+              "post_options": "--log=/mnt/sysimage/root/ks-post-yum-update.log"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "clonezilla",
+  "dist_label": "CloneZilla",
+  "clonezilla": {
+    "2.6": {
+      "4-10-amd64": {
+        "base": {
+          "menu_label": "CloneZilla Image Factory",
+          "boot_type": "linux",
+          "tool_type": "clonezilla",
+          "group": "1",
+          "network": "maxlab",
+          "subnet": "192.168.9.0",
+          "bootloader_options": "",
+          "clonezilla": {
+            "image_repo_command": "ocs_prerun='mount -t",
+            "image_repo_proto": "nfs",
+            "image_repo_url": "aux.maxlab:/srv/auxdata/clonezilla",
+            "image_repo_mountpoint": "/home/partimag",
+            "squashfs_cmd": "fetch=",
+            "squashfs_url": "tftp://repo.maxlab/images/clonezilla/filesystem.squashfs",
+            "kernel_options": [
+              "boot=live",
+              "username=user",
+              "union=overlay",
+              "config components quiet noswap edd=on nomodeset nodmraid",
+              "locales= keyboard-layouts=",
+              "ocs_live_run='ocs-live-general'",
+              "ocs_live_extra_param=''",
+              "ocs_live_batch=no net.ifnames=0",
+              "nosplash noprompt"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

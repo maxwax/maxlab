@@ -1,0 +1,67 @@
+# ---------
+# script-rhel-static-ipv4- THIS FILE DEPLOYED VIA CHEF - DO NOT MODIFY
+# ---------
+%post --log=/root/ks-post-static-ipv4.log
+cat << 'CONFIG_STATIC_NETWORK' > /root/make-static-network
+#!/bin/bash
+#
+# Replace IPv4 DHCP config with IPv4 static config
+#
+set -x
+
+for EACH_FILE in /etc/sysconfig/network-scripts/ifcfg-*
+do
+  if [[ $(grep 'DEFROUTE="yes"' $EACH_FILE | wc -l) -eq 1 ]]
+  then
+    FULLNAME=$EACH_FILE
+    FILENAME=$(basename $EACH_FILE)
+    break
+  fi
+done
+
+# Replace default of DHCP boot protocol with none
+sed -i 's/dhcp/none/g' $FULLNAME
+
+# Remove any existing static configs of these:
+sed -i 's/IPADDR.*$//g' $FULLNAME
+sed -i 's/NETMASK.*$//g' $FULLNAME
+sed -i 's/GATEWAY.*$//g' $FULLNAME
+sed -i 's/DNS.*$//g' $FULLNAME
+
+# Remove any empty lines left by the above three removals
+sed -i '/^$/d' $FULLNAME
+
+INT=${FILENAME##ifcfg-}
+
+ILINE=$(ifconfig $INT | grep '  inet ')
+
+echo "# Static config via /root/make-static-network" >> $FULLNAME
+
+IPADDR=$(echo $ILINE | awk '{print $2}')
+echo "IPADDR=\"$IPADDR\"" >> $FULLNAME
+
+NETMASK=$(echo $ILINE | awk '{print $4}')
+echo "NETMASK=\"$NETMASK\"" >> $FULLNAME
+
+GATEWAY=$(ip -4 route | egrep '^default' | awk '{print $3}')
+echo "GATEWAY=\"$GATEWAY\"" >> $FULLNAME
+
+DNSCOUNT=0
+grep '^nameserver' /etc/resolv.conf | while read LINE
+do
+  let DNSCOUNT+=1
+  DNS=$(echo $LINE | awk '{print $2}')
+  echo "DNS${DNSCOUNT}=$DNS" >> $FULLNAME
+
+  if [[ $DNSCOUNT == 3 ]]
+  then
+    break
+  fi
+
+done
+CONFIG_STATIC_NETWORK
+
+. /root/make-static-network >> /root/ks-post-static-ipv4.log
+%end
+# ---------
+

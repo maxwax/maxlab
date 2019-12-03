@@ -1,0 +1,35 @@
+# This file deployed by Chef - DO NOT EDIT
+#
+# PXE Network Boot Menu
+#
+MENU TITLE <%= @dist_label %> <%= @major %>.<%= @minor %>
+
+F1 pxelinux.cfg/<%= @dist_id %>/help.txt
+
+LABEL previous
+    MENU LABEL Previous Menu
+    MENU EXIT
+
+MENU SEPARATOR
+
+LABEL type
+    MENU LABEL Select install type:
+    MENU DISABLE
+
+<% @config_groups.each do |group, groupdata| %>
+  <% groupdata.each do |ksname, ksconfig| %>
+LABEL <%= ksconfig['menu_label'] %>
+  MENU LABEL <%= ksconfig['menu_label'] %>
+  KERNEL <%= ksconfig['kernel_text'] %>
+  APPEND <%= ksconfig['append_text'] %>
+    <% if ksconfig.key? 'serial_console' %> 
+
+LABEL <%= ksconfig['menu_label'] %> (Serial console)
+  MENU LABEL <%= ksconfig['menu_label'] %> (Serial console)
+  KERNEL <%= ksconfig['kernel_text'] %>
+  APPEND <%= ksconfig['append_text'] %> <%= ksconfig['serial_console'] %>
+
+    <% end %>
+  <% end %>
+<% end %>
+
