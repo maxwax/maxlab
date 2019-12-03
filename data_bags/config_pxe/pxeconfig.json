@@ -22,5 +22,9 @@
   "default_initrd_fname": "initrd.img",
   "default_initrd_dir": "images",
   "pxelinux_cfg_root": "/var/lib/tftpboot",
-  "pxelinux_cfg_dir": "/var/lib/tftpboot/pxelinux.cfg"
+  "pxelinux_cfg_dir": "/var/lib/tftpboot/pxelinux.cfg",
+  "images_source": {
+    "http": "http://green.maxlab",
+    "filename": "images-dirs.tar"
+  }
 }
