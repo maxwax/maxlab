@@ -1,0 +1,23 @@
+{
+  "name": "service_tftpserver_instance_maxlab",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "config_tftp_server": {
+      "instance": "tftp_server.maxlab"
+    }
+  },
+  "description": "TFTP server supporting PXE boot for network maxlab",
+  "run_list": [
+  ],
+  "env_run_lists" : {
+    "production" : [],
+    "preprod" : [],
+    "maxlab": [
+      "recipe[maxlab_tftp_server::deploy]"
+    ]
+  },
+  "override_attributes": {
+    }
+  
+}

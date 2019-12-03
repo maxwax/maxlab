@@ -1,0 +1,25 @@
+{
+  "name": "service_pxe_instance_maxlab",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "config_pxe_server": {
+      "instance": "pxe_server.maxlab"
+    }
+  },
+  "description": "PXE config files supporting PXE boot for network maxlab",
+  "run_list": [
+  ],
+  "env_run_lists" : {
+    "production" : [],
+    "preprod" : [],
+    "maxlab": [
+      "recipe[maxlab_pxe::syslinux]",
+      "recipe[maxlab_pxe::deploy]",
+      "recipe[maxlab_pxe::images]"
+    ]
+  },
+  "override_attributes": {
+    }
+  
+}

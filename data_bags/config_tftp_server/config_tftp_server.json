@@ -1,0 +1,19 @@
+{
+  "id": "tftp_server.maxlab",
+  "doc": "Configuration for TFTP server supporting PXE in lab 'maxlab",
+  "user": "root",
+  "group": "root",
+  "default_kernel_fname": "vmlinuz",
+  "default_kernel_dir": "images",
+  "default_initrd_fname": "initrd.img",
+  "default_initrd_dir": "images",
+  "pxelinux_cfg_root": "/var/lib/tftpboot",
+  "pxelinux_cfg_dir": "/var/lib/tftpboot/pxelinux.cfg",
+  "firewall": {
+    "firewalld": {
+      "service": "tftp"
+    }
+  }
+}
+
+
