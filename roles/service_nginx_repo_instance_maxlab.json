@@ -1,0 +1,23 @@
+{
+  "name": "service_nginx_repo_instance_maxlab",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "config_nginx_repo": {
+      "instance": "maxlab_repo"
+    }
+  },
+  "description": "A simple deployment of nginx for maxlab http file serving",
+  "run_list": [
+  ],
+  "env_run_lists" : {
+    "production" : [],
+    "preprod" : [],
+    "maxlab": [
+      "recipe[maxlab_nginx_repo::deploy]"
+    ]
+  },
+  "override_attributes": {
+    }
+  
+}

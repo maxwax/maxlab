@@ -1,0 +1,25 @@
+{
+  "id": "maxlab_repo",
+  "network": "maxlab",
+  "subnet": "192.168.9.0",
+  "owner": "nginx",
+  "group": "nginx",
+  "mode": "0655",
+  "port": 80,
+  "root_dir": "/repo",
+  "worker_processes": "auto",
+  "error_log": "/var/log/nginx/error.log",
+  "pid_file": "/run/nginx.pid",
+  "worker_connections": 1024,
+  "access_log": "/var/log/nginx/access.log",
+  "sendfile": "on",
+  "tcp_nopush": "on",
+  "tcp_nodelay": "on",
+  "keepalive_timeout": 65,
+  "types_hash_max_size": 2048,
+  "firewall": {
+    "firewalld": {
+      "service": "http"
+    }
+  }
+}

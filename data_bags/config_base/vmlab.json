@@ -14,7 +14,7 @@
         }
       },
       "default_packages": [
-        "vim", "atop", "htop", "nc", "tree", "wget"
+        "vim", "atop", "htop", "nc", "tree", "wget", "policycoreutils-python-utils"
       ],
       "default_scripts": {
         "/etc": {
@@ -53,7 +53,7 @@
         }
       },
       "default_packages": [
-        "vim", "atop", "htop", "nc", "tree", "wget"
+        "vim", "atop", "htop", "nc", "tree", "wget", "policycoreutils-python-utils"
       ],
       "default_scripts": {
         "/etc": {
