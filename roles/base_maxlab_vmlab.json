@@ -7,7 +7,7 @@
   },
   "description": "Base role for all nodes in maxlab",
   "run_list": [
-    "role[maxlab_base]",
+    "recipe[maxlab_base::deploy]",
     "role[base_firewall_dmz_maxlab]"
   ],
   "something_env_run_lists" : {
