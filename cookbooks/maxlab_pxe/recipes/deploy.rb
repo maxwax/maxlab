@@ -125,7 +125,7 @@ config_pxe['kickstart_configs'].each do |dist_id|
           password_file = "#{local_passwords_dist_dir}/#{pfile}"
 
           execute "include-file-#{pfile}" do
-            command "cat #{password_file} >> #{kickstart_file}"
+            command "if [[ -f #{password_file} ]]; then cat #{password_file} >> #{kickstart_file}; fi"
             action :run
           end
 
