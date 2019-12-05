@@ -72,6 +72,6 @@ base_config['distver'].each do |distver, dist_config|
   end
 end
 
-if distver = false
+if distver_found == false
   log "ERROR: maxlab_base could not find this node's supported distribution + version defined in data bag config_base.  No base packages or scripts have been deployed."
 end
