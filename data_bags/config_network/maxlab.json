@@ -195,7 +195,7 @@
           "type": "node",
           "group": "laptop",
           "os:": "Fedora Linux",
-          "base": "sarko",
+          "base": "maxlab_sarko",
           "mac_address": "b8:6b:23:1e:02:c6"
         },
         "41": {
@@ -204,7 +204,7 @@
           "type": "node",
           "group": "laptop",
           "os:": "Fedora Linux",
-          "base": "sarko",
+          "base": "maxlab_sarko",
           "mac_address": "a4:34:d9:6a:63:b9"
         },
         "42": {
@@ -224,6 +224,24 @@
           "os:": "MacOS",
           "base": "_na",
           "mac_address": "a4:5e:60:cb:3f:5d"
+        },
+        "44": {
+          "node_name": "chaos",
+          "description": "Toshiba Z40 laptop chaosmonkey logo (Wired USB Ethernet)",
+          "type": "node",
+          "group": "laptop",
+          "os:": "Linux",
+          "base": "maxlab_chaos",
+          "mac_address": "8c:a3:4c:e9:22:1a"
+        },
+        "45": {
+          "node_name": "chaoswifi",
+          "description": "Toshiba Z40 laptop chaosmonkey logo (WIFI)",
+          "type": "node",
+          "group": "laptop",
+          "os:": "Linux",
+          "base": "maxlab_chaos",
+          "mac_address": "44:85:00:4d:84:51"
         },
         "50": {
           "node_name": "mechsarko",
