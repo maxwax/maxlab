@@ -226,13 +226,13 @@
           "mac_address": "a4:5e:60:cb:3f:5d"
         },
         "44": {
-          "node_name": "chaos",
+          "node_name": "chaosusb",
           "description": "Toshiba Z40 laptop chaosmonkey logo (Wired USB Ethernet)",
           "type": "node",
           "group": "laptop",
           "os:": "Linux",
           "base": "maxlab_chaos",
-          "mac_address": "8c:a3:4c:e9:22:1a"
+          "mac_address": "8c:ae:4c:e9:22:1a"
         },
         "45": {
           "node_name": "chaoswifi",
