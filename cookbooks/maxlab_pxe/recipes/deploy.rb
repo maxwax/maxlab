@@ -36,21 +36,21 @@ config_pxe['kickstart_configs'].each do |dist_id|
 
       local_kickstart_dist_dir = "#{local_kickstart_dir}/#{dist_id}"
 
-      url_kickstart_dist_dir = 
+      url_kickstart_dist_dir =
         "#{node['global']['repo_url']}/#{config_pxe['kickstart_dir']}/#{dist_id}"
 
       # Directories containing script snippets files; Available locally
-      local_scripts_dir = 
+      local_scripts_dir =
         "#{config_pxe['local_repo_dir']}/#{config_pxe['scripts_dir']}"
       local_scripts_dist_dir = "#{local_scripts_dir}/#{dist_id}"
 
       # Directories containing stub files (incomplete kickstart files)
-      local_stubs_dir = 
+      local_stubs_dir =
         "#{config_pxe['local_repo_dir']}/#{config_pxe['stubs_dir']}"
       local_stubs_dist_dir = "#{local_stubs_dir}/#{dist_id}"
 
       # Directories containing kickstart password instructions in files
-      local_passwords_dir = 
+      local_passwords_dir =
         "#{config_pxe['local_repo_dir']}/#{config_pxe['passwords_dir']}"
       local_passwords_dist_dir = "#{local_passwords_dir}/#{dist_id}"
 
@@ -85,7 +85,7 @@ config_pxe['kickstart_configs'].each do |dist_id|
 
         # Load network information for the network this kickstart config uses
         config_network = data_bag_item('config_network', ksconfig['network']).to_h
-        
+
         # Pull subnet specific info from the overall network
         subnet_info = config_network['subnet'][ksconfig['subnet']]
 
@@ -151,12 +151,12 @@ config_pxe['kickstart_configs'].each do |dist_id|
 
         #
         # Construct a hash tree via pxe_menu containing data to build menus ltr
-        # 
-       
+        #
+
         unless pxe_menu.key? dist_id
           pxe_menu[dist_id] = {}
         end
-        
+
         # Branch for dist_id to hold label only
         unless pxe_menu[dist_id].key? 'dist_label'
           pxe_menu[dist_id]['dist_label'] = dist_label
@@ -176,7 +176,7 @@ config_pxe['kickstart_configs'].each do |dist_id|
         end
 
         unless pxe_menu[dist_id]['versions'][major][minor].key? group
-          pxe_menu[dist_id]['versions'][major][minor][group] = {} 
+          pxe_menu[dist_id]['versions'][major][minor][group] = {}
         end
 
         unless pxe_menu[dist_id]['versions'][major][minor][group].key? config_name
@@ -245,12 +245,12 @@ config_pxe['netboot_configs'].each do |tool_id|
 #puts
 #puts "BOOT_CONFIG"
 #pp boot_config
-#puts 
+#puts
         # We construct this along the way
         unless pxe_menu.key? tool_id
           pxe_menu[tool_id] = {}
         end
-        
+
         unless pxe_menu[tool_id].key? 'dist_label'
           pxe_menu[tool_id]['dist_label'] = dist_label.to_s
         end
@@ -268,7 +268,7 @@ config_pxe['netboot_configs'].each do |tool_id|
         end
 
         unless pxe_menu[tool_id]['versions'][major][minor].key? group
-          pxe_menu[tool_id]['versions'][major][minor][group] = {} 
+          pxe_menu[tool_id]['versions'][major][minor][group] = {}
         end
 
         unless pxe_menu[tool_id]['versions'][major][minor][group].key? config_name
@@ -298,14 +298,14 @@ config_pxe['netboot_configs'].each do |tool_id|
             end
 
             # Construct a kernel option
-            pm['append_text'] << " " + 
+            pm['append_text'] << " " +
               boot_config['clonezilla']['image_repo_command'] + " " +
               boot_config['clonezilla']['image_repo_proto'] + " " +
               boot_config['clonezilla']['image_repo_url'] + " " +
               boot_config['clonezilla']['image_repo_mountpoint'] + "'"
 
             pm['append_text'] << " " +
-              boot_config['clonezilla']['squashfs_cmd'] + 
+              boot_config['clonezilla']['squashfs_cmd'] +
               boot_config['clonezilla']['squashfs_url']
 
           # Ex: MS-DOS Firmware Upgrade Images
@@ -364,7 +364,7 @@ template pxe_default_file do
   owner config_pxe['user']
   group config_pxe['group']
   mode 0755
-  
+
   variables(
     pxe_menu: pxe_menu,
     config_pxe: config_pxe
@@ -394,7 +394,7 @@ puts
     owner config_pxe['user']
     group config_pxe['group']
     mode 0755
-    
+
     variables(
       dist_label: dist_cfg['dist_label'],
       dist_id: dist_id,
@@ -407,9 +407,9 @@ puts
     major_cfg.each do |minor, config_groups|
 
       linux_release_id = "#{dist_id}-#{major}.#{minor}"
-  
+
       menu_release = "#{config_pxe['pxelinux_cfg_dir']}/#{dist_id}/main.conf"
-  
+
       # Ex: '/var/lib/tftpboot/pxelinux.cfg/redhat/redhat81.conf'
       template "#{config_pxe['pxelinux_cfg_dir']}/#{dist_id}/#{linux_release_id}.conf" do
 
@@ -417,7 +417,7 @@ puts
         owner config_pxe['user']
         group config_pxe['group']
         mode 0744
-        
+
         variables(
           linux_release_id: linux_release_id,
           dist_id: dist_id,
