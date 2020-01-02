@@ -24,44 +24,39 @@ tmp_file = "/tmp/#{config_pxe['images_source']['filename']}"
 # Ex: http://green.maxlab/images-dirs.tar
 images_http_name = "#{config_pxe['images_source']['http']}/#{config_pxe['images_source']['filename']}"
 
-if not File.directory?(images_dir)
+# Create 'images' directory in tftpboot dir
+directory images_dir do
+  owner config_pxe['user']
+  group config_pxe['user']
+  mode 0755
+  action :create
 
-  # Create 'images' directory in tftpboot dir
-  directory images_dir do
-    owner config_pxe['user']
-    group config_pxe['user']
-    mode 0755
-    action :create
-  end
+  not_if { Dir.exists?(images_dir) }
 end
 
-# Directory should exist, but if no data, seed it with initial images files
-if Dir.empty?(images_dir)
+# Download a tar file with manually prepared kernel, initrd and tools images
+remote_file tmp_file do
+  source images_http_name
+  owner config_pxe['user']
+  group config_pxe['user']
+  mode 0755
 
-  # Download a tar file with manually prepared kernel, initrd and tools images
-  remote_file tmp_file do
-    source images_http_name
-    owner config_pxe['user']
-    group config_pxe['user']
-    mode 0755
-    action :create
-  end
+  action :create
+end
 
-  # We require this and a minimal server install does not have it.
-  package 'tar' do
-    action :install
-  end
+# We require this and a minimal server install does not have it.
+package 'tar' do
+  action :install
+end
 
-  # Untar the file to make the files available
-  execute "untar" do
-    command 'tar xvf /tmp/images-dirs.tar'
-    cwd "#{config_pxe['pxelinux_cfg_root']}/#{config_pxe['default_kernel_dir']}"
-    action :run
-  end
+# Untar the file to make the files available
+execute "untar" do
+  command "tar xvf /tmp/images-dirs.tar"
+  cwd "#{config_pxe['pxelinux_cfg_root']}/#{config_pxe['default_kernel_dir']}"
+  action :run
+end
 
-  # Delete the tmp file when done, it can be quite large
-  file tmp_file do
-    action :delete
-  end
-
+# Delete the tmp file when done, it can be quite large
+file tmp_file do
+  action :delete
 end
