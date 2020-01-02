@@ -15,7 +15,7 @@ config_nginx_repo = data_bag_item('config_nginx_repo', node['config_nginx_repo']
 
 # Load network information for the network this kickstart config uses
 config_network = data_bag_item('config_network', config_nginx_repo['network'])
-        
+
 # Pull subnet specific info from the overall network
 subnet_info = config_network['subnet'][config_nginx_repo['subnet']]
 
@@ -23,12 +23,14 @@ package %w(nginx) do
   action :install
 end
 
-directory config_nginx_repo['root_dir'] do
-  owner config_nginx_repo['user']
-  group config_nginx_repo['group']
-  mode  config_nginx_repo['mode']
+config_nginx_repo['servers'].each do |sname, sconfig|
+  directory sconfig['root_dir'] do
+    owner config_nginx_repo['user']
+    group config_nginx_repo['group']
+    mode  config_nginx_repo['mode']
 
-  action :create
+    action :create
+  end
 end
 
 template '/etc/nginx/conf.d/maxlab-repo.conf' do
@@ -38,8 +40,9 @@ template '/etc/nginx/conf.d/maxlab-repo.conf' do
   mode   config_nginx_repo['mode']
 
   variables(
+    servers:             config_nginx_repo['servers'],
+
     port:                config_nginx_repo['port'],
-    root_dir:            config_nginx_repo['root_dir'],
     user:                config_nginx_repo['owner'],
     worker_processes:    config_nginx_repo['worker_processes'],
     error_log:           config_nginx_repo['error_log'],
@@ -64,7 +67,6 @@ template '/etc/nginx/nginx.conf' do
 
   variables(
     port:                config_nginx_repo['port'],
-    root_dir:            config_nginx_repo['root_dir'],
     user:                config_nginx_repo['owner'],
     worker_processes:    config_nginx_repo['worker_processes'],
     error_log:           config_nginx_repo['error_log'],
@@ -81,12 +83,28 @@ template '/etc/nginx/nginx.conf' do
   notifies :reload, 'service[nginx]', :delayed
 end
 
-#
-# TODO - to enable access to /repo, SELinux must be modified
-#
-#   88  semanage fcontext -a -t httpd_sys_content_t /repo
-#   89  restorecon -Rv /repo
+include_recipe 'selinux_policy::install'
 
+config_nginx_repo['servers'].each do |sname, sconfig|
+
+  http_dir = sconfig['root_dir']
+
+  # Don't let us submit bad data and change the SELinux policy of root dirs
+  if not ['/','/bin','/boot','/dev','/etc','/home','/lib',
+          '/lib64','/media','/mnt','/net','/opt','/proc',
+          '/root','/run','/sbin','/srv','/net','/sys',
+          '/tmp','/usr','/var'].include?(http_dir)
+
+    selinux_policy_fcontext "#{http_dir}(/.*)?" do
+      secontext 'httpd_sys_content_t'
+    end
+
+    execute 'restore-file-contexts' do
+      command "restorecon -R #{http_dir}"
+      action :run
+    end
+  end
+end
 
 # Warning - firewalld specific, won't work on Red hat < 7, Debian, etc
 #---

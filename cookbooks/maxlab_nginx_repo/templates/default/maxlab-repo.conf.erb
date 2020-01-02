@@ -1,25 +1,30 @@
-# 
+#
 # /etc/nginx/conf.d/maxlab-repo - This file deployed by Chef - DO NOT EDIT
 #
 
+<% @servers.each do |sname, sconfig| %>
 server {
-  listen       <%= @port %> default_server;
-  listen       [::]:<%= @port %> default_server;
-  server_name  <%= node['fqdn'] %>;
-  root         <%= @root_dir %>;
+  listen       <%= sconfig['listen_port_ipv4'] %> default_server;
+  listen       <%= sconfig['listen_port_ipv6'] %> default_server;
+  server_name  <%= sconfig['server_name'] %>;
+  root         <%= sconfig['root_dir'] %>;
 
   # Load configuration files for the default server block.
-  include /etc/nginx/default.d/*.conf;
+  include <%= sconfig['include_config_files'] %>;
 
-  location <%= @root_dir %> {
-    autoindex on;
+  <% sconfig['locations'].each do |loc_name, loc_config| %>
+  location <%= loc_config['location'] %> {
+    <% loc_config['location_options'].each do |loc_opt| %>
+      <%= loc_opt %>
+    <% end %>
   }
+  <% end %>
 
-  error_page 404 /404.html;
-    location = /40x.html {
+  <% sconfig['error_pages'].each do |err_page_id, err_page_config| %>
+  error_page <%= err_page_config['result_code'] %>;
+    location = <%= err_page_config['location'] %> {
   }
+  <% end %>
 
-  error_page 500 502 503 504 /50x.html;
-    location = /50x.html {
-  }
 }
+<% end %>
