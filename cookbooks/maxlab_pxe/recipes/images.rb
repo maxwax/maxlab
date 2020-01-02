@@ -33,6 +33,10 @@ if not File.directory?(images_dir)
     mode 0755
     action :create
   end
+end
+
+# Directory should exist, but if no data, seed it with initial images files
+if Dir.empty?(images_dir)
 
   # Download a tar file with manually prepared kernel, initrd and tools images
   remote_file tmp_file do
