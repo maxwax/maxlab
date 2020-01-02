@@ -34,7 +34,7 @@
               "options": "--grow"
             }
           },
-          "volgroup": { 
+          "volgroup": {
             "vg_name": "vg_linuxos",
             "physical_vol": "pv.01"
           },
@@ -57,7 +57,7 @@
             }
           },
           "timezone": {
-            "name": "Americas/Denver",
+            "name": "America/Denver",
             "options": "--utc"
           },
           "authconfig": {
@@ -76,7 +76,7 @@
             "eula --agree"
           ],
           "packages": [
-            "authconfig", 
+            "authconfig",
             "bc",
             "wget",
             "nc",
