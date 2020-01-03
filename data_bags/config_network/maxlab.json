@@ -367,7 +367,25 @@
           "group": "infra",
           "os:": "CentOS",
           "base": "maxlab_vmlab",
-          "mac_address": "8e:28:fa:de:bb:bb"
+          "mac_address": "5E:CC:11:BD:17:19"
+        },
+        "103": {
+          "node_name": "stor",
+          "description": "Repository Infrastructure (TFTP, HTTP) Repo Backup",
+          "type": "node",
+          "group": "infra",
+          "os:": "CentOS",
+          "base": "maxlab_vmlab",
+          "mac_address": "A2:B0:07:BD:2F:FB"
+        },
+        "104": {
+          "node_name": "repomanual",
+          "description": "Repository Infrastructure (TFTP, HTTP) Manual Build",
+          "type": "node",
+          "group": "infra",
+          "os:": "CentOS",
+          "base": "maxlab_vmlab",
+          "mac_address": "E2:B2:DD:8B:67:B4"
         },
         "105": {
           "node_name": "bank",
@@ -395,6 +413,15 @@
           "os:": "CentOS",
           "base": "maxlab_vmlab",
           "mac_address": "76:9B:F2:F3:EE:FB"
+        },
+        "122": {
+          "node_name": "pxetest1",
+          "description": "PXE Boot testing VM 1",
+          "type": "node",
+          "group": "infra",
+          "os:": "CentOS",
+          "base": "maxlab_vmlab",
+          "mac_address": "1A:92:46:4E:75:DD"
         },
         "196": {
           "node_name": "compare",
