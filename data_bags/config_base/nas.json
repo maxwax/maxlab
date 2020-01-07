@@ -1,0 +1,84 @@
+{
+  "id": "maxlab_nas",
+  "doc": "This provides a base configuration for NAS nodes in my home lab 'maxlab'",
+  "distver": {
+    "rhelv8|centosv8": {
+      "repo_packages": {
+        "rpmfusion-free-release-8": {
+          "source": "http://repo.maxlab/files/os/centos/8/rpms/rpmfusion-free-release-8.noarch.rpm",
+          "filename": "rpmfusion-free-release-8.noarch.rpm"
+        },
+        "rpmfusion-nonfree-release-8": {
+          "source": "http://repo.maxlab/files/os/centos/8/rpms/rpmfusion-nonfree-release-8.noarch.rpm",
+          "filename": "rpmfusion-nonfree-release-8.noarch.rpm"
+        }
+      },
+      "default_packages": [
+        "vim", "atop", "htop", "nc", "tree", "wget", "policycoreutils-python-utils"
+      ],
+      "default_scripts": {
+        "/etc": {
+          "bashrc": {
+            "subdir": "etc",
+            "owner": "root",
+            "group": "root",
+            "mode": "0755"
+          }
+        },
+        "/usr/local/etc": {
+          "shell-basics": {
+            "subdir": "usr/local/etc",
+            "owner": "root",
+            "group": "root",
+            "mode": "0755"
+          },
+          "shell-history": {
+            "subdir": "usr/local/etc",
+            "owner": "root",
+            "group": "root",
+            "mode": "0755"
+          }
+        }
+      }
+    },
+    "rhelv7|centosv7": {
+      "repo_packages": {
+        "rpmfusion-free-release-7": {
+          "source": "http://repo.maxlab/files/os/centos/7/rpms/rpmfusion-free-release-7.noarch.rpm",
+          "filename": "rpmfusion-free-release-7.noarch.rpm"
+        },
+        "rpmfusion-nonfree-release-7": {
+          "source": "http://repo.maxlab/files/os/centos/7/rpms/rpmfusion-nonfree-release-7.noarch.rpm",
+          "filename": "rpmfusion-nonfree-release-7.noarch.rpm"
+        }
+      },
+      "default_packages": [
+        "vim", "atop", "htop", "nc", "tree", "wget", "policycoreutils-python"
+      ],
+      "default_scripts": {
+        "/etc": {
+          "bashrc": {
+            "subdir": "etc",
+            "owner": "root",
+            "group": "root",
+            "mode": "0755"
+          }
+        },
+        "/usr/local/etc": {
+          "shell-basics": {
+            "subdir": "usr/local/etc",
+            "owner": "root",
+            "group": "root",
+            "mode": "0755"
+          },
+          "shell-history": {
+            "subdir": "usr/local/etc",
+            "owner": "root",
+            "group": "root",
+            "mode": "0755"
+          }
+        }
+      }
+    }
+  }
+}
