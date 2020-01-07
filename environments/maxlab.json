@@ -19,6 +19,41 @@
       "metric_query_vip": "http://metric_query.maxlab",
       "graphite_vip": "http://graphite.maxlab",
       "graphite_vip": "http://grafana.maxlab"
+    },
+    "tags": {
+      "tftp-server": {
+        "doc": "A node that has a TFTP protocol server."
+      },
+      "pxe-server": {
+        "doc": "A node with a TFTP server that can serve PXE boot files (menus, images, tools)"
+      },
+      "nginx-server": {
+        "doc": "A node with an NGINX web server"
+      },
+      "apache-server": {
+        "doc": "A node with an Apache web server"
+      },
+      "http-server": {
+        "doc": "A node with an http web server (regardless of Apache or Nginx)"
+      },
+      "dhcp-server": {
+        "doc": "A node with an DHCP server"
+      },
+      "dns-server": {
+        "doc": "A node with an DNS server"
+      },
+      "ntp-server": {
+        "doc": "A node with an NTP server (ntpd or Chrony)"
+      },
+      "graphite": {
+        "doc": "A node with an Graphite metrics service"
+      },
+      "grafana": {
+        "doc": "A node with a Grafana service"
+      },
+      "carbon-relay": {
+        "doc": "A node with an Carbon-Relay-NG service"
+      }
     }
   },
   "override_attributes": {
