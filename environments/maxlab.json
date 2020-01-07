@@ -10,6 +10,8 @@
       "repo_url": "http://repo.maxlab",
       "dist_url": "http://repo.maxlab/dist",
       "iso_url": "http://repo.maxlab/iso",
+      "files_url": "http://repo.maxlab/files",
+      "typefaces_url": "http://repo.maxlab/files/typefaces",
       "chef_url": "https://chef.maxlab/organizations/maxlab",
       "tftp_url": "http://repo.maxlab",
       "upstream_ntp": "2.centos.pool.ntp.org",
