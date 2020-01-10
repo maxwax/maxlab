@@ -9,15 +9,14 @@
   },
   "description": "A simple deployment of nginx for maxlab http file serving",
   "run_list": [
+    "recipe[maxlab_nginx_repo]"
   ],
   "env_run_lists" : {
     "production" : [],
     "preprod" : [],
-    "maxlab": [
-      "recipe[maxlab_nginx_repo::deploy]"
-    ]
+    "maxlab": []
   },
   "override_attributes": {
     }
-  
+
 }

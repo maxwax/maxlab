@@ -1,5 +1,9 @@
 # maxlab_nginx_repo CHANGELOG
 
+# 0.1.2
+
+* Using ::default instead of ::deploy across all cookbooks.
+
 # 0.1.1
 
 * Reworking how configuration files for a listening server/port are setup.

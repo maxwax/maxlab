@@ -4,6 +4,10 @@ Cookbook for deploying DNS service using BIND on Redhat platform Linux distribut
 
 Created for use in my home lab, 'maxlab'.
 
+# 0.1.3
+
+* Using ::default instead of ::deploy across all cookbooks.
+
 # 0.1.2
 
 - First working draft that deploys forward and reverse config files, a master /etc/named.conf file and leverages maxlab_firewall to open port 53/tcp for services

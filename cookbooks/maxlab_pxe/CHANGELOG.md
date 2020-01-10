@@ -1,5 +1,9 @@
 # maxlab_pxe CHANGELOG
 
+# 0.1.5
+
+* Using ::default instead of ::deploy across all cookbooks.
+
 # 0.1.4
 
 * Changing sort order on major/minor versions so highest (most recent) is shown on top of PXE menus, and older versions show towards bottom.

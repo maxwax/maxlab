@@ -9,17 +9,16 @@
   },
   "description": "PXE config files supporting PXE boot for network maxlab",
   "run_list": [
+    "recipe[maxlab_pxe::syslinux]",
+    "recipe[maxlab_pxe]",
+    "recipe[maxlab_pxe::images]"
   ],
   "env_run_lists" : {
     "production" : [],
     "preprod" : [],
-    "maxlab": [
-      "recipe[maxlab_pxe::syslinux]",
-      "recipe[maxlab_pxe::deploy]",
-      "recipe[maxlab_pxe::images]"
-    ]
+    "maxlab": []
   },
   "override_attributes": {
     }
-  
+
 }
