@@ -10,15 +10,14 @@
   },
   "description": "Standard chrony NTP server configuration",
   "run_list": [
+    "recipe[maxlab_chrony]"
   ],
   "env_run_lists" : {
     "production" : [],
     "preprod" : [],
-    "maxlab": [
-      "recipe[maxlab_chrony::deploy]"
-    ]
+    "maxlab": []
   },
   "override_attributes": {
     }
-  
+
 }

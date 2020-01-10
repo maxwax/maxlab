@@ -9,15 +9,14 @@
   },
   "description": "Primary DHCP server on node bank.maxlab",
   "run_list": [
+    "recipe[maxlab_dhcp]"
   ],
   "env_run_lists" : {
     "production" : [],
     "preprod" : [],
-    "maxlab": [
-      "recipe[maxlab_dhcp::deploy]"
-    ]
+    "maxlab": []
   },
   "override_attributes": {
     }
-  
+
 }

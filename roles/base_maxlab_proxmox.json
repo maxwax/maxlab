@@ -7,7 +7,7 @@
   },
   "description": "Base role for Proxmox nodes in maxlab",
   "run_list": [
-    "recipe[maxlab_base::deploy]",
+    "recipe[maxlab_base]",
     "role[base_firewall_dmz_maxlab]"
   ],
   "something_env_run_lists" : {
