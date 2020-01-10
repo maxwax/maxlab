@@ -12,8 +12,8 @@ LABEL release
     MENU LABEL Select release:
     MENU DISABLE
 
-<% @dist_cfg['versions'].sort.each do |major, major_cfg| %>
-  <% major_cfg.sort.each do |minor, minor_cfg| %>
+<% @dist_cfg['versions'].sort.reverse.each do |major, major_cfg| %>
+  <% major_cfg.sort.reverse.each do |minor, minor_cfg| %>
   <% menu_name = "#{@dist_id}/#{@dist_id}-#{major}.#{minor}.conf" %>
   <% comment   = "# #{@dist_id}-#{major}.#{minor}" %>
 MENU INCLUDE pxelinux.cfg/<%= menu_name %> <%= comment %>
