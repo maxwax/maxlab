@@ -10,7 +10,7 @@ Deploy syslinux package PXE files used to support netbooting / PXE menus
 #>
 =end
 
-include_recipe 'maxlab_tftp_server::deploy'
+include_recipe 'maxlab_tftp_server'
 
 # Load the main PXE configuration
 config_pxe = data_bag_item('config_pxe', 'pxeconfig').to_h
