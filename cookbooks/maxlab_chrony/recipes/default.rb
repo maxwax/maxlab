@@ -161,3 +161,10 @@ service 'chronyd' do
 
   action [:enable, :restart]
 end
+
+case node['config_chrony']['instance_type']
+  when 'server'
+    tag('ntp-server')
+  when 'client'
+    tag('ntp-client')
+end

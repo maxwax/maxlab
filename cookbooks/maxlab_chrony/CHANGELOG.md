@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the maxlab-chrony cookbook.
 
+# 0.2.0
+
+* After deloying chrony, tag the node with either ntp-server or ntp-client
+
 # 0.1.3
 
 * Removing unnecessary .to_h when reading data_bag_item
