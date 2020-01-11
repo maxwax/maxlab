@@ -15,7 +15,7 @@ Deploy PXE files: Kickstart files for Linux distributions, PXE menus for all.
 pxe_menu = {}
 
 # Load the main PXE configuration
-config_pxe = data_bag_item('config_pxe', 'pxeconfig').to_h
+config_pxe = data_bag_item('config_pxe', 'pxeconfig')
 
 # Iterate over the configured PXE software distributions
 config_pxe['kickstart_configs'].each do |dist_id|
@@ -84,7 +84,7 @@ config_pxe['kickstart_configs'].each do |dist_id|
         linux_config_id = "#{linux_release_id}-#{config_name}"
 
         # Load network information for the network this kickstart config uses
-        config_network = data_bag_item('config_network', ksconfig['network']).to_h
+        config_network = data_bag_item('config_network', ksconfig['network'])
 
         # Pull subnet specific info from the overall network
         subnet_info = config_network['subnet'][ksconfig['subnet']]
