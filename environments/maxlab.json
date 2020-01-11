@@ -36,6 +36,9 @@
       "http-server": {
         "doc": "A node with an http web server (regardless of Apache or Nginx)"
       },
+      "nginx-repo": {
+        "doc": "A node with an NGINX web server serving general purpose files for infrastructure support"
+      },
       "dhcp-server": {
         "doc": "A node with an DHCP server"
       },
