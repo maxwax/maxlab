@@ -11,7 +11,7 @@ Configure the Chrony NTP client in a standard fashion.
 =end
 
 # Load Chrony config from data bag
-full_config_chrony = data_bag_item('config_chrony', node['config_chrony']['instance']).to_h
+full_config_chrony = data_bag_item('config_chrony',             node['config_chrony']['instance'])
 
 # Load config_chrony with only the client or server data bag config
 # Also set the time source to the first local ntp-server tagged node
@@ -37,7 +37,7 @@ end
 network_id, subnet_id = full_config_chrony['serve_chrony_for'].first
 
 # Load network configuration for this network ID only
-full_config_network = data_bag_item('config_network', network_id).to_h
+full_config_network = data_bag_item('config_network', network_id)
 
 # Clip the network config so config_network has only the subnet we need
 subnet_info = full_config_network['subnet'][subnet_id]

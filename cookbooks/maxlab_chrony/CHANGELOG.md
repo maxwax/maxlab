@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the maxlab-chrony cookbook.
 
+# 0.1.3
+
+* Removing unnecessary .to_h when reading data_bag_item
+
 # 0.1.2
 
 * Using ::default instead of ::deploy across all cookbooks.

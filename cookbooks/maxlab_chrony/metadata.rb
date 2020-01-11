@@ -4,7 +4,7 @@ maintainer_email 'maxcode@maxwellspangler.com'
 license 'All Rights Reserved'
 description 'Deploy a chrony NTP client in a standard fashion'
 long_description 'Deploy a chrony NTP client in a standard fashion'
-version '0.1.2'
+version '0.1.3'
 chef_version '>= 13.0'
 
 # The `issues_url` points to the location where issues for this cookbook are
