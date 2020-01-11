@@ -17,7 +17,7 @@ if not node.attribute?('maxlab_firewall')
   # Load a data bag with a base firewall configuration
   # base_config is set via a role in the node's runlist (set manually)
   config_firewall_base =
-    data_bag_item('config_firewall', node['config_firewall']['base_config']).to_h
+    data_bag_item('config_firewall', node['config_firewall']['base_config'])
 
   node.normal['maxlab_firewall'] = config_firewall_base
 end
