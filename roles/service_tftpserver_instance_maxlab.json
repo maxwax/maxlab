@@ -11,11 +11,6 @@
   "run_list": [
     "recipe[maxlab_tftp_server]"
   ],
-  "env_run_lists" : {
-    "production" : [],
-    "preprod" : [],
-    "maxlab": []
-  },
   "override_attributes": {
     }
 

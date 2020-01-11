@@ -10,12 +10,6 @@
     "recipe[maxlab_base]",
     "role[base_firewall_dmz_maxlab]"
   ],
-  "something_env_run_lists" : {
-    "production" : [],
-    "preprod" : [],
-    "maxlab": [
-    ]
-  },
   "override_attributes": {
     }
 

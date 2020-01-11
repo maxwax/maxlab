@@ -11,13 +11,7 @@
   "run_list": [
     "recipe[maxlab_firewall::base_firewalld]"
   ],
-  "something_env_run_lists" : {
-    "production" : [],
-    "preprod" : [],
-    "maxlab": [
-    ]
-  },
   "override_attributes": {
     }
-  
+
 }

@@ -13,11 +13,6 @@
     "recipe[maxlab_pxe]",
     "recipe[maxlab_pxe::images]"
   ],
-  "env_run_lists" : {
-    "production" : [],
-    "preprod" : [],
-    "maxlab": []
-  },
   "override_attributes": {
     }
 
