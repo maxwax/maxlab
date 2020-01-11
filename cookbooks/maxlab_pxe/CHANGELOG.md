@@ -1,5 +1,10 @@
 # maxlab_pxe CHANGELOG
 
+# 0.1.6
+
+* Removing unnecessary .to_h when reading data_bag_item
+* Removed lots of no longer needed puts debugging statements that were required during development.
+
 # 0.1.5
 
 * Using ::default instead of ::deploy across all cookbooks.

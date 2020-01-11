@@ -11,7 +11,7 @@ Deploy Linux Distribution images (kernel and initrd files) to support PXE boots
 =end
 
 # Load the main PXE configuration
-config_pxe = data_bag_item('config_pxe', 'pxeconfig').to_h
+config_pxe = data_bag_item('config_pxe', 'pxeconfig')
 
 # Ex: /var/lib/tftpboot/images
 images_dir = "#{config_pxe['pxelinux_cfg_root']}/#{config_pxe['default_kernel_dir']}"
