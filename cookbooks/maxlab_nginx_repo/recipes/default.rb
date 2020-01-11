@@ -123,3 +123,10 @@ end
 service 'nginx' do
   action [:enable, :start]
 end
+
+# Now that we've deployed a simple nginx repo, tag the node
+tag('nginx-repo')
+
+# Also tag it as nginx specifically and http server of some type
+tag('nginx-server')
+tag('http-server')

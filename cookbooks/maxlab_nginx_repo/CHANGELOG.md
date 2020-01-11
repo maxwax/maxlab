@@ -1,5 +1,9 @@
 # maxlab_nginx_repo CHANGELOG
 
+# 0.2.0
+
+* Tag the node with nginx-repo, nginx-server and http-server to indicate services deployed via this cookbook
+
 # 0.1.2
 
 * Using ::default instead of ::deploy across all cookbooks.
