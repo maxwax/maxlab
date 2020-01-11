@@ -31,7 +31,7 @@ end
 config_zones = {}
 
 # BIND specific data bag
-config_bind = data_bag_item('config_bind', node['config_bind']['instance']).to_h
+config_bind = data_bag_item('config_bind', node['config_bind']['instance'])
 
 # The first network listed in the data bag will be used to configure DNS
 # while any additional networks will be scanned for forward and reverse DNS
@@ -40,7 +40,7 @@ config_bind = data_bag_item('config_bind', node['config_bind']['instance']).to_h
 config_bind['config_network_ids'].each do |cfg_net_id|
 
   # Find network information to support deploying each bind instance
-  config_network = data_bag_item('config_network', cfg_net_id).to_h
+  config_network = data_bag_item('config_network', cfg_net_id)
 
   # Iterate over each subnet defined in the network data bag configuration
   config_network['subnet'].each do |network_name, subnet|
