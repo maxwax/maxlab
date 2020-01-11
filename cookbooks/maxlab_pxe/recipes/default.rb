@@ -207,45 +207,26 @@ end
 # Iterate over the configured PXE software distributions
 config_pxe['netboot_configs'].each do |tool_id|
 
-#puts "NETBOOT LOOP #{tool_id}"
-
   # For each distribution, load PXE (kickstart & PXE) configuration data
   netboot_config = data_bag_item('config_netboot', tool_id)
 
   # Cycle through each PXE configuration found in json
   netboot_config[tool_id].each do |major, val_major|
 
-#puts "NETBOOT LOOP MAJOR #{major}"
-
     # Iterate over major versions
     val_major.each do |minor, val_minor|
-
-#puts "NETBOOT LOOP MINOR #{minor}"
 
       # Iterate over minor versions (ex: RH8.0, 8.1, 8.2)
       val_minor.each do |config_name, boot_config|
 
-#puts "NETBOOT LOOP CONFIG_NAME #{config_name}"
-
         # Set the PXE menu group (ordering) for readability
         group = boot_config['group']
 
-#puts
-#puts "GROUP #{group}"
-#puts
         dist_label = netboot_config['dist_label']
-
-#puts
-#puts "DIST LABEL #{dist_label}"
-#puts
 
         tool_release_id = "#{tool_id}-#{major}.#{minor}"
         tool_config_id = "#{tool_release_id}-#{config_name}"
 
-#puts
-#puts "BOOT_CONFIG"
-#pp boot_config
-#puts
         # We construct this along the way
         unless pxe_menu.key? tool_id
           pxe_menu[tool_id] = {}
@@ -332,11 +313,6 @@ config_pxe['netboot_configs'].each do |tool_id|
   end
 end
 
-puts
-puts "FINAL PXE_MENU"
-pp pxe_menu
-puts
-
 # Create PXE menu directories as needed, but don't make /var/lib recursively
 %W[
   #{config_pxe['pxelinux_cfg_root']}
@@ -382,10 +358,6 @@ pxe_menu.each do |dist_id, dist_cfg|
   end
 
   menu_main = "#{config_pxe['pxelinux_cfg_dir']}/#{dist_id}/main.conf"
-puts
-puts "DEBUG DIST_CFG FOR MENUS"
-pp dist_cfg
-puts
 
   # Ex: '/var/lib/tftpboot/pxelinux.cfg/rhel/main.conf
   template menu_main do
