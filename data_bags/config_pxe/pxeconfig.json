@@ -24,7 +24,7 @@
   "pxelinux_cfg_root": "/var/lib/tftpboot",
   "pxelinux_cfg_dir": "/var/lib/tftpboot/pxelinux.cfg",
   "images_source": {
-    "http": "http://green.maxlab",
+    "http": "http://repo.maxlab/files/images",
     "filename": "images-dirs.tar"
   }
 }
