@@ -1,5 +1,9 @@
 # maxlab_pxe CHANGELOG
 
+# 0.2.0
+
+* Tag the node as a pxe-server after deploying services
+
 # 0.1.6
 
 * Removing unnecessary .to_h when reading data_bag_item

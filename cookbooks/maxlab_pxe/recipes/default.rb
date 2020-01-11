@@ -404,3 +404,6 @@ pxe_menu.each do |dist_id, dist_cfg|
     end
   end
 end
+
+# Tag the node as a pxe server now that services are deployed
+tag('pxe-server')
