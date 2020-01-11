@@ -11,7 +11,7 @@ Deploy a DHCP server.
 =end
 
 # Load data bag configuration for a specific DHCP server instance
-config_dhcp = data_bag_item('config_dhcp', node['config_dhcp']['instance']).to_h
+config_dhcp = data_bag_item('config_dhcp', node['config_dhcp']['instance'])
 
 ## Catches Redhat/Centos/Fedora/etc
 os_dist  = node['platform_family']
@@ -31,7 +31,7 @@ subnets = {}
 config_dhcp['serve_dhcp_for'].each do |network_id, subnet_id|
 
   # Load data bag configuration for the network (subnets, netmasks, etc)
-  config_network = data_bag_item('config_network', network_id).to_h
+  config_network = data_bag_item('config_network', network_id)
 
   # The DHCP server may serve > 1 subnet, so add each subnet to a hash of
   # subnet info and all will be populated in the dhcpd.conf file
