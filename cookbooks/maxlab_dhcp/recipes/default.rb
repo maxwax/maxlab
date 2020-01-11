@@ -131,3 +131,6 @@ service 'dhcpd' do
 
   only_if { enable_dhcp == true }
 end
+
+# Now that we've deployed a DHCP server, tag the node
+tag('dhcp-server')

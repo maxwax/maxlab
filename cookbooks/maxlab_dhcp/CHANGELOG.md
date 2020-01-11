@@ -2,6 +2,10 @@
 
 Deploy a DHCP server
 
+# 0.2.0
+
+* Tag the node with 'dhcp-server' after deploying this service.
+
 # 0.1.3
 
 * Removing unnecessary .to_h when reading data_bag_item
