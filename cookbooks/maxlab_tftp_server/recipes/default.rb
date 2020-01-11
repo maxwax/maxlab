@@ -57,3 +57,6 @@ service 'xinetd' do
 
   action [ :enable, :start ]
 end
+
+# Tag the node with tftp-server now that the service has been deployed
+tag('tftp-server')
