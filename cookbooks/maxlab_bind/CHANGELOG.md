@@ -4,6 +4,10 @@ Cookbook for deploying DNS service using BIND on Redhat platform Linux distribut
 
 Created for use in my home lab, 'maxlab'.
 
+# 0.2.0
+
+* Tag the node with 'dns-server' once services are provisioned.
+
 # 0.1.4
 
 * Removing unnecessary .to_h when reading data_bag_item

@@ -159,3 +159,6 @@ service 'named' do
 
   action [:enable, :start]
 end
+
+# Now that we've deployed a DNS server, tag this node as a DNS server
+tag('dns-server')
