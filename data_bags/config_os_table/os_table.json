@@ -1,0 +1,32 @@
+{
+  "id": "os_table",
+  "doc": "OS Version Lookup Table",
+  "rhel8": {
+    "doc": "Red Hat Linux v8",
+    "config_os": "rhelv8"
+  },
+  "rhel7": {
+    "doc": "Red Hat Linux v7",
+    "config_os": "rhel7"
+  },
+  "rhel6": {
+    "doc": "Red Hat Linux v6",
+    "config_os": "rhel6"
+  },
+  "centos8": {
+    "doc": "CentOS Linux v8",
+    "config_os": "rhel8"
+  },
+  "centos7": {
+    "doc": "CentOS Linux v7",
+    "config_os": "rhel7"
+  },
+  "centos6": {
+    "doc": "CentOS Linux v6",
+    "config_os": "rhel6"
+  },
+  "debian10": {
+    "doc": "Debian Buster v10 (base of Proxmox v6.1)",
+    "config_os": "debian10"
+  }
+}
