@@ -1,0 +1,33 @@
+{
+  "id": "debian10",
+  "doc": "Distribution and version specific provisioning for Proxmox 6 (Debian X)",
+  "repo_packages": {
+  },
+  "default_packages": [
+    "vim", "atop", "htop", "nc", "tree", "wget"
+  ],
+  "default_scripts": {
+    "/etc": {
+      "bashrc": {
+        "subdir": "etc",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      }
+    },
+    "/usr/local/etc": {
+      "shell-basics": {
+        "subdir": "usr/local/etc",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      },
+      "shell-history": {
+        "subdir": "usr/local/etc",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      }
+    }
+  }
+}
