@@ -1,0 +1,19 @@
+{
+  "id": "base_firewall.maxlab.dmz",
+  "description": "Base firewall config for maxlab VM nodes",
+  "fw_config": {
+    "default_interface_zone": "dmz",
+    "default_zone": "dmz",
+    "zones": {
+      "dmz": {
+        "services": [
+          "ssh"
+        ],
+        "sources": [
+        ],
+        "ports": [
+        ]
+      }
+    }
+  }
+}

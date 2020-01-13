@@ -1,0 +1,22 @@
+{
+  "id": "base_firewall.maxlab.nas",
+  "description": "Base firewall config for maxlab NAS servers",
+  "fw_config": {
+    "default_interface_zone": "internal",
+    "default_zone": "internal",
+    "zones": {
+      "internal": {
+        "services": [
+          "ssh",
+          "nfs",
+          "rpc-bind",
+          "mountd"
+        ],
+        "sources": [
+        ],
+        "ports": [
+        ]
+      }
+    }
+  }
+}
