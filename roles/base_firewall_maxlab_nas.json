@@ -1,0 +1,17 @@
+{
+  "name": "base_firewall_maxlab_nas",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "config_firewall": {
+      "base_config": "base_firewall.maxlab.nas"
+    }
+  },
+  "description": "Base firewall config for maxlab NAS servers",
+  "run_list": [
+    "recipe[maxlab_firewall::base_firewalld]"
+  ],
+  "override_attributes": {
+    }
+
+}

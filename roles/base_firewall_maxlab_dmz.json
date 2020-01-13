@@ -1,13 +1,13 @@
 {
-  "name": "base_firewall_dmz_maxlab",
+  "name": "base_firewall_maxlab_dmz",
   "chef_type": "role",
   "json_class": "Chef::Role",
   "default_attributes": {
     "config_firewall": {
-      "base_config": "base_firewall.dmz.maxlab"
+      "base_config": "base_firewall.maxlab.dmz"
     }
   },
-  "description": "Base firewall rule configuration for maxlab network nodes in the dmz area",
+  "description": "Base firewall config for maxlab vm nodes",
   "run_list": [
     "recipe[maxlab_firewall::base_firewalld]"
   ],
