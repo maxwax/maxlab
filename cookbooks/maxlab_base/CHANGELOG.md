@@ -1,6 +1,6 @@
-# maxlab-base CHANGELOG
+# maxlab_base CHANGELOG
 
-This file is used to list changes made in each version of the maxlab-base cookbook.
+This file is used to list changes made in each version of the maxlab_base cookbook.
 
 # 1.1.0
 
@@ -14,9 +14,9 @@ This file is used to list changes made in each version of the maxlab-base cookbo
 
 * Added support to replace config_base with config_os using exactly the same data bag contents, so minimal code change.  config_os data bag has one data bag item per os+ver, while config_base tried to associate many os+ver tree branches into one data bag item. Yuck.
 
+* The config_base code required looping to attempt to find an osver configuration it could use and if it didn't find it, it would error out? What was I thinking. Glad this is removed. Nuts to have this in there in the first place.  Novice code.  Yuck.
 
-
-
+* Code diff looks more significant than it is due to removing looping and removing indenting on much of the actual code.
 
 # 0.1.1
 
