@@ -4,74 +4,62 @@
 #
 # Copyright:: 2019, The Authors, All Rights Reserved.
 
-# Load a config data bag that defines base requirements for each supported OS
-base_config = data_bag_item('config_base', node['config_base'])
+# Ex: 'rhel8', 'centos7', 'fedora30'
+platform_and_version = node['platform'] + node['platform_version'].split('.')[0]
 
-# Ex: 'rhelv8', 'centosv7', 'fedorav30'
-this_os = node['platform'] + "v" + node['platform_version'].split('.')[0]
+# Consult this table to determine the config_os data bag that defines this OSver
+os_table = data_bag_item('config_os_table', 'os_table')
 
-distver_found = false
+# Convert compatible OS versions to base versions: centos8 == rhel8
+this_os = os_table[platform_and_version]['config_os']
 
-#
-# Iterate through defined OS and act when we find ours
-#
-base_config['distver'].each do |distver, dist_config|
+# Consult this table to determine the config_os data bag that defines this OSver
+config_os = data_bag_item('config_os', this_os)
 
-  if distver.include? this_os
+# Download rpm packages that configure repos for this OS. Ex: rpmfusion
+config_os['repo_packages'].each do |pkg_name, pkg_details|
 
-    distver_found = true
+  remote_file "/tmp/#{pkg_details['filename']}" do
+    source pkg_details['source']
+    action :create
 
-    dist_config['repo_packages'].each do |pkg_name, pkg_details|
+    not_if { node['packages'].key? pkg_name }
+  end
 
-      remote_file "/tmp/#{pkg_details['filename']}" do
-        source pkg_details['source']
-        action :create
+  package pkg_name do
+    source "/tmp/#{pkg_details['filename']}"
+    action :install
 
-        not_if { node['packages'].key? pkg_name }
-      end
+    not_if { node['packages'].key? pkg_name }
+  end
 
-      package pkg_name do
-        source "/tmp/#{pkg_details['filename']}"
-        action :install
+  file "/tmp/#{pkg_name}" do
+    action :delete
+  end
 
-        not_if { node['packages'].key? pkg_name }
-      end
+end
 
-      file "/tmp/#{pkg_name}" do
-        action :delete
-      end
-
-    end
-
-    dist_config['default_packages'].each do |pkg_name|
-      package pkg_name do
-        action :install
-      end
-    end
-
-    #
-    # For each configured dir (ex: /usr/local/etc), deploy each file defined
-    #
-
-    dist_config['default_scripts'].each do |dir_name, dir_config|
-
-      dir_config.each do |file_name, file_config|
-
-        template "#{dir_name}/#{file_name}" do
-          source "#{file_config['subdir']}/#{file_name}.erb"
-
-          owner file_config['owner']
-          group file_config['group']
-          mode file_config['mode']
-
-          action :create
-        end
-      end
-
-    end
+# Ensure these packages are installed as a common foundation for this OSver
+config_os['default_packages'].each do |pkg_name|
+  package pkg_name do
+    action :install
   end
 end
 
-if distver_found == false
-  log "ERROR: maxlab_base could not find this node's supported distribution + version defined in data bag config_base.  No base packages or scripts have been deployed."
+# Deploy OS specific scripts for things like /etc/bashrc
+config_os['default_scripts'].each do |dir_name, dir_config|
+
+  dir_config.each do |file_name, file_config|
+
+    template "#{dir_name}/#{file_name}" do
+      source "#{this_os}/#{file_config['subdir']}/#{file_name}.erb"
+
+      owner file_config['owner']
+      group file_config['group']
+      mode file_config['mode']
+
+      action :create
+    end
+  end
+
 end
