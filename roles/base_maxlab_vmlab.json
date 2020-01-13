@@ -8,7 +8,7 @@
   "description": "Base role for all nodes in maxlab",
   "run_list": [
     "recipe[maxlab_base]",
-    "role[base_firewall_dmz_maxlab]"
+    "role[base_firewall_maxlab_dmz]"
   ],
   "override_attributes": {
     }
