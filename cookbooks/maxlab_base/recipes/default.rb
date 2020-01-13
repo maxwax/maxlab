@@ -40,10 +40,8 @@ config_os['repo_packages'].each do |pkg_name, pkg_details|
 end
 
 # Ensure these packages are installed as a common foundation for this OSver
-config_os['default_packages'].each do |pkg_name|
-  package pkg_name do
-    action :install
-  end
+package config_os['default_packages'] do
+  action :install
 end
 
 # Deploy OS specific scripts for things like /etc/bashrc

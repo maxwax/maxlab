@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the maxlab_base cookbook.
 
+# 1.2.0
+
+* Deploy all base packages with one package resource not one per package. Much faster.
+
 # 1.1.0
 
 * Version bump to 1.0 since this is stable and .1 for these features I'm adding:

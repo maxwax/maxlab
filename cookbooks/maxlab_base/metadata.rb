@@ -4,7 +4,7 @@ maintainer_email 'maxcode@maxwellspangler.com'
 license 'All Rights Reserved'
 description 'Construct a base configuration environment on each node'
 long_description 'Construct a base configuration environment on each node'
-version '1.1.0'
+version '1.2.0'
 chef_version '>= 13.0'
 
 # The `issues_url` points to the location where issues for this cookbook are
