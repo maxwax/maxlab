@@ -1,5 +1,15 @@
 # maxlab_nginx_repo CHANGELOG
 
+# 1.1.0
+
+* Change 'service' to 'services' in firewalld rules of config_nginx_repo data bag.
+* Modify maxlab_nginx_repo::default code to use services, ports and sources from data bag as arrays.
+* New code originally from config_plex to append any array elements from the data bag to the node.normal['maxlab_firewall'] node attribute that maxlab_firewall::update_firewall will use to apply firewll changes.
+
+# 1.0.0
+
+* Version bump as this cookbook is now in production use.
+
 # 0.2.0
 
 * Tag the node with nginx-repo, nginx-server and http-server to indicate services deployed via this cookbook

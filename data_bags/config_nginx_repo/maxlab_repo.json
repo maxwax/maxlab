@@ -45,7 +45,13 @@
   "types_hash_max_size": 2048,
   "firewall": {
     "firewalld": {
-      "service": "http"
+      "services": [
+        "http"
+      ],
+      "ports": [
+      ],
+      "sources": [
+      ]
     }
   }
 }
