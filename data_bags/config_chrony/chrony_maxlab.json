@@ -5,8 +5,14 @@
   },
   "firewall": {
     "firewalld": {
-      "service": "ntp",
-      "ports": "323/udp"
+      "services": [
+        "ntp"
+      ],
+      "ports": [
+        "323/udp"
+      ],
+      "sources": [
+      ]
     }
   },
   "client": {

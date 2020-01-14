@@ -138,18 +138,44 @@ end
 #---
 
 if node['config_chrony']['instance_type'] == 'server'
+  # Warning - firewalld specific, won't work on Red hat < 7, Debian, etc
+  #---
+
   # Allow this service via the default interface's firewalld zone
   service_zone = node['maxlab_firewall']['default_interface_zone']
 
   # Add the service to this node's firewalld service requirements
   # Ex: Append 'dns' to 'ssh http https' (list of already allowed services)
-  if not node['maxlab_firewall']['zones'][service_zone]['services'].include? full_config_chrony['firewall']['firewalld']['service']
-    node.normal['maxlab_firewall']['zones'][service_zone]['services'] << full_config_chrony['firewall']['firewalld']['service']
+  if full_config_chrony['firewall']['firewalld'].key?('services')
+    full_config_chrony['firewall']['firewalld']['services'].each do |service_string|
+
+      if not node['maxlab_firewall']['zones'][service_zone]['services'].include? service_string
+        node.normal['maxlab_firewall']['zones'][service_zone]['services'] << service_string
+      end
+
+    end
   end
 
-  # Add the chronyc port to this node's firewalld service requirements
-  if not node['maxlab_firewall']['zones'][service_zone]['ports'].include? full_config_chrony['firewall']['firewalld']['ports']
-    node.normal['maxlab_firewall']['zones'][service_zone]['ports'] << full_config_chrony['firewall']['firewalld']['ports']
+  # Append individual port definitions
+  if full_config_chrony['firewall']['firewalld'].key?('ports')
+    full_config_chrony['firewall']['firewalld']['ports'].each do |port_string|
+
+      if not node['maxlab_firewall']['zones'][service_zone]['ports'].include? port_string
+        node.normal['maxlab_firewall']['zones'][service_zone]['ports'] << port_string
+      end
+
+    end
+  end
+
+  # Append individual sources definitions
+  if full_config_chrony['firewall']['firewalld'].key?('sources')
+    full_config_chrony['firewall']['firewalld']['sources'].each do |source_string|
+
+      if not node['maxlab_firewall']['zones'][source_zone]['sources'].include? source_string
+        node.normal['maxlab_firewall']['zones'][source_zone]['sources'] << source_string
+      end
+
+    end
   end
 
 end

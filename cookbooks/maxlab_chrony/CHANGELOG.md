@@ -2,6 +2,19 @@
 
 This file is used to list changes made in each version of the maxlab-chrony cookbook.
 
+# 1.1.0
+
+* Change 'service' to 'services' in firewalld rules of config_chrony data bag.
+* Modify maxlab_chrony::default code to use services, ports and sources from data bag as arrays.
+* New code originally from config_plex to append any array elements from the data bag to the node.normal['maxlab_firewall'] node attribute that maxlab_firewall::update_firewall will use to apply firewll changes.
+* Typo in doc/overview.md spelling of 'deploys' fixed
+* Removed Oracle and Fedora from doc/platforms.md and metadata since I'm not testing these platforms.
+* Added supports rhel/centos to metadata.rb
+
+# 1.0.0
+
+* Version bump since this is now actively in use
+
 # 0.2.0
 
 * After deloying chrony, tag the node with either ntp-server or ntp-client

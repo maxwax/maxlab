@@ -4,7 +4,7 @@ maintainer_email 'maxcode@maxwellspangler.com'
 license 'All Rights Reserved'
 description 'Deploy a chrony NTP client in a standard fashion'
 long_description 'Deploy a chrony NTP client in a standard fashion'
-version '0.2.0'
+version '1.1.0'
 chef_version '>= 13.0'
 
 # The `issues_url` points to the location where issues for this cookbook are
@@ -18,5 +18,8 @@ chef_version '>= 13.0'
 # a Supermarket.
 #
 # source_url 'https://github.com/<insert_org_here>/maxlab-chrony'
+
+supports 'redhat', '>= 7.0'
+supports 'centos', '>= 7.0'
 
 depends 'maxlab_firewall'
