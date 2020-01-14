@@ -21,25 +21,10 @@ if not node.attribute?('maxlab_firewall')
   node.normal['maxlab_firewall'] = config_firewall_base['fw_config']
 else
 
-  puts
-  puts "DEBUG - maxlab_firewall::base_firewalld -Current node['maxlab_firewall']"
-  puts
-  pp node['maxlab_firewall']
-  puts
-  puts "About to merge config_firewall_base['fw_config'] for type node['config_firewall']['base_config']"
-  puts
-  pp config_firewall_base['fw_config'].to_h
-  puts
-
   # On an existing config, merge the data bag values with this node's values
   # So that any out of date values on the node (zones) are replaced and any
   # additional values are added to the node.
   node.normal['maxlab_firewall'].merge!(config_firewall_base['fw_config'])
-
-  puts
-  puts "DEBUG - maxlab_firewall::base_firewalld AFTER MERGE node['maxlab_firewall']"
-  pp node['maxlab_firewall']
-  puts
 
 end
 

@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the maxlab_firewall cookbook.
 
+# 1.1.3
+
+* Removing more debugging statements.
+
 # 1.1.2
 
 * Removing debug statements. Too noisy while I try to do other development work.
