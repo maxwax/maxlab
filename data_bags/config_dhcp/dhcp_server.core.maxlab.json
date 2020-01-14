@@ -9,7 +9,13 @@
   ],
   "firewall": {
     "firewalld": {
-      "service": "dhcp"
+      "services": [
+        "dhcp"
+      ],
+      "ports": [
+      ],
+      "sources": [
+      ]
     }
   }
 }

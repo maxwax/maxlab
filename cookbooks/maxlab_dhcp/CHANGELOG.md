@@ -2,6 +2,16 @@
 
 Deploy a DHCP server
 
+# 1.1.0
+
+* Change 'service' to 'services' in firewalld rules of config_dhcp data bag.
+* Modify maxlab_bind::default code to use services, ports and sources from data bag as arrays.
+* New code originally from config_plex to append any array elements from the data bag to the node.normal['maxlab_firewall'] node attribute that maxlab_firewall::update_firewall will use to apply firewall changes.
+
+# 1.0.0
+
+* Version bump to 1.0.0 as this is now in production use
+
 # 0.2.0
 
 * Tag the node with 'dhcp-server' after deploying this service.
