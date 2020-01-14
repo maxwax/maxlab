@@ -6,7 +6,13 @@
   ],
   "firewall": {
     "firewalld": {
-      "service": "dns"
+      "service": [
+        "dns"
+      ],
+      "ports": [
+      ],
+      "sources": [
+      ]
     }
   },
   "subnet": "192.168.9.0",
@@ -31,7 +37,7 @@
     "8.8.8.8",
     "8.8.4.4"
   ],
-  "zones": { 
+  "zones": {
     "maxlab": {
       "type": "master",
       "file": "/var/named/db.maxlab",

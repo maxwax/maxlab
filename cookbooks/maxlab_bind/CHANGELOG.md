@@ -4,6 +4,18 @@ Cookbook for deploying DNS service using BIND on Redhat platform Linux distribut
 
 Created for use in my home lab, 'maxlab'.
 
+# 1.1.0
+
+* Change 'service' to 'services' in firewalld rules of config_bind data bag.
+* Modify maxlab_bind::default code to use services, ports and sources from data bag as arrays.
+* New code originally from config_plex to append any array elements from the data bag to the node.normal['maxlab_firewall'] node attribute that maxlab_firewall::update_firewall will use to apply firewll changes.
+* Typo in doc/overview.md spelling of 'deploys' fixed
+* Removed Oracle and Fedora from doc/platforms.md and metadata since I'm not testing these platforms.
+
+# 1.0.0
+
+* Version bump, this is now in active use.
+
 # 0.2.0
 
 * Tag the node with 'dns-server' once services are provisioned.
