@@ -34,8 +34,8 @@ service_zone = node['maxlab_firewall']['default_interface_zone']
 
 # Add the service to this node's firewalld service requirements
 # Ex: Append 'dns' to 'ssh http https' (list of already allowed services)
-if config_plex['firewall']['firewalld'].key?('service')
-  config_plex['firewall']['firewalld']['service'].each do |service_string|
+if config_plex['firewall']['firewalld'].key?('services')
+  config_plex['firewall']['firewalld']['services'].each do |service_string|
 
     if not node['maxlab_firewall']['zones'][service_zone]['services'].include? service_string
       node.normal['maxlab_firewall']['zones'][service_zone]['services'] << service_string
