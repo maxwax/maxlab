@@ -61,10 +61,10 @@ node['maxlab_firewall']['zones'].each do |zone, zone_config|
   # Iterate over each port defined for this zone
   zone_config['ports'].each do |port_string|
 
-puts
-puts "DEBUG maxlab_firewall::update_firewall port_string"
-pp port_string
-puts
+    puts
+    puts "DEBUG maxlab_firewall::update_firewall port_string"
+    pp port_string
+    puts
 
     # Construct commands to add the ports to runtime and permanent configs
     cmd_rtime = "firewall-cmd --add-port=#{port_string} --zone=#{zone}"
