@@ -1,4 +1,13 @@
-# maxlab-tftp-server CHANGELOG
+# maxlab_tftp_server CHANGELOG
+
+* Change 'service' to 'services' in firewalld rules of config_tftp_server data bag.
+* Modify maxlab_tftp_server::default code to use services, ports and sources from data bag as arrays.
+* New code originally from config_plex to append any array elements from the data bag to the node.normal['maxlab_firewall'] node attribute that maxlab_firewall::update_firewall will use to apply firewll changes.
+* Removed Oracle from doc/platforms.md and metadata since I'm not testing these platforms.
+
+# 1.0.0
+
+* Version bump since I'm actively using this in production.
 
 # 0.2.0
 

@@ -11,9 +11,13 @@
   "pxelinux_cfg_dir": "/var/lib/tftpboot/pxelinux.cfg",
   "firewall": {
     "firewalld": {
-      "service": "tftp"
+      "services": [
+        "tftp"
+      ],
+      "ports": [
+      ],
+      "sources": [
+      ]
     }
   }
 }
-
-

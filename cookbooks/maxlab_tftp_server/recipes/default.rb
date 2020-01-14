@@ -46,8 +46,36 @@ service_zone = node['maxlab_firewall']['default_interface_zone']
 
 # Add the service to this node's firewalld service requirements
 # Ex: Append 'dns' to 'ssh http https' (list of already allowed services)
-if not node['maxlab_firewall']['zones'][service_zone]['services'].include?  config_tftp_server['firewall']['firewalld']['service']
-  node.normal['maxlab_firewall']['zones'][service_zone]['services'] << config_tftp_server['firewall']['firewalld']['service']
+if config_tftp_server['firewall']['firewalld'].key?('services')
+  config_tftp_server['firewall']['firewalld']['services'].each do |service_string|
+
+    if not node['maxlab_firewall']['zones'][service_zone]['services'].include? service_string
+      node.normal['maxlab_firewall']['zones'][service_zone]['services'] << service_string
+    end
+
+  end
+end
+
+# Append individual port definitions
+if config_tftp_server['firewall']['firewalld'].key?('ports')
+  config_tftp_server['firewall']['firewalld']['ports'].each do |port_string|
+
+    if not node['maxlab_firewall']['zones'][service_zone]['ports'].include? port_string
+      node.normal['maxlab_firewall']['zones'][service_zone]['ports'] << port_string
+    end
+
+  end
+end
+
+# Append individual sources definitions
+if config_tftp_server['firewall']['firewalld'].key?('sources')
+  config_tftp_server['firewall']['firewalld']['sources'].each do |source_string|
+
+    if not node['maxlab_firewall']['zones'][source_zone]['sources'].include? source_string
+      node.normal['maxlab_firewall']['zones'][source_zone]['sources'] << source_string
+    end
+
+  end
 end
 
 #---
