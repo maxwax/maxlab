@@ -2,7 +2,9 @@
 
 Cookbook for deploying DNS service using BIND on Redhat platform Linux distributions
 
-Created for use in my home lab, 'maxlab'.
+# 1.1.1
+
+* Forgot to change the data bag's firewall's 'service' field to 'services'.
 
 # 1.1.0
 
