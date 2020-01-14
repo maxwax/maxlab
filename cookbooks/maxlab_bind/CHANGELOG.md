@@ -2,6 +2,11 @@
 
 Cookbook for deploying DNS service using BIND on Redhat platform Linux distributions
 
+# 1.1.2
+
+* Early maxlab cookbook maxlab_bind was using 'bind_zone' instead of 'service_zone' to load network zone info.  All other cookbooks were using service_zone info, so new services/ports/sources firewall attribute code copied from maxlab_plex failed to work.
+* Fix: replace one line of bind_zone = ... with service_zone = ... and all the copied code works.
+
 # 1.1.1
 
 * Forgot to change the data bag's firewall's 'service' field to 'services'.

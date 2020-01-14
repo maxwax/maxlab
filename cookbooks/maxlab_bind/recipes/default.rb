@@ -143,7 +143,7 @@ end
 #---
 
 # Allow this service via the default interface's firewalld zone
-bind_zone = node['maxlab_firewall']['default_interface_zone']
+service_zone = node['maxlab_firewall']['default_interface_zone']
 
 # Add the service to this node's firewalld service requirements
 # Ex: Append 'dns' to 'ssh http https' (list of already allowed services)
