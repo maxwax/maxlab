@@ -11,7 +11,7 @@ Using node['maxlab_firewall'] attribute as a list of services, sources and ports
 =end
 
 puts
-puts "DEBUG EXISTING node['maxlab_firewall']['zones'] #{node['maxlab_firewall']['zones']}"
+puts "DEBUG maxlab_firewall::update_firewall EXISTING node['maxlab_firewall']['zones'] #{node['maxlab_firewall']['zones']}"
 puts
 
 # Iterate over each zone configuration
@@ -24,12 +24,12 @@ node['maxlab_firewall']['zones'].each do |zone, zone_config|
     cmd_rtime = "firewall-cmd --add-service=#{service_name} --zone=#{zone}"
     cmd_perm = "firewall-cmd --permanent --add-service=#{service_name} --zone=#{zone}"
 
-    execute 'add-service-#{service_name}-permanent' do
+    execute "add-service-#{service_name}-permanent" do
       command cmd_perm
       action :run
     end
 
-    execute 'add-service-#{service_name}-runtime' do
+    execute "add-service-#{service_name}-runtime" do
       command cmd_rtime
       action :run
     end
@@ -42,30 +42,40 @@ node['maxlab_firewall']['zones'].each do |zone, zone_config|
     cmd_rtime = "firewall-cmd --add-source=#{source_string} --zone=#{zone}"
     cmd_perm = "firewall-cmd --permanent --add-source=#{source_string} --zone=#{zone}"
 
-    execute 'add-source-#{source_string}-permanent' do
+    execute "add-source-#{source_string}-permanent" do
       command cmd_perm
       action :run
     end
 
-    execute 'add-source-#{source_string}-runtime' do
+    execute "add-source-#{source_string}-runtime" do
       command cmd_rtime
       action :run
     end
   end
 
+  puts
+  puts "DEBUG maxlab_firewall::update_firewall zone_config"
+  pp zone_config
+  puts
+
   # Iterate over each port defined for this zone
   zone_config['ports'].each do |port_string|
+
+puts
+puts "DEBUG maxlab_firewall::update_firewall port_string"
+pp port_string
+puts
 
     # Construct commands to add the ports to runtime and permanent configs
     cmd_rtime = "firewall-cmd --add-port=#{port_string} --zone=#{zone}"
     cmd_perm = "firewall-cmd --permanent --add-port=#{port_string} --zone=#{zone}"
 
-    execute 'add-source-#{port_string}-permanent' do
+    execute "add-port-#{port_string}-permanent" do
       command cmd_perm
       action :run
     end
 
-    execute 'add-source-#{port_string}-runtime' do
+    execute "add-port-#{port_string}-runtime" do
       command cmd_rtime
       action :run
     end

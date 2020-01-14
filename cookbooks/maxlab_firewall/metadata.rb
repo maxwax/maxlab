@@ -4,7 +4,7 @@ maintainer_email 'maxcode@maxwellspangler.com'
 license 'All Rights Reserved'
 description 'Installs/Configures maxlab_firewall'
 long_description 'Installs/Configures maxlab_firewall'
-version '1.1.0'
+version '1.1.1'
 chef_version '>= 13.0'
 
 # The `issues_url` points to the location where issues for this cookbook are
