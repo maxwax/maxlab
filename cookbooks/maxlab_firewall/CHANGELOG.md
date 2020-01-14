@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the maxlab_firewall cookbook.
 
+# 1.1.2
+
+* Removing debug statements. Too noisy while I try to do other development work.
+
 # 1.1.1
 
 * Bug fix: When adding ports, each port resource needs a unique name. Copy & paste error had it using source name.

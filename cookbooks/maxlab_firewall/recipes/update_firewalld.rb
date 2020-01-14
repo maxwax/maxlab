@@ -10,10 +10,6 @@ Using node['maxlab_firewall'] attribute as a list of services, sources and ports
 #>
 =end
 
-puts
-puts "DEBUG maxlab_firewall::update_firewall EXISTING node['maxlab_firewall']['zones'] #{node['maxlab_firewall']['zones']}"
-puts
-
 # Iterate over each zone configuration
 node['maxlab_firewall']['zones'].each do |zone, zone_config|
 
@@ -53,18 +49,8 @@ node['maxlab_firewall']['zones'].each do |zone, zone_config|
     end
   end
 
-  puts
-  puts "DEBUG maxlab_firewall::update_firewall zone_config"
-  pp zone_config
-  puts
-
   # Iterate over each port defined for this zone
   zone_config['ports'].each do |port_string|
-
-    puts
-    puts "DEBUG maxlab_firewall::update_firewall port_string"
-    pp port_string
-    puts
 
     # Construct commands to add the ports to runtime and permanent configs
     cmd_rtime = "firewall-cmd --add-port=#{port_string} --zone=#{zone}"
