@@ -1,0 +1,17 @@
+{
+  "name": "service_plex_instance_maxlab_filer",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "config_plex": {
+      "instance": "maxlab_filer"
+    }
+  },
+  "description": "Deploy Plex and open firewall ports for it",
+  "run_list": [
+    "recipe[maxlab_plex]"
+  ],
+  "override_attributes": {
+    }
+
+}
