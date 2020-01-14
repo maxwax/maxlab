@@ -1,5 +1,10 @@
 # maxlab_pxe CHANGELOG
 
+# 1.0.0
+
+* Version bump to 1.0.0 now that we're in production use.
+* Removed Oracle and Fedora linux from metadata.rb since I don't test them.
+
 # 0.2.0
 
 * Tag the node as a pxe-server after deploying services
