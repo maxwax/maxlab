@@ -1,0 +1,123 @@
+{
+  "id": "maxlab_aux",
+  "doc": "NFS server configuration for aux.maxlab",
+  "cfg": {
+    "exports" : {
+      "/srv/auxdata": {
+        "comment": "Archive storage",
+        "clients": {
+          "macbooknext.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "macbooknextwifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "chaosusb.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      },
+      "/srv/auxrootdata": {
+        "comment": "Archive auxillary storage",
+        "clients": {
+          "macbooknext.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "macbooknextwifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      },
+      "/srv/teragreen": {
+        "comment": "Teragreen 1TB storage",
+        "clients": {
+          "macbooknext.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "macbooknextwifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      },
+      "#/srv/auxdata/clonezilla": {
+        "comment": "Clonezilla storage",
+        "clients": {
+          "*": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      },
+      "#/mnt/offsite4tb": {
+        "comment": "Sometimes available 4TB USB drive on filer",
+        "clients": {
+          "aux.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "laptopnas.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

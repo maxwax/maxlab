@@ -1,0 +1,123 @@
+{
+  "id": "maxlab_filer",
+  "doc": "NFS server configuration for filer",
+  "cfg": {
+    "exports" : {
+      "/srv/audiovideo": {
+        "comment": "Audiovideo storage",
+        "clients": {
+          "macbooknext.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "macbooknextwifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      },
+      "/srv/avarchive": {
+        "comment": "Audiovideo auxillary storage",
+        "clients": {
+          "macbooknext.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "macbooknextwifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      },
+      "/srv/filerdata": {
+        "comment": "Archives storage",
+        "clients": {
+          "macbooknext.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "macbooknextwifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      },
+      "/srv/xfiles": {
+        "comment": "Backups storage",
+        "clients": {
+          "sarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      },
+      "#/mnt/offsite4tb": {
+        "comment": "Sometimes available 4TB USB drive on filer",
+        "clients": {
+          "aux.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "laptopnas.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
