@@ -1,6 +1,6 @@
 #
 # Cookbook:: maxlab_nfs
-# Recipe:: default
+# Recipe:: server
 #
 # Copyright:: 2020, The Authors, All Rights Reserved.
 
