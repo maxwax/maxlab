@@ -1,5 +1,9 @@
 # maxlab_nfs CHANGELOG
 
+# 1.0.1
+
+* Commented out code that was used to create mount point nodes on test VMs.  Shouldn't be used on production systems.
+
 # 1.0.0
 
 * First version, works on a fresh VM node

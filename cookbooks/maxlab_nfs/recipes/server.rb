@@ -30,15 +30,15 @@ config_nfs_server['cfg']['exports'].sort.each do | mount_point, mount_details|
 
   export_text = "#{mount_point} "
 
-  if mount_point[0] != "#"
-  # For debugging on a fresh VM only
-    directory mount_point do
-      owner 'root'
-      group 'root'
-      mode '0755'
-      action :create
-    end
-  end
+  # if mount_point[0] != "#"
+  # # For debugging on a fresh VM only
+  #   directory mount_point do
+  #     owner 'root'
+  #     group 'root'
+  #     mode '0755'
+  #     action :create
+  #   end
+  # end
 
   mount_details['clients'].sort.each do |client_name, client_details|
 
