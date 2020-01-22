@@ -1,0 +1,17 @@
+{
+  "name": "service_nfs_instance_maxlab_nfs_testred",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "config_nfs": {
+      "instance": "maxlab_nfs_testred"
+    }
+  },
+  "description": "Deploy testred NFS filer",
+  "run_list": [
+    "recipe[maxlab_nfs::server]"
+  ],
+  "override_attributes": {
+    }
+
+}
