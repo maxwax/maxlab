@@ -1,0 +1,33 @@
+{
+  "id": "maxlab_nfs_laptopnas",
+  "doc": "NFS server configuration for laptopnas.maxlab",
+  "cfg": {
+    "exports" : {
+      "/srv/laptop-auxdata": {
+        "comment": "Legacy 3TB Aux RAID Archives",
+        "clients": {
+          "macbooknext.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "macbooknextwifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

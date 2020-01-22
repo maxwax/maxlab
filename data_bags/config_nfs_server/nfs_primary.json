@@ -1,40 +1,10 @@
 {
-  "id": "maxlab_aux",
-  "doc": "NFS server configuration for aux.maxlab",
+  "id": "maxlab_nfs_primary",
+  "doc": "NFS server configuration for filer",
   "cfg": {
     "exports" : {
-      "/srv/auxdata": {
-        "comment": "Archive storage",
-        "clients": {
-          "macbooknext.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "macbooknextwifi.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "sarko.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "sarkowifi.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "chaosusb.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          }
-        }
-      },
-      "/srv/auxrootdata": {
-        "comment": "Archive auxillary storage",
+      "/srv/audiovideo": {
+        "comment": "Audiovideo storage",
         "clients": {
           "macbooknext.maxlab": {
             "options": [
@@ -58,8 +28,8 @@
           }
         }
       },
-      "/srv/teragreen": {
-        "comment": "Teragreen 1TB storage",
+      "/srv/avarchive": {
+        "comment": "Audiovideo auxillary storage",
         "clients": {
           "macbooknext.maxlab": {
             "options": [
@@ -83,10 +53,40 @@
           }
         }
       },
-      "#/srv/auxdata/clonezilla": {
-        "comment": "Clonezilla storage",
+      "/srv/filerdata": {
+        "comment": "Archives storage",
         "clients": {
-          "*": {
+          "macbooknext.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "macbooknextwifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      },
+      "/srv/xfiles": {
+        "comment": "Backups storage",
+        "clients": {
+          "sarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarkowifi.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
