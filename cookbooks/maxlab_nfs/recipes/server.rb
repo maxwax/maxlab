@@ -14,12 +14,10 @@ package node['nfs']['packages'] do
   action :install
 end
 
-# NFS handling ---
-
-config_id = "#{node['domain']}_#{node['hostname']}"
+config_id = node['config_nfs']['instance']
 
 # Retrieve the data bag with NFS config information for this node
-config_nfs_server = data_bag_item('config_nfs_server',  config_id)
+config_nfs_server = data_bag_item('config_nfs_server', config_id)
 
 # Build our /etc/exports config lines here so the template is simple
 exports_lines = {}
