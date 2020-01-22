@@ -8,6 +8,7 @@
   "description": "Base role for NAS nodes in maxlab",
   "run_list": [
     "recipe[maxlab_base]",
+    "recipe[maxlab_users::general]",
     "role[base_firewall_maxlab_nas]"
   ],
   "override_attributes": {
