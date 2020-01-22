@@ -1,0 +1,9 @@
+# This file deployed via Chef maxlab_samba::server (bag <%= @config_id %>) - DO NOT EDIT
+
+<% @config_sections.each do |section_name, section_details| %>
+[<%= section_name %>]
+  <% section_details.each do |config_line| %>
+    <%= config_line %>
+  <% end %>
+
+<% end %>

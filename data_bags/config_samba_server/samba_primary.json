@@ -1,0 +1,84 @@
+{
+  "id": "maxlab_samba_primary",
+  "doc": "Samba server configuration for filer.maxlab",
+  "cfg": {
+    "sections": {
+      "global": {
+        "workgroup": "MAXLAB",
+        "security": "user",
+        "passdb backend": "tdbsam",
+        "local master": "yes",
+        "os level": "33",
+        "preferred master": "yes",
+        "printing": "cups",
+        "printcap name": "cups",
+        "load printers": "yes",
+        "cups options": "raw",
+        "min protocol": "SMB2",
+        "interfaces": ["lo", "192.168.9.0/24"],
+        "hosts allow": [ "127", "192.168.9."]
+      },
+      "homes": {
+        "comment": "Home directories",
+        "valid users": [ "%S, %D%w%S" ],
+        "browseable": "no",
+        "read only": "no",
+        "inherit acls": "yes"
+      },
+      "printers": {
+        "path": "/var/tmp",
+        "comment": "All Printers",
+        "printable": "no",
+        "create mask": "0600",
+        "browseable": "no"
+      },
+      "print$": {
+        "path": "/var/lib/samba/drivers",
+        "comment": "Printer drivers",
+        "write list": "root",
+        "create mask": "0664",
+        "directory mask": "0775"
+      },
+      "audiovideo": {
+        "path": "/srv/audiovideo",
+        "comment": "Audiovideo Archives",
+        "valid users": [ "maxwell" ],
+        "browseable": "yes",
+        "read only": "no",
+        "create mask": "0700"
+      },
+      "avarchive": {
+        "path": "/srv/avarchive",
+        "comment": "Audiovideo Auxillary Archives",
+        "valid users": [ "maxwell" ],
+        "browseable": "yes",
+        "read only": "no",
+        "create mask": "0700"
+      },
+      "photos": {
+        "path": "/srv/filerdata/photos",
+        "comment": "Photo Archives",
+        "valid users": [ "maxwell" ],
+        "browseable": "yes",
+        "read only": "no",
+        "create mask": "0700"
+      },
+      "iso": {
+        "path": "/srv/filerdata/iso",
+        "comment": "ISO Archives",
+        "valid users": [ "maxwell" ],
+        "browseable": "yes",
+        "read only": "no",
+        "create mask": "0700"
+      },
+      "library": {
+        "path": "/srv/filerdata/library",
+        "comment": "Library Archives",
+        "valid users": [ "maxwell" ],
+        "browseable": "yes",
+        "read only": "no",
+        "create mask": "0700"
+      }
+    }
+  }
+}
