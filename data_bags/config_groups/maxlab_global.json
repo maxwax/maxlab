@@ -1,0 +1,13 @@
+{
+  "id": "maxlab_global",
+  "doc": "Global users in maxlab",
+  "maxwell": {
+    "gid": 1000
+  },
+  "xcode": {
+    "gid": 1300
+  },
+  "plex": {
+    "gid": 1200
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "maxlab_global",
+  "doc": "Global users in maxlab",
+  "maxwell": {
+    "doc": "Normal user also enables samba access",
+    "uid": 1000,
+    "group": "maxwell",
+    "fullname": "Maxwell Spangler",
+    "shell": "/bin/bash"
+  },
+  "xcode": {
+    "doc": "Backup Archive Owner",
+    "uid": 1300,
+    "group": "xcode",
+    "fullname": "Backup Archives",
+    "shell": "/bin/bash"
+  },
+  "plex": {
+    "doc": "Plex Media Server services",
+    "uid": 1200,
+    "gid": "plex",
+    "fullname": "Plex Media Server",
+    "shell": "/sbin/nologin"
+  }
+}

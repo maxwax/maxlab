@@ -1,0 +1,25 @@
+{
+  "id": "maxlab_global",
+  "doc": "Global service sets defining users and groups in maxlab",
+  "general": {
+    "doc": "Real users, etc.",
+    "min": 1000,
+    "max": 1099,
+    "users": [ "maxwell" ],
+    "groups": [ "maxwell" ]
+  },
+  "plex": {
+    "doc": "Plex Media Server",
+    "min": 1200,
+    "max": 1200,
+    "users": [ "plex" ],
+    "groups": [ "plex" ]
+  },
+  "xcode": {
+    "doc": "Backup Archives",
+    "min": 1200,
+    "max": 1200,
+    "users": [ "xcode" ],
+    "groups": [ "xcode" ]
+  }
+}
