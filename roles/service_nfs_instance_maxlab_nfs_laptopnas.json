@@ -3,7 +3,7 @@
   "chef_type": "role",
   "json_class": "Chef::Role",
   "default_attributes": {
-    "nfs": {
+    "config_nfs": {
       "instance": "maxlab_nfs_laptopnas"
     }
   },
