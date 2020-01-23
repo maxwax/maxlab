@@ -3,7 +3,7 @@ maintainer 'Maxwell Spangler'
 maintainer_email 'maxcode@maxwellspangler.com'
 license 'All Rights Reserved'
 description 'Installs/Configures maxlab_plex'
-version '1.0.1'
+version '1.0.2'
 chef_version '>= 14.0'
 
 # The `issues_url` points to the location where issues for this cookbook are

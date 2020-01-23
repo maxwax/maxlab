@@ -73,4 +73,4 @@ service config_plex['service_name'] do
 end
 
 # Now that we've deployed a simple nginx repo, tag the node
-tag('plex-media-server')
+tag('plex')
