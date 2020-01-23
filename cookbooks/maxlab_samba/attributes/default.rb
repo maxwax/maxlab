@@ -6,6 +6,7 @@ platform_and_version = node['platform'] + node['platform_version'].split('.')[0]
 case platform_and_version
 
   when 'rhel7', 'centos7'
+    #<> Packages required to support this service
     default['samba']['packages'] = [ "samba", "samba-common", "samba-libs" ]
 
     #<> Services required to be running for samba server operations
@@ -21,6 +22,7 @@ case platform_and_version
     default['samba']['firewalld']['sources'] = [ ]
 
   when 'rhel8', 'centos8'
+    #<> Packages required to support this service
     default['samba']['packages'] = [ "samba", "samba-common", "samba-libs" ]
 
     #<> Services required to be running for samba server operations

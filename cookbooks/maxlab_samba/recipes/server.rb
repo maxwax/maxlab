@@ -6,7 +6,7 @@
 
 =begin
 #<
-Deloy a basic SAMBA file server
+Deloy a basic SAMBA file server.
 #>
 =end
 
