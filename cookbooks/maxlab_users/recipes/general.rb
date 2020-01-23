@@ -41,3 +41,5 @@ config_servicesets[service_set]['users'].each do | username |
   end
 
 end
+
+tag('users-general')
