@@ -1,5 +1,9 @@
 # maxlab_samba CHANGELOG
 
+# 1.0.2
+
+* Cosmetic: List newer OS before older in attributes/default.rb file
+
 # 1.0.1
 
 * Documentation update:
