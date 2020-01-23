@@ -1,5 +1,9 @@
 # maxlab_samba CHANGELOG
 
+# 1.1.0
+
+* Tag the node as being a samba-server
+
 # 1.0.2
 
 * Cosmetic: List newer OS before older in attributes/default.rb file

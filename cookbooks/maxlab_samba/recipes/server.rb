@@ -108,3 +108,6 @@ node['samba']['services'].each do |service_name|
     action [ :enable, :start, :reload ]
   end
 end
+
+tag('samba')
+tag('samba-server')
