@@ -1,5 +1,9 @@
 # maxlab_nfs CHANGELOG
 
+# 1.1.0
+
+* After deloying NFS, tag the node as an NFS server
+
 # 1.0.2
 
 * Obtain configuration data bag via role set instance id not labname+hostname.

@@ -143,3 +143,5 @@ node['nfs']['services'].each do |service_name|
     action [ :enable, :start ]
   end
 end
+
+tag('nfs-server')
