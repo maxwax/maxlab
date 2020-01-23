@@ -1,5 +1,3 @@
-# Description
-
 This is a centralized cookbook for creating users and groups on maxlab nodes.
 
 The purpose of this is to coordinate, one place, where users and groups are created.
@@ -24,39 +22,3 @@ Long Term
 
 I'll modify this cookbook in the future to use a function or LWRP to do this.  Right now to add a new service, the easiest way is to clone general.rb, point it to a different serviceset (service) by name, and then add any additional handling to it.  It's not ideal, but I don't want to spend too much time on this right now.
 
-
-# Requirements
-
-
-## Chef Client:
-
-* chef (>= 14.0) ()
-
-## Platform:
-
-* redhat (>= 7.0)
-* centos (>= 7.0)
-
-## Cookbooks:
-
-*No dependencies defined*
-
-# Attributes
-
-*No attributes defined*
-
-# Recipes
-
-* maxlab_users::default
-* [maxlab_users::general](#maxlab_usersgeneral) - Deploy standard users and groups based on data bag configuration rules.
-
-## maxlab_users::general
-
-Deploy standard users and groups based on data bag configuration rules.
-
-A Redhat based Linux distribution using firewall-cmd such as
-* Red Hat Linux 7.x or 8.x
-* CentOS 7.x or 8.x
-
-
-Maxwell Spangler maxcode@maxwellspangler.com

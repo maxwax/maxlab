@@ -4,6 +4,12 @@
 #
 # Copyright:: 2020, The Authors, All Rights Reserved.
 
+=begin
+#<
+Deploy standard users and groups based on data bag configuration rules.
+#>
+=end
+
 config_servicesets = data_bag_item('config_servicesets', 'maxlab_global')
 config_groups = data_bag_item('config_groups', 'maxlab_global')
 config_users = data_bag_item('config_users', 'maxlab_global')
