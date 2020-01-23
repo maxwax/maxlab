@@ -103,3 +103,5 @@ template '/etc/smartmontools/smartd.conf' do
 
   action :create
 end
+
+tag('smartd')

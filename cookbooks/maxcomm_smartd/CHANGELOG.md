@@ -1,5 +1,9 @@
 # maxcomm_smartd CHANGELOG
 
+# 1.1.0
+
+* After deploying smartd, tag the node with 'smartd' so we know its monitored.
+
 # 1.0.0
 
 Initial release.
