@@ -1,0 +1,17 @@
+{
+  "name": "service_postfix_instance_maxlab_postfix",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "config_postfix": {
+      "instance": "maxlab_postfix"
+    }
+  },
+  "description": "Deploy postfix on internal node for relay access",
+  "run_list": [
+    "recipe[maxlab_postfix::deploy]"
+  ],
+  "override_attributes": {
+    }
+
+}

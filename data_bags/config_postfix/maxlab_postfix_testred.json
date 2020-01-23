@@ -1,0 +1,47 @@
+{
+  "id": "maxlab_postfix_testred",
+  "doc": "Postfix server configuration for red.maxlab",
+  "core_config": {
+    "queue_directory": "/var/spool/postfix",
+    "command_directory": "/usr/sbin",
+    "daemon_directory": "/usr/libexec/postfix",
+    "data_directory": "/var/lib/postfix",
+    "mail_owner": "postfix",
+    "myhostname": "red.maxwellspangler.com",
+    "inet_interfaces": "localhost",
+    "inet_protocols": "ipv4",
+    "mydestination": "$myhostname, localhost.$mydomain, localhost",
+    "mynetworks": "192.168.9.0/24, 127.0.0.0/8",
+    "relayhost": "[mail.maxwellspangler.com]:587",
+    "alias_maps": "hash:/etc/aliases",
+    "alias_database": "hash:/etc/aliases",
+    "debug_peer_level": "2",
+    "sendmail_path": "/usr/sbin/sendmail.postfix",
+    "newaliases_path": "/usr/bin/newaliases.postfix",
+    "mailq_path": "/usr/bin/mailq.postfix",
+    "setgid_group": "postdrop",
+    "html_directory": "no"
+  },
+  "additional_config": {
+    "smtp_sasl_auth_enable": {
+      "comment": "# Enable SASL Authentiation",
+      "value": "yes"
+    },
+    "smtp_sasl_security_options": {
+      "comment": "# Disallow methods that allow anonymous authentication",
+      "value": "noanonymous"
+    },
+    "smtp_sasl_password_maps": {
+      "comment": "# Where to find sasl_passwd",
+      "value": "hash:/etc/postfix/sasl_passwd"
+    },
+    "smtp_use_tls": {
+      "comment": "# Enable STARTTLS encryption",
+      "value": "yes"
+    },
+    "smtp_tls_CApath": {
+      "comment": "# Where to find CA certificates",
+      "value": "/etc/ssl/certs"
+    }
+  }
+}
