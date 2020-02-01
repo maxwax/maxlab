@@ -37,6 +37,11 @@ package 'firewalld' do
   action :install
 end
 
+# Ensure this service is enabled to start upon boot
+service 'firewalld' do
+  action [ :enable, :start ]
+end
+
 # Set the default firewall zone
 execute 'set-default-zone' do
   command "firewall-cmd --set-default-zone=#{node['maxlab_firewall']['default_zone']}"
@@ -47,9 +52,4 @@ end
 execute 'set-default-interface-default-zone' do
   command "firewall-cmd --change-interface=#{node['network']['default_interface']} --zone=#{node['maxlab_firewall']['default_interface_zone']}"
   action :run
-end
-
-# Ensure this service is enabled to start upon boot
-service 'firewalld' do
-  action [ :enable, :start ]
 end

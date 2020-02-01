@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the maxlab_firewall cookbook.
 
+# 1.1.4
+
+* Enable service firewalld before executing any firewall-cmd calls to avoid errors.
+
 # 1.1.3
 
 * Removing more debugging statements.
