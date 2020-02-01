@@ -23,14 +23,26 @@ platforms:
   - name: centos-8
 
 suites:
-  - name: default
+  - name: client
+    run_list:
+      - role[base_firewall_maxlab_dmz]
+      - role[client_chrony_maxlab]
+      - recipe[maxlab_firewall::update_firewalld]
+    verifier:
+      inspec_tests:
+        - test/integration/client
+    attributes:
+    client_rb:
+      environment: maxlab
+
+  - name: server
     run_list:
       - role[base_firewall_maxlab_dmz]
       - role[service_chrony_maxlab]
       - recipe[maxlab_firewall::update_firewalld]
     verifier:
       inspec_tests:
-        - test/integration/default
+        - test/integration/server
     attributes:
     client_rb:
       environment: maxlab

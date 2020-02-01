@@ -63,10 +63,17 @@ default['chrony']['client']['options']['leapsectz']['comment'] = [
 default['chrony']['client']['options']['leapsectz']['config'] = "leapsectz right/UTC"
 
 
-default['chrony']['client']['options']['logdir']['comment'] = [
-  "# Specify directory for log files."
+default['chrony']['client']['options']['port']['comment'] = [
+  "# Disable NTP port on clients"
 ]
-default['chrony']['client']['options']['logdir']['config'] = "logdir /var/log/chrony"
+default['chrony']['client']['options']['port']['config'] = "port 0"
+
+
+default['chrony']['client']['options']['cmdport']['comment'] = [
+  "# Disable Chrony command port on clients"
+]
+default['chrony']['client']['options']['cmdport']['config'] = "cmdport 0"
+
 
 #
 # Server configuration attributes

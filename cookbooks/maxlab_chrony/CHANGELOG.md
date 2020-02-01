@@ -2,6 +2,14 @@
 
 This file is used to list changes made in each version of the maxlab_chrony cookbook.
 
+# 1.3.0 - Test Kitchen Support
+
+* Added a mock node for Test Kitchen to find when searching for servers tagged ntp-server on client instances.
+* Added Inspec tests for client and server
+* Renamed default recipe as 'deploy' to follow best practices of making recipes verb related instead of default.
+* Configured kitchen.yml with client and server test suites
+* Added attributes to configure chrony to not listen on ports 123 or 323 via port and cmdport config declarations. More secure.
+
 # 1.2.0
 
 * Major rework: Use node attributes instead of data bag values as primary source of configuring chrony client or server instances.  Re-aligning to a more standardized practice.

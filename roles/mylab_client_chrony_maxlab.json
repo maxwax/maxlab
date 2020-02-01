@@ -10,7 +10,7 @@
   },
   "description": "Standard chrony NTP client configuration",
   "run_list": [
-    "recipe[mylab_chrony]"
+    "recipe[mylab_chrony::deploy]"
   ],
   "override_attributes": {
     }
