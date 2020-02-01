@@ -1,0 +1,18 @@
+{
+  "name": "mylab_service_chrony_maxlab",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "instance_config_chrony": {
+      "instance": "chrony.maxlab",
+      "instance_type": "server"
+    }
+  },
+  "description": "Standard chrony NTP server configuration",
+  "run_list": [
+    "recipe[mylab_chrony]"
+  ],
+  "override_attributes": {
+    }
+
+}
