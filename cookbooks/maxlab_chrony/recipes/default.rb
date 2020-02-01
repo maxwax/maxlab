@@ -1,5 +1,5 @@
 #
-# Cookbook:: maxlab-chrony
+# Cookbook:: maxlab_chrony
 # Recipe:: default
 #
 # Copyright:: 2019, The Authors, All Rights Reserved.
@@ -11,20 +11,23 @@ Configure the Chrony NTP client in a standard fashion.
 =end
 
 # Load Chrony config from data bag
-full_config_chrony = data_bag_item('config_chrony',             node['config_chrony']['instance'])
+#full_config_chrony = data_bag_item('config_chrony', node['config_chrony']['instance'])
+#full_config_chrony = node['chrony']
 
 # Load config_chrony with only the client or server data bag config
 # Also set the time source to the first local ntp-server tagged node
 # or the upstream internet NTP server
-case node['config_chrony']['instance_type']
+case node['instance_config_chrony']['instance_type']
 
   when 'client'
-    config_chrony = full_config_chrony['client']
+#    config_chrony = full_config_chrony['client']
+    config_chrony = node['chrony']['client'].to_h
 
     ntp_server = search(:node, "tags:ntp-server")[0]['fqdn']
 
   when 'server'
-    config_chrony = full_config_chrony['server']
+#    config_chrony = full_config_chrony['server']
+    config_chrony = node['chrony']['server'].to_h
 
     ntp_server = node['global']['upstream_ntp']
 
@@ -34,7 +37,8 @@ end
 #
 # If the config has multiple, we can currently only use one, so use first
 # This is a bad limitation, but OK, for now, for our home lab use
-network_id, subnet_id = full_config_chrony['serve_chrony_for'].first
+#network_id, subnet_id = full_config_chrony['serve_chrony_for'].first
+network_id, subnet_id = node['chrony']['serve_chrony_for'].first
 
 # Load network configuration for this network ID only
 full_config_network = data_bag_item('config_network', network_id)
@@ -50,6 +54,7 @@ subnet_info = full_config_network['subnet'][subnet_id]
 cfg_pool = "#{config_chrony['options']['pool']['config']} #{ntp_server} #{config_chrony['options']['pool']['config_options']}"
 
 # Replace the 'config' data bag value with this constructed command
+#config_chrony['options']['pool']['config'] = cfg_pool
 config_chrony['options']['pool']['config'] = cfg_pool
 
 # Temp variables which will reset json data bag values
@@ -116,9 +121,15 @@ os_major = node['platform_version'].split('.')[0]
 
 # Install packages for Chrony
 chrony_packages = node['chrony']['packages'][os_dist][os_major].each do |pkg, ver|
-  package pkg do
-    version ver
-    action :install
+  if ver != 'any'
+    package pkg do
+      action :install
+    end
+  else
+    package pkg do
+      version ver
+      action :install
+    end
   end
 end
 
@@ -127,9 +138,9 @@ template '/etc/chrony.conf' do
   source 'chrony.conf.erb'
   variables (
     {
-      config_chrony: config_chrony,
-      ntp_server: ntp_server,
-      subnet_info: subnet_info
+      config_chrony: config_chrony
+#      ntp_server: ntp_server,
+#      subnet_info: subnet_info
     }
   )
 end
@@ -137,7 +148,7 @@ end
 # Warning - firewalld specific, won't work on Red hat < 7, Debian, etc
 #---
 
-if node['config_chrony']['instance_type'] == 'server'
+if node['instance_config_chrony']['instance_type'] == 'server'
   # Warning - firewalld specific, won't work on Red hat < 7, Debian, etc
   #---
 
@@ -146,8 +157,10 @@ if node['config_chrony']['instance_type'] == 'server'
 
   # Add the service to this node's firewalld service requirements
   # Ex: Append 'dns' to 'ssh http https' (list of already allowed services)
-  if full_config_chrony['firewall']['firewalld'].key?('services')
-    full_config_chrony['firewall']['firewalld']['services'].each do |service_string|
+#  if full_config_chrony['firewall']['firewalld'].key?('services')
+#    full_config_chrony['firewall']['firewalld']['services'].each
+  if node['chrony']['firewall']['firewalld'].key?('services')
+    node['chrony']['firewall']['firewalld']['services'].each do |service_string|
 
       if not node['maxlab_firewall']['zones'][service_zone]['services'].include? service_string
         node.normal['maxlab_firewall']['zones'][service_zone]['services'] << service_string
@@ -157,8 +170,8 @@ if node['config_chrony']['instance_type'] == 'server'
   end
 
   # Append individual port definitions
-  if full_config_chrony['firewall']['firewalld'].key?('ports')
-    full_config_chrony['firewall']['firewalld']['ports'].each do |port_string|
+  if node['chrony']['firewall']['firewalld'].key?('ports')
+    node['chrony']['firewall']['firewalld']['ports'].each do |port_string|
 
       if not node['maxlab_firewall']['zones'][service_zone]['ports'].include? port_string
         node.normal['maxlab_firewall']['zones'][service_zone]['ports'] << port_string
@@ -168,8 +181,8 @@ if node['config_chrony']['instance_type'] == 'server'
   end
 
   # Append individual sources definitions
-  if full_config_chrony['firewall']['firewalld'].key?('sources')
-    full_config_chrony['firewall']['firewalld']['sources'].each do |source_string|
+  if node['chrony']['firewall']['firewalld'].key?('sources')
+    node['chrony']['firewall']['firewalld']['sources'].each do |source_string|
 
       if not node['maxlab_firewall']['zones'][source_zone]['sources'].include? source_string
         node.normal['maxlab_firewall']['zones'][source_zone]['sources'] << source_string
@@ -188,7 +201,7 @@ service 'chronyd' do
   action [:enable, :restart]
 end
 
-case node['config_chrony']['instance_type']
+case node['instance_config_chrony']['instance_type']
   when 'server'
     tag('ntp-server')
   when 'client'
