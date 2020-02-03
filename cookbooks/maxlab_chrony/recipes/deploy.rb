@@ -10,28 +10,22 @@ Configure the Chrony NTP client in a standard fashion.
 #>
 =end
 
-# Load Chrony config from data bag
-#full_config_chrony = data_bag_item('config_chrony', node['config_chrony']['instance'])
-#full_config_chrony = node['chrony']
+# Load client or server node attributes into a variable for easier
+# access and code readability.
 
-# Load config_chrony with only the client or server data bag config
 # Also set the time source to the first local ntp-server tagged node
 # or the upstream internet NTP server
 case node['instance_config_chrony']['instance_type']
 
   when 'client'
-#    config_chrony = full_config_chrony['client']
     config_chrony = node['chrony']['client'].to_h
 
     ntp_server = search(:node, "tags:ntp-server")[0]['fqdn']
 
-    puts search(:node, "tags:ntp-server")
-
   when 'server'
-#    config_chrony = full_config_chrony['server']
     config_chrony = node['chrony']['server'].to_h
 
-    ntp_server = node['global']['upstream_ntp']
+    ntp_server = node['env']['maxlab']['upstream_ntp']
 
 end
 
@@ -39,7 +33,6 @@ end
 #
 # If the config has multiple, we can currently only use one, so use first
 # This is a bad limitation, but OK, for now, for our home lab use
-#network_id, subnet_id = full_config_chrony['serve_chrony_for'].first
 network_id, subnet_id = node['chrony']['serve_chrony_for'].first
 
 # Load network configuration for this network ID only
@@ -56,7 +49,6 @@ subnet_info = full_config_network['subnet'][subnet_id]
 cfg_pool = "#{config_chrony['options']['pool']['config']} #{ntp_server} #{config_chrony['options']['pool']['config_options']}"
 
 # Replace the 'config' data bag value with this constructed command
-#config_chrony['options']['pool']['config'] = cfg_pool
 config_chrony['options']['pool']['config'] = cfg_pool
 
 # Temp variables which will reset json data bag values
@@ -141,8 +133,6 @@ template '/etc/chrony.conf' do
   variables (
     {
       config_chrony: config_chrony
-#      ntp_server: ntp_server,
-#      subnet_info: subnet_info
     }
   )
 end
@@ -159,8 +149,6 @@ if node['instance_config_chrony']['instance_type'] == 'server'
 
   # Add the service to this node's firewalld service requirements
   # Ex: Append 'dns' to 'ssh http https' (list of already allowed services)
-#  if full_config_chrony['firewall']['firewalld'].key?('services')
-#    full_config_chrony['firewall']['firewalld']['services'].each
   if node['chrony']['firewall']['firewalld'].key?('services')
     node['chrony']['firewall']['firewalld']['services'].each do |service_string|
 

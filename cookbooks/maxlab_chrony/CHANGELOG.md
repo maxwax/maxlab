@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of the maxlab_chrony cookbook.
 
+# 1.4.0 - Policyfiles support
+
+* Pulling Berksfile
+* Modifying kitchen.yml to use policyfiles
+* Created policyfiles in root dir for maxlab_chrony_client and maxlab_chrony_server
+* Removed old, commented out code that used data bags instead of node attributes (this has been tested sufficiently now)
+
 # 1.3.0 - Test Kitchen Support
 
 * Added a mock node for Test Kitchen to find when searching for servers tagged ntp-server on client instances.
