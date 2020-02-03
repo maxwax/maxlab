@@ -1,0 +1,17 @@
+{
+  "name": "ntpservernode",
+  "chef_type": "node",
+  "json_class": "Chef::Node",
+  "chef_environment": "maxlab",
+  "run_list": [],
+  "normal": {
+    "tags": [
+      "ntp-server"
+    ]
+  },
+  "automatic": {
+    "ipaddress": "192.168.9.199",
+    "hostname": "ntpservernode",
+    "fqdn": "ntpservernode.maxlab"
+  }
+}

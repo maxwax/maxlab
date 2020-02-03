@@ -1,11 +1,17 @@
 # mylab_chrony CHANGELOG
 
-This file is used to list changes made in each version of the mylab_chrony cookbook.
+# 1.2.0
 
-# 0.1.0
+* Converted to using policyfiles in root policyfiles directory.
+* Pulled support for using environment via kitchen (not supported with policyfiles)
+* Pulled support for using run_lists with kitchen (replaced by policyfiles run_lists)
+* Copied test files from maxlab_chrony
+* Cleaned up .kitchen.yml file.
 
-Initial release.
+# 1.1.0
 
-- change 0
-- change 1
+* Adding support for Test Kitchen testing.
 
+# 1.0.0
+
+* Initial release
