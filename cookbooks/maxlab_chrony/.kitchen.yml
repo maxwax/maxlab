@@ -2,51 +2,6 @@
 driver:
   name: vagrant
 
-# provisioner:
-#   name: chef_zero
-#   # You may wish to disable always updating cookbooks in CI or other testing environments.
-#   # For example:
-#   #   always_update_cookbooks: <%= !ENV['CI'] %>
-#   always_update_cookbooks: true
-#   cookbooks_path: ../../cookbooks
-#   environments_path: ../../environments
-#   data_bags_path: ../../data_bags
-#   roles_path: ../../roles
-#   nodes_path: test/integration/nodes
-#   client_rb:
-#     environment: maxlab
-#
-# verifier:
-#   name: inspec
-#
-# platforms:
-#   - name: centos-8
-#
-# suites:
-#   - name: client
-#     run_list:
-#       - role[base_firewall_maxlab_dmz]
-#       - role[client_chrony_maxlab]
-#       - recipe[maxlab_firewall::update_firewalld]
-#     verifier:
-#       inspec_tests:
-#         - test/integration/client
-#     attributes:
-#     client_rb:
-#       environment: maxlab
-#
-#   - name: server
-#     run_list:
-#       - role[base_firewall_maxlab_dmz]
-#       - role[service_chrony_maxlab]
-#       - recipe[maxlab_firewall::update_firewalld]
-#     verifier:
-#       inspec_tests:
-#         - test/integration/server
-#     attributes:
-#     client_rb:
-#       environment: maxlab
-
 provisioner:
   name: chef_zero
   always_update_cookbooks: true
@@ -67,7 +22,7 @@ suites:
         - test/integration/client
     attributes:
     provisioner:
-       policyfile: ../../policyfiles/maxlab_chrony_client.rb
+       policyfile: ../../policyfiles/tk_maxlab_chrony_client.rb
 
   - name: server
     run_list:
@@ -76,4 +31,4 @@ suites:
         - test/integration/server
     attributes:
     provisioner:
-       policyfile: ../../policyfiles/maxlab_chrony_server.rb
+       policyfile: ../../policyfiles/tk_maxlab_chrony_server.rb

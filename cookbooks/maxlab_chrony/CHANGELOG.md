@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of the maxlab_chrony cookbook.
 
+# 1.4.1 Rename policyfiles
+
+* Renaming all test kitchen policyfiles as tk_<pfile_name>
+
 # 1.4.0 - Policyfiles support
 
 * Pulling Berksfile
