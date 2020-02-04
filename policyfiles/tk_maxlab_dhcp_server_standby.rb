@@ -1,6 +1,6 @@
 # Policyfile.rb - Describe how you want Chef Infra Client to build your system.
 
-name 'maxlab_dhcp_server_tk_standby'
+name 'tk_maxlab_dhcp_server_standby'
 
 default_source :supermarket
 

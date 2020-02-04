@@ -1,6 +1,6 @@
 # Policyfile.rb - Describe how you want Chef Infra server to build your system.
 
-name 'maxlab_chrony_server'
+name 'tk_maxlab_chrony_server'
 
 default_source :supermarket
 
