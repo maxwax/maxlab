@@ -1,3 +1,4 @@
 *.swp
 kickstart-rootpw-*
 *.lock.json
+*/logs/kitchen.log
