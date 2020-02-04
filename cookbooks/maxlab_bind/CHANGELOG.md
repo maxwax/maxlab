@@ -2,6 +2,18 @@
 
 Cookbook for deploying DNS service using BIND on Redhat platform Linux distributions
 
+# 1.2.0 - Return to node attributes
+
+* Convert from using data bags to node attributes for config data
+* Renamed default.rb to deploy.rb
+* Enable Test Kitchen development
+* Enable testing with test kitchen
+* Disabled config_bind data bag by renaming it obsolete_
+* Removing some zones config from node['bind'] tree. Turns out they'd been moved to the config_network data_bag
+* Removed Berksfile
+* Add policyfiles for Test Kitchen testing
+* Removed 'default' test inspec code.
+
 # 1.1.2
 
 * Early maxlab cookbook maxlab_bind was using 'bind_zone' instead of 'service_zone' to load network zone info.  All other cookbooks were using service_zone info, so new services/ports/sources firewall attribute code copied from maxlab_plex failed to work.
