@@ -1,6 +1,6 @@
 # Policyfile.rb - Describe how you want Chef Infra Client to build your system.
 
-name 'mylab_dhcp_server_core'
+name 'tk_mylab_dhcp_server_standby'
 
 default_source :supermarket
 

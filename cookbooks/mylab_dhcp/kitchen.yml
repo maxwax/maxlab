@@ -25,11 +25,8 @@ suites:
       inspec_tests:
         - test/integration/primary
     attributes:
-      tags:
-        - "dhcp-primary"
-        - "dhcp-server"
     provisioner:
-       policyfile: ../../policyfiles/mylab_dhcp_server_tk_primary.rb
+       policyfile: ../../policyfiles/tk_mylab_dhcp_server_primary.rb
 
   - name: standby
     run_list:
@@ -37,8 +34,5 @@ suites:
       inspec_tests:
         - test/integration/standby
     attributes:
-      tags:
-        - "dhcp-primary"
-        - "dhcp-server"
     provisioner:
-       policyfile: ../../policyfiles/mylab_dhcp_server_tk_standby.rb
+       policyfile: ../../policyfiles/tk_mylab_dhcp_server_standby.rb

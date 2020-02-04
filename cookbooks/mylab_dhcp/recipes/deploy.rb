@@ -7,7 +7,7 @@
 
 =begin
 #<
-Wrapper recipe for maxlab_dhcp::deploy
+Wrapper recipe for maxlab_dhcp::deploy.
 #>
 =end
 
