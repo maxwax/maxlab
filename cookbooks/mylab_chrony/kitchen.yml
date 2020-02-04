@@ -22,7 +22,7 @@ suites:
         - test/integration/client
     attributes:
     provisioner:
-       policyfile: ../../policyfiles/mylab_chrony_client.rb
+       policyfile: ../../policyfiles/tk_mylab_chrony_client.rb
 
   - name: server
     run_list:
@@ -31,4 +31,4 @@ suites:
         - test/integration/server
     attributes:
     provisioner:
-       policyfile: ../../policyfiles/mylab_chrony_server.rb
+       policyfile: ../../policyfiles/tk_mylab_chrony_server.rb

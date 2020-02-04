@@ -1,5 +1,9 @@
 # mylab_chrony CHANGELOG
 
+# 1.2.1
+
+* Use policyfiles named tk_<policyfile>
+
 # 1.2.0
 
 * Converted to using policyfiles in root policyfiles directory.
