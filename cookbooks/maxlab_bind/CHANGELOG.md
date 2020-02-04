@@ -2,6 +2,10 @@
 
 Cookbook for deploying DNS service using BIND on Redhat platform Linux distributions
 
+# 1.2.1 Rename policyfiles
+
+* Renaming all test kitchen policyfiles as tk_<pfile_name>
+
 # 1.2.0 - Return to node attributes
 
 * Convert from using data bags to node attributes for config data

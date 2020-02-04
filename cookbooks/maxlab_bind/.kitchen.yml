@@ -26,4 +26,4 @@ suites:
         - test/integration/server
     attributes:
     provisioner:
-       policyfile: ../../policyfiles/maxlab_bind_server.rb
+       policyfile: ../../policyfiles/tk_maxlab_bind_server.rb
