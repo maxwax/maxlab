@@ -26,7 +26,7 @@ suites:
         - test/integration/primary
     attributes:
     provisioner:
-       policyfile: ../../policyfiles/maxlab_dhcp_server_tk_primary.rb
+       policyfile: ../../policyfiles/tk_maxlab_dhcp_server_primary.rb
 
   - name: standby
     run_list:
@@ -35,4 +35,4 @@ suites:
         - test/integration/standby
     attributes:
     provisioner:
-       policyfile: ../../policyfiles/maxlab_dhcp_server_tk_standby.rb
+       policyfile: ../../policyfiles/tk_maxlab_dhcp_server_standby.rb

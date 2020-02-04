@@ -2,6 +2,10 @@
 
 Deploy a DHCP server
 
+# 1.2.1
+
+* Renaming all test kitchen policyfiles as tk_<pfile_name>
+
 # 1.2.0 Test Kitchen and Nodes
 
 * Enable Test Kitchen for development
@@ -9,7 +13,7 @@ Deploy a DHCP server
 * Move basic things from data bags to node attributes
 * Move from Berksfile to policyfiles
 * Removed default test scripts
-* Added new testkitchen data bag to simulate 
+* Added new testkitchen data bag to simulate
 
 # 1.1.0
 
