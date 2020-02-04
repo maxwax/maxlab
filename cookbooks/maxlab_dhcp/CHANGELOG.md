@@ -2,6 +2,15 @@
 
 Deploy a DHCP server
 
+# 1.2.0 Test Kitchen and Nodes
+
+* Enable Test Kitchen for development
+* Enable test kitchen tests
+* Move basic things from data bags to node attributes
+* Move from Berksfile to policyfiles
+* Removed default test scripts
+* Added new testkitchen data bag to simulate 
+
 # 1.1.0
 
 * Change 'service' to 'services' in firewalld rules of config_dhcp data bag.
