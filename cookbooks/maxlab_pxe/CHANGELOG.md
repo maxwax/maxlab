@@ -1,5 +1,21 @@
 # maxlab_pxe CHANGELOG
 
+# 1.1.0
+
+* Rename default.rb recipe as deploy for consistency with other cookbooks.
+* Adding support for Test Kitchen development
+* Adding support for test kitchen tests
+* Adding support for policyfiles
+* Removing Berksfile
+* Removing local default tests
+* Add test that various /repo/kickstart directories exists
+* Add test that various pxe boot (syslinux) files exit
+* Test whether tftp client can get pxelinux.0 from localhost tftp service
+* Test whether firewalld has opened tftp service
+* template kickstart/ks-centos8.erb: Replace node['global'] previously found in maxlab environment with node['env']['maxlab'] policyfiles environment
+* Recipe changed from default to deploy
+
+
 # 1.0.0
 
 * Version bump to 1.0.0 now that we're in production use.

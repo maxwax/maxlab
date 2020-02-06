@@ -8,19 +8,22 @@ provisioner:
   # For example:
   #   always_update_cookbooks: <%= !ENV['CI'] %>
   always_update_cookbooks: true
+  cookbooks_path: ../../cookbooks
+  data_bags_path: ../../data_bags
+  nodes_path: test/integration/nodes
 
 verifier:
   name: inspec
 
 platforms:
-  - name: ubuntu-16.04
-  - name: centos-7
+  - name: centos-8
 
 suites:
-  - name: default
+  - name: deploy
     run_list:
-      - recipe[maxlab_pxe::default]
     verifier:
       inspec_tests:
-        - test/integration/default
+        - test/integration/deploy
     attributes:
+    provisioner:
+       policyfile: ../../policyfiles/tk_maxlab_pxe.rb

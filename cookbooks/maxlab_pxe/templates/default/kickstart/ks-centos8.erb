@@ -9,10 +9,10 @@ install
 text
 
 # Initialize the network device using dhcp. We don't need IPV6 in my home lab
-network --bootproto dhcp --noipv6 
+network --bootproto dhcp --noipv6
 
 # Get rpm packages from this repository
-url --url=<%= node['global']['repo_url'] %>/<%= @ksconfig['url'] %>/<%= @ksconfig['isodir'] %>
+url --url=<%= node['env']['maxlab']['repo_url'] %>/<%= @ksconfig['url'] %>/<%= @ksconfig['isodir'] %>
 
 # Let's use the English language and keyboard settings
 lang en_US
@@ -82,4 +82,3 @@ firewall <%= @ksconfig['selinux']['options'] %>
 %addon <%= aon %> <%= aon_opt %>
 %end
 <% end %>
-
