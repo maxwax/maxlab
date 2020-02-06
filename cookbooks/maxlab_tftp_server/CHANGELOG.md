@@ -1,5 +1,16 @@
 # maxlab_tftp_server CHANGELOG
 
+# 1.2.0
+
+* Enable Test Kitchen development
+* Enable test kitchen testing
+* Enable policyfiles
+* Add doc files
+* Update README.md
+* Delete Berksfile
+
+# 1.1.0
+
 * Change 'service' to 'services' in firewalld rules of config_tftp_server data bag.
 * Modify maxlab_tftp_server::default code to use services, ports and sources from data bag as arrays.
 * New code originally from config_plex to append any array elements from the data bag to the node.normal['maxlab_firewall'] node attribute that maxlab_firewall::update_firewall will use to apply firewll changes.
