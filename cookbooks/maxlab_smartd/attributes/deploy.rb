@@ -1,4 +1,4 @@
-# maxcomm_smartd attributes
+# maxlab_smartd attributes
 
 #
 # To configure custom monitoring for sepcific devices, copy the default

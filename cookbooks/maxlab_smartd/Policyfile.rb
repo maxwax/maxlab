@@ -4,13 +4,13 @@
 # https://docs.chef.io/policyfile.html
 
 # A name that describes what the system you're building with Chef does.
-name 'maxcomm_smartd'
+name 'maxlab_smartd'
 
 # Where to find external cookbooks:
 default_source :supermarket
 
 # run_list: chef-client will run these recipes in the order specified.
-run_list 'maxcomm_smartd::default'
+run_list 'maxlab_smartd::default'
 
 # Specify a custom source for a single cookbook:
-cookbook 'maxcomm_smartd', path: '.'
+cookbook 'maxlab_smartd', path: '.'

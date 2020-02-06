@@ -1,0 +1,17 @@
+{
+  "id": "vagrantup.com_deploy-centos-8",
+  "doc": "This is a smartd daemon config for node filer.maxlab",
+  "cfg": {
+    "devices": {
+      "DEVICESCAN": {
+        "target_email": "maxops@maxwellspangler.com",
+        "standard_health_check": true,
+        "startup_email_test": true,
+        "notify_script": "/usr/libexec/smartmontools/smartdnotify",
+        "misc_options": [
+          "-n standby,10,q"
+        ]
+      }
+    }
+  }
+}

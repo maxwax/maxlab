@@ -1,12 +1,12 @@
 #
-# Cookbook:: maxcomm_smartd
+# Cookbook:: maxlab_smartd
 # Spec:: default
 #
 # Copyright:: 2020, The Authors, All Rights Reserved.
 
 require 'spec_helper'
 
-describe 'maxcomm_smartd::default' do
+describe 'maxlab_smartd::default' do
   context 'When all attributes are default, on Ubuntu 18.04' do
     # for a complete list of available platforms and versions see:
     # https://github.com/chefspec/fauxhai/blob/master/PLATFORMS.md

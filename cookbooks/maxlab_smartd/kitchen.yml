@@ -19,11 +19,11 @@ platforms:
   - name: centos-8
 
 suites:
-  - name: deploy
+  - name: server
     run_list:
     verifier:
       inspec_tests:
         - test/integration/deploy
     attributes:
     provisioner:
-       policyfile: ../../policyfiles/tk_mylab_smartd.rb
+       policyfile: ../../policyfiles/tk_maxlab_smartd.rb

@@ -32,15 +32,15 @@ This cookbook simulates a community cookbook and in my lab I use the 'mylab_smar
 
 # Recipes
 
-* [maxcomm_smartd::default](#maxcomm_smartddefault) - Install smartmontools to monitor S.M.A.R.T.
+* [maxlab_smartd::default](#maxlab_smartddefault) - This recipe performs no actions.
+* [maxlab_smartd::deploy](#maxlab_smartddeploy) - Install smartmontools to monitor S.M.A.R.T.
 
-## maxcomm_smartd::default
+## maxlab_smartd::default
 
-Install smartmontools to monitor S.M.A.R.T. storage health attributes and configure smartd for monitoring
+This recipe performs no actions.
 
-A Redhat based Linux distribution using firewall-cmd such as
-* Red Hat Linux 7.x or 8.x
-* CentOS 7.x or 8.x
+## maxlab_smartd::deploy
 
+Install smartmontools to monitor S.M.A.R.T. storage health attributes and configure smartd for monitoring.
 
 Maxwell Spangler maxcode@maxwellspangler.com

@@ -1,12 +1,12 @@
 #
-# Cookbook:: maxcomm_smartd
-# Recipe:: default
+# Cookbook:: maxlab_smartd
+# Recipe:: deploy
 #
 # Copyright:: 2020, The Authors, All Rights Reserved.
 
 =begin
 #<
-Install smartmontools to monitor S.M.A.R.T. storage health attributes and configure smartd for monitoring
+Install smartmontools to monitor S.M.A.R.T. storage health attributes and configure smartd for monitoring.
 #>
 =end
 
@@ -32,12 +32,6 @@ smartd_config_lines = []
 
 # Hold a single constructed smartd config line for a DEVICESCAN directive here:
 devicescan_config_line = ""
-
-# puts
-# puts "DEBUG maxcomm_smartd - node['smartd'] incoming"
-# puts
-# pp node['smartd']
-# puts
 
 # Using attibutes, for each defined device, build a branch in the smartd_config
 # hash tree containing a construced smartd configuration directive.
@@ -82,12 +76,6 @@ if devicescan_config_line != nil
   smartd_config_lines << devicescan_config_line
 end
 
-# puts
-# puts "DEBUG maxcomm_smartd - node['smartd'] Configuring this:"
-# puts
-# pp smartd_config_lines
-# puts
-
 template '/etc/smartmontools/smartd.conf' do
   source "smartd.conf.erb"
 
@@ -102,6 +90,10 @@ template '/etc/smartmontools/smartd.conf' do
   )
 
   action :create
+end
+
+service "smartd" do
+  action [:enable, :start]
 end
 
 tag('smartd')

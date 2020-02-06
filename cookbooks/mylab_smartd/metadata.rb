@@ -2,8 +2,8 @@ name 'mylab_smartd'
 maintainer 'Maxwell Spangler'
 maintainer_email 'maxcode@maxwellspangler.com'
 license 'All Rights Reserved'
-description 'Wrapper for maxcomm_smartd cookbook in order to customize deployment of smartd'
-version '1.0.0'
+description 'Wrapper for maxlab_smartd cookbook in order to customize deployment of smartd'
+version '1.2.0'
 chef_version '>= 14.0'
 
 # The `issues_url` points to the location where issues for this cookbook are
@@ -18,4 +18,7 @@ chef_version '>= 14.0'
 #
 # source_url 'https://github.com/<insert_org_here>/mylab_smartd'
 
-depends 'maxcomm_smartd'
+supports 'redhat', '>= 7.0'
+supports 'centos', '>= 7.0'
+
+depends 'maxlab_smartd'
