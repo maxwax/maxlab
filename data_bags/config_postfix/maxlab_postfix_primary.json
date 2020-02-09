@@ -1,13 +1,14 @@
 {
-  "id": "maxlab_postfix_filer",
-  "doc": "Postfix server configuration for filer.maxlab",
+  "id": "maxlab_postfix_primary",
+  "doc": "Postfix server configuration for primary.maxlab",
+  "faux_domain": "maxwellspangler.com",
   "core_config": {
     "queue_directory": "/var/spool/postfix",
     "command_directory": "/usr/sbin",
     "daemon_directory": "/usr/libexec/postfix",
     "data_directory": "/var/lib/postfix",
     "mail_owner": "postfix",
-    "myhostname": "filer.maxwellspangler.com",
+    "zzzzzmyhostname": "filer.maxwellspangler.com",
     "inet_interfaces": "localhost",
     "inet_protocols": "ipv4",
     "mydestination": "$myhostname, localhost.$mydomain, localhost",

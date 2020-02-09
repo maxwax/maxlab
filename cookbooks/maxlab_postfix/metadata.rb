@@ -3,7 +3,7 @@ maintainer 'Maxwell Spangler'
 maintainer_email 'maxcode@maxwellspangler.com'
 license 'All Rights Reserved'
 description 'Deploy postfix email services on internal nodes'
-version '1.0.0'
+version '1.1.0'
 chef_version '>= 14.0'
 
 # The `issues_url` points to the location where issues for this cookbook are
