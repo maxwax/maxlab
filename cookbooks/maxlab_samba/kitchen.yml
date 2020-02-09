@@ -20,7 +20,7 @@ suites:
     run_list:
     verifier:
       inspec_tests:
-        - test/integration/server
+        - test/integration/service
     attributes:
     provisioner:
        policyfile: ../../policyfiles/tk_maxlab_samba_server_kitchen.rb
@@ -29,7 +29,7 @@ suites:
     run_list:
     verifier:
       inspec_tests:
-        - test/integration/server
+        - test/integration/noservice
     attributes:
     provisioner:
        policyfile: ../../policyfiles/tk_maxlab_samba_server_primary.rb
@@ -38,7 +38,7 @@ suites:
     run_list:
     verifier:
       inspec_tests:
-        - test/integration/server
+        - test/integration/noservice
     attributes:
     provisioner:
        policyfile: ../../policyfiles/tk_maxlab_samba_server_auxillary.rb
@@ -47,7 +47,7 @@ suites:
     run_list:
     verifier:
       inspec_tests:
-        - test/integration/deploy
+        - test/integration/noservice
     attributes:
     provisioner:
        policyfile: ../../policyfiles/tk_maxlab_samba_server_laptopnas.rb

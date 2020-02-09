@@ -1,9 +1,12 @@
 # # encoding: utf-8
 
-# Inspec test for recipe maxlab_samba::default
+# Inspec test for recipe maxlab_samba::service
 
-# The Inspec reference, with examples and extensive documentation, can be
-# found at http://inspec.io/docs/reference/resources/
+#
+# Test real node configurations to ensure that samba is deployed
+# with the right configuration, and DO EXPECT the service to start
+# within a test kitchen VM on the VM's 10.0.2.0/24 network.
+#
 
 describe package('samba') do
   it { should be_installed }
@@ -33,8 +36,3 @@ describe service('nmb') do
   it { should be_enabled }
   it { should be_running }
 end
-
-# describe command('curl -I localhost:32400') do
-#   its('exit_status') { should cmp 0 }
-#   its('stdout') { should match (/.*(200\ OK).*/) }
-# end

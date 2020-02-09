@@ -14,6 +14,9 @@ cookbook 'maxlab_firewall',   path: '../cookbooks/maxlab_firewall'
 default['config_firewall']['base_config'] = 'base_firewall.maxlab.dmz'
 
 default['instance_config_samba']['instance'] = 'maxlab_samba_auxillary'
+# Networking config type: 'node' = real node, don't attempt to start config_samba
+# 'testkitchen' = start samba and verify services in Test Kitchen
+default['instance_config_samba']['instance_type'] = 'node'
 
 # Previously environment variables
 default['env']['maxlab']['repo_url']          = "http://repo.maxlab"
