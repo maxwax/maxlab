@@ -1,5 +1,14 @@
 # maxlab_nginx_repo CHANGELOG
 
+# 1.2.0 Kitchen dev and policyfiles
+
+* Enable development with Test Kitchen
+* Enable testing with test kitchen
+* Remove Berksfile
+* Add policyfile for test kitchen
+* Rename default.rb recipe to deploy.rb
+* Changed data_bag config_nginx_repo to obsolete_
+
 # 1.1.0
 
 * Change 'service' to 'services' in firewalld rules of config_nginx_repo data bag.
