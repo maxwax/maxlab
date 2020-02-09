@@ -1,5 +1,5 @@
 {
-  "id": "maxlab_samba_testred",
+  "id": "maxlab_samba_nodered",
   "doc": "Samba server configuration for red.maxlab",
   "cfg": {
     "sections": {

@@ -1,0 +1,68 @@
+{
+  "id": "maxlab_samba_kitchen",
+  "doc": "Samba server configuration for server-centos-8.vagrantup.com",
+  "cfg": {
+    "sections": {
+      "global": {
+        "workgroup": "MAXLAB",
+        "security": "user",
+        "passdb backend": "tdbsam",
+        "local master": "yes",
+        "os level": "33",
+        "preferred master": "yes",
+        "printing": "cups",
+        "printcap name": "cups",
+        "load printers": "yes",
+        "cups options": "raw",
+        "min protocol": "SMB2",
+        "interfaces": ["lo", "10.0.2.15/24"],
+        "hosts allow": [ "127", "10.0.2."]
+      },
+      "homes": {
+        "comment": "Home directories",
+        "valid users": [ "%S, %D%w%S" ],
+        "browseable": "no",
+        "read only": "no",
+        "inherit acls": "yes"
+      },
+      "printers": {
+        "path": "/var/tmp",
+        "comment": "All Printers",
+        "printable": "no",
+        "create mask": "0600",
+        "browseable": "no"
+      },
+      "print$": {
+        "path": "/var/lib/samba/drivers",
+        "comment": "Printer drivers",
+        "write list": "root",
+        "create mask": "0664",
+        "directory mask": "0775"
+      },
+      "photos": {
+        "path": "/srv/auxdata/photos",
+        "comment": "Photo Archives",
+        "valid users": [ "maxwell" ],
+        "browseable": "yes",
+        "read only": "no",
+        "create mask": "0700"
+      },
+      "auxdata": {
+        "path": "/srv/auxdata",
+        "comment": "General Archives (AUX)",
+        "valid users": [ "maxwell" ],
+        "browseable": "yes",
+        "read only": "no",
+        "create mask": "0700"
+      },
+      "library": {
+        "path": "/srv/auxdata/library",
+        "comment": "Library Archives (AUX)",
+        "valid users": [ "maxwell" ],
+        "browseable": "yes",
+        "read only": "no",
+        "create mask": "0700"
+      }
+    }
+  }
+}

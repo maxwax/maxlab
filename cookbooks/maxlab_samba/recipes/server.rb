@@ -14,9 +14,7 @@ package node['samba']['packages'] do
   action :install
 end
 
-#config_id = "#{node['domain']}_#{node['hostname']}"
-
-config_id = node['config_samba']['instance']
+config_id = node['instance_config_samba']['instance']
 
 # Retrieve the data bag with samba config information for this node
 config_samba_server = data_bag_item('config_samba_server',  config_id)
