@@ -4,6 +4,10 @@
   "cfg": {
     "exports" : {
       "/srv/laptop-auxdata": {
+        "enabled": true,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
         "comment": "Legacy 3TB Aux RAID Archives",
         "clients": {
           "macbooknext.maxlab": {

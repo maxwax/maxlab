@@ -4,6 +4,10 @@
   "cfg": {
     "exports" : {
       "/srv/audiovideo": {
+        "enabled": true,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
         "comment": "Audiovideo storage",
         "clients": {
           "macbooknext.maxlab": {
@@ -29,6 +33,10 @@
         }
       },
       "/srv/avarchive": {
+        "enabled": true,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
         "comment": "Audiovideo auxillary storage",
         "clients": {
           "macbooknext.maxlab": {
@@ -54,6 +62,10 @@
         }
       },
       "/srv/filerdata": {
+        "enabled": true,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
         "comment": "Archives storage",
         "clients": {
           "macbooknext.maxlab": {
@@ -79,6 +91,10 @@
         }
       },
       "/srv/xfiles": {
+        "enabled": true,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
         "comment": "Backups storage",
         "clients": {
           "sarko.maxlab": {
@@ -93,7 +109,11 @@
           }
         }
       },
-      "#/mnt/offsite4tb": {
+      "/mnt/offsite4tb": {
+        "enabled": false,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
         "comment": "Sometimes available 4TB USB drive on filer",
         "clients": {
           "aux.maxlab": {

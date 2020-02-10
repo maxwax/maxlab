@@ -1,5 +1,16 @@
 # maxlab_nfs CHANGELOG
 
+# 1.2.0
+
+* Enable Test Kitchen development
+* Enable policyfiles
+* Use attribute instance_config_nfs instead of config_nfs to identify a node's NFS configuration data bag
+* Added enabled true/false to data bag NFS mount points.  Only manage mount points that are enabled.
+* Add NFS mount points if they don't exist.
+* Added owner/group/mode to NFS mount points data bag tree banches
+* Rename data bag files for config_nfs to match data bag ids. Required for Test Kitchen.
+
+
 # 1.1.0
 
 * After deloying NFS, tag the node as an NFS server

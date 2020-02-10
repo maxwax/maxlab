@@ -4,6 +4,10 @@
   "cfg": {
     "exports" : {
       "/srv/auxdata": {
+        "enabled": true,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
         "comment": "Archive storage",
         "clients": {
           "macbooknext.maxlab": {
@@ -34,6 +38,10 @@
         }
       },
       "/srv/auxrootdata": {
+        "enabled": true,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
         "comment": "Archive auxillary storage",
         "clients": {
           "macbooknext.maxlab": {
@@ -59,6 +67,10 @@
         }
       },
       "/srv/teragreen": {
+        "enabled": true,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
         "comment": "Teragreen 1TB storage",
         "clients": {
           "macbooknext.maxlab": {
@@ -83,7 +95,11 @@
           }
         }
       },
-      "#/srv/auxdata/clonezilla": {
+      "/srv/auxdata/clonezilla": {
+        "enabled": false,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
         "comment": "Clonezilla storage",
         "clients": {
           "*": {
@@ -93,7 +109,11 @@
           }
         }
       },
-      "#/mnt/offsite4tb": {
+      "/mnt/offsite4tb": {
+        "enabled": false,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
         "comment": "Sometimes available 4TB USB drive on filer",
         "clients": {
           "aux.maxlab": {

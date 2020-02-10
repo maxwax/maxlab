@@ -14,7 +14,7 @@ package node['nfs']['packages'] do
   action :install
 end
 
-config_id = node['config_nfs']['instance']
+config_id = node['instance_config_nfs']['instance']
 
 # Retrieve the data bag with NFS config information for this node
 config_nfs_server = data_bag_item('config_nfs_server', config_id)
@@ -26,51 +26,50 @@ exports_lines = {}
 # ex: /srv/mount_point_dir hostname1(rw,no_root_squash) hostname2(rw)
 config_nfs_server['cfg']['exports'].sort.each do | mount_point, mount_details|
 
-  export_text = "#{mount_point} "
+  if mount_details['enabled'] == true
+    directory mount_point do
+      owner mount_details['owner']
+      group mount_details['group']
+      mode mount_details['mode']
 
-  # if mount_point[0] != "#"
-  # # For debugging on a fresh VM only
-  #   directory mount_point do
-  #     owner 'root'
-  #     group 'root'
-  #     mode '0755'
-  #     action :create
-  #   end
-  # end
-
-  mount_details['clients'].sort.each do |client_name, client_details|
-
-    # Reject and do not include clients with no configured options
-    # this should not occur, but is protection against mis-configured data bags
-    if client_details['options'].length > 0
-
-      # start of allowed client definition
-      export_text << "#{client_name}("
-
-      first_opt = true
-      client_details['options'].each do |nfs_client_opt|
-
-        # Append ", " if we are about to append another opt beyond the first
-        if first_opt
-          first_opt = false
-        else
-          export_text << ","
-        end
-
-        export_text << "#{nfs_client_opt}"
-
-      end
-      # All options provided, close the host definition
-      export_text << ") "
+      action :create
     end
 
+    export_text = "#{mount_point} "
+
+    mount_details['clients'].sort.each do |client_name, client_details|
+
+      # Reject and do not include clients with no configured options
+      # this should not occur, but is protection against mis-configured data bags
+      if client_details['options'].length > 0
+
+        # start of allowed client definition
+        export_text << "#{client_name}("
+
+        first_opt = true
+        client_details['options'].each do |nfs_client_opt|
+
+          # Append ", " if we are about to append another opt beyond the first
+          if first_opt
+            first_opt = false
+          else
+            export_text << ","
+          end
+
+          export_text << "#{nfs_client_opt}"
+
+        end
+        # All options provided, close the host definition
+        export_text << ") "
+      end
+
+    end
+
+    exports_lines[mount_point] = {
+      comment: "# #{mount_details['comment']}",
+      export_text: export_text
+    }
   end
-
-  exports_lines[mount_point] = {
-    comment: "# #{mount_details['comment']}",
-    export_text: export_text
-  }
-
 end
 
 template '/etc/exports' do
