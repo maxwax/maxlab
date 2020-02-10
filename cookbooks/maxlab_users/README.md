@@ -10,7 +10,7 @@ The purpose of this is to coordinate, one place, where users and groups are crea
 
 As of right now, applications can still create their own users and groups via rpm installs. I'll come back to that later.
 
-Operation
+# Operation
 
 The general.rb recipe looks for data bag config_servicesets which contains the single item 'maxlab_global'.
 
@@ -20,7 +20,7 @@ Each user can be found, defined with a specific uid and gid, in data bag config_
 
 Each group can be found, defined with a specific gid, in data bag config_groups.
 
-Long Term
+# Long Term
 
 I'll modify this cookbook in the future to use a function or LWRP to do this.  Right now to add a new service, the easiest way is to clone general.rb, point it to a different serviceset (service) by name, and then add any additional handling to it.  It's not ideal, but I don't want to spend too much time on this right now.
 
@@ -49,10 +49,15 @@ I'll modify this cookbook in the future to use a function or LWRP to do this.  R
 
 * maxlab_users::default
 * [maxlab_users::general](#maxlab_usersgeneral) - Deploy standard users and groups based on data bag configuration rules.
+* [maxlab_users::general_kitchen](#maxlab_usersgeneral_kitchen)
 
 ## maxlab_users::general
 
 Deploy standard users and groups based on data bag configuration rules.
+
+## maxlab_users::general_kitchen
+
+Deploy standard users, adding 1000 to each to avoid colliding with vagrant VM users and groups
 
 A Redhat based Linux distribution using firewall-cmd such as
 * Red Hat Linux 7.x or 8.x
