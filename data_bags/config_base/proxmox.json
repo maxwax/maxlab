@@ -1,4 +1,4 @@
 {
-  "id": "maxlab_proxmox",
+  "id": "obsolete_maxlab_proxmox",
   "doc": "Base configuration for maxlab environment Proxmox hypervisors"
 }

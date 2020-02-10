@@ -1,6 +1,12 @@
 # maxlab_base CHANGELOG
 
-This file is used to list changes made in each version of the maxlab_base cookbook.
+# 1.3.0
+
+* Enable Test Kitchen development
+* Enable Test Kitchen tests
+* Enable policyfiles use
+* Delete Berksfile
+* Update docuemntation
 
 # 1.2.0
 
