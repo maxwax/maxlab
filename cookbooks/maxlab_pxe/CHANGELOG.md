@@ -1,5 +1,9 @@
 # maxlab_pxe CHANGELOG
 
+# 1.1.1 cmp instead of eq
+
+* Modify two tests to use 'cmp' operator instead of 'eq'
+
 # 1.1.0
 
 * Rename default.rb recipe as deploy for consistency with other cookbooks.

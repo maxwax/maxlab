@@ -56,7 +56,7 @@ end
 
 # Test tftp client to tftp server on local node
 describe command('tftp 127.0.0.1 -c get pxelinux.0 /tmp/pxelinux.0') do
-  its('exit_status') { should eq 0 }
+  its('exit_status') { should cmp 0 }
 end
 
 describe file('/tmp/pxelinux.0') do
@@ -66,5 +66,5 @@ end
 # Ensure firewalld allows incoming tftp service
 describe command('firewall-cmd --list-services') do
   its('stdout') { should match /.*(tftp).*/}
-  its('exit_status') { should eq 0 }
+  its('exit_status') { should cmp 0 }
 end
