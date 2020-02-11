@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of the maxlab_firewall cookbook.
 
+# 1.2.0
+
+* Enable Test Kitchen development
+* Enable Test Kitchen tests
+* Enable use of policyfiles
+
 # 1.1.4
 
 * Enable service firewalld before executing any firewall-cmd calls to avoid errors.

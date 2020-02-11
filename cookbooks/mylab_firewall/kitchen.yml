@@ -22,4 +22,4 @@ suites:
         - test/integration/sample_firewall
     attributes:
     provisioner:
-       policyfile: ../../policyfiles/tk_maxlab_firewall_sample.rb
+       policyfile: ../../policyfiles/tk_mylab_firewall_sample.rb
