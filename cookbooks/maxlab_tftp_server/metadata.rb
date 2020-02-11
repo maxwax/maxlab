@@ -11,7 +11,7 @@ chef_version '>= 13.0'
 # tracked.  A `View Issues` link will be displayed on this cookbook's page when
 # uploaded to a Supermarket.
 #
-# issues_url 'https://github.com/<insert_org_here>/maxlab-tftp-server/issues'
+# issues_url 'https://github.com/<insert_org_here>/maxlab_tftp_server/issues'
 
 # The `source_url` points to the development repository for this cookbook.  A
 # `View Source` link will be displayed on this cookbook's page when uploaded to

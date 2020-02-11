@@ -1,5 +1,5 @@
 #
-# Cookbook:: maxlab-tftp-server
+# Cookbook:: maxlab_tftp_server
 # Spec:: default
 #
 # Copyright:: 2019, The Authors, All Rights Reserved.
