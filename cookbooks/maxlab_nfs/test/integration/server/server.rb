@@ -1,6 +1,6 @@
 # # encoding: utf-8
 
-# Inspec test for recipe maxlab_nfs::deploy
+# Inspec test for recipe maxlab_nfs::server
 
 #
 # Test real node configurations to ensure that nfs is deployed
