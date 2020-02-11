@@ -1,1 +1,1 @@
-Deploy a basic, internal only DNS server for homelab network 'maxlab'.
+Deploy PXE boot files (syslinux pxe menus and Linux kickstart install files).

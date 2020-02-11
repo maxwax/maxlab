@@ -1,6 +1,6 @@
 # Description
 
-Deploys infrastructure files for PXE booting
+Deploy PXE boot files (syslinux pxe menus and Linux kickstart install files).
 
 # Requirements
 
@@ -13,12 +13,10 @@ Deploys infrastructure files for PXE booting
 
 * redhat (>= 7.0)
 * centos (>= 7.0)
-* oracle (>= 7.0)
-* fedora (>= 30.0)
 
 ## Cookbooks:
 
-*No dependencies defined*
+* maxlab_tftp_server
 
 # Attributes
 
@@ -26,17 +24,25 @@ Deploys infrastructure files for PXE booting
 
 # Recipes
 
-* maxlab_pxe::default
+* [maxlab_pxe::default](#maxlab_pxedefault) - This recipe performs no actions.
 * [maxlab_pxe::deploy](#maxlab_pxedeploy) - Deploy PXE files: Kickstart files for Linux distributions, PXE menus for all.
+* [maxlab_pxe::images](#maxlab_pxeimages)
+* [maxlab_pxe::syslinux](#maxlab_pxesyslinux)
+
+## maxlab_pxe::default
+
+This recipe performs no actions.
 
 ## maxlab_pxe::deploy
 
 Deploy PXE files: Kickstart files for Linux distributions, PXE menus for all.
 
-# License and Maintainer
+## maxlab_pxe::images
 
-Maintainer:: Maxwell Spangler (<maxcode@maxwellspangler.com>)
+Deploy Linux Distribution images (kernel and initrd files) to support PXE boots
 
+## maxlab_pxe::syslinux
 
+Deploy syslinux package PXE files used to support netbooting / PXE menus
 
-License:: All Rights Reserved
+Maxwell Spangler maxcode@maxwellspangler.com

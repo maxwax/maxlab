@@ -1,5 +1,10 @@
 # maxlab_pxe CHANGELOG
 
+# 1.1.2 Updated docs
+
+* Updated faulty overview.md copy & pasted from DNS cookbook.
+* Re-generated README.md main doc file.
+
 # 1.1.1 cmp instead of eq
 
 * Modify two tests to use 'cmp' operator instead of 'eq'
