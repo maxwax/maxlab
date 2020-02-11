@@ -24,7 +24,7 @@ This file is used to list changes made in each version of the maxlab_chrony cook
 # 1.2.0
 
 * Major rework: Use node attributes instead of data bag values as primary source of configuring chrony client or server instances.  Re-aligning to a more standardized practice.
-* Removing references to maxlab-chrony with maxlab_chrony (underscore). Change from original name now complete.
+* Removing references to maxlab - chrony with maxlab_chrony (underscore). Change from original name now complete.
 * Enable use of Test Kitchen for development. No tests yet.
 * Use role node attribute instance_chrony_config instead of chrony_config to avoid confusion with variable chrony_config within the recipe.
 
