@@ -1,5 +1,5 @@
 #
-# Cookbook:: maxlab-dhcp
+# Cookbook:: maxlab_dhcp
 # Spec:: default
 #
 # Copyright:: 2019, The Authors, All Rights Reserved.
