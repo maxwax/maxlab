@@ -36,8 +36,12 @@ This could be automated, but since I'm sharing cookbooks on git, I'll keep this 
 
 # Recipes
 
-* maxlab_samba::default
+* [maxlab_samba::default](#maxlab_sambadefault) - This recipe performs no actions.
 * [maxlab_samba::server](#maxlab_sambaserver) - Deloy a basic SAMBA file server.
+
+## maxlab_samba::default
+
+This recipe performs no actions.
 
 ## maxlab_samba::server
 
