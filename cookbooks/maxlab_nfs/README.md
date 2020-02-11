@@ -29,15 +29,15 @@ This cookbook deploys NFS server or client services on maxlab nodes.
 
 # Recipes
 
+* [maxlab_nfs::default](#maxlab_nfsdefault) - This recipe performs no actions.
 * [maxlab_nfs::server](#maxlab_nfsserver) - Deploy a very basic NFS server that support NFSv3 or NFSv4 services.
+
+## maxlab_nfs::default
+
+This recipe performs no actions.
 
 ## maxlab_nfs::server
 
 Deploy a very basic NFS server that support NFSv3 or NFSv4 services.
-
-A Redhat based Linux distribution using firewall-cmd such as
-* Red Hat Linux 7.x or 8.x
-* CentOS 7.x or 8.x
-
 
 Maxwell Spangler maxcode@maxwellspangler.com
