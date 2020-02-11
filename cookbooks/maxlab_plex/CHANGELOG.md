@@ -2,6 +2,10 @@
 
 Maintain a Plex media server in the maxlab environment.
 
+# 1.1.1
+
+* Removed unused Policyfile.rb
+
 # 1.1.0
 
 * Enable Test Kitchen development
