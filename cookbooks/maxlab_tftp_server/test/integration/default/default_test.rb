@@ -1,6 +1,6 @@
 # # encoding: utf-8
 
-# Inspec test for recipe maxlab_Stftp_server::default
+# Inspec test for recipe maxlab_tftp_server::default
 
 # The Inspec reference, with examples and extensive documentation, can be
 # found at http://inspec.io/docs/reference/resources/
