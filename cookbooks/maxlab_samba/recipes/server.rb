@@ -101,13 +101,9 @@ end
 
 #---
 
-# If we are running in a real node, and not in a test kitchen VM, then
-# start the service.  Real node configs won't start with vagrant networking
-if node['instance_config_samba']['instance_type'] == "testkitchen"
-  node['samba']['services'].each do |service_name|
-    service service_name do
-      action [ :enable, :start, :reload ]
-    end
+node['samba']['services'].each do |service_name|
+  service service_name do
+    action [ :enable, :start, :reload ]
   end
 end
 
