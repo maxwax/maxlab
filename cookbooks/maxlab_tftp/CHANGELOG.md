@@ -1,4 +1,10 @@
-# maxlab_tftp_server CHANGELOG
+# maxlab_tftp CHANGELOG
+
+# 1.3.0
+
+* Renaming references to tftp_server as tftp for consistency with other cookbooks and services.
+* Data bag renamed from config_tftp_server to config_tftp.
+* deploy.rb variables: config_tftp_server to config_tftp.
 
 # 1.2.0
 

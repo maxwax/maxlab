@@ -22,4 +22,4 @@ suites:
         - test/integration/default
     attributes:
     provisioner:
-       policyfile: ../../policyfiles/tk_maxlab_tftp_server.rb
+       policyfile: ../../policyfiles/tk_mylab_tftp.rb

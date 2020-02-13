@@ -1,9 +1,9 @@
-name 'mylab_tftp_server'
+name 'mylab_tftp'
 maintainer 'Maxwell Spangler'
 maintainer_email 'maxcode@maxwellspangler.com'
 license 'All Rights Reserved'
-description 'Experimental wrapper cookbook to maxlab_tftp_server'
-version '1.0.0'
+description 'Experimental wrapper cookbook to maxlab_tftp'
+version '1.1.0'
 chef_version '>= 14.0'
 
 # The `issues_url` points to the location where issues for this cookbook are
@@ -22,4 +22,4 @@ supports 'redhat', '>= 7.0'
 supports 'centos', '>= 7.0'
 
 depends 'maxlab_firewall'
-depends 'maxlab_tftp_server'
+depends 'maxlab_tftp'

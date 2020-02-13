@@ -25,14 +25,14 @@ Deploys a TFTP server for the maxlab home lab
 
 # Recipes
 
-* [maxlab_tftp_server::default](#maxlab_tftp_serverdefault) - The default recipe performs no actions.
-* [maxlab_tftp_server::deploy](#maxlab_tftp_serverdeploy) - Deploy a TFTP server instance to support PXE netbooting of VM nodes.
+* [maxlab_tftp::default](#maxlab_tftpdefault) - The default recipe performs no actions.
+* [maxlab_tftp::deploy](#maxlab_tftpdeploy) - Deploy a TFTP server instance to support PXE netbooting of VM nodes.
 
-## maxlab_tftp_server::default
+## maxlab_tftp::default
 
 The default recipe performs no actions.
 
-## maxlab_tftp_server::deploy
+## maxlab_tftp::deploy
 
 Deploy a TFTP server instance to support PXE netbooting of VM nodes.
 

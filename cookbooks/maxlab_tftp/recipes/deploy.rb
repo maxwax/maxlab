@@ -10,7 +10,7 @@ Deploy a TFTP server instance to support PXE netbooting of VM nodes.
 #>
 =end
 
-config_tftp_server = data_bag_item('config_tftp_server', node['instance_config_tftp_server']['instance'])
+config_tftp = data_bag_item('config_tftp', node['instance_config_tftp']['instance'])
 
 %W[ tftp tftp-server xinetd ].each do |pkg|
 
@@ -22,18 +22,18 @@ end
 template '/etc/xinetd.d/tftp-server' do
   source 'tftp-server.erb'
 
-  user config_tftp_server['user']
-  group config_tftp_server['group']
+  user config_tftp['user']
+  group config_tftp['group']
   mode '0700'
   action :create
 
 end
 
 # Normally created by rpm tftp-server but not re-created if the dir is removed
+directory config_tftp['pxelinux_cfg_root'] do
 # and the package is already installed
-directory config_tftp_server['pxelinux_cfg_root'] do
-  user config_tftp_server['user']
-  group config_tftp_server['group']
+  user config_tftp['user']
+  group config_tftp['group']
   mode '0755'
   action :create
 end
@@ -46,8 +46,8 @@ service_zone = node['maxlab_firewall']['default_interface_zone']
 
 # Add the service to this node's firewalld service requirements
 # Ex: Append 'dns' to 'ssh http https' (list of already allowed services)
-if config_tftp_server['firewall']['firewalld'].key?('services')
-  config_tftp_server['firewall']['firewalld']['services'].each do |service_string|
+if config_tftp['firewall']['firewalld'].key?('services')
+  config_tftp['firewall']['firewalld']['services'].each do |service_string|
 
     if not node['maxlab_firewall']['zones'][service_zone]['services'].include? service_string
       node.normal['maxlab_firewall']['zones'][service_zone]['services'] << service_string
@@ -57,8 +57,8 @@ if config_tftp_server['firewall']['firewalld'].key?('services')
 end
 
 # Append individual port definitions
-if config_tftp_server['firewall']['firewalld'].key?('ports')
-  config_tftp_server['firewall']['firewalld']['ports'].each do |port_string|
+if config_tftp['firewall']['firewalld'].key?('ports')
+  config_tftp['firewall']['firewalld']['ports'].each do |port_string|
 
     if not node['maxlab_firewall']['zones'][service_zone]['ports'].include? port_string
       node.normal['maxlab_firewall']['zones'][service_zone]['ports'] << port_string
@@ -68,8 +68,8 @@ if config_tftp_server['firewall']['firewalld'].key?('ports')
 end
 
 # Append individual sources definitions
-if config_tftp_server['firewall']['firewalld'].key?('sources')
-  config_tftp_server['firewall']['firewalld']['sources'].each do |source_string|
+if config_tftp['firewall']['firewalld'].key?('sources')
+  config_tftp['firewall']['firewalld']['sources'].each do |source_string|
 
     if not node['maxlab_firewall']['zones'][source_zone]['sources'].include? source_string
       node.normal['maxlab_firewall']['zones'][source_zone]['sources'] << source_string

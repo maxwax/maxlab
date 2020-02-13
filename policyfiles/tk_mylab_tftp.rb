@@ -1,20 +1,20 @@
 # Policyfile.rb - Describe how you want Chef Infra server to build your system.
 
-name 'tk_mylab_tftp_server'
+name 'tk_mylab_tftp'
 
 default_source :supermarket
 
 run_list "recipe[maxlab_firewall::base_firewalld]",
-         "recipe[mylab_tftp_server::deploy]"
+         "recipe[mylab_tftp::deploy]"
          "recipe[maxlab_firewall::update_firewalld]"
 
-cookbook 'maxlab_tftp_server', path: '../cookbooks/maxlab_tftp_server'
-cookbook 'mylab_tftp_server', path: '../cookbooks/mylab_tftp_server'
+cookbook 'maxlab_tftp', path: '../cookbooks/maxlab_tftp'
+cookbook 'mylab_tftp', path: '../cookbooks/mylab_tftp'
 cookbook 'maxlab_firewall', path: '../cookbooks/maxlab_firewall'
 
 default['config_firewall']['base_config'] = 'base_firewall.maxlab.dmz'
 
-default['instance_config_tftp_server']['instance'] = 'tftp_server_maxlab'
+default['instance_config_tftp']['instance'] = 'tftp_maxlab'
 
 # Previously environment variables
 default['env']['maxlab']['repo_url']          = "http://repo.maxlab"

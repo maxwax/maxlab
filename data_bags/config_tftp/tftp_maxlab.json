@@ -1,5 +1,5 @@
 {
-  "id": "tftp_server_maxlab",
+  "id": "tftp_maxlab",
   "doc": "Configuration for TFTP server supporting PXE in lab 'maxlab",
   "user": "root",
   "group": "root",
