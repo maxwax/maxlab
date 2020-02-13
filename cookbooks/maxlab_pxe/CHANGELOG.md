@@ -1,5 +1,10 @@
 # maxlab_pxe CHANGELOG
 
+# 1.1.3
+
+* Replace references to tftp_server with 'tftp'.
+* Depend on maxlab_tftp not maxlab_tftp_server
+
 # 1.1.2 Updated docs
 
 * Updated faulty overview.md copy & pasted from DNS cookbook.

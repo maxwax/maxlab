@@ -5,7 +5,7 @@ name 'tk_mylab_pxe'
 default_source :supermarket
 
 run_list "recipe[maxlab_firewall::base_firewalld]",
-         "recipe[maxlab_tftp_server::deploy]",
+         "recipe[maxlab_tftp::deploy]",
          "recipe[maxlab_pxe::syslinux]",
          "recipe[mylab_pxe::deploy]",
          "recipe[maxlab_pxe::images]",
@@ -13,7 +13,7 @@ run_list "recipe[maxlab_firewall::base_firewalld]",
 
 cookbook 'maxlab_pxe', path: '../cookbooks/maxlab_pxe'
 cookbook 'mylab_pxe', path: '../cookbooks/mylab_pxe'
-cookbook 'maxlab_tftp_server', path: '../cookbooks/maxlab_tftp_server'
+cookbook 'maxlab_tftp', path: '../cookbooks/maxlab_tftp_server'
 cookbook 'maxlab_firewall', path: '../cookbooks/maxlab_firewall'
 
 default['config_firewall']['base_config'] = 'base_firewall.maxlab.dmz'

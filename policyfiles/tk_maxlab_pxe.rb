@@ -5,21 +5,21 @@ name 'tk_maxlab_pxe'
 default_source :supermarket
 
 run_list "recipe[maxlab_firewall::base_firewalld]",
-         "recipe[maxlab_tftp_server::deploy]",
+         "recipe[maxlab_tftp::deploy]",
          "recipe[maxlab_pxe::syslinux]",
          "recipe[maxlab_pxe::deploy]",
          "recipe[maxlab_pxe::images]",
          "recipe[maxlab_firewall::update_firewalld]"
 
 cookbook 'maxlab_pxe', path: '../cookbooks/maxlab_pxe'
-cookbook 'maxlab_tftp_server', path: '../cookbooks/maxlab_tftp_server'
+cookbook 'maxlab_tftp', path: '../cookbooks/maxlab_tftp'
 cookbook 'maxlab_firewall', path: '../cookbooks/maxlab_firewall'
 
 default['config_firewall']['base_config'] = 'base_firewall.maxlab.dmz'
 
 default['instance_config_pxe']['instance'] = 'pxe_server.maxlab'
 
-default['instance_config_tftp_server']['instance'] = 'tftp_server_maxlab'
+default['instance_config_tftp']['instance'] = 'tftp_maxlab'
 
 # Previously environment variables
 default['env']['maxlab']['repo_url']          = "http://repo.maxlab"
