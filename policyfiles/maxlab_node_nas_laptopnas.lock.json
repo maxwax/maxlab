@@ -1,0 +1,284 @@
+{
+  "revision_id": "658dfa8083273a143ff87eee4408ca6ef6ad224710ba48796b05656504a29c43",
+  "name": "maxlab_node_nas_laptopnas",
+  "run_list": [
+    "recipe[maxlab_firewall::base_firewalld]",
+    "recipe[maxlab_base::deploy]",
+    "recipe[maxlab_users::general]",
+    "recipe[maxlab_smartd::deploy]",
+    "recipe[maxlab_chrony::deploy]",
+    "recipe[maxlab_nfs::server]",
+    "recipe[maxlab_samba::server]",
+    "recipe[maxlab_postfix::deploy]",
+    "recipe[maxlab_firewall::update_firewalld]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "maxlab_base": {
+      "version": "1.3.0",
+      "identifier": "0f61b7568a519756070cdf7175e7c34b28dfa07b",
+      "dotted_decimal_identifier": "4329564709474711.24214599866873319.214727575707771",
+      "source": "../cookbooks/maxlab_base",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@github.com:maxwax/maxlab.git",
+        "revision": "71ccae1ddfc29732959f826b53eaaa8a647a9bf7",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/maxlab_base"
+      }
+    },
+    "maxlab_chrony": {
+      "version": "1.4.1",
+      "identifier": "8c82df73c04a310756e09a1edef6d096afe352ed",
+      "dotted_decimal_identifier": "39550392970791473.2065847495352054.229345614582509",
+      "source": "../cookbooks/maxlab_chrony",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@github.com:maxwax/maxlab.git",
+        "revision": "71ccae1ddfc29732959f826b53eaaa8a647a9bf7",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/maxlab_chrony"
+      }
+    },
+    "maxlab_firewall": {
+      "version": "1.2.0",
+      "identifier": "7bfa6a6ade995083a1a2da6a58fc1b3163571be1",
+      "dotted_decimal_identifier": "34896757101861200.37050942770272508.29898934000609",
+      "source": "../cookbooks/maxlab_firewall",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@github.com:maxwax/maxlab.git",
+        "revision": "71ccae1ddfc29732959f826b53eaaa8a647a9bf7",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/maxlab_firewall"
+      }
+    },
+    "maxlab_nfs": {
+      "version": "1.2.0",
+      "identifier": "3813038760e8b143ea03cd6de8788c41689df2a1",
+      "dotted_decimal_identifier": "15783504572901553.19116125491947640.154212555944609",
+      "source": "../cookbooks/maxlab_nfs",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@github.com:maxwax/maxlab.git",
+        "revision": "71ccae1ddfc29732959f826b53eaaa8a647a9bf7",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/maxlab_nfs"
+      }
+    },
+    "maxlab_postfix": {
+      "version": "1.1.0",
+      "identifier": "9ba8a87c229020ee8d9bf43c6e5832009194bb9e",
+      "dotted_decimal_identifier": "43814062980763680.67146745414184536.54978023832478",
+      "source": "../cookbooks/maxlab_postfix",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@github.com:maxwax/maxlab.git",
+        "revision": "71ccae1ddfc29732959f826b53eaaa8a647a9bf7",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/maxlab_postfix"
+      }
+    },
+    "maxlab_samba": {
+      "version": "1.2.2",
+      "identifier": "525f41025bcb8a32f2eb05ec24154c70a994e00a",
+      "dotted_decimal_identifier": "23185680907357066.14340840066130965.84046765154314",
+      "source": "../cookbooks/maxlab_samba",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@github.com:maxwax/maxlab.git",
+        "revision": "71ccae1ddfc29732959f826b53eaaa8a647a9bf7",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/maxlab_samba"
+      }
+    },
+    "maxlab_smartd": {
+      "version": "1.2.0",
+      "identifier": "3e9d7784df9db8df07963670da935b7362daa134",
+      "dotted_decimal_identifier": "17624585211977144.62777261546330771.100551137861940",
+      "source": "../cookbooks/maxlab_smartd",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@github.com:maxwax/maxlab.git",
+        "revision": "71ccae1ddfc29732959f826b53eaaa8a647a9bf7",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/maxlab_smartd"
+      }
+    },
+    "maxlab_users": {
+      "version": "1.2.0",
+      "identifier": "055abf71ee4527b89d38ea67b1758b9be583fbe9",
+      "dotted_decimal_identifier": "1507153180247335.51964263491154293.153501686823913",
+      "source": "../cookbooks/maxlab_users",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@github.com:maxwax/maxlab.git",
+        "revision": "71ccae1ddfc29732959f826b53eaaa8a647a9bf7",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/maxlab_users"
+      }
+    }
+  },
+  "default_attributes": {
+    "config_firewall": {
+      "base_config": "base_firewall.maxlab.dmz"
+    },
+    "instance_config_chrony": {
+      "instance": "chrony.maxlab",
+      "instance_type": "client"
+    },
+    "instance_config_nfs": {
+      "instance": "maxlab_nfs_laptopnas"
+    },
+    "instance_config_samba": {
+      "instance": "maxlab_samba_laptopnas"
+    },
+    "instance_config_postfix": {
+      "instance": "maxlab_postfix"
+    },
+    "env": {
+      "maxlab": {
+        "repo_url": "http://repo.maxlab",
+        "dist_url": "http://repo.maxlab/dist",
+        "iso_url": "http://repo.maxlab/iso",
+        "files_url": "http://repo.maxlab/files",
+        "typefaces_url": "http://repo.maxlab/files/typefaces",
+        "chef_url": "https://chef.maxlab/organizations/maxlab",
+        "tftp_url": "http://repo.maxlab",
+        "upstream_ntp": "2.centos.pool.ntp.org",
+        "metric_submit_vip": "http://metric_submit.maxlab",
+        "metric_query_vip": "http://metric_query.maxlab",
+        "graphite_vip": "http://grafana.maxlab"
+      }
+    }
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "maxlab_base",
+        ">= 0.0.0"
+      ],
+      [
+        "maxlab_chrony",
+        ">= 0.0.0"
+      ],
+      [
+        "maxlab_firewall",
+        ">= 0.0.0"
+      ],
+      [
+        "maxlab_nfs",
+        ">= 0.0.0"
+      ],
+      [
+        "maxlab_postfix",
+        ">= 0.0.0"
+      ],
+      [
+        "maxlab_samba",
+        ">= 0.0.0"
+      ],
+      [
+        "maxlab_smartd",
+        ">= 0.0.0"
+      ],
+      [
+        "maxlab_users",
+        ">= 0.0.0"
+      ]
+    ],
+    "dependencies": {
+      "maxlab_base (1.3.0)": [
+
+      ],
+      "maxlab_chrony (1.4.1)": [
+        [
+          "maxlab_firewall",
+          ">= 0.0.0"
+        ]
+      ],
+      "maxlab_firewall (1.2.0)": [
+
+      ],
+      "maxlab_nfs (1.2.0)": [
+        [
+          "maxlab_firewall",
+          ">= 0.0.0"
+        ]
+      ],
+      "maxlab_postfix (1.1.0)": [
+
+      ],
+      "maxlab_samba (1.2.2)": [
+
+      ],
+      "maxlab_smartd (1.2.0)": [
+
+      ],
+      "maxlab_users (1.2.0)": [
+
+      ]
+    }
+  }
+}
