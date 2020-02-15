@@ -25,6 +25,18 @@ describe file('/etc/postfix/main.cf') do
   its('group') { should cmp 'root' }
 end
 
+describe file('/etc/postfix/sasl_passwd') do
+  it { should exist }
+  its('owner') { should cmp 'root' }
+  its('group') { should cmp 'root' }
+end
+
+describe file('/etc/postfix/sasl_passwd.db') do
+  it { should exist }
+  its('owner') { should cmp 'root' }
+  its('group') { should cmp 'root' }
+end
+
 describe service('postfix') do
   it { should be_installed }
   it { should be_enabled }

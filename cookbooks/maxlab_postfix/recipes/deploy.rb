@@ -10,9 +10,30 @@ Deploy a basic maxlab internal postfix email relay.
 #>
 =end
 
+#
+# Use chef-vault to load encrypted sasl_passwd config
+#
+# When in Test Kitchen, chef_vault_item will fall back to raw, local
+# unencrypted data bag files not included in git
+#
+
+chef_gem 'chef-vault' do
+  compile_time true if respond_to?(:compile_time)
+end
+
+include_recipe 'chef-vault'
+
+sasl_config = chef_vault_item('secret_postfix', 'secret_maxlab_relay')
+
+#
+# Required packages
+#
+
 package node['postfix']['packages'] do
   action :install
 end
+
+# Configure it now that its installed
 
 config_id = node['instance_config_postfix']['instance']
 
@@ -54,6 +75,39 @@ template '/etc/postfix/main.cf' do
   })
 
   action :create
+end
+
+#
+# This the only use of secret values
+#
+
+template '/etc/postfix/sasl_passwd' do
+  source 'sasl_passwd.erb'
+
+  owner 'root'
+  group 'root'
+  mode '0644'
+
+  variables({
+    server_name: sasl_config['server_name'],
+    server_port: sasl_config['server_port'],
+    username:    sasl_config['username'],
+    password:    sasl_config['password']
+  })
+end
+
+#
+# Execute postmap to create a .db file with sasl_passwd values
+#
+
+execute 'postmap-saslpasswd' do
+  command 'postmap /etc/postfix/sasl_passwd'
+
+  cwd '/etc/postfix'
+  user 'root'
+  group 'root'
+
+  action :run
 end
 
 service 'postfix' do
