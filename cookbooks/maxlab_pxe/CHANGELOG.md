@@ -1,5 +1,14 @@
 # maxlab_pxe CHANGELOG
 
+# 1.2.1
+
+* Removed chef-vault related debugging statements
+
+# 1.2.0
+
+* Use chef-vault to include root password in kickstart file
+* kitchen.yml: When testing with test kitchen, use unencrypted, non-git local data bag files.
+
 # 1.1.3
 
 * Replace references to tftp_server with 'tftp'.

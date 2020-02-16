@@ -67,6 +67,8 @@ firewall <%= @ksconfig['selinux']['options'] %>
 # a single attempt to perform a network/PXE boot
 <%= @ksconfig['final_action'] %>
 
+rootpw --iscrypted <%= @rootpw %>
+
 <% @ksconfig['misc_options'].each do |opt| %>
 <%= opt %>
 <% end %>

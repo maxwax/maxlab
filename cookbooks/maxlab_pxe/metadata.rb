@@ -4,7 +4,7 @@ maintainer_email 'maxcode@maxwellspangler.com'
 license 'All Rights Reserved'
 description 'Deploys infrastructure files for PXE booting'
 long_description 'Deploys infrastructure files for PXE booting'
-version '1.1.3'
+version '1.2.1'
 chef_version '>= 13.0'
 
 # The `issues_url` points to the location where issues for this cookbook are
@@ -23,3 +23,4 @@ supports 'redhat', '>= 7.0'
 supports 'centos', '>= 7.0'
 
 depends 'maxlab_tftp'
+depends 'chef-vault'

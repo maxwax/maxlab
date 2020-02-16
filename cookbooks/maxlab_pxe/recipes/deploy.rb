@@ -10,6 +10,25 @@ Deploy PXE files: Kickstart files for Linux distributions, PXE menus for all.
 #>
 =end
 
+#
+# Use chef-vault to load encrypted sasl_passwd config
+#
+# When in Test Kitchen, chef_vault_item will fall back to raw, local
+# unencrypted data bag files not included in git
+#
+
+chef_gem 'chef-vault' do
+  compile_time true if respond_to?(:compile_time)
+end
+
+include_recipe 'chef-vault'
+
+rootpw = ChefVault::Item.load('secret_pxe', 'secret_maxlab_pxe')['password']
+
+#
+# PXE configuration
+#
+
 # High level scoping: We construct this while building kickstart files
 # then use it when building PXE menu files
 pxe_menu = {}
@@ -100,36 +119,38 @@ config_pxe['kickstart_configs'].each do |dist_id|
         dist_url = "#{node['env']['maxlab']['dist_url']}/#{dist_id}/#{ksconfig['isodir']}"
 
         # Deploy the stub file
-        template stub_file do
+#        template stub_file do
+        template kickstart_file do
           source "kickstart/#{ksconfig['template']}"
           owner config_pxe['user']
           group config_pxe['group']
           mode 0755
           variables(
             ksconfig: ksconfig,
-            subnet_info: subnet_info
+            subnet_info: subnet_info,
+            rootpw: rootpw
           )
         end
 
         # Copy the stub to the kickstart file
-        execute "copy-ks-file" do
-          command "cp -p #{stub_file} #{kickstart_file}"
-          action :run
-        end
+        # execute "copy-ks-file" do
+        #   command "cp -p #{stub_file} #{kickstart_file}"
+        #   action :run
+        # end
 
         # Append a file to the kickstart file containing root password directive
         # This file is deployed manually to avoid Chef/Github inclusion
-        ksconfig['password_file'].each do |pfile|
-
-          # The password file contains data to be appended to the kickstart file
-          password_file = "#{local_passwords_dist_dir}/#{pfile}"
-
-          execute "include-file-#{pfile}" do
-            command "if [[ -f #{password_file} ]]; then cat #{password_file} >> #{kickstart_file}; fi"
-            action :run
-          end
-
-        end
+        # ksconfig['password_file'].each do |pfile|
+        #
+        #   # The password file contains data to be appended to the kickstart file
+        #   password_file = "#{local_passwords_dist_dir}/#{pfile}"
+        #
+        #   execute "include-file-#{pfile}" do
+        #     command "if [[ -f #{password_file} ]]; then cat #{password_file} >> #{kickstart_file}; fi"
+        #     action :run
+        #   end
+        #
+        # end
 
         # For each kickstart 'post' script, deploy it then append it to ks file
         ksconfig['post_scripts'].each do |script_name, script_cfg|
