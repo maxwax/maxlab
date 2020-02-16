@@ -34,8 +34,16 @@ end
 
 subnets = {}
 
+# Hack: drop this in the config file header.
+# Only works if dhcp serves only one network, one subnet.
+# Fix later. 2020-02-15 maxwell
+config_header = ""
+
 # Iterate over each network supported by this DHCP server
 config_dhcp['serve_dhcp_for'].each do |network_id, subnet_id|
+
+  # Stamp the config file with this in its header
+  config_header = "network #{network_id}, subnet #{subnet_id}"
 
   # Load data bag configuration for the network (subnets, netmasks, etc)
   config_network = data_bag_item('config_network', network_id)
@@ -97,7 +105,8 @@ template '/etc/dhcp/dhcpd.conf' do
   variables (
     {
       config_dhcp: config_dhcp,
-      subnets: subnets
+      subnets: subnets,
+      config_header: config_header
     }
   )
 end

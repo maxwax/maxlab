@@ -2,6 +2,10 @@
 
 Deploy a DHCP server
 
+# 1.2.2
+
+* deploy.rb: Stamp top of dhcpd.conf file with network and subnet name, replacing old data bag name which is not used anymore.
+
 # 1.2.1
 
 * Renaming all test kitchen policyfiles as tk_<pfile_name>
