@@ -32,6 +32,8 @@ config_nfs_server['cfg']['exports'].sort.each do | mount_point, mount_details|
       group mount_details['group']
       mode mount_details['mode']
 
+      recursive false
+
       action :create
     end
 

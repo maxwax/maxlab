@@ -1,5 +1,9 @@
 # maxlab_nfs CHANGELOG
 
+# 1.2.1
+
+* Do not recursively create NFS mount directories
+
 # 1.2.0
 
 * Enable Test Kitchen development
