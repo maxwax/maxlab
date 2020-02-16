@@ -9,7 +9,9 @@ run_list "recipe[maxlab_base::deploy]",
          "recipe[maxlab_users::general]",
          "recipe[maxlab_nginx_repo::deploy]",
          "recipe[maxlab_tftp::deploy]",
+         "recipe[maxlab_pxe::syslinux]",
          "recipe[maxlab_pxe::deploy]",
+         "recipe[maxlab_pxe::images]",
          "recipe[maxlab_chrony::deploy]",
          "recipe[maxlab_postfix::deploy]",
          "recipe[maxlab_firewall::update_firewalld]"
@@ -22,6 +24,8 @@ cookbook 'maxlab_nginx_repo', path: '../cookbooks/maxlab_nginx_repo'
 cookbook 'maxlab_pxe',        path: '../cookbooks/maxlab_pxe'
 cookbook 'maxlab_chrony',     path: '../cookbooks/maxlab_chrony'
 cookbook 'maxlab_postfix',    path: '../cookbooks/maxlab_postfix'
+
+cookbook 'chef-vault'
 
 # From role base_firewall_maxlab_nas
 default['config_firewall']['base_config'] = 'base_firewall.maxlab.dmz'
