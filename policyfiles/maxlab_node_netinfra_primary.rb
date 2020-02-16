@@ -21,6 +21,8 @@ cookbook 'maxlab_dhcp',     path: '../cookbooks/maxlab_dhcp'
 cookbook 'maxlab_chrony',   path: '../cookbooks/maxlab_chrony'
 cookbook 'maxlab_postfix',  path: '../cookbooks/maxlab_postfix'
 
+cookbook 'chef-vault'
+
 # From role base_firewall_maxlab_nas
 default['config_firewall']['base_config'] = 'base_firewall.maxlab.dmz'
 
@@ -32,7 +34,7 @@ default['instance_config_chrony']['instance_type'] = 'server'
 default['config_bind']['instance'] = 'dns_server.maxlab'
 
 # From role service_dhcp_instance_core
-#default['config_dhcp']['instance'] = 'dhcp_server.core.maxlab'
+default['dhcp']['serve_dhcp_for']['maxlab'] = "192.168.9.0"
 default['dhcp']['instance_config_dhcp']['primary'] = true
 
 # From role service_postfix_instance_maxlab_postfix
