@@ -27,6 +27,7 @@ exports_lines = {}
 config_nfs_server['cfg']['exports'].sort.each do | mount_point, mount_details|
 
   if mount_details['enabled'] == true
+
     directory mount_point do
       owner mount_details['owner']
       group mount_details['group']
@@ -35,6 +36,14 @@ config_nfs_server['cfg']['exports'].sort.each do | mount_point, mount_details|
       recursive false
 
       action :create
+
+      # not_if is crtiical.
+      # Attempting to execute this directory resource on an existing
+      # directory may result in an SELinux 'restorecon -R' being
+      # issued to restore the context of MANY files mounted at
+      # an existing filesystem mount point.
+
+      not_if { File.directory?(mount_point) }
     end
 
     export_text = "#{mount_point} "

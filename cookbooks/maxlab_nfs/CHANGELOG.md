@@ -1,5 +1,9 @@
 # maxlab_nfs CHANGELOG
 
+# 1.2.2
+
+* Added not_if guard to NOT create an NFS mount point if it already exists.  Found that Chef trying to manage an NFS directory on a mounted, existing filesystem may attempt to reset the SELinux file context of all files on each mounted filesystem. Hoping that this means: Make the directory if it does NOT exist, otherwise, don't touch it.
+
 # 1.2.1
 
 * Do not recursively create NFS mount directories
