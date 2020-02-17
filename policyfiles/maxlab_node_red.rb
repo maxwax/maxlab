@@ -20,6 +20,8 @@ cookbook 'maxlab_nfs',      path: '../cookbooks/maxlab_nfs'
 cookbook 'maxlab_samba',    path: '../cookbooks/maxlab_samba'
 cookbook 'maxlab_postfix',  path: '../cookbooks/maxlab_postfix'
 
+cookbook 'chef-vault'
+
 # From role base_firewall_maxlab_nas
 default['config_firewall']['base_config'] = 'base_firewall.maxlab.dmz'
 

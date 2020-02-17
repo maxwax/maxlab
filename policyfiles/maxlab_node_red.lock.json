@@ -1,5 +1,5 @@
 {
-  "revision_id": "1685a2190578d78ee1dec6d852f9009f511eacf1349ad931a780a629d60f84a1",
+  "revision_id": "27f8f776392c1507df419d9925d51649dce3f31d5d399450b76c878950640280",
   "name": "maxlab_node_red",
   "run_list": [
     "recipe[maxlab_firewall::base_firewalld]",
@@ -14,6 +14,17 @@
 
   ],
   "cookbook_locks": {
+    "chef-vault": {
+      "version": "4.0.0",
+      "identifier": "7b481b1b8316a9fd44020508137d16f8599b3735",
+      "dotted_decimal_identifier": "34700703398303401.71287944572834685.25255911044917",
+      "cache_key": "chef-vault-4.0.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/chef-vault/versions/4.0.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/chef-vault/versions/4.0.0/download",
+        "version": "4.0.0"
+      }
+    },
     "maxlab_base": {
       "version": "1.3.0",
       "identifier": "0f61b7568a519756070cdf7175e7c34b28dfa07b",
@@ -23,7 +34,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "71ccae1ddfc29732959f826b53eaaa8a647a9bf7",
+        "revision": "a308afb19267bec4c40a6d2ff71ee8b0d17e6fd5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -43,7 +54,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "71ccae1ddfc29732959f826b53eaaa8a647a9bf7",
+        "revision": "a308afb19267bec4c40a6d2ff71ee8b0d17e6fd5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -63,7 +74,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "71ccae1ddfc29732959f826b53eaaa8a647a9bf7",
+        "revision": "a308afb19267bec4c40a6d2ff71ee8b0d17e6fd5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -83,7 +94,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "71ccae1ddfc29732959f826b53eaaa8a647a9bf7",
+        "revision": "a308afb19267bec4c40a6d2ff71ee8b0d17e6fd5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -95,15 +106,15 @@
       }
     },
     "maxlab_postfix": {
-      "version": "1.1.0",
-      "identifier": "9ba8a87c229020ee8d9bf43c6e5832009194bb9e",
-      "dotted_decimal_identifier": "43814062980763680.67146745414184536.54978023832478",
+      "version": "1.2.0",
+      "identifier": "c945662e483d2387e8e4d6d35b1af716f144d00c",
+      "dotted_decimal_identifier": "56652775484308771.38255191410301722.271677909159948",
       "source": "../cookbooks/maxlab_postfix",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "71ccae1ddfc29732959f826b53eaaa8a647a9bf7",
+        "revision": "a308afb19267bec4c40a6d2ff71ee8b0d17e6fd5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -123,7 +134,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "71ccae1ddfc29732959f826b53eaaa8a647a9bf7",
+        "revision": "a308afb19267bec4c40a6d2ff71ee8b0d17e6fd5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -143,7 +154,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "71ccae1ddfc29732959f826b53eaaa8a647a9bf7",
+        "revision": "a308afb19267bec4c40a6d2ff71ee8b0d17e6fd5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -195,6 +206,10 @@
   "solution_dependencies": {
     "Policyfile": [
       [
+        "chef-vault",
+        "= 4.0.0"
+      ],
+      [
         "maxlab_base",
         ">= 0.0.0"
       ],
@@ -224,6 +239,9 @@
       ]
     ],
     "dependencies": {
+      "chef-vault (4.0.0)": [
+
+      ],
       "maxlab_base (1.3.0)": [
 
       ],
@@ -242,8 +260,11 @@
           ">= 0.0.0"
         ]
       ],
-      "maxlab_postfix (1.1.0)": [
-
+      "maxlab_postfix (1.2.0)": [
+        [
+          "chef-vault",
+          ">= 0.0.0"
+        ]
       ],
       "maxlab_samba (1.2.2)": [
 
