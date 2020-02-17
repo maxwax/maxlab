@@ -1,5 +1,9 @@
 # maxlab_nfs CHANGELOG
 
+# 1.2.3
+
+* For filesystems defined in the config_nfs data bag but disabled, deploy them in /etc/exports commented out. This will let me manually uncomment them to use an external USB drive without the overhead of Chef.
+
 # 1.2.2
 
 * Added not_if guard to NOT create an NFS mount point if it already exists.  Found that Chef trying to manage an NFS directory on a mounted, existing filesystem may attempt to reset the SELinux file context of all files on each mounted filesystem. Hoping that this means: Make the directory if it does NOT exist, otherwise, don't touch it.

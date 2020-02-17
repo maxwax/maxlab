@@ -26,54 +26,55 @@ exports_lines = {}
 # ex: /srv/mount_point_dir hostname1(rw,no_root_squash) hostname2(rw)
 config_nfs_server['cfg']['exports'].sort.each do | mount_point, mount_details|
 
+  directory mount_point do
+    owner mount_details['owner']
+    group mount_details['group']
+    mode mount_details['mode']
+
+    recursive false
+
+    action :create
+
+    # not_if is crtiical.
+    # Attempting to execute this directory resource on an existing
+    # directory may result in an SELinux 'restorecon -R' being
+    # issued to restore the context of MANY files mounted at
+    # an existing filesystem mount point.
+
+    not_if { File.directory?(mount_point) }
+  end
+
+  # Comment out non-enabled filesystems
   if mount_details['enabled'] == true
-
-    directory mount_point do
-      owner mount_details['owner']
-      group mount_details['group']
-      mode mount_details['mode']
-
-      recursive false
-
-      action :create
-
-      # not_if is crtiical.
-      # Attempting to execute this directory resource on an existing
-      # directory may result in an SELinux 'restorecon -R' being
-      # issued to restore the context of MANY files mounted at
-      # an existing filesystem mount point.
-
-      not_if { File.directory?(mount_point) }
-    end
-
     export_text = "#{mount_point} "
+  else
+    export_text = "##{mount_point} "
+  end
 
-    mount_details['clients'].sort.each do |client_name, client_details|
+  mount_details['clients'].sort.each do |client_name, client_details|
 
-      # Reject and do not include clients with no configured options
-      # this should not occur, but is protection against mis-configured data bags
-      if client_details['options'].length > 0
+    # Reject and do not include clients with no configured options
+    # this should not occur, but is protection against mis-configured data bags
+    if client_details['options'].length > 0
 
-        # start of allowed client definition
-        export_text << "#{client_name}("
+      # start of allowed client definition
+      export_text << "#{client_name}("
 
-        first_opt = true
-        client_details['options'].each do |nfs_client_opt|
+      first_opt = true
+      client_details['options'].each do |nfs_client_opt|
 
-          # Append ", " if we are about to append another opt beyond the first
-          if first_opt
-            first_opt = false
-          else
-            export_text << ","
-          end
-
-          export_text << "#{nfs_client_opt}"
-
+        # Append ", " if we are about to append another opt beyond the first
+        if first_opt
+          first_opt = false
+        else
+          export_text << ","
         end
-        # All options provided, close the host definition
-        export_text << ") "
-      end
 
+        export_text << "#{nfs_client_opt}"
+
+      end
+      # All options provided, close the host definition
+      export_text << ") "
     end
 
     exports_lines[mount_point] = {
