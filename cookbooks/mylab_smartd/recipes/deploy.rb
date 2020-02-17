@@ -48,10 +48,10 @@ Experimental wrapper cookbook to maxlab_smartd that deploys smartd for storage h
 # LAST CALL TO DATA BAG REMOVED HERE
 #
 
-config_smartd = data_bag_item('config_smartd', "#{node['domain']}_#{node['hostname']}")
+#config_smartd = data_bag_item('config_smartd', "#{node['domain']}_#{node['hostname']}")
 
 # MERGE override this cookbook and the community cookbook values with data bag values
-node.force_default['smartd']['cfg'] = config_smartd['cfg']
+#node.force_default['smartd']['cfg'] = config_smartd['cfg']
 
 # puts
 # puts "DEBUG FORCE DEFAULT WITH DATA BAG TO node['smartd']['cfg']"

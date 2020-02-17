@@ -1,5 +1,12 @@
 # mylab_smartd CHANGELOG
 
+# 1.3.0 Use maxops email
+
+* Using as a wrapper to maxlab_smartd to email maxops@maxwellspangler.com
+* Commenting out some previous experimental code to use data bags to override maxlab_smartd node attributes. Right now I want mylab_smartd to use traditional node overrides of mylab_smartd, and not use data bags.
+* Remove a lot of commented out but not used wrapper attributes.
+* Comment out two lines of deploy.rb code to load a data bag and use it to override maxlab_smartd attributes.  Keeping them for future experimentation.
+
 # 1.2.0 Test Kitchen and Policyfiles
 
 * Major rework for Test Kitchen development
