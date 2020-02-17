@@ -3,7 +3,7 @@
 #<> Allow these services via firewalld
 default['plex']['firewall']['firewalld']['services'] = [ "http" ]
 #<> Allow these ports via firewalld
-default['plex']['firewall']['firewalld']['ports'] = []
+default['plex']['firewall']['firewalld']['ports'] = [ "32400/tcp", "1900/udp", "3005/tcp", "5353/udp", "8324/tcp", "32410/udp", "32412/udp", "32413/udp", "32414/udp", "32469/tcp"]
 #<> Allow these sources via firewalld
 default['plex']['firewall']['firewalld']['sources'] = []
 

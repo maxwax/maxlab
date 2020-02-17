@@ -2,6 +2,10 @@
 
 Maintain a Plex media server in the maxlab environment.
 
+# 1.1.2
+
+* Adding Plex specific ports to open in firewalld
+
 # 1.1.1
 
 * Removed unused Policyfile.rb
