@@ -91,7 +91,7 @@
         "mobile": {
           "dhcp": true,
           "dhcp_option": [
-            "option domain-name-servers 192.168.9.2, 1.1.1.1;"
+            "option domain-name-servers 192.168.9.100, 192.168.9.105, 192.169.9.2;"
           ]
         },
         "network-infra": {
