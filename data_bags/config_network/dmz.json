@@ -77,7 +77,7 @@
           "type": "appliances",
           "group": "network-infra",
           "os:": "DD-WRT",
-          "mac_address": "C4:04:15:44:CF:11"
+          "mac_address": "C4:04:15:44:CF:12"
         },
         "248": {
           "node_name": "download",
