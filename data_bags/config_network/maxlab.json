@@ -110,30 +110,30 @@
       "nodes": {
         "1": {
           "node_name": "gateway",
-          "description": "Zyxel C110Z Centurylink Gateway",
+          "description": "NA - Reserved",
           "type": "appliances",
           "group": "network-infra",
           "os:": "Proprietary",
           "base": "_na",
           "mac_address": "58:8B:F3:E2:6E:25"
         },
-        "2": {
-          "node_name": "firewall",
-          "description": "Netgear WNDR3700v2 Firewall (DD-WRT)",
-          "type": "appliances",
-          "group": "super-network-infra",
-          "os:": "DD-WRT",
-          "base": "_na",
-          "mac_address": "c4:3d:c7:9d:6b:5c"
-        },
-        "3": {
+        "5": {
           "node_name": "wap",
-          "description": "Netgear r6200v2 Wireless AP (DD-WRT)",
+          "description": "Netgear R7800",
           "type": "appliances",
           "group": "network-infra",
           "os:": "DD-WRT",
           "base": "_na",
-          "mac_address": "e8:fc:af:9c:90:7c"
+          "mac_address": "38:94:ed:b8:de:6f"
+        },
+        "9": {
+          "node_name": "firewall",
+          "description": "Netgear R7000",
+          "type": "appliances",
+          "group": "network-infra",
+          "os:": "DD-WRT",
+          "base": "_na",
+          "mac_address": "C4:04:15:44:CF:11"
         },
         "20": {
           "node_name": "metric-submit",
