@@ -66,8 +66,6 @@
         "flash1": "lenovoflash1.maxlab",
         "flash2": "lenovoflash2.maxlab",
         "flash3": "lenovoflash3.maxlab",
-        "flash4": "lenovoflash4.maxlab",
-        "flash5": "lenovoflash5.maxlab",
         "maxsim": "filer.maxlab",
         "www": "filer.maxlab"
       },
@@ -315,24 +313,6 @@
           "base": "maxlab_proxmox",
           "mac_address": "3c:97:0e:a7:8f:a6"
         },
-        "91": {
-          "node_name": "lenovoflash4",
-          "description": "Lenovo B590 Hypervisor",
-          "type": "node",
-          "group": "hypervisor",
-          "os:": "Proxmox",
-          "base": "maxlab_proxmox",
-          "mac_address": "3c:97:0e:a7:90:09"
-        },
-        "92": {
-          "node_name": "lenovoflash5",
-          "description": "Lenovo B590 Hypervisor",
-          "type": "node",
-          "group": "hypervisor",
-          "os:": "Proxmox",
-          "base": "maxlab_proxmox",
-          "mac_address": "3c:97:0e:a7:90:aa"
-        },
         "95": {
           "node_name": "toshiprox1",
           "description": "Toshiba Z40 Hypervisor",
@@ -478,13 +458,13 @@
           "mac_address": "00:26:2d:00:04:7c"
         },
         "251": {
-          "node_name": "synology",
-          "description": "Spruill Synologu DS218+ NAS",
+          "node_name": "media",
+          "description": "HP Desktop Media NAS",
           "type": "node",
           "group": "NAS",
-          "os:": "DSM",
+          "os:": "CentOS",
           "base": "maxlab_nas",
-          "mac_address": "00:11:32:BB:CE:0A"
+          "mac_address": "00:1c:c4:6e:52:75"
         },
         "252": {
           "node_name": "aux",
