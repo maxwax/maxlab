@@ -1,0 +1,143 @@
+{
+  "id": "maxlab_nfs_media",
+  "doc": "NFS server configuration for media",
+  "cfg": {
+    "exports" : {
+      "/srv/audiovideo": {
+        "enabled": true,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
+        "comment": "Audiovideo storage",
+        "clients": {
+          "macbooknext.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "macbooknextwifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      },
+      "/srv/avarchive": {
+        "enabled": true,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
+        "comment": "Audiovideo auxillary storage",
+        "clients": {
+          "macbooknext.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "macbooknextwifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      },
+      "/srv/mediadata": {
+        "enabled": true,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
+        "comment": "Archives storage",
+        "clients": {
+          "macbooknext.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "macbooknextwifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      },
+      "/srv/xfiles": {
+        "enabled": true,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
+        "comment": "Backups storage",
+        "clients": {
+          "sarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      },
+      "/mnt/offsite4tb": {
+        "enabled": false,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
+        "comment": "Sometimes available 4TB USB drive on media",
+        "clients": {
+          "aux.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "laptopnas.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
