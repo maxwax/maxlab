@@ -4,3 +4,4 @@ tk*.lock.json
 */logs/kitchen.log
 data_bags/secret_*
 secret_*.json
+.chef
