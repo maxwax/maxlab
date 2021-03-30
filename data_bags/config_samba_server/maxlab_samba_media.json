@@ -1,5 +1,5 @@
 {
-  "id": "maxlab_samba_primary",
+  "id": "maxlab_samba_media",
   "doc": "Samba server configuration for media.maxlab",
   "cfg": {
     "sections": {
