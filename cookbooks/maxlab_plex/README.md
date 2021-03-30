@@ -1,6 +1,10 @@
 # Description
 
-This cookbook deploys DNS via the bind (named) daemon on Red Hat 7.x and 8.x systems
+This cookbook deploys the Plex media server.
+
+* Plex will install at /var/lib/plexmediaserver with plex:plex ownership.
+* Unmount any manually created dedicated filesystem created at this mount point before running this cookbook.
+* After this cookbook deploys Plex, copy /var/lib/plexmediaserver/Library to the dedicated filesystem and mount it in place.
 
 # Requirements
 
