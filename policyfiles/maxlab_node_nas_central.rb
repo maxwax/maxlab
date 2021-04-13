@@ -34,10 +34,10 @@ default['instance_config_chrony']['instance'] = 'chrony.maxlab'
 default['instance_config_chrony']['instance_type'] = 'client'
 
 # From role service_nfs_instance_maxlab_nfs_testred
-default['instance_config_nfs']['instance'] = 'maxlab_nfs_media'
+default['instance_config_nfs']['instance'] = 'maxlab_nfs_central'
 
 # From role service_samba_instance_maxlab_samba_testred
-default['instance_config_samba']['instance'] = 'maxlab_samba_media'
+default['instance_config_samba']['instance'] = 'maxlab_samba_central'
 
 # From role service_postfix_instance_maxlab_postfix
 default['instance_config_postfix']['instance'] = 'maxlab_postfix'

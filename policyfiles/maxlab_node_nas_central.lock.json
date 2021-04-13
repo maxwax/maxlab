@@ -1,5 +1,5 @@
 {
-  "revision_id": "7fb4b74add342bc293ee4b8b29f04891aa0af71738777b2afd732d5b0e070c78",
+  "revision_id": "601020b5378e75240ec5614268c4f794e345be635d18f0df4d996ccbe5300919",
   "name": "maxlab_node_nas_central",
   "run_list": [
     "recipe[maxlab_firewall::base_firewalld]",
@@ -36,8 +36,8 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "565e6c10aa614eaa2ccf0218cb0f0c0757b3edb0",
-        "working_tree_clean": true,
+        "revision": "5b211578350f5c7d9f256857f6ba6a909ba5721e",
+        "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
           "origin/master"
@@ -56,8 +56,8 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "565e6c10aa614eaa2ccf0218cb0f0c0757b3edb0",
-        "working_tree_clean": true,
+        "revision": "5b211578350f5c7d9f256857f6ba6a909ba5721e",
+        "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
           "origin/master"
@@ -76,8 +76,8 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "565e6c10aa614eaa2ccf0218cb0f0c0757b3edb0",
-        "working_tree_clean": true,
+        "revision": "5b211578350f5c7d9f256857f6ba6a909ba5721e",
+        "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
           "origin/master"
@@ -96,8 +96,8 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "565e6c10aa614eaa2ccf0218cb0f0c0757b3edb0",
-        "working_tree_clean": true,
+        "revision": "5b211578350f5c7d9f256857f6ba6a909ba5721e",
+        "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
           "origin/master"
@@ -116,8 +116,8 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "565e6c10aa614eaa2ccf0218cb0f0c0757b3edb0",
-        "working_tree_clean": true,
+        "revision": "5b211578350f5c7d9f256857f6ba6a909ba5721e",
+        "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
           "origin/master"
@@ -136,8 +136,8 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "565e6c10aa614eaa2ccf0218cb0f0c0757b3edb0",
-        "working_tree_clean": true,
+        "revision": "5b211578350f5c7d9f256857f6ba6a909ba5721e",
+        "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
           "origin/master"
@@ -156,8 +156,8 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "565e6c10aa614eaa2ccf0218cb0f0c0757b3edb0",
-        "working_tree_clean": true,
+        "revision": "5b211578350f5c7d9f256857f6ba6a909ba5721e",
+        "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
           "origin/master"
@@ -176,8 +176,8 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "565e6c10aa614eaa2ccf0218cb0f0c0757b3edb0",
-        "working_tree_clean": true,
+        "revision": "5b211578350f5c7d9f256857f6ba6a909ba5721e",
+        "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
           "origin/master"
@@ -196,8 +196,8 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "565e6c10aa614eaa2ccf0218cb0f0c0757b3edb0",
-        "working_tree_clean": true,
+        "revision": "5b211578350f5c7d9f256857f6ba6a909ba5721e",
+        "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
           "origin/master"
@@ -217,10 +217,10 @@
       "instance_type": "client"
     },
     "instance_config_nfs": {
-      "instance": "maxlab_nfs_media"
+      "instance": "maxlab_nfs_central"
     },
     "instance_config_samba": {
-      "instance": "maxlab_samba_media"
+      "instance": "maxlab_samba_central"
     },
     "instance_config_postfix": {
       "instance": "maxlab_postfix"
