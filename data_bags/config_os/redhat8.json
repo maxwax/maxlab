@@ -9,8 +9,7 @@
   },
   "repo_config_commands": {
     "enable-codeready-builder": {
-      "for-codebuilder-set-arch": "ARCH=$( /bin/arch )",
-      "subscribe-to-codeready-builder": "subscription-manager repos --enable 'codeready-builder-for-rhel-8-${ARCH}-rpms'"
+      "subscribe-to-codeready-builder": "ARCH=$( /bin/arch ); subscription-manager repos --enable \"codeready-builder-for-rhel-8-${ARCH}-rpms\""
     }
   },
   "default_packages": [
