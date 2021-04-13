@@ -1,5 +1,9 @@
 # maxlab_postfix CHANGELOG
 
+# 1.2.1 Support Red Hat Linux
+
+* Identify Red Hat Linux as 'redhat' not 'rhel'
+
 # 1.2.0
 
 * Use chef-vault to deploy /etc/postfix/sasl_passwd safely

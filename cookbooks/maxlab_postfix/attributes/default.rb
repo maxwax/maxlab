@@ -4,7 +4,7 @@
 platform_and_version = node['platform'] + node['platform_version'].split('.')[0]
 
 case platform_and_version
-  when 'rhel8', 'centos8'
+  when 'redhat8', 'centos8'
     #<> Packages required to support this service
     default['postfix']['packages'] = [ "postfix", "mailx", "cyrus-sasl-plain"]
     #<> Services required to be running for postfix server operations
@@ -16,7 +16,7 @@ case platform_and_version
     #<> Network sources to open for operation
     default['postfix']['firewalld']['sources'] = [ ]
 
-  when 'rhel7', 'centos7'
+  when 'redhat7', 'centos7'
     #<> Packages required to support this service
     default['postfix']['packages'] = [ "postfix", "mailx", "cyrus-sasl-plain" ]
     #<> Services required to be running for postfix server operations
