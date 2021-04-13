@@ -1,6 +1,6 @@
 {
-  "id": "rhel8",
-  "doc": "Distribution and version specific provisioning for Red Hat v8 or CentOS v8",
+  "id": "centos8",
+  "doc": "Distribution and version specific provisioning for CentOS 8",
   "repo_packages": {
     "rpmfusion-free-release-8": {
       "source": "http://repo.maxlab/files/os/centos/8/rpms/rpmfusion-free-release-8.noarch.rpm",

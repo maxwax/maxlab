@@ -1,0 +1,43 @@
+{
+  "id": "redhat8",
+  "doc": "Distribution and version specific provisioning for Red Hat v8",
+  "repo_packages": {
+    "epel-8": {
+      "source": "https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm",
+      "filename": "epel-release-latest-8-noarch.rpm"
+    }
+  },
+  "repo_config_commands": {
+    "enable-codeready-builder": {
+      "for-codebuilder-set-arch": "ARCH=$( /bin/arch )",
+      "subscribe-to-codeready-builder": "subscription-manager repos --enable 'codeready-builder-for-rhel-8-${ARCH}-rpms'"
+    }
+  },
+  "default_packages": [
+    "vim", "atop", "htop", "nc", "tree", "wget", "policycoreutils-python-utils"
+  ],
+  "default_scripts": {
+    "/etc": {
+      "bashrc": {
+        "subdir": "etc",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      }
+    },
+    "/usr/local/etc": {
+      "shell-basics": {
+        "subdir": "usr/local/etc",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      },
+      "shell-history": {
+        "subdir": "usr/local/etc",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      }
+    }
+  }
+}

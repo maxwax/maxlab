@@ -1,14 +1,14 @@
 {
-  "id": "rhel7",
-  "doc": "Distribution and version specific provisioning for Red Hat v6 or CentOS v7",
+  "id": "redhat6",
+  "doc": "Distribution and version specific provisioning for Red Hat 6",
   "repo_packages": {
-    "rpmfusion-free-release-7": {
-      "source": "http://repo.maxlab/files/os/centos/7/rpms/rpmfusion-free-release-7.noarch.rpm",
-      "filename": "rpmfusion-free-release-7.noarch.rpm"
+    "rpmfusion-free-release-6": {
+      "source": "http://repo.maxlab/files/os/centos/6/rpms/rpmfusion-free-release-6.noarch.rpm",
+      "filename": "rpmfusion-free-release-6.noarch.rpm"
     },
-    "rpmfusion-nonfree-release-7": {
-      "source": "http://repo.maxlab/files/os/centos/7/rpms/rpmfusion-nonfree-release-7.noarch.rpm",
-      "filename": "rpmfusion-nonfree-release-7.noarch.rpm"
+    "rpmfusion-nonfree-release-6": {
+      "source": "http://repo.maxlab/files/os/centos/6/rpms/rpmfusion-nonfree-release-6.noarch.rpm",
+      "filename": "rpmfusion-nonfree-release-6.noarch.rpm"
     }
   },
   "default_packages": [
