@@ -1,6 +1,11 @@
 
 # maxlab CHANGELOG
 
+# 1.1.0
+
+* Add support for actual Red Hat Linux now that licenses are available.
+* Add nodes media and central as I rebuilt lab NAS storage
+
 # 1.0.1
 
 * Removed nodes lenovoflash4 and lenovoflash5, not part of home lab anymore.
