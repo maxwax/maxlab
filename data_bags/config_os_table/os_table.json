@@ -1,15 +1,15 @@
 {
   "id": "os_table",
   "doc": "OS Version Lookup Table",
-  "rhel8": {
+  "redhat8": {
     "doc": "Red Hat Linux v8",
-    "config_os": "rhelv8"
+    "config_os": "rhel8"
   },
-  "rhel7": {
+  "redhat7": {
     "doc": "Red Hat Linux v7",
     "config_os": "rhel7"
   },
-  "rhel6": {
+  "redhat6": {
     "doc": "Red Hat Linux v6",
     "config_os": "rhel6"
   },
