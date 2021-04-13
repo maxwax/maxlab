@@ -1,6 +1,6 @@
 {
-  "id": "maxlab_samba_hpsilver",
-  "doc": "Samba server configuration for hpsilver.maxlab",
+  "id": "maxlab_samba_spare",
+  "doc": "Samba server configuration for spare.maxlab",
   "cfg": {
     "sections": {
       "global": {

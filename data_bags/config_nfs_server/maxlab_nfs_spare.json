@@ -1,6 +1,6 @@
 {
-  "id": "maxlab_nfs_hpsilver",
-  "doc": "NFS server configuration for hpsilver",
+  "id": "maxlab_nfs_spare",
+  "doc": "NFS server configuration for spare",
   "cfg": {
     "exports" : {
       "/srv/nfsdata": {
