@@ -46,6 +46,18 @@ config_os['repo_packages'].each do |pkg_name, pkg_details|
 
 end
 
+# Execute any commands related to enabling base repos
+# Ex: Red Hat 7 requires an additional 'subscription-manager' command
+config_os['repo_config_commands'].each do |config_item, config_commands|
+
+  config_commands.each do |command_name, exec_command|
+
+    execute command_name do
+      command exec_command
+    end
+  end
+end
+
 # Ensure these packages are installed as a common foundation for this OSver
 package config_os['default_packages'] do
   action :install
