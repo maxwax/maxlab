@@ -5,7 +5,7 @@ platform_and_version = node['platform'] + node['platform_version'].split('.')[0]
 
 case platform_and_version
 
-  when 'rhel8', 'centos8'
+  when 'redhat8', 'centos8'
     #<> Packages required to support this service
     default['samba']['packages'] = [ "samba", "samba-common", "samba-libs" ]
 

@@ -1,5 +1,9 @@
 # maxlab_samba CHANGELOG
 
+# 1.2.3 Support Red Hat Linux
+
+* Identify Red Hat Linux as 'redhat' not 'rhel'
+
 # 1.2.2
 
 * Removing code to attempt to avoid starting samba if running in Test Kitchen. Need a better way to handle this later.
