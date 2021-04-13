@@ -1,5 +1,9 @@
 # maxlab_smartd CHANGELOG
 
+# 1.2.1 Support Red Hat Linux
+
+* Use 'redhat' not 'rhel' to identify Red Hat Linux.
+
 # 1.2.0 Test Kitchen and Policyfiles
 
 * Major rework for Test Kitchen development
