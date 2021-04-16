@@ -10,7 +10,7 @@ Install smartmontools to monitor S.M.A.R.T. storage health attributes and config
 #>
 =end
 
-# Ex: 'rhel8', 'centos7', 'fedora30'
+# Ex: 'redhat8', 'centos7', 'fedora30'
 platform_and_version = node['platform'] + node['platform_version'].split('.')[0]
 
 case platform_and_version
@@ -19,6 +19,8 @@ case platform_and_version
   when 'redhat8', 'centos8'
     smart_pkg = 'smartmontools'
   when 'debian10'
+    smart_pkg = 'smartmontools'
+  else
     smart_pkg = 'smartmontools'
 end
 

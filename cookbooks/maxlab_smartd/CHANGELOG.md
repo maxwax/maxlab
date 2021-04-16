@@ -1,5 +1,9 @@
 # maxlab_smartd CHANGELOG
 
+# Add default smartd package
+
+* Added else to OS case statement that selects package to install
+
 # 1.2.1 Support Red Hat Linux
 
 * Use 'redhat' not 'rhel' to identify Red Hat Linux.

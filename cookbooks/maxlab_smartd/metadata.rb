@@ -3,7 +3,7 @@ maintainer 'Maxwell Spangler'
 maintainer_email 'maxcode@maxwellspangler.com'
 license 'All Rights Reserved'
 description 'Deploys smartd daemon to monitor storage S.M.A.R.T. health attributes and alert on issues'
-version '1.2.1'
+version '1.2.2'
 chef_version '>= 14.0'
 
 # The `issues_url` points to the location where issues for this cookbook are
