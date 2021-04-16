@@ -1,5 +1,5 @@
 {
-  "revision_id": "601020b5378e75240ec5614268c4f794e345be635d18f0df4d996ccbe5300919",
+  "revision_id": "1c1dd13b62c37a8453f3e0eeba534326ca34681fd008d37cf6560afde18d8486",
   "name": "maxlab_node_nas_central",
   "run_list": [
     "recipe[maxlab_firewall::base_firewalld]",
@@ -36,7 +36,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "5b211578350f5c7d9f256857f6ba6a909ba5721e",
+        "revision": "4e6d41c97d2f72b097d85837d8e891368dd869b5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -56,7 +56,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "5b211578350f5c7d9f256857f6ba6a909ba5721e",
+        "revision": "4e6d41c97d2f72b097d85837d8e891368dd869b5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -76,7 +76,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "5b211578350f5c7d9f256857f6ba6a909ba5721e",
+        "revision": "4e6d41c97d2f72b097d85837d8e891368dd869b5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -96,7 +96,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "5b211578350f5c7d9f256857f6ba6a909ba5721e",
+        "revision": "4e6d41c97d2f72b097d85837d8e891368dd869b5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -116,7 +116,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "5b211578350f5c7d9f256857f6ba6a909ba5721e",
+        "revision": "4e6d41c97d2f72b097d85837d8e891368dd869b5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -136,7 +136,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "5b211578350f5c7d9f256857f6ba6a909ba5721e",
+        "revision": "4e6d41c97d2f72b097d85837d8e891368dd869b5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -148,15 +148,15 @@
       }
     },
     "maxlab_smartd": {
-      "version": "1.2.1",
-      "identifier": "fcf79e01407afd76462208280a5066fd08e911af",
-      "dotted_decimal_identifier": "71203952128981757.33291159231531600.113236962251183",
+      "version": "1.2.2",
+      "identifier": "8282cfface238d9d3c718e0f55f52d47707af1c7",
+      "dotted_decimal_identifier": "36735576750039949.44258029755913717.49784853033415",
       "source": "../cookbooks/maxlab_smartd",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "5b211578350f5c7d9f256857f6ba6a909ba5721e",
+        "revision": "4e6d41c97d2f72b097d85837d8e891368dd869b5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -176,7 +176,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "5b211578350f5c7d9f256857f6ba6a909ba5721e",
+        "revision": "4e6d41c97d2f72b097d85837d8e891368dd869b5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -196,7 +196,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "5b211578350f5c7d9f256857f6ba6a909ba5721e",
+        "revision": "4e6d41c97d2f72b097d85837d8e891368dd869b5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -318,7 +318,7 @@
       "maxlab_samba (1.2.3)": [
 
       ],
-      "maxlab_smartd (1.2.1)": [
+      "maxlab_smartd (1.2.2)": [
 
       ],
       "maxlab_users (1.2.0)": [

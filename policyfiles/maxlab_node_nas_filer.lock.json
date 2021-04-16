@@ -1,6 +1,6 @@
 {
-  "revision_id": "c48d99024eac406335a4178436ec566cac62f3c50f7c515d59d90a21dc55a1fa",
-  "name": "maxlab_node_nas_spare",
+  "revision_id": "8a893f2071a7cb3bae0624f830f01f6c33e17a35023493ac39123e8974f7d6e9",
+  "name": "maxlab_node_nas_filer",
   "run_list": [
     "recipe[maxlab_firewall::base_firewalld]",
     "recipe[maxlab_base::deploy]",
@@ -10,6 +10,7 @@
     "recipe[maxlab_nfs::server]",
     "recipe[maxlab_samba::server]",
     "recipe[maxlab_postfix::deploy]",
+    "recipe[maxlab_plex::deploy]",
     "recipe[maxlab_firewall::update_firewalld]"
   ],
   "included_policy_locks": [
@@ -105,6 +106,26 @@
       },
       "source_options": {
         "path": "../cookbooks/maxlab_nfs"
+      }
+    },
+    "maxlab_plex": {
+      "version": "1.1.2",
+      "identifier": "c306a2db30354c34fae557f5bd751d815df389b1",
+      "dotted_decimal_identifier": "54894916990416204.14912561719131509.32441464228273",
+      "source": "../cookbooks/maxlab_plex",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@github.com:maxwax/maxlab.git",
+        "revision": "4e6d41c97d2f72b097d85837d8e891368dd869b5",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "../cookbooks/maxlab_plex"
       }
     },
     "maxlab_postfix": {
@@ -217,10 +238,10 @@
       "instance_type": "client"
     },
     "instance_config_nfs": {
-      "instance": "maxlab_nfs_spare"
+      "instance": "maxlab_nfs_filer"
     },
     "instance_config_samba": {
-      "instance": "maxlab_samba_spare"
+      "instance": "maxlab_samba_filer"
     },
     "instance_config_postfix": {
       "instance": "maxlab_postfix"
@@ -267,6 +288,10 @@
         ">= 0.0.0"
       ],
       [
+        "maxlab_plex",
+        ">= 0.0.0"
+      ],
+      [
         "maxlab_postfix",
         ">= 0.0.0"
       ],
@@ -304,6 +329,12 @@
 
       ],
       "maxlab_nfs (1.2.3)": [
+        [
+          "maxlab_firewall",
+          ">= 0.0.0"
+        ]
+      ],
+      "maxlab_plex (1.1.2)": [
         [
           "maxlab_firewall",
           ">= 0.0.0"
