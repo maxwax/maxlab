@@ -1,5 +1,10 @@
 # maxlab_nfs CHANGELOG
 
+# 1.2.4
+
+* Adding package 'mdmadm' for RAID
+* Adding package 'cryptsetup' for LUKS storage encryption
+
 # 1.2.3
 
 * For filesystems defined in the config_nfs data bag but disabled, deploy them in /etc/exports commented out. This will let me manually uncomment them to use an external USB drive without the overhead of Chef.

@@ -1,7 +1,7 @@
 # maxlab_nfs/attributes/default.rb
 
 #<> Packages required to deploy an NFS server
-default['nfs']['packages'] = [ "nfs-utils", "nfs4-acl-tools", "rpcbind", "portmap" ]
+default['nfs']['packages'] = [ "nfs-utils", "nfs4-acl-tools", "rpcbind", "portmap", "mdadm", "cryptsetup" ]
 
 #<> Services required to be running for NFS server operations
 default['nfs']['services'] = [ "nfs-server", "rpcbind" ]
@@ -20,8 +20,9 @@ platform_and_version = node['platform'] + node['platform_version'].split('.')[0]
 
 case platform_and_version
 
-  when 'rhel7', 'centos7'
-    default['nfs']['packages'] = [ "nfs-utils", "nfs4-acl-tools", "rpcbind", "portmap" ]
+  when 'redhat7', 'centos7'
+    default['nfs']['packages'] = [ "nfs-utils", "nfs4-acl-tools", "rpcbind", "portmap", "mdadm", "cryptsetup" ]
+
     default['nfs']['services'] = [ "nfs-server", "rpcbind" ]
 
     default['nfs']['firewall_ports'] = [ "nfs", "mountd" ]
@@ -30,8 +31,8 @@ case platform_and_version
     default['nfs']['firewalld']['ports'] = [ ]
     default['nfs']['firewalld']['sources'] = [ ]
 
-  when 'rhel8', 'centos8'
-    default['nfs']['packages'] = [ "nfs-utils", "nfs4-acl-tools", "rpcbind", "portmap" ]
+  when 'redhat8', 'centos8'
+    default['nfs']['packages'] = [ "nfs-utils", "nfs4-acl-tools", "rpcbind", "portmap", "mdadm", "cryptsetup" ]
 
     default['nfs']['services'] = [ "nfs-server", "rpcbind" ]
 
