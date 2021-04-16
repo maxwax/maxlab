@@ -1,5 +1,5 @@
 {
-  "revision_id": "40c11ad157c3c4f8fd9980ff429a890fb8d9c09ae09df689fafebc75d118f36e",
+  "revision_id": "ab183b86d0dff038c911a179cefbb05ebf36582f7869e0e76f02e27f558343b1",
   "name": "maxlab_node_nas_media",
   "run_list": [
     "recipe[maxlab_firewall::base_firewalld]",
@@ -37,7 +37,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "4e6d41c97d2f72b097d85837d8e891368dd869b5",
+        "revision": "258e8bf9dd0ecd81064286c7fb9f725533a22909",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -57,7 +57,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "4e6d41c97d2f72b097d85837d8e891368dd869b5",
+        "revision": "258e8bf9dd0ecd81064286c7fb9f725533a22909",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -77,7 +77,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "4e6d41c97d2f72b097d85837d8e891368dd869b5",
+        "revision": "258e8bf9dd0ecd81064286c7fb9f725533a22909",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -89,15 +89,15 @@
       }
     },
     "maxlab_nfs": {
-      "version": "1.2.3",
-      "identifier": "d31fc079f330cc126030ad4ad5d53427ce2808e8",
-      "dotted_decimal_identifier": "59426131626111180.5172311762851285.57345567099112",
+      "version": "1.2.4",
+      "identifier": "72199920ae98285697d3b7b96b18a87f12e14595",
+      "dotted_decimal_identifier": "32116292814018600.24373783573392152.185263731066261",
       "source": "../cookbooks/maxlab_nfs",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "4e6d41c97d2f72b097d85837d8e891368dd869b5",
+        "revision": "258e8bf9dd0ecd81064286c7fb9f725533a22909",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -117,7 +117,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "4e6d41c97d2f72b097d85837d8e891368dd869b5",
+        "revision": "258e8bf9dd0ecd81064286c7fb9f725533a22909",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -137,7 +137,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "4e6d41c97d2f72b097d85837d8e891368dd869b5",
+        "revision": "258e8bf9dd0ecd81064286c7fb9f725533a22909",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -157,7 +157,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "4e6d41c97d2f72b097d85837d8e891368dd869b5",
+        "revision": "258e8bf9dd0ecd81064286c7fb9f725533a22909",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -177,7 +177,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "4e6d41c97d2f72b097d85837d8e891368dd869b5",
+        "revision": "258e8bf9dd0ecd81064286c7fb9f725533a22909",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -197,7 +197,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "4e6d41c97d2f72b097d85837d8e891368dd869b5",
+        "revision": "258e8bf9dd0ecd81064286c7fb9f725533a22909",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -217,7 +217,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "4e6d41c97d2f72b097d85837d8e891368dd869b5",
+        "revision": "258e8bf9dd0ecd81064286c7fb9f725533a22909",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -328,7 +328,7 @@
       "maxlab_firewall (1.2.0)": [
 
       ],
-      "maxlab_nfs (1.2.3)": [
+      "maxlab_nfs (1.2.4)": [
         [
           "maxlab_firewall",
           ">= 0.0.0"
