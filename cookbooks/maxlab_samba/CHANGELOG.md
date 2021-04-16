@@ -1,5 +1,9 @@
 # maxlab_samba CHANGELOG
 
+# 1.2.4 Use 'redhat' not 'rhel'
+
+* Replaced 'rhel' with 'redhat' in attribute file OS detection.
+
 # 1.2.3 Support Red Hat Linux
 
 * Identify Red Hat Linux as 'redhat' not 'rhel'

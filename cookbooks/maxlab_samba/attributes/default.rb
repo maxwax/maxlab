@@ -1,6 +1,6 @@
 # maxlab_samba/attributes/default.rb
 
-# Ex: 'rhel8', 'centos7', 'fedora30'
+# Ex: 'redhat8', 'centos7', 'fedora30'
 platform_and_version = node['platform'] + node['platform_version'].split('.')[0]
 
 case platform_and_version
@@ -21,7 +21,7 @@ case platform_and_version
     #<> Network sources to open for operation
     default['samba']['firewalld']['sources'] = [ ]
 
-  when 'rhel7', 'centos7'
+  when 'redhat7', 'centos7'
     #<> Packages required to support this service
     default['samba']['packages'] = [ "samba", "samba-common", "samba-libs" ]
 
