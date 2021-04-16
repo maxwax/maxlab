@@ -25,14 +25,6 @@
         "read only": "no",
         "inherit acls": "yes"
       },
-      "photos": {
-        "path": "/srv/auxdata/photos",
-        "comment": "Photo Archives",
-        "valid users": [ "maxwell" ],
-        "browseable": "yes",
-        "read only": "no",
-        "create mask": "0700"
-      },
       "auxdata": {
         "path": "/srv/auxdata",
         "comment": "General Archives (AUX)",
