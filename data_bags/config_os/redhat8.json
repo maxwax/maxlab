@@ -13,7 +13,17 @@
     }
   },
   "default_packages": [
-    "vim", "atop", "htop", "nc", "tree", "wget", "policycoreutils-python-utils"
+    "vim",
+    "atop",
+    "htop",
+    "nmon",
+    "nc",
+    "tree",
+    "wget",
+    "tar",
+    "bzip2",
+    "which",
+    "policycoreutils-python-utils"
   ],
   "default_scripts": {
     "/etc": {
