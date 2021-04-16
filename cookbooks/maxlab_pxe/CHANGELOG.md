@@ -1,5 +1,9 @@
 # maxlab_pxe CHANGELOG
 
+# 1.2.2 Replace 'rhel' with 'redhat'
+
+* Replace 'rhel' with 'redhat' when setting attributes related to OS.
+
 # 1.2.1
 
 * Removed chef-vault related debugging statements

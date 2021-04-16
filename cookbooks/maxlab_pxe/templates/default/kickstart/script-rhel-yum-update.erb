@@ -1,5 +1,5 @@
 # ---------
-# script-rhel7-yum-update - THIS FILE DEPLOYED VIA CHEF - DO NOT MODIFY
+# script-redhat7-yum-update - THIS FILE DEPLOYED VIA CHEF - DO NOT MODIFY
 # ---------
 %post --log=/root/ks-post-yum-update.log
 # Update to most recent packages
@@ -7,4 +7,3 @@ set -x
 yum -y update
 %end
 # ---------
-
