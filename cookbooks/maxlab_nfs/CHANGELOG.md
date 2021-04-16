@@ -4,6 +4,7 @@
 
 * Adding package 'mdmadm' for RAID
 * Adding package 'cryptsetup' for LUKS storage encryption
+* Recognize OS as 'redhat' not 'rhel' when setting attributes
 
 # 1.2.3
 
