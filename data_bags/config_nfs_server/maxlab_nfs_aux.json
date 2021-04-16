@@ -1,0 +1,56 @@
+{
+  "id": "maxlab_nfs_aux",
+  "doc": "NFS server configuration for aux.maxlab",
+  "cfg": {
+    "exports" : {
+      "/srv/auxdata": {
+        "enabled": true,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
+        "comment": "Archive storage",
+        "clients": {
+          "macbooknext.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "macbooknextwifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "chaosusb.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      },
+      "/srv/auxdata/clonezilla": {
+        "enabled": false,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
+        "comment": "Clonezilla storage",
+        "clients": {
+          "*": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
