@@ -1,8 +1,8 @@
 # ---------
-# script-rhel7-static-hostname - THIS FILE DEPLOYED VIA CHEF - DO NOT MODIFY
+# script-redhat7-static-hostname - THIS FILE DEPLOYED VIA CHEF - DO NOT MODIFY
 # ---------
 %post --nochroot --log=/mnt/sysimage/root/ks-post-hostname.log
-# Kickstart post script to set hostname from transient host 
+# Kickstart post script to set hostname from transient host
 set -x
 HNAME=$(hostname -f)
 hostnamectl set-hostname ${HNAME}
@@ -11,4 +11,3 @@ cp /etc/hostname /mnt/sysimage/etc/hostname
 cp /etc/machine-info /mnt/sysimage/etc/machine-info
 %end
 # ---------
-
