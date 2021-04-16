@@ -29,6 +29,11 @@
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
+          },
+          "media.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
           }
         }
       },
@@ -55,6 +60,11 @@
             ]
           },
           "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "media.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
