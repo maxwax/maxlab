@@ -1,5 +1,5 @@
 {
-  "id": "maxlab_samba_primary",
+  "id": "maxlab_samba_filer",
   "doc": "Samba server configuration for filer.maxlab",
   "cfg": {
     "sections": {
@@ -12,7 +12,7 @@
         "preferred master": "yes",
         "printing": "cups",
         "printcap name": "cups",
-        "load printers": "yes",
+        "load printers": "no",
         "cups options": "raw",
         "min protocol": "SMB2",
         "interfaces": ["lo", "192.168.9.0/24"],
@@ -25,38 +25,8 @@
         "read only": "no",
         "inherit acls": "yes"
       },
-      "printers": {
-        "path": "/var/tmp",
-        "comment": "All Printers",
-        "printable": "no",
-        "create mask": "0600",
-        "browseable": "no"
-      },
-      "print$": {
-        "path": "/var/lib/samba/drivers",
-        "comment": "Printer drivers",
-        "write list": "root",
-        "create mask": "0664",
-        "directory mask": "0775"
-      },
-      "audiovideo": {
-        "path": "/srv/audiovideo",
-        "comment": "Audiovideo Archives",
-        "valid users": [ "maxwell" ],
-        "browseable": "yes",
-        "read only": "no",
-        "create mask": "0700"
-      },
-      "avarchive": {
-        "path": "/srv/avarchive",
-        "comment": "Audiovideo Auxillary Archives",
-        "valid users": [ "maxwell" ],
-        "browseable": "yes",
-        "read only": "no",
-        "create mask": "0700"
-      },
       "photos": {
-        "path": "/srv/filerdata/photos",
+        "path": "/srv/filerdata/Archives/photos",
         "comment": "Photo Archives",
         "valid users": [ "maxwell" ],
         "browseable": "yes",

@@ -1,5 +1,5 @@
 {
-  "id": "maxlab_samba_auxillary",
+  "id": "maxlab_samba_aux",
   "doc": "Samba server configuration for aux.maxlab",
   "cfg": {
     "sections": {
@@ -9,10 +9,10 @@
         "passdb backend": "tdbsam",
         "local master": "yes",
         "os level": "33",
-        "preferred master": "yes",
+        "preferred master": "no",
         "printing": "cups",
         "printcap name": "cups",
-        "load printers": "yes",
+        "load printers": "no",
         "cups options": "raw",
         "min protocol": "SMB2",
         "interfaces": ["lo", "192.168.9.0/24"],
@@ -25,20 +25,6 @@
         "read only": "no",
         "inherit acls": "yes"
       },
-      "printers": {
-        "path": "/var/tmp",
-        "comment": "All Printers",
-        "printable": "no",
-        "create mask": "0600",
-        "browseable": "no"
-      },
-      "print$": {
-        "path": "/var/lib/samba/drivers",
-        "comment": "Printer drivers",
-        "write list": "root",
-        "create mask": "0664",
-        "directory mask": "0775"
-      },
       "photos": {
         "path": "/srv/auxdata/photos",
         "comment": "Photo Archives",
@@ -50,14 +36,6 @@
       "auxdata": {
         "path": "/srv/auxdata",
         "comment": "General Archives (AUX)",
-        "valid users": [ "maxwell" ],
-        "browseable": "yes",
-        "read only": "no",
-        "create mask": "0700"
-      },
-      "library": {
-        "path": "/srv/auxdata/library",
-        "comment": "Library Archives (AUX)",
         "valid users": [ "maxwell" ],
         "browseable": "yes",
         "read only": "no",
