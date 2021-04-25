@@ -16,6 +16,8 @@
     "vim",
     "atop",
     "htop",
+    "bmon",
+    "iftop",
     "nmon",
     "nc",
     "tree",
