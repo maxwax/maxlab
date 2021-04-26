@@ -26,6 +26,7 @@
     "tar",
     "bzip2",
     "which",
+    "rsync",
     "policycoreutils-python-utils"
   ],
   "default_scripts": {
