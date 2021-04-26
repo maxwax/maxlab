@@ -24,7 +24,7 @@ cookbook 'maxlab_postfix',  path: '../cookbooks/maxlab_postfix'
 cookbook 'chef-vault'
 
 # From role base_firewall_maxlab_nas
-default['config_firewall']['base_config'] = 'base_firewall.maxlab.dmz'
+default['config_firewall']['base_config'] = 'base_firewall.maxlab.nas'
 
 # From role client_chrony_maxlab
 default['instance_config_chrony']['instance'] = 'chrony.maxlab'
