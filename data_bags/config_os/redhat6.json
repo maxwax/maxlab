@@ -11,6 +11,8 @@
       "filename": "rpmfusion-nonfree-release-6.noarch.rpm"
     }
   },
+  "repo_config_commands": {
+  },
   "default_packages": [
     "vim", "atop", "htop", "nc", "tree", "wget", "policycoreutils-python"
   ],
