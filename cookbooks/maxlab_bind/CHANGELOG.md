@@ -2,6 +2,10 @@
 
 Cookbook for deploying DNS service using BIND on Redhat platform Linux distributions
 
+# 1.2.2 Don't ping BIND package Version
+
+* Replace an old pinned bind version with 'any' text so the cookbook deploys bind without a version constraint.
+
 # 1.2.1 Rename policyfiles
 
 * Renaming all test kitchen policyfiles as tk_<pfile_name>
