@@ -314,7 +314,7 @@
           "mac_address": "3c:97:0e:a7:8f:a6"
         },
         "95": {
-          "node_name": "toshiprox1",
+          "node_name": "toshiprox",
           "description": "Toshiba Z40 Hypervisor",
           "type": "node",
           "group": "hypervisor",
