@@ -1,5 +1,5 @@
 {
-  "revision_id": "b33ce633553e0f0dbaa3ff4efdb249fc7799907c3d0708e6db7a8c729ddbcd9b",
+  "revision_id": "4250bebcae042292a694ec08df6338f1316c713f21e6f11bbc2425b630a65e41",
   "name": "maxlab_node_netinfra_auxillary",
   "run_list": [
     "recipe[maxlab_base::deploy]",
@@ -35,7 +35,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "92ba2851cc26b21dc653b0542481237806b590f6",
+        "revision": "b85c770c2189727d5ae9ac732ecbe4e3e1c389c5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -55,7 +55,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "92ba2851cc26b21dc653b0542481237806b590f6",
+        "revision": "b85c770c2189727d5ae9ac732ecbe4e3e1c389c5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -75,7 +75,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "92ba2851cc26b21dc653b0542481237806b590f6",
+        "revision": "b85c770c2189727d5ae9ac732ecbe4e3e1c389c5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -95,7 +95,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "92ba2851cc26b21dc653b0542481237806b590f6",
+        "revision": "b85c770c2189727d5ae9ac732ecbe4e3e1c389c5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -115,7 +115,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "92ba2851cc26b21dc653b0542481237806b590f6",
+        "revision": "b85c770c2189727d5ae9ac732ecbe4e3e1c389c5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -135,7 +135,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "92ba2851cc26b21dc653b0542481237806b590f6",
+        "revision": "b85c770c2189727d5ae9ac732ecbe4e3e1c389c5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -155,7 +155,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "92ba2851cc26b21dc653b0542481237806b590f6",
+        "revision": "b85c770c2189727d5ae9ac732ecbe4e3e1c389c5",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -169,7 +169,7 @@
   },
   "default_attributes": {
     "config_firewall": {
-      "base_config": "base_firewall.maxlab.dmz"
+      "base_config": "base_firewall.maxlab.nas"
     },
     "instance_config_chrony": {
       "instance": "chrony.maxlab",
