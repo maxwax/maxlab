@@ -464,7 +464,7 @@
           "group": "NAS",
           "os:": "CentOS",
           "base": "maxlab_nas",
-          "mac_address": "00:1c:c4:6e:52:75"
+          "mac_address": "2c:44:fd:10:5f:c4"
         },
         "252": {
           "node_name": "aux",
