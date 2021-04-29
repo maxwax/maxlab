@@ -40,7 +40,7 @@
             "type": "master",
             "allow_update": "none"
           },
-          "0.168.192.in-addr.arpa": {
+          "20.168.192.in-addr.arpa": {
             "type": "master",
             "allow_update": "none"
           }
