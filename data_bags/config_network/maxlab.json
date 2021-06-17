@@ -196,15 +196,6 @@
           "base": "_na",
           "mac_address": "00:04:20:1e:02:ff"
         },
-        "28": {
-          "node_name": "squeezebox",
-          "description": "Logitech Squeezebox",
-          "type": "appliances",
-          "group": "network-infra",
-          "os:": "_na",
-          "base": "_na",
-          "mac_address": "00:04:20:2a:77:d2"
-        },
         "35": {
           "node_name": "macbook",
           "description": "Macbook Pro 2012 (Wired IP)",
