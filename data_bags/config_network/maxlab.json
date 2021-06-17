@@ -125,7 +125,7 @@
           "mac_address": "38:94:ed:b8:de:6f"
         },
         "20": {
-          "node_name": "airport_office",
+          "node_name": "airport-office",
           "description": "Apple Airport",
           "type": "appliances",
           "group": "network-infra",
@@ -134,7 +134,7 @@
           "mac_address": "34:36:3b:b9:97:8c"
         },
         "21": {
-          "node_name": "airport_livingroom",
+          "node_name": "airport-livingroom",
           "description": "Apple Airport",
           "type": "appliances",
           "group": "network-infra",
@@ -143,7 +143,7 @@
           "mac_address": "f0:d1:a9:07:a6:50"
         },
         "22": {
-          "node_name": "airport_bedroom",
+          "node_name": "airport-bedroom",
           "description": "Apple Airport",
           "type": "appliances",
           "group": "network-infra",
@@ -152,7 +152,7 @@
           "mac_address": "00:25:4b:0a:ce:fa"
         },
         "23": {
-          "node_name": "airport_bedroom_wifi",
+          "node_name": "airport-bedroom-wifi",
           "description": "Apple Airport",
           "type": "appliances",
           "group": "network-infra",
@@ -161,7 +161,7 @@
           "mac_address": "00:25:4b:0a:ce:fb"
         },
         "24": {
-          "node_name": "roku_livingroom",
+          "node_name": "roku-livingroom",
           "description": "Roku Ultra",
           "type": "appliances",
           "group": "network-infra",
@@ -170,7 +170,7 @@
           "mac_address": "d8:31:34:59:b8:21"
         },
         "25": {
-          "node_name": "ring_indoor1",
+          "node_name": "ring-indoor1",
           "description": "Ring Entry",
           "type": "appliances",
           "group": "network-infra",
@@ -188,7 +188,7 @@
           "mac_address": "00:04:20:2a:77:d2"
         },
         "27": {
-          "node_name": "squeezebox_boom",
+          "node_name": "squeezebox-boom",
           "description": "Logitech Squeezebox Boom",
           "type": "appliances",
           "group": "network-infra",
