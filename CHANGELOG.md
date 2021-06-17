@@ -1,6 +1,10 @@
 
 # maxlab CHANGELOG
 
+# 1.1.1
+
+* Updating MAC addresses for current network devices
+
 # 1.1.0
 
 * Add support for actual Red Hat Linux now that licenses are available.

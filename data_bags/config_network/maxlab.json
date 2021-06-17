@@ -106,14 +106,14 @@
         }
       },
       "nodes": {
-        "1": {
-          "node_name": "gateway",
-          "description": "NA - Reserved",
+        "2": {
+          "node_name": "firewall",
+          "description": "Netgear R7000",
           "type": "appliances",
           "group": "network-infra",
-          "os:": "Proprietary",
+          "os:": "DD-WRT",
           "base": "_na",
-          "mac_address": "58:8B:F3:E2:6E:25"
+          "mac_address": "C4:04:15:44:CF:11"
         },
         "5": {
           "node_name": "wap",
@@ -124,50 +124,86 @@
           "base": "_na",
           "mac_address": "38:94:ed:b8:de:6f"
         },
-        "9": {
-          "node_name": "firewall",
-          "description": "Netgear R7000",
+        "20": {
+          "node_name": "airport_office",
+          "description": "Apple Airport",
           "type": "appliances",
           "group": "network-infra",
-          "os:": "DD-WRT",
+          "os:": "ios",
           "base": "_na",
-          "mac_address": "C4:04:15:44:CF:11"
-        },
-        "20": {
-          "node_name": "metric-submit",
-          "description": "VIP for submitting metrics to Graphite",
-          "type": "vip",
-          "group": "vips",
-          "os:": "n/a",
-          "base": "_na",
-          "mac_address": ""
+          "mac_address": "34:36:3b:b9:97:8c"
         },
         "21": {
-          "node_name": "metric-query",
-          "description": "VIP for querying metrics from Graphite",
-          "type": "vip",
-          "group": "vips",
-          "os:": "n/a",
+          "node_name": "airport_livingroom",
+          "description": "Apple Airport",
+          "type": "appliances",
+          "group": "network-infra",
+          "os:": "ios",
           "base": "_na",
-          "mac_address": ""
+          "mac_address": "f0:d1:a9:07:a6:50"
         },
         "22": {
-          "node_name": "graphite",
-          "description": "VIP for Graphite Cluster",
-          "type": "vip",
-          "group": "vips",
-          "os:": "n/a",
+          "node_name": "airport_bedroom",
+          "description": "Apple Airport",
+          "type": "appliances",
+          "group": "network-infra",
+          "os:": "ios",
           "base": "_na",
-          "mac_address": ""
+          "mac_address": "00:25:4b:0a:ce:fa"
         },
         "23": {
-          "node_name": "grafana",
-          "description": "VIP for Grafana",
-          "type": "vip",
-          "group": "vips",
-          "os:": "n/a",
+          "node_name": "airport_bedroom_wifi",
+          "description": "Apple Airport",
+          "type": "appliances",
+          "group": "network-infra",
+          "os:": "ios",
           "base": "_na",
-          "mac_address": ""
+          "mac_address": "00:25:4b:0a:ce:fb"
+        },
+        "24": {
+          "node_name": "roku_livingroom",
+          "description": "Roku Ultra",
+          "type": "appliances",
+          "group": "network-infra",
+          "os:": "_na",
+          "base": "_na",
+          "mac_address": "d8:31:34:59:b8:21"
+        },
+        "25": {
+          "node_name": "ring_indoor1",
+          "description": "Ring Entry",
+          "type": "appliances",
+          "group": "network-infra",
+          "os:": "_na",
+          "base": "_na",
+          "mac_address": "34:3e:a4:45:59:d5"
+        },
+        "26": {
+          "node_name": "squeezebox",
+          "description": "Logitech Squeezebox",
+          "type": "appliances",
+          "group": "network-infra",
+          "os:": "_na",
+          "base": "_na",
+          "mac_address": "00:04:20:2a:77:d2"
+        },
+        "27": {
+          "node_name": "squeezebox_boom",
+          "description": "Logitech Squeezebox Boom",
+          "type": "appliances",
+          "group": "network-infra",
+          "os:": "_na",
+          "base": "_na",
+          "mac_address": "00:04:20:1e:02:ff"
+        },
+        "28": {
+          "node_name": "squeezebox",
+          "description": "Logitech Squeezebox",
+          "type": "appliances",
+          "group": "network-infra",
+          "os:": "_na",
+          "base": "_na",
+          "mac_address": "00:04:20:2a:77:d2"
         },
         "35": {
           "node_name": "macbook",
@@ -177,15 +213,6 @@
           "os:": "MacOS",
           "base": "_na",
           "mac_address": "0c:4d:e9:cb:52:1c"
-        },
-        "36": {
-          "node_name": "macbookwifi",
-          "description": "Macbook Pro 2012 (Wifi IP)",
-          "type": "node",
-          "group": "laptop",
-          "os:": "MacOS",
-          "base": "_na",
-          "mac_address": "a4:5e:60:cb:3f:5d"
         },
         "40": {
           "node_name": "sarko",
@@ -279,12 +306,12 @@
         },
         "63": {
           "node_name": "ipad",
-          "description": "Apple iPad (2019 instance)",
+          "description": "Apple iPad (2020 instance)",
           "type": "mobile",
           "group": "mobile",
           "os:": "ios",
           "base": "_na",
-          "mac_address": "98:46:0a:7f:1d:0c"
+          "mac_address": "14:95:ce:ea:94:14"
         },
         "81": {
           "node_name": "lenovoflash1",

@@ -71,13 +71,13 @@
           "os:": "Proprietary",
           "mac_address": "88:6a:e3:ea:98:b7"
         },
-        "9": {
+        "2": {
           "node_name": "firewall",
           "description": "Netgear R7000 DD-WRT",
           "type": "appliances",
           "group": "network-infra",
           "os:": "DD-WRT",
-          "mac_address": "C4:04:15:44:CF:12"
+          "mac_address": "c4:04:15:44:cf:12"
         },
         "248": {
           "node_name": "download",
