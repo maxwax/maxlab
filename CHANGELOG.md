@@ -1,6 +1,10 @@
 
 # maxlab CHANGELOG
 
+# 1.1.2
+
+* Remove plex from filer since Plex is now on node 'media'
+
 # 1.1.1
 
 * Updating MAC addresses for current network devices
