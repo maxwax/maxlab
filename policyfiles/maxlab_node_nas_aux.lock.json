@@ -1,5 +1,5 @@
 {
-  "revision_id": "9954ea796fb2962fd1cb08e7a30be7249e1d6fa6f95c7f1d66203b02f2fa45db",
+  "revision_id": "20f1832e58b9a592134be371ed99c48359570bc14242e011a718adfed48a68c8",
   "name": "maxlab_node_nas_aux",
   "run_list": [
     "recipe[maxlab_firewall::base_firewalld]",
@@ -36,7 +36,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "258e8bf9dd0ecd81064286c7fb9f725533a22909",
+        "revision": "3cb4fa1c1e9b1f7e50c2a26a3e2f6c9906ca1090",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -56,7 +56,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "258e8bf9dd0ecd81064286c7fb9f725533a22909",
+        "revision": "3cb4fa1c1e9b1f7e50c2a26a3e2f6c9906ca1090",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -76,7 +76,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "258e8bf9dd0ecd81064286c7fb9f725533a22909",
+        "revision": "3cb4fa1c1e9b1f7e50c2a26a3e2f6c9906ca1090",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -96,7 +96,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "258e8bf9dd0ecd81064286c7fb9f725533a22909",
+        "revision": "3cb4fa1c1e9b1f7e50c2a26a3e2f6c9906ca1090",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -116,7 +116,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "258e8bf9dd0ecd81064286c7fb9f725533a22909",
+        "revision": "3cb4fa1c1e9b1f7e50c2a26a3e2f6c9906ca1090",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -128,15 +128,15 @@
       }
     },
     "maxlab_samba": {
-      "version": "1.2.3",
-      "identifier": "d59a44bc37110dba67476d5d1a847cc7f8883561",
-      "dotted_decimal_identifier": "60123790045548813.52467902143339140.137198310012257",
+      "version": "1.2.4",
+      "identifier": "a65495f59ed0582ae5d0fc797dfed0a3318b7471",
+      "dotted_decimal_identifier": "46817849181655128.12074634773626366.229399329469553",
       "source": "../cookbooks/maxlab_samba",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "258e8bf9dd0ecd81064286c7fb9f725533a22909",
+        "revision": "3cb4fa1c1e9b1f7e50c2a26a3e2f6c9906ca1090",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -156,7 +156,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "258e8bf9dd0ecd81064286c7fb9f725533a22909",
+        "revision": "3cb4fa1c1e9b1f7e50c2a26a3e2f6c9906ca1090",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -176,7 +176,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "258e8bf9dd0ecd81064286c7fb9f725533a22909",
+        "revision": "3cb4fa1c1e9b1f7e50c2a26a3e2f6c9906ca1090",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -196,7 +196,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "258e8bf9dd0ecd81064286c7fb9f725533a22909",
+        "revision": "3cb4fa1c1e9b1f7e50c2a26a3e2f6c9906ca1090",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -210,7 +210,7 @@
   },
   "default_attributes": {
     "config_firewall": {
-      "base_config": "base_firewall.maxlab.dmz"
+      "base_config": "base_firewall.maxlab.nas"
     },
     "instance_config_chrony": {
       "instance": "chrony.maxlab",
@@ -315,7 +315,7 @@
           ">= 0.0.0"
         ]
       ],
-      "maxlab_samba (1.2.3)": [
+      "maxlab_samba (1.2.4)": [
 
       ],
       "maxlab_smartd (1.2.2)": [
