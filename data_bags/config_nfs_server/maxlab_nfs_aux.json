@@ -44,6 +44,11 @@
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
+          },
+          "filer.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
           }
         }
       },
