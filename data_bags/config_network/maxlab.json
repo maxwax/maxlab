@@ -421,6 +421,15 @@
           "base": "maxlab_vmlab",
           "mac_address": "1A:92:46:4E:75:DD"
         },
+        "130": {
+          "node_name": "sco5",
+          "description": "SCO Openserver 5.0.7 Vintage node",
+          "type": "node",
+          "group": "vintage",
+          "os:": "Openserver5",
+          "base": "Openserver5",
+          "mac_address": "08:00:27:12:F4:1A"
+        },
         "196": {
           "node_name": "compare",
           "description": "Dev VM for comparing results of Chef runs with other VMs",

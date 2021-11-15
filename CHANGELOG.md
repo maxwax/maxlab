@@ -1,6 +1,10 @@
 
 # maxlab CHANGELOG
 
+# 1.1.3
+
+* Added node entry in config_network databag for sco5.maxlab SCO Openserver vintage VM
+
 # 1.1.2
 
 * Remove plex from filer since Plex is now on node 'media'
