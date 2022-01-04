@@ -26,7 +26,8 @@
     "bzip2",
     "which",
     "rsync",
-    "policycoreutils-python-utils"
+    "policycoreutils-python-utils",
+    "lm_sensors"
   ],
   "default_scripts": {
     "/etc": {

@@ -1,6 +1,10 @@
 
 # maxlab CHANGELOG
 
+# 1.1.4
+
+* Deploy lm_sensors on redhat8 and centos8 systems
+
 # 1.1.3
 
 * Added node entry in config_network databag for sco5.maxlab SCO Openserver vintage VM
