@@ -115,6 +115,15 @@
           "base": "_na",
           "mac_address": "C4:04:15:44:CF:11"
         },
+        "3": {
+          "node_name": "pfsense",
+          "description": "pfSense Firewall",
+          "type": "appliances",
+          "group": "network-infra",
+          "os:": "pfSense",
+          "base": "_na",
+          "mac_address": "00:1e:0b:6b:6d:db"
+        },
         "5": {
           "node_name": "wap",
           "description": "Netgear R7800",

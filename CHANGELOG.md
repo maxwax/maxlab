@@ -1,6 +1,10 @@
 
 # maxlab CHANGELOG
 
+# 1.1.3
+
+* Adding pfSense Firewall at .3
+
 # 1.1.4
 
 * Deploy lm_sensors on redhat8 and centos8 systems
