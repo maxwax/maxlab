@@ -1,7 +1,11 @@
 
 # maxlab CHANGELOG
 
-# 1.1.3
+# 1.1.6
+
+* Removed iPhone Xr, added iPhone 13 Pro
+
+# 1.1.5
 
 * Adding pfSense Firewall at .3
 

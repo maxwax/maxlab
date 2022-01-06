@@ -296,13 +296,13 @@
           "mac_address": "54:26:96:1b:17:a6"
         },
         "62": {
-          "node_name": "maxwaxxr",
-          "description": "Apple iPhone Xr",
+          "node_name": "maxwax13pro",
+          "description": "Apple iPhone 13 Pro",
           "type": "mobile",
           "group": "mobile",
           "os:": "ios",
           "base": "_na",
-          "mac_address": "d8:1c:79:ab:63:6e"
+          "mac_address": "5c:50:d9:2d:26:f3"
         },
         "63": {
           "node_name": "ipad",
