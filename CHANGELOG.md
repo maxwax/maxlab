@@ -1,6 +1,10 @@
 
 # maxlab CHANGELOG
 
+# 1.1.7
+
+* Make the Canon wireless printer static IP
+
 # 1.1.6
 
 * Removed iPhone Xr, added iPhone 13 Pro

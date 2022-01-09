@@ -205,6 +205,15 @@
           "base": "_na",
           "mac_address": "00:04:20:1e:02:ff"
         },
+        "28": {
+          "node_name": "canon_printer",
+          "description": "Canon IP7220 Printer",
+          "type": "appliances",
+          "group": "network-infra",
+          "os:": "_na",
+          "base": "_na",
+          "mac_address": "18:0c:ac:33:0d:3e"
+        },
         "35": {
           "node_name": "macbook",
           "description": "Macbook Pro 2012 (Wired IP)",
