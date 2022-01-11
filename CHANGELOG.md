@@ -1,6 +1,12 @@
 
 # maxlab CHANGELOG
 
+# 1.1.9
+
+* Removed laptopnas node
+* Removed old VM nodes 'blue', 'red, 'green', 'compare', 'graphite1', 'graphite2', 'repomanual'
+* Removed old hypervisor 'lenovoflash3'
+
 # 1.1.8
 
 * Add new NAS 'depot.maxlab'

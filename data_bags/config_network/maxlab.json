@@ -340,15 +340,6 @@
           "base": "maxlab_proxmox",
           "mac_address": "3c:97:0e:a7:8f:b8"
         },
-        "83": {
-          "node_name": "lenovoflash3",
-          "description": "Lenovo B590 Hypervisor",
-          "type": "node",
-          "group": "hypervisor",
-          "os:": "Proxmox",
-          "base": "maxlab_proxmox",
-          "mac_address": "3c:97:0e:a7:8f:a6"
-        },
         "95": {
           "node_name": "toshiprox",
           "description": "Toshiba Z40 Hypervisor",
@@ -394,15 +385,6 @@
           "base": "maxlab_vmlab",
           "mac_address": "A2:B0:07:BD:2F:FB"
         },
-        "104": {
-          "node_name": "repomanual",
-          "description": "Repository Infrastructure (TFTP, HTTP) Manual Build",
-          "type": "node",
-          "group": "infra",
-          "os:": "CentOS",
-          "base": "maxlab_vmlab",
-          "mac_address": "E2:B2:DD:8B:67:B4"
-        },
         "105": {
           "node_name": "bank",
           "description": "Core Infrastructure (DNS, DHCP, NTP) via Chef",
@@ -411,24 +393,6 @@
           "os:": "CentOS",
           "base": "maxlab_vmlab",
           "mac_address": "52:C8:DD:62:5C:76"
-        },
-        "120": {
-          "node_name": "graphite1",
-          "description": "Graphite Metric Server VM 1",
-          "type": "node",
-          "group": "graphite",
-          "os:": "CentOS",
-          "base": "maxlab_vmlab",
-          "mac_address": "CA:74:81:61:F8:E4"
-        },
-        "121": {
-          "node_name": "graphite2",
-          "description": "Graphite Metric Server VM 2",
-          "type": "node",
-          "group": "graphite",
-          "os:": "CentOS",
-          "base": "maxlab_vmlab",
-          "mac_address": "76:9B:F2:F3:EE:FB"
         },
         "122": {
           "node_name": "pxetest1",
@@ -448,42 +412,6 @@
           "base": "Openserver5",
           "mac_address": "08:00:27:12:F4:1A"
         },
-        "196": {
-          "node_name": "compare",
-          "description": "Dev VM for comparing results of Chef runs with other VMs",
-          "type": "node",
-          "group": "vmlab",
-          "os:": "CentOS",
-          "base": "maxlab_vmlab",
-          "mac_address": "2E:C6:82:57:7D:E3"
-        },
-        "197": {
-          "node_name": "blue",
-          "description": "Development VM blue",
-          "type": "node",
-          "group": "vmlab",
-          "os:": "CentOS",
-          "base": "maxlab_vmlab",
-          "mac_address": "32:2A:AE:44:28:68"
-        },
-        "198": {
-          "node_name": "red",
-          "description": "Development VM testing red",
-          "type": "node",
-          "group": "vmlab",
-          "os:": "CentOS",
-          "base": "maxlab_vmlab",
-          "mac_address": "BE:0C:1C:27:6E:38"
-        },
-        "199": {
-          "node_name": "green",
-          "description": "Development VM testing green",
-          "type": "node",
-          "group": "vmlab",
-          "os:": "CentOS",
-          "base": "maxlab_vmlab",
-          "mac_address": "76:12:2E:70:C2:2D"
-        },
         "248": {
           "node_name": "depot",
           "description": "HP MediaSmart Server EX495 (NFS, Samba)",
@@ -492,15 +420,6 @@
           "os:": "CentOS",
           "base": "maxlab_vmlab",
           "mac_address": "00:26:2d:01:90:34"
-        },
-        "249": {
-          "node_name": "laptopnas",
-          "description": "Lenovo B590 for use as NAS",
-          "type": "node",
-          "group": "NAS",
-          "os:": "CentOS",
-          "base": "maxlab_vmlab",
-          "mac_address": "3c:97:0e:a7:8a:9d"
         },
         "250": {
           "node_name": "filer",
