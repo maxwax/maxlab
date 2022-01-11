@@ -1,6 +1,10 @@
 
 # maxlab CHANGELOG
 
+# 1.1.8
+
+* Add new NAS 'depot.maxlab'
+
 # 1.1.7
 
 * Make the Canon wireless printer static IP

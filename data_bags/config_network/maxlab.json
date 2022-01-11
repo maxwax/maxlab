@@ -484,6 +484,15 @@
           "base": "maxlab_vmlab",
           "mac_address": "76:12:2E:70:C2:2D"
         },
+        "248": {
+          "node_name": "depot",
+          "description": "HP MediaSmart Server EX495 (NFS, Samba)",
+          "type": "node",
+          "group": "NAS",
+          "os:": "CentOS",
+          "base": "maxlab_vmlab",
+          "mac_address": "00:26:2d:01:90:34"
+        },
         "249": {
           "node_name": "laptopnas",
           "description": "Lenovo B590 for use as NAS",
