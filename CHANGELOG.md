@@ -1,6 +1,11 @@
 
 # maxlab CHANGELOG
 
+# 1.1.11
+
+* Updated names of Apple Airports to include '-wired' when on wire
+* Updated MAC addresses of airport-bedroom-wire and airport-bedroom-wireless to reflect the replacement of old 1st gen airport with 2nd gen Airport Express
+
 # 1.1.10
 
 * Rename canon_printer canon-printer to follow standard DNS names
