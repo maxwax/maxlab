@@ -206,7 +206,7 @@
           "mac_address": "00:04:20:1e:02:ff"
         },
         "28": {
-          "node_name": "canon_printer",
+          "node_name": "canon-printer",
           "description": "Canon IP7220 Printer",
           "type": "appliances",
           "group": "network-infra",

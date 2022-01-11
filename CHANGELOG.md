@@ -1,6 +1,10 @@
 
 # maxlab CHANGELOG
 
+# 1.1.10
+
+* Rename canon_printer canon-printer to follow standard DNS names
+
 # 1.1.9
 
 * Removed laptopnas node
