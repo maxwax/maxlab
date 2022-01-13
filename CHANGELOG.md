@@ -1,6 +1,10 @@
 
 # maxlab CHANGELOG
 
+# 1.1.12
+
+* Introducing NAS server 'depot.maxlab'
+
 # 1.1.11
 
 * Updated names of Apple Airports to include '-wired' when on wire

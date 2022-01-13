@@ -1,0 +1,38 @@
+{
+  "id": "maxlab_samba_depot",
+  "doc": "Samba server configuration for depot.maxlab",
+  "cfg": {
+    "sections": {
+      "global": {
+        "workgroup": "MAXLAB",
+        "security": "user",
+        "passdb backend": "tdbsam",
+        "local master": "yes",
+        "os level": "33",
+        "preferred master": "yes",
+        "printing": "cups",
+        "printcap name": "cups",
+        "load printers": "no",
+        "cups options": "raw",
+        "min protocol": "SMB2",
+        "interfaces": ["lo", "192.168.9.0/24"],
+        "hosts allow": [ "127", "192.168.9."]
+      },
+      "homes": {
+        "comment": "Home directories",
+        "valid users": [ "%S, %D%w%S" ],
+        "browseable": "no",
+        "read only": "no",
+        "inherit acls": "yes"
+      },
+      "depotdata": {
+        "path": "/srv/depotdata",
+        "comment": "Depot Storage",
+        "valid users": [ "maxwell" ],
+        "browseable": "yes",
+        "read only": "no",
+        "create mask": "0700"
+      }
+    }
+  }
+}
