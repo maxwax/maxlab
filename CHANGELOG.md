@@ -1,6 +1,10 @@
 
 # maxlab CHANGELOG
 
+# 1.1.14
+
+* Replacing /srv/filerdata/iso share to /srv/filerdata/iso/proxmox for dedicated Proxmox ISO storage source
+
 # 1.1.13
 
 * New NFS share /srv/filerdata/iso on filerdata for use by Proxmox as ISO source

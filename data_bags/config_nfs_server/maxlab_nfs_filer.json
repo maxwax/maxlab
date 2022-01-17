@@ -42,7 +42,7 @@
           }
         }
       },
-      "/srv/filerdata/iso": {
+      "/srv/filerdata/iso/proxmox": {
         "enabled": true,
         "owner": "maxwell",
         "group": "maxwell",
@@ -118,11 +118,6 @@
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
           },
-          "lenovoflash3.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
           "sarko.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
@@ -153,11 +148,6 @@
             ]
           },
           "lenovoflash2.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "lenovoflash3.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
