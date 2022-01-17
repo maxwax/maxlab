@@ -1,6 +1,10 @@
 
 # maxlab CHANGELOG
 
+# 1.1.13
+
+* New NFS share /srv/filerdata/iso on filerdata for use by Proxmox as ISO source
+
 # 1.1.12
 
 * Introducing NAS server 'depot.maxlab'
