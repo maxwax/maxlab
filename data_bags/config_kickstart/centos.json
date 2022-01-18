@@ -2,6 +2,450 @@
   "id": "centos",
   "dist_label": "CentOS Linux",
   "centos": {
+    "8.5": {
+      "2111": {
+        "base": {
+          "menu_label": "CentOS Linux 8.5.2111 'Base' node",
+          "template": "ks-centos8.erb",
+          "group": "1",
+          "network": "maxlab",
+          "subnet": "192.168.9.0",
+          "url": "dist/centos",
+          "isodir": "CentOS-8.5.2111-x86_64-dvd1",
+          "interface": "eth0",
+          "root_device": "sda",
+          "bootloader_options": "nopti noibrs noibpb",
+          "serial_console": "earlyprintk=serial,ttyS0 console=tty0 console=ttyS0,115200,8n1",
+          "partitions": {
+            "biosboot": {
+              "size": "1",
+              "options": ""
+            },
+            "/boot": {
+              "size": 1024,
+              "options": ""
+            },
+            "swap": {
+              "size": 2048,
+              "options": ""
+            },
+            "pv.01": {
+              "size": 1,
+              "options": "--grow"
+            }
+          },
+          "volgroup": {
+            "vg_name": "vg_linuxos",
+            "physical_vol": "pv.01"
+          },
+          "volumes": {
+            "/": {
+              "vol_name": "lv_root",
+              "vg_name": "vg_linuxos",
+              "label": "root",
+              "size": 2048,
+              "fstype": "ext4",
+              "options": "--grow --fsoptions=defaults,relatime,nodiratime"
+            },
+            "/var/log": {
+              "vol_name": "lv_var.log",
+              "vg_name": "vg_linuxos",
+              "label": "var.log",
+              "size": 2048,
+              "fstype": "ext4",
+              "options": "--fsoptions='defaults,relatime,nodiratime,nodev,nosuid,noexec' --mkfsoptions='-m 1'"
+            }
+          },
+          "timezone": {
+            "name": "America/Denver",
+            "options": "--utc"
+          },
+          "authconfig": {
+            "options": "--enableshadow --passalgo=sha512"
+          },
+          "selinux": {
+            "mode": "permissive",
+            "options": ""
+          },
+          "firewall": {
+            "options": "--enabled --ssh"
+          },
+          "final_action": "#reboot",
+          "misc_options": [
+            "skipx",
+            "eula --agree"
+          ],
+          "packages": [
+            "authconfig",
+            "bc",
+            "wget",
+            "nc",
+            "net-tools",
+            "bzip2",
+            "bind-utils",
+            "vim"
+          ],
+          "add_ons": {
+            "com_redhat_kdump": "--disable"
+          },
+          "password_file": [
+            "kickstart-rootpw-maxlab.txt"
+          ],
+          "post_scripts": {
+            "static-hostname": {
+              "filename": "script-rhel7-static-hostname",
+              "post_options": "--nochroot --log=/mnt/sysimage/root/ks-post-hostname.log"
+            },
+            "static-ipv4": {
+              "filename": "script-rhel-static-ipv4",
+              "post_options": "--log=/mnt/sysimage/root/ks-post-static-ipv4.log"
+            },
+            "yum-update": {
+              "filename": "script-rhel-yum-update",
+              "post_options": "--log=/mnt/sysimage/root/ks-post-yum-update.log"
+            }
+          }
+        },
+        "base-xfs": {
+          "menu_label": "CentOS Linux 8.5.2111 'base-xfs' node using XFS",
+          "template": "ks-centos8.erb",
+          "group": "2",
+          "network": "maxlab",
+          "subnet": "192.168.9.0",
+          "url": "dist/centos",
+          "isodir": "CentOS-8.5.2111-x86_64-dvd1",
+          "interface": "eth0",
+          "root_device": "sda",
+          "bootloader_options": "nopti noibrs noibpb",
+          "serial_console": "earlyprintk=serial,ttyS0 console=tty0 console=ttyS0,115200,8n1",
+          "partitions": {
+            "biosboot": {
+              "size": "1",
+              "options": ""
+            },
+            "/boot": {
+              "size": 1024,
+              "options": ""
+            },
+            "swap": {
+              "size": 2048,
+              "options": ""
+            },
+            "pv.01": {
+              "size": 1,
+              "options": "--grow"
+            }
+          },
+          "volgroup": {
+            "vg_name": "vg_linuxos",
+            "physical_vol": "pv.01"
+          },
+          "volumes": {
+            "/": {
+              "vol_name": "lv_root",
+              "vg_name": "vg_linuxos",
+              "label": "root",
+              "size": 2048,
+              "fstype": "xfs",
+              "options": "--grow --fsoptions=defaults,relatime,nodiratime"
+            },
+            "/var/log": {
+              "vol_name": "lv_var.log",
+              "vg_name": "vg_linuxos",
+              "label": "var.log",
+              "size": 2048,
+              "fstype": "xfs",
+              "options": "--fsoptions='defaults,relatime,nodiratime,nodev,nosuid,noexec' --mkfsoptions='-m 1'"
+            }
+          },
+          "timezone": {
+            "name": "America/Denver",
+            "options": "--utc"
+          },
+          "authconfig": {
+            "options": "--enableshadow --passalgo=sha512"
+          },
+          "selinux": {
+            "mode": "permissive",
+            "options": ""
+          },
+          "firewall": {
+            "options": "--enabled --ssh"
+          },
+          "final_action": "#reboot",
+          "misc_options": [
+            "skipx",
+            "eula --agree"
+          ],
+          "packages": [
+            "authconfig",
+            "bc",
+            "wget",
+            "nc",
+            "net-tools",
+            "bzip2",
+            "bind-utils",
+            "vim"
+          ],
+          "add_ons": {
+            "com_redhat_kdump": "--disable"
+          },
+          "password_file": [
+            "kickstart-rootpw-maxlab.txt"
+          ],
+          "post_scripts": {
+            "static-hostname": {
+              "filename": "script-rhel7-static-hostname",
+              "post_options": "--nochroot --log=/mnt/sysimage/root/ks-post-hostname.log"
+            },
+            "static-ipv4": {
+              "filename": "script-rhel-static-ipv4",
+              "post_options": "--log=/mnt/sysimage/root/ks-post-static-ipv4.log"
+            },
+            "yum-update": {
+              "filename": "script-rhel-yum-update",
+              "post_options": "--log=/mnt/sysimage/root/ks-post-yum-update.log"
+            }
+          }
+        },
+        "manyfs": {
+          "menu_label": "CentOS Linux 8.5.2111 'manyfs' node with many filesystems",
+          "template": "ks-centos8.erb",
+          "group": "3",
+          "network": "maxlab",
+          "subnet": "192.168.9.0",
+          "url": "dist/centos",
+          "isodir": "CentOS-8.5.2111-x86_64-dvd1",
+          "interface": "eth0",
+          "root_device": "sda",
+          "bootloader_options": "nopti noibrs noibpb",
+          "serial_console": "earlyprintk=serial,ttyS0 console=tty0 console=ttyS0,115200,8n1",
+          "partitions": {
+            "biosboot": {
+              "size": "1",
+              "options": ""
+            },
+            "/boot": {
+              "size": 1024,
+              "options": ""
+            },
+            "swap": {
+              "size": 2048,
+              "options": ""
+            },
+            "pv.01": {
+              "size": 1,
+              "options": "--grow"
+            }
+          },
+          "volgroup": {
+            "vg_name": "vg_linuxos",
+            "physical_vol": "pv.01"
+          },
+          "volumes": {
+            "/": {
+              "vol_name": "lv_root",
+              "vg_name": "vg_linuxos",
+              "label": "root",
+              "size": 2048,
+              "fstype": "ext4",
+              "options": "--grow --fsoptions=defaults,relatime,nodiratime"
+            },
+            "/var": {
+              "vol_name": "lv_var",
+              "vg_name": "vg_linuxos",
+              "label": "var",
+              "size": 24576,
+              "fstype": "ext4",
+              "options": "--fsoptions='defaults,relatime,nodiratime,nodev,nosuid,noexec' --mkfsoptions='-m 1'"
+            },
+            "/var/log": {
+              "vol_name": "lv_var.log",
+              "vg_name": "vg_linuxos",
+              "label": "var.log",
+              "size": 4096,
+              "fstype": "ext4",
+              "options": "--fsoptions='defaults,relatime,nodiratime,nodev,nosuid,noexec' --mkfsoptions='-m 1'"
+            },
+            "/var/log/audit": {
+              "vol_name": "lv_var.log.audit",
+              "vg_name": "vg_linuxos",
+              "label": "var.log.audit",
+              "size": 1024,
+              "fstype": "ext4",
+              "options": "--fsoptions='defaults,relatime,nodiratime,nodev,nosuid,noexec' --mkfsoptions='-m 1'"
+            },
+            "/home": {
+              "vol_name": "lv_home",
+              "vg_name": "vg_linuxos",
+              "label": "home",
+              "size": 8192,
+              "fstype": "ext4",
+              "options": "--fsoptions='defaults,relatime,nodiratime,nodev,nosuid,noexec' --mkfsoptions='-m 1'"
+            }
+          },
+          "timezone": {
+            "name": "America/Denver",
+            "options": "--utc"
+          },
+          "authconfig": {
+            "options": "--enableshadow --passalgo=sha512"
+          },
+          "selinux": {
+            "mode": "permissive",
+            "options": ""
+          },
+          "firewall": {
+            "options": "--enabled --ssh"
+          },
+          "final_action": "#reboot",
+          "misc_options": [
+            "skipx",
+            "eula --agree"
+          ],
+          "packages": [
+            "authconfig",
+            "bc",
+            "wget",
+            "nc",
+            "net-tools",
+            "bzip2",
+            "bind-utils",
+            "vim"
+          ],
+          "add_ons": {
+            "com_redhat_kdump": "--disable"
+          },
+          "password_file": [
+            "kickstart-rootpw-maxlab.txt"
+          ],
+          "post_scripts": {
+            "static-hostname": {
+              "filename": "script-rhel7-static-hostname",
+              "post_options": "--nochroot --log=/mnt/sysimage/root/ks-post-hostname.log"
+            },
+            "static-ipv4": {
+              "filename": "script-rhel-static-ipv4",
+              "post_options": "--log=/mnt/sysimage/root/ks-post-static-ipv4.log"
+            },
+            "yum-update": {
+              "filename": "script-rhel-yum-update",
+              "post_options": "--log=/mnt/sysimage/root/ks-post-yum-update.log"
+            }
+          }
+        },
+        "XL": {
+          "menu_label": "CentOS Linux 8.5.2111 'XL' node with large filesystems",
+          "template": "ks-centos8.erb",
+          "group": "3",
+          "network": "maxlab",
+          "subnet": "192.168.9.0",
+          "url": "dist/centos",
+          "isodir": "CentOS-8.5.2111-x86_64-dvd1",
+          "interface": "eth0",
+          "root_device": "sda",
+          "bootloader_options": "nopti noibrs noibpb",
+          "serial_console": "earlyprintk=serial,ttyS0 console=tty0 console=ttyS0,115200,8n1",
+          "partitions": {
+            "biosboot": {
+              "size": "1",
+              "options": ""
+            },
+            "/boot": {
+              "size": 1024,
+              "options": ""
+            },
+            "swap": {
+              "size": 2048,
+              "options": ""
+            },
+            "pv.01": {
+              "size": 1,
+              "options": "--grow"
+            }
+          },
+          "volgroup": {
+            "vg_name": "vg_linuxos",
+            "physical_vol": "pv.01"
+          },
+          "volumes": {
+            "/": {
+              "vol_name": "lv_root",
+              "vg_name": "lv_home",
+              "label": "root",
+              "size": 24576,
+              "fstype": "ext4",
+              "options": "--grow --fsoptions=defaults,relatime,nodiratime"
+            },
+            "/var": {
+              "vol_name": "lv_var.log",
+              "vg_name": "lv_home",
+              "label": "var.log",
+              "size": 24576,
+              "fstype": "ext4",
+              "options": "--fsoptions='defaults,relatime,nodiratime,nodev,nosuid,noexec' --mkfsoptions='-m 1'"
+            },
+            "/var/log": {
+              "vol_name": "lv_var.log",
+              "vg_name": "lv_home",
+              "label": "var.log",
+              "size": 8192,
+              "fstype": "ext4",
+              "options": "--fsoptions='defaults,relatime,nodiratime,nodev,nosuid,noexec' --mkfsoptions='-m 1'"
+            }
+          },
+          "timezone": {
+            "name": "America/Denver",
+            "options": "--utc"
+          },
+          "authconfig": {
+            "options": "--enableshadow --passalgo=sha512"
+          },
+          "selinux": {
+            "mode": "permissive",
+            "options": ""
+          },
+          "firewall": {
+            "options": "--enabled --ssh"
+          },
+          "final_action": "#reboot",
+          "misc_options": [
+            "skipx",
+            "eula --agree"
+          ],
+          "packages": [
+            "authconfig",
+            "bc",
+            "wget",
+            "nc",
+            "net-tools",
+            "bzip2",
+            "bind-utils",
+            "vim"
+          ],
+          "add_ons": {
+            "com_redhat_kdump": "--disable"
+          },
+          "password_file": [
+            "kickstart-rootpw-maxlab.txt"
+          ],
+          "post_scripts": {
+            "static-hostname": {
+              "filename": "script-rhel7-static-hostname",
+              "post_options": "--nochroot --log=/mnt/sysimage/root/ks-post-hostname.log"
+            },
+            "static-ipv4": {
+              "filename": "script-rhel-static-ipv4",
+              "post_options": "--log=/mnt/sysimage/root/ks-post-static-ipv4.log"
+            },
+            "yum-update": {
+              "filename": "script-rhel-yum-update",
+              "post_options": "--log=/mnt/sysimage/root/ks-post-yum-update.log"
+            }
+          }
+        }
+      }
+    },
     "8": {
       "1905": {
         "base": {

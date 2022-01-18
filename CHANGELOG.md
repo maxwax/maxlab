@@ -1,6 +1,10 @@
 
 # maxlab CHANGELOG
 
+# 1.1.16
+
+* Adding JSON branch in config_kickstart centos.json to allow CentOS 8.5.2111
+
 # 1.1.15
 
 * Re-purposing HP desktop 'media' as 'coalbox' a VM lab running Proxmox Hypervisor
