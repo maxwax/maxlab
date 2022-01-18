@@ -1,5 +1,5 @@
 {
-  "revision_id": "7290ca37e8386f07c2a964fa906388a55d209f1b635e2a2f1d5f1fc9547e544a",
+  "revision_id": "14d5aab10c1fe7c635e49427ae44357fa25ed2709234942daa2d3cbad6faeda3",
   "name": "maxlab_node_netinfra_primary",
   "run_list": [
     "recipe[maxlab_base::deploy]",
@@ -35,7 +35,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "b871719d3e72800fd844231b356cdc0917d84476",
+        "revision": "8d02f75d26dc64a5299a6c4d18508de7f7eb1c9c",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -55,7 +55,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "b871719d3e72800fd844231b356cdc0917d84476",
+        "revision": "8d02f75d26dc64a5299a6c4d18508de7f7eb1c9c",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -75,7 +75,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "b871719d3e72800fd844231b356cdc0917d84476",
+        "revision": "8d02f75d26dc64a5299a6c4d18508de7f7eb1c9c",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -95,7 +95,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "b871719d3e72800fd844231b356cdc0917d84476",
+        "revision": "8d02f75d26dc64a5299a6c4d18508de7f7eb1c9c",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -115,7 +115,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "b871719d3e72800fd844231b356cdc0917d84476",
+        "revision": "8d02f75d26dc64a5299a6c4d18508de7f7eb1c9c",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -135,7 +135,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "b871719d3e72800fd844231b356cdc0917d84476",
+        "revision": "8d02f75d26dc64a5299a6c4d18508de7f7eb1c9c",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -147,15 +147,15 @@
       }
     },
     "maxlab_users": {
-      "version": "1.2.0",
-      "identifier": "055abf71ee4527b89d38ea67b1758b9be583fbe9",
-      "dotted_decimal_identifier": "1507153180247335.51964263491154293.153501686823913",
+      "version": "1.2.1",
+      "identifier": "26e1cd9621610fb2e249352dd505ec7471b69554",
+      "dotted_decimal_identifier": "10944322218320143.50351349907182853.259984868152660",
       "source": "../cookbooks/maxlab_users",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "b871719d3e72800fd844231b356cdc0917d84476",
+        "revision": "8d02f75d26dc64a5299a6c4d18508de7f7eb1c9c",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -277,7 +277,7 @@
           ">= 0.0.0"
         ]
       ],
-      "maxlab_users (1.2.0)": [
+      "maxlab_users (1.2.1)": [
 
       ]
     }

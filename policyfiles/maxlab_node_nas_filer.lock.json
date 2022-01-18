@@ -1,5 +1,5 @@
 {
-  "revision_id": "ed58c620eac5f0b1b2e00ac011c01316f2736164350f5be3f273f8b685890aeb",
+  "revision_id": "ed6b92ecff94f11201583a7838ed8e8634a5a601efaae194f60d58ba2747f58d",
   "name": "maxlab_node_nas_filer",
   "run_list": [
     "recipe[maxlab_firewall::base_firewalld]",
@@ -36,7 +36,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "3cb4fa1c1e9b1f7e50c2a26a3e2f6c9906ca1090",
+        "revision": "8d02f75d26dc64a5299a6c4d18508de7f7eb1c9c",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -56,7 +56,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "3cb4fa1c1e9b1f7e50c2a26a3e2f6c9906ca1090",
+        "revision": "8d02f75d26dc64a5299a6c4d18508de7f7eb1c9c",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -76,7 +76,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "3cb4fa1c1e9b1f7e50c2a26a3e2f6c9906ca1090",
+        "revision": "8d02f75d26dc64a5299a6c4d18508de7f7eb1c9c",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -96,7 +96,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "3cb4fa1c1e9b1f7e50c2a26a3e2f6c9906ca1090",
+        "revision": "8d02f75d26dc64a5299a6c4d18508de7f7eb1c9c",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -116,7 +116,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "3cb4fa1c1e9b1f7e50c2a26a3e2f6c9906ca1090",
+        "revision": "8d02f75d26dc64a5299a6c4d18508de7f7eb1c9c",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -136,7 +136,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "3cb4fa1c1e9b1f7e50c2a26a3e2f6c9906ca1090",
+        "revision": "8d02f75d26dc64a5299a6c4d18508de7f7eb1c9c",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -156,7 +156,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "3cb4fa1c1e9b1f7e50c2a26a3e2f6c9906ca1090",
+        "revision": "8d02f75d26dc64a5299a6c4d18508de7f7eb1c9c",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -168,15 +168,15 @@
       }
     },
     "maxlab_users": {
-      "version": "1.2.0",
-      "identifier": "055abf71ee4527b89d38ea67b1758b9be583fbe9",
-      "dotted_decimal_identifier": "1507153180247335.51964263491154293.153501686823913",
+      "version": "1.2.1",
+      "identifier": "26e1cd9621610fb2e249352dd505ec7471b69554",
+      "dotted_decimal_identifier": "10944322218320143.50351349907182853.259984868152660",
       "source": "../cookbooks/maxlab_users",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "3cb4fa1c1e9b1f7e50c2a26a3e2f6c9906ca1090",
+        "revision": "8d02f75d26dc64a5299a6c4d18508de7f7eb1c9c",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -196,7 +196,7 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "3cb4fa1c1e9b1f7e50c2a26a3e2f6c9906ca1090",
+        "revision": "8d02f75d26dc64a5299a6c4d18508de7f7eb1c9c",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
@@ -321,7 +321,7 @@
       "maxlab_smartd (1.2.2)": [
 
       ],
-      "maxlab_users (1.2.0)": [
+      "maxlab_users (1.2.1)": [
 
       ],
       "mylab_smartd (1.2.1)": [
