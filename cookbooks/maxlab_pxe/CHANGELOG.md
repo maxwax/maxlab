@@ -1,5 +1,10 @@
 # maxlab_pxe CHANGELOG
 
+# 1.2.3
+
+* Remove 'install' from kickstart script (deprecated)
+* Add 'poweroff' command so it reboots automatically.  Could do 'reboot' but it will just PXE again, so lets stop it, adjust the boot order, then let the user manually start.
+
 # 1.2.2 Replace 'rhel' with 'redhat'
 
 * Replace 'rhel' with 'redhat' when setting attributes related to OS.
