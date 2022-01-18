@@ -36,6 +36,7 @@ config_servicesets[service_set]['users'].each do | username |
     gid config_users[username]['group']
     shell config_users[username]['shell']
     comment config_users[username]['fullname']
+    home '/home/#{username}'
 
     action :create
   end

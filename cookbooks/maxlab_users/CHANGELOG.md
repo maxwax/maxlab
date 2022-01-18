@@ -1,5 +1,9 @@
 # maxlab_users CHANGELOG
 
+# 1.2.1
+
+* Make a home directory for the users we make!  Not required for many users created just for serivces, but hard to login as a default non-root user without a home.
+
 # 1.2.0
 
 * Add general_kitchen.rb recipe to create users with uid/gid values +1000 so user can be created in Test Kitchen VMs and not interfere with users like vagrant/1000.  This was to support maxlab_nfs which can't create a directory and set its user or group unless those user/groups exist first.
