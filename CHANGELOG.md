@@ -1,6 +1,11 @@
 
 # maxlab CHANGELOG
 
+# 1.1.15
+
+* Re-purposing HP desktop 'media' as 'coalbox' a VM lab running Proxmox Hypervisor
+* Added VM node 'exper' for experimentation
+
 # 1.1.14
 
 * Replacing /srv/filerdata/iso share to /srv/filerdata/iso/proxmox for dedicated Proxmox ISO storage source

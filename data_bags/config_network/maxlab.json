@@ -403,6 +403,15 @@
           "base": "maxlab_vmlab",
           "mac_address": "1A:92:46:4E:75:DD"
         },
+        "123": {
+          "node_name": "exper",
+          "description": "Experimental VM node",
+          "type": "node",
+          "group": "NAS",
+          "os:": "CentOS",
+          "base": "maxlab_vmlab",
+          "mac_address": "a6:be:27:e2:f3:b2"
+        },
         "130": {
           "node_name": "sco5",
           "description": "SCO Openserver 5.0.7 Vintage node",
@@ -431,12 +440,12 @@
           "mac_address": "00:26:2d:00:04:7c"
         },
         "251": {
-          "node_name": "media",
-          "description": "HP Desktop Media NAS",
+          "node_name": "coalbox",
+          "description": "HP Desktop VM Lab (Proxmox)",
           "type": "node",
-          "group": "NAS",
-          "os:": "CentOS",
-          "base": "maxlab_nas",
+          "group": "hypervisor",
+          "os:": "Proxmox",
+          "base": "maxlab_proxmox",
           "mac_address": "2c:44:fd:10:5f:c4"
         },
         "252": {
