@@ -1,0 +1,41 @@
+{
+  "id": "maxlab_plex",
+  "network": "maxlab",
+  "subnet": "192.168.9.0",
+  "owner": "plex",
+  "group": "plex",
+  "mode": "0655",
+  "package_name": "plexmediaserver",
+  "service_name": "plexmediaserver",
+  "directories": [
+    "/srv/audiovideo/Video/Buddhism",
+    "/srv/audiovideo/Video/Movies/Unwatched",
+    "/srv/audiovideo/Video/Television",
+    "/srv/audiovideo/Video/youtube",
+    "/srv/audiovideo/Music",
+    "/srv/avarchive/ApD",
+    "/srv/avarchive/Classic",
+    "/srv/avarchive/Classic-Watched",
+    "/srv/avarchive/Documentary",
+    "/srv/avarchive/Watched"
+  ],
+  "firewall": {
+    "firewalld": {
+      "services": [
+        ],
+      "ports": [
+        "32400/tcp",
+        "1900/udp",
+        "3005/tcp",
+        "5353/udp",
+        "32410/udp",
+        "32412/udp",
+        "32413/udp",
+        "32414/udp",
+        "32469/tcp"
+      ],
+      "sources": [
+      ]
+    }
+  }
+}
