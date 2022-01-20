@@ -166,6 +166,11 @@
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
+          },
+          "coalbox.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
           }
         }
       }
