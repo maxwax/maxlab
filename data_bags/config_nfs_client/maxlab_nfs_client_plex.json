@@ -1,0 +1,30 @@
+{
+  "id": "maxlab_nfs_client_plex",
+  "doc": "NFS client configuration for plex.maxlab",
+  "cfg": {
+    "mounts" : {
+      "central-audiovideo": {
+        "enabled": true,
+        "comment": "Audiovideo files on central at /srv/audiovideo",
+        "nfs_server": "central.maxlab",
+        "nfs_share": "/srv/audiovideo",
+        "local_mount_directory": "/net/audiovideo",
+        "nfs_version": "nfs4",
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755"
+        },
+      "central-avarchive": {
+        "enabled": true,
+        "comment": "AV Archive files on central at /srv/avarchive",
+        "nfs_server": "central.maxlab",
+        "nfs_share": "/srv/avarchive",
+        "local_mount_directory": "/net/avarchive",
+        "nfs_version": "nfs4",
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755"
+      }
+    }
+  }
+}
