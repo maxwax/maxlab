@@ -1,6 +1,17 @@
 
 # maxlab CHANGELOG
 
+# 1.1.18
+
+* Adding plex.maxlab as a VM for Plex Media Server
+* Removing references to media.maxlab for NFS access
+* Adding access for plex.maxlab for NFS access for audiovideo storage
+* Moving existing config_plex data bag for media.maxlab to plex.maxlab
+
+# 1.1.17
+
+* Adding coalbox.maxlab to allowed share of filer's /srv/filerdata/iso/proxmox share
+
 # 1.1.16
 
 * Adding JSON branch in config_kickstart centos.json to allow CentOS 8.5.2111
