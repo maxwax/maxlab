@@ -1,5 +1,5 @@
 {
-  "revision_id": "7f5e5b24b48b978d6a0a3921c75b4fc3ff1231c61cc04147b6ec96cbe6af95ac",
+  "revision_id": "acf7509a2c66d3ec9e038c704c993037409e2ed2609f3b2893397706a5cf453f",
   "name": "maxlab_node_infra_plex",
   "run_list": [
     "recipe[maxlab_firewall::base_firewalld]",
@@ -35,11 +35,11 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "3df55ff5738aa931dfd22e5431fbd15a33083811",
+        "revision": "12d0ad18d3d62e6439b063b33109643c80eb2624",
         "working_tree_clean": false,
-        "published": false,
+        "published": true,
         "synchronized_remote_branches": [
-
+          "origin/master"
         ]
       },
       "source_options": {
@@ -55,11 +55,11 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "3df55ff5738aa931dfd22e5431fbd15a33083811",
+        "revision": "12d0ad18d3d62e6439b063b33109643c80eb2624",
         "working_tree_clean": false,
-        "published": false,
+        "published": true,
         "synchronized_remote_branches": [
-
+          "origin/master"
         ]
       },
       "source_options": {
@@ -75,11 +75,11 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "3df55ff5738aa931dfd22e5431fbd15a33083811",
+        "revision": "12d0ad18d3d62e6439b063b33109643c80eb2624",
         "working_tree_clean": false,
-        "published": false,
+        "published": true,
         "synchronized_remote_branches": [
-
+          "origin/master"
         ]
       },
       "source_options": {
@@ -88,18 +88,18 @@
     },
     "maxlab_nfs_client": {
       "version": "1.0.0",
-      "identifier": "6ba216f630a7b17da84f6aafab3b4a476eac8bf1",
-      "dotted_decimal_identifier": "30296042011404209.35369431134612283.81670659935217",
+      "identifier": "7b3aff852de63877c1bc6164a84178d202c03ca8",
+      "dotted_decimal_identifier": "34686291260859960.33708537060567105.132843384618152",
       "source": "../cookbooks/maxlab_nfs_client",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "3df55ff5738aa931dfd22e5431fbd15a33083811",
+        "revision": "12d0ad18d3d62e6439b063b33109643c80eb2624",
         "working_tree_clean": false,
-        "published": false,
+        "published": true,
         "synchronized_remote_branches": [
-
+          "origin/master"
         ]
       },
       "source_options": {
@@ -115,11 +115,11 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "3df55ff5738aa931dfd22e5431fbd15a33083811",
+        "revision": "12d0ad18d3d62e6439b063b33109643c80eb2624",
         "working_tree_clean": false,
-        "published": false,
+        "published": true,
         "synchronized_remote_branches": [
-
+          "origin/master"
         ]
       },
       "source_options": {
@@ -135,11 +135,11 @@
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "3df55ff5738aa931dfd22e5431fbd15a33083811",
+        "revision": "12d0ad18d3d62e6439b063b33109643c80eb2624",
         "working_tree_clean": false,
-        "published": false,
+        "published": true,
         "synchronized_remote_branches": [
-
+          "origin/master"
         ]
       },
       "source_options": {
@@ -148,18 +148,18 @@
     },
     "maxlab_users": {
       "version": "1.2.1",
-      "identifier": "26e1cd9621610fb2e249352dd505ec7471b69554",
-      "dotted_decimal_identifier": "10944322218320143.50351349907182853.259984868152660",
+      "identifier": "137e8c2ba226369ea8dd3a4fb51f2cb026137480",
+      "dotted_decimal_identifier": "5487165050070582.44658714439824671.49135064675456",
       "source": "../cookbooks/maxlab_users",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "git@github.com:maxwax/maxlab.git",
-        "revision": "3df55ff5738aa931dfd22e5431fbd15a33083811",
+        "revision": "12d0ad18d3d62e6439b063b33109643c80eb2624",
         "working_tree_clean": false,
-        "published": false,
+        "published": true,
         "synchronized_remote_branches": [
-
+          "origin/master"
         ]
       },
       "source_options": {
