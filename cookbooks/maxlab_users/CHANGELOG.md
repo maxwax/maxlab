@@ -1,5 +1,9 @@
 # maxlab_users CHANGELOG
 
+# 1.2.2
+
+* Bug fix, now make /home/<username> correctly for each normal user.
+
 # 1.2.1
 
 * Make a home directory for the users we make!  Not required for many users created just for serivces, but hard to login as a default non-root user without a home.
