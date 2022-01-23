@@ -1,6 +1,11 @@
 
 # maxlab CHANGELOG
 
+# 1.1.19
+
+* Add /srv/x320 share to central
+* Remove access to share /srv/x320 and /srv/teraxfiles to macbooknext and macbooknextwifi
+
 # 1.1.18
 
 * Adding plex.maxlab as a VM for Plex Media Server
