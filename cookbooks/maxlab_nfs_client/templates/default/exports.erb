@@ -1,0 +1,7 @@
+# This file deployed via Chef maxlab_nfs_client::server (bag <%= @config_id %>) - DO NOT EDIT
+
+<% @exports_lines.sort.each do |mount_point, export_details| %>
+<%= export_details[:comment] %>
+<%= export_details[:export_text] %>
+
+<% end %>

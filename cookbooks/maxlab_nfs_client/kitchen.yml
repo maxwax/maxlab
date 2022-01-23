@@ -1,0 +1,35 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  always_update_cookbooks: true
+  cookbooks_path: ../../cookbooks
+  data_bags_path: ../../data_bags
+  nodes_path: test/integration/nodes
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: centos-8
+
+suites:
+  - name: testred
+    run_list:
+    verifier:
+      inspec_tests:
+        - test/integration/client
+    attributes:
+    provisioner:
+       policyfile: ../../policyfiles/tk_maxlab_nfs_client_testred.rb
+
+  - name: plex
+    run_list:
+    verifier:
+      inspec_tests:
+        - test/integration/client
+    attributes:
+    provisioner:
+       policyfile: ../../policyfiles/tk_maxlab_nfs_client_plex.rb
