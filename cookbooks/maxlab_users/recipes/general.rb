@@ -31,6 +31,14 @@ end
 # Create all users defined in this service set
 config_servicesets[service_set]['users'].each do | username |
 
+  # Ensure this exists
+  directory "/home/#{username}" do
+    owner config_users[username]['uid']
+    group config_users[username]['group']
+    mode 0755
+    action :create
+  end
+
   user username do
     uid config_users[username]['uid']
     gid config_users[username]['group']
