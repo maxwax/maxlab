@@ -1,6 +1,10 @@
 
 # maxlab CHANGELOG
 
+# 1.1.20
+
+* Added /srv/terawd NFS share on depot.maxlab
+
 # 1.1.19
 
 * Add /srv/x320 share to central
