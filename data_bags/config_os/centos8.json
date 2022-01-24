@@ -28,7 +28,8 @@
     "which",
     "rsync",
     "policycoreutils-python-utils",
-    "lm_sensors"
+    "lm_sensors",
+    "bpytop"
   ],
   "default_scripts": {
     "/etc": {
