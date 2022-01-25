@@ -78,6 +78,11 @@
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
+          },
+          "central.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
           }
         }
       }
