@@ -1,6 +1,10 @@
 
 # maxlab CHANGELOG
 
+# 1.1.21
+
+* Add node 'fedora' at .121, A VM to let me expore and debug issues in a Fedora VM.
+
 # 1.1.20
 
 * Added /srv/terawd NFS share on depot.maxlab

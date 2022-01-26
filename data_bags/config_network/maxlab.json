@@ -403,6 +403,15 @@
           "base": "maxlab_vmlab",
           "mac_address": "66:74:fb:01:9a:9c"
         },
+        "121": {
+          "node_name": "fedora",
+          "description": "Fedora experimental node",
+          "type": "node",
+          "group": "node",
+          "os:": "Fedora",
+          "base": "maxlab_vmlab",
+          "mac_address": "56:0c:07:4b:fb:72"
+        },
         "123": {
           "node_name": "exper",
           "description": "Experimental VM node on coalbox",
