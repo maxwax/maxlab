@@ -16,14 +16,14 @@ platforms:
   - name: centos-8
 
 suites:
-  - name: testred
+  - name: sample
     run_list:
     verifier:
       inspec_tests:
-        - test/integration/client
+        - test/integration/sample
     attributes:
     provisioner:
-       policyfile: ../../policyfiles/tk_maxlab_nfs_client_testred.rb
+       policyfile: ../../policyfiles/tk_maxlab_nfs_client_sample.rb
 
   - name: plex
     run_list:
