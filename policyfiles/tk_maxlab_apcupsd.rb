@@ -62,4 +62,4 @@ default['apcupsd']['config']['stattime']       = 0
 default['apcupsd']['config']['statfile']       = "/var/log/apcupsd.status"
 default['apcupsd']['config']['logstats']       = "off"
 default['apcupsd']['config']['datatime']       = 0
-default['apcupsd']['config']['daemon']         = "daemon"
+default['apcupsd']['config']['facility']       = "daemon"
