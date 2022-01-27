@@ -1,6 +1,6 @@
 {
   "id": "base_firewall.maxlab.dmz",
-  "description": "Base firewall config for maxlab VM nodes",
+  "description": "Base firewall config for maxlab DMZ nodes providing public services",
   "fw_config": {
     "default_interface_zone": "dmz",
     "default_zone": "dmz",

@@ -1,0 +1,19 @@
+{
+  "id": "base_firewall.maxlab.internal",
+  "description": "Base firewall config for maxlab internal service nodes",
+  "fw_config": {
+    "default_interface_zone": "internal",
+    "default_zone": "internal",
+    "zones": {
+      "internal": {
+        "services": [
+          "ssh"
+        ],
+        "sources": [
+        ],
+        "ports": [
+        ]
+      }
+    }
+  }
+}

@@ -1,6 +1,18 @@
 
 # maxlab CHANGELOG
 
+# 1.1.22
+
+* Added new cookbook maxlab_apcupsd to monitor APC UPS equipment
+* Added policyfile tk_maxlab_apcups to allow Test Kitchen testing of maxlab_apcupsd
+* Minor fix to maxlab_apcupsd template to populate 'facility' config line
+* Bug fix: Change maxlab_apcupsd related attribute 'daemon' to be 'facility' with value daemon.
+** Modifying default/attributes.rb
+** Modifying tk_maxlab_apcupsd.rb policyfile
+** Modifying maxlab_node_nas_filer.rb policyfile
+* Minor change to comments in config_firewall/base_firewall.maxlab.dmz data bag
+* Created new config_firewall data bag base_firewall.maxlab.internal
+
 # 1.1.21
 
 * Add node 'fedora' at .121, A VM to let me expore and debug issues in a Fedora VM.
