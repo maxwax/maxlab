@@ -40,3 +40,14 @@ describe systemd_service('apcupsd') do
   it { should be_enabled }
   it { should be_running }
 end
+
+describe file('/usr/local/bin/log-apc-ups-stats') do
+  it { should exist }
+  its('owner') { should cmp 'root' }
+  its('group') { should cmp 'root' }
+  its('mode') { should cmp '0755' }
+end
+
+describe crontab do
+  its('commands') { should include '/usr/local/bin/log-apc-ups-stats' }
+end

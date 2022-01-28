@@ -63,6 +63,7 @@ default['instance_config_apcupsd']['instance'] = 'maxlab_apcupsd_filer'
 
 # Custom settings to override default values from maxlab_apcupsd cookbook
 default['apcupsd']['config']['sysadmin']       = "maxops@maxwellspangler.com"
+
 default['apcupsd']['config']['upsname']        = "filer-backups-pro-1500"
 default['apcupsd']['config']['upscable']       = "usb"
 default['apcupsd']['config']['upstype']        = "usb"
@@ -90,3 +91,9 @@ default['apcupsd']['config']['statfile']       = "/var/log/apcupsd.status"
 default['apcupsd']['config']['logstats']       = "off"
 default['apcupsd']['config']['datatime']       = 0
 default['apcupsd']['config']['facility']       = "daemon"
+
+default['apcupsd']['config']['enable_logger']  = true
+default['apcupsd']['config']['log_month']      = "*"
+default['apcupsd']['config']['log_day']        = "*"
+default['apcupsd']['config']['log_hour']       = "12"
+default['apcupsd']['config']['log_minute']     = "0"

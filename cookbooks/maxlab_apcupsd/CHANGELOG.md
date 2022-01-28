@@ -1,5 +1,12 @@
 # maxlab_apcupsd CHANGELOG
 
+# 1.1.0
+
+* Deploy log-apc-ups-stats script to log UPS battery stats periodically
+* Configure cron job to run log-apc-ups-stats periodically
+* Updates to InSpec testing to test for script and cronjob to exist
+* Update to policyfiles to supply attributes supporting script and cronjob
+
 # 1.0.0
 
 * Cloned maxlab_nfs_client and turning it into maxlab_apcupsd

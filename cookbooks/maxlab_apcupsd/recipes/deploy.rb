@@ -104,6 +104,30 @@ node['apcupsd']['services'].each do |service_name|
   end
 end
 
+# Deploy logging script regardless of whether we schedule it with cron
+cookbook_file "/usr/local/bin/log-apc-ups-stats" do
+  source "usr/local/bin/log-apc-ups-stats"
+  owner 'root'
+  group 'root'
+  mode 0755
+  action :create
+end
+
+if node['apcupsd']['config']['enable_logger'] == true
+
+  cron 'cron_job_apcups_logger' do
+    command "/usr/local/bin/log-apc-ups-stats"
+
+    month  node['apcupsd']['config']['log_month']
+    day    node['apcupsd']['config']['log_day']
+    hour   node['apcupsd']['config']['log_hour']
+    minute node['apcupsd']['config']['log_minute']
+
+    action :create
+  end
+
+end
+
 # Tag the node as supporting this service
 tag('apcupsd')
 # Tag the node as operating this configuration of the service

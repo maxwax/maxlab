@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#
+# log-apc-stats
+#
+# Sample APC UPS information and log it with a date-time prefix on each line
+#
+
+LOGFILE=/var/log/apc-ups-stats.log
+TMPFILE=/tmp/apcaccess.$$
+
+touch $LOGFILE
+LOG_ERROR=$?
+if [[ $LOG_ERROR -gt 0 ]]
+then
+	echo "Error: Cannot write to $LOGFILE"
+	exit 1
+else
+	NOW=$(date +"%Y-%m%d-%H:%M:%S ")
+
+	apcaccess >> $TMPFILE 2>&1
+
+	echo >> $LOGFILE 2>&1
+
+	while read LINE
+	do
+
+		echo "$NOW $LINE" >> $LOGFILE 2>&1
+
+	done < $TMPFILE
+
+	rm $TMPFILE
+fi
