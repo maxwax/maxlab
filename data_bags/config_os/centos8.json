@@ -11,25 +11,31 @@
       "filename": "rpmfusion-nonfree-release-8.noarch.rpm"
     }
   },
+  "repo_packages_bare_metal": {
+  },
   "repo_config_commands": {
+  },
+  "repo_config_commands_bare_metal": {
   },
   "default_packages": [
     "vim",
     "atop",
+    "bpytop",
     "htop",
     "bmon",
     "iftop",
     "nmon",
-    "nc",
+    "netcat",
     "tree",
     "wget",
     "tar",
     "bzip2",
     "which",
     "rsync",
-    "policycoreutils-python-utils",
-    "lm_sensors",
-    "bpytop"
+    "policycoreutils-python-utils"
+  ],
+  "default_packages_bare_metal": [
+    "lm_sensors"
   ],
   "default_scripts": {
     "/etc": {
@@ -54,5 +60,7 @@
         "mode": "0755"
       }
     }
+  },
+  "default_scripts_bare_metal": {
   }
 }

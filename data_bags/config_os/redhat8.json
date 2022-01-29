@@ -15,20 +15,22 @@
   "default_packages": [
     "vim",
     "atop",
+    "bpytop",
     "htop",
     "bmon",
     "iftop",
     "nmon",
-    "nc",
+    "netcat",
     "tree",
     "wget",
     "tar",
     "bzip2",
     "which",
     "rsync",
-    "policycoreutils-python-utils",
-    "lm_sensors",
-    "bpytop"
+    "policycoreutils-python-utils"
+  ],
+  "default_packages_bare_metal": [
+    "lm_sensors"
   ],
   "default_scripts": {
     "/etc": {
