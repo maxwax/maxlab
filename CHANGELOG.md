@@ -1,6 +1,10 @@
 
 # maxlab CHANGELOG
 
+# 1.1.24
+
+* Added maxlab_base::deploy-bare-metal to policyfiles for filer, aux, central and depot.  This deploys components that provide direct hardware support on bare metal nodes but allows maxlab_base::deploy to skip deploying them within virtual machines.
+
 # 1.1.23
 
 * No longer tracking policyfile .lock.json files with git.

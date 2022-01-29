@@ -5,12 +5,13 @@ name 'maxlab_node_nas_filer'
 default_source :supermarket
 
 run_list "recipe[maxlab_firewall::base_firewalld]",
+         "recipe[maxlab_base::deploy]",
          "recipe[maxlab_base::deploy-bare-metal]",         "recipe[maxlab_users::general]",
          "recipe[mylab_smartd::deploy]",
          "recipe[maxlab_chrony::deploy]",
-         "recipe[maxlab_apcupsd::deploy]",
          "recipe[maxlab_nfs::server]",
          "recipe[maxlab_samba::server]",
+         "recipe[maxlab_apcupsd::deploy]",
          "recipe[maxlab_postfix::deploy]",
          "recipe[maxlab_firewall::update_firewalld]"
 

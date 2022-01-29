@@ -5,6 +5,7 @@ name 'maxlab_node_nas_depot'
 default_source :supermarket
 
 run_list "recipe[maxlab_firewall::base_firewalld]",
+         "recipe[maxlab_base::deploy]",     
          "recipe[maxlab_base::deploy-bare-metal]",         "recipe[maxlab_users::general]",
          "recipe[mylab_smartd::deploy]",
          "recipe[maxlab_chrony::deploy]",
