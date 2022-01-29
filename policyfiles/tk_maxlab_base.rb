@@ -1,6 +1,6 @@
 # Policyfile.rb - Describe how you want Chef Infra server to build your system.
 
-name 'tk_maxlab_pxe'
+name 'tk_maxlab_base'
 
 default_source :supermarket
 
