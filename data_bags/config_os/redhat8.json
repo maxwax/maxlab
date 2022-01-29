@@ -7,10 +7,14 @@
       "filename": "epel-release-latest-8-noarch.rpm"
     }
   },
+  "repo_packages_bare_metal": {
+  },
   "repo_config_commands": {
     "enable-codeready-builder": {
       "subscribe-to-codeready-builder": "ARCH=$( /bin/arch ); subscription-manager repos --enable \"codeready-builder-for-rhel-8-${ARCH}-rpms\""
     }
+  },
+  "repo_config_commands_bare_metal": {
   },
   "default_packages": [
     "vim",
@@ -33,6 +37,30 @@
     "lm_sensors"
   ],
   "default_scripts": {
+    "/etc": {
+      "bashrc": {
+        "subdir": "etc",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      }
+    },
+    "/usr/local/etc": {
+      "shell-basics": {
+        "subdir": "usr/local/etc",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      },
+      "shell-history": {
+        "subdir": "usr/local/etc",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      }
+    }
+  },
+  "default_scripts_bare_metal": {
     "/etc": {
       "bashrc": {
         "subdir": "etc",
