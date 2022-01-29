@@ -15,11 +15,20 @@ verifier:
 platforms:
   - name: centos-8
 
+
 suites:
-  - name: deploy
+  - name: default
     verifier:
       inspec_tests:
-        - test/integration/deploy
+        - test/integration/default
     attributes:
     provisioner:
        policyfile: ../../policyfiles/tk_maxlab_base.rb
+
+  - name: bare-metal
+    verifier:
+      inspec_tests:
+        - test/integration/bare-metal
+    attributes:
+    provisioner:
+       policyfile: ../../policyfiles/tk_maxlab_base_bare_metal.rb

@@ -1,6 +1,6 @@
 # # encoding: utf-8
 
-# Inspec test for recipe maxlab_base::default
+# Inspec test for recipe maxlab_base::deploy
 
 # The Inspec reference, with examples and extensive documentation, can be
 # found at http://inspec.io/docs/reference/resources/
@@ -33,15 +33,57 @@ describe package('atop') do
   it { should be_installed }
 end
 
+describe package('bpytop') do
+  it { should be_installed }
+end
+
 describe package('htop') do
   it { should be_installed }
 end
 
-describe package('nmap-ncat') do
+describe package('bmon') do
+  it { should be_installed }
+end
+
+describe package('iftop') do
+  it { should be_installed }
+end
+
+describe package('nmon') do
+  it { should be_installed }
+end
+
+# Disabled due to bug in Fedora 35
+# describe package('nmap-ncat') do
+#   it { should be_installed }
+# end
+
+# Replacement for nmap-ncat
+describe package('netcat') do
+  it { should be_installed }
+end
+
+describe package('tree') do
   it { should be_installed }
 end
 
 describe package('wget') do
+  it { should be_installed }
+end
+
+describe package('tar') do
+  it { should be_installed }
+end
+
+describe package('bzip2') do
+  it { should be_installed }
+end
+
+describe package('which') do
+  it { should be_installed }
+end
+
+describe package('rsync') do
   it { should be_installed }
 end
 

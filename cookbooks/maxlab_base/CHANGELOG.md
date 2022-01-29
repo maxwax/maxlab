@@ -1,5 +1,12 @@
 # maxlab_base CHANGELOG
 
+# 1.4.0
+
+* Modify test to check for installation of netcat instead of nmap-ncat.  Related to bug related to SSH tunneling. https://bugzilla.redhat.com/show_bug.cgi?id=2024007
+* The default deploy recipe now deploys base components not related to direct hardware support.
+* The new deploy-bare-metal recipe is an additional recipe to run on bare metal nodes that deploys components that support direct hardware access, ex: lm_sensors for temperature monitoring.
+* Created Test Suites default and bare-metal, reorganized files accordingly.
+
 # 1.3.0
 
 * Enable Test Kitchen development
