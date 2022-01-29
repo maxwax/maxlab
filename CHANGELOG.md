@@ -1,6 +1,10 @@
 
 # maxlab CHANGELOG
 
+# 1.1.23
+
+* No longer tracking policyfile .lock.json files with git.
+
 # 1.1.22
 
 * Added new cookbook maxlab_apcupsd to monitor APC UPS equipment

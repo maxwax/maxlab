@@ -5,3 +5,4 @@ tk*.lock.json
 data_bags/secret_*
 secret_*.json
 .chef
+policyfiles/*.lock.json
