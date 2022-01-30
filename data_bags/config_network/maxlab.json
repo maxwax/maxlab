@@ -419,7 +419,7 @@
           "group": "node",
           "os:": "CentOS",
           "base": "maxlab_vmlab",
-          "mac_address": "56:0c:07:4b:fb:72"
+          "mac_address": "fa:32:a8:b8:08:31"
         },
         "123": {
           "node_name": "exper",
