@@ -412,6 +412,15 @@
           "base": "maxlab_vmlab",
           "mac_address": "56:0c:07:4b:fb:72"
         },
+        "122": {
+          "node_name": "centos",
+          "description": "CentOS experimental node",
+          "type": "node",
+          "group": "node",
+          "os:": "CentOS",
+          "base": "maxlab_vmlab",
+          "mac_address": "56:0c:07:4b:fb:72"
+        },
         "123": {
           "node_name": "exper",
           "description": "Experimental VM node on coalbox",
