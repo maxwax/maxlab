@@ -351,12 +351,12 @@
         },
         "100": {
           "node_name": "core",
-          "description": "Core Infrastructure (DNS, DHCP, NTP)",
+          "description": "Core Infrastructure (DNS, DHCP, NTP) via Chef (on RHEL)",
           "type": "node",
           "group": "infra",
-          "os:": "CentOS",
+          "os:": "RHEL",
           "base": "maxlab_vmlab",
-          "mac_address": "8e:28:fa:de:d7:9f"
+          "mac_address": "f2:2d:69:f4:01:f5"
         },
         "101": {
           "node_name": "chef",
@@ -369,12 +369,12 @@
         },
         "102": {
           "node_name": "repo",
-          "description": "Repository Infrastructure (TFTP, HTTP)",
+          "description": "Repository Infrastructure (TFTP, HTTP) (Redhat)",
           "type": "node",
           "group": "infra",
-          "os:": "CentOS",
+          "os:": "RHEL",
           "base": "maxlab_vmlab",
-          "mac_address": "5E:CC:11:BD:17:19"
+          "mac_address": "6e:b6:eb:90:f7:71"
         },
         "103": {
           "node_name": "stor",
@@ -393,6 +393,24 @@
           "os:": "CentOS",
           "base": "maxlab_vmlab",
           "mac_address": "52:C8:DD:62:5C:76"
+        },
+        "110": {
+          "node_name": "core-centos",
+          "description": "Core Infrastructure (DNS, DHCP, NTP)",
+          "type": "node",
+          "group": "infra",
+          "os:": "CentOS",
+          "base": "maxlab_vmlab",
+          "mac_address": "8e:28:fa:de:d7:9f"
+        },
+        "111": {
+          "node_name": "repo-centos",
+          "description": "Repository Infrastructure (TFTP, HTTP)",
+          "type": "node",
+          "group": "infra",
+          "os:": "CentOS",
+          "base": "maxlab_vmlab",
+          "mac_address": "5E:CC:11:BD:17:19"
         },
         "120": {
           "node_name": "plex",
@@ -438,6 +456,24 @@
           "os:": "CentOS",
           "base": "maxlab_vmlab",
           "mac_address": "12:6c:b6:0a:71:a2"
+        },
+        "125": {
+          "node_name": "stream1",
+          "description": "Experimental CentOS Stream node 1",
+          "type": "node",
+          "group": "NAS",
+          "os:": "CentOS_Stream",
+          "base": "maxlab_vmlab",
+          "mac_address": "5e:b3:f6:68:98:e6"
+        },
+        "126": {
+          "node_name": "stream2",
+          "description": "Experimental CentOS Stream node 2",
+          "type": "node",
+          "group": "NAS",
+          "os:": "CentOS_Stream",
+          "base": "maxlab_vmlab",
+          "mac_address": "26:e5:70:aa:bb:cc"
         },
         "130": {
           "node_name": "sco5",
