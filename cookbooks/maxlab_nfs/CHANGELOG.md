@@ -1,5 +1,15 @@
 # maxlab_nfs CHANGELOG
 
+# 1.2.5
+
+* Removed entires in kitchen.yml referring to old test VMs (testred, laptopnas)
+* Relying on new vagrant base box maxlab-centos-chef with Chef installed
+* Updated config_nfs data bag for filer to remove old nodes not in use: lenovoflash1, lenovoflash2, media, spare, etc
+* Trying out 'recursive: true' on creating directories for NFS mount points.
+- I think this will be a problem later, so we'll use it for now because it works nicely with Test kitchen
+* Removed config_nfs data bags for obsolete nodes media, testred, spare,
+* Renamed policyfiles related to maxlab_nfs test kitchen testing from primary, auxillary to filer and aux to more directly line up with the nodes they test.
+
 # 1.2.4
 
 * Adding package 'mdmadm' for RAID

@@ -84,16 +84,6 @@
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
           },
-          "lenovoflash1.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "lenovoflash2.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
           "coalbox.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
@@ -109,16 +99,6 @@
         "comment": "Archives storage",
         "clients": {
           "toshiprox.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "lenovoflash1.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "lenovoflash2.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
@@ -143,16 +123,6 @@
         "comment": "Archives storage",
         "clients": {
           "toshiprox.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "lenovoflash1.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "lenovoflash2.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]

@@ -13,41 +13,42 @@ verifier:
   name: inspec
 
 platforms:
-  - name: centos-8
+  - name: maxlab-centos-chef
+  #- name: centos-8
 
 suites:
-  - name: testred
+  - name: filer
     run_list:
     verifier:
       inspec_tests:
         - test/integration/server
     attributes:
     provisioner:
-       policyfile: ../../policyfiles/tk_maxlab_nfs_server_testred.rb
+       policyfile: ../../policyfiles/tk_maxlab_nfs_server_filer.rb
 
-  - name: laptopnas
+  - name: aux
     run_list:
     verifier:
       inspec_tests:
         - test/integration/server
     attributes:
     provisioner:
-       policyfile: ../../policyfiles/tk_maxlab_nfs_server_laptopnas.rb
+       policyfile: ../../policyfiles/tk_maxlab_nfs_server_aux.rb
 
-  - name: primary
+  - name: central
     run_list:
     verifier:
       inspec_tests:
         - test/integration/server
     attributes:
     provisioner:
-       policyfile: ../../policyfiles/tk_maxlab_nfs_server_primary.rb
+       policyfile: ../../policyfiles/tk_maxlab_nfs_server_central.rb
 
-  - name: auxillary
+  - name: depot
     run_list:
     verifier:
       inspec_tests:
         - test/integration/server
     attributes:
     provisioner:
-       policyfile: ../../policyfiles/tk_maxlab_nfs_server_auxillary.rb
+       policyfile: ../../policyfiles/tk_maxlab_nfs_server_depot.rb
