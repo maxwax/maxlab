@@ -3,6 +3,7 @@
   "doc": "This PXE configuration serves the Maxlab home lab",
   "kickstart_configs": [
     "centos",
+    "centos_stream",
     "rhel"
   ],
   "netboot_configs": [

@@ -1,5 +1,10 @@
 # maxlab_pxe CHANGELOG
 
+# 1.3.0
+
+* Introducing ks-centos-8-interactive.rb template to generate a kickstart file that allows a lightly guided, but manuall installation process.
+* Added centos_stream OS branch in config_pxe pxeconfig databag for Centos Stream to be on its own menu
+
 # 1.2.3
 
 * Remove 'install' from kickstart script (deprecated)
