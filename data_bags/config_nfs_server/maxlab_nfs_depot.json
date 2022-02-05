@@ -2,6 +2,14 @@
   "id": "maxlab_nfs_depot",
   "doc": "NFS server configuration for depot",
   "cfg": {
+    "directory_tree" : {
+      "srv": {
+        "directory": "/srv",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      }
+    },
     "exports" : {
       "/srv/depotdata": {
         "enabled": true,

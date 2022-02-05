@@ -2,6 +2,14 @@
   "id": "maxlab_nfs_aux",
   "doc": "NFS server configuration for aux.maxlab",
   "cfg": {
+    "directory_tree" : {
+      "srv": {
+        "directory": "/srv",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      }
+    },
     "exports" : {
       "/srv/auxdata": {
         "enabled": true,
