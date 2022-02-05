@@ -21,8 +21,10 @@ suites:
     run_list:
     verifier:
       inspec_tests:
-        - test/integration/server
+        - test/integration/default
+        - test/integration/filer
     attributes:
+      kitchen_testing_maxlab: true
     provisioner:
        policyfile: ../../policyfiles/tk_maxlab_nfs_server_filer.rb
 
@@ -30,8 +32,10 @@ suites:
     run_list:
     verifier:
       inspec_tests:
-        - test/integration/server
+        - test/integration/default
+        - test/integration/aux
     attributes:
+      kitchen_testing_maxlab: true
     provisioner:
        policyfile: ../../policyfiles/tk_maxlab_nfs_server_aux.rb
 
@@ -39,8 +43,10 @@ suites:
     run_list:
     verifier:
       inspec_tests:
-        - test/integration/server
+        - test/integration/default
+        - test/integration/central
     attributes:
+      kitchen_testing_maxlab: true
     provisioner:
        policyfile: ../../policyfiles/tk_maxlab_nfs_server_central.rb
 
@@ -48,7 +54,9 @@ suites:
     run_list:
     verifier:
       inspec_tests:
-        - test/integration/server
+        - test/integration/default
+        - test/integration/depot
     attributes:
+      kitchen_testing_maxlab: true
     provisioner:
        policyfile: ../../policyfiles/tk_maxlab_nfs_server_depot.rb

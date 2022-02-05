@@ -1,5 +1,15 @@
 # maxlab_nfs CHANGELOG
 
+# 1.3.0
+
+* Update recipe server.rb to create directories that support NFS share mount points.  Another effort to help provision fresh nodes that need some manual attention before the full chef run.
+* Updated recipe server.rb to create NFS mount points when executing in Test Kitchen.  This allows full automated testing using these directories as mock directories for real storage.
+* Created InSpec default recipe for common testing, then individual InSpec tests for node specific NFS shares found on aux, central, depot and filer.
+* Updated kitchen.yml to perform InSpec tests from multiple files, a common default/ directory of tests and per-node specific tests.
+* Created policyfiles for Test Kitchen testing for depot and central nodes
+* Removed policyfiles for laptopnas and testing vm testred.
+
+
 # 1.2.5
 
 * Removed entires in kitchen.yml referring to old test VMs (testred, laptopnas)

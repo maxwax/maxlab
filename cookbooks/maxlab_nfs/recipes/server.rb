@@ -10,6 +10,7 @@ Deploy a very basic NFS server that support NFSv3 or NFSv4 services.
 #>
 =end
 
+# Install requires packages to support NFS from node attributes
 package node['nfs']['packages'] do
   action :install
 end
@@ -19,19 +20,23 @@ config_id = node['instance_config_nfs']['instance']
 # Retrieve the data bag with NFS config information for this node
 config_nfs_server = data_bag_item('config_nfs_server', config_id)
 
-# Build our /etc/exports config lines here so the template is simple
-exports_lines = {}
+# Create a directory tree where storage can be mounted then later shared.
+# Ex: Create /srv so that a RAID filesystem can be mounted at /srv/filerdata.
+# Create /srv via Chef but the admin will manually configure /srv/filerdata.
+# Then add /srv/filerdata as an export to be shared via NFS
 
-# Piece by piece construct a hash entry that configures an NFS mount point with one or more allowed clients and one or more allowed options per client.
-# ex: /srv/mount_point_dir hostname1(rw,no_root_squash) hostname2(rw)
-config_nfs_server['cfg']['exports'].sort.each do | mount_point, mount_details|
+# WARNING: Do not create subdirectories here such as /srv/filerdata/mydata.
+# If the filesystem /srv/filerdata is not mounted, this code will create
+# /srv/filerdata/mydata on the root filesystem and it will be hidden if
+# /srv/filerdata is mounted on top of it.
+config_nfs_server['cfg']['directory_tree'].each do | id, details|
 
-  directory mount_point do
-    owner mount_details['owner']
-    group mount_details['group']
-    mode mount_details['mode']
+  directory details['directory'] do
+    owner details['owner']
+    group details['group']
+    mode details['mode']
 
-    recursive true
+    recursive false
 
     action :create
 
@@ -41,7 +46,38 @@ config_nfs_server['cfg']['exports'].sort.each do | mount_point, mount_details|
     # issued to restore the context of MANY files mounted at
     # an existing filesystem mount point.
 
-    not_if { File.directory?(mount_point) }
+    not_if { File.directory?(details['directory']) }
+  end
+end
+
+# Build our /etc/exports config lines here so the template is simple
+exports_lines = {}
+
+# For each NFS share, construct a line for /etc/exports to define the share
+# and how it should be shared to client nodes
+# ex: /srv/mount_point_dir hostname1(rw,no_root_squash) hostname2(rw)
+config_nfs_server['cfg']['exports'].sort.each do | mount_point, mount_details|
+
+  # IF this attribute is set, we're in Test Kitchen, so make these directories
+  # to mock up actual storage on mounted drives
+  if node.exist?('kitchen_testing_maxlab')
+    directory mount_point do
+      owner mount_details['owner']
+      group mount_details['group']
+      mode mount_details['mode']
+
+      recursive true
+
+      action :create
+
+      # not_if is crtiical.
+      # Attempting to execute this directory resource on an existing
+      # directory may result in an SELinux 'restorecon -R' being
+      # issued to restore the context of MANY files mounted at
+      # an existing filesystem mount point.
+
+      not_if { File.directory?(mount_point) }
+    end
   end
 
   # Comment out non-enabled filesystems

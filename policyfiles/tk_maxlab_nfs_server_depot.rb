@@ -1,6 +1,6 @@
 # Policyfile.rb - Describe how you want Chef Infra server to build your system.
 
-name 'tk_maxlab_nfs_server_laptopnas'
+name 'tk_maxlab_nfs_server_depot'
 
 default_source :supermarket
 
@@ -15,7 +15,7 @@ cookbook 'maxlab_firewall', path: '../cookbooks/maxlab_firewall'
 
 default['config_firewall']['base_config'] = 'base_firewall.maxlab.dmz'
 
-default['instance_config_nfs']['instance'] = 'maxlab_nfs_laptopnas'
+default['instance_config_nfs']['instance'] = 'maxlab_nfs_depot'
 
 # Previously environment variables
 default['env']['maxlab']['repo_url']          = "http://repo.maxlab"
