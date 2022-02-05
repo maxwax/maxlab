@@ -1,5 +1,10 @@
 # maxlab_pxe CHANGELOG
 
+# 1.3.1
+
+* Updated kitchen to use maxlab-centos-chef vagrant base box
+* Made test file naming consistent with test/integration/default/default.rb
+
 # 1.3.0
 
 * Introducing ks-centos-8-interactive.rb template to generate a kickstart file that allows a lightly guided, but manuall installation process.
