@@ -2,6 +2,11 @@
 
 Maintain a Plex media server in the maxlab environment.
 
+# 1.2.0
+
+* Modified kitchen.yml to use maxlab-centos-chef vagrant base box
+* Modified tests for consistent naming with other cookbooks
+
 # 1.1.2
 
 * Adding Plex specific ports to open in firewalld
