@@ -1,5 +1,10 @@
 # maxlab_apcupsd CHANGELOG
 
+# 1.2.0
+
+* Modified kitchen.yml to use maxlab-centos-chef vagrant base box
+* Renamed test files for consistency with other cookbooks
+
 # 1.1.0
 
 * Deploy log-apc-ups-stats script to log UPS battery stats periodically

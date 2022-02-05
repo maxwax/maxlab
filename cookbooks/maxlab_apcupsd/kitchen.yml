@@ -13,14 +13,15 @@ verifier:
   name: inspec
 
 platforms:
-  - name: centos-8
+  - name: maxlab-centos-chef
 
 suites:
   - name: deploy
     run_list:
     verifier:
       inspec_tests:
-        - test/integration/deploy
+        - test/integration/default
     attributes:
+      kitchen_testing_maxlab: true
     provisioner:
        policyfile: ../../policyfiles/tk_maxlab_apcupsd.rb
