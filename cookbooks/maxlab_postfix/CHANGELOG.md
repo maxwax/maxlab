@@ -1,5 +1,10 @@
 # maxlab_postfix CHANGELOG
 
+# 1.3.0
+
+* Modified kitchen.yml to use maxlab-centos-chef vagrant base box
+* Renamed test files for consistency with other cookbooks
+
 # 1.2.1 Support Red Hat Linux
 
 * Identify Red Hat Linux as 'redhat' not 'rhel'

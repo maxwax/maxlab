@@ -13,15 +13,16 @@ verifier:
   name: inspec
 
 platforms:
-  - name: centos-8
+  - name: maxlab-centos-chef
 
 suites:
   - name: deploy
     run_list:
     verifier:
       inspec_tests:
-        - test/integration/deploy
+        - test/integration/default
     attributes:
+      kitchen_testing_maxlab: true
       chef-vault:
         # Instruct chef_vault_item to use local raw files when vaulted data is not available.
         databags_fallback: true
