@@ -13,8 +13,7 @@ verifier:
   name: inspec
 
 platforms:
-  - name: centos-8
-
+  - name: maxlab-centos-chef
 
 suites:
   - name: default
@@ -28,7 +27,9 @@ suites:
   - name: bare-metal
     verifier:
       inspec_tests:
+        - test/integration/default
         - test/integration/bare-metal
     attributes:
+      kitchen_testing_maxlab: true
     provisioner:
        policyfile: ../../policyfiles/tk_maxlab_base_bare_metal.rb

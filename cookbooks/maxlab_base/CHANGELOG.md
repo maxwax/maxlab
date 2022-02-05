@@ -1,5 +1,10 @@
 # maxlab_base CHANGELOG
 
+# 1.5.0
+
+* Modified kitchen.yml to use maxlab-centos-chef vagrant base box
+* Renamed test files for consistency with other cookbooks
+
 # 1.4.0
 
 * Modify test to check for installation of netcat instead of nmap-ncat.  Related to bug related to SSH tunneling. https://bugzilla.redhat.com/show_bug.cgi?id=2024007
