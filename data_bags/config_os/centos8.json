@@ -3,11 +3,11 @@
   "doc": "Distribution and version specific provisioning for CentOS 8",
   "repo_packages": {
     "rpmfusion-free-release-8": {
-      "source": "http://repo.maxlab/files/os/centos/8/rpms/rpmfusion-free-release-8.noarch.rpm",
+      "source": "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm",
       "filename": "rpmfusion-free-release-8.noarch.rpm"
     },
     "rpmfusion-nonfree-release-8": {
-      "source": "http://repo.maxlab/files/os/centos/8/rpms/rpmfusion-nonfree-release-8.noarch.rpm",
+      "source": "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm",
       "filename": "rpmfusion-nonfree-release-8.noarch.rpm"
     }
   },
