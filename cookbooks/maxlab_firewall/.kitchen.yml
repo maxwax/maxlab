@@ -13,13 +13,14 @@ verifier:
   name: inspec
 
 platforms:
-  - name: centos-8
+  - name: maxlab-centos-chef
 
 suites:
   - name: deploy
     verifier:
       inspec_tests:
-        - test/integration/sample_firewall
+        - test/integration/default
     attributes:
+      kitchen_testing_maxlab: true
     provisioner:
        policyfile: ../../policyfiles/tk_maxlab_firewall_sample.rb

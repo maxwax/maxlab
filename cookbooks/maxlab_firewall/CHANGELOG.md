@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of the maxlab_firewall cookbook.
 
+# 1.3.0
+
+* Modified kitchen.yml to use maxlab-centos-chef vagrant base box
+* Renamed test files for consistency with other cookbooks
+
 # 1.2.0
 
 * Enable Test Kitchen development
