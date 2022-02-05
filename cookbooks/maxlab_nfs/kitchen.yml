@@ -14,7 +14,6 @@ verifier:
 
 platforms:
   - name: maxlab-centos-chef
-  #- name: centos-8
 
 suites:
   - name: filer
