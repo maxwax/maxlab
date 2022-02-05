@@ -2,6 +2,11 @@
 
 Cookbook for deploying DNS service using BIND on Redhat platform Linux distributions
 
+# 1.3.0
+
+* Modified kitchen.yml to use maxlab-centos-chef vagrant base box
+* Renamed test files for consistency with other cookbooks
+
 # 1.2.2 Don't ping BIND package Version
 
 * Replace an old pinned bind version with 'any' text so the cookbook deploys bind without a version constraint.
