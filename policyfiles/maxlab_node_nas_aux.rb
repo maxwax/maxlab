@@ -8,7 +8,7 @@ run_list "recipe[maxlab_firewall::base_firewalld]",
          "recipe[maxlab_base::deploy]",
          "recipe[maxlab_base::deploy-bare-metal]",
          "recipe[maxlab_users::general]",
-         "recipe[mylab_smartd::deploy]",
+         "recipe[maxlab_smartd::deploy]",
          "recipe[maxlab_chrony::deploy]",
          "recipe[maxlab_nfs::server]",
          "recipe[maxlab_samba::server]",
@@ -19,7 +19,6 @@ cookbook 'maxlab_firewall', path: '../cookbooks/maxlab_firewall'
 cookbook 'maxlab_base',     path: '../cookbooks/maxlab_base'
 cookbook 'maxlab_users',    path: '../cookbooks/maxlab_users'
 cookbook 'maxlab_smartd',   path: '../cookbooks/maxlab_smartd'
-cookbook 'mylab_smartd',    path: '../cookbooks/mylab_smartd'
 cookbook 'maxlab_chrony',   path: '../cookbooks/maxlab_chrony'
 cookbook 'maxlab_nfs',      path: '../cookbooks/maxlab_nfs'
 cookbook 'maxlab_samba',    path: '../cookbooks/maxlab_samba'
