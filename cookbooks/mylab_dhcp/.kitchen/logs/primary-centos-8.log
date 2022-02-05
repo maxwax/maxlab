@@ -1,0 +1,515 @@
+I, [2020-02-04T16:36:24.570006 #579351]  INFO -- primary-centos-8: -----> Cleaning up any prior instances of <primary-centos-8>
+I, [2020-02-04T16:36:24.570151 #579351]  INFO -- primary-centos-8: -----> Destroying <primary-centos-8>...
+I, [2020-02-04T16:36:24.570641 #579351]  INFO -- primary-centos-8: Finished destroying <primary-centos-8> (0m0.00s).
+I, [2020-02-04T16:36:24.570785 #579351]  INFO -- primary-centos-8: -----> Testing <primary-centos-8>
+I, [2020-02-04T16:36:24.570863 #579351]  INFO -- primary-centos-8: -----> Creating <primary-centos-8>...
+I, [2020-02-04T16:36:25.815630 #579351]  INFO -- primary-centos-8: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2020-02-04T16:36:25.958709 #579351]  INFO -- primary-centos-8: ==> default: Importing base box 'bento/centos-8'...
+I, [2020-02-04T16:36:35.884006 #579351]  INFO -- primary-centos-8: [KProgress: 30%[KProgress: 50%[KProgress: 60%[KProgress: 80%[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
+I, [2020-02-04T16:36:36.182667 #579351]  INFO -- primary-centos-8: ==> default: Checking if box 'bento/centos-8' version '202001.16.0' is up to date...
+I, [2020-02-04T16:36:37.015137 #579351]  INFO -- primary-centos-8: ==> default: Setting the name of the VM: kitchen-mylab_dhcp-primary-centos-8-2024129b-f1ae-4ef5-a66c-6333aae72411
+I, [2020-02-04T16:36:38.921481 #579351]  INFO -- primary-centos-8: ==> default: Clearing any previously set network interfaces...
+I, [2020-02-04T16:36:39.064993 #579351]  INFO -- primary-centos-8: ==> default: Preparing network interfaces based on configuration...
+I, [2020-02-04T16:36:39.065833 #579351]  INFO -- primary-centos-8:     default: Adapter 1: nat
+I, [2020-02-04T16:36:39.183035 #579351]  INFO -- primary-centos-8: ==> default: Forwarding ports...
+I, [2020-02-04T16:36:39.380833 #579351]  INFO -- primary-centos-8:     default: 22 (guest) => 2222 (host) (adapter 1)
+I, [2020-02-04T16:36:39.738296 #579351]  INFO -- primary-centos-8: ==> default: Running 'pre-boot' VM customizations...
+I, [2020-02-04T16:36:39.854482 #579351]  INFO -- primary-centos-8: ==> default: Booting VM...
+I, [2020-02-04T16:36:40.300622 #579351]  INFO -- primary-centos-8: ==> default: Waiting for machine to boot. This may take a few minutes...
+I, [2020-02-04T16:36:40.648165 #579351]  INFO -- primary-centos-8:     default: SSH address: 127.0.0.1:2222
+I, [2020-02-04T16:36:40.648309 #579351]  INFO -- primary-centos-8:     default: SSH username: vagrant
+I, [2020-02-04T16:36:40.648362 #579351]  INFO -- primary-centos-8:     default: SSH auth method: private key
+I, [2020-02-04T16:37:04.487159 #579351]  INFO -- primary-centos-8:     default: 
+I, [2020-02-04T16:37:04.487244 #579351]  INFO -- primary-centos-8:     default: Vagrant insecure key detected. Vagrant will automatically replace
+I, [2020-02-04T16:37:04.487274 #579351]  INFO -- primary-centos-8:     default: this with a newly generated keypair for better security.
+I, [2020-02-04T16:37:08.290608 #579351]  INFO -- primary-centos-8:     default: 
+I, [2020-02-04T16:37:08.290682 #579351]  INFO -- primary-centos-8:     default: Inserting generated public key within guest...
+I, [2020-02-04T16:37:08.777710 #579351]  INFO -- primary-centos-8:     default: Removing insecure key from the guest if it's present...
+I, [2020-02-04T16:37:09.256783 #579351]  INFO -- primary-centos-8:     default: Key inserted! Disconnecting and reconnecting using new SSH key...
+I, [2020-02-04T16:37:10.318318 #579351]  INFO -- primary-centos-8: ==> default: Machine booted and ready!
+I, [2020-02-04T16:37:10.319378 #579351]  INFO -- primary-centos-8: ==> default: Checking for guest additions in VM...
+I, [2020-02-04T16:37:10.408486 #579351]  INFO -- primary-centos-8: ==> default: Setting hostname...
+I, [2020-02-04T16:37:11.628808 #579351]  INFO -- primary-centos-8: ==> default: Mounting shared folders...
+I, [2020-02-04T16:37:11.629070 #579351]  INFO -- primary-centos-8:     default: /tmp/omnibus/cache => /home/maxwell/.kitchen/cache
+I, [2020-02-04T16:37:12.685118 #579351]  INFO -- primary-centos-8: ==> default: Machine not provisioned because `--no-provision` is specified.
+I, [2020-02-04T16:37:14.297493 #579351]  INFO -- primary-centos-8: [SSH] Established
+I, [2020-02-04T16:37:14.298105 #579351]  INFO -- primary-centos-8: Vagrant instance <primary-centos-8> created.
+I, [2020-02-04T16:37:14.298923 #579351]  INFO -- primary-centos-8: Finished creating <primary-centos-8> (0m49.73s).
+I, [2020-02-04T16:37:14.299115 #579351]  INFO -- primary-centos-8: -----> Converging <primary-centos-8>...
+I, [2020-02-04T16:37:14.301049 #579351]  INFO -- primary-centos-8: Preparing files for transfer
+I, [2020-02-04T16:37:14.301307 #579351]  INFO -- primary-centos-8: Installing cookbooks for Policyfile /home/maxwell/projects/chef/maxlab/policyfiles/tk_mylab_dhcp_server_primary.rb using `chef install`
+I, [2020-02-04T16:37:15.468468 #579351]  INFO -- primary-centos-8: Installing cookbooks from lock
+I, [2020-02-04T16:37:15.470237 #579351]  INFO -- primary-centos-8: Installing maxlab_dhcp     1.2.1
+I, [2020-02-04T16:37:15.470832 #579351]  INFO -- primary-centos-8: Installing maxlab_firewall 1.1.4
+I, [2020-02-04T16:37:15.471354 #579351]  INFO -- primary-centos-8: Installing mylab_dhcp      1.0.1
+I, [2020-02-04T16:37:15.486841 #579351]  INFO -- primary-centos-8: Updating policy lock using `chef update`
+I, [2020-02-04T16:37:16.650280 #579351]  INFO -- primary-centos-8: Attributes already up to date
+I, [2020-02-04T16:37:16.650804 #579351]  INFO -- primary-centos-8: Building policy tk_mylab_dhcp_server_primary
+I, [2020-02-04T16:37:16.650854 #579351]  INFO -- primary-centos-8: Expanded run list: recipe[maxlab_firewall::base_firewalld], recipe[mylab_dhcp::deploy], recipe[maxlab_firewall::update_firewalld]
+I, [2020-02-04T16:37:16.650887 #579351]  INFO -- primary-centos-8: Caching Cookbooks...
+I, [2020-02-04T16:37:16.650985 #579351]  INFO -- primary-centos-8: Installing mylab_dhcp      >= 0.0.0 from path
+I, [2020-02-04T16:37:16.651448 #579351]  INFO -- primary-centos-8: Installing maxlab_dhcp     >= 0.0.0 from path
+I, [2020-02-04T16:37:16.651801 #579351]  INFO -- primary-centos-8: Installing maxlab_firewall >= 0.0.0 from path
+I, [2020-02-04T16:37:19.101148 #579351]  INFO -- primary-centos-8: 
+I, [2020-02-04T16:37:19.101370 #579351]  INFO -- primary-centos-8: Lockfile written to /home/maxwell/projects/chef/maxlab/policyfiles/tk_mylab_dhcp_server_primary.lock.json
+I, [2020-02-04T16:37:19.628063 #579351]  INFO -- primary-centos-8: Policy revision id: 61f2374d9000dac6a2b6aff621f0775e2fe00ac6995d496a5b554bd7e60a1659
+I, [2020-02-04T16:37:19.677451 #579351]  INFO -- primary-centos-8: Preparing dna.json
+I, [2020-02-04T16:37:19.679258 #579351]  INFO -- primary-centos-8: Exporting cookbook dependencies from Policyfile /tmp/primary-centos-8-sandbox-20200204-579351-192ywse...
+I, [2020-02-04T16:37:24.376114 #579351]  INFO -- primary-centos-8: Exported policy 'tk_mylab_dhcp_server_primary' to /tmp/primary-centos-8-sandbox-20200204-579351-192ywse
+I, [2020-02-04T16:37:24.376277 #579351]  INFO -- primary-centos-8: 
+I, [2020-02-04T16:37:24.376347 #579351]  INFO -- primary-centos-8: To converge this system with the exported policy, run:
+I, [2020-02-04T16:37:24.376407 #579351]  INFO -- primary-centos-8:   cd /tmp/primary-centos-8-sandbox-20200204-579351-192ywse
+I, [2020-02-04T16:37:24.376466 #579351]  INFO -- primary-centos-8:   chef-client -z
+I, [2020-02-04T16:37:24.400096 #579351]  INFO -- primary-centos-8: Removing non-cookbook files before transfer
+I, [2020-02-04T16:37:24.400379 #579351]  INFO -- primary-centos-8: Preparing data_bags
+I, [2020-02-04T16:37:24.407924 #579351]  INFO -- primary-centos-8: Preparing nodes
+I, [2020-02-04T16:37:24.408219 #579351]  INFO -- primary-centos-8: Preparing validation.pem
+I, [2020-02-04T16:37:24.408496 #579351]  INFO -- primary-centos-8: Preparing client.rb
+I, [2020-02-04T16:37:24.470897 #579351]  INFO -- primary-centos-8: -----> Installing Chef install only if missing package
+I, [2020-02-04T16:37:24.473979 #579351]  INFO -- primary-centos-8: Downloading https://omnitruck.chef.io/install.sh to file /tmp/install.sh
+I, [2020-02-04T16:37:24.474743 #579351]  INFO -- primary-centos-8: Trying wget...
+I, [2020-02-04T16:37:24.623628 #579351]  INFO -- primary-centos-8: Download complete.
+I, [2020-02-04T16:37:24.662440 #579351]  INFO -- primary-centos-8: el 8 x86_64
+I, [2020-02-04T16:37:24.662505 #579351]  INFO -- primary-centos-8: Getting information for chef stable  for el...
+I, [2020-02-04T16:37:24.662535 #579351]  INFO -- primary-centos-8: downloading https://omnitruck.chef.io/stable/chef/metadata?v=&p=el&pv=8&m=x86_64
+I, [2020-02-04T16:37:24.662553 #579351]  INFO -- primary-centos-8:   to file /tmp/install.sh.4170/metadata.txt
+I, [2020-02-04T16:37:24.663634 #579351]  INFO -- primary-centos-8: trying wget...
+I, [2020-02-04T16:37:24.763533 #579351]  INFO -- primary-centos-8: sha1	b4c3c270192d601881c9e0927b5f05ae5f3ed672
+I, [2020-02-04T16:37:24.763611 #579351]  INFO -- primary-centos-8: sha256	9d6065d634880b56887db95e9c5189dd8de7b727e3e99b38fbaa15ef80326214
+I, [2020-02-04T16:37:24.763641 #579351]  INFO -- primary-centos-8: url	https://packages.chef.io/files/stable/chef/15.7.32/el/8/chef-15.7.32-1.el7.x86_64.rpm
+I, [2020-02-04T16:37:24.763862 #579351]  INFO -- primary-centos-8: version	15.7.32
+I, [2020-02-04T16:37:24.766712 #579351]  INFO -- primary-centos-8: downloaded metadata file looks valid...
+I, [2020-02-04T16:37:24.782212 #579351]  INFO -- primary-centos-8: /tmp/omnibus/cache/chef-15.7.32-1.el7.x86_64.rpm exists
+I, [2020-02-04T16:37:24.782280 #579351]  INFO -- primary-centos-8: Comparing checksum with sha256sum...
+I, [2020-02-04T16:37:24.963863 #579351]  INFO -- primary-centos-8: 
+I, [2020-02-04T16:37:24.963939 #579351]  INFO -- primary-centos-8: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2020-02-04T16:37:24.963969 #579351]  INFO -- primary-centos-8: 
+I, [2020-02-04T16:37:24.963991 #579351]  INFO -- primary-centos-8: You are installing a package without a version pin.  If you are installing
+I, [2020-02-04T16:37:24.964019 #579351]  INFO -- primary-centos-8: on production servers via an automated process this is DANGEROUS and you will
+I, [2020-02-04T16:37:24.964040 #579351]  INFO -- primary-centos-8: be upgraded without warning on new releases, even to new major releases.
+I, [2020-02-04T16:37:24.964062 #579351]  INFO -- primary-centos-8: Letting the version float is only appropriate in desktop, test, development or
+I, [2020-02-04T16:37:24.964096 #579351]  INFO -- primary-centos-8: CI/CD environments.
+I, [2020-02-04T16:37:24.964122 #579351]  INFO -- primary-centos-8: 
+I, [2020-02-04T16:37:24.964142 #579351]  INFO -- primary-centos-8: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2020-02-04T16:37:24.964161 #579351]  INFO -- primary-centos-8: 
+I, [2020-02-04T16:37:24.964180 #579351]  INFO -- primary-centos-8: Installing chef 
+I, [2020-02-04T16:37:24.964199 #579351]  INFO -- primary-centos-8: installing with rpm...
+I, [2020-02-04T16:37:25.028074 #579351]  INFO -- primary-centos-8: warning: /tmp/omnibus/cache/chef-15.7.32-1.el7.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+I, [2020-02-04T16:37:25.235430 #579351]  INFO -- primary-centos-8: Verifying...                                                            (100%)#                                 (100%)##                                (100%)###                               (100%)####                              (100%)#####                             (100%)######                            (100%)#######                           (100%)########                          (100%)#########                         (100%)##########                        (100%)###########                       (100%)############                      (100%)#############                     (100%)##############                    (100%)###############                   (100%)################                  (100%)#################                 (100%)##################                (100%)###################               (100%)####################              (100%)#####################             (100%)######################            (100%)#######################           (100%)########################          (100%)#########################         (100%)##########################        (100%)###########################       (100%)############################      (100%)#############################     (100%)##############################    (100%)###############################   (100%)################################  (100%)################################# (100%)################################# [100%]
+I, [2020-02-04T16:37:25.614478 #579351]  INFO -- primary-centos-8: Preparing...                                                            (100%)#                                 (100%)##                                (100%)###                               (100%)####                              (100%)#####                             (100%)######                            (100%)#######                           (100%)########                          (100%)#########                         (100%)##########                        (100%)###########                       (100%)############                      (100%)#############                     (100%)##############                    (100%)###############                   (100%)################                  (100%)#################                 (100%)##################                (100%)###################               (100%)####################              (100%)#####################             (100%)######################            (100%)#######################           (100%)########################          (100%)#########################         (100%)##########################        (100%)###########################       (100%)############################      (100%)#############################     (100%)##############################    (100%)###############################   (100%)################################  (100%)################################# (100%)################################# [100%]
+I, [2020-02-04T16:37:25.694763 #579351]  INFO -- primary-centos-8: Updating / installing...
+I, [2020-02-04T16:37:32.749771 #579351]  INFO -- primary-centos-8:    1:chef-15.7.32-1.el7                                                 (  1%)#                                 (  4%)##                                (  7%)###                               ( 10%)####                              ( 13%)#####                             ( 16%)######                            ( 19%)#######                           ( 22%)########                          ( 25%)#########                         ( 28%)##########                        ( 31%)###########                       ( 34%)############                      ( 37%)#############                     ( 40%)##############                    ( 43%)###############                   ( 46%)################                  ( 49%)#################                 ( 51%)##################                ( 54%)###################               ( 57%)####################              ( 60%)#####################             ( 63%)######################            ( 66%)#######################           ( 69%)########################          ( 72%)#########################         ( 75%)##########################        ( 78%)###########################       ( 81%)############################      ( 84%)#############################     ( 87%)##############################    ( 90%)###############################   ( 93%)################################  ( 96%)################################# ( 99%)################################# [100%]
+I, [2020-02-04T16:37:33.203488 #579351]  INFO -- primary-centos-8: Thank you for installing Chef Infra Client! For help getting started visit https://learn.chef.io
+I, [2020-02-04T16:37:33.303503 #579351]  INFO -- primary-centos-8: Transferring files to <primary-centos-8>
+I, [2020-02-04T16:37:36.257352 #579351]  INFO -- primary-centos-8: +---------------------------------------------+
+I, [2020-02-04T16:37:36.257435 #579351]  INFO -- primary-centos-8: [32m✔[0m 2 product licenses accepted.
+I, [2020-02-04T16:37:36.257460 #579351]  INFO -- primary-centos-8: +---------------------------------------------+
+I, [2020-02-04T16:37:36.488770 #579351]  INFO -- primary-centos-8: Starting Chef Infra Client, version 15.7.32
+I, [2020-02-04T16:37:38.172194 #579351]  INFO -- primary-centos-8: Creating a new client identity for primary-centos-8 using the validator key.
+I, [2020-02-04T16:37:38.323929 #579351]  INFO -- primary-centos-8: Using policy 'tk_mylab_dhcp_server_primary' at revision '61f2374d9000dac6a2b6aff621f0775e2fe00ac6995d496a5b554bd7e60a1659'
+I, [2020-02-04T16:37:38.370922 #579351]  INFO -- primary-centos-8: resolving cookbooks for run list: ["maxlab_firewall::base_firewalld@1.1.4 (7e61167)", "mylab_dhcp::deploy@1.0.1 (e322626)", "maxlab_firewall::update_firewalld@1.1.4 (7e61167)"]
+I, [2020-02-04T16:37:38.397014 #579351]  INFO -- primary-centos-8: Synchronizing Cookbooks:
+I, [2020-02-04T16:37:38.422498 #579351]  INFO -- primary-centos-8:   - maxlab_dhcp (1.2.1)
+I, [2020-02-04T16:37:38.446313 #579351]  INFO -- primary-centos-8:   - mylab_dhcp (1.0.1)
+I, [2020-02-04T16:37:38.472659 #579351]  INFO -- primary-centos-8:   - maxlab_firewall (1.1.4)
+I, [2020-02-04T16:37:38.472747 #579351]  INFO -- primary-centos-8: Installing Cookbook Gems:
+I, [2020-02-04T16:37:38.472801 #579351]  INFO -- primary-centos-8: Compiling Cookbooks...
+I, [2020-02-04T16:37:38.472834 #579351]  INFO -- primary-centos-8: Converging 9 resources
+I, [2020-02-04T16:37:38.472860 #579351]  INFO -- primary-centos-8: Recipe: maxlab_firewall::base_firewalld
+I, [2020-02-04T16:37:51.274305 #579351]  INFO -- primary-centos-8:   * dnf_package[firewalld] action install (up to date)
+I, [2020-02-04T16:37:51.660732 #579351]  INFO -- primary-centos-8:   * service[firewalld] action enable
+I, [2020-02-04T16:37:51.660809 #579351]  INFO -- primary-centos-8:     - enable service service[firewalld]
+I, [2020-02-04T16:37:52.198323 #579351]  INFO -- primary-centos-8:   * service[firewalld] action start
+I, [2020-02-04T16:37:52.198387 #579351]  INFO -- primary-centos-8:     - start service service[firewalld]
+I, [2020-02-04T16:37:54.661251 #579351]  INFO -- primary-centos-8:   * execute[set-default-zone] action run
+I, [2020-02-04T16:37:54.661322 #579351]  INFO -- primary-centos-8:     - execute firewall-cmd --set-default-zone=dmz
+I, [2020-02-04T16:37:55.058660 #579351]  INFO -- primary-centos-8:   * execute[set-default-interface-default-zone] action run
+I, [2020-02-04T16:37:55.058723 #579351]  INFO -- primary-centos-8:     - execute firewall-cmd --change-interface=eth0 --zone=dmz
+I, [2020-02-04T16:37:55.058744 #579351]  INFO -- primary-centos-8: Recipe: maxlab_dhcp::deploy
+I, [2020-02-04T16:38:06.342908 #579351]  INFO -- primary-centos-8:   * dnf_package[dhcp-server] action install
+I, [2020-02-04T16:38:06.342980 #579351]  INFO -- primary-centos-8:     - install version 12:4.3.6-34.el8.x86_64 of package dhcp-server
+I, [2020-02-04T16:38:06.369258 #579351]  INFO -- primary-centos-8:   * template[/etc/dhcp/dhcpd.conf] action create
+I, [2020-02-04T16:38:06.369442 #579351]  INFO -- primary-centos-8:     - update content in file /etc/dhcp/dhcpd.conf from 02bd68 to 267c01
+I, [2020-02-04T16:38:06.369529 #579351]  INFO -- primary-centos-8:     --- /etc/dhcp/dhcpd.conf	2019-11-19 15:33:08.000000000 +0000
+I, [2020-02-04T16:38:06.369584 #579351]  INFO -- primary-centos-8:     +++ /etc/dhcp/.chef-dhcpd20200204-4412-1odog7m.conf	2020-02-04 23:38:06.345774767 +0000
+I, [2020-02-04T16:38:06.369637 #579351]  INFO -- primary-centos-8:     @@ -1,6 +1,348 @@
+I, [2020-02-04T16:38:06.369678 #579351]  INFO -- primary-centos-8:      #
+I, [2020-02-04T16:38:06.369727 #579351]  INFO -- primary-centos-8:     -# DHCP Server Configuration file.
+I, [2020-02-04T16:38:06.369770 #579351]  INFO -- primary-centos-8:     -#   see /usr/share/doc/dhcp-server/dhcpd.conf.example
+I, [2020-02-04T16:38:06.369817 #579351]  INFO -- primary-centos-8:     -#   see dhcpd.conf(5) man page
+I, [2020-02-04T16:38:06.369857 #579351]  INFO -- primary-centos-8:     +# /etc/dhcp/dhcpd.conf - DHCP server instance ''
+I, [2020-02-04T16:38:06.369917 #579351]  INFO -- primary-centos-8:      #
+I, [2020-02-04T16:38:06.369990 #579351]  INFO -- primary-centos-8:     +# This file deployed via Chef - DO NOT EDIT
+I, [2020-02-04T16:38:06.370032 #579351]  INFO -- primary-centos-8:     +#
+I, [2020-02-04T16:38:06.370068 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.370154 #579351]  INFO -- primary-centos-8:     +# Global Options
+I, [2020-02-04T16:38:06.370203 #579351]  INFO -- primary-centos-8:     +ddns-update-style interim;
+I, [2020-02-04T16:38:06.370242 #579351]  INFO -- primary-centos-8:     +authoritative;
+I, [2020-02-04T16:38:06.370288 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.370330 #579351]  INFO -- primary-centos-8:     +subnet 10.0.2.0 netmask 255.255.255.0 {
+I, [2020-02-04T16:38:06.370390 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.370429 #579351]  INFO -- primary-centos-8:     +  option domain-name "testkitchen";
+I, [2020-02-04T16:38:06.370461 #579351]  INFO -- primary-centos-8:     +  option domain-name-servers 10.0.2.11, 10.0.2.12, 10.0.2.13;
+I, [2020-02-04T16:38:06.370500 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.370532 #579351]  INFO -- primary-centos-8:     +  range 10.0.2.200 10.0.2.240;
+I, [2020-02-04T16:38:06.370560 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.370588 #579351]  INFO -- primary-centos-8:     +  option routers 10.0.2.2;
+I, [2020-02-04T16:38:06.370629 #579351]  INFO -- primary-centos-8:     +  option broadcast-address 10.0.2.255;
+I, [2020-02-04T16:38:06.370657 #579351]  INFO -- primary-centos-8:     +  option subnet-mask 255.255.255.0;
+I, [2020-02-04T16:38:06.370684 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.370716 #579351]  INFO -- primary-centos-8:     +  default-lease-time 1440;
+I, [2020-02-04T16:38:06.370747 #579351]  INFO -- primary-centos-8:     +  max-lease-time 1440;
+I, [2020-02-04T16:38:06.370772 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.370797 #579351]  INFO -- primary-centos-8:     +  option ip-forwarding off;
+I, [2020-02-04T16:38:06.370821 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.370845 #579351]  INFO -- primary-centos-8:     +  option ntp-servers 10.0.2.2;
+I, [2020-02-04T16:38:06.370867 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.370892 #579351]  INFO -- primary-centos-8:     +  # PXE boot information
+I, [2020-02-04T16:38:06.370917 #579351]  INFO -- primary-centos-8:     +  option root-path "/var/lib/tftpboot";
+I, [2020-02-04T16:38:06.370942 #579351]  INFO -- primary-centos-8:     +  filename "/pxelinux.0";
+I, [2020-02-04T16:38:06.370973 #579351]  INFO -- primary-centos-8:     +  next-server 10.0.2.15;
+I, [2020-02-04T16:38:06.370997 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.371021 #579351]  INFO -- primary-centos-8:     +  #
+I, [2020-02-04T16:38:06.371046 #579351]  INFO -- primary-centos-8:     +  # NAS
+I, [2020-02-04T16:38:06.371070 #579351]  INFO -- primary-centos-8:     +  #
+I, [2020-02-04T16:38:06.371110 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.371136 #579351]  INFO -- primary-centos-8:     +  group {
+I, [2020-02-04T16:38:06.371159 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.371186 #579351]  INFO -- primary-centos-8:     +    # Lenovo B590 for use as NAS
+I, [2020-02-04T16:38:06.371211 #579351]  INFO -- primary-centos-8:     +    host laptopnas {
+I, [2020-02-04T16:38:06.371235 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 3c:97:0e:a7:8a:9d;
+I, [2020-02-04T16:38:06.371260 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.249;
+I, [2020-02-04T16:38:06.371281 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.371314 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.371339 #579351]  INFO -- primary-centos-8:     +    # HP Data Vault X510 (NFS, Samba)
+I, [2020-02-04T16:38:06.371364 #579351]  INFO -- primary-centos-8:     +    host filer {
+I, [2020-02-04T16:38:06.371389 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 00:26:2d:00:04:7c;
+I, [2020-02-04T16:38:06.371423 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.250;
+I, [2020-02-04T16:38:06.371449 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.371476 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.371501 #579351]  INFO -- primary-centos-8:     +    # Spruill Synologu DS218+ NAS
+I, [2020-02-04T16:38:06.371526 #579351]  INFO -- primary-centos-8:     +    host synology {
+I, [2020-02-04T16:38:06.371547 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 00:11:32:BB:CE:0A;
+I, [2020-02-04T16:38:06.371572 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.251;
+I, [2020-02-04T16:38:06.371597 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.371624 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.371655 #579351]  INFO -- primary-centos-8:     +    # HP Data Vault X510 (NFS, Samba)
+I, [2020-02-04T16:38:06.371679 #579351]  INFO -- primary-centos-8:     +    host aux {
+I, [2020-02-04T16:38:06.371704 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 00:26:2d:00:03:a9;
+I, [2020-02-04T16:38:06.371729 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.252;
+I, [2020-02-04T16:38:06.371749 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.371773 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.371798 #579351]  INFO -- primary-centos-8:     +    # HP Data Vault X310 (NFS, Samba)
+I, [2020-02-04T16:38:06.371827 #579351]  INFO -- primary-centos-8:     +    host central {
+I, [2020-02-04T16:38:06.371852 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 00:26:2d:02:b2:58;
+I, [2020-02-04T16:38:06.371876 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.253;
+I, [2020-02-04T16:38:06.371898 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.371922 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.371946 #579351]  INFO -- primary-centos-8:     +  }
+I, [2020-02-04T16:38:06.371967 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.372001 #579351]  INFO -- primary-centos-8:     +  #
+I, [2020-02-04T16:38:06.372025 #579351]  INFO -- primary-centos-8:     +  # graphite
+I, [2020-02-04T16:38:06.372045 #579351]  INFO -- primary-centos-8:     +  #
+I, [2020-02-04T16:38:06.372069 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.372101 #579351]  INFO -- primary-centos-8:     +  group {
+I, [2020-02-04T16:38:06.372128 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.372154 #579351]  INFO -- primary-centos-8:     +    # Graphite Metric Server VM 1
+I, [2020-02-04T16:38:06.372175 #579351]  INFO -- primary-centos-8:     +    host graphite1 {
+I, [2020-02-04T16:38:06.372208 #579351]  INFO -- primary-centos-8:     +      hardware ethernet CA:74:81:61:F8:E4;
+I, [2020-02-04T16:38:06.372234 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.120;
+I, [2020-02-04T16:38:06.372254 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.372277 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.372297 #579351]  INFO -- primary-centos-8:     +    # Graphite Metric Server VM 2
+I, [2020-02-04T16:38:06.372321 #579351]  INFO -- primary-centos-8:     +    host graphite2 {
+I, [2020-02-04T16:38:06.372353 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 76:9B:F2:F3:EE:FB;
+I, [2020-02-04T16:38:06.372374 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.121;
+I, [2020-02-04T16:38:06.372398 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.372418 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.372450 #579351]  INFO -- primary-centos-8:     +  }
+I, [2020-02-04T16:38:06.372473 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.372498 #579351]  INFO -- primary-centos-8:     +  #
+I, [2020-02-04T16:38:06.372519 #579351]  INFO -- primary-centos-8:     +  # hypervisor
+I, [2020-02-04T16:38:06.372543 #579351]  INFO -- primary-centos-8:     +  #
+I, [2020-02-04T16:38:06.372588 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.372619 #579351]  INFO -- primary-centos-8:     +  group {
+I, [2020-02-04T16:38:06.372640 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.372665 #579351]  INFO -- primary-centos-8:     +    # Lenovo B590 Hypervisor
+I, [2020-02-04T16:38:06.372697 #579351]  INFO -- primary-centos-8:     +    host lenovoflash1 {
+I, [2020-02-04T16:38:06.372723 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 3c:97:0e:a8:f2:e2;
+I, [2020-02-04T16:38:06.372744 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.81;
+I, [2020-02-04T16:38:06.372768 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.372788 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.372812 #579351]  INFO -- primary-centos-8:     +    # Lenovo B590 Hypervisor
+I, [2020-02-04T16:38:06.372833 #579351]  INFO -- primary-centos-8:     +    host lenovoflash2 {
+I, [2020-02-04T16:38:06.372861 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 3c:97:0e:a7:8f:b8;
+I, [2020-02-04T16:38:06.372882 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.82;
+I, [2020-02-04T16:38:06.372907 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.372941 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.372969 #579351]  INFO -- primary-centos-8:     +    # Lenovo B590 Hypervisor
+I, [2020-02-04T16:38:06.372996 #579351]  INFO -- primary-centos-8:     +    host lenovoflash3 {
+I, [2020-02-04T16:38:06.373021 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 3c:97:0e:a7:8f:a6;
+I, [2020-02-04T16:38:06.373067 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.83;
+I, [2020-02-04T16:38:06.373106 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.373132 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.373155 #579351]  INFO -- primary-centos-8:     +    # Lenovo B590 Hypervisor
+I, [2020-02-04T16:38:06.373180 #579351]  INFO -- primary-centos-8:     +    host lenovoflash4 {
+I, [2020-02-04T16:38:06.373213 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 3c:97:0e:a7:90:09;
+I, [2020-02-04T16:38:06.373236 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.91;
+I, [2020-02-04T16:38:06.373259 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.373281 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.373316 #579351]  INFO -- primary-centos-8:     +    # Lenovo B590 Hypervisor
+I, [2020-02-04T16:38:06.373340 #579351]  INFO -- primary-centos-8:     +    host lenovoflash5 {
+I, [2020-02-04T16:38:06.373361 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 3c:97:0e:a7:90:aa;
+I, [2020-02-04T16:38:06.373394 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.92;
+I, [2020-02-04T16:38:06.373415 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.373439 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.373470 #579351]  INFO -- primary-centos-8:     +    # Toshiba Z40 Hypervisor
+I, [2020-02-04T16:38:06.373495 #579351]  INFO -- primary-centos-8:     +    host toshiprox1 {
+I, [2020-02-04T16:38:06.373521 #579351]  INFO -- primary-centos-8:     +      hardware ethernet ec:21:e5:c0:6d:1a;
+I, [2020-02-04T16:38:06.373543 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.95;
+I, [2020-02-04T16:38:06.373564 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.373593 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.373620 #579351]  INFO -- primary-centos-8:     +  }
+I, [2020-02-04T16:38:06.373642 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.373677 #579351]  INFO -- primary-centos-8:     +  #
+I, [2020-02-04T16:38:06.373700 #579351]  INFO -- primary-centos-8:     +  # infra
+I, [2020-02-04T16:38:06.373734 #579351]  INFO -- primary-centos-8:     +  #
+I, [2020-02-04T16:38:06.373766 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.373800 #579351]  INFO -- primary-centos-8:     +  group {
+I, [2020-02-04T16:38:06.373821 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.373844 #579351]  INFO -- primary-centos-8:     +    # Core Infrastructure (DNS, DHCP, NTP)
+I, [2020-02-04T16:38:06.373862 #579351]  INFO -- primary-centos-8:     +    host core {
+I, [2020-02-04T16:38:06.373893 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 8e:28:fa:de:d7:9f;
+I, [2020-02-04T16:38:06.373918 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.100;
+I, [2020-02-04T16:38:06.373941 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.373963 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.373984 #579351]  INFO -- primary-centos-8:     +    # Chef Infrastructure
+I, [2020-02-04T16:38:06.374005 #579351]  INFO -- primary-centos-8:     +    host chef {
+I, [2020-02-04T16:38:06.374041 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 2a:41:03:6f:54:cf;
+I, [2020-02-04T16:38:06.378801 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.101;
+I, [2020-02-04T16:38:06.378879 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.378924 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.378954 #579351]  INFO -- primary-centos-8:     +    # Repository Infrastructure (TFTP, HTTP)
+I, [2020-02-04T16:38:06.378981 #579351]  INFO -- primary-centos-8:     +    host repo {
+I, [2020-02-04T16:38:06.379007 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 5E:CC:11:BD:17:19;
+I, [2020-02-04T16:38:06.379032 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.102;
+I, [2020-02-04T16:38:06.379060 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.379094 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.379125 #579351]  INFO -- primary-centos-8:     +    # Repository Infrastructure (TFTP, HTTP) Repo Backup
+I, [2020-02-04T16:38:06.379151 #579351]  INFO -- primary-centos-8:     +    host stor {
+I, [2020-02-04T16:38:06.379176 #579351]  INFO -- primary-centos-8:     +      hardware ethernet A2:B0:07:BD:2F:FB;
+I, [2020-02-04T16:38:06.379201 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.103;
+I, [2020-02-04T16:38:06.379226 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.379251 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.379288 #579351]  INFO -- primary-centos-8:     +    # Repository Infrastructure (TFTP, HTTP) Manual Build
+I, [2020-02-04T16:38:06.379314 #579351]  INFO -- primary-centos-8:     +    host repomanual {
+I, [2020-02-04T16:38:06.379339 #579351]  INFO -- primary-centos-8:     +      hardware ethernet E2:B2:DD:8B:67:B4;
+I, [2020-02-04T16:38:06.379365 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.104;
+I, [2020-02-04T16:38:06.379389 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.379634 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.379697 #579351]  INFO -- primary-centos-8:     +    # Core Infrastructure (DNS, DHCP, NTP) via Chef
+I, [2020-02-04T16:38:06.379732 #579351]  INFO -- primary-centos-8:     +    host bank {
+I, [2020-02-04T16:38:06.379759 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 52:C8:DD:62:5C:76;
+I, [2020-02-04T16:38:06.379785 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.105;
+I, [2020-02-04T16:38:06.379811 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.379836 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.379862 #579351]  INFO -- primary-centos-8:     +    # PXE Boot testing VM 1
+I, [2020-02-04T16:38:06.379887 #579351]  INFO -- primary-centos-8:     +    host pxetest1 {
+I, [2020-02-04T16:38:06.379944 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 1A:92:46:4E:75:DD;
+I, [2020-02-04T16:38:06.380405 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.122;
+I, [2020-02-04T16:38:06.380465 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.380535 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.380589 #579351]  INFO -- primary-centos-8:     +  }
+I, [2020-02-04T16:38:06.380634 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.380682 #579351]  INFO -- primary-centos-8:     +  #
+I, [2020-02-04T16:38:06.380724 #579351]  INFO -- primary-centos-8:     +  # laptop
+I, [2020-02-04T16:38:06.380767 #579351]  INFO -- primary-centos-8:     +  #
+I, [2020-02-04T16:38:06.380796 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.380824 #579351]  INFO -- primary-centos-8:     +  group {
+I, [2020-02-04T16:38:06.380848 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.380866 #579351]  INFO -- primary-centos-8:     +    # Macbook Pro 2012 (Wired IP)
+I, [2020-02-04T16:38:06.380884 #579351]  INFO -- primary-centos-8:     +    host macbook {
+I, [2020-02-04T16:38:06.380906 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 0c:4d:e9:cb:52:1c;
+I, [2020-02-04T16:38:06.380925 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.35;
+I, [2020-02-04T16:38:06.380942 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.380960 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.380977 #579351]  INFO -- primary-centos-8:     +    # Macbook Pro 2012 (Wifi IP)
+I, [2020-02-04T16:38:06.380992 #579351]  INFO -- primary-centos-8:     +    host macbookwifi {
+I, [2020-02-04T16:38:06.381009 #579351]  INFO -- primary-centos-8:     +      hardware ethernet a4:5e:60:cb:3f:5d;
+I, [2020-02-04T16:38:06.381027 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.36;
+I, [2020-02-04T16:38:06.381045 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.381061 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.381079 #579351]  INFO -- primary-centos-8:     +    # Toshiba Z40 laptop (Wired IP)
+I, [2020-02-04T16:38:06.381112 #579351]  INFO -- primary-centos-8:     +    host sarko {
+I, [2020-02-04T16:38:06.381129 #579351]  INFO -- primary-centos-8:     +      hardware ethernet b8:6b:23:1e:02:c6;
+I, [2020-02-04T16:38:06.381153 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.40;
+I, [2020-02-04T16:38:06.381181 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.381206 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.381232 #579351]  INFO -- primary-centos-8:     +    # Toshiba Z40 laptop (Wifi IP)
+I, [2020-02-04T16:38:06.381260 #579351]  INFO -- primary-centos-8:     +    host sarkowifi {
+I, [2020-02-04T16:38:06.381281 #579351]  INFO -- primary-centos-8:     +      hardware ethernet a4:34:d9:6a:63:b9;
+I, [2020-02-04T16:38:06.381305 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.41;
+I, [2020-02-04T16:38:06.381329 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.381352 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.381374 #579351]  INFO -- primary-centos-8:     +    # Macbook Pro Next Logo (Wired IP)
+I, [2020-02-04T16:38:06.381405 #579351]  INFO -- primary-centos-8:     +    host macbooknext {
+I, [2020-02-04T16:38:06.381429 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 0c:4d:e9:cb:52:1c;
+I, [2020-02-04T16:38:06.381453 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.42;
+I, [2020-02-04T16:38:06.381473 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.381501 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.381524 #579351]  INFO -- primary-centos-8:     +    # Macbook Pro Next Logo (Wifi IP)
+I, [2020-02-04T16:38:06.381548 #579351]  INFO -- primary-centos-8:     +    host macbooknextwifi {
+I, [2020-02-04T16:38:06.381570 #579351]  INFO -- primary-centos-8:     +      hardware ethernet a4:5e:60:cb:3f:5d;
+I, [2020-02-04T16:38:06.381593 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.43;
+I, [2020-02-04T16:38:06.381617 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.381637 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.381670 #579351]  INFO -- primary-centos-8:     +    # Toshiba Z40 laptop chaosmonkey logo (Wired USB Ethernet)
+I, [2020-02-04T16:38:06.381695 #579351]  INFO -- primary-centos-8:     +    host chaosusb {
+I, [2020-02-04T16:38:06.381717 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 8c:ae:4c:e9:22:1a;
+I, [2020-02-04T16:38:06.381742 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.44;
+I, [2020-02-04T16:38:06.381766 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.381786 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.381809 #579351]  INFO -- primary-centos-8:     +    # Toshiba Z40 laptop chaosmonkey logo (WIFI)
+I, [2020-02-04T16:38:06.381834 #579351]  INFO -- primary-centos-8:     +    host chaoswifi {
+I, [2020-02-04T16:38:06.381858 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 44:85:00:4d:84:51;
+I, [2020-02-04T16:38:06.381882 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.45;
+I, [2020-02-04T16:38:06.381902 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.381925 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.381949 #579351]  INFO -- primary-centos-8:     +    # Toshiba Z40 laptop mech logo(Wired IP)
+I, [2020-02-04T16:38:06.381970 #579351]  INFO -- primary-centos-8:     +    host mechsarko {
+I, [2020-02-04T16:38:06.381992 #579351]  INFO -- primary-centos-8:     +      hardware ethernet b8:6b:23:8a:78:ce;
+I, [2020-02-04T16:38:06.382012 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.50;
+I, [2020-02-04T16:38:06.382035 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.382056 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.382079 #579351]  INFO -- primary-centos-8:     +    # Toshiba Z40 laptop mech logo (Wifi IP)
+I, [2020-02-04T16:38:06.382110 #579351]  INFO -- primary-centos-8:     +    host mechsarkowifi {
+I, [2020-02-04T16:38:06.382134 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 44:85:00:4D:BF:B6;
+I, [2020-02-04T16:38:06.382154 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.51;
+I, [2020-02-04T16:38:06.382178 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.382197 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.382221 #579351]  INFO -- primary-centos-8:     +  }
+I, [2020-02-04T16:38:06.382242 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.382264 #579351]  INFO -- primary-centos-8:     +  #
+I, [2020-02-04T16:38:06.382283 #579351]  INFO -- primary-centos-8:     +  # mobile
+I, [2020-02-04T16:38:06.382307 #579351]  INFO -- primary-centos-8:     +  #
+I, [2020-02-04T16:38:06.382326 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.382352 #579351]  INFO -- primary-centos-8:     +  group {
+I, [2020-02-04T16:38:06.382372 #579351]  INFO -- primary-centos-8:     +      option domain-name-servers 10.0.2.11, 1.1.1.1;
+I, [2020-02-04T16:38:06.382396 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.382416 #579351]  INFO -- primary-centos-8:     +    # Apple iPhone 5
+I, [2020-02-04T16:38:06.382439 #579351]  INFO -- primary-centos-8:     +    host maxwaxi5 {
+I, [2020-02-04T16:38:06.382460 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 54:26:96:1b:17:a6;
+I, [2020-02-04T16:38:06.382483 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.61;
+I, [2020-02-04T16:38:06.382504 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.382523 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.382543 #579351]  INFO -- primary-centos-8:     +    # Apple iPhone Xr
+I, [2020-02-04T16:38:06.382562 #579351]  INFO -- primary-centos-8:     +    host maxwaxxr {
+I, [2020-02-04T16:38:06.382588 #579351]  INFO -- primary-centos-8:     +      hardware ethernet D8:1C:79:90:F1:9A;
+I, [2020-02-04T16:38:06.382609 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.62;
+I, [2020-02-04T16:38:06.382650 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.382682 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.382713 #579351]  INFO -- primary-centos-8:     +    # Apple iPad (2019 instance)
+I, [2020-02-04T16:38:06.382739 #579351]  INFO -- primary-centos-8:     +    host ipad {
+I, [2020-02-04T16:38:06.382762 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 98:46:0a:7f:1d:0c;
+I, [2020-02-04T16:38:06.382786 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.63;
+I, [2020-02-04T16:38:06.382811 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.382836 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.382905 #579351]  INFO -- primary-centos-8:     +  }
+I, [2020-02-04T16:38:06.382981 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.383030 #579351]  INFO -- primary-centos-8:     +  #
+I, [2020-02-04T16:38:06.383058 #579351]  INFO -- primary-centos-8:     +  # network-infra
+I, [2020-02-04T16:38:06.383104 #579351]  INFO -- primary-centos-8:     +  #
+I, [2020-02-04T16:38:06.383145 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.383207 #579351]  INFO -- primary-centos-8:     +  group {
+I, [2020-02-04T16:38:06.383239 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.383271 #579351]  INFO -- primary-centos-8:     +    # Zyxel C110Z Centurylink Gateway
+I, [2020-02-04T16:38:06.383303 #579351]  INFO -- primary-centos-8:     +    host gateway {
+I, [2020-02-04T16:38:06.383344 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 58:8B:F3:E2:6E:25;
+I, [2020-02-04T16:38:06.383396 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.1;
+I, [2020-02-04T16:38:06.383453 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.383484 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.383511 #579351]  INFO -- primary-centos-8:     +    # Netgear r6200v2 Wireless AP (DD-WRT)
+I, [2020-02-04T16:38:06.383542 #579351]  INFO -- primary-centos-8:     +    host wap {
+I, [2020-02-04T16:38:06.383573 #579351]  INFO -- primary-centos-8:     +      hardware ethernet e8:fc:af:9c:90:7c;
+I, [2020-02-04T16:38:06.383625 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.3;
+I, [2020-02-04T16:38:06.383656 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.383686 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.383727 #579351]  INFO -- primary-centos-8:     +  }
+I, [2020-02-04T16:38:06.383762 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.383785 #579351]  INFO -- primary-centos-8:     +  #
+I, [2020-02-04T16:38:06.383810 #579351]  INFO -- primary-centos-8:     +  # super-network-infra
+I, [2020-02-04T16:38:06.383825 #579351]  INFO -- primary-centos-8:     +  #
+I, [2020-02-04T16:38:06.383842 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.383862 #579351]  INFO -- primary-centos-8:     +  group {
+I, [2020-02-04T16:38:06.383879 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.383894 #579351]  INFO -- primary-centos-8:     +    # Netgear WNDR3700v2 Firewall (DD-WRT)
+I, [2020-02-04T16:38:06.383909 #579351]  INFO -- primary-centos-8:     +    host firewall {
+I, [2020-02-04T16:38:06.388647 #579351]  INFO -- primary-centos-8:     +      hardware ethernet c4:3d:c7:9d:6b:5c;
+I, [2020-02-04T16:38:06.388714 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.2;
+I, [2020-02-04T16:38:06.388740 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.388757 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.388772 #579351]  INFO -- primary-centos-8:     +  }
+I, [2020-02-04T16:38:06.388787 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.388802 #579351]  INFO -- primary-centos-8:     +  #
+I, [2020-02-04T16:38:06.388820 #579351]  INFO -- primary-centos-8:     +  # vmlab
+I, [2020-02-04T16:38:06.388836 #579351]  INFO -- primary-centos-8:     +  #
+I, [2020-02-04T16:38:06.388850 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.388885 #579351]  INFO -- primary-centos-8:     +  group {
+I, [2020-02-04T16:38:06.388904 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.388920 #579351]  INFO -- primary-centos-8:     +    # Dev VM for comparing results of Chef runs with other VMs
+I, [2020-02-04T16:38:06.388936 #579351]  INFO -- primary-centos-8:     +    host compare {
+I, [2020-02-04T16:38:06.388955 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 2E:C6:82:57:7D:E3;
+I, [2020-02-04T16:38:06.388971 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.196;
+I, [2020-02-04T16:38:06.388986 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.389000 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.389021 #579351]  INFO -- primary-centos-8:     +    # Development VM blue
+I, [2020-02-04T16:38:06.389036 #579351]  INFO -- primary-centos-8:     +    host blue {
+I, [2020-02-04T16:38:06.389058 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 32:2A:AE:44:28:68;
+I, [2020-02-04T16:38:06.389073 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.197;
+I, [2020-02-04T16:38:06.389102 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.389119 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.389138 #579351]  INFO -- primary-centos-8:     +    # Development VM testing red
+I, [2020-02-04T16:38:06.389154 #579351]  INFO -- primary-centos-8:     +    host red {
+I, [2020-02-04T16:38:06.389169 #579351]  INFO -- primary-centos-8:     +      hardware ethernet BE:0C:1C:27:6E:38;
+I, [2020-02-04T16:38:06.389183 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.198;
+I, [2020-02-04T16:38:06.389198 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.389216 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.389232 #579351]  INFO -- primary-centos-8:     +    # Development VM testing green
+I, [2020-02-04T16:38:06.389252 #579351]  INFO -- primary-centos-8:     +    host green {
+I, [2020-02-04T16:38:06.389267 #579351]  INFO -- primary-centos-8:     +      hardware ethernet 76:12:2E:70:C2:2D;
+I, [2020-02-04T16:38:06.389281 #579351]  INFO -- primary-centos-8:     +      fixed-address 10.0.2.199;
+I, [2020-02-04T16:38:06.389300 #579351]  INFO -- primary-centos-8:     +    }
+I, [2020-02-04T16:38:06.389314 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.389328 #579351]  INFO -- primary-centos-8:     +  }
+I, [2020-02-04T16:38:06.389351 #579351]  INFO -- primary-centos-8:     +
+I, [2020-02-04T16:38:06.452103 #579351]  INFO -- primary-centos-8:     +}
+I, [2020-02-04T16:38:06.455834 #579351]  INFO -- primary-centos-8:     - restore selinux security context
+I, [2020-02-04T16:38:06.854444 #579351]  INFO -- primary-centos-8:   * service[dhcpd] action enable
+I, [2020-02-04T16:38:06.854513 #579351]  INFO -- primary-centos-8:     - enable service service[dhcpd]
+I, [2020-02-04T16:38:07.023279 #579351]  INFO -- primary-centos-8:   * service[dhcpd] action start
+I, [2020-02-04T16:38:07.023447 #579351]  INFO -- primary-centos-8:     - start service service[dhcpd]
+I, [2020-02-04T16:38:07.023540 #579351]  INFO -- primary-centos-8: Recipe: maxlab_firewall::update_firewalld
+I, [2020-02-04T16:38:07.436673 #579351]  INFO -- primary-centos-8:   * execute[add-service-ssh-permanent] action run
+I, [2020-02-04T16:38:07.436815 #579351]  INFO -- primary-centos-8:     - execute firewall-cmd --permanent --add-service=ssh --zone=dmz
+I, [2020-02-04T16:38:07.834837 #579351]  INFO -- primary-centos-8:   * execute[add-service-ssh-runtime] action run
+I, [2020-02-04T16:38:07.834916 #579351]  INFO -- primary-centos-8:     - execute firewall-cmd --add-service=ssh --zone=dmz
+I, [2020-02-04T16:38:07.834947 #579351]  INFO -- primary-centos-8: Recipe: maxlab_dhcp::deploy
+I, [2020-02-04T16:38:07.986879 #579351]  INFO -- primary-centos-8:   * service[dhcpd] action restart
+I, [2020-02-04T16:38:07.986945 #579351]  INFO -- primary-centos-8:     - restart service service[dhcpd]
+I, [2020-02-04T16:38:08.037363 #579351]  INFO -- primary-centos-8: 
+I, [2020-02-04T16:38:08.037496 #579351]  INFO -- primary-centos-8: Running handlers:
+I, [2020-02-04T16:38:08.037522 #579351]  INFO -- primary-centos-8: Running handlers complete
+I, [2020-02-04T16:38:08.037544 #579351]  INFO -- primary-centos-8: Chef Infra Client finished, 11/12 resources updated in 31 seconds
+I, [2020-02-04T16:38:08.078153 #579351]  INFO -- primary-centos-8: Downloading files from <primary-centos-8>
+I, [2020-02-04T16:38:08.081801 #579351]  INFO -- primary-centos-8: Finished converging <primary-centos-8> (0m53.78s).
+I, [2020-02-04T16:38:08.081950 #579351]  INFO -- primary-centos-8: -----> Setting up <primary-centos-8>...
+I, [2020-02-04T16:38:08.082598 #579351]  INFO -- primary-centos-8: Finished setting up <primary-centos-8> (0m0.00s).
+I, [2020-02-04T16:38:08.082720 #579351]  INFO -- primary-centos-8: -----> Verifying <primary-centos-8>...
+I, [2020-02-04T16:38:08.607967 #579351]  INFO -- primary-centos-8: Loaded tests from {:path=>".home.maxwell.projects.chef.maxlab.cookbooks.mylab_dhcp.test.integration.primary"} 
+I, [2020-02-04T16:38:09.099338 #579351]  INFO -- primary-centos-8: Finished verifying <primary-centos-8> (0m1.02s).
+I, [2020-02-04T16:38:09.099739 #579351]  INFO -- primary-centos-8: -----> Destroying <primary-centos-8>...
+I, [2020-02-04T16:38:11.155579 #579351]  INFO -- primary-centos-8: ==> default: Forcing shutdown of VM...
+I, [2020-02-04T16:38:12.331168 #579351]  INFO -- primary-centos-8: ==> default: Destroying VM and associated drives...
+I, [2020-02-04T16:38:12.979700 #579351]  INFO -- primary-centos-8: Vagrant instance <primary-centos-8> destroyed.
+I, [2020-02-04T16:38:12.980209 #579351]  INFO -- primary-centos-8: Finished destroying <primary-centos-8> (0m3.88s).
+I, [2020-02-04T16:38:12.981558 #579351]  INFO -- primary-centos-8: Finished testing <primary-centos-8> (1m48.41s).

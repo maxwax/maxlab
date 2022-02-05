@@ -1,0 +1,1642 @@
+I, [2020-02-11T00:03:41.434472 #479146]  INFO -- deploy-centos-8: -----> Cleaning up any prior instances of <deploy-centos-8>
+I, [2020-02-11T00:03:41.435742 #479146]  INFO -- deploy-centos-8: -----> Destroying <deploy-centos-8>...
+I, [2020-02-11T00:03:41.439366 #479146]  INFO -- deploy-centos-8: Finished destroying <deploy-centos-8> (0m0.00s).
+I, [2020-02-11T00:03:41.440826 #479146]  INFO -- deploy-centos-8: -----> Testing <deploy-centos-8>
+I, [2020-02-11T00:03:41.441800 #479146]  INFO -- deploy-centos-8: -----> Creating <deploy-centos-8>...
+I, [2020-02-11T00:03:42.325316 #479146]  INFO -- deploy-centos-8: Ignoring ffi-1.10.0 because its extensions are not built. Try: gem pristine ffi --version 1.10.0
+I, [2020-02-11T00:03:42.325691 #479146]  INFO -- deploy-centos-8: Ignoring json-2.2.0 because its extensions are not built. Try: gem pristine json --version 2.2.0
+I, [2020-02-11T00:03:42.326577 #479146]  INFO -- deploy-centos-8: Ignoring unf_ext-0.0.7.6 because its extensions are not built. Try: gem pristine unf_ext --version 0.0.7.6
+I, [2020-02-11T00:03:42.914579 #479146]  INFO -- deploy-centos-8: ------ Above is: require 'rubygems'
+I, [2020-02-11T00:03:43.331805 #479146]  INFO -- deploy-centos-8: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2020-02-11T00:03:43.571572 #479146]  INFO -- deploy-centos-8: ==> default: Importing base box 'bento/centos-8'...
+I, [2020-02-11T00:03:57.793727 #479146]  INFO -- deploy-centos-8: [KProgress: 30%[KProgress: 50%[KProgress: 60%[KProgress: 80%[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
+I, [2020-02-11T00:03:58.172462 #479146]  INFO -- deploy-centos-8: ==> default: Checking if box 'bento/centos-8' version '202002.04.0' is up to date...
+I, [2020-02-11T00:03:59.688716 #479146]  INFO -- deploy-centos-8: ==> default: Setting the name of the VM: kitchen-mylab_pxe-deploy-centos-8-887cdad1-8d7f-44e0-a96e-0d8748f357fc
+I, [2020-02-11T00:04:02.835074 #479146]  INFO -- deploy-centos-8: ==> default: Clearing any previously set network interfaces...
+I, [2020-02-11T00:04:02.996441 #479146]  INFO -- deploy-centos-8: ==> default: Preparing network interfaces based on configuration...
+I, [2020-02-11T00:04:02.996597 #479146]  INFO -- deploy-centos-8:     default: Adapter 1: nat
+I, [2020-02-11T00:04:03.138546 #479146]  INFO -- deploy-centos-8: ==> default: Forwarding ports...
+I, [2020-02-11T00:04:03.368386 #479146]  INFO -- deploy-centos-8:     default: 22 (guest) => 2222 (host) (adapter 1)
+I, [2020-02-11T00:04:03.780286 #479146]  INFO -- deploy-centos-8: ==> default: Running 'pre-boot' VM customizations...
+I, [2020-02-11T00:04:03.961413 #479146]  INFO -- deploy-centos-8: ==> default: Booting VM...
+I, [2020-02-11T00:04:04.618961 #479146]  INFO -- deploy-centos-8: ==> default: Waiting for machine to boot. This may take a few minutes...
+I, [2020-02-11T00:04:05.232560 #479146]  INFO -- deploy-centos-8:     default: SSH address: 127.0.0.1:2222
+I, [2020-02-11T00:04:05.233366 #479146]  INFO -- deploy-centos-8:     default: SSH username: vagrant
+I, [2020-02-11T00:04:05.234081 #479146]  INFO -- deploy-centos-8:     default: SSH auth method: private key
+I, [2020-02-11T00:04:41.018668 #479146]  INFO -- deploy-centos-8:     default: 
+I, [2020-02-11T00:04:41.018791 #479146]  INFO -- deploy-centos-8:     default: Vagrant insecure key detected. Vagrant will automatically replace
+I, [2020-02-11T00:04:41.018884 #479146]  INFO -- deploy-centos-8:     default: this with a newly generated keypair for better security.
+I, [2020-02-11T00:04:48.026024 #479146]  INFO -- deploy-centos-8:     default: 
+I, [2020-02-11T00:04:48.026135 #479146]  INFO -- deploy-centos-8:     default: Inserting generated public key within guest...
+I, [2020-02-11T00:04:48.702960 #479146]  INFO -- deploy-centos-8:     default: Removing insecure key from the guest if it's present...
+I, [2020-02-11T00:04:49.398693 #479146]  INFO -- deploy-centos-8:     default: Key inserted! Disconnecting and reconnecting using new SSH key...
+I, [2020-02-11T00:04:50.646114 #479146]  INFO -- deploy-centos-8: ==> default: Machine booted and ready!
+I, [2020-02-11T00:04:50.657742 #479146]  INFO -- deploy-centos-8: ==> default: Checking for guest additions in VM...
+I, [2020-02-11T00:04:50.759704 #479146]  INFO -- deploy-centos-8: ==> default: Setting hostname...
+I, [2020-02-11T00:04:53.043152 #479146]  INFO -- deploy-centos-8: ==> default: Mounting shared folders...
+I, [2020-02-11T00:04:53.043817 #479146]  INFO -- deploy-centos-8:     default: /tmp/omnibus/cache => /home/maxwell/.kitchen/cache
+I, [2020-02-11T00:04:54.478431 #479146]  INFO -- deploy-centos-8: ==> default: Machine not provisioned because `--no-provision` is specified.
+I, [2020-02-11T00:04:57.750098 #479146]  INFO -- deploy-centos-8: [SSH] Established
+I, [2020-02-11T00:04:57.751482 #479146]  INFO -- deploy-centos-8: Vagrant instance <deploy-centos-8> created.
+I, [2020-02-11T00:04:57.753734 #479146]  INFO -- deploy-centos-8: Finished creating <deploy-centos-8> (1m16.31s).
+I, [2020-02-11T00:04:57.754059 #479146]  INFO -- deploy-centos-8: -----> Converging <deploy-centos-8>...
+I, [2020-02-11T00:04:57.758191 #479146]  INFO -- deploy-centos-8: Preparing files for transfer
+I, [2020-02-11T00:04:57.758544 #479146]  INFO -- deploy-centos-8: Policy lock file doesn't exist, running `chef install` for Policyfile /home/maxwell/projects/chef/maxlab/policyfiles/tk_mylab_pxe.rb...
+I, [2020-02-11T00:05:00.125907 #479146]  INFO -- deploy-centos-8: Building policy tk_mylab_pxe
+I, [2020-02-11T00:05:00.126128 #479146]  INFO -- deploy-centos-8: Expanded run list: recipe[maxlab_firewall::base_firewalld], recipe[maxlab_tftp_server::deploy], recipe[maxlab_pxe::syslinux], recipe[mylab_pxe::deploy], recipe[maxlab_pxe::images], recipe[maxlab_firewall::update_firewalld]
+I, [2020-02-11T00:05:00.126189 #479146]  INFO -- deploy-centos-8: Caching Cookbooks...
+I, [2020-02-11T00:05:00.126338 #479146]  INFO -- deploy-centos-8: Installing maxlab_pxe         >= 0.0.0 from path
+I, [2020-02-11T00:05:00.126998 #479146]  INFO -- deploy-centos-8: Installing mylab_pxe          >= 0.0.0 from path
+I, [2020-02-11T00:05:00.127489 #479146]  INFO -- deploy-centos-8: Installing maxlab_tftp_server >= 0.0.0 from path
+I, [2020-02-11T00:05:00.127946 #479146]  INFO -- deploy-centos-8: Installing maxlab_firewall    >= 0.0.0 from path
+I, [2020-02-11T00:05:03.743526 #479146]  INFO -- deploy-centos-8: 
+I, [2020-02-11T00:05:03.743788 #479146]  INFO -- deploy-centos-8: Lockfile written to /home/maxwell/projects/chef/maxlab/policyfiles/tk_mylab_pxe.lock.json
+I, [2020-02-11T00:05:04.539510 #479146]  INFO -- deploy-centos-8: Policy revision id: a695688e2dd64dea70c00779d6a7c77f0eacfe69fdc6f8a1e49545a2e5bc54f2
+I, [2020-02-11T00:05:04.593942 #479146]  INFO -- deploy-centos-8: Updating policy lock using `chef update`
+I, [2020-02-11T00:05:06.832492 #479146]  INFO -- deploy-centos-8: Attributes already up to date
+I, [2020-02-11T00:05:06.833265 #479146]  INFO -- deploy-centos-8: Building policy tk_mylab_pxe
+I, [2020-02-11T00:05:06.833385 #479146]  INFO -- deploy-centos-8: Expanded run list: recipe[maxlab_firewall::base_firewalld], recipe[maxlab_tftp_server::deploy], recipe[maxlab_pxe::syslinux], recipe[mylab_pxe::deploy], recipe[maxlab_pxe::images], recipe[maxlab_firewall::update_firewalld]
+I, [2020-02-11T00:05:06.833421 #479146]  INFO -- deploy-centos-8: Caching Cookbooks...
+I, [2020-02-11T00:05:06.833454 #479146]  INFO -- deploy-centos-8: Installing maxlab_pxe         >= 0.0.0 from path
+I, [2020-02-11T00:05:06.833994 #479146]  INFO -- deploy-centos-8: Installing mylab_pxe          >= 0.0.0 from path
+I, [2020-02-11T00:05:06.834437 #479146]  INFO -- deploy-centos-8: Installing maxlab_tftp_server >= 0.0.0 from path
+I, [2020-02-11T00:05:06.834845 #479146]  INFO -- deploy-centos-8: Installing maxlab_firewall    >= 0.0.0 from path
+I, [2020-02-11T00:05:10.605483 #479146]  INFO -- deploy-centos-8: 
+I, [2020-02-11T00:05:10.605671 #479146]  INFO -- deploy-centos-8: Lockfile written to /home/maxwell/projects/chef/maxlab/policyfiles/tk_mylab_pxe.lock.json
+I, [2020-02-11T00:05:11.393800 #479146]  INFO -- deploy-centos-8: Policy revision id: a695688e2dd64dea70c00779d6a7c77f0eacfe69fdc6f8a1e49545a2e5bc54f2
+I, [2020-02-11T00:05:11.461644 #479146]  INFO -- deploy-centos-8: Preparing dna.json
+I, [2020-02-11T00:05:11.462378 #479146]  INFO -- deploy-centos-8: Exporting cookbook dependencies from Policyfile /tmp/deploy-centos-8-sandbox-20200211-479146-g8gbsv...
+I, [2020-02-11T00:05:19.039517 #479146]  INFO -- deploy-centos-8: Exported policy 'tk_mylab_pxe' to /tmp/deploy-centos-8-sandbox-20200211-479146-g8gbsv
+I, [2020-02-11T00:05:19.039675 #479146]  INFO -- deploy-centos-8: 
+I, [2020-02-11T00:05:19.039749 #479146]  INFO -- deploy-centos-8: To converge this system with the exported policy, run:
+I, [2020-02-11T00:05:19.039803 #479146]  INFO -- deploy-centos-8:   cd /tmp/deploy-centos-8-sandbox-20200211-479146-g8gbsv
+I, [2020-02-11T00:05:19.039863 #479146]  INFO -- deploy-centos-8:   chef-client -z
+I, [2020-02-11T00:05:19.073020 #479146]  INFO -- deploy-centos-8: Removing non-cookbook files before transfer
+I, [2020-02-11T00:05:19.073576 #479146]  INFO -- deploy-centos-8: Preparing data_bags
+I, [2020-02-11T00:05:19.094695 #479146]  INFO -- deploy-centos-8: Preparing nodes
+I, [2020-02-11T00:05:19.095597 #479146]  INFO -- deploy-centos-8: Preparing validation.pem
+I, [2020-02-11T00:05:19.096616 #479146]  INFO -- deploy-centos-8: Preparing client.rb
+I, [2020-02-11T00:05:19.232269 #479146]  INFO -- deploy-centos-8: -----> Installing Chef install only if missing package
+I, [2020-02-11T00:05:19.240522 #479146]  INFO -- deploy-centos-8: Downloading https://omnitruck.chef.io/install.sh to file /tmp/install.sh
+I, [2020-02-11T00:05:19.243218 #479146]  INFO -- deploy-centos-8: Trying wget...
+I, [2020-02-11T00:05:19.593992 #479146]  INFO -- deploy-centos-8: Download complete.
+I, [2020-02-11T00:05:19.691599 #479146]  INFO -- deploy-centos-8: el 8 x86_64
+I, [2020-02-11T00:05:19.691709 #479146]  INFO -- deploy-centos-8: Getting information for chef stable  for el...
+I, [2020-02-11T00:05:19.691753 #479146]  INFO -- deploy-centos-8: downloading https://omnitruck.chef.io/stable/chef/metadata?v=&p=el&pv=8&m=x86_64
+I, [2020-02-11T00:05:19.691790 #479146]  INFO -- deploy-centos-8:   to file /tmp/install.sh.4174/metadata.txt
+I, [2020-02-11T00:05:19.693526 #479146]  INFO -- deploy-centos-8: trying wget...
+I, [2020-02-11T00:05:19.867663 #479146]  INFO -- deploy-centos-8: sha1	15ee4fd0df70b3e3f320d4ebcefd250583086006
+I, [2020-02-11T00:05:19.867787 #479146]  INFO -- deploy-centos-8: sha256	57cdf26636ffd876277dcc865d70df34a178ad2ef99f36121dc576bf07f98894
+I, [2020-02-11T00:05:19.867843 #479146]  INFO -- deploy-centos-8: url	https://packages.chef.io/files/stable/chef/15.8.23/el/8/chef-15.8.23-1.el7.x86_64.rpm
+I, [2020-02-11T00:05:19.868504 #479146]  INFO -- deploy-centos-8: version	15.8.23
+I, [2020-02-11T00:05:19.873772 #479146]  INFO -- deploy-centos-8: downloaded metadata file looks valid...
+I, [2020-02-11T00:05:19.902582 #479146]  INFO -- deploy-centos-8: /tmp/omnibus/cache/chef-15.8.23-1.el7.x86_64.rpm exists
+I, [2020-02-11T00:05:19.902794 #479146]  INFO -- deploy-centos-8: Comparing checksum with sha256sum...
+I, [2020-02-11T00:05:20.202526 #479146]  INFO -- deploy-centos-8: 
+I, [2020-02-11T00:05:20.202769 #479146]  INFO -- deploy-centos-8: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2020-02-11T00:05:20.202832 #479146]  INFO -- deploy-centos-8: 
+I, [2020-02-11T00:05:20.202902 #479146]  INFO -- deploy-centos-8: You are installing a package without a version pin.  If you are installing
+I, [2020-02-11T00:05:20.202963 #479146]  INFO -- deploy-centos-8: on production servers via an automated process this is DANGEROUS and you will
+I, [2020-02-11T00:05:20.203018 #479146]  INFO -- deploy-centos-8: be upgraded without warning on new releases, even to new major releases.
+I, [2020-02-11T00:05:20.203064 #479146]  INFO -- deploy-centos-8: Letting the version float is only appropriate in desktop, test, development or
+I, [2020-02-11T00:05:20.203114 #479146]  INFO -- deploy-centos-8: CI/CD environments.
+I, [2020-02-11T00:05:20.203157 #479146]  INFO -- deploy-centos-8: 
+I, [2020-02-11T00:05:20.203235 #479146]  INFO -- deploy-centos-8: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2020-02-11T00:05:20.203334 #479146]  INFO -- deploy-centos-8: 
+I, [2020-02-11T00:05:20.203392 #479146]  INFO -- deploy-centos-8: Installing chef 
+I, [2020-02-11T00:05:20.203441 #479146]  INFO -- deploy-centos-8: installing with rpm...
+I, [2020-02-11T00:05:20.321987 #479146]  INFO -- deploy-centos-8: warning: /tmp/omnibus/cache/chef-15.8.23-1.el7.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+I, [2020-02-11T00:05:20.694804 #479146]  INFO -- deploy-centos-8: Verifying...                                                            (100%)#                                 (100%)##                                (100%)###                               (100%)####                              (100%)#####                             (100%)######                            (100%)#######                           (100%)########                          (100%)#########                         (100%)##########                        (100%)###########                       (100%)############                      (100%)#############                     (100%)##############                    (100%)###############                   (100%)################                  (100%)#################                 (100%)##################                (100%)###################               (100%)####################              (100%)#####################             (100%)######################            (100%)#######################           (100%)########################          (100%)#########################         (100%)##########################        (100%)###########################       (100%)############################      (100%)#############################     (100%)##############################    (100%)###############################   (100%)################################  (100%)################################# (100%)################################# [100%]
+I, [2020-02-11T00:05:21.223221 #479146]  INFO -- deploy-centos-8: Preparing...                                                            (100%)#                                 (100%)##                                (100%)###                               (100%)####                              (100%)#####                             (100%)######                            (100%)#######                           (100%)########                          (100%)#########                         (100%)##########                        (100%)###########                       (100%)############                      (100%)#############                     (100%)##############                    (100%)###############                   (100%)################                  (100%)#################                 (100%)##################                (100%)###################               (100%)####################              (100%)#####################             (100%)######################            (100%)#######################           (100%)########################          (100%)#########################         (100%)##########################        (100%)###########################       (100%)############################      (100%)#############################     (100%)##############################    (100%)###############################   (100%)################################  (100%)################################# (100%)################################# [100%]
+I, [2020-02-11T00:05:21.332694 #479146]  INFO -- deploy-centos-8: Updating / installing...
+I, [2020-02-11T00:05:33.439130 #479146]  INFO -- deploy-centos-8:    1:chef-15.8.23-1.el7                                                 (  1%)#                                 (  4%)##                                (  7%)###                               ( 10%)####                              ( 13%)#####                             ( 16%)######                            ( 19%)#######                           ( 22%)########                          ( 25%)#########                         ( 28%)##########                        ( 31%)###########                       ( 34%)############                      ( 37%)#############                     ( 40%)##############                    ( 43%)###############                   ( 46%)################                  ( 49%)#################                 ( 51%)##################                ( 54%)###################               ( 57%)####################              ( 60%)#####################             ( 63%)######################            ( 66%)#######################           ( 69%)########################          ( 72%)#########################         ( 75%)##########################        ( 78%)###########################       ( 81%)############################      ( 84%)#############################     ( 87%)##############################    ( 90%)###############################   ( 93%)################################  ( 96%)################################# ( 99%)################################# [100%]
+I, [2020-02-11T00:05:34.650471 #479146]  INFO -- deploy-centos-8: Thank you for installing Chef Infra Client! For help getting started visit https://learn.chef.io
+I, [2020-02-11T00:05:34.896889 #479146]  INFO -- deploy-centos-8: Transferring files to <deploy-centos-8>
+I, [2020-02-11T00:05:39.774933 #479146]  INFO -- deploy-centos-8: +---------------------------------------------+
+I, [2020-02-11T00:05:39.775083 #479146]  INFO -- deploy-centos-8: [32m✔[0m 2 product licenses accepted.
+I, [2020-02-11T00:05:39.775142 #479146]  INFO -- deploy-centos-8: +---------------------------------------------+
+I, [2020-02-11T00:05:40.095890 #479146]  INFO -- deploy-centos-8: Starting Chef Infra Client, version 15.8.23
+I, [2020-02-11T00:05:42.767858 #479146]  INFO -- deploy-centos-8: Creating a new client identity for deploy-centos-8 using the validator key.
+I, [2020-02-11T00:05:42.945080 #479146]  INFO -- deploy-centos-8: Using policy 'tk_mylab_pxe' at revision 'a695688e2dd64dea70c00779d6a7c77f0eacfe69fdc6f8a1e49545a2e5bc54f2'
+I, [2020-02-11T00:05:42.961398 #479146]  INFO -- deploy-centos-8: resolving cookbooks for run list: ["maxlab_firewall::base_firewalld@1.2.0 (7bfa6a6)", "maxlab_tftp_server::deploy@1.2.0 (277e231)", "maxlab_pxe::syslinux@1.1.2 (8649b85)", "mylab_pxe::deploy@1.0.0 (ea250a7)", "maxlab_pxe::images@1.1.2 (8649b85)", "maxlab_firewall::update_firewalld@1.2.0 (7bfa6a6)"]
+I, [2020-02-11T00:05:43.040615 #479146]  INFO -- deploy-centos-8: Synchronizing Cookbooks:
+I, [2020-02-11T00:05:43.235413 #479146]  INFO -- deploy-centos-8:   - maxlab_tftp_server (1.2.0)
+I, [2020-02-11T00:05:43.309627 #479146]  INFO -- deploy-centos-8:   - mylab_pxe (1.0.0)
+I, [2020-02-11T00:05:43.310014 #479146]  INFO -- deploy-centos-8:   - maxlab_pxe (1.1.2)
+I, [2020-02-11T00:05:43.310093 #479146]  INFO -- deploy-centos-8:   - maxlab_firewall (1.2.0)
+I, [2020-02-11T00:05:43.310149 #479146]  INFO -- deploy-centos-8: Installing Cookbook Gems:
+I, [2020-02-11T00:05:43.347919 #479146]  INFO -- deploy-centos-8: Compiling Cookbooks...
+I, [2020-02-11T00:05:43.626340 #479146]  INFO -- deploy-centos-8: Converging 112 resources
+I, [2020-02-11T00:05:43.626579 #479146]  INFO -- deploy-centos-8: Recipe: maxlab_firewall::base_firewalld
+I, [2020-02-11T00:06:12.073588 #479146]  INFO -- deploy-centos-8:   * dnf_package[firewalld] action install (up to date)
+I, [2020-02-11T00:06:12.579003 #479146]  INFO -- deploy-centos-8:   * service[firewalld] action enable
+I, [2020-02-11T00:06:12.579139 #479146]  INFO -- deploy-centos-8:     - enable service service[firewalld]
+I, [2020-02-11T00:06:13.863947 #479146]  INFO -- deploy-centos-8:   * service[firewalld] action start
+I, [2020-02-11T00:06:13.864164 #479146]  INFO -- deploy-centos-8:     - start service service[firewalld]
+I, [2020-02-11T00:06:18.330284 #479146]  INFO -- deploy-centos-8:   * execute[set-default-zone] action run
+I, [2020-02-11T00:06:18.330387 #479146]  INFO -- deploy-centos-8:     - execute firewall-cmd --set-default-zone=dmz
+I, [2020-02-11T00:06:19.221835 #479146]  INFO -- deploy-centos-8:   * execute[set-default-interface-default-zone] action run
+I, [2020-02-11T00:06:19.222006 #479146]  INFO -- deploy-centos-8:     - execute firewall-cmd --change-interface=eth0 --zone=dmz
+I, [2020-02-11T00:06:19.222065 #479146]  INFO -- deploy-centos-8: Recipe: maxlab_tftp_server::deploy
+I, [2020-02-11T00:06:24.987306 #479146]  INFO -- deploy-centos-8:   * dnf_package[tftp] action install
+I, [2020-02-11T00:06:24.987450 #479146]  INFO -- deploy-centos-8:     - install version 0:5.2-24.el8.x86_64 of package tftp
+I, [2020-02-11T00:06:29.857913 #479146]  INFO -- deploy-centos-8:   * dnf_package[tftp-server] action install
+I, [2020-02-11T00:06:29.858046 #479146]  INFO -- deploy-centos-8:     - install version 0:5.2-24.el8.x86_64 of package tftp-server
+I, [2020-02-11T00:06:34.586725 #479146]  INFO -- deploy-centos-8:   * dnf_package[xinetd] action install
+I, [2020-02-11T00:06:34.586906 #479146]  INFO -- deploy-centos-8:     - install version 2:2.3.15-24.el8.x86_64 of package xinetd
+I, [2020-02-11T00:06:34.606665 #479146]  INFO -- deploy-centos-8:   * template[/etc/xinetd.d/tftp-server] action create
+I, [2020-02-11T00:06:34.606780 #479146]  INFO -- deploy-centos-8:     - create new file /etc/xinetd.d/tftp-server
+I, [2020-02-11T00:06:34.606830 #479146]  INFO -- deploy-centos-8:     - update content in file /etc/xinetd.d/tftp-server from none to 57a86c
+I, [2020-02-11T00:06:34.606869 #479146]  INFO -- deploy-centos-8:     --- /etc/xinetd.d/tftp-server	2020-02-11 07:06:36.169420395 +0000
+I, [2020-02-11T00:06:34.606909 #479146]  INFO -- deploy-centos-8:     +++ /etc/xinetd.d/.chef-tftp-server20200211-4419-1jspt6a	2020-02-11 07:06:36.169420395 +0000
+I, [2020-02-11T00:06:34.606943 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,21 @@
+I, [2020-02-11T00:06:34.606977 #479146]  INFO -- deploy-centos-8:     +# /etc/xinetd.d/tftp-server - This file deployed by Chef - DO NOT EDIT
+I, [2020-02-11T00:06:34.607009 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:34.607042 #479146]  INFO -- deploy-centos-8:     +# default: off
+I, [2020-02-11T00:06:34.607074 #479146]  INFO -- deploy-centos-8:     +# description: The tftp server serves files using the trivial file transfer \
+I, [2020-02-11T00:06:34.607108 #479146]  INFO -- deploy-centos-8:     +# protocol.  The tftp protocol is often used to boot diskless \
+I, [2020-02-11T00:06:34.607141 #479146]  INFO -- deploy-centos-8:     +# workstations, download configuration files to network-aware printers, \
+I, [2020-02-11T00:06:34.607176 #479146]  INFO -- deploy-centos-8:     +# and to start the installation process for some operating systems.
+I, [2020-02-11T00:06:34.607236 #479146]  INFO -- deploy-centos-8:     +service tftp
+I, [2020-02-11T00:06:34.607275 #479146]  INFO -- deploy-centos-8:     +{
+I, [2020-02-11T00:06:34.607311 #479146]  INFO -- deploy-centos-8:     +  socket_type   = dgram
+I, [2020-02-11T00:06:34.607353 #479146]  INFO -- deploy-centos-8:     +  protocol      = udp
+I, [2020-02-11T00:06:34.607390 #479146]  INFO -- deploy-centos-8:     +  wait          = yes
+I, [2020-02-11T00:06:34.607425 #479146]  INFO -- deploy-centos-8:     +  user          = root
+I, [2020-02-11T00:06:34.607469 #479146]  INFO -- deploy-centos-8:     +  server        = /usr/sbin/in.tftpd
+I, [2020-02-11T00:06:34.607505 #479146]  INFO -- deploy-centos-8:     +  server_args   = -v -s /var/lib/tftpboot
+I, [2020-02-11T00:06:34.607542 #479146]  INFO -- deploy-centos-8:     +  disable       = no
+I, [2020-02-11T00:06:34.607579 #479146]  INFO -- deploy-centos-8:     +  per_source    = 11
+I, [2020-02-11T00:06:34.607655 #479146]  INFO -- deploy-centos-8:     +  cps           = 100 2
+I, [2020-02-11T00:06:34.607715 #479146]  INFO -- deploy-centos-8:     +  flags         = IPv4
+I, [2020-02-11T00:06:34.629845 #479146]  INFO -- deploy-centos-8:     +}
+I, [2020-02-11T00:06:34.630005 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0700'
+I, [2020-02-11T00:06:34.630063 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:34.762051 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:34.765976 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:34.777562 #479146]  INFO -- deploy-centos-8:   * directory[/var/lib/tftpboot] action create (up to date)
+I, [2020-02-11T00:06:34.995290 #479146]  INFO -- deploy-centos-8:   * service[xinetd] action enable (up to date)
+I, [2020-02-11T00:06:35.274100 #479146]  INFO -- deploy-centos-8:   * service[xinetd] action start
+I, [2020-02-11T00:06:35.274234 #479146]  INFO -- deploy-centos-8:     - start service service[xinetd]
+I, [2020-02-11T00:06:35.274294 #479146]  INFO -- deploy-centos-8: Recipe: maxlab_pxe::syslinux
+I, [2020-02-11T00:06:39.118673 #479146]  INFO -- deploy-centos-8:   * dnf_package[syslinux-tftpboot] action install
+I, [2020-02-11T00:06:39.118960 #479146]  INFO -- deploy-centos-8:     - install version 0:6.04-4.el8.noarch of package syslinux-tftpboot
+I, [2020-02-11T00:06:39.200643 #479146]  INFO -- deploy-centos-8:   * execute[copy-syslinux-files] action run
+I, [2020-02-11T00:06:39.200969 #479146]  INFO -- deploy-centos-8:     - execute cp /tftpboot/* /var/lib/tftpboot
+I, [2020-02-11T00:06:39.201143 #479146]  INFO -- deploy-centos-8: Recipe: maxlab_pxe::deploy
+I, [2020-02-11T00:06:39.207987 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart] action create
+I, [2020-02-11T00:06:39.236481 #479146]  INFO -- deploy-centos-8:     - create new directory /repo/kickstart
+I, [2020-02-11T00:06:39.236848 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:39.237097 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:39.324726 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:39.327582 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:39.330989 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart/centos] action create
+I, [2020-02-11T00:06:39.341819 #479146]  INFO -- deploy-centos-8:     - create new directory /repo/kickstart/centos
+I, [2020-02-11T00:06:39.341952 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:39.342019 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:39.403444 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:39.409148 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:39.414283 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart/build/scripts] action create
+I, [2020-02-11T00:06:39.424836 #479146]  INFO -- deploy-centos-8:     - create new directory /repo/kickstart/build/scripts
+I, [2020-02-11T00:06:39.424964 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:39.425033 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:39.486710 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:39.490602 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:39.492740 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart/build/scripts/centos] action create
+I, [2020-02-11T00:06:39.565907 #479146]  INFO -- deploy-centos-8:     - create new directory /repo/kickstart/build/scripts/centos
+I, [2020-02-11T00:06:39.565991 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:39.566030 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:39.628147 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:39.632676 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:39.638595 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart/build/stubs] action create
+I, [2020-02-11T00:06:39.647835 #479146]  INFO -- deploy-centos-8:     - create new directory /repo/kickstart/build/stubs
+I, [2020-02-11T00:06:39.647943 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:39.648006 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:39.697921 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:39.704637 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:39.710296 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart/build/stubs/centos] action create
+I, [2020-02-11T00:06:39.722040 #479146]  INFO -- deploy-centos-8:     - create new directory /repo/kickstart/build/stubs/centos
+I, [2020-02-11T00:06:39.722170 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:39.722249 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:39.772095 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:39.775934 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:39.778352 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart/build/passwords/centos] action create
+I, [2020-02-11T00:06:39.789550 #479146]  INFO -- deploy-centos-8:     - create new directory /repo/kickstart/build/passwords/centos
+I, [2020-02-11T00:06:39.789690 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:39.789749 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:39.815649 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:39.827697 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:39.898332 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/stubs/centos/stub-centos-8.1905-base.ks] action create
+I, [2020-02-11T00:06:39.898426 #479146]  INFO -- deploy-centos-8:     - create new file /repo/kickstart/build/stubs/centos/stub-centos-8.1905-base.ks
+I, [2020-02-11T00:06:39.898481 #479146]  INFO -- deploy-centos-8:     - update content in file /repo/kickstart/build/stubs/centos/stub-centos-8.1905-base.ks from none to 86e24b
+I, [2020-02-11T00:06:39.898521 #479146]  INFO -- deploy-centos-8:     --- /repo/kickstart/build/stubs/centos/stub-centos-8.1905-base.ks	2020-02-11 07:06:41.614491043 +0000
+I, [2020-02-11T00:06:39.898564 #479146]  INFO -- deploy-centos-8:     +++ /repo/kickstart/build/stubs/centos/.chef-stub-centos-820200211-4419-16mdedn.1905-base.ks	2020-02-11 07:06:41.614491043 +0000
+I, [2020-02-11T00:06:39.898598 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,87 @@
+I, [2020-02-11T00:06:39.898633 #479146]  INFO -- deploy-centos-8:     +# ks-centos8 - (Centos/Rhel) THIS FILE DEPLOYED VIA CHEF - DO NOT MODIFY
+I, [2020-02-11T00:06:39.898668 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:39.898704 #479146]  INFO -- deploy-centos-8:     +# Kickstart file for Centos/Redhat Linux 8.x
+I, [2020-02-11T00:06:39.898736 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:39.898766 #479146]  INFO -- deploy-centos-8:     +# 2019-11-27 Generated via Chef templates
+I, [2020-02-11T00:06:39.898797 #479146]  INFO -- deploy-centos-8:     +# 2019-10-26 Draft for home lab use
+I, [2020-02-11T00:06:39.898828 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.898859 #479146]  INFO -- deploy-centos-8:     +install
+I, [2020-02-11T00:06:39.898889 #479146]  INFO -- deploy-centos-8:     +text
+I, [2020-02-11T00:06:39.898925 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.898966 #479146]  INFO -- deploy-centos-8:     +# Initialize the network device using dhcp. We don't need IPV6 in my home lab
+I, [2020-02-11T00:06:39.899004 #479146]  INFO -- deploy-centos-8:     +network --bootproto dhcp --noipv6
+I, [2020-02-11T00:06:39.899047 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.899082 #479146]  INFO -- deploy-centos-8:     +# Get rpm packages from this repository
+I, [2020-02-11T00:06:39.899118 #479146]  INFO -- deploy-centos-8:     +url --url=http://repo.maxlab/dist/centos/CentOS-8-x86_64-1905-dvd1
+I, [2020-02-11T00:06:39.899169 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.899222 #479146]  INFO -- deploy-centos-8:     +# Let's use the English language and keyboard settings
+I, [2020-02-11T00:06:39.899282 #479146]  INFO -- deploy-centos-8:     +lang en_US
+I, [2020-02-11T00:06:39.899317 #479146]  INFO -- deploy-centos-8:     +keyboard us
+I, [2020-02-11T00:06:39.899354 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.899410 #479146]  INFO -- deploy-centos-8:     +# Hopefully not touch anything else
+I, [2020-02-11T00:06:39.899449 #479146]  INFO -- deploy-centos-8:     +ignoredisk --only-use=sda
+I, [2020-02-11T00:06:39.899487 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.899517 #479146]  INFO -- deploy-centos-8:     +# Clear partition table
+I, [2020-02-11T00:06:39.899540 #479146]  INFO -- deploy-centos-8:     +clearpart --initlabel --drives=sda --all
+I, [2020-02-11T00:06:39.899563 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.899586 #479146]  INFO -- deploy-centos-8:     +# Clears master boot record data, a safety step against disk corruption
+I, [2020-02-11T00:06:39.899620 #479146]  INFO -- deploy-centos-8:     +zerombr
+I, [2020-02-11T00:06:39.899662 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.899724 #479146]  INFO -- deploy-centos-8:     +# Install boot loader (grub2) on boot drive's master boot record
+I, [2020-02-11T00:06:39.899780 #479146]  INFO -- deploy-centos-8:     +# Append options to not patch for SPECTRE and MELTDOWN (home network only)
+I, [2020-02-11T00:06:39.899827 #479146]  INFO -- deploy-centos-8:     +bootloader --location=mbr --driveorder=sda --append="nopti noibrs noibpb"
+I, [2020-02-11T00:06:39.899873 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.899914 #479146]  INFO -- deploy-centos-8:     +# Create a BIOS partition for booting on non-EFI systems
+I, [2020-02-11T00:06:39.899955 #479146]  INFO -- deploy-centos-8:     +#part biosboot --fstype=biosboot --ondisk=sda --size=1 
+I, [2020-02-11T00:06:39.899995 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.900035 #479146]  INFO -- deploy-centos-8:     +# Create a partition to store boot kernels, initrd and config files
+I, [2020-02-11T00:06:39.900077 #479146]  INFO -- deploy-centos-8:     +part /boot --fstype=ext4 --asprimary --fsoptions="defaults,relatime,nodiratime,nodev,nosuid,noexec" --size=1024 --ondisk=sda 
+I, [2020-02-11T00:06:39.900121 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.900184 #479146]  INFO -- deploy-centos-8:     +# Create a minimal swap partition. We don't expect to use it.
+I, [2020-02-11T00:06:39.900260 #479146]  INFO -- deploy-centos-8:     +part swap --asprimary --size=2048 --ondisk=sda 
+I, [2020-02-11T00:06:39.900299 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.900335 #479146]  INFO -- deploy-centos-8:     +# Create an LVM2 physical volume. Must use syntax 'pv.01'
+I, [2020-02-11T00:06:39.900373 #479146]  INFO -- deploy-centos-8:     +part pv.01 --grow --size=1 --ondisk=sda 
+I, [2020-02-11T00:06:39.900410 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.900453 #479146]  INFO -- deploy-centos-8:     +# Create an LVM2 volume group for the root OS filesystem
+I, [2020-02-11T00:06:39.900495 #479146]  INFO -- deploy-centos-8:     +volgroup vg_linuxos pv.01
+I, [2020-02-11T00:06:39.900537 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.900563 #479146]  INFO -- deploy-centos-8:     +logvol / --vgname=vg_linuxos --size=2048 --name=lv_root --label=root --fstype=ext4 --grow --fsoptions=defaults,relatime,nodiratime
+I, [2020-02-11T00:06:39.900585 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.900617 #479146]  INFO -- deploy-centos-8:     +logvol /var/log --vgname=vg_linuxos --size=2048 --name=lv_var.log --label=var.log --fstype=ext4 --fsoptions='defaults,relatime,nodiratime,nodev,nosuid,noexec' --mkfsoptions='-m 1'
+I, [2020-02-11T00:06:39.900639 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.900674 #479146]  INFO -- deploy-centos-8:     +# Set timezone to either UTC (production) or local (development)
+I, [2020-02-11T00:06:39.900696 #479146]  INFO -- deploy-centos-8:     +timezone America/Denver --utc --ntpservers=192.168.9.100
+I, [2020-02-11T00:06:39.900718 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.900760 #479146]  INFO -- deploy-centos-8:     +# Configure authorization details
+I, [2020-02-11T00:06:39.900797 #479146]  INFO -- deploy-centos-8:     +authconfig --enableshadow --passalgo=sha512
+I, [2020-02-11T00:06:39.900828 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.900859 #479146]  INFO -- deploy-centos-8:     +# Enable/disble SELinux security systems
+I, [2020-02-11T00:06:39.900897 #479146]  INFO -- deploy-centos-8:     +selinux --permissive 
+I, [2020-02-11T00:06:39.900935 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.900971 #479146]  INFO -- deploy-centos-8:     +# Enable/disable Firewall
+I, [2020-02-11T00:06:39.904927 #479146]  INFO -- deploy-centos-8:     +firewall 
+I, [2020-02-11T00:06:39.905028 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.905076 #479146]  INFO -- deploy-centos-8:     +# Reboot system after OS installation is complete.
+I, [2020-02-11T00:06:39.905108 #479146]  INFO -- deploy-centos-8:     +# This works well on systems where the system reverts to boot to disk after
+I, [2020-02-11T00:06:39.905139 #479146]  INFO -- deploy-centos-8:     +# a single attempt to perform a network/PXE boot
+I, [2020-02-11T00:06:39.905168 #479146]  INFO -- deploy-centos-8:     +#reboot
+I, [2020-02-11T00:06:39.905196 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.905239 #479146]  INFO -- deploy-centos-8:     +skipx
+I, [2020-02-11T00:06:39.905277 #479146]  INFO -- deploy-centos-8:     +eula --agree
+I, [2020-02-11T00:06:39.905305 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.905341 #479146]  INFO -- deploy-centos-8:     +%packages
+I, [2020-02-11T00:06:39.905370 #479146]  INFO -- deploy-centos-8:     +@core
+I, [2020-02-11T00:06:39.905400 #479146]  INFO -- deploy-centos-8:     +authconfig
+I, [2020-02-11T00:06:39.905428 #479146]  INFO -- deploy-centos-8:     +bc
+I, [2020-02-11T00:06:39.905456 #479146]  INFO -- deploy-centos-8:     +wget
+I, [2020-02-11T00:06:39.905485 #479146]  INFO -- deploy-centos-8:     +nc
+I, [2020-02-11T00:06:39.905513 #479146]  INFO -- deploy-centos-8:     +net-tools
+I, [2020-02-11T00:06:39.905541 #479146]  INFO -- deploy-centos-8:     +bzip2
+I, [2020-02-11T00:06:39.905569 #479146]  INFO -- deploy-centos-8:     +bind-utils
+I, [2020-02-11T00:06:39.905596 #479146]  INFO -- deploy-centos-8:     +vim
+I, [2020-02-11T00:06:39.905631 #479146]  INFO -- deploy-centos-8:     +%end
+I, [2020-02-11T00:06:39.905659 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:39.905697 #479146]  INFO -- deploy-centos-8:     +%addon com_redhat_kdump --disable
+I, [2020-02-11T00:06:39.909977 #479146]  INFO -- deploy-centos-8:     +%end
+I, [2020-02-11T00:06:39.910056 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:39.910095 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:39.946001 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:39.951560 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:39.977190 #479146]  INFO -- deploy-centos-8:   * execute[copy-ks-file] action run
+I, [2020-02-11T00:06:39.977337 #479146]  INFO -- deploy-centos-8:     - execute cp -p /repo/kickstart/build/stubs/centos/stub-centos-8.1905-base.ks /repo/kickstart/centos/ks-centos-8.1905-base.ks
+I, [2020-02-11T00:06:40.025742 #479146]  INFO -- deploy-centos-8:   * execute[include-file-kickstart-rootpw-maxlab.txt] action run
+I, [2020-02-11T00:06:40.025841 #479146]  INFO -- deploy-centos-8:     - execute if [[ -f /repo/kickstart/build/passwords/centos/kickstart-rootpw-maxlab.txt ]]; then cat /repo/kickstart/build/passwords/centos/kickstart-rootpw-maxlab.txt >> /repo/kickstart/centos/ks-centos-8.1905-base.ks; fi
+I, [2020-02-11T00:06:40.047080 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/scripts/centos/script-rhel7-static-hostname] action create
+I, [2020-02-11T00:06:40.047174 #479146]  INFO -- deploy-centos-8:     - create new file /repo/kickstart/build/scripts/centos/script-rhel7-static-hostname
+I, [2020-02-11T00:06:40.047241 #479146]  INFO -- deploy-centos-8:     - update content in file /repo/kickstart/build/scripts/centos/script-rhel7-static-hostname from none to 63ad3d
+I, [2020-02-11T00:06:40.047280 #479146]  INFO -- deploy-centos-8:     --- /repo/kickstart/build/scripts/centos/script-rhel7-static-hostname	2020-02-11 07:06:41.788661645 +0000
+I, [2020-02-11T00:06:40.047325 #479146]  INFO -- deploy-centos-8:     +++ /repo/kickstart/build/scripts/centos/.chef-script-rhel7-static-hostname20200211-4419-84z3q8	2020-02-11 07:06:41.788661645 +0000
+I, [2020-02-11T00:06:40.047369 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,15 @@
+I, [2020-02-11T00:06:40.047411 #479146]  INFO -- deploy-centos-8:     +# ---------
+I, [2020-02-11T00:06:40.047454 #479146]  INFO -- deploy-centos-8:     +# script-rhel7-static-hostname - THIS FILE DEPLOYED VIA CHEF - DO NOT MODIFY
+I, [2020-02-11T00:06:40.047496 #479146]  INFO -- deploy-centos-8:     +# ---------
+I, [2020-02-11T00:06:40.047535 #479146]  INFO -- deploy-centos-8:     +%post --nochroot --log=/mnt/sysimage/root/ks-post-hostname.log
+I, [2020-02-11T00:06:40.047583 #479146]  INFO -- deploy-centos-8:     +# Kickstart post script to set hostname from transient host 
+I, [2020-02-11T00:06:40.047633 #479146]  INFO -- deploy-centos-8:     +set -x
+I, [2020-02-11T00:06:40.047676 #479146]  INFO -- deploy-centos-8:     +HNAME=$(hostname -f)
+I, [2020-02-11T00:06:40.047726 #479146]  INFO -- deploy-centos-8:     +hostnamectl set-hostname ${HNAME}
+I, [2020-02-11T00:06:40.047775 #479146]  INFO -- deploy-centos-8:     +hostnamectl --pretty set-hostname ${HNAME}
+I, [2020-02-11T00:06:40.047813 #479146]  INFO -- deploy-centos-8:     +cp /etc/hostname /mnt/sysimage/etc/hostname
+I, [2020-02-11T00:06:40.047850 #479146]  INFO -- deploy-centos-8:     +cp /etc/machine-info /mnt/sysimage/etc/machine-info
+I, [2020-02-11T00:06:40.047891 #479146]  INFO -- deploy-centos-8:     +%end
+I, [2020-02-11T00:06:40.047937 #479146]  INFO -- deploy-centos-8:     +# ---------
+I, [2020-02-11T00:06:40.073370 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.073573 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:40.073673 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:40.107913 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:40.115328 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:40.187703 #479146]  INFO -- deploy-centos-8:   * execute[static-hostname] action run
+I, [2020-02-11T00:06:40.187891 #479146]  INFO -- deploy-centos-8:     - execute cat /repo/kickstart/build/scripts/centos/script-rhel7-static-hostname >> /repo/kickstart/centos/ks-centos-8.1905-base.ks
+I, [2020-02-11T00:06:40.224426 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/scripts/centos/script-rhel-static-ipv4] action create
+I, [2020-02-11T00:06:40.224559 #479146]  INFO -- deploy-centos-8:     - create new file /repo/kickstart/build/scripts/centos/script-rhel-static-ipv4
+I, [2020-02-11T00:06:40.224618 #479146]  INFO -- deploy-centos-8:     - update content in file /repo/kickstart/build/scripts/centos/script-rhel-static-ipv4 from none to 064205
+I, [2020-02-11T00:06:40.224675 #479146]  INFO -- deploy-centos-8:     --- /repo/kickstart/build/scripts/centos/script-rhel-static-ipv4	2020-02-11 07:06:41.958851204 +0000
+I, [2020-02-11T00:06:40.224719 #479146]  INFO -- deploy-centos-8:     +++ /repo/kickstart/build/scripts/centos/.chef-script-rhel-static-ipv420200211-4419-mzd4kg	2020-02-11 07:06:41.958851204 +0000
+I, [2020-02-11T00:06:40.224759 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,68 @@
+I, [2020-02-11T00:06:40.224815 #479146]  INFO -- deploy-centos-8:     +# ---------
+I, [2020-02-11T00:06:40.224861 #479146]  INFO -- deploy-centos-8:     +# script-rhel-static-ipv4- THIS FILE DEPLOYED VIA CHEF - DO NOT MODIFY
+I, [2020-02-11T00:06:40.224907 #479146]  INFO -- deploy-centos-8:     +# ---------
+I, [2020-02-11T00:06:40.224945 #479146]  INFO -- deploy-centos-8:     +%post --log=/root/ks-post-static-ipv4.log
+I, [2020-02-11T00:06:40.224985 #479146]  INFO -- deploy-centos-8:     +cat << 'CONFIG_STATIC_NETWORK' > /root/make-static-network
+I, [2020-02-11T00:06:40.225021 #479146]  INFO -- deploy-centos-8:     +#!/bin/bash
+I, [2020-02-11T00:06:40.225059 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:40.225097 #479146]  INFO -- deploy-centos-8:     +# Replace IPv4 DHCP config with IPv4 static config
+I, [2020-02-11T00:06:40.225137 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:40.225175 #479146]  INFO -- deploy-centos-8:     +set -x
+I, [2020-02-11T00:06:40.225244 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.225287 #479146]  INFO -- deploy-centos-8:     +for EACH_FILE in /etc/sysconfig/network-scripts/ifcfg-*
+I, [2020-02-11T00:06:40.225329 #479146]  INFO -- deploy-centos-8:     +do
+I, [2020-02-11T00:06:40.225368 #479146]  INFO -- deploy-centos-8:     +  if [[ $(grep 'DEFROUTE="yes"' $EACH_FILE | wc -l) -eq 1 ]]
+I, [2020-02-11T00:06:40.225414 #479146]  INFO -- deploy-centos-8:     +  then
+I, [2020-02-11T00:06:40.225465 #479146]  INFO -- deploy-centos-8:     +    FULLNAME=$EACH_FILE
+I, [2020-02-11T00:06:40.225505 #479146]  INFO -- deploy-centos-8:     +    FILENAME=$(basename $EACH_FILE)
+I, [2020-02-11T00:06:40.225542 #479146]  INFO -- deploy-centos-8:     +    break
+I, [2020-02-11T00:06:40.225584 #479146]  INFO -- deploy-centos-8:     +  fi
+I, [2020-02-11T00:06:40.225620 #479146]  INFO -- deploy-centos-8:     +done
+I, [2020-02-11T00:06:40.225656 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.225694 #479146]  INFO -- deploy-centos-8:     +# Replace default of DHCP boot protocol with none
+I, [2020-02-11T00:06:40.225729 #479146]  INFO -- deploy-centos-8:     +sed -i 's/dhcp/none/g' $FULLNAME
+I, [2020-02-11T00:06:40.225766 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.225808 #479146]  INFO -- deploy-centos-8:     +# Remove any existing static configs of these:
+I, [2020-02-11T00:06:40.225855 #479146]  INFO -- deploy-centos-8:     +sed -i 's/IPADDR.*$//g' $FULLNAME
+I, [2020-02-11T00:06:40.225905 #479146]  INFO -- deploy-centos-8:     +sed -i 's/NETMASK.*$//g' $FULLNAME
+I, [2020-02-11T00:06:40.225962 #479146]  INFO -- deploy-centos-8:     +sed -i 's/GATEWAY.*$//g' $FULLNAME
+I, [2020-02-11T00:06:40.226020 #479146]  INFO -- deploy-centos-8:     +sed -i 's/DNS.*$//g' $FULLNAME
+I, [2020-02-11T00:06:40.226064 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.226110 #479146]  INFO -- deploy-centos-8:     +# Remove any empty lines left by the above three removals
+I, [2020-02-11T00:06:40.226163 #479146]  INFO -- deploy-centos-8:     +sed -i '/^$/d' $FULLNAME
+I, [2020-02-11T00:06:40.226224 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.236781 #479146]  INFO -- deploy-centos-8:     +INT=${FILENAME##ifcfg-}
+I, [2020-02-11T00:06:40.236898 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.236951 #479146]  INFO -- deploy-centos-8:     +ILINE=$(ifconfig $INT | grep '  inet ')
+I, [2020-02-11T00:06:40.236990 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.237028 #479146]  INFO -- deploy-centos-8:     +echo "# Static config via /root/make-static-network" >> $FULLNAME
+I, [2020-02-11T00:06:40.237070 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.237108 #479146]  INFO -- deploy-centos-8:     +IPADDR=$(echo $ILINE | awk '{print $2}')
+I, [2020-02-11T00:06:40.237148 #479146]  INFO -- deploy-centos-8:     +echo "IPADDR=\"$IPADDR\"" >> $FULLNAME
+I, [2020-02-11T00:06:40.237186 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.237287 #479146]  INFO -- deploy-centos-8:     +NETMASK=$(echo $ILINE | awk '{print $4}')
+I, [2020-02-11T00:06:40.237328 #479146]  INFO -- deploy-centos-8:     +echo "NETMASK=\"$NETMASK\"" >> $FULLNAME
+I, [2020-02-11T00:06:40.237366 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.237402 #479146]  INFO -- deploy-centos-8:     +GATEWAY=$(ip -4 route | egrep '^default' | awk '{print $3}')
+I, [2020-02-11T00:06:40.237441 #479146]  INFO -- deploy-centos-8:     +echo "GATEWAY=\"$GATEWAY\"" >> $FULLNAME
+I, [2020-02-11T00:06:40.237483 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.237525 #479146]  INFO -- deploy-centos-8:     +DNSCOUNT=0
+I, [2020-02-11T00:06:40.237565 #479146]  INFO -- deploy-centos-8:     +grep '^nameserver' /etc/resolv.conf | while read LINE
+I, [2020-02-11T00:06:40.237603 #479146]  INFO -- deploy-centos-8:     +do
+I, [2020-02-11T00:06:40.237636 #479146]  INFO -- deploy-centos-8:     +  let DNSCOUNT+=1
+I, [2020-02-11T00:06:40.237669 #479146]  INFO -- deploy-centos-8:     +  DNS=$(echo $LINE | awk '{print $2}')
+I, [2020-02-11T00:06:40.237703 #479146]  INFO -- deploy-centos-8:     +  echo "DNS${DNSCOUNT}=$DNS" >> $FULLNAME
+I, [2020-02-11T00:06:40.237735 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.237767 #479146]  INFO -- deploy-centos-8:     +  if [[ $DNSCOUNT == 3 ]]
+I, [2020-02-11T00:06:40.237802 #479146]  INFO -- deploy-centos-8:     +  then
+I, [2020-02-11T00:06:40.237837 #479146]  INFO -- deploy-centos-8:     +    break
+I, [2020-02-11T00:06:40.237868 #479146]  INFO -- deploy-centos-8:     +  fi
+I, [2020-02-11T00:06:40.237900 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.237934 #479146]  INFO -- deploy-centos-8:     +done
+I, [2020-02-11T00:06:40.237970 #479146]  INFO -- deploy-centos-8:     +CONFIG_STATIC_NETWORK
+I, [2020-02-11T00:06:40.238006 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.238051 #479146]  INFO -- deploy-centos-8:     +. /root/make-static-network >> /root/ks-post-static-ipv4.log
+I, [2020-02-11T00:06:40.238091 #479146]  INFO -- deploy-centos-8:     +%end
+I, [2020-02-11T00:06:40.238128 #479146]  INFO -- deploy-centos-8:     +# ---------
+I, [2020-02-11T00:06:40.265754 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.265866 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:40.265913 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:40.301039 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:40.308502 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:40.342725 #479146]  INFO -- deploy-centos-8:   * execute[static-ipv4] action run
+I, [2020-02-11T00:06:40.342868 #479146]  INFO -- deploy-centos-8:     - execute cat /repo/kickstart/build/scripts/centos/script-rhel-static-ipv4 >> /repo/kickstart/centos/ks-centos-8.1905-base.ks
+I, [2020-02-11T00:06:40.379106 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/scripts/centos/script-rhel-yum-update] action create
+I, [2020-02-11T00:06:40.379258 #479146]  INFO -- deploy-centos-8:     - create new file /repo/kickstart/build/scripts/centos/script-rhel-yum-update
+I, [2020-02-11T00:06:40.379333 #479146]  INFO -- deploy-centos-8:     - update content in file /repo/kickstart/build/scripts/centos/script-rhel-yum-update from none to 583ab2
+I, [2020-02-11T00:06:40.379386 #479146]  INFO -- deploy-centos-8:     --- /repo/kickstart/build/scripts/centos/script-rhel-yum-update	2020-02-11 07:06:42.130036025 +0000
+I, [2020-02-11T00:06:40.379434 #479146]  INFO -- deploy-centos-8:     +++ /repo/kickstart/build/scripts/centos/.chef-script-rhel-yum-update20200211-4419-1jabi0x	2020-02-11 07:06:42.130036025 +0000
+I, [2020-02-11T00:06:40.379499 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,11 @@
+I, [2020-02-11T00:06:40.379548 #479146]  INFO -- deploy-centos-8:     +# ---------
+I, [2020-02-11T00:06:40.379617 #479146]  INFO -- deploy-centos-8:     +# script-rhel7-yum-update - THIS FILE DEPLOYED VIA CHEF - DO NOT MODIFY
+I, [2020-02-11T00:06:40.379689 #479146]  INFO -- deploy-centos-8:     +# ---------
+I, [2020-02-11T00:06:40.379738 #479146]  INFO -- deploy-centos-8:     +%post --log=/root/ks-post-yum-update.log
+I, [2020-02-11T00:06:40.379785 #479146]  INFO -- deploy-centos-8:     +# Update to most recent packages
+I, [2020-02-11T00:06:40.379840 #479146]  INFO -- deploy-centos-8:     +set -x
+I, [2020-02-11T00:06:40.379894 #479146]  INFO -- deploy-centos-8:     +yum -y update
+I, [2020-02-11T00:06:40.379951 #479146]  INFO -- deploy-centos-8:     +%end
+I, [2020-02-11T00:06:40.379997 #479146]  INFO -- deploy-centos-8:     +# ---------
+I, [2020-02-11T00:06:40.390038 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.390193 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:40.390284 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:40.417566 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:40.428088 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:40.466461 #479146]  INFO -- deploy-centos-8:   * execute[yum-update] action run
+I, [2020-02-11T00:06:40.466600 #479146]  INFO -- deploy-centos-8:     - execute cat /repo/kickstart/build/scripts/centos/script-rhel-yum-update >> /repo/kickstart/centos/ks-centos-8.1905-base.ks
+I, [2020-02-11T00:06:40.506836 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/stubs/centos/stub-centos-8.1905-base-xfs.ks] action create
+I, [2020-02-11T00:06:40.506963 #479146]  INFO -- deploy-centos-8:     - create new file /repo/kickstart/build/stubs/centos/stub-centos-8.1905-base-xfs.ks
+I, [2020-02-11T00:06:40.507031 #479146]  INFO -- deploy-centos-8:     - update content in file /repo/kickstart/build/stubs/centos/stub-centos-8.1905-base-xfs.ks from none to bb0415
+I, [2020-02-11T00:06:40.507090 #479146]  INFO -- deploy-centos-8:     --- /repo/kickstart/build/stubs/centos/stub-centos-8.1905-base-xfs.ks	2020-02-11 07:06:42.254443599 +0000
+I, [2020-02-11T00:06:40.507148 #479146]  INFO -- deploy-centos-8:     +++ /repo/kickstart/build/stubs/centos/.chef-stub-centos-820200211-4419-rc2ku.1905-base-xfs.ks	2020-02-11 07:06:42.254443599 +0000
+I, [2020-02-11T00:06:40.507216 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,87 @@
+I, [2020-02-11T00:06:40.507277 #479146]  INFO -- deploy-centos-8:     +# ks-centos8 - (Centos/Rhel) THIS FILE DEPLOYED VIA CHEF - DO NOT MODIFY
+I, [2020-02-11T00:06:40.507333 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:40.507387 #479146]  INFO -- deploy-centos-8:     +# Kickstart file for Centos/Redhat Linux 8.x
+I, [2020-02-11T00:06:40.507443 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:40.507498 #479146]  INFO -- deploy-centos-8:     +# 2019-11-27 Generated via Chef templates
+I, [2020-02-11T00:06:40.507565 #479146]  INFO -- deploy-centos-8:     +# 2019-10-26 Draft for home lab use
+I, [2020-02-11T00:06:40.507629 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.507686 #479146]  INFO -- deploy-centos-8:     +install
+I, [2020-02-11T00:06:40.507740 #479146]  INFO -- deploy-centos-8:     +text
+I, [2020-02-11T00:06:40.507795 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.507854 #479146]  INFO -- deploy-centos-8:     +# Initialize the network device using dhcp. We don't need IPV6 in my home lab
+I, [2020-02-11T00:06:40.507917 #479146]  INFO -- deploy-centos-8:     +network --bootproto dhcp --noipv6
+I, [2020-02-11T00:06:40.507973 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.508032 #479146]  INFO -- deploy-centos-8:     +# Get rpm packages from this repository
+I, [2020-02-11T00:06:40.508093 #479146]  INFO -- deploy-centos-8:     +url --url=http://repo.maxlab/dist/centos/CentOS-8-x86_64-1905-dvd1
+I, [2020-02-11T00:06:40.508148 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.508215 #479146]  INFO -- deploy-centos-8:     +# Let's use the English language and keyboard settings
+I, [2020-02-11T00:06:40.508291 #479146]  INFO -- deploy-centos-8:     +lang en_US
+I, [2020-02-11T00:06:40.508342 #479146]  INFO -- deploy-centos-8:     +keyboard us
+I, [2020-02-11T00:06:40.508393 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.508467 #479146]  INFO -- deploy-centos-8:     +# Hopefully not touch anything else
+I, [2020-02-11T00:06:40.508528 #479146]  INFO -- deploy-centos-8:     +ignoredisk --only-use=sda
+I, [2020-02-11T00:06:40.508578 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.508634 #479146]  INFO -- deploy-centos-8:     +# Clear partition table
+I, [2020-02-11T00:06:40.508697 #479146]  INFO -- deploy-centos-8:     +clearpart --initlabel --drives=sda --all
+I, [2020-02-11T00:06:40.508751 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.508805 #479146]  INFO -- deploy-centos-8:     +# Clears master boot record data, a safety step against disk corruption
+I, [2020-02-11T00:06:40.508862 #479146]  INFO -- deploy-centos-8:     +zerombr
+I, [2020-02-11T00:06:40.508918 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.508973 #479146]  INFO -- deploy-centos-8:     +# Install boot loader (grub2) on boot drive's master boot record
+I, [2020-02-11T00:06:40.509030 #479146]  INFO -- deploy-centos-8:     +# Append options to not patch for SPECTRE and MELTDOWN (home network only)
+I, [2020-02-11T00:06:40.509086 #479146]  INFO -- deploy-centos-8:     +bootloader --location=mbr --driveorder=sda --append="nopti noibrs noibpb"
+I, [2020-02-11T00:06:40.509140 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.509191 #479146]  INFO -- deploy-centos-8:     +# Create a BIOS partition for booting on non-EFI systems
+I, [2020-02-11T00:06:40.509257 #479146]  INFO -- deploy-centos-8:     +#part biosboot --fstype=biosboot --ondisk=sda --size=1 
+I, [2020-02-11T00:06:40.509311 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.509356 #479146]  INFO -- deploy-centos-8:     +# Create a partition to store boot kernels, initrd and config files
+I, [2020-02-11T00:06:40.509402 #479146]  INFO -- deploy-centos-8:     +part /boot --fstype=ext4 --asprimary --fsoptions="defaults,relatime,nodiratime,nodev,nosuid,noexec" --size=1024 --ondisk=sda 
+I, [2020-02-11T00:06:40.509445 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.509489 #479146]  INFO -- deploy-centos-8:     +# Create a minimal swap partition. We don't expect to use it.
+I, [2020-02-11T00:06:40.509535 #479146]  INFO -- deploy-centos-8:     +part swap --asprimary --size=2048 --ondisk=sda 
+I, [2020-02-11T00:06:40.509585 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.509635 #479146]  INFO -- deploy-centos-8:     +# Create an LVM2 physical volume. Must use syntax 'pv.01'
+I, [2020-02-11T00:06:40.509687 #479146]  INFO -- deploy-centos-8:     +part pv.01 --grow --size=1 --ondisk=sda 
+I, [2020-02-11T00:06:40.509740 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.509803 #479146]  INFO -- deploy-centos-8:     +# Create an LVM2 volume group for the root OS filesystem
+I, [2020-02-11T00:06:40.509865 #479146]  INFO -- deploy-centos-8:     +volgroup vg_linuxos pv.01
+I, [2020-02-11T00:06:40.509923 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.509982 #479146]  INFO -- deploy-centos-8:     +logvol / --vgname=vg_linuxos --size=2048 --name=lv_root --label=root --fstype=xfs --grow --fsoptions=defaults,relatime,nodiratime
+I, [2020-02-11T00:06:40.510045 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.510099 #479146]  INFO -- deploy-centos-8:     +logvol /var/log --vgname=vg_linuxos --size=2048 --name=lv_var.log --label=var.log --fstype=xfs --fsoptions='defaults,relatime,nodiratime,nodev,nosuid,noexec' --mkfsoptions='-m 1'
+I, [2020-02-11T00:06:40.510157 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.510242 #479146]  INFO -- deploy-centos-8:     +# Set timezone to either UTC (production) or local (development)
+I, [2020-02-11T00:06:40.510303 #479146]  INFO -- deploy-centos-8:     +timezone America/Denver --utc --ntpservers=192.168.9.100
+I, [2020-02-11T00:06:40.510370 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.510423 #479146]  INFO -- deploy-centos-8:     +# Configure authorization details
+I, [2020-02-11T00:06:40.513339 #479146]  INFO -- deploy-centos-8:     +authconfig --enableshadow --passalgo=sha512
+I, [2020-02-11T00:06:40.513446 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.513544 #479146]  INFO -- deploy-centos-8:     +# Enable/disble SELinux security systems
+I, [2020-02-11T00:06:40.513609 #479146]  INFO -- deploy-centos-8:     +selinux --permissive 
+I, [2020-02-11T00:06:40.513662 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.513717 #479146]  INFO -- deploy-centos-8:     +# Enable/disable Firewall
+I, [2020-02-11T00:06:40.513769 #479146]  INFO -- deploy-centos-8:     +firewall 
+I, [2020-02-11T00:06:40.513821 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.513871 #479146]  INFO -- deploy-centos-8:     +# Reboot system after OS installation is complete.
+I, [2020-02-11T00:06:40.513932 #479146]  INFO -- deploy-centos-8:     +# This works well on systems where the system reverts to boot to disk after
+I, [2020-02-11T00:06:40.513991 #479146]  INFO -- deploy-centos-8:     +# a single attempt to perform a network/PXE boot
+I, [2020-02-11T00:06:40.514039 #479146]  INFO -- deploy-centos-8:     +#reboot
+I, [2020-02-11T00:06:40.514087 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.514133 #479146]  INFO -- deploy-centos-8:     +skipx
+I, [2020-02-11T00:06:40.514223 #479146]  INFO -- deploy-centos-8:     +eula --agree
+I, [2020-02-11T00:06:40.514277 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.514325 #479146]  INFO -- deploy-centos-8:     +%packages
+I, [2020-02-11T00:06:40.514371 #479146]  INFO -- deploy-centos-8:     +@core
+I, [2020-02-11T00:06:40.514417 #479146]  INFO -- deploy-centos-8:     +authconfig
+I, [2020-02-11T00:06:40.514777 #479146]  INFO -- deploy-centos-8:     +bc
+I, [2020-02-11T00:06:40.514856 #479146]  INFO -- deploy-centos-8:     +wget
+I, [2020-02-11T00:06:40.514904 #479146]  INFO -- deploy-centos-8:     +nc
+I, [2020-02-11T00:06:40.514950 #479146]  INFO -- deploy-centos-8:     +net-tools
+I, [2020-02-11T00:06:40.514995 #479146]  INFO -- deploy-centos-8:     +bzip2
+I, [2020-02-11T00:06:40.515040 #479146]  INFO -- deploy-centos-8:     +bind-utils
+I, [2020-02-11T00:06:40.515084 #479146]  INFO -- deploy-centos-8:     +vim
+I, [2020-02-11T00:06:40.515130 #479146]  INFO -- deploy-centos-8:     +%end
+I, [2020-02-11T00:06:40.515174 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.515232 #479146]  INFO -- deploy-centos-8:     +%addon com_redhat_kdump --disable
+I, [2020-02-11T00:06:40.516476 #479146]  INFO -- deploy-centos-8:     +%end
+I, [2020-02-11T00:06:40.516560 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:40.516618 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:40.540045 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:40.549128 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:40.572920 #479146]  INFO -- deploy-centos-8:   * execute[copy-ks-file] action run
+I, [2020-02-11T00:06:40.573031 #479146]  INFO -- deploy-centos-8:     - execute cp -p /repo/kickstart/build/stubs/centos/stub-centos-8.1905-base-xfs.ks /repo/kickstart/centos/ks-centos-8.1905-base-xfs.ks
+I, [2020-02-11T00:06:40.615952 #479146]  INFO -- deploy-centos-8:   * execute[include-file-kickstart-rootpw-maxlab.txt] action run
+I, [2020-02-11T00:06:40.616066 #479146]  INFO -- deploy-centos-8:     - execute if [[ -f /repo/kickstart/build/passwords/centos/kickstart-rootpw-maxlab.txt ]]; then cat /repo/kickstart/build/passwords/centos/kickstart-rootpw-maxlab.txt >> /repo/kickstart/centos/ks-centos-8.1905-base-xfs.ks; fi
+I, [2020-02-11T00:06:40.650057 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/scripts/centos/script-rhel7-static-hostname] action create (up to date)
+I, [2020-02-11T00:06:40.682872 #479146]  INFO -- deploy-centos-8:   * execute[static-hostname] action run
+I, [2020-02-11T00:06:40.683006 #479146]  INFO -- deploy-centos-8:     - execute cat /repo/kickstart/build/scripts/centos/script-rhel7-static-hostname >> /repo/kickstart/centos/ks-centos-8.1905-base-xfs.ks
+I, [2020-02-11T00:06:40.761643 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/scripts/centos/script-rhel-static-ipv4] action create (up to date)
+I, [2020-02-11T00:06:40.799365 #479146]  INFO -- deploy-centos-8:   * execute[static-ipv4] action run
+I, [2020-02-11T00:06:40.799500 #479146]  INFO -- deploy-centos-8:     - execute cat /repo/kickstart/build/scripts/centos/script-rhel-static-ipv4 >> /repo/kickstart/centos/ks-centos-8.1905-base-xfs.ks
+I, [2020-02-11T00:06:40.833270 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/scripts/centos/script-rhel-yum-update] action create (up to date)
+I, [2020-02-11T00:06:40.868276 #479146]  INFO -- deploy-centos-8:   * execute[yum-update] action run
+I, [2020-02-11T00:06:40.868389 #479146]  INFO -- deploy-centos-8:     - execute cat /repo/kickstart/build/scripts/centos/script-rhel-yum-update >> /repo/kickstart/centos/ks-centos-8.1905-base-xfs.ks
+I, [2020-02-11T00:06:40.884619 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/stubs/centos/stub-centos-8.1905-manyfs.ks] action create
+I, [2020-02-11T00:06:40.884708 #479146]  INFO -- deploy-centos-8:     - create new file /repo/kickstart/build/stubs/centos/stub-centos-8.1905-manyfs.ks
+I, [2020-02-11T00:06:40.884750 #479146]  INFO -- deploy-centos-8:     - update content in file /repo/kickstart/build/stubs/centos/stub-centos-8.1905-manyfs.ks from none to 811e2c
+I, [2020-02-11T00:06:40.884788 #479146]  INFO -- deploy-centos-8:     --- /repo/kickstart/build/stubs/centos/stub-centos-8.1905-manyfs.ks	2020-02-11 07:06:42.648566790 +0000
+I, [2020-02-11T00:06:40.884827 #479146]  INFO -- deploy-centos-8:     +++ /repo/kickstart/build/stubs/centos/.chef-stub-centos-820200211-4419-rke9sf.1905-manyfs.ks	2020-02-11 07:06:42.648566790 +0000
+I, [2020-02-11T00:06:40.884859 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,93 @@
+I, [2020-02-11T00:06:40.884892 #479146]  INFO -- deploy-centos-8:     +# ks-centos8 - (Centos/Rhel) THIS FILE DEPLOYED VIA CHEF - DO NOT MODIFY
+I, [2020-02-11T00:06:40.884929 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:40.884964 #479146]  INFO -- deploy-centos-8:     +# Kickstart file for Centos/Redhat Linux 8.x
+I, [2020-02-11T00:06:40.884986 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:40.885004 #479146]  INFO -- deploy-centos-8:     +# 2019-11-27 Generated via Chef templates
+I, [2020-02-11T00:06:40.885024 #479146]  INFO -- deploy-centos-8:     +# 2019-10-26 Draft for home lab use
+I, [2020-02-11T00:06:40.885042 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.885070 #479146]  INFO -- deploy-centos-8:     +install
+I, [2020-02-11T00:06:40.885090 #479146]  INFO -- deploy-centos-8:     +text
+I, [2020-02-11T00:06:40.885108 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.885126 #479146]  INFO -- deploy-centos-8:     +# Initialize the network device using dhcp. We don't need IPV6 in my home lab
+I, [2020-02-11T00:06:40.885145 #479146]  INFO -- deploy-centos-8:     +network --bootproto dhcp --noipv6
+I, [2020-02-11T00:06:40.885163 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.885180 #479146]  INFO -- deploy-centos-8:     +# Get rpm packages from this repository
+I, [2020-02-11T00:06:40.885198 #479146]  INFO -- deploy-centos-8:     +url --url=http://repo.maxlab/dist/centos/CentOS-8-x86_64-1905-dvd1
+I, [2020-02-11T00:06:40.885252 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.885283 #479146]  INFO -- deploy-centos-8:     +# Let's use the English language and keyboard settings
+I, [2020-02-11T00:06:40.885314 #479146]  INFO -- deploy-centos-8:     +lang en_US
+I, [2020-02-11T00:06:40.885344 #479146]  INFO -- deploy-centos-8:     +keyboard us
+I, [2020-02-11T00:06:40.885367 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.885418 #479146]  INFO -- deploy-centos-8:     +# Hopefully not touch anything else
+I, [2020-02-11T00:06:40.885441 #479146]  INFO -- deploy-centos-8:     +ignoredisk --only-use=sda
+I, [2020-02-11T00:06:40.885458 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.885475 #479146]  INFO -- deploy-centos-8:     +# Clear partition table
+I, [2020-02-11T00:06:40.885495 #479146]  INFO -- deploy-centos-8:     +clearpart --initlabel --drives=sda --all
+I, [2020-02-11T00:06:40.885512 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.885530 #479146]  INFO -- deploy-centos-8:     +# Clears master boot record data, a safety step against disk corruption
+I, [2020-02-11T00:06:40.885549 #479146]  INFO -- deploy-centos-8:     +zerombr
+I, [2020-02-11T00:06:40.885570 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.885609 #479146]  INFO -- deploy-centos-8:     +# Install boot loader (grub2) on boot drive's master boot record
+I, [2020-02-11T00:06:40.885637 #479146]  INFO -- deploy-centos-8:     +# Append options to not patch for SPECTRE and MELTDOWN (home network only)
+I, [2020-02-11T00:06:40.885667 #479146]  INFO -- deploy-centos-8:     +bootloader --location=mbr --driveorder=sda --append="nopti noibrs noibpb"
+I, [2020-02-11T00:06:40.885696 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.885726 #479146]  INFO -- deploy-centos-8:     +# Create a BIOS partition for booting on non-EFI systems
+I, [2020-02-11T00:06:40.885761 #479146]  INFO -- deploy-centos-8:     +#part biosboot --fstype=biosboot --ondisk=sda --size=1 
+I, [2020-02-11T00:06:40.885790 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.885826 #479146]  INFO -- deploy-centos-8:     +# Create a partition to store boot kernels, initrd and config files
+I, [2020-02-11T00:06:40.885861 #479146]  INFO -- deploy-centos-8:     +part /boot --fstype=ext4 --asprimary --fsoptions="defaults,relatime,nodiratime,nodev,nosuid,noexec" --size=1024 --ondisk=sda 
+I, [2020-02-11T00:06:40.885893 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.885925 #479146]  INFO -- deploy-centos-8:     +# Create a minimal swap partition. We don't expect to use it.
+I, [2020-02-11T00:06:40.885959 #479146]  INFO -- deploy-centos-8:     +part swap --asprimary --size=2048 --ondisk=sda 
+I, [2020-02-11T00:06:40.885989 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.886022 #479146]  INFO -- deploy-centos-8:     +# Create an LVM2 physical volume. Must use syntax 'pv.01'
+I, [2020-02-11T00:06:40.886055 #479146]  INFO -- deploy-centos-8:     +part pv.01 --grow --size=1 --ondisk=sda 
+I, [2020-02-11T00:06:40.886087 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.886120 #479146]  INFO -- deploy-centos-8:     +# Create an LVM2 volume group for the root OS filesystem
+I, [2020-02-11T00:06:40.886153 #479146]  INFO -- deploy-centos-8:     +volgroup vg_linuxos pv.01
+I, [2020-02-11T00:06:40.886184 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.886231 #479146]  INFO -- deploy-centos-8:     +logvol / --vgname=vg_linuxos --size=2048 --name=lv_root --label=root --fstype=ext4 --grow --fsoptions=defaults,relatime,nodiratime
+I, [2020-02-11T00:06:40.886263 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.886296 #479146]  INFO -- deploy-centos-8:     +logvol /var --vgname=vg_linuxos --size=24576 --name=lv_var --label=var --fstype=ext4 --fsoptions='defaults,relatime,nodiratime,nodev,nosuid,noexec' --mkfsoptions='-m 1'
+I, [2020-02-11T00:06:40.886328 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.886359 #479146]  INFO -- deploy-centos-8:     +logvol /var/log --vgname=vg_linuxos --size=4096 --name=lv_var.log --label=var.log --fstype=ext4 --fsoptions='defaults,relatime,nodiratime,nodev,nosuid,noexec' --mkfsoptions='-m 1'
+I, [2020-02-11T00:06:40.886391 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.886423 #479146]  INFO -- deploy-centos-8:     +logvol /var/log/audit --vgname=vg_linuxos --size=1024 --name=lv_var.log.audit --label=var.log.audit --fstype=ext4 --fsoptions='defaults,relatime,nodiratime,nodev,nosuid,noexec' --mkfsoptions='-m 1'
+I, [2020-02-11T00:06:40.886467 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.886501 #479146]  INFO -- deploy-centos-8:     +logvol /home --vgname=vg_linuxos --size=8192 --name=lv_home --label=home --fstype=ext4 --fsoptions='defaults,relatime,nodiratime,nodev,nosuid,noexec' --mkfsoptions='-m 1'
+I, [2020-02-11T00:06:40.886529 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.886556 #479146]  INFO -- deploy-centos-8:     +# Set timezone to either UTC (production) or local (development)
+I, [2020-02-11T00:06:40.886583 #479146]  INFO -- deploy-centos-8:     +timezone America/Denver --utc --ntpservers=192.168.9.100
+I, [2020-02-11T00:06:40.886614 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.886642 #479146]  INFO -- deploy-centos-8:     +# Configure authorization details
+I, [2020-02-11T00:06:40.886676 #479146]  INFO -- deploy-centos-8:     +authconfig --enableshadow --passalgo=sha512
+I, [2020-02-11T00:06:40.886706 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.886742 #479146]  INFO -- deploy-centos-8:     +# Enable/disble SELinux security systems
+I, [2020-02-11T00:06:40.886782 #479146]  INFO -- deploy-centos-8:     +selinux --permissive 
+I, [2020-02-11T00:06:40.886824 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.886889 #479146]  INFO -- deploy-centos-8:     +# Enable/disable Firewall
+I, [2020-02-11T00:06:40.886926 #479146]  INFO -- deploy-centos-8:     +firewall 
+I, [2020-02-11T00:06:40.886966 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.887005 #479146]  INFO -- deploy-centos-8:     +# Reboot system after OS installation is complete.
+I, [2020-02-11T00:06:40.887037 #479146]  INFO -- deploy-centos-8:     +# This works well on systems where the system reverts to boot to disk after
+I, [2020-02-11T00:06:40.887070 #479146]  INFO -- deploy-centos-8:     +# a single attempt to perform a network/PXE boot
+I, [2020-02-11T00:06:40.887105 #479146]  INFO -- deploy-centos-8:     +#reboot
+I, [2020-02-11T00:06:40.887138 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.887165 #479146]  INFO -- deploy-centos-8:     +skipx
+I, [2020-02-11T00:06:40.887194 #479146]  INFO -- deploy-centos-8:     +eula --agree
+I, [2020-02-11T00:06:40.887261 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.887307 #479146]  INFO -- deploy-centos-8:     +%packages
+I, [2020-02-11T00:06:40.887363 #479146]  INFO -- deploy-centos-8:     +@core
+I, [2020-02-11T00:06:40.887487 #479146]  INFO -- deploy-centos-8:     +authconfig
+I, [2020-02-11T00:06:40.887712 #479146]  INFO -- deploy-centos-8:     +bc
+I, [2020-02-11T00:06:40.887917 #479146]  INFO -- deploy-centos-8:     +wget
+I, [2020-02-11T00:06:40.887991 #479146]  INFO -- deploy-centos-8:     +nc
+I, [2020-02-11T00:06:40.888022 #479146]  INFO -- deploy-centos-8:     +net-tools
+I, [2020-02-11T00:06:40.888048 #479146]  INFO -- deploy-centos-8:     +bzip2
+I, [2020-02-11T00:06:40.888072 #479146]  INFO -- deploy-centos-8:     +bind-utils
+I, [2020-02-11T00:06:40.888097 #479146]  INFO -- deploy-centos-8:     +vim
+I, [2020-02-11T00:06:40.888122 #479146]  INFO -- deploy-centos-8:     +%end
+I, [2020-02-11T00:06:40.888146 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:40.888172 #479146]  INFO -- deploy-centos-8:     +%addon com_redhat_kdump --disable
+I, [2020-02-11T00:06:40.890761 #479146]  INFO -- deploy-centos-8:     +%end
+I, [2020-02-11T00:06:40.890853 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:40.890896 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:40.910898 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:40.916929 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:40.941390 #479146]  INFO -- deploy-centos-8:   * execute[copy-ks-file] action run
+I, [2020-02-11T00:06:40.941488 #479146]  INFO -- deploy-centos-8:     - execute cp -p /repo/kickstart/build/stubs/centos/stub-centos-8.1905-manyfs.ks /repo/kickstart/centos/ks-centos-8.1905-manyfs.ks
+I, [2020-02-11T00:06:40.973124 #479146]  INFO -- deploy-centos-8:   * execute[include-file-kickstart-rootpw-maxlab.txt] action run
+I, [2020-02-11T00:06:40.973581 #479146]  INFO -- deploy-centos-8:     - execute if [[ -f /repo/kickstart/build/passwords/centos/kickstart-rootpw-maxlab.txt ]]; then cat /repo/kickstart/build/passwords/centos/kickstart-rootpw-maxlab.txt >> /repo/kickstart/centos/ks-centos-8.1905-manyfs.ks; fi
+I, [2020-02-11T00:06:41.012874 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/scripts/centos/script-rhel7-static-hostname] action create (up to date)
+I, [2020-02-11T00:06:41.050735 #479146]  INFO -- deploy-centos-8:   * execute[static-hostname] action run
+I, [2020-02-11T00:06:41.050883 #479146]  INFO -- deploy-centos-8:     - execute cat /repo/kickstart/build/scripts/centos/script-rhel7-static-hostname >> /repo/kickstart/centos/ks-centos-8.1905-manyfs.ks
+I, [2020-02-11T00:06:41.079544 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/scripts/centos/script-rhel-static-ipv4] action create (up to date)
+I, [2020-02-11T00:06:41.123993 #479146]  INFO -- deploy-centos-8:   * execute[static-ipv4] action run
+I, [2020-02-11T00:06:41.124118 #479146]  INFO -- deploy-centos-8:     - execute cat /repo/kickstart/build/scripts/centos/script-rhel-static-ipv4 >> /repo/kickstart/centos/ks-centos-8.1905-manyfs.ks
+I, [2020-02-11T00:06:41.150045 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/scripts/centos/script-rhel-yum-update] action create (up to date)
+I, [2020-02-11T00:06:41.187703 #479146]  INFO -- deploy-centos-8:   * execute[yum-update] action run
+I, [2020-02-11T00:06:41.187937 #479146]  INFO -- deploy-centos-8:     - execute cat /repo/kickstart/build/scripts/centos/script-rhel-yum-update >> /repo/kickstart/centos/ks-centos-8.1905-manyfs.ks
+I, [2020-02-11T00:06:41.205488 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/stubs/centos/stub-centos-8.1905-XL.ks] action create
+I, [2020-02-11T00:06:41.215429 #479146]  INFO -- deploy-centos-8:     - create new file /repo/kickstart/build/stubs/centos/stub-centos-8.1905-XL.ks
+I, [2020-02-11T00:06:41.215537 #479146]  INFO -- deploy-centos-8:     - update content in file /repo/kickstart/build/stubs/centos/stub-centos-8.1905-XL.ks from none to ec2e94
+I, [2020-02-11T00:06:41.215586 #479146]  INFO -- deploy-centos-8:     --- /repo/kickstart/build/stubs/centos/stub-centos-8.1905-XL.ks	2020-02-11 07:06:42.973021738 +0000
+I, [2020-02-11T00:06:41.215625 #479146]  INFO -- deploy-centos-8:     +++ /repo/kickstart/build/stubs/centos/.chef-stub-centos-820200211-4419-8yaoy7.1905-XL.ks	2020-02-11 07:06:42.973021738 +0000
+I, [2020-02-11T00:06:41.215666 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,89 @@
+I, [2020-02-11T00:06:41.215705 #479146]  INFO -- deploy-centos-8:     +# ks-centos8 - (Centos/Rhel) THIS FILE DEPLOYED VIA CHEF - DO NOT MODIFY
+I, [2020-02-11T00:06:41.215744 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:41.215778 #479146]  INFO -- deploy-centos-8:     +# Kickstart file for Centos/Redhat Linux 8.x
+I, [2020-02-11T00:06:41.215811 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:41.215844 #479146]  INFO -- deploy-centos-8:     +# 2019-11-27 Generated via Chef templates
+I, [2020-02-11T00:06:41.215878 #479146]  INFO -- deploy-centos-8:     +# 2019-10-26 Draft for home lab use
+I, [2020-02-11T00:06:41.215911 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.215943 #479146]  INFO -- deploy-centos-8:     +install
+I, [2020-02-11T00:06:41.215976 #479146]  INFO -- deploy-centos-8:     +text
+I, [2020-02-11T00:06:41.216019 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.216066 #479146]  INFO -- deploy-centos-8:     +# Initialize the network device using dhcp. We don't need IPV6 in my home lab
+I, [2020-02-11T00:06:41.216108 #479146]  INFO -- deploy-centos-8:     +network --bootproto dhcp --noipv6
+I, [2020-02-11T00:06:41.216147 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.216179 #479146]  INFO -- deploy-centos-8:     +# Get rpm packages from this repository
+I, [2020-02-11T00:06:41.216222 #479146]  INFO -- deploy-centos-8:     +url --url=http://repo.maxlab/dist/centos/CentOS-8-x86_64-1905-dvd1
+I, [2020-02-11T00:06:41.216284 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.216339 #479146]  INFO -- deploy-centos-8:     +# Let's use the English language and keyboard settings
+I, [2020-02-11T00:06:41.216389 #479146]  INFO -- deploy-centos-8:     +lang en_US
+I, [2020-02-11T00:06:41.216436 #479146]  INFO -- deploy-centos-8:     +keyboard us
+I, [2020-02-11T00:06:41.216483 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.216542 #479146]  INFO -- deploy-centos-8:     +# Hopefully not touch anything else
+I, [2020-02-11T00:06:41.216585 #479146]  INFO -- deploy-centos-8:     +ignoredisk --only-use=sda
+I, [2020-02-11T00:06:41.216653 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.216700 #479146]  INFO -- deploy-centos-8:     +# Clear partition table
+I, [2020-02-11T00:06:41.216742 #479146]  INFO -- deploy-centos-8:     +clearpart --initlabel --drives=sda --all
+I, [2020-02-11T00:06:41.216783 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.216824 #479146]  INFO -- deploy-centos-8:     +# Clears master boot record data, a safety step against disk corruption
+I, [2020-02-11T00:06:41.216878 #479146]  INFO -- deploy-centos-8:     +zerombr
+I, [2020-02-11T00:06:41.216931 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.216983 #479146]  INFO -- deploy-centos-8:     +# Install boot loader (grub2) on boot drive's master boot record
+I, [2020-02-11T00:06:41.217036 #479146]  INFO -- deploy-centos-8:     +# Append options to not patch for SPECTRE and MELTDOWN (home network only)
+I, [2020-02-11T00:06:41.217083 #479146]  INFO -- deploy-centos-8:     +bootloader --location=mbr --driveorder=sda --append="nopti noibrs noibpb"
+I, [2020-02-11T00:06:41.217131 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.217190 #479146]  INFO -- deploy-centos-8:     +# Create a BIOS partition for booting on non-EFI systems
+I, [2020-02-11T00:06:41.217288 #479146]  INFO -- deploy-centos-8:     +#part biosboot --fstype=biosboot --ondisk=sda --size=1 
+I, [2020-02-11T00:06:41.217401 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.217500 #479146]  INFO -- deploy-centos-8:     +# Create a partition to store boot kernels, initrd and config files
+I, [2020-02-11T00:06:41.217576 #479146]  INFO -- deploy-centos-8:     +part /boot --fstype=ext4 --asprimary --fsoptions="defaults,relatime,nodiratime,nodev,nosuid,noexec" --size=1024 --ondisk=sda 
+I, [2020-02-11T00:06:41.217607 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.217632 #479146]  INFO -- deploy-centos-8:     +# Create a minimal swap partition. We don't expect to use it.
+I, [2020-02-11T00:06:41.217676 #479146]  INFO -- deploy-centos-8:     +part swap --asprimary --size=2048 --ondisk=sda 
+I, [2020-02-11T00:06:41.217700 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.217722 #479146]  INFO -- deploy-centos-8:     +# Create an LVM2 physical volume. Must use syntax 'pv.01'
+I, [2020-02-11T00:06:41.217745 #479146]  INFO -- deploy-centos-8:     +part pv.01 --grow --size=1 --ondisk=sda 
+I, [2020-02-11T00:06:41.217799 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.217839 #479146]  INFO -- deploy-centos-8:     +# Create an LVM2 volume group for the root OS filesystem
+I, [2020-02-11T00:06:41.217870 #479146]  INFO -- deploy-centos-8:     +volgroup vg_linuxos pv.01
+I, [2020-02-11T00:06:41.217896 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.217919 #479146]  INFO -- deploy-centos-8:     +logvol / --vgname=lv_home --size=24576 --name=lv_root --label=root --fstype=ext4 --grow --fsoptions=defaults,relatime,nodiratime
+I, [2020-02-11T00:06:41.217946 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.217985 #479146]  INFO -- deploy-centos-8:     +logvol /var --vgname=lv_home --size=24576 --name=lv_var.log --label=var.log --fstype=ext4 --fsoptions='defaults,relatime,nodiratime,nodev,nosuid,noexec' --mkfsoptions='-m 1'
+I, [2020-02-11T00:06:41.218017 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.218047 #479146]  INFO -- deploy-centos-8:     +logvol /var/log --vgname=lv_home --size=8192 --name=lv_var.log --label=var.log --fstype=ext4 --fsoptions='defaults,relatime,nodiratime,nodev,nosuid,noexec' --mkfsoptions='-m 1'
+I, [2020-02-11T00:06:41.218070 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.218093 #479146]  INFO -- deploy-centos-8:     +# Set timezone to either UTC (production) or local (development)
+I, [2020-02-11T00:06:41.218115 #479146]  INFO -- deploy-centos-8:     +timezone America/Denver --utc --ntpservers=192.168.9.100
+I, [2020-02-11T00:06:41.218143 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.218167 #479146]  INFO -- deploy-centos-8:     +# Configure authorization details
+I, [2020-02-11T00:06:41.218188 #479146]  INFO -- deploy-centos-8:     +authconfig --enableshadow --passalgo=sha512
+I, [2020-02-11T00:06:41.218233 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.218285 #479146]  INFO -- deploy-centos-8:     +# Enable/disble SELinux security systems
+I, [2020-02-11T00:06:41.218320 #479146]  INFO -- deploy-centos-8:     +selinux --permissive 
+I, [2020-02-11T00:06:41.218355 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.218390 #479146]  INFO -- deploy-centos-8:     +# Enable/disable Firewall
+I, [2020-02-11T00:06:41.218436 #479146]  INFO -- deploy-centos-8:     +firewall 
+I, [2020-02-11T00:06:41.218471 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.218526 #479146]  INFO -- deploy-centos-8:     +# Reboot system after OS installation is complete.
+I, [2020-02-11T00:06:41.218608 #479146]  INFO -- deploy-centos-8:     +# This works well on systems where the system reverts to boot to disk after
+I, [2020-02-11T00:06:41.218702 #479146]  INFO -- deploy-centos-8:     +# a single attempt to perform a network/PXE boot
+I, [2020-02-11T00:06:41.218808 #479146]  INFO -- deploy-centos-8:     +#reboot
+I, [2020-02-11T00:06:41.218985 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.219113 #479146]  INFO -- deploy-centos-8:     +skipx
+I, [2020-02-11T00:06:41.219165 #479146]  INFO -- deploy-centos-8:     +eula --agree
+I, [2020-02-11T00:06:41.219306 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.219472 #479146]  INFO -- deploy-centos-8:     +%packages
+I, [2020-02-11T00:06:41.219599 #479146]  INFO -- deploy-centos-8:     +@core
+I, [2020-02-11T00:06:41.219728 #479146]  INFO -- deploy-centos-8:     +authconfig
+I, [2020-02-11T00:06:41.219934 #479146]  INFO -- deploy-centos-8:     +bc
+I, [2020-02-11T00:06:41.220134 #479146]  INFO -- deploy-centos-8:     +wget
+I, [2020-02-11T00:06:41.220928 #479146]  INFO -- deploy-centos-8:     +nc
+I, [2020-02-11T00:06:41.221327 #479146]  INFO -- deploy-centos-8:     +net-tools
+I, [2020-02-11T00:06:41.221616 #479146]  INFO -- deploy-centos-8:     +bzip2
+I, [2020-02-11T00:06:41.221845 #479146]  INFO -- deploy-centos-8:     +bind-utils
+I, [2020-02-11T00:06:41.222061 #479146]  INFO -- deploy-centos-8:     +vim
+I, [2020-02-11T00:06:41.222273 #479146]  INFO -- deploy-centos-8:     +%end
+I, [2020-02-11T00:06:41.222521 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.222728 #479146]  INFO -- deploy-centos-8:     +%addon com_redhat_kdump --disable
+I, [2020-02-11T00:06:41.230536 #479146]  INFO -- deploy-centos-8:     +%end
+I, [2020-02-11T00:06:41.230706 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:41.230812 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:41.252264 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:41.255814 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:41.278347 #479146]  INFO -- deploy-centos-8:   * execute[copy-ks-file] action run
+I, [2020-02-11T00:06:41.278456 #479146]  INFO -- deploy-centos-8:     - execute cp -p /repo/kickstart/build/stubs/centos/stub-centos-8.1905-XL.ks /repo/kickstart/centos/ks-centos-8.1905-XL.ks
+I, [2020-02-11T00:06:41.315490 #479146]  INFO -- deploy-centos-8:   * execute[include-file-kickstart-rootpw-maxlab.txt] action run
+I, [2020-02-11T00:06:41.315824 #479146]  INFO -- deploy-centos-8:     - execute if [[ -f /repo/kickstart/build/passwords/centos/kickstart-rootpw-maxlab.txt ]]; then cat /repo/kickstart/build/passwords/centos/kickstart-rootpw-maxlab.txt >> /repo/kickstart/centos/ks-centos-8.1905-XL.ks; fi
+I, [2020-02-11T00:06:41.344302 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/scripts/centos/script-rhel7-static-hostname] action create (up to date)
+I, [2020-02-11T00:06:41.377524 #479146]  INFO -- deploy-centos-8:   * execute[static-hostname] action run
+I, [2020-02-11T00:06:41.377617 #479146]  INFO -- deploy-centos-8:     - execute cat /repo/kickstart/build/scripts/centos/script-rhel7-static-hostname >> /repo/kickstart/centos/ks-centos-8.1905-XL.ks
+I, [2020-02-11T00:06:41.445297 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/scripts/centos/script-rhel-static-ipv4] action create (up to date)
+I, [2020-02-11T00:06:41.482775 #479146]  INFO -- deploy-centos-8:   * execute[static-ipv4] action run
+I, [2020-02-11T00:06:41.482871 #479146]  INFO -- deploy-centos-8:     - execute cat /repo/kickstart/build/scripts/centos/script-rhel-static-ipv4 >> /repo/kickstart/centos/ks-centos-8.1905-XL.ks
+I, [2020-02-11T00:06:41.514154 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/scripts/centos/script-rhel-yum-update] action create (up to date)
+I, [2020-02-11T00:06:41.543880 #479146]  INFO -- deploy-centos-8:   * execute[yum-update] action run
+I, [2020-02-11T00:06:41.544006 #479146]  INFO -- deploy-centos-8:     - execute cat /repo/kickstart/build/scripts/centos/script-rhel-yum-update >> /repo/kickstart/centos/ks-centos-8.1905-XL.ks
+I, [2020-02-11T00:06:41.556496 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart] action create (up to date)
+I, [2020-02-11T00:06:41.566224 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart/centos] action create (up to date)
+I, [2020-02-11T00:06:41.582135 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart/build/scripts] action create (up to date)
+I, [2020-02-11T00:06:41.595421 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart/build/scripts/centos] action create (up to date)
+I, [2020-02-11T00:06:41.611991 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart/build/stubs] action create (up to date)
+I, [2020-02-11T00:06:41.623699 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart/build/stubs/centos] action create (up to date)
+I, [2020-02-11T00:06:41.656530 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart/build/passwords/centos] action create (up to date)
+I, [2020-02-11T00:06:41.675855 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/stubs/centos/stub-centos-7.1908-base.ks] action create
+I, [2020-02-11T00:06:41.679625 #479146]  INFO -- deploy-centos-8:     - create new file /repo/kickstart/build/stubs/centos/stub-centos-7.1908-base.ks
+I, [2020-02-11T00:06:41.679760 #479146]  INFO -- deploy-centos-8:     - update content in file /repo/kickstart/build/stubs/centos/stub-centos-7.1908-base.ks from none to c1de74
+I, [2020-02-11T00:06:41.679820 #479146]  INFO -- deploy-centos-8:     --- /repo/kickstart/build/stubs/centos/stub-centos-7.1908-base.ks	2020-02-11 07:06:43.455723121 +0000
+I, [2020-02-11T00:06:41.679860 #479146]  INFO -- deploy-centos-8:     +++ /repo/kickstart/build/stubs/centos/.chef-stub-centos-720200211-4419-m2opga.1908-base.ks	2020-02-11 07:06:43.455723121 +0000
+I, [2020-02-11T00:06:41.679897 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,87 @@
+I, [2020-02-11T00:06:41.679940 #479146]  INFO -- deploy-centos-8:     +# ks-centos8 - (Centos/Rhel) THIS FILE DEPLOYED VIA CHEF - DO NOT MODIFY
+I, [2020-02-11T00:06:41.679992 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:41.680028 #479146]  INFO -- deploy-centos-8:     +# Kickstart file for Centos/Redhat Linux 8.x
+I, [2020-02-11T00:06:41.680062 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:41.680097 #479146]  INFO -- deploy-centos-8:     +# 2019-11-27 Generated via Chef templates
+I, [2020-02-11T00:06:41.680131 #479146]  INFO -- deploy-centos-8:     +# 2019-10-26 Draft for home lab use
+I, [2020-02-11T00:06:41.680169 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.680235 #479146]  INFO -- deploy-centos-8:     +install
+I, [2020-02-11T00:06:41.680288 #479146]  INFO -- deploy-centos-8:     +text
+I, [2020-02-11T00:06:41.680330 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.680371 #479146]  INFO -- deploy-centos-8:     +# Initialize the network device using dhcp. We don't need IPV6 in my home lab
+I, [2020-02-11T00:06:41.680415 #479146]  INFO -- deploy-centos-8:     +network --bootproto dhcp --noipv6
+I, [2020-02-11T00:06:41.680456 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.680509 #479146]  INFO -- deploy-centos-8:     +# Get rpm packages from this repository
+I, [2020-02-11T00:06:41.680597 #479146]  INFO -- deploy-centos-8:     +url --url=http://repo.maxlab/dist/centos/CentOS-7-x86_64-DVD-1908
+I, [2020-02-11T00:06:41.680692 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.680762 #479146]  INFO -- deploy-centos-8:     +# Let's use the English language and keyboard settings
+I, [2020-02-11T00:06:41.680838 #479146]  INFO -- deploy-centos-8:     +lang en_US
+I, [2020-02-11T00:06:41.680920 #479146]  INFO -- deploy-centos-8:     +keyboard us
+I, [2020-02-11T00:06:41.680983 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.681052 #479146]  INFO -- deploy-centos-8:     +# Hopefully not touch anything else
+I, [2020-02-11T00:06:41.681104 #479146]  INFO -- deploy-centos-8:     +ignoredisk --only-use=sda
+I, [2020-02-11T00:06:41.681150 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.681198 #479146]  INFO -- deploy-centos-8:     +# Clear partition table
+I, [2020-02-11T00:06:41.681269 #479146]  INFO -- deploy-centos-8:     +clearpart --initlabel --drives=sda --all
+I, [2020-02-11T00:06:41.681312 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.681359 #479146]  INFO -- deploy-centos-8:     +# Clears master boot record data, a safety step against disk corruption
+I, [2020-02-11T00:06:41.681405 #479146]  INFO -- deploy-centos-8:     +zerombr
+I, [2020-02-11T00:06:41.681462 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.681535 #479146]  INFO -- deploy-centos-8:     +# Install boot loader (grub2) on boot drive's master boot record
+I, [2020-02-11T00:06:41.681604 #479146]  INFO -- deploy-centos-8:     +# Append options to not patch for SPECTRE and MELTDOWN (home network only)
+I, [2020-02-11T00:06:41.681667 #479146]  INFO -- deploy-centos-8:     +bootloader --location=mbr --driveorder=sda --append="nopti noibrs noibpb"
+I, [2020-02-11T00:06:41.681702 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.681727 #479146]  INFO -- deploy-centos-8:     +# Create a BIOS partition for booting on non-EFI systems
+I, [2020-02-11T00:06:41.681751 #479146]  INFO -- deploy-centos-8:     +#part biosboot --fstype=biosboot --ondisk=sda --size=1 
+I, [2020-02-11T00:06:41.681775 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.681798 #479146]  INFO -- deploy-centos-8:     +# Create a partition to store boot kernels, initrd and config files
+I, [2020-02-11T00:06:41.681828 #479146]  INFO -- deploy-centos-8:     +part /boot --fstype=ext4 --asprimary --fsoptions="defaults,relatime,nodiratime,nodev,nosuid,noexec" --size=1024 --ondisk=sda 
+I, [2020-02-11T00:06:41.681886 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.681931 #479146]  INFO -- deploy-centos-8:     +# Create a minimal swap partition. We don't expect to use it.
+I, [2020-02-11T00:06:41.681960 #479146]  INFO -- deploy-centos-8:     +part swap --asprimary --size=2048 --ondisk=sda 
+I, [2020-02-11T00:06:41.682011 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.682051 #479146]  INFO -- deploy-centos-8:     +# Create an LVM2 physical volume. Must use syntax 'pv.01'
+I, [2020-02-11T00:06:41.682110 #479146]  INFO -- deploy-centos-8:     +part pv.01 --grow --size=1 --ondisk=sda 
+I, [2020-02-11T00:06:41.682291 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.682514 #479146]  INFO -- deploy-centos-8:     +# Create an LVM2 volume group for the root OS filesystem
+I, [2020-02-11T00:06:41.682704 #479146]  INFO -- deploy-centos-8:     +volgroup vg_linuxos pv.01
+I, [2020-02-11T00:06:41.682867 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.683035 #479146]  INFO -- deploy-centos-8:     +logvol / --vgname=vg_linuxos --size=2048 --name=lv_root --label=root --fstype=ext4 --grow --fsoptions=defaults,relatime,nodiratime
+I, [2020-02-11T00:06:41.683264 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.683558 #479146]  INFO -- deploy-centos-8:     +logvol /var/log --vgname=vg_linuxos --size=2048 --name=lv_var.log --label=var.log --fstype=ext4 --fsoptions='defaults,relatime,nodiratime,nodev,nosuid,noexec' --mkfsoptions='-m 1'
+I, [2020-02-11T00:06:41.683799 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.683879 #479146]  INFO -- deploy-centos-8:     +# Set timezone to either UTC (production) or local (development)
+I, [2020-02-11T00:06:41.683942 #479146]  INFO -- deploy-centos-8:     +timezone America/Denver --utc --ntpservers=192.168.9.100
+I, [2020-02-11T00:06:41.684004 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.684050 #479146]  INFO -- deploy-centos-8:     +# Configure authorization details
+I, [2020-02-11T00:06:41.684097 #479146]  INFO -- deploy-centos-8:     +authconfig --enableshadow --passalgo=sha512
+I, [2020-02-11T00:06:41.684143 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.684186 #479146]  INFO -- deploy-centos-8:     +# Enable/disble SELinux security systems
+I, [2020-02-11T00:06:41.684250 #479146]  INFO -- deploy-centos-8:     +selinux --permissive 
+I, [2020-02-11T00:06:41.684293 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.684321 #479146]  INFO -- deploy-centos-8:     +# Enable/disable Firewall
+I, [2020-02-11T00:06:41.684363 #479146]  INFO -- deploy-centos-8:     +firewall 
+I, [2020-02-11T00:06:41.684407 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.684468 #479146]  INFO -- deploy-centos-8:     +# Reboot system after OS installation is complete.
+I, [2020-02-11T00:06:41.684531 #479146]  INFO -- deploy-centos-8:     +# This works well on systems where the system reverts to boot to disk after
+I, [2020-02-11T00:06:41.684585 #479146]  INFO -- deploy-centos-8:     +# a single attempt to perform a network/PXE boot
+I, [2020-02-11T00:06:41.684634 #479146]  INFO -- deploy-centos-8:     +#reboot
+I, [2020-02-11T00:06:41.684710 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.684824 #479146]  INFO -- deploy-centos-8:     +skipx
+I, [2020-02-11T00:06:41.684924 #479146]  INFO -- deploy-centos-8:     +eula --agree
+I, [2020-02-11T00:06:41.685043 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.685172 #479146]  INFO -- deploy-centos-8:     +%packages
+I, [2020-02-11T00:06:41.685401 #479146]  INFO -- deploy-centos-8:     +@core
+I, [2020-02-11T00:06:41.685550 #479146]  INFO -- deploy-centos-8:     +authconfig
+I, [2020-02-11T00:06:41.685722 #479146]  INFO -- deploy-centos-8:     +bc
+I, [2020-02-11T00:06:41.685952 #479146]  INFO -- deploy-centos-8:     +wget
+I, [2020-02-11T00:06:41.686191 #479146]  INFO -- deploy-centos-8:     +nc
+I, [2020-02-11T00:06:41.686448 #479146]  INFO -- deploy-centos-8:     +net-tools
+I, [2020-02-11T00:06:41.686628 #479146]  INFO -- deploy-centos-8:     +bzip2
+I, [2020-02-11T00:06:41.686815 #479146]  INFO -- deploy-centos-8:     +bind-utils
+I, [2020-02-11T00:06:41.686965 #479146]  INFO -- deploy-centos-8:     +vim
+I, [2020-02-11T00:06:41.687106 #479146]  INFO -- deploy-centos-8:     +%end
+I, [2020-02-11T00:06:41.687868 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:41.688189 #479146]  INFO -- deploy-centos-8:     +%addon com_redhat_kdump --disable
+I, [2020-02-11T00:06:41.695309 #479146]  INFO -- deploy-centos-8:     +%end
+I, [2020-02-11T00:06:41.695393 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:41.695438 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:41.720764 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:41.728372 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:41.750085 #479146]  INFO -- deploy-centos-8:   * execute[copy-ks-file] action run
+I, [2020-02-11T00:06:41.750226 #479146]  INFO -- deploy-centos-8:     - execute cp -p /repo/kickstart/build/stubs/centos/stub-centos-7.1908-base.ks /repo/kickstart/centos/ks-centos-7.1908-base.ks
+I, [2020-02-11T00:06:41.787189 #479146]  INFO -- deploy-centos-8:   * execute[include-file-kickstart-rootpw-maxlab.txt] action run
+I, [2020-02-11T00:06:41.787708 #479146]  INFO -- deploy-centos-8:     - execute if [[ -f /repo/kickstart/build/passwords/centos/kickstart-rootpw-maxlab.txt ]]; then cat /repo/kickstart/build/passwords/centos/kickstart-rootpw-maxlab.txt >> /repo/kickstart/centos/ks-centos-7.1908-base.ks; fi
+I, [2020-02-11T00:06:41.812815 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/scripts/centos/script-rhel7-static-hostname] action create (up to date)
+I, [2020-02-11T00:06:41.859601 #479146]  INFO -- deploy-centos-8:   * execute[static-hostname] action run
+I, [2020-02-11T00:06:41.860057 #479146]  INFO -- deploy-centos-8:     - execute cat /repo/kickstart/build/scripts/centos/script-rhel7-static-hostname >> /repo/kickstart/centos/ks-centos-7.1908-base.ks
+I, [2020-02-11T00:06:41.880021 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/scripts/centos/script-rhel-static-ipv4] action create (up to date)
+I, [2020-02-11T00:06:41.920990 #479146]  INFO -- deploy-centos-8:   * execute[static-ipv4] action run
+I, [2020-02-11T00:06:41.921531 #479146]  INFO -- deploy-centos-8:     - execute cat /repo/kickstart/build/scripts/centos/script-rhel-static-ipv4 >> /repo/kickstart/centos/ks-centos-7.1908-base.ks
+I, [2020-02-11T00:06:41.947776 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/scripts/centos/script-rhel-yum-update] action create (up to date)
+I, [2020-02-11T00:06:41.976457 #479146]  INFO -- deploy-centos-8:   * execute[yum-update] action run
+I, [2020-02-11T00:06:41.976912 #479146]  INFO -- deploy-centos-8:     - execute cat /repo/kickstart/build/scripts/centos/script-rhel-yum-update >> /repo/kickstart/centos/ks-centos-7.1908-base.ks
+I, [2020-02-11T00:06:41.989766 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart] action create (up to date)
+I, [2020-02-11T00:06:41.994975 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart/rhel] action create
+I, [2020-02-11T00:06:42.001685 #479146]  INFO -- deploy-centos-8:     - create new directory /repo/kickstart/rhel
+I, [2020-02-11T00:06:42.002116 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:42.002534 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:42.028986 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:42.031926 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:42.044894 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart/build/scripts] action create (up to date)
+I, [2020-02-11T00:06:42.048545 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart/build/scripts/rhel] action create
+I, [2020-02-11T00:06:42.061042 #479146]  INFO -- deploy-centos-8:     - create new directory /repo/kickstart/build/scripts/rhel
+I, [2020-02-11T00:06:42.061223 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:42.061290 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:42.086956 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:42.092603 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:42.101296 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart/build/stubs] action create (up to date)
+I, [2020-02-11T00:06:42.106810 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart/build/stubs/rhel] action create
+I, [2020-02-11T00:06:42.116433 #479146]  INFO -- deploy-centos-8:     - create new directory /repo/kickstart/build/stubs/rhel
+I, [2020-02-11T00:06:42.116572 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:42.116639 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:42.144669 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:42.151020 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:42.166295 #479146]  INFO -- deploy-centos-8:   * directory[/repo/kickstart/build/passwords/rhel] action create
+I, [2020-02-11T00:06:42.200592 #479146]  INFO -- deploy-centos-8:     - create new directory /repo/kickstart/build/passwords/rhel
+I, [2020-02-11T00:06:42.200754 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:42.200862 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:42.228515 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:42.247894 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:42.277923 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/stubs/rhel/stub-rhel-8.1-base.ks] action create
+I, [2020-02-11T00:06:42.285183 #479146]  INFO -- deploy-centos-8:     - create new file /repo/kickstart/build/stubs/rhel/stub-rhel-8.1-base.ks
+I, [2020-02-11T00:06:42.285370 #479146]  INFO -- deploy-centos-8:     - update content in file /repo/kickstart/build/stubs/rhel/stub-rhel-8.1-base.ks from none to a8fd96
+I, [2020-02-11T00:06:42.285445 #479146]  INFO -- deploy-centos-8:     --- /repo/kickstart/build/stubs/rhel/stub-rhel-8.1-base.ks	2020-02-11 07:06:44.082737288 +0000
+I, [2020-02-11T00:06:42.285495 #479146]  INFO -- deploy-centos-8:     +++ /repo/kickstart/build/stubs/rhel/.chef-stub-rhel-820200211-4419-1ket2hb.1-base.ks	2020-02-11 07:06:44.082737288 +0000
+I, [2020-02-11T00:06:42.285540 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,87 @@
+I, [2020-02-11T00:06:42.285582 #479146]  INFO -- deploy-centos-8:     +# ks-centos8 - (Centos/Rhel) THIS FILE DEPLOYED VIA CHEF - DO NOT MODIFY
+I, [2020-02-11T00:06:42.285625 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:42.285672 #479146]  INFO -- deploy-centos-8:     +# Kickstart file for Centos/Redhat Linux 8.x
+I, [2020-02-11T00:06:42.285719 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:42.285759 #479146]  INFO -- deploy-centos-8:     +# 2019-11-27 Generated via Chef templates
+I, [2020-02-11T00:06:42.285802 #479146]  INFO -- deploy-centos-8:     +# 2019-10-26 Draft for home lab use
+I, [2020-02-11T00:06:42.285844 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.285888 #479146]  INFO -- deploy-centos-8:     +install
+I, [2020-02-11T00:06:42.285931 #479146]  INFO -- deploy-centos-8:     +text
+I, [2020-02-11T00:06:42.285974 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.286020 #479146]  INFO -- deploy-centos-8:     +# Initialize the network device using dhcp. We don't need IPV6 in my home lab
+I, [2020-02-11T00:06:42.286071 #479146]  INFO -- deploy-centos-8:     +network --bootproto dhcp --noipv6
+I, [2020-02-11T00:06:42.286117 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.286168 #479146]  INFO -- deploy-centos-8:     +# Get rpm packages from this repository
+I, [2020-02-11T00:06:42.286233 #479146]  INFO -- deploy-centos-8:     +url --url=http://repo.maxlab/dist/rhel/rhel-8.1-x86_64-dvd
+I, [2020-02-11T00:06:42.286309 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.286358 #479146]  INFO -- deploy-centos-8:     +# Let's use the English language and keyboard settings
+I, [2020-02-11T00:06:42.286411 #479146]  INFO -- deploy-centos-8:     +lang en_US
+I, [2020-02-11T00:06:42.286461 #479146]  INFO -- deploy-centos-8:     +keyboard us
+I, [2020-02-11T00:06:42.286512 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.286563 #479146]  INFO -- deploy-centos-8:     +# Hopefully not touch anything else
+I, [2020-02-11T00:06:42.286609 #479146]  INFO -- deploy-centos-8:     +ignoredisk --only-use=sda
+I, [2020-02-11T00:06:42.286653 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.286702 #479146]  INFO -- deploy-centos-8:     +# Clear partition table
+I, [2020-02-11T00:06:42.286755 #479146]  INFO -- deploy-centos-8:     +clearpart --initlabel --drives=sda --all
+I, [2020-02-11T00:06:42.286807 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.286851 #479146]  INFO -- deploy-centos-8:     +# Clears master boot record data, a safety step against disk corruption
+I, [2020-02-11T00:06:42.286893 #479146]  INFO -- deploy-centos-8:     +zerombr
+I, [2020-02-11T00:06:42.286937 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.286981 #479146]  INFO -- deploy-centos-8:     +# Install boot loader (grub2) on boot drive's master boot record
+I, [2020-02-11T00:06:42.287034 #479146]  INFO -- deploy-centos-8:     +# Append options to not patch for SPECTRE and MELTDOWN (home network only)
+I, [2020-02-11T00:06:42.287082 #479146]  INFO -- deploy-centos-8:     +bootloader --location=mbr --driveorder=sda --append="nopti noibrs noibpb"
+I, [2020-02-11T00:06:42.287130 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.287183 #479146]  INFO -- deploy-centos-8:     +# Create a BIOS partition for booting on non-EFI systems
+I, [2020-02-11T00:06:42.287247 #479146]  INFO -- deploy-centos-8:     +#part biosboot --fstype=biosboot --ondisk=sda --size=1 
+I, [2020-02-11T00:06:42.287294 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.287345 #479146]  INFO -- deploy-centos-8:     +# Create a partition to store boot kernels, initrd and config files
+I, [2020-02-11T00:06:42.287396 #479146]  INFO -- deploy-centos-8:     +part /boot --fstype=ext4 --asprimary --fsoptions="defaults,relatime,nodiratime,nodev,nosuid,noexec" --size=1024 --ondisk=sda 
+I, [2020-02-11T00:06:42.287467 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.287553 #479146]  INFO -- deploy-centos-8:     +# Create a minimal swap partition. We don't expect to use it.
+I, [2020-02-11T00:06:42.287655 #479146]  INFO -- deploy-centos-8:     +part swap --asprimary --size=2048 --ondisk=sda 
+I, [2020-02-11T00:06:42.287754 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.287864 #479146]  INFO -- deploy-centos-8:     +# Create an LVM2 physical volume. Must use syntax 'pv.01'
+I, [2020-02-11T00:06:42.287986 #479146]  INFO -- deploy-centos-8:     +part pv.01 --grow --size=1 --ondisk=sda 
+I, [2020-02-11T00:06:42.288193 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.288534 #479146]  INFO -- deploy-centos-8:     +# Create an LVM2 volume group for the root OS filesystem
+I, [2020-02-11T00:06:42.288725 #479146]  INFO -- deploy-centos-8:     +volgroup vg_linuxos pv.01
+I, [2020-02-11T00:06:42.288911 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.289057 #479146]  INFO -- deploy-centos-8:     +logvol / --vgname=lv_root --size=2048 --name=lv_root --label=root --fstype=ext4 --grow --fsoptions=defaults,relatime,nodiratime
+I, [2020-02-11T00:06:42.289269 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.289462 #479146]  INFO -- deploy-centos-8:     +logvol /var/log --vgname=lv_var_log --size=2048 --name=lv_var.log --label=var.log --fstype=ext4 --fsoptions='defaults,relatime,nodiratime,nodev,nosuid,noexec' --mkfsoptions='-m 1'
+I, [2020-02-11T00:06:42.289621 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.289829 #479146]  INFO -- deploy-centos-8:     +# Set timezone to either UTC (production) or local (development)
+I, [2020-02-11T00:06:42.290042 #479146]  INFO -- deploy-centos-8:     +timezone America/Denver --utc --ntpservers=192.168.9.100
+I, [2020-02-11T00:06:42.290267 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.290460 #479146]  INFO -- deploy-centos-8:     +# Configure authorization details
+I, [2020-02-11T00:06:42.290651 #479146]  INFO -- deploy-centos-8:     +authconfig --enableshadow --passalgo=sha512
+I, [2020-02-11T00:06:42.290801 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.290945 #479146]  INFO -- deploy-centos-8:     +# Enable/disble SELinux security systems
+I, [2020-02-11T00:06:42.291061 #479146]  INFO -- deploy-centos-8:     +selinux --permissive 
+I, [2020-02-11T00:06:42.291113 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.291162 #479146]  INFO -- deploy-centos-8:     +# Enable/disable Firewall
+I, [2020-02-11T00:06:42.291253 #479146]  INFO -- deploy-centos-8:     +firewall 
+I, [2020-02-11T00:06:42.291317 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.291377 #479146]  INFO -- deploy-centos-8:     +# Reboot system after OS installation is complete.
+I, [2020-02-11T00:06:42.291436 #479146]  INFO -- deploy-centos-8:     +# This works well on systems where the system reverts to boot to disk after
+I, [2020-02-11T00:06:42.291496 #479146]  INFO -- deploy-centos-8:     +# a single attempt to perform a network/PXE boot
+I, [2020-02-11T00:06:42.291555 #479146]  INFO -- deploy-centos-8:     +#reboot
+I, [2020-02-11T00:06:42.291621 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.291668 #479146]  INFO -- deploy-centos-8:     +skipx
+I, [2020-02-11T00:06:42.291727 #479146]  INFO -- deploy-centos-8:     +eula --agree
+I, [2020-02-11T00:06:42.291784 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.291832 #479146]  INFO -- deploy-centos-8:     +%packages
+I, [2020-02-11T00:06:42.291893 #479146]  INFO -- deploy-centos-8:     +@core
+I, [2020-02-11T00:06:42.291938 #479146]  INFO -- deploy-centos-8:     +authconfig
+I, [2020-02-11T00:06:42.291996 #479146]  INFO -- deploy-centos-8:     +bc
+I, [2020-02-11T00:06:42.292047 #479146]  INFO -- deploy-centos-8:     +wget
+I, [2020-02-11T00:06:42.292108 #479146]  INFO -- deploy-centos-8:     +nc
+I, [2020-02-11T00:06:42.292160 #479146]  INFO -- deploy-centos-8:     +net-tools
+I, [2020-02-11T00:06:42.292230 #479146]  INFO -- deploy-centos-8:     +bzip2
+I, [2020-02-11T00:06:42.292275 #479146]  INFO -- deploy-centos-8:     +bind-utils
+I, [2020-02-11T00:06:42.292317 #479146]  INFO -- deploy-centos-8:     +vim
+I, [2020-02-11T00:06:42.292355 #479146]  INFO -- deploy-centos-8:     +%end
+I, [2020-02-11T00:06:42.292396 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.292437 #479146]  INFO -- deploy-centos-8:     +%addon com_redhat_kdump --disable
+I, [2020-02-11T00:06:42.299287 #479146]  INFO -- deploy-centos-8:     +%end
+I, [2020-02-11T00:06:42.299409 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:42.299459 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:42.327535 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:42.332693 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:42.358565 #479146]  INFO -- deploy-centos-8:   * execute[copy-ks-file] action run
+I, [2020-02-11T00:06:42.358681 #479146]  INFO -- deploy-centos-8:     - execute cp -p /repo/kickstart/build/stubs/rhel/stub-rhel-8.1-base.ks /repo/kickstart/rhel/ks-rhel-8.1-base.ks
+I, [2020-02-11T00:06:42.394286 #479146]  INFO -- deploy-centos-8:   * execute[include-file-kickstart-rootpw-maxlab.txt] action run
+I, [2020-02-11T00:06:42.394378 #479146]  INFO -- deploy-centos-8:     - execute if [[ -f /repo/kickstart/build/passwords/rhel/kickstart-rootpw-maxlab.txt ]]; then cat /repo/kickstart/build/passwords/rhel/kickstart-rootpw-maxlab.txt >> /repo/kickstart/rhel/ks-rhel-8.1-base.ks; fi
+I, [2020-02-11T00:06:42.413585 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/scripts/rhel/script-rhel7-static-hostname] action create
+I, [2020-02-11T00:06:42.413685 #479146]  INFO -- deploy-centos-8:     - create new file /repo/kickstart/build/scripts/rhel/script-rhel7-static-hostname
+I, [2020-02-11T00:06:42.413736 #479146]  INFO -- deploy-centos-8:     - update content in file /repo/kickstart/build/scripts/rhel/script-rhel7-static-hostname from none to 63ad3d
+I, [2020-02-11T00:06:42.413787 #479146]  INFO -- deploy-centos-8:     --- /repo/kickstart/build/scripts/rhel/script-rhel7-static-hostname	2020-02-11 07:06:44.224064292 +0000
+I, [2020-02-11T00:06:42.413838 #479146]  INFO -- deploy-centos-8:     +++ /repo/kickstart/build/scripts/rhel/.chef-script-rhel7-static-hostname20200211-4419-1twwnb1	2020-02-11 07:06:44.224064292 +0000
+I, [2020-02-11T00:06:42.413890 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,15 @@
+I, [2020-02-11T00:06:42.413928 #479146]  INFO -- deploy-centos-8:     +# ---------
+I, [2020-02-11T00:06:42.413984 #479146]  INFO -- deploy-centos-8:     +# script-rhel7-static-hostname - THIS FILE DEPLOYED VIA CHEF - DO NOT MODIFY
+I, [2020-02-11T00:06:42.414064 #479146]  INFO -- deploy-centos-8:     +# ---------
+I, [2020-02-11T00:06:42.414137 #479146]  INFO -- deploy-centos-8:     +%post --nochroot --log=/mnt/sysimage/root/ks-post-hostname.log
+I, [2020-02-11T00:06:42.414284 #479146]  INFO -- deploy-centos-8:     +# Kickstart post script to set hostname from transient host 
+I, [2020-02-11T00:06:42.414361 #479146]  INFO -- deploy-centos-8:     +set -x
+I, [2020-02-11T00:06:42.414422 #479146]  INFO -- deploy-centos-8:     +HNAME=$(hostname -f)
+I, [2020-02-11T00:06:42.414487 #479146]  INFO -- deploy-centos-8:     +hostnamectl set-hostname ${HNAME}
+I, [2020-02-11T00:06:42.414538 #479146]  INFO -- deploy-centos-8:     +hostnamectl --pretty set-hostname ${HNAME}
+I, [2020-02-11T00:06:42.414583 #479146]  INFO -- deploy-centos-8:     +cp /etc/hostname /mnt/sysimage/etc/hostname
+I, [2020-02-11T00:06:42.414630 #479146]  INFO -- deploy-centos-8:     +cp /etc/machine-info /mnt/sysimage/etc/machine-info
+I, [2020-02-11T00:06:42.414673 #479146]  INFO -- deploy-centos-8:     +%end
+I, [2020-02-11T00:06:42.414708 #479146]  INFO -- deploy-centos-8:     +# ---------
+I, [2020-02-11T00:06:42.428469 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.428659 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:42.428721 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:42.456747 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:42.463597 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:42.511345 #479146]  INFO -- deploy-centos-8:   * execute[static-hostname] action run
+I, [2020-02-11T00:06:42.511448 #479146]  INFO -- deploy-centos-8:     - execute cat /repo/kickstart/build/scripts/rhel/script-rhel7-static-hostname >> /repo/kickstart/rhel/ks-rhel-8.1-base.ks
+I, [2020-02-11T00:06:42.524102 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/scripts/rhel/script-rhel-static-ipv4] action create
+I, [2020-02-11T00:06:42.524247 #479146]  INFO -- deploy-centos-8:     - create new file /repo/kickstart/build/scripts/rhel/script-rhel-static-ipv4
+I, [2020-02-11T00:06:42.524310 #479146]  INFO -- deploy-centos-8:     - update content in file /repo/kickstart/build/scripts/rhel/script-rhel-static-ipv4 from none to 064205
+I, [2020-02-11T00:06:42.524364 #479146]  INFO -- deploy-centos-8:     --- /repo/kickstart/build/scripts/rhel/script-rhel-static-ipv4	2020-02-11 07:06:44.337523999 +0000
+I, [2020-02-11T00:06:42.524411 #479146]  INFO -- deploy-centos-8:     +++ /repo/kickstart/build/scripts/rhel/.chef-script-rhel-static-ipv420200211-4419-1vs83vn	2020-02-11 07:06:44.337523999 +0000
+I, [2020-02-11T00:06:42.524454 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,68 @@
+I, [2020-02-11T00:06:42.524522 #479146]  INFO -- deploy-centos-8:     +# ---------
+I, [2020-02-11T00:06:42.524570 #479146]  INFO -- deploy-centos-8:     +# script-rhel-static-ipv4- THIS FILE DEPLOYED VIA CHEF - DO NOT MODIFY
+I, [2020-02-11T00:06:42.524626 #479146]  INFO -- deploy-centos-8:     +# ---------
+I, [2020-02-11T00:06:42.524673 #479146]  INFO -- deploy-centos-8:     +%post --log=/root/ks-post-static-ipv4.log
+I, [2020-02-11T00:06:42.524720 #479146]  INFO -- deploy-centos-8:     +cat << 'CONFIG_STATIC_NETWORK' > /root/make-static-network
+I, [2020-02-11T00:06:42.524768 #479146]  INFO -- deploy-centos-8:     +#!/bin/bash
+I, [2020-02-11T00:06:42.524819 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:42.524869 #479146]  INFO -- deploy-centos-8:     +# Replace IPv4 DHCP config with IPv4 static config
+I, [2020-02-11T00:06:42.524912 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:42.524959 #479146]  INFO -- deploy-centos-8:     +set -x
+I, [2020-02-11T00:06:42.525001 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.525059 #479146]  INFO -- deploy-centos-8:     +for EACH_FILE in /etc/sysconfig/network-scripts/ifcfg-*
+I, [2020-02-11T00:06:42.525107 #479146]  INFO -- deploy-centos-8:     +do
+I, [2020-02-11T00:06:42.525161 #479146]  INFO -- deploy-centos-8:     +  if [[ $(grep 'DEFROUTE="yes"' $EACH_FILE | wc -l) -eq 1 ]]
+I, [2020-02-11T00:06:42.525217 #479146]  INFO -- deploy-centos-8:     +  then
+I, [2020-02-11T00:06:42.525270 #479146]  INFO -- deploy-centos-8:     +    FULLNAME=$EACH_FILE
+I, [2020-02-11T00:06:42.525312 #479146]  INFO -- deploy-centos-8:     +    FILENAME=$(basename $EACH_FILE)
+I, [2020-02-11T00:06:42.525357 #479146]  INFO -- deploy-centos-8:     +    break
+I, [2020-02-11T00:06:42.525395 #479146]  INFO -- deploy-centos-8:     +  fi
+I, [2020-02-11T00:06:42.525440 #479146]  INFO -- deploy-centos-8:     +done
+I, [2020-02-11T00:06:42.525483 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.525521 #479146]  INFO -- deploy-centos-8:     +# Replace default of DHCP boot protocol with none
+I, [2020-02-11T00:06:42.525559 #479146]  INFO -- deploy-centos-8:     +sed -i 's/dhcp/none/g' $FULLNAME
+I, [2020-02-11T00:06:42.525595 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.525631 #479146]  INFO -- deploy-centos-8:     +# Remove any existing static configs of these:
+I, [2020-02-11T00:06:42.525669 #479146]  INFO -- deploy-centos-8:     +sed -i 's/IPADDR.*$//g' $FULLNAME
+I, [2020-02-11T00:06:42.525718 #479146]  INFO -- deploy-centos-8:     +sed -i 's/NETMASK.*$//g' $FULLNAME
+I, [2020-02-11T00:06:42.525761 #479146]  INFO -- deploy-centos-8:     +sed -i 's/GATEWAY.*$//g' $FULLNAME
+I, [2020-02-11T00:06:42.525805 #479146]  INFO -- deploy-centos-8:     +sed -i 's/DNS.*$//g' $FULLNAME
+I, [2020-02-11T00:06:42.525851 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.525896 #479146]  INFO -- deploy-centos-8:     +# Remove any empty lines left by the above three removals
+I, [2020-02-11T00:06:42.525945 #479146]  INFO -- deploy-centos-8:     +sed -i '/^$/d' $FULLNAME
+I, [2020-02-11T00:06:42.525986 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.526023 #479146]  INFO -- deploy-centos-8:     +INT=${FILENAME##ifcfg-}
+I, [2020-02-11T00:06:42.526062 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.526103 #479146]  INFO -- deploy-centos-8:     +ILINE=$(ifconfig $INT | grep '  inet ')
+I, [2020-02-11T00:06:42.526144 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.526189 #479146]  INFO -- deploy-centos-8:     +echo "# Static config via /root/make-static-network" >> $FULLNAME
+I, [2020-02-11T00:06:42.526247 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.526305 #479146]  INFO -- deploy-centos-8:     +IPADDR=$(echo $ILINE | awk '{print $2}')
+I, [2020-02-11T00:06:42.526350 #479146]  INFO -- deploy-centos-8:     +echo "IPADDR=\"$IPADDR\"" >> $FULLNAME
+I, [2020-02-11T00:06:42.526394 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.526442 #479146]  INFO -- deploy-centos-8:     +NETMASK=$(echo $ILINE | awk '{print $4}')
+I, [2020-02-11T00:06:42.526510 #479146]  INFO -- deploy-centos-8:     +echo "NETMASK=\"$NETMASK\"" >> $FULLNAME
+I, [2020-02-11T00:06:42.526558 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.526605 #479146]  INFO -- deploy-centos-8:     +GATEWAY=$(ip -4 route | egrep '^default' | awk '{print $3}')
+I, [2020-02-11T00:06:42.526651 #479146]  INFO -- deploy-centos-8:     +echo "GATEWAY=\"$GATEWAY\"" >> $FULLNAME
+I, [2020-02-11T00:06:42.526722 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.526906 #479146]  INFO -- deploy-centos-8:     +DNSCOUNT=0
+I, [2020-02-11T00:06:42.527170 #479146]  INFO -- deploy-centos-8:     +grep '^nameserver' /etc/resolv.conf | while read LINE
+I, [2020-02-11T00:06:42.527572 #479146]  INFO -- deploy-centos-8:     +do
+I, [2020-02-11T00:06:42.527921 #479146]  INFO -- deploy-centos-8:     +  let DNSCOUNT+=1
+I, [2020-02-11T00:06:42.528291 #479146]  INFO -- deploy-centos-8:     +  DNS=$(echo $LINE | awk '{print $2}')
+I, [2020-02-11T00:06:42.528440 #479146]  INFO -- deploy-centos-8:     +  echo "DNS${DNSCOUNT}=$DNS" >> $FULLNAME
+I, [2020-02-11T00:06:42.528494 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.528538 #479146]  INFO -- deploy-centos-8:     +  if [[ $DNSCOUNT == 3 ]]
+I, [2020-02-11T00:06:42.528585 #479146]  INFO -- deploy-centos-8:     +  then
+I, [2020-02-11T00:06:42.528627 #479146]  INFO -- deploy-centos-8:     +    break
+I, [2020-02-11T00:06:42.528678 #479146]  INFO -- deploy-centos-8:     +  fi
+I, [2020-02-11T00:06:42.528722 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.528762 #479146]  INFO -- deploy-centos-8:     +done
+I, [2020-02-11T00:06:42.528804 #479146]  INFO -- deploy-centos-8:     +CONFIG_STATIC_NETWORK
+I, [2020-02-11T00:06:42.528848 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.528892 #479146]  INFO -- deploy-centos-8:     +. /root/make-static-network >> /root/ks-post-static-ipv4.log
+I, [2020-02-11T00:06:42.528955 #479146]  INFO -- deploy-centos-8:     +%end
+I, [2020-02-11T00:06:42.528999 #479146]  INFO -- deploy-centos-8:     +# ---------
+I, [2020-02-11T00:06:42.533045 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.533171 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:42.533232 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:42.561282 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:42.566058 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:42.601929 #479146]  INFO -- deploy-centos-8:   * execute[static-ipv4] action run
+I, [2020-02-11T00:06:42.602024 #479146]  INFO -- deploy-centos-8:     - execute cat /repo/kickstart/build/scripts/rhel/script-rhel-static-ipv4 >> /repo/kickstart/rhel/ks-rhel-8.1-base.ks
+I, [2020-02-11T00:06:42.630271 #479146]  INFO -- deploy-centos-8:   * template[/repo/kickstart/build/scripts/rhel/script-rhel-yum-update] action create
+I, [2020-02-11T00:06:42.630369 #479146]  INFO -- deploy-centos-8:     - create new file /repo/kickstart/build/scripts/rhel/script-rhel-yum-update
+I, [2020-02-11T00:06:42.630416 #479146]  INFO -- deploy-centos-8:     - update content in file /repo/kickstart/build/scripts/rhel/script-rhel-yum-update from none to 583ab2
+I, [2020-02-11T00:06:42.630449 #479146]  INFO -- deploy-centos-8:     --- /repo/kickstart/build/scripts/rhel/script-rhel-yum-update	2020-02-11 07:06:44.447002663 +0000
+I, [2020-02-11T00:06:42.630513 #479146]  INFO -- deploy-centos-8:     +++ /repo/kickstart/build/scripts/rhel/.chef-script-rhel-yum-update20200211-4419-4jcpj4	2020-02-11 07:06:44.447002663 +0000
+I, [2020-02-11T00:06:42.630540 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,11 @@
+I, [2020-02-11T00:06:42.630563 #479146]  INFO -- deploy-centos-8:     +# ---------
+I, [2020-02-11T00:06:42.630586 #479146]  INFO -- deploy-centos-8:     +# script-rhel7-yum-update - THIS FILE DEPLOYED VIA CHEF - DO NOT MODIFY
+I, [2020-02-11T00:06:42.630621 #479146]  INFO -- deploy-centos-8:     +# ---------
+I, [2020-02-11T00:06:42.630645 #479146]  INFO -- deploy-centos-8:     +%post --log=/root/ks-post-yum-update.log
+I, [2020-02-11T00:06:42.630666 #479146]  INFO -- deploy-centos-8:     +# Update to most recent packages
+I, [2020-02-11T00:06:42.630693 #479146]  INFO -- deploy-centos-8:     +set -x
+I, [2020-02-11T00:06:42.630742 #479146]  INFO -- deploy-centos-8:     +yum -y update
+I, [2020-02-11T00:06:42.630915 #479146]  INFO -- deploy-centos-8:     +%end
+I, [2020-02-11T00:06:42.631162 #479146]  INFO -- deploy-centos-8:     +# ---------
+I, [2020-02-11T00:06:42.640620 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.640744 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:42.640825 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:42.666718 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:42.674691 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:42.698914 #479146]  INFO -- deploy-centos-8:   * execute[yum-update] action run
+I, [2020-02-11T00:06:42.699021 #479146]  INFO -- deploy-centos-8:     - execute cat /repo/kickstart/build/scripts/rhel/script-rhel-yum-update >> /repo/kickstart/rhel/ks-rhel-8.1-base.ks
+I, [2020-02-11T00:06:42.709261 #479146]  INFO -- deploy-centos-8:   * directory[/var/lib/tftpboot] action create (up to date)
+I, [2020-02-11T00:06:42.715281 #479146]  INFO -- deploy-centos-8:   * directory[/var/lib/tftpboot/pxelinux.cfg] action create
+I, [2020-02-11T00:06:42.727753 #479146]  INFO -- deploy-centos-8:     - create new directory /var/lib/tftpboot/pxelinux.cfg
+I, [2020-02-11T00:06:42.727848 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:42.727897 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:42.760330 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:42.775938 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:42.802002 #479146]  INFO -- deploy-centos-8:   * template[/var/lib/tftpboot/pxelinux.cfg/default] action create
+I, [2020-02-11T00:06:42.802123 #479146]  INFO -- deploy-centos-8:     - create new file /var/lib/tftpboot/pxelinux.cfg/default
+I, [2020-02-11T00:06:42.802185 #479146]  INFO -- deploy-centos-8:     - update content in file /var/lib/tftpboot/pxelinux.cfg/default from none to af71b4
+I, [2020-02-11T00:06:42.802276 #479146]  INFO -- deploy-centos-8:     --- /var/lib/tftpboot/pxelinux.cfg/default	2020-02-11 07:06:44.627144827 +0000
+I, [2020-02-11T00:06:42.802367 #479146]  INFO -- deploy-centos-8:     +++ /var/lib/tftpboot/pxelinux.cfg/.chef-default20200211-4419-iekk8k	2020-02-11 07:06:44.627144827 +0000
+I, [2020-02-11T00:06:42.802467 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,70 @@
+I, [2020-02-11T00:06:42.802584 #479146]  INFO -- deploy-centos-8:     +SERIAL 0 115200
+I, [2020-02-11T00:06:42.802721 #479146]  INFO -- deploy-centos-8:     +CONSOLE 1
+I, [2020-02-11T00:06:42.802868 #479146]  INFO -- deploy-centos-8:     +UI menu.c32
+I, [2020-02-11T00:06:42.803059 #479146]  INFO -- deploy-centos-8:     +PROMPT 0
+I, [2020-02-11T00:06:42.803355 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.803670 #479146]  INFO -- deploy-centos-8:     +MENU TITLE Maxlab PXE Menu (deploy-centos-8.vagrantup.com)
+I, [2020-02-11T00:06:42.803982 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.804312 #479146]  INFO -- deploy-centos-8:     +# Left and right side of menu
+I, [2020-02-11T00:06:42.804636 #479146]  INFO -- deploy-centos-8:     +MENU MARGIN 10
+I, [2020-02-11T00:06:42.804817 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.804929 #479146]  INFO -- deploy-centos-8:     +# Vertical size of menus
+I, [2020-02-11T00:06:42.805113 #479146]  INFO -- deploy-centos-8:     +MENU ROWS 16
+I, [2020-02-11T00:06:42.805389 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.805707 #479146]  INFO -- deploy-centos-8:     +# Shift n lines down from top, essentially top margin
+I, [2020-02-11T00:06:42.805838 #479146]  INFO -- deploy-centos-8:     +MENU VSHIFT 1
+I, [2020-02-11T00:06:42.805913 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.805981 #479146]  INFO -- deploy-centos-8:     +# Tab message indicating how to navigate and row where it appears
+I, [2020-02-11T00:06:42.806044 #479146]  INFO -- deploy-centos-8:     +MENU TABMSG Press [Tab] to edit options - [F1] or [Esc+1] (on VSP) for help
+I, [2020-02-11T00:06:42.806100 #479146]  INFO -- deploy-centos-8:     +MENU TABMSGROW 24
+I, [2020-02-11T00:06:42.806144 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.806236 #479146]  INFO -- deploy-centos-8:     +MENU HELPMSGROW 22
+I, [2020-02-11T00:06:42.806299 #479146]  INFO -- deploy-centos-8:     +MENU HELPMSGENDROW 22
+I, [2020-02-11T00:06:42.806355 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.806420 #479146]  INFO -- deploy-centos-8:     +MENU CMDLINEROW 22
+I, [2020-02-11T00:06:42.806472 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.806535 #479146]  INFO -- deploy-centos-8:     +# Screen colors
+I, [2020-02-11T00:06:42.806595 #479146]  INFO -- deploy-centos-8:     +MENU COLOR screen      37;44    #80ffffff #00002220 std
+I, [2020-02-11T00:06:42.806664 #479146]  INFO -- deploy-centos-8:     +MENU COLOR border    1;37;47    #40000000 #00000000 std
+I, [2020-02-11T00:06:42.806718 #479146]  INFO -- deploy-centos-8:     +MENU COLOR title     1;34;47    #c00090f0 #00000000 std
+I, [2020-02-11T00:06:42.806783 #479146]  INFO -- deploy-centos-8:     +MENU COLOR unsel       30;47    #90ffffff #00000000 std
+I, [2020-02-11T00:06:42.806841 #479146]  INFO -- deploy-centos-8:     +MENU COLOR sel       1;36;44    #e0000000 #20ff8000 all
+I, [2020-02-11T00:06:42.806886 #479146]  INFO -- deploy-centos-8:     +MENU COLOR scrollbar 1;32;40    #e0000000 #20ff8000 all
+I, [2020-02-11T00:06:42.806940 #479146]  INFO -- deploy-centos-8:     +MENU COLOR disabled    34;47    #60cccccc #00000000 std
+I, [2020-02-11T00:06:42.806987 #479146]  INFO -- deploy-centos-8:     +MENU COLOR tabmsg      33;44    #e0000000 #20ff8000 std
+I, [2020-02-11T00:06:42.807038 #479146]  INFO -- deploy-centos-8:     +MENU COLOR cmdmark   1;33;44    #e0000000 #20ff8000 std
+I, [2020-02-11T00:06:42.807084 #479146]  INFO -- deploy-centos-8:     +MENU COLOR cmdline   1;33;44    #e0000000 #20ff8000 std
+I, [2020-02-11T00:06:42.807137 #479146]  INFO -- deploy-centos-8:     +MENU COLOR help      1;33;44    #e0000000 #20ff8000 std
+I, [2020-02-11T00:06:42.807185 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.807244 #479146]  INFO -- deploy-centos-8:     +F1 pxelinux.cfg/help.txt
+I, [2020-02-11T00:06:42.807293 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.807355 #479146]  INFO -- deploy-centos-8:     +LABEL distro
+I, [2020-02-11T00:06:42.807397 #479146]  INFO -- deploy-centos-8:     +  MENU LABEL Community:
+I, [2020-02-11T00:06:42.807440 #479146]  INFO -- deploy-centos-8:     +  MENU DISABLE
+I, [2020-02-11T00:06:42.807497 #479146]  INFO -- deploy-centos-8:     +  
+I, [2020-02-11T00:06:42.807538 #479146]  INFO -- deploy-centos-8:     +MENU INCLUDE pxelinux.cfg/centos/main.conf  CentOS Linux
+I, [2020-02-11T00:06:42.807577 #479146]  INFO -- deploy-centos-8:     +MENU INCLUDE pxelinux.cfg/rhel/main.conf  Red Hat Enterprise Linux
+I, [2020-02-11T00:06:42.807625 #479146]  INFO -- deploy-centos-8:     +MENU INCLUDE pxelinux.cfg/clonezilla/main.conf  CloneZilla
+I, [2020-02-11T00:06:42.807665 #479146]  INFO -- deploy-centos-8:     +MENU INCLUDE pxelinux.cfg/tools/main.conf  Tools
+I, [2020-02-11T00:06:42.807703 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.807753 #479146]  INFO -- deploy-centos-8:     +#MENU SEPARATOR
+I, [2020-02-11T00:06:42.807795 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.807831 #479146]  INFO -- deploy-centos-8:     +#MENU SEPARATOR
+I, [2020-02-11T00:06:42.807868 #479146]  INFO -- deploy-centos-8:     +#LABEL Clonezilla
+I, [2020-02-11T00:06:42.807933 #479146]  INFO -- deploy-centos-8:     +#  MENU LABEL Clonezilla:
+I, [2020-02-11T00:06:42.807973 #479146]  INFO -- deploy-centos-8:     +#  MENU DISABLE
+I, [2020-02-11T00:06:42.808010 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:42.808047 #479146]  INFO -- deploy-centos-8:     +#MENU INCLUDE pxelinux.cfg/clonezilla/main.conf   CloneZilla
+I, [2020-02-11T00:06:42.808094 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:42.808132 #479146]  INFO -- deploy-centos-8:     +#MENU SEPARATOR
+I, [2020-02-11T00:06:42.808168 #479146]  INFO -- deploy-centos-8:     +#LABEL tools
+I, [2020-02-11T00:06:42.808215 #479146]  INFO -- deploy-centos-8:     +#  MENU LABEL Tools:
+I, [2020-02-11T00:06:42.808264 #479146]  INFO -- deploy-centos-8:     +#  MENU DISABLE
+I, [2020-02-11T00:06:42.808300 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:42.808336 #479146]  INFO -- deploy-centos-8:     +#MENU INCLUDE pxelinux.cfg/tools/main.conf  Tools and Utilities
+I, [2020-02-11T00:06:42.808371 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.808413 #479146]  INFO -- deploy-centos-8:     +LABEL boothd
+I, [2020-02-11T00:06:42.808450 #479146]  INFO -- deploy-centos-8:     +  MENU LABEL Boot from hard disk
+I, [2020-02-11T00:06:42.808485 #479146]  INFO -- deploy-centos-8:     +  KERNEL chain.c32
+I, [2020-02-11T00:06:42.814157 #479146]  INFO -- deploy-centos-8:     +  APPEND boot
+I, [2020-02-11T00:06:42.814609 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:42.814922 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:42.839950 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:42.842976 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:42.846134 #479146]  INFO -- deploy-centos-8:   * directory[/var/lib/tftpboot/pxelinux.cfg/centos] action create
+I, [2020-02-11T00:06:42.855999 #479146]  INFO -- deploy-centos-8:     - create new directory /var/lib/tftpboot/pxelinux.cfg/centos
+I, [2020-02-11T00:06:42.856128 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:42.856241 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:42.878717 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:42.902689 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:42.917141 #479146]  INFO -- deploy-centos-8:   * template[/var/lib/tftpboot/pxelinux.cfg/centos/main.conf] action create
+I, [2020-02-11T00:06:42.917291 #479146]  INFO -- deploy-centos-8:     - create new file /var/lib/tftpboot/pxelinux.cfg/centos/main.conf
+I, [2020-02-11T00:06:42.917352 #479146]  INFO -- deploy-centos-8:     - update content in file /var/lib/tftpboot/pxelinux.cfg/centos/main.conf from none to 924240
+I, [2020-02-11T00:06:42.917407 #479146]  INFO -- deploy-centos-8:     --- /var/lib/tftpboot/pxelinux.cfg/centos/main.conf	2020-02-11 07:06:44.747571358 +0000
+I, [2020-02-11T00:06:42.917456 #479146]  INFO -- deploy-centos-8:     +++ /var/lib/tftpboot/pxelinux.cfg/centos/.chef-main20200211-4419-owahtf.conf	2020-02-11 07:06:44.741599795 +0000
+I, [2020-02-11T00:06:42.917501 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,17 @@
+I, [2020-02-11T00:06:42.917543 #479146]  INFO -- deploy-centos-8:     +MENU TITLE CentOS Linux
+I, [2020-02-11T00:06:42.917584 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.917636 #479146]  INFO -- deploy-centos-8:     +F1 pxelinux.cfg/centos/help.txt
+I, [2020-02-11T00:06:42.917673 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.917706 #479146]  INFO -- deploy-centos-8:     +LABEL mainmenu
+I, [2020-02-11T00:06:42.917746 #479146]  INFO -- deploy-centos-8:     +    MENU LABEL Return to Main Menu
+I, [2020-02-11T00:06:42.917796 #479146]  INFO -- deploy-centos-8:     +    MENU EXIT
+I, [2020-02-11T00:06:42.917856 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.917892 #479146]  INFO -- deploy-centos-8:     +MENU SEPARATOR
+I, [2020-02-11T00:06:42.917930 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.917985 #479146]  INFO -- deploy-centos-8:     +LABEL release
+I, [2020-02-11T00:06:42.918025 #479146]  INFO -- deploy-centos-8:     +    MENU LABEL Select release:
+I, [2020-02-11T00:06:42.918061 #479146]  INFO -- deploy-centos-8:     +    MENU DISABLE
+I, [2020-02-11T00:06:42.918097 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:42.918145 #479146]  INFO -- deploy-centos-8:     +MENU INCLUDE pxelinux.cfg/centos/centos-8.1905.conf # centos-8.1905
+I, [2020-02-11T00:06:42.924142 #479146]  INFO -- deploy-centos-8:     +MENU INCLUDE pxelinux.cfg/centos/centos-7.1908.conf # centos-7.1908
+I, [2020-02-11T00:06:42.924272 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:42.924322 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:42.958335 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:42.972368 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:43.025731 #479146]  INFO -- deploy-centos-8:   * template[/var/lib/tftpboot/pxelinux.cfg/centos/centos-8.1905.conf] action create
+I, [2020-02-11T00:06:43.025849 #479146]  INFO -- deploy-centos-8:     - create new file /var/lib/tftpboot/pxelinux.cfg/centos/centos-8.1905.conf
+I, [2020-02-11T00:06:43.025917 #479146]  INFO -- deploy-centos-8:     - update content in file /var/lib/tftpboot/pxelinux.cfg/centos/centos-8.1905.conf from none to e3de45
+I, [2020-02-11T00:06:43.025986 #479146]  INFO -- deploy-centos-8:     --- /var/lib/tftpboot/pxelinux.cfg/centos/centos-8.1905.conf	2020-02-11 07:06:44.855059501 +0000
+I, [2020-02-11T00:06:43.026047 #479146]  INFO -- deploy-centos-8:     +++ /var/lib/tftpboot/pxelinux.cfg/centos/.chef-centos-820200211-4419-slqxzk.1905.conf	2020-02-11 07:06:44.855059501 +0000
+I, [2020-02-11T00:06:43.026103 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,60 @@
+I, [2020-02-11T00:06:43.026160 #479146]  INFO -- deploy-centos-8:     +# This file deployed by Chef - DO NOT EDIT
+I, [2020-02-11T00:06:43.026218 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:43.026266 #479146]  INFO -- deploy-centos-8:     +# PXE Network Boot Menu
+I, [2020-02-11T00:06:43.026318 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:43.026363 #479146]  INFO -- deploy-centos-8:     +MENU TITLE CentOS Linux 8.1905
+I, [2020-02-11T00:06:43.026411 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.026453 #479146]  INFO -- deploy-centos-8:     +F1 pxelinux.cfg/centos/help.txt
+I, [2020-02-11T00:06:43.026496 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.026538 #479146]  INFO -- deploy-centos-8:     +LABEL previous
+I, [2020-02-11T00:06:43.026582 #479146]  INFO -- deploy-centos-8:     +    MENU LABEL Previous Menu
+I, [2020-02-11T00:06:43.026622 #479146]  INFO -- deploy-centos-8:     +    MENU EXIT
+I, [2020-02-11T00:06:43.026663 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.026704 #479146]  INFO -- deploy-centos-8:     +MENU SEPARATOR
+I, [2020-02-11T00:06:43.026746 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.026787 #479146]  INFO -- deploy-centos-8:     +LABEL type
+I, [2020-02-11T00:06:43.026831 #479146]  INFO -- deploy-centos-8:     +    MENU LABEL Select install type:
+I, [2020-02-11T00:06:43.026872 #479146]  INFO -- deploy-centos-8:     +    MENU DISABLE
+I, [2020-02-11T00:06:43.026910 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.026950 #479146]  INFO -- deploy-centos-8:     +LABEL CentOS Linux 8.1905 'Base' node
+I, [2020-02-11T00:06:43.026990 #479146]  INFO -- deploy-centos-8:     +  MENU LABEL CentOS Linux 8.1905 'Base' node
+I, [2020-02-11T00:06:43.027034 #479146]  INFO -- deploy-centos-8:     +  KERNEL images/centos/centos-8.1905/vmlinuz
+I, [2020-02-11T00:06:43.027090 #479146]  INFO -- deploy-centos-8:     +  APPEND initrd=images/centos/centos-8.1905/initrd.img inst.ks=http://repo.maxlab/kickstart/centos/ks-centos-8.1905-base.ks inst.repo=http://repo.maxlab/dist/centos/CentOS-8-x86_64-1905-dvd1 nopti noibrs noibpb
+I, [2020-02-11T00:06:43.027197 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.027306 #479146]  INFO -- deploy-centos-8:     +LABEL CentOS Linux 8.1905 'Base' node (Serial console)
+I, [2020-02-11T00:06:43.027356 #479146]  INFO -- deploy-centos-8:     +  MENU LABEL CentOS Linux 8.1905 'Base' node (Serial console)
+I, [2020-02-11T00:06:43.027402 #479146]  INFO -- deploy-centos-8:     +  KERNEL images/centos/centos-8.1905/vmlinuz
+I, [2020-02-11T00:06:43.027454 #479146]  INFO -- deploy-centos-8:     +  APPEND initrd=images/centos/centos-8.1905/initrd.img inst.ks=http://repo.maxlab/kickstart/centos/ks-centos-8.1905-base.ks inst.repo=http://repo.maxlab/dist/centos/CentOS-8-x86_64-1905-dvd1 nopti noibrs noibpb earlyprintk=serial,ttyS0 console=tty0 console=ttyS0,115200,8n1
+I, [2020-02-11T00:06:43.027510 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.027553 #479146]  INFO -- deploy-centos-8:     +LABEL CentOS Linux 8.1905 'base-xfs' node using XFS
+I, [2020-02-11T00:06:43.027590 #479146]  INFO -- deploy-centos-8:     +  MENU LABEL CentOS Linux 8.1905 'base-xfs' node using XFS
+I, [2020-02-11T00:06:43.027661 #479146]  INFO -- deploy-centos-8:     +  KERNEL images/centos/centos-8.1905/vmlinuz
+I, [2020-02-11T00:06:43.027710 #479146]  INFO -- deploy-centos-8:     +  APPEND initrd=images/centos/centos-8.1905/initrd.img inst.ks=http://repo.maxlab/kickstart/centos/ks-centos-8.1905-base-xfs.ks inst.repo=http://repo.maxlab/dist/centos/CentOS-8-x86_64-1905-dvd1 nopti noibrs noibpb
+I, [2020-02-11T00:06:43.027756 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.027801 #479146]  INFO -- deploy-centos-8:     +LABEL CentOS Linux 8.1905 'base-xfs' node using XFS (Serial console)
+I, [2020-02-11T00:06:43.027839 #479146]  INFO -- deploy-centos-8:     +  MENU LABEL CentOS Linux 8.1905 'base-xfs' node using XFS (Serial console)
+I, [2020-02-11T00:06:43.027886 #479146]  INFO -- deploy-centos-8:     +  KERNEL images/centos/centos-8.1905/vmlinuz
+I, [2020-02-11T00:06:43.027931 #479146]  INFO -- deploy-centos-8:     +  APPEND initrd=images/centos/centos-8.1905/initrd.img inst.ks=http://repo.maxlab/kickstart/centos/ks-centos-8.1905-base-xfs.ks inst.repo=http://repo.maxlab/dist/centos/CentOS-8-x86_64-1905-dvd1 nopti noibrs noibpb earlyprintk=serial,ttyS0 console=tty0 console=ttyS0,115200,8n1
+I, [2020-02-11T00:06:43.027970 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.028014 #479146]  INFO -- deploy-centos-8:     +LABEL CentOS Linux 8.1905 'manyfs' node with many filesystems
+I, [2020-02-11T00:06:43.028057 #479146]  INFO -- deploy-centos-8:     +  MENU LABEL CentOS Linux 8.1905 'manyfs' node with many filesystems
+I, [2020-02-11T00:06:43.028094 #479146]  INFO -- deploy-centos-8:     +  KERNEL images/centos/centos-8.1905/vmlinuz
+I, [2020-02-11T00:06:43.028143 #479146]  INFO -- deploy-centos-8:     +  APPEND initrd=images/centos/centos-8.1905/initrd.img inst.ks=http://repo.maxlab/kickstart/centos/ks-centos-8.1905-manyfs.ks inst.repo=http://repo.maxlab/dist/centos/CentOS-8-x86_64-1905-dvd1 nopti noibrs noibpb
+I, [2020-02-11T00:06:43.028179 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.028249 #479146]  INFO -- deploy-centos-8:     +LABEL CentOS Linux 8.1905 'manyfs' node with many filesystems (Serial console)
+I, [2020-02-11T00:06:43.028286 #479146]  INFO -- deploy-centos-8:     +  MENU LABEL CentOS Linux 8.1905 'manyfs' node with many filesystems (Serial console)
+I, [2020-02-11T00:06:43.028332 #479146]  INFO -- deploy-centos-8:     +  KERNEL images/centos/centos-8.1905/vmlinuz
+I, [2020-02-11T00:06:43.028366 #479146]  INFO -- deploy-centos-8:     +  APPEND initrd=images/centos/centos-8.1905/initrd.img inst.ks=http://repo.maxlab/kickstart/centos/ks-centos-8.1905-manyfs.ks inst.repo=http://repo.maxlab/dist/centos/CentOS-8-x86_64-1905-dvd1 nopti noibrs noibpb earlyprintk=serial,ttyS0 console=tty0 console=ttyS0,115200,8n1
+I, [2020-02-11T00:06:43.028419 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.028452 #479146]  INFO -- deploy-centos-8:     +LABEL CentOS Linux 8.1905 'XL' node with large filesystems
+I, [2020-02-11T00:06:43.028493 #479146]  INFO -- deploy-centos-8:     +  MENU LABEL CentOS Linux 8.1905 'XL' node with large filesystems
+I, [2020-02-11T00:06:43.028533 #479146]  INFO -- deploy-centos-8:     +  KERNEL images/centos/centos-8.1905/vmlinuz
+I, [2020-02-11T00:06:43.028567 #479146]  INFO -- deploy-centos-8:     +  APPEND initrd=images/centos/centos-8.1905/initrd.img inst.ks=http://repo.maxlab/kickstart/centos/ks-centos-8.1905-XL.ks inst.repo=http://repo.maxlab/dist/centos/CentOS-8-x86_64-1905-dvd1 nopti noibrs noibpb
+I, [2020-02-11T00:06:43.028613 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.028647 #479146]  INFO -- deploy-centos-8:     +LABEL CentOS Linux 8.1905 'XL' node with large filesystems (Serial console)
+I, [2020-02-11T00:06:43.028679 #479146]  INFO -- deploy-centos-8:     +  MENU LABEL CentOS Linux 8.1905 'XL' node with large filesystems (Serial console)
+I, [2020-02-11T00:06:43.031952 #479146]  INFO -- deploy-centos-8:     +  KERNEL images/centos/centos-8.1905/vmlinuz
+I, [2020-02-11T00:06:43.032475 #479146]  INFO -- deploy-centos-8:     +  APPEND initrd=images/centos/centos-8.1905/initrd.img inst.ks=http://repo.maxlab/kickstart/centos/ks-centos-8.1905-XL.ks inst.repo=http://repo.maxlab/dist/centos/CentOS-8-x86_64-1905-dvd1 nopti noibrs noibpb earlyprintk=serial,ttyS0 console=tty0 console=ttyS0,115200,8n1
+I, [2020-02-11T00:06:43.032717 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.034142 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.034344 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0744'
+I, [2020-02-11T00:06:43.034418 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:43.067880 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:43.074073 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:43.100632 #479146]  INFO -- deploy-centos-8:   * template[/var/lib/tftpboot/pxelinux.cfg/centos/centos-7.1908.conf] action create
+I, [2020-02-11T00:06:43.100753 #479146]  INFO -- deploy-centos-8:     - create new file /var/lib/tftpboot/pxelinux.cfg/centos/centos-7.1908.conf
+I, [2020-02-11T00:06:43.100821 #479146]  INFO -- deploy-centos-8:     - update content in file /var/lib/tftpboot/pxelinux.cfg/centos/centos-7.1908.conf from none to 4956c7
+I, [2020-02-11T00:06:43.100881 #479146]  INFO -- deploy-centos-8:     --- /var/lib/tftpboot/pxelinux.cfg/centos/centos-7.1908.conf	2020-02-11 07:06:44.932689827 +0000
+I, [2020-02-11T00:06:43.100931 #479146]  INFO -- deploy-centos-8:     +++ /var/lib/tftpboot/pxelinux.cfg/centos/.chef-centos-720200211-4419-1da4i8g.1908.conf	2020-02-11 07:06:44.932689827 +0000
+I, [2020-02-11T00:06:43.100986 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,30 @@
+I, [2020-02-11T00:06:43.101033 #479146]  INFO -- deploy-centos-8:     +# This file deployed by Chef - DO NOT EDIT
+I, [2020-02-11T00:06:43.101086 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:43.101134 #479146]  INFO -- deploy-centos-8:     +# PXE Network Boot Menu
+I, [2020-02-11T00:06:43.101177 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:43.101252 #479146]  INFO -- deploy-centos-8:     +MENU TITLE CentOS Linux 7.1908
+I, [2020-02-11T00:06:43.101298 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.101349 #479146]  INFO -- deploy-centos-8:     +F1 pxelinux.cfg/centos/help.txt
+I, [2020-02-11T00:06:43.101394 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.101446 #479146]  INFO -- deploy-centos-8:     +LABEL previous
+I, [2020-02-11T00:06:43.101495 #479146]  INFO -- deploy-centos-8:     +    MENU LABEL Previous Menu
+I, [2020-02-11T00:06:43.101550 #479146]  INFO -- deploy-centos-8:     +    MENU EXIT
+I, [2020-02-11T00:06:43.101620 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.101668 #479146]  INFO -- deploy-centos-8:     +MENU SEPARATOR
+I, [2020-02-11T00:06:43.101722 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.101770 #479146]  INFO -- deploy-centos-8:     +LABEL type
+I, [2020-02-11T00:06:43.101827 #479146]  INFO -- deploy-centos-8:     +    MENU LABEL Select install type:
+I, [2020-02-11T00:06:43.101879 #479146]  INFO -- deploy-centos-8:     +    MENU DISABLE
+I, [2020-02-11T00:06:43.101920 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.101965 #479146]  INFO -- deploy-centos-8:     +LABEL CentOS Linux 7.1908 'Base' node
+I, [2020-02-11T00:06:43.102006 #479146]  INFO -- deploy-centos-8:     +  MENU LABEL CentOS Linux 7.1908 'Base' node
+I, [2020-02-11T00:06:43.102062 #479146]  INFO -- deploy-centos-8:     +  KERNEL images/centos/centos-7.1908/vmlinuz
+I, [2020-02-11T00:06:43.102108 #479146]  INFO -- deploy-centos-8:     +  APPEND initrd=images/centos/centos-7.1908/initrd.img inst.ks=http://repo.maxlab/kickstart/centos/ks-centos-7.1908-base.ks inst.repo=http://repo.maxlab/dist/centos/CentOS-7-x86_64-DVD-1908 nopti noibrs noibpb
+I, [2020-02-11T00:06:43.102157 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.102232 #479146]  INFO -- deploy-centos-8:     +LABEL CentOS Linux 7.1908 'Base' node (Serial console)
+I, [2020-02-11T00:06:43.102287 #479146]  INFO -- deploy-centos-8:     +  MENU LABEL CentOS Linux 7.1908 'Base' node (Serial console)
+I, [2020-02-11T00:06:43.102332 #479146]  INFO -- deploy-centos-8:     +  KERNEL images/centos/centos-7.1908/vmlinuz
+I, [2020-02-11T00:06:43.102385 #479146]  INFO -- deploy-centos-8:     +  APPEND initrd=images/centos/centos-7.1908/initrd.img inst.ks=http://repo.maxlab/kickstart/centos/ks-centos-7.1908-base.ks inst.repo=http://repo.maxlab/dist/centos/CentOS-7-x86_64-DVD-1908 nopti noibrs noibpb earlyprintk=serial,ttyS0 console=tty0 console=ttyS0,115200,8n1
+I, [2020-02-11T00:06:43.102434 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.107889 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.108012 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0744'
+I, [2020-02-11T00:06:43.108069 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:43.135663 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:43.139470 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:43.148920 #479146]  INFO -- deploy-centos-8:   * directory[/var/lib/tftpboot/pxelinux.cfg/rhel] action create
+I, [2020-02-11T00:06:43.156713 #479146]  INFO -- deploy-centos-8:     - create new directory /var/lib/tftpboot/pxelinux.cfg/rhel
+I, [2020-02-11T00:06:43.156831 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:43.156920 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:43.180055 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:43.213665 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:43.222492 #479146]  INFO -- deploy-centos-8:   * template[/var/lib/tftpboot/pxelinux.cfg/rhel/main.conf] action create
+I, [2020-02-11T00:06:43.222608 #479146]  INFO -- deploy-centos-8:     - create new file /var/lib/tftpboot/pxelinux.cfg/rhel/main.conf
+I, [2020-02-11T00:06:43.222671 #479146]  INFO -- deploy-centos-8:     - update content in file /var/lib/tftpboot/pxelinux.cfg/rhel/main.conf from none to b13a5e
+I, [2020-02-11T00:06:43.222721 #479146]  INFO -- deploy-centos-8:     --- /var/lib/tftpboot/pxelinux.cfg/rhel/main.conf	2020-02-11 07:06:45.056102139 +0000
+I, [2020-02-11T00:06:43.222768 #479146]  INFO -- deploy-centos-8:     +++ /var/lib/tftpboot/pxelinux.cfg/rhel/.chef-main20200211-4419-12aeekr.conf	2020-02-11 07:06:45.056102139 +0000
+I, [2020-02-11T00:06:43.222815 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,16 @@
+I, [2020-02-11T00:06:43.222887 #479146]  INFO -- deploy-centos-8:     +MENU TITLE Red Hat Enterprise Linux
+I, [2020-02-11T00:06:43.222935 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.222980 #479146]  INFO -- deploy-centos-8:     +F1 pxelinux.cfg/rhel/help.txt
+I, [2020-02-11T00:06:43.223029 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.223080 #479146]  INFO -- deploy-centos-8:     +LABEL mainmenu
+I, [2020-02-11T00:06:43.223129 #479146]  INFO -- deploy-centos-8:     +    MENU LABEL Return to Main Menu
+I, [2020-02-11T00:06:43.223176 #479146]  INFO -- deploy-centos-8:     +    MENU EXIT
+I, [2020-02-11T00:06:43.223247 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.223298 #479146]  INFO -- deploy-centos-8:     +MENU SEPARATOR
+I, [2020-02-11T00:06:43.223348 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.223397 #479146]  INFO -- deploy-centos-8:     +LABEL release
+I, [2020-02-11T00:06:43.223451 #479146]  INFO -- deploy-centos-8:     +    MENU LABEL Select release:
+I, [2020-02-11T00:06:43.223501 #479146]  INFO -- deploy-centos-8:     +    MENU DISABLE
+I, [2020-02-11T00:06:43.223546 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.230473 #479146]  INFO -- deploy-centos-8:     +MENU INCLUDE pxelinux.cfg/rhel/rhel-8.1.conf # rhel-8.1
+I, [2020-02-11T00:06:43.230592 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:43.230653 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:43.256802 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:43.275311 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:43.291866 #479146]  INFO -- deploy-centos-8:   * template[/var/lib/tftpboot/pxelinux.cfg/rhel/rhel-8.1.conf] action create
+I, [2020-02-11T00:06:43.292315 #479146]  INFO -- deploy-centos-8:     - create new file /var/lib/tftpboot/pxelinux.cfg/rhel/rhel-8.1.conf
+I, [2020-02-11T00:06:43.292633 #479146]  INFO -- deploy-centos-8:     - update content in file /var/lib/tftpboot/pxelinux.cfg/rhel/rhel-8.1.conf from none to 7d4d3b
+I, [2020-02-11T00:06:43.292966 #479146]  INFO -- deploy-centos-8:     --- /var/lib/tftpboot/pxelinux.cfg/rhel/rhel-8.1.conf	2020-02-11 07:06:45.123779859 +0000
+I, [2020-02-11T00:06:43.293309 #479146]  INFO -- deploy-centos-8:     +++ /var/lib/tftpboot/pxelinux.cfg/rhel/.chef-rhel-820200211-4419-zbkniy.1.conf	2020-02-11 07:06:45.123779859 +0000
+I, [2020-02-11T00:06:43.293617 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,30 @@
+I, [2020-02-11T00:06:43.293899 #479146]  INFO -- deploy-centos-8:     +# This file deployed by Chef - DO NOT EDIT
+I, [2020-02-11T00:06:43.294235 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:43.294377 #479146]  INFO -- deploy-centos-8:     +# PXE Network Boot Menu
+I, [2020-02-11T00:06:43.294431 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:43.294481 #479146]  INFO -- deploy-centos-8:     +MENU TITLE Red Hat Enterprise Linux 8.1
+I, [2020-02-11T00:06:43.294526 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.294568 #479146]  INFO -- deploy-centos-8:     +F1 pxelinux.cfg/rhel/help.txt
+I, [2020-02-11T00:06:43.294607 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.294647 #479146]  INFO -- deploy-centos-8:     +LABEL previous
+I, [2020-02-11T00:06:43.294690 #479146]  INFO -- deploy-centos-8:     +    MENU LABEL Previous Menu
+I, [2020-02-11T00:06:43.294736 #479146]  INFO -- deploy-centos-8:     +    MENU EXIT
+I, [2020-02-11T00:06:43.294789 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.294836 #479146]  INFO -- deploy-centos-8:     +MENU SEPARATOR
+I, [2020-02-11T00:06:43.294882 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.294927 #479146]  INFO -- deploy-centos-8:     +LABEL type
+I, [2020-02-11T00:06:43.294973 #479146]  INFO -- deploy-centos-8:     +    MENU LABEL Select install type:
+I, [2020-02-11T00:06:43.295016 #479146]  INFO -- deploy-centos-8:     +    MENU DISABLE
+I, [2020-02-11T00:06:43.295085 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.295136 #479146]  INFO -- deploy-centos-8:     +LABEL Red Hat Linux 8.1 'base' node
+I, [2020-02-11T00:06:43.295194 #479146]  INFO -- deploy-centos-8:     +  MENU LABEL Red Hat Linux 8.1 'base' node
+I, [2020-02-11T00:06:43.295255 #479146]  INFO -- deploy-centos-8:     +  KERNEL images/rhel/rhel-8.1/vmlinuz
+I, [2020-02-11T00:06:43.295297 #479146]  INFO -- deploy-centos-8:     +  APPEND initrd=images/rhel/rhel-8.1/initrd.img inst.ks=http://repo.maxlab/kickstart/rhel/ks-rhel-8.1-base.ks inst.repo=http://repo.maxlab/dist/rhel/rhel-8.1-x86_64-dvd nopti noibrs noibpb
+I, [2020-02-11T00:06:43.295340 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.295381 #479146]  INFO -- deploy-centos-8:     +LABEL Red Hat Linux 8.1 'base' node (Serial console)
+I, [2020-02-11T00:06:43.295425 #479146]  INFO -- deploy-centos-8:     +  MENU LABEL Red Hat Linux 8.1 'base' node (Serial console)
+I, [2020-02-11T00:06:43.295466 #479146]  INFO -- deploy-centos-8:     +  KERNEL images/rhel/rhel-8.1/vmlinuz
+I, [2020-02-11T00:06:43.295512 #479146]  INFO -- deploy-centos-8:     +  APPEND initrd=images/rhel/rhel-8.1/initrd.img inst.ks=http://repo.maxlab/kickstart/rhel/ks-rhel-8.1-base.ks inst.repo=http://repo.maxlab/dist/rhel/rhel-8.1-x86_64-dvd nopti noibrs noibpb earlyprintk=serial,ttyS0 console=tty0 console=ttyS0,115200,8n1
+I, [2020-02-11T00:06:43.295556 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.302005 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.302344 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0744'
+I, [2020-02-11T00:06:43.302431 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:43.327980 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:43.330119 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:43.332910 #479146]  INFO -- deploy-centos-8:   * directory[/var/lib/tftpboot/pxelinux.cfg/clonezilla] action create
+I, [2020-02-11T00:06:43.343579 #479146]  INFO -- deploy-centos-8:     - create new directory /var/lib/tftpboot/pxelinux.cfg/clonezilla
+I, [2020-02-11T00:06:43.343975 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:43.344439 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:43.373355 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:43.384677 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:43.413676 #479146]  INFO -- deploy-centos-8:   * template[/var/lib/tftpboot/pxelinux.cfg/clonezilla/main.conf] action create
+I, [2020-02-11T00:06:43.413811 #479146]  INFO -- deploy-centos-8:     - create new file /var/lib/tftpboot/pxelinux.cfg/clonezilla/main.conf
+I, [2020-02-11T00:06:43.413873 #479146]  INFO -- deploy-centos-8:     - update content in file /var/lib/tftpboot/pxelinux.cfg/clonezilla/main.conf from none to d2196f
+I, [2020-02-11T00:06:43.413925 #479146]  INFO -- deploy-centos-8:     --- /var/lib/tftpboot/pxelinux.cfg/clonezilla/main.conf	2020-02-11 07:06:45.255154256 +0000
+I, [2020-02-11T00:06:43.413978 #479146]  INFO -- deploy-centos-8:     +++ /var/lib/tftpboot/pxelinux.cfg/clonezilla/.chef-main20200211-4419-trnepb.conf	2020-02-11 07:06:45.255154256 +0000
+I, [2020-02-11T00:06:43.414029 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,16 @@
+I, [2020-02-11T00:06:43.414078 #479146]  INFO -- deploy-centos-8:     +MENU TITLE CloneZilla
+I, [2020-02-11T00:06:43.414126 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.414176 #479146]  INFO -- deploy-centos-8:     +F1 pxelinux.cfg/clonezilla/help.txt
+I, [2020-02-11T00:06:43.414248 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.414296 #479146]  INFO -- deploy-centos-8:     +LABEL mainmenu
+I, [2020-02-11T00:06:43.414349 #479146]  INFO -- deploy-centos-8:     +    MENU LABEL Return to Main Menu
+I, [2020-02-11T00:06:43.414432 #479146]  INFO -- deploy-centos-8:     +    MENU EXIT
+I, [2020-02-11T00:06:43.414513 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.414554 #479146]  INFO -- deploy-centos-8:     +MENU SEPARATOR
+I, [2020-02-11T00:06:43.414591 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.414637 #479146]  INFO -- deploy-centos-8:     +LABEL release
+I, [2020-02-11T00:06:43.414676 #479146]  INFO -- deploy-centos-8:     +    MENU LABEL Select release:
+I, [2020-02-11T00:06:43.414721 #479146]  INFO -- deploy-centos-8:     +    MENU DISABLE
+I, [2020-02-11T00:06:43.414764 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.424728 #479146]  INFO -- deploy-centos-8:     +MENU INCLUDE pxelinux.cfg/clonezilla/clonezilla-2.6.4-10-amd64.conf # clonezilla-2.6.4-10-amd64
+I, [2020-02-11T00:06:43.424848 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:43.424909 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:43.453598 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:43.466897 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:43.490543 #479146]  INFO -- deploy-centos-8:   * template[/var/lib/tftpboot/pxelinux.cfg/clonezilla/clonezilla-2.6.4-10-amd64.conf] action create
+I, [2020-02-11T00:06:43.490739 #479146]  INFO -- deploy-centos-8:     - create new file /var/lib/tftpboot/pxelinux.cfg/clonezilla/clonezilla-2.6.4-10-amd64.conf
+I, [2020-02-11T00:06:43.490816 #479146]  INFO -- deploy-centos-8:     - update content in file /var/lib/tftpboot/pxelinux.cfg/clonezilla/clonezilla-2.6.4-10-amd64.conf from none to f1fa29
+I, [2020-02-11T00:06:43.490896 #479146]  INFO -- deploy-centos-8:     --- /var/lib/tftpboot/pxelinux.cfg/clonezilla/clonezilla-2.6.4-10-amd64.conf	2020-02-11 07:06:45.339751405 +0000
+I, [2020-02-11T00:06:43.490951 #479146]  INFO -- deploy-centos-8:     +++ /var/lib/tftpboot/pxelinux.cfg/clonezilla/.chef-clonezilla-220200211-4419-1fkbzvu.6.4-10-amd64.conf	2020-02-11 07:06:45.339751405 +0000
+I, [2020-02-11T00:06:43.491003 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,24 @@
+I, [2020-02-11T00:06:43.491066 #479146]  INFO -- deploy-centos-8:     +# This file deployed by Chef - DO NOT EDIT
+I, [2020-02-11T00:06:43.491108 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:43.491149 #479146]  INFO -- deploy-centos-8:     +# PXE Network Boot Menu
+I, [2020-02-11T00:06:43.491193 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:43.491281 #479146]  INFO -- deploy-centos-8:     +MENU TITLE CloneZilla 2.6.4-10-amd64
+I, [2020-02-11T00:06:43.491329 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.491377 #479146]  INFO -- deploy-centos-8:     +F1 pxelinux.cfg/clonezilla/help.txt
+I, [2020-02-11T00:06:43.491421 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.491471 #479146]  INFO -- deploy-centos-8:     +LABEL previous
+I, [2020-02-11T00:06:43.491514 #479146]  INFO -- deploy-centos-8:     +    MENU LABEL Previous Menu
+I, [2020-02-11T00:06:43.491561 #479146]  INFO -- deploy-centos-8:     +    MENU EXIT
+I, [2020-02-11T00:06:43.491609 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.491652 #479146]  INFO -- deploy-centos-8:     +MENU SEPARATOR
+I, [2020-02-11T00:06:43.491699 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.491743 #479146]  INFO -- deploy-centos-8:     +LABEL type
+I, [2020-02-11T00:06:43.491794 #479146]  INFO -- deploy-centos-8:     +    MENU LABEL Select install type:
+I, [2020-02-11T00:06:43.491839 #479146]  INFO -- deploy-centos-8:     +    MENU DISABLE
+I, [2020-02-11T00:06:43.491882 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.491932 #479146]  INFO -- deploy-centos-8:     +LABEL CloneZilla Image Factory
+I, [2020-02-11T00:06:43.491981 #479146]  INFO -- deploy-centos-8:     +  MENU LABEL CloneZilla Image Factory
+I, [2020-02-11T00:06:43.492028 #479146]  INFO -- deploy-centos-8:     +  KERNEL images/clonezilla/clonezilla-2.6.4-10-amd64/vmlinuz
+I, [2020-02-11T00:06:43.492094 #479146]  INFO -- deploy-centos-8:     +  APPEND initrd=images/clonezilla/clonezilla-2.6.4-10-amd64/initrd.img  boot=live username=user union=overlay config components quiet noswap edd=on nomodeset nodmraid locales= keyboard-layouts= ocs_live_run='ocs-live-general' ocs_live_extra_param='' ocs_live_batch=no net.ifnames=0 nosplash noprompt ocs_prerun='mount -t nfs aux.maxlab:/srv/auxdata/clonezilla /home/partimag' fetch=tftp://repo.maxlab/images/clonezilla/filesystem.squashfs
+I, [2020-02-11T00:06:43.500666 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.500785 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0744'
+I, [2020-02-11T00:06:43.500859 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:43.529782 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:43.532832 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:43.535832 #479146]  INFO -- deploy-centos-8:   * directory[/var/lib/tftpboot/pxelinux.cfg/tools] action create
+I, [2020-02-11T00:06:43.546111 #479146]  INFO -- deploy-centos-8:     - create new directory /var/lib/tftpboot/pxelinux.cfg/tools
+I, [2020-02-11T00:06:43.546240 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:43.546301 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:43.575506 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:43.592850 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:43.611268 #479146]  INFO -- deploy-centos-8:   * template[/var/lib/tftpboot/pxelinux.cfg/tools/main.conf] action create
+I, [2020-02-11T00:06:43.611455 #479146]  INFO -- deploy-centos-8:     - create new file /var/lib/tftpboot/pxelinux.cfg/tools/main.conf
+I, [2020-02-11T00:06:43.611515 #479146]  INFO -- deploy-centos-8:     - update content in file /var/lib/tftpboot/pxelinux.cfg/tools/main.conf from none to b53396
+I, [2020-02-11T00:06:43.611564 #479146]  INFO -- deploy-centos-8:     --- /var/lib/tftpboot/pxelinux.cfg/tools/main.conf	2020-02-11 07:06:45.452215851 +0000
+I, [2020-02-11T00:06:43.611612 #479146]  INFO -- deploy-centos-8:     +++ /var/lib/tftpboot/pxelinux.cfg/tools/.chef-main20200211-4419-11tihv.conf	2020-02-11 07:06:45.452215851 +0000
+I, [2020-02-11T00:06:43.611658 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,16 @@
+I, [2020-02-11T00:06:43.611711 #479146]  INFO -- deploy-centos-8:     +MENU TITLE Tools
+I, [2020-02-11T00:06:43.611757 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.611798 #479146]  INFO -- deploy-centos-8:     +F1 pxelinux.cfg/tools/help.txt
+I, [2020-02-11T00:06:43.611847 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.611892 #479146]  INFO -- deploy-centos-8:     +LABEL mainmenu
+I, [2020-02-11T00:06:43.611936 #479146]  INFO -- deploy-centos-8:     +    MENU LABEL Return to Main Menu
+I, [2020-02-11T00:06:43.611981 #479146]  INFO -- deploy-centos-8:     +    MENU EXIT
+I, [2020-02-11T00:06:43.612026 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.612072 #479146]  INFO -- deploy-centos-8:     +MENU SEPARATOR
+I, [2020-02-11T00:06:43.612120 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.612169 #479146]  INFO -- deploy-centos-8:     +LABEL release
+I, [2020-02-11T00:06:43.612235 #479146]  INFO -- deploy-centos-8:     +    MENU LABEL Select release:
+I, [2020-02-11T00:06:43.612284 #479146]  INFO -- deploy-centos-8:     +    MENU DISABLE
+I, [2020-02-11T00:06:43.612329 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.624879 #479146]  INFO -- deploy-centos-8:     +MENU INCLUDE pxelinux.cfg/tools/tools-1.0.conf # tools-1.0
+I, [2020-02-11T00:06:43.625119 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:43.625278 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:43.652731 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:43.668772 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:43.697569 #479146]  INFO -- deploy-centos-8:   * template[/var/lib/tftpboot/pxelinux.cfg/tools/tools-1.0.conf] action create
+I, [2020-02-11T00:06:43.697716 #479146]  INFO -- deploy-centos-8:     - create new file /var/lib/tftpboot/pxelinux.cfg/tools/tools-1.0.conf
+I, [2020-02-11T00:06:43.697775 #479146]  INFO -- deploy-centos-8:     - update content in file /var/lib/tftpboot/pxelinux.cfg/tools/tools-1.0.conf from none to 7ff922
+I, [2020-02-11T00:06:43.697821 #479146]  INFO -- deploy-centos-8:     --- /var/lib/tftpboot/pxelinux.cfg/tools/tools-1.0.conf	2020-02-11 07:06:45.546765607 +0000
+I, [2020-02-11T00:06:43.697867 #479146]  INFO -- deploy-centos-8:     +++ /var/lib/tftpboot/pxelinux.cfg/tools/.chef-tools-120200211-4419-15yidop.0.conf	2020-02-11 07:06:45.546765607 +0000
+I, [2020-02-11T00:06:43.697914 #479146]  INFO -- deploy-centos-8:     @@ -1 +1,32 @@
+I, [2020-02-11T00:06:43.697966 #479146]  INFO -- deploy-centos-8:     +# This file deployed by Chef - DO NOT EDIT
+I, [2020-02-11T00:06:43.698015 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:43.698057 #479146]  INFO -- deploy-centos-8:     +# PXE Network Boot Menu
+I, [2020-02-11T00:06:43.698096 #479146]  INFO -- deploy-centos-8:     +#
+I, [2020-02-11T00:06:43.698134 #479146]  INFO -- deploy-centos-8:     +MENU TITLE Tools 1.0
+I, [2020-02-11T00:06:43.698170 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.698228 #479146]  INFO -- deploy-centos-8:     +F1 pxelinux.cfg/tools/help.txt
+I, [2020-02-11T00:06:43.698324 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.698587 #479146]  INFO -- deploy-centos-8:     +LABEL previous
+I, [2020-02-11T00:06:43.698811 #479146]  INFO -- deploy-centos-8:     +    MENU LABEL Previous Menu
+I, [2020-02-11T00:06:43.698875 #479146]  INFO -- deploy-centos-8:     +    MENU EXIT
+I, [2020-02-11T00:06:43.698916 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.698957 #479146]  INFO -- deploy-centos-8:     +MENU SEPARATOR
+I, [2020-02-11T00:06:43.698997 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.699034 #479146]  INFO -- deploy-centos-8:     +LABEL type
+I, [2020-02-11T00:06:43.699071 #479146]  INFO -- deploy-centos-8:     +    MENU LABEL Select install type:
+I, [2020-02-11T00:06:43.699111 #479146]  INFO -- deploy-centos-8:     +    MENU DISABLE
+I, [2020-02-11T00:06:43.699147 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.699182 #479146]  INFO -- deploy-centos-8:     +LABEL Tools
+I, [2020-02-11T00:06:43.699250 #479146]  INFO -- deploy-centos-8:     +  MENU LABEL Tools
+I, [2020-02-11T00:06:43.699288 #479146]  INFO -- deploy-centos-8:     +  KERNEL images/tools/memdisk
+I, [2020-02-11T00:06:43.699323 #479146]  INFO -- deploy-centos-8:     +  APPEND initrd=images/tools/fd-amibios.img 
+I, [2020-02-11T00:06:43.699362 #479146]  INFO -- deploy-centos-8:     +LABEL Tools
+I, [2020-02-11T00:06:43.699399 #479146]  INFO -- deploy-centos-8:     +  MENU LABEL Tools
+I, [2020-02-11T00:06:43.699435 #479146]  INFO -- deploy-centos-8:     +  KERNEL images/tools/memdisk
+I, [2020-02-11T00:06:43.699472 #479146]  INFO -- deploy-centos-8:     +  APPEND initrd=images/tools/fd-rompaq-sff7700.img 
+I, [2020-02-11T00:06:43.699508 #479146]  INFO -- deploy-centos-8:     +LABEL Tools
+I, [2020-02-11T00:06:43.699544 #479146]  INFO -- deploy-centos-8:     +  MENU LABEL Tools
+I, [2020-02-11T00:06:43.699582 #479146]  INFO -- deploy-centos-8:     +  KERNEL images/tools/memdisk
+I, [2020-02-11T00:06:43.699618 #479146]  INFO -- deploy-centos-8:     +  APPEND initrd=images/tools/fd-8433elp.img 
+I, [2020-02-11T00:06:43.739987 #479146]  INFO -- deploy-centos-8:     +
+I, [2020-02-11T00:06:43.740135 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0744'
+I, [2020-02-11T00:06:43.740220 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:43.768725 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:43.774957 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:06:43.775075 #479146]  INFO -- deploy-centos-8: Recipe: maxlab_pxe::images
+I, [2020-02-11T00:06:43.779927 #479146]  INFO -- deploy-centos-8:   * directory[/var/lib/tftpboot/images] action create
+I, [2020-02-11T00:06:43.790741 #479146]  INFO -- deploy-centos-8:     - create new directory /var/lib/tftpboot/images
+I, [2020-02-11T00:06:43.790905 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:06:43.790965 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:06:43.819144 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:06:43.836677 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:07:26.929593 #479146]  INFO -- deploy-centos-8:   * remote_file[/tmp/images-dirs.tar] action create
+I, [2020-02-11T00:07:41.211567 #479146]  INFO -- deploy-centos-8:     - create new file /tmp/images-dirs.tar
+I, [2020-02-11T00:07:41.211714 #479146]  INFO -- deploy-centos-8:     - update content in file /tmp/images-dirs.tar from none to 571bab
+I, [2020-02-11T00:07:41.285738 #479146]  INFO -- deploy-centos-8:     (file sizes exceed 10000000 bytes, diff output suppressed)
+I, [2020-02-11T00:07:41.285977 #479146]  INFO -- deploy-centos-8:     - change mode from '' to '0755'
+I, [2020-02-11T00:07:41.286071 #479146]  INFO -- deploy-centos-8:     - change owner from '' to 'root'
+I, [2020-02-11T00:07:41.374354 #479146]  INFO -- deploy-centos-8:     - change group from '' to 'root'
+I, [2020-02-11T00:07:41.380614 #479146]  INFO -- deploy-centos-8:     - restore selinux security context
+I, [2020-02-11T00:07:43.452937 #479146]  INFO -- deploy-centos-8:   * dnf_package[tar] action install (up to date)
+I, [2020-02-11T00:07:59.727378 #479146]  INFO -- deploy-centos-8:   * execute[untar] action run
+I, [2020-02-11T00:07:59.727495 #479146]  INFO -- deploy-centos-8:     - execute tar xvf /tmp/images-dirs.tar
+I, [2020-02-11T00:07:59.981552 #479146]  INFO -- deploy-centos-8:   * file[/tmp/images-dirs.tar] action delete
+I, [2020-02-11T00:07:59.981683 #479146]  INFO -- deploy-centos-8:     - delete file /tmp/images-dirs.tar
+I, [2020-02-11T00:07:59.981740 #479146]  INFO -- deploy-centos-8: Recipe: maxlab_firewall::update_firewalld
+I, [2020-02-11T00:08:02.379510 #479146]  INFO -- deploy-centos-8:   * execute[add-service-ssh-permanent] action run
+I, [2020-02-11T00:08:02.379777 #479146]  INFO -- deploy-centos-8:     - execute firewall-cmd --permanent --add-service=ssh --zone=dmz
+I, [2020-02-11T00:08:03.422327 #479146]  INFO -- deploy-centos-8:   * execute[add-service-ssh-runtime] action run
+I, [2020-02-11T00:08:03.422557 #479146]  INFO -- deploy-centos-8:     - execute firewall-cmd --add-service=ssh --zone=dmz
+I, [2020-02-11T00:08:04.230311 #479146]  INFO -- deploy-centos-8:   * execute[add-service-tftp-permanent] action run
+I, [2020-02-11T00:08:04.230437 #479146]  INFO -- deploy-centos-8:     - execute firewall-cmd --permanent --add-service=tftp --zone=dmz
+I, [2020-02-11T00:08:05.169102 #479146]  INFO -- deploy-centos-8:   * execute[add-service-tftp-runtime] action run
+I, [2020-02-11T00:08:05.169257 #479146]  INFO -- deploy-centos-8:     - execute firewall-cmd --add-service=tftp --zone=dmz
+I, [2020-02-11T00:08:05.275607 #479146]  INFO -- deploy-centos-8: 
+I, [2020-02-11T00:08:05.275718 #479146]  INFO -- deploy-centos-8: Running handlers:
+I, [2020-02-11T00:08:05.275761 #479146]  INFO -- deploy-centos-8: Running handlers complete
+I, [2020-02-11T00:08:05.275791 #479146]  INFO -- deploy-centos-8: Chef Infra Client finished, 87/114 resources updated in 02 minutes 23 seconds
+I, [2020-02-11T00:08:05.441408 #479146]  INFO -- deploy-centos-8: Downloading files from <deploy-centos-8>
+I, [2020-02-11T00:08:05.449140 #479146]  INFO -- deploy-centos-8: Finished converging <deploy-centos-8> (3m7.69s).
+I, [2020-02-11T00:08:05.449780 #479146]  INFO -- deploy-centos-8: -----> Setting up <deploy-centos-8>...
+I, [2020-02-11T00:08:05.461821 #479146]  INFO -- deploy-centos-8: Finished setting up <deploy-centos-8> (0m0.00s).
+I, [2020-02-11T00:08:05.462262 #479146]  INFO -- deploy-centos-8: -----> Verifying <deploy-centos-8>...
+I, [2020-02-11T00:08:06.688290 #479146]  INFO -- deploy-centos-8: Loaded tests from {:path=>".home.maxwell.projects.chef.maxlab.cookbooks.mylab_pxe.test.integration.deploy"} 
+I, [2020-02-11T00:08:09.995251 #479146]  INFO -- deploy-centos-8: Finished verifying <deploy-centos-8> (0m4.53s).
+I, [2020-02-11T00:08:09.996329 #479146]  INFO -- deploy-centos-8: -----> Destroying <deploy-centos-8>...
+I, [2020-02-11T00:08:10.781378 #479146]  INFO -- deploy-centos-8: Ignoring ffi-1.10.0 because its extensions are not built. Try: gem pristine ffi --version 1.10.0
+I, [2020-02-11T00:08:10.781693 #479146]  INFO -- deploy-centos-8: Ignoring json-2.2.0 because its extensions are not built. Try: gem pristine json --version 2.2.0
+I, [2020-02-11T00:08:10.782965 #479146]  INFO -- deploy-centos-8: Ignoring unf_ext-0.0.7.6 because its extensions are not built. Try: gem pristine unf_ext --version 0.0.7.6
+I, [2020-02-11T00:08:11.432327 #479146]  INFO -- deploy-centos-8: ------ Above is: require 'rubygems'
+I, [2020-02-11T00:08:14.466897 #479146]  INFO -- deploy-centos-8: ==> default: Forcing shutdown of VM...
+I, [2020-02-11T00:08:15.836547 #479146]  INFO -- deploy-centos-8: ==> default: Destroying VM and associated drives...
+I, [2020-02-11T00:08:17.059051 #479146]  INFO -- deploy-centos-8: Vagrant instance <deploy-centos-8> destroyed.
+I, [2020-02-11T00:08:17.060667 #479146]  INFO -- deploy-centos-8: Finished destroying <deploy-centos-8> (0m7.06s).
+I, [2020-02-11T00:08:17.062083 #479146]  INFO -- deploy-centos-8: Finished testing <deploy-centos-8> (4m35.63s).

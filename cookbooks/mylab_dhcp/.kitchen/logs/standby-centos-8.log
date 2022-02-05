@@ -1,0 +1,512 @@
+I, [2020-02-04T16:38:12.981762 #579351]  INFO -- standby-centos-8: -----> Cleaning up any prior instances of <standby-centos-8>
+I, [2020-02-04T16:38:12.981871 #579351]  INFO -- standby-centos-8: -----> Destroying <standby-centos-8>...
+I, [2020-02-04T16:38:12.982183 #579351]  INFO -- standby-centos-8: Finished destroying <standby-centos-8> (0m0.00s).
+I, [2020-02-04T16:38:12.982307 #579351]  INFO -- standby-centos-8: -----> Testing <standby-centos-8>
+I, [2020-02-04T16:38:12.982401 #579351]  INFO -- standby-centos-8: -----> Creating <standby-centos-8>...
+I, [2020-02-04T16:38:13.734678 #579351]  INFO -- standby-centos-8: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2020-02-04T16:38:13.884721 #579351]  INFO -- standby-centos-8: ==> default: Importing base box 'bento/centos-8'...
+I, [2020-02-04T16:38:23.774240 #579351]  INFO -- standby-centos-8: [KProgress: 30%[KProgress: 50%[KProgress: 60%[KProgress: 80%[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
+I, [2020-02-04T16:38:24.021078 #579351]  INFO -- standby-centos-8: ==> default: Checking if box 'bento/centos-8' version '202001.16.0' is up to date...
+I, [2020-02-04T16:38:24.742288 #579351]  INFO -- standby-centos-8: ==> default: Setting the name of the VM: kitchen-mylab_dhcp-standby-centos-8-6069339a-9bb6-40dc-bab4-7a27acf9ad24
+I, [2020-02-04T16:38:26.454981 #579351]  INFO -- standby-centos-8: ==> default: Clearing any previously set network interfaces...
+I, [2020-02-04T16:38:26.570735 #579351]  INFO -- standby-centos-8: ==> default: Preparing network interfaces based on configuration...
+I, [2020-02-04T16:38:26.570993 #579351]  INFO -- standby-centos-8:     default: Adapter 1: nat
+I, [2020-02-04T16:38:26.688186 #579351]  INFO -- standby-centos-8: ==> default: Forwarding ports...
+I, [2020-02-04T16:38:26.821751 #579351]  INFO -- standby-centos-8:     default: 22 (guest) => 2222 (host) (adapter 1)
+I, [2020-02-04T16:38:27.087807 #579351]  INFO -- standby-centos-8: ==> default: Running 'pre-boot' VM customizations...
+I, [2020-02-04T16:38:27.186933 #579351]  INFO -- standby-centos-8: ==> default: Booting VM...
+I, [2020-02-04T16:38:27.511032 #579351]  INFO -- standby-centos-8: ==> default: Waiting for machine to boot. This may take a few minutes...
+I, [2020-02-04T16:38:27.854015 #579351]  INFO -- standby-centos-8:     default: SSH address: 127.0.0.1:2222
+I, [2020-02-04T16:38:27.854188 #579351]  INFO -- standby-centos-8:     default: SSH username: vagrant
+I, [2020-02-04T16:38:27.854241 #579351]  INFO -- standby-centos-8:     default: SSH auth method: private key
+I, [2020-02-04T16:38:52.105156 #579351]  INFO -- standby-centos-8:     default: 
+I, [2020-02-04T16:38:52.105285 #579351]  INFO -- standby-centos-8:     default: Vagrant insecure key detected. Vagrant will automatically replace
+I, [2020-02-04T16:38:52.105335 #579351]  INFO -- standby-centos-8:     default: this with a newly generated keypair for better security.
+I, [2020-02-04T16:38:57.544126 #579351]  INFO -- standby-centos-8:     default: 
+I, [2020-02-04T16:38:57.544203 #579351]  INFO -- standby-centos-8:     default: Inserting generated public key within guest...
+I, [2020-02-04T16:38:58.060274 #579351]  INFO -- standby-centos-8:     default: Removing insecure key from the guest if it's present...
+I, [2020-02-04T16:38:58.553679 #579351]  INFO -- standby-centos-8:     default: Key inserted! Disconnecting and reconnecting using new SSH key...
+I, [2020-02-04T16:38:59.523441 #579351]  INFO -- standby-centos-8: ==> default: Machine booted and ready!
+I, [2020-02-04T16:38:59.524326 #579351]  INFO -- standby-centos-8: ==> default: Checking for guest additions in VM...
+I, [2020-02-04T16:38:59.616131 #579351]  INFO -- standby-centos-8: ==> default: Setting hostname...
+I, [2020-02-04T16:39:00.902994 #579351]  INFO -- standby-centos-8: ==> default: Mounting shared folders...
+I, [2020-02-04T16:39:00.903254 #579351]  INFO -- standby-centos-8:     default: /tmp/omnibus/cache => /home/maxwell/.kitchen/cache
+I, [2020-02-04T16:39:02.070618 #579351]  INFO -- standby-centos-8: ==> default: Machine not provisioned because `--no-provision` is specified.
+I, [2020-02-04T16:39:03.956884 #579351]  INFO -- standby-centos-8: [SSH] Established
+I, [2020-02-04T16:39:03.957326 #579351]  INFO -- standby-centos-8: Vagrant instance <standby-centos-8> created.
+I, [2020-02-04T16:39:03.958034 #579351]  INFO -- standby-centos-8: Finished creating <standby-centos-8> (0m50.97s).
+I, [2020-02-04T16:39:03.958267 #579351]  INFO -- standby-centos-8: -----> Converging <standby-centos-8>...
+I, [2020-02-04T16:39:03.960192 #579351]  INFO -- standby-centos-8: Preparing files for transfer
+I, [2020-02-04T16:39:03.960400 #579351]  INFO -- standby-centos-8: Installing cookbooks for Policyfile /home/maxwell/projects/chef/maxlab/policyfiles/tk_mylab_dhcp_server_standby.rb using `chef install`
+I, [2020-02-04T16:39:05.357906 #579351]  INFO -- standby-centos-8: Installing cookbooks from lock
+I, [2020-02-04T16:39:05.359795 #579351]  INFO -- standby-centos-8: Installing maxlab_dhcp     1.2.1
+I, [2020-02-04T16:39:05.360444 #579351]  INFO -- standby-centos-8: Installing maxlab_firewall 1.1.4
+I, [2020-02-04T16:39:05.360847 #579351]  INFO -- standby-centos-8: Installing mylab_dhcp      1.0.1
+I, [2020-02-04T16:39:05.376095 #579351]  INFO -- standby-centos-8: Updating policy lock using `chef update`
+I, [2020-02-04T16:39:06.664497 #579351]  INFO -- standby-centos-8: Attributes already up to date
+I, [2020-02-04T16:39:06.665160 #579351]  INFO -- standby-centos-8: Building policy tk_mylab_dhcp_server_standby
+I, [2020-02-04T16:39:06.665268 #579351]  INFO -- standby-centos-8: Expanded run list: recipe[maxlab_firewall::base_firewalld], recipe[mylab_dhcp::deploy], recipe[maxlab_firewall::update_firewalld]
+I, [2020-02-04T16:39:06.665307 #579351]  INFO -- standby-centos-8: Caching Cookbooks...
+I, [2020-02-04T16:39:06.665416 #579351]  INFO -- standby-centos-8: Installing mylab_dhcp      >= 0.0.0 from path
+I, [2020-02-04T16:39:06.665857 #579351]  INFO -- standby-centos-8: Installing maxlab_dhcp     >= 0.0.0 from path
+I, [2020-02-04T16:39:06.666304 #579351]  INFO -- standby-centos-8: Installing maxlab_firewall >= 0.0.0 from path
+I, [2020-02-04T16:39:09.043874 #579351]  INFO -- standby-centos-8: 
+I, [2020-02-04T16:39:09.043976 #579351]  INFO -- standby-centos-8: Lockfile written to /home/maxwell/projects/chef/maxlab/policyfiles/tk_mylab_dhcp_server_standby.lock.json
+I, [2020-02-04T16:39:09.552251 #579351]  INFO -- standby-centos-8: Policy revision id: 70fb9f5f816968454230c0657a779d75fabea38ad7ded4131b36362396b84531
+I, [2020-02-04T16:39:09.624422 #579351]  INFO -- standby-centos-8: Preparing dna.json
+I, [2020-02-04T16:39:09.625122 #579351]  INFO -- standby-centos-8: Exporting cookbook dependencies from Policyfile /tmp/standby-centos-8-sandbox-20200204-579351-16y20os...
+I, [2020-02-04T16:39:14.573921 #579351]  INFO -- standby-centos-8: Exported policy 'tk_mylab_dhcp_server_standby' to /tmp/standby-centos-8-sandbox-20200204-579351-16y20os
+I, [2020-02-04T16:39:14.574246 #579351]  INFO -- standby-centos-8: 
+I, [2020-02-04T16:39:14.574384 #579351]  INFO -- standby-centos-8: To converge this system with the exported policy, run:
+I, [2020-02-04T16:39:14.574511 #579351]  INFO -- standby-centos-8:   cd /tmp/standby-centos-8-sandbox-20200204-579351-16y20os
+I, [2020-02-04T16:39:14.574623 #579351]  INFO -- standby-centos-8:   chef-client -z
+I, [2020-02-04T16:39:14.607458 #579351]  INFO -- standby-centos-8: Removing non-cookbook files before transfer
+I, [2020-02-04T16:39:14.608132 #579351]  INFO -- standby-centos-8: Preparing data_bags
+I, [2020-02-04T16:39:14.616888 #579351]  INFO -- standby-centos-8: Preparing nodes
+I, [2020-02-04T16:39:14.617221 #579351]  INFO -- standby-centos-8: Preparing validation.pem
+I, [2020-02-04T16:39:14.617484 #579351]  INFO -- standby-centos-8: Preparing client.rb
+I, [2020-02-04T16:39:14.680896 #579351]  INFO -- standby-centos-8: -----> Installing Chef install only if missing package
+I, [2020-02-04T16:39:14.685396 #579351]  INFO -- standby-centos-8: Downloading https://omnitruck.chef.io/install.sh to file /tmp/install.sh
+I, [2020-02-04T16:39:14.685506 #579351]  INFO -- standby-centos-8: Trying wget...
+I, [2020-02-04T16:39:14.917137 #579351]  INFO -- standby-centos-8: Download complete.
+I, [2020-02-04T16:39:14.966182 #579351]  INFO -- standby-centos-8: el 8 x86_64
+I, [2020-02-04T16:39:14.966280 #579351]  INFO -- standby-centos-8: Getting information for chef stable  for el...
+I, [2020-02-04T16:39:14.966324 #579351]  INFO -- standby-centos-8: downloading https://omnitruck.chef.io/stable/chef/metadata?v=&p=el&pv=8&m=x86_64
+I, [2020-02-04T16:39:14.966354 #579351]  INFO -- standby-centos-8:   to file /tmp/install.sh.4177/metadata.txt
+I, [2020-02-04T16:39:14.967356 #579351]  INFO -- standby-centos-8: trying wget...
+I, [2020-02-04T16:39:15.057263 #579351]  INFO -- standby-centos-8: sha1	b4c3c270192d601881c9e0927b5f05ae5f3ed672
+I, [2020-02-04T16:39:15.057346 #579351]  INFO -- standby-centos-8: sha256	9d6065d634880b56887db95e9c5189dd8de7b727e3e99b38fbaa15ef80326214
+I, [2020-02-04T16:39:15.057380 #579351]  INFO -- standby-centos-8: url	https://packages.chef.io/files/stable/chef/15.7.32/el/8/chef-15.7.32-1.el7.x86_64.rpm
+I, [2020-02-04T16:39:15.057699 #579351]  INFO -- standby-centos-8: version	15.7.32
+I, [2020-02-04T16:39:15.060232 #579351]  INFO -- standby-centos-8: downloaded metadata file looks valid...
+I, [2020-02-04T16:39:15.074806 #579351]  INFO -- standby-centos-8: /tmp/omnibus/cache/chef-15.7.32-1.el7.x86_64.rpm exists
+I, [2020-02-04T16:39:15.074893 #579351]  INFO -- standby-centos-8: Comparing checksum with sha256sum...
+I, [2020-02-04T16:39:15.252909 #579351]  INFO -- standby-centos-8: 
+I, [2020-02-04T16:39:15.252985 #579351]  INFO -- standby-centos-8: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2020-02-04T16:39:15.253016 #579351]  INFO -- standby-centos-8: 
+I, [2020-02-04T16:39:15.253042 #579351]  INFO -- standby-centos-8: You are installing a package without a version pin.  If you are installing
+I, [2020-02-04T16:39:15.253075 #579351]  INFO -- standby-centos-8: on production servers via an automated process this is DANGEROUS and you will
+I, [2020-02-04T16:39:15.253109 #579351]  INFO -- standby-centos-8: be upgraded without warning on new releases, even to new major releases.
+I, [2020-02-04T16:39:15.253135 #579351]  INFO -- standby-centos-8: Letting the version float is only appropriate in desktop, test, development or
+I, [2020-02-04T16:39:15.253158 #579351]  INFO -- standby-centos-8: CI/CD environments.
+I, [2020-02-04T16:39:15.253178 #579351]  INFO -- standby-centos-8: 
+I, [2020-02-04T16:39:15.253200 #579351]  INFO -- standby-centos-8: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2020-02-04T16:39:15.253222 #579351]  INFO -- standby-centos-8: 
+I, [2020-02-04T16:39:15.253241 #579351]  INFO -- standby-centos-8: Installing chef 
+I, [2020-02-04T16:39:15.253262 #579351]  INFO -- standby-centos-8: installing with rpm...
+I, [2020-02-04T16:39:15.311586 #579351]  INFO -- standby-centos-8: warning: /tmp/omnibus/cache/chef-15.7.32-1.el7.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+I, [2020-02-04T16:39:15.520906 #579351]  INFO -- standby-centos-8: Verifying...                                                            (100%)#                                 (100%)##                                (100%)###                               (100%)####                              (100%)#####                             (100%)######                            (100%)#######                           (100%)########                          (100%)#########                         (100%)##########                        (100%)###########                       (100%)############                      (100%)#############                     (100%)##############                    (100%)###############                   (100%)################                  (100%)#################                 (100%)##################                (100%)###################               (100%)####################              (100%)#####################             (100%)######################            (100%)#######################           (100%)########################          (100%)#########################         (100%)##########################        (100%)###########################       (100%)############################      (100%)#############################     (100%)##############################    (100%)###############################   (100%)################################  (100%)################################# (100%)################################# [100%]
+I, [2020-02-04T16:39:15.901837 #579351]  INFO -- standby-centos-8: Preparing...                                                            (100%)#                                 (100%)##                                (100%)###                               (100%)####                              (100%)#####                             (100%)######                            (100%)#######                           (100%)########                          (100%)#########                         (100%)##########                        (100%)###########                       (100%)############                      (100%)#############                     (100%)##############                    (100%)###############                   (100%)################                  (100%)#################                 (100%)##################                (100%)###################               (100%)####################              (100%)#####################             (100%)######################            (100%)#######################           (100%)########################          (100%)#########################         (100%)##########################        (100%)###########################       (100%)############################      (100%)#############################     (100%)##############################    (100%)###############################   (100%)################################  (100%)################################# (100%)################################# [100%]
+I, [2020-02-04T16:39:15.964886 #579351]  INFO -- standby-centos-8: Updating / installing...
+I, [2020-02-04T16:39:23.210718 #579351]  INFO -- standby-centos-8:    1:chef-15.7.32-1.el7                                                 (  1%)#                                 (  4%)##                                (  7%)###                               ( 10%)####                              ( 13%)#####                             ( 16%)######                            ( 19%)#######                           ( 22%)########                          ( 25%)#########                         ( 28%)##########                        ( 31%)###########                       ( 34%)############                      ( 37%)#############                     ( 40%)##############                    ( 43%)###############                   ( 46%)################                  ( 49%)#################                 ( 51%)##################                ( 54%)###################               ( 57%)####################              ( 60%)#####################             ( 63%)######################            ( 66%)#######################           ( 69%)########################          ( 72%)#########################         ( 75%)##########################        ( 78%)###########################       ( 81%)############################      ( 84%)#############################     ( 87%)##############################    ( 90%)###############################   ( 93%)################################  ( 96%)################################# ( 99%)################################# [100%]
+I, [2020-02-04T16:39:23.713708 #579351]  INFO -- standby-centos-8: Thank you for installing Chef Infra Client! For help getting started visit https://learn.chef.io
+I, [2020-02-04T16:39:23.895550 #579351]  INFO -- standby-centos-8: Transferring files to <standby-centos-8>
+I, [2020-02-04T16:39:27.123519 #579351]  INFO -- standby-centos-8: +---------------------------------------------+
+I, [2020-02-04T16:39:27.123587 #579351]  INFO -- standby-centos-8: [32m✔[0m 2 product licenses accepted.
+I, [2020-02-04T16:39:27.123620 #579351]  INFO -- standby-centos-8: +---------------------------------------------+
+I, [2020-02-04T16:39:27.376701 #579351]  INFO -- standby-centos-8: Starting Chef Infra Client, version 15.7.32
+I, [2020-02-04T16:39:29.010793 #579351]  INFO -- standby-centos-8: Creating a new client identity for standby-centos-8 using the validator key.
+I, [2020-02-04T16:39:29.098720 #579351]  INFO -- standby-centos-8: Using policy 'tk_mylab_dhcp_server_standby' at revision '70fb9f5f816968454230c0657a779d75fabea38ad7ded4131b36362396b84531'
+I, [2020-02-04T16:39:29.131605 #579351]  INFO -- standby-centos-8: resolving cookbooks for run list: ["maxlab_firewall::base_firewalld@1.1.4 (7e61167)", "mylab_dhcp::deploy@1.0.1 (e322626)", "maxlab_firewall::update_firewalld@1.1.4 (7e61167)"]
+I, [2020-02-04T16:39:29.167436 #579351]  INFO -- standby-centos-8: Synchronizing Cookbooks:
+I, [2020-02-04T16:39:29.196968 #579351]  INFO -- standby-centos-8:   - maxlab_dhcp (1.2.1)
+I, [2020-02-04T16:39:29.213582 #579351]  INFO -- standby-centos-8:   - maxlab_firewall (1.1.4)
+I, [2020-02-04T16:39:29.229935 #579351]  INFO -- standby-centos-8:   - mylab_dhcp (1.0.1)
+I, [2020-02-04T16:39:29.230149 #579351]  INFO -- standby-centos-8: Installing Cookbook Gems:
+I, [2020-02-04T16:39:29.230187 #579351]  INFO -- standby-centos-8: Compiling Cookbooks...
+I, [2020-02-04T16:39:29.242134 #579351]  INFO -- standby-centos-8: Converging 9 resources
+I, [2020-02-04T16:39:29.242200 #579351]  INFO -- standby-centos-8: Recipe: maxlab_firewall::base_firewalld
+I, [2020-02-04T16:39:40.037600 #579351]  INFO -- standby-centos-8:   * dnf_package[firewalld] action install (up to date)
+I, [2020-02-04T16:39:40.450861 #579351]  INFO -- standby-centos-8:   * service[firewalld] action enable
+I, [2020-02-04T16:39:40.450986 #579351]  INFO -- standby-centos-8:     - enable service service[firewalld]
+I, [2020-02-04T16:39:41.155604 #579351]  INFO -- standby-centos-8:   * service[firewalld] action start
+I, [2020-02-04T16:39:41.155689 #579351]  INFO -- standby-centos-8:     - start service service[firewalld]
+I, [2020-02-04T16:39:43.598985 #579351]  INFO -- standby-centos-8:   * execute[set-default-zone] action run
+I, [2020-02-04T16:39:43.599057 #579351]  INFO -- standby-centos-8:     - execute firewall-cmd --set-default-zone=dmz
+I, [2020-02-04T16:39:44.012388 #579351]  INFO -- standby-centos-8:   * execute[set-default-interface-default-zone] action run
+I, [2020-02-04T16:39:44.012458 #579351]  INFO -- standby-centos-8:     - execute firewall-cmd --change-interface=eth0 --zone=dmz
+I, [2020-02-04T16:39:44.012492 #579351]  INFO -- standby-centos-8: Recipe: maxlab_dhcp::deploy
+I, [2020-02-04T16:39:49.564218 #579351]  INFO -- standby-centos-8:   * dnf_package[dhcp-server] action install
+I, [2020-02-04T16:39:49.564313 #579351]  INFO -- standby-centos-8:     - install version 12:4.3.6-34.el8.x86_64 of package dhcp-server
+I, [2020-02-04T16:39:49.630559 #579351]  INFO -- standby-centos-8:   * template[/etc/dhcp/dhcpd.conf] action create
+I, [2020-02-04T16:39:49.630640 #579351]  INFO -- standby-centos-8:     - update content in file /etc/dhcp/dhcpd.conf from 02bd68 to 267c01
+I, [2020-02-04T16:39:49.630678 #579351]  INFO -- standby-centos-8:     --- /etc/dhcp/dhcpd.conf	2019-11-19 15:33:08.000000000 +0000
+I, [2020-02-04T16:39:49.630701 #579351]  INFO -- standby-centos-8:     +++ /etc/dhcp/.chef-dhcpd20200204-4419-lix56k.conf	2020-02-04 23:39:49.581336407 +0000
+I, [2020-02-04T16:39:49.630717 #579351]  INFO -- standby-centos-8:     @@ -1,6 +1,348 @@
+I, [2020-02-04T16:39:49.630732 #579351]  INFO -- standby-centos-8:      #
+I, [2020-02-04T16:39:49.630748 #579351]  INFO -- standby-centos-8:     -# DHCP Server Configuration file.
+I, [2020-02-04T16:39:49.630763 #579351]  INFO -- standby-centos-8:     -#   see /usr/share/doc/dhcp-server/dhcpd.conf.example
+I, [2020-02-04T16:39:49.630778 #579351]  INFO -- standby-centos-8:     -#   see dhcpd.conf(5) man page
+I, [2020-02-04T16:39:49.630792 #579351]  INFO -- standby-centos-8:     +# /etc/dhcp/dhcpd.conf - DHCP server instance ''
+I, [2020-02-04T16:39:49.630808 #579351]  INFO -- standby-centos-8:      #
+I, [2020-02-04T16:39:49.630833 #579351]  INFO -- standby-centos-8:     +# This file deployed via Chef - DO NOT EDIT
+I, [2020-02-04T16:39:49.630848 #579351]  INFO -- standby-centos-8:     +#
+I, [2020-02-04T16:39:49.630862 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.630876 #579351]  INFO -- standby-centos-8:     +# Global Options
+I, [2020-02-04T16:39:49.630890 #579351]  INFO -- standby-centos-8:     +ddns-update-style interim;
+I, [2020-02-04T16:39:49.630914 #579351]  INFO -- standby-centos-8:     +authoritative;
+I, [2020-02-04T16:39:49.630929 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.630943 #579351]  INFO -- standby-centos-8:     +subnet 10.0.2.0 netmask 255.255.255.0 {
+I, [2020-02-04T16:39:49.630957 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.630972 #579351]  INFO -- standby-centos-8:     +  option domain-name "testkitchen";
+I, [2020-02-04T16:39:49.630987 #579351]  INFO -- standby-centos-8:     +  option domain-name-servers 10.0.2.11, 10.0.2.12, 10.0.2.13;
+I, [2020-02-04T16:39:49.631003 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.631024 #579351]  INFO -- standby-centos-8:     +  range 10.0.2.200 10.0.2.240;
+I, [2020-02-04T16:39:49.631056 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.631104 #579351]  INFO -- standby-centos-8:     +  option routers 10.0.2.2;
+I, [2020-02-04T16:39:49.631128 #579351]  INFO -- standby-centos-8:     +  option broadcast-address 10.0.2.255;
+I, [2020-02-04T16:39:49.631144 #579351]  INFO -- standby-centos-8:     +  option subnet-mask 255.255.255.0;
+I, [2020-02-04T16:39:49.631160 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.631175 #579351]  INFO -- standby-centos-8:     +  default-lease-time 1440;
+I, [2020-02-04T16:39:49.631189 #579351]  INFO -- standby-centos-8:     +  max-lease-time 1440;
+I, [2020-02-04T16:39:49.631203 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.631219 #579351]  INFO -- standby-centos-8:     +  option ip-forwarding off;
+I, [2020-02-04T16:39:49.631232 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.631249 #579351]  INFO -- standby-centos-8:     +  option ntp-servers 10.0.2.2;
+I, [2020-02-04T16:39:49.631263 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.631278 #579351]  INFO -- standby-centos-8:     +  # PXE boot information
+I, [2020-02-04T16:39:49.631292 #579351]  INFO -- standby-centos-8:     +  option root-path "/var/lib/tftpboot";
+I, [2020-02-04T16:39:49.631307 #579351]  INFO -- standby-centos-8:     +  filename "/pxelinux.0";
+I, [2020-02-04T16:39:49.631324 #579351]  INFO -- standby-centos-8:     +  next-server 10.0.2.15;
+I, [2020-02-04T16:39:49.631338 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.631352 #579351]  INFO -- standby-centos-8:     +  #
+I, [2020-02-04T16:39:49.631366 #579351]  INFO -- standby-centos-8:     +  # NAS
+I, [2020-02-04T16:39:49.631380 #579351]  INFO -- standby-centos-8:     +  #
+I, [2020-02-04T16:39:49.631393 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.631407 #579351]  INFO -- standby-centos-8:     +  group {
+I, [2020-02-04T16:39:49.631422 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.631436 #579351]  INFO -- standby-centos-8:     +    # Lenovo B590 for use as NAS
+I, [2020-02-04T16:39:49.631451 #579351]  INFO -- standby-centos-8:     +    host laptopnas {
+I, [2020-02-04T16:39:49.631465 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 3c:97:0e:a7:8a:9d;
+I, [2020-02-04T16:39:49.631481 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.249;
+I, [2020-02-04T16:39:49.631495 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.631509 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.631524 #579351]  INFO -- standby-centos-8:     +    # HP Data Vault X510 (NFS, Samba)
+I, [2020-02-04T16:39:49.631538 #579351]  INFO -- standby-centos-8:     +    host filer {
+I, [2020-02-04T16:39:49.631552 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 00:26:2d:00:04:7c;
+I, [2020-02-04T16:39:49.631575 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.250;
+I, [2020-02-04T16:39:49.631595 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.631609 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.631624 #579351]  INFO -- standby-centos-8:     +    # Spruill Synologu DS218+ NAS
+I, [2020-02-04T16:39:49.631639 #579351]  INFO -- standby-centos-8:     +    host synology {
+I, [2020-02-04T16:39:49.631654 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 00:11:32:BB:CE:0A;
+I, [2020-02-04T16:39:49.631668 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.251;
+I, [2020-02-04T16:39:49.631683 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.631699 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.631713 #579351]  INFO -- standby-centos-8:     +    # HP Data Vault X510 (NFS, Samba)
+I, [2020-02-04T16:39:49.631728 #579351]  INFO -- standby-centos-8:     +    host aux {
+I, [2020-02-04T16:39:49.631742 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 00:26:2d:00:03:a9;
+I, [2020-02-04T16:39:49.631756 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.252;
+I, [2020-02-04T16:39:49.631770 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.631784 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.631798 #579351]  INFO -- standby-centos-8:     +    # HP Data Vault X310 (NFS, Samba)
+I, [2020-02-04T16:39:49.631813 #579351]  INFO -- standby-centos-8:     +    host central {
+I, [2020-02-04T16:39:49.631827 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 00:26:2d:02:b2:58;
+I, [2020-02-04T16:39:49.631841 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.253;
+I, [2020-02-04T16:39:49.631856 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.631870 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.631884 #579351]  INFO -- standby-centos-8:     +  }
+I, [2020-02-04T16:39:49.631897 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.631912 #579351]  INFO -- standby-centos-8:     +  #
+I, [2020-02-04T16:39:49.631926 #579351]  INFO -- standby-centos-8:     +  # graphite
+I, [2020-02-04T16:39:49.631943 #579351]  INFO -- standby-centos-8:     +  #
+I, [2020-02-04T16:39:49.631957 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.631972 #579351]  INFO -- standby-centos-8:     +  group {
+I, [2020-02-04T16:39:49.631985 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.631999 #579351]  INFO -- standby-centos-8:     +    # Graphite Metric Server VM 1
+I, [2020-02-04T16:39:49.632015 #579351]  INFO -- standby-centos-8:     +    host graphite1 {
+I, [2020-02-04T16:39:49.632030 #579351]  INFO -- standby-centos-8:     +      hardware ethernet CA:74:81:61:F8:E4;
+I, [2020-02-04T16:39:49.632044 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.120;
+I, [2020-02-04T16:39:49.632058 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.632072 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.632097 #579351]  INFO -- standby-centos-8:     +    # Graphite Metric Server VM 2
+I, [2020-02-04T16:39:49.632116 #579351]  INFO -- standby-centos-8:     +    host graphite2 {
+I, [2020-02-04T16:39:49.632130 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 76:9B:F2:F3:EE:FB;
+I, [2020-02-04T16:39:49.632144 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.121;
+I, [2020-02-04T16:39:49.632160 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.632174 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.632188 #579351]  INFO -- standby-centos-8:     +  }
+I, [2020-02-04T16:39:49.632202 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.632216 #579351]  INFO -- standby-centos-8:     +  #
+I, [2020-02-04T16:39:49.632229 #579351]  INFO -- standby-centos-8:     +  # hypervisor
+I, [2020-02-04T16:39:49.632243 #579351]  INFO -- standby-centos-8:     +  #
+I, [2020-02-04T16:39:49.632262 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.632285 #579351]  INFO -- standby-centos-8:     +  group {
+I, [2020-02-04T16:39:49.632299 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.632313 #579351]  INFO -- standby-centos-8:     +    # Lenovo B590 Hypervisor
+I, [2020-02-04T16:39:49.632327 #579351]  INFO -- standby-centos-8:     +    host lenovoflash1 {
+I, [2020-02-04T16:39:49.632342 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 3c:97:0e:a8:f2:e2;
+I, [2020-02-04T16:39:49.632356 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.81;
+I, [2020-02-04T16:39:49.632370 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.632387 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.632402 #579351]  INFO -- standby-centos-8:     +    # Lenovo B590 Hypervisor
+I, [2020-02-04T16:39:49.632416 #579351]  INFO -- standby-centos-8:     +    host lenovoflash2 {
+I, [2020-02-04T16:39:49.632432 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 3c:97:0e:a7:8f:b8;
+I, [2020-02-04T16:39:49.632445 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.82;
+I, [2020-02-04T16:39:49.632460 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.632474 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.632488 #579351]  INFO -- standby-centos-8:     +    # Lenovo B590 Hypervisor
+I, [2020-02-04T16:39:49.632502 #579351]  INFO -- standby-centos-8:     +    host lenovoflash3 {
+I, [2020-02-04T16:39:49.632516 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 3c:97:0e:a7:8f:a6;
+I, [2020-02-04T16:39:49.632530 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.83;
+I, [2020-02-04T16:39:49.632543 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.632556 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.632573 #579351]  INFO -- standby-centos-8:     +    # Lenovo B590 Hypervisor
+I, [2020-02-04T16:39:49.632588 #579351]  INFO -- standby-centos-8:     +    host lenovoflash4 {
+I, [2020-02-04T16:39:49.632602 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 3c:97:0e:a7:90:09;
+I, [2020-02-04T16:39:49.632615 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.91;
+I, [2020-02-04T16:39:49.632632 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.632645 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.632659 #579351]  INFO -- standby-centos-8:     +    # Lenovo B590 Hypervisor
+I, [2020-02-04T16:39:49.632672 #579351]  INFO -- standby-centos-8:     +    host lenovoflash5 {
+I, [2020-02-04T16:39:49.632686 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 3c:97:0e:a7:90:aa;
+I, [2020-02-04T16:39:49.632699 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.92;
+I, [2020-02-04T16:39:49.632712 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.632727 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.632741 #579351]  INFO -- standby-centos-8:     +    # Toshiba Z40 Hypervisor
+I, [2020-02-04T16:39:49.632759 #579351]  INFO -- standby-centos-8:     +    host toshiprox1 {
+I, [2020-02-04T16:39:49.632772 #579351]  INFO -- standby-centos-8:     +      hardware ethernet ec:21:e5:c0:6d:1a;
+I, [2020-02-04T16:39:49.632785 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.95;
+I, [2020-02-04T16:39:49.632799 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.632812 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.632826 #579351]  INFO -- standby-centos-8:     +  }
+I, [2020-02-04T16:39:49.632840 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.632854 #579351]  INFO -- standby-centos-8:     +  #
+I, [2020-02-04T16:39:49.632867 #579351]  INFO -- standby-centos-8:     +  # infra
+I, [2020-02-04T16:39:49.632880 #579351]  INFO -- standby-centos-8:     +  #
+I, [2020-02-04T16:39:49.632893 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.632912 #579351]  INFO -- standby-centos-8:     +  group {
+I, [2020-02-04T16:39:49.632926 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.632939 #579351]  INFO -- standby-centos-8:     +    # Core Infrastructure (DNS, DHCP, NTP)
+I, [2020-02-04T16:39:49.632953 #579351]  INFO -- standby-centos-8:     +    host core {
+I, [2020-02-04T16:39:49.632967 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 8e:28:fa:de:d7:9f;
+I, [2020-02-04T16:39:49.632982 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.100;
+I, [2020-02-04T16:39:49.632995 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.633008 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.633022 #579351]  INFO -- standby-centos-8:     +    # Chef Infrastructure
+I, [2020-02-04T16:39:49.633035 #579351]  INFO -- standby-centos-8:     +    host chef {
+I, [2020-02-04T16:39:49.633049 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 2a:41:03:6f:54:cf;
+I, [2020-02-04T16:39:49.635848 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.101;
+I, [2020-02-04T16:39:49.635963 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.636011 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.636041 #579351]  INFO -- standby-centos-8:     +    # Repository Infrastructure (TFTP, HTTP)
+I, [2020-02-04T16:39:49.636078 #579351]  INFO -- standby-centos-8:     +    host repo {
+I, [2020-02-04T16:39:49.636144 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 5E:CC:11:BD:17:19;
+I, [2020-02-04T16:39:49.636194 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.102;
+I, [2020-02-04T16:39:49.636226 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.636252 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.636279 #579351]  INFO -- standby-centos-8:     +    # Repository Infrastructure (TFTP, HTTP) Repo Backup
+I, [2020-02-04T16:39:49.636309 #579351]  INFO -- standby-centos-8:     +    host stor {
+I, [2020-02-04T16:39:49.636337 #579351]  INFO -- standby-centos-8:     +      hardware ethernet A2:B0:07:BD:2F:FB;
+I, [2020-02-04T16:39:49.636364 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.103;
+I, [2020-02-04T16:39:49.636391 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.636416 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.636450 #579351]  INFO -- standby-centos-8:     +    # Repository Infrastructure (TFTP, HTTP) Manual Build
+I, [2020-02-04T16:39:49.636486 #579351]  INFO -- standby-centos-8:     +    host repomanual {
+I, [2020-02-04T16:39:49.636515 #579351]  INFO -- standby-centos-8:     +      hardware ethernet E2:B2:DD:8B:67:B4;
+I, [2020-02-04T16:39:49.636540 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.104;
+I, [2020-02-04T16:39:49.636565 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.636589 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.636614 #579351]  INFO -- standby-centos-8:     +    # Core Infrastructure (DNS, DHCP, NTP) via Chef
+I, [2020-02-04T16:39:49.636642 #579351]  INFO -- standby-centos-8:     +    host bank {
+I, [2020-02-04T16:39:49.636672 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 52:C8:DD:62:5C:76;
+I, [2020-02-04T16:39:49.636705 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.105;
+I, [2020-02-04T16:39:49.636749 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.636789 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.636848 #579351]  INFO -- standby-centos-8:     +    # PXE Boot testing VM 1
+I, [2020-02-04T16:39:49.636891 #579351]  INFO -- standby-centos-8:     +    host pxetest1 {
+I, [2020-02-04T16:39:49.636939 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 1A:92:46:4E:75:DD;
+I, [2020-02-04T16:39:49.636962 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.122;
+I, [2020-02-04T16:39:49.636983 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.637020 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.637040 #579351]  INFO -- standby-centos-8:     +  }
+I, [2020-02-04T16:39:49.637061 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.637079 #579351]  INFO -- standby-centos-8:     +  #
+I, [2020-02-04T16:39:49.637118 #579351]  INFO -- standby-centos-8:     +  # laptop
+I, [2020-02-04T16:39:49.637139 #579351]  INFO -- standby-centos-8:     +  #
+I, [2020-02-04T16:39:49.637160 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.637204 #579351]  INFO -- standby-centos-8:     +  group {
+I, [2020-02-04T16:39:49.637222 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.637241 #579351]  INFO -- standby-centos-8:     +    # Macbook Pro 2012 (Wired IP)
+I, [2020-02-04T16:39:49.637275 #579351]  INFO -- standby-centos-8:     +    host macbook {
+I, [2020-02-04T16:39:49.637301 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 0c:4d:e9:cb:52:1c;
+I, [2020-02-04T16:39:49.637323 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.35;
+I, [2020-02-04T16:39:49.637343 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.637364 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.637390 #579351]  INFO -- standby-centos-8:     +    # Macbook Pro 2012 (Wifi IP)
+I, [2020-02-04T16:39:49.637412 #579351]  INFO -- standby-centos-8:     +    host macbookwifi {
+I, [2020-02-04T16:39:49.637435 #579351]  INFO -- standby-centos-8:     +      hardware ethernet a4:5e:60:cb:3f:5d;
+I, [2020-02-04T16:39:49.637458 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.36;
+I, [2020-02-04T16:39:49.637477 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.637495 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.637515 #579351]  INFO -- standby-centos-8:     +    # Toshiba Z40 laptop (Wired IP)
+I, [2020-02-04T16:39:49.637562 #579351]  INFO -- standby-centos-8:     +    host sarko {
+I, [2020-02-04T16:39:49.637586 #579351]  INFO -- standby-centos-8:     +      hardware ethernet b8:6b:23:1e:02:c6;
+I, [2020-02-04T16:39:49.637607 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.40;
+I, [2020-02-04T16:39:49.637629 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.637653 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.637679 #579351]  INFO -- standby-centos-8:     +    # Toshiba Z40 laptop (Wifi IP)
+I, [2020-02-04T16:39:49.637704 #579351]  INFO -- standby-centos-8:     +    host sarkowifi {
+I, [2020-02-04T16:39:49.637725 #579351]  INFO -- standby-centos-8:     +      hardware ethernet a4:34:d9:6a:63:b9;
+I, [2020-02-04T16:39:49.637746 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.41;
+I, [2020-02-04T16:39:49.637766 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.637787 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.637806 #579351]  INFO -- standby-centos-8:     +    # Macbook Pro Next Logo (Wired IP)
+I, [2020-02-04T16:39:49.637827 #579351]  INFO -- standby-centos-8:     +    host macbooknext {
+I, [2020-02-04T16:39:49.637848 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 0c:4d:e9:cb:52:1c;
+I, [2020-02-04T16:39:49.637869 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.42;
+I, [2020-02-04T16:39:49.637903 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.637927 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.637955 #579351]  INFO -- standby-centos-8:     +    # Macbook Pro Next Logo (Wifi IP)
+I, [2020-02-04T16:39:49.637981 #579351]  INFO -- standby-centos-8:     +    host macbooknextwifi {
+I, [2020-02-04T16:39:49.638003 #579351]  INFO -- standby-centos-8:     +      hardware ethernet a4:5e:60:cb:3f:5d;
+I, [2020-02-04T16:39:49.638027 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.43;
+I, [2020-02-04T16:39:49.638051 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.638072 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.638137 #579351]  INFO -- standby-centos-8:     +    # Toshiba Z40 laptop chaosmonkey logo (Wired USB Ethernet)
+I, [2020-02-04T16:39:49.638165 #579351]  INFO -- standby-centos-8:     +    host chaosusb {
+I, [2020-02-04T16:39:49.638185 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 8c:ae:4c:e9:22:1a;
+I, [2020-02-04T16:39:49.638204 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.44;
+I, [2020-02-04T16:39:49.638222 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.638248 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.638269 #579351]  INFO -- standby-centos-8:     +    # Toshiba Z40 laptop chaosmonkey logo (WIFI)
+I, [2020-02-04T16:39:49.638302 #579351]  INFO -- standby-centos-8:     +    host chaoswifi {
+I, [2020-02-04T16:39:49.638326 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 44:85:00:4d:84:51;
+I, [2020-02-04T16:39:49.638346 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.45;
+I, [2020-02-04T16:39:49.638364 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.638383 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.638404 #579351]  INFO -- standby-centos-8:     +    # Toshiba Z40 laptop mech logo(Wired IP)
+I, [2020-02-04T16:39:49.638423 #579351]  INFO -- standby-centos-8:     +    host mechsarko {
+I, [2020-02-04T16:39:49.638446 #579351]  INFO -- standby-centos-8:     +      hardware ethernet b8:6b:23:8a:78:ce;
+I, [2020-02-04T16:39:49.638472 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.50;
+I, [2020-02-04T16:39:49.638495 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.638519 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.638542 #579351]  INFO -- standby-centos-8:     +    # Toshiba Z40 laptop mech logo (Wifi IP)
+I, [2020-02-04T16:39:49.638560 #579351]  INFO -- standby-centos-8:     +    host mechsarkowifi {
+I, [2020-02-04T16:39:49.638581 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 44:85:00:4D:BF:B6;
+I, [2020-02-04T16:39:49.638597 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.51;
+I, [2020-02-04T16:39:49.638613 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.638629 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.638644 #579351]  INFO -- standby-centos-8:     +  }
+I, [2020-02-04T16:39:49.638660 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.638682 #579351]  INFO -- standby-centos-8:     +  #
+I, [2020-02-04T16:39:49.638697 #579351]  INFO -- standby-centos-8:     +  # mobile
+I, [2020-02-04T16:39:49.638712 #579351]  INFO -- standby-centos-8:     +  #
+I, [2020-02-04T16:39:49.638727 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.638742 #579351]  INFO -- standby-centos-8:     +  group {
+I, [2020-02-04T16:39:49.638758 #579351]  INFO -- standby-centos-8:     +      option domain-name-servers 10.0.2.11, 1.1.1.1;
+I, [2020-02-04T16:39:49.638773 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.638788 #579351]  INFO -- standby-centos-8:     +    # Apple iPhone 5
+I, [2020-02-04T16:39:49.638803 #579351]  INFO -- standby-centos-8:     +    host maxwaxi5 {
+I, [2020-02-04T16:39:49.638818 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 54:26:96:1b:17:a6;
+I, [2020-02-04T16:39:49.638834 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.61;
+I, [2020-02-04T16:39:49.638849 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.638864 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.638879 #579351]  INFO -- standby-centos-8:     +    # Apple iPhone Xr
+I, [2020-02-04T16:39:49.638900 #579351]  INFO -- standby-centos-8:     +    host maxwaxxr {
+I, [2020-02-04T16:39:49.638924 #579351]  INFO -- standby-centos-8:     +      hardware ethernet D8:1C:79:90:F1:9A;
+I, [2020-02-04T16:39:49.638940 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.62;
+I, [2020-02-04T16:39:49.638954 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.638978 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.638994 #579351]  INFO -- standby-centos-8:     +    # Apple iPad (2019 instance)
+I, [2020-02-04T16:39:49.639009 #579351]  INFO -- standby-centos-8:     +    host ipad {
+I, [2020-02-04T16:39:49.639023 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 98:46:0a:7f:1d:0c;
+I, [2020-02-04T16:39:49.639046 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.63;
+I, [2020-02-04T16:39:49.639061 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.639075 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.639105 #579351]  INFO -- standby-centos-8:     +  }
+I, [2020-02-04T16:39:49.639120 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.639135 #579351]  INFO -- standby-centos-8:     +  #
+I, [2020-02-04T16:39:49.639150 #579351]  INFO -- standby-centos-8:     +  # network-infra
+I, [2020-02-04T16:39:49.639164 #579351]  INFO -- standby-centos-8:     +  #
+I, [2020-02-04T16:39:49.639178 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.639192 #579351]  INFO -- standby-centos-8:     +  group {
+I, [2020-02-04T16:39:49.639207 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.639222 #579351]  INFO -- standby-centos-8:     +    # Zyxel C110Z Centurylink Gateway
+I, [2020-02-04T16:39:49.639236 #579351]  INFO -- standby-centos-8:     +    host gateway {
+I, [2020-02-04T16:39:49.639251 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 58:8B:F3:E2:6E:25;
+I, [2020-02-04T16:39:49.639273 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.1;
+I, [2020-02-04T16:39:49.639287 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.639302 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.639317 #579351]  INFO -- standby-centos-8:     +    # Netgear r6200v2 Wireless AP (DD-WRT)
+I, [2020-02-04T16:39:49.639332 #579351]  INFO -- standby-centos-8:     +    host wap {
+I, [2020-02-04T16:39:49.639347 #579351]  INFO -- standby-centos-8:     +      hardware ethernet e8:fc:af:9c:90:7c;
+I, [2020-02-04T16:39:49.639362 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.3;
+I, [2020-02-04T16:39:49.639376 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.639390 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.639411 #579351]  INFO -- standby-centos-8:     +  }
+I, [2020-02-04T16:39:49.639425 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.639439 #579351]  INFO -- standby-centos-8:     +  #
+I, [2020-02-04T16:39:49.639454 #579351]  INFO -- standby-centos-8:     +  # super-network-infra
+I, [2020-02-04T16:39:49.639469 #579351]  INFO -- standby-centos-8:     +  #
+I, [2020-02-04T16:39:49.639483 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.639497 #579351]  INFO -- standby-centos-8:     +  group {
+I, [2020-02-04T16:39:49.639511 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.639525 #579351]  INFO -- standby-centos-8:     +    # Netgear WNDR3700v2 Firewall (DD-WRT)
+I, [2020-02-04T16:39:49.639540 #579351]  INFO -- standby-centos-8:     +    host firewall {
+I, [2020-02-04T16:39:49.642062 #579351]  INFO -- standby-centos-8:     +      hardware ethernet c4:3d:c7:9d:6b:5c;
+I, [2020-02-04T16:39:49.642124 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.2;
+I, [2020-02-04T16:39:49.642144 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.642160 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.642175 #579351]  INFO -- standby-centos-8:     +  }
+I, [2020-02-04T16:39:49.642192 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.642208 #579351]  INFO -- standby-centos-8:     +  #
+I, [2020-02-04T16:39:49.642223 #579351]  INFO -- standby-centos-8:     +  # vmlab
+I, [2020-02-04T16:39:49.642237 #579351]  INFO -- standby-centos-8:     +  #
+I, [2020-02-04T16:39:49.642252 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.642275 #579351]  INFO -- standby-centos-8:     +  group {
+I, [2020-02-04T16:39:49.642292 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.642307 #579351]  INFO -- standby-centos-8:     +    # Dev VM for comparing results of Chef runs with other VMs
+I, [2020-02-04T16:39:49.642323 #579351]  INFO -- standby-centos-8:     +    host compare {
+I, [2020-02-04T16:39:49.642337 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 2E:C6:82:57:7D:E3;
+I, [2020-02-04T16:39:49.642353 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.196;
+I, [2020-02-04T16:39:49.642368 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.642383 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.642399 #579351]  INFO -- standby-centos-8:     +    # Development VM blue
+I, [2020-02-04T16:39:49.642414 #579351]  INFO -- standby-centos-8:     +    host blue {
+I, [2020-02-04T16:39:49.642429 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 32:2A:AE:44:28:68;
+I, [2020-02-04T16:39:49.642443 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.197;
+I, [2020-02-04T16:39:49.642458 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.642472 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.642486 #579351]  INFO -- standby-centos-8:     +    # Development VM testing red
+I, [2020-02-04T16:39:49.642505 #579351]  INFO -- standby-centos-8:     +    host red {
+I, [2020-02-04T16:39:49.642528 #579351]  INFO -- standby-centos-8:     +      hardware ethernet BE:0C:1C:27:6E:38;
+I, [2020-02-04T16:39:49.642551 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.198;
+I, [2020-02-04T16:39:49.642576 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.642599 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.642619 #579351]  INFO -- standby-centos-8:     +    # Development VM testing green
+I, [2020-02-04T16:39:49.642633 #579351]  INFO -- standby-centos-8:     +    host green {
+I, [2020-02-04T16:39:49.642648 #579351]  INFO -- standby-centos-8:     +      hardware ethernet 76:12:2E:70:C2:2D;
+I, [2020-02-04T16:39:49.642662 #579351]  INFO -- standby-centos-8:     +      fixed-address 10.0.2.199;
+I, [2020-02-04T16:39:49.642676 #579351]  INFO -- standby-centos-8:     +    }
+I, [2020-02-04T16:39:49.642690 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.642705 #579351]  INFO -- standby-centos-8:     +  }
+I, [2020-02-04T16:39:49.642724 #579351]  INFO -- standby-centos-8:     +
+I, [2020-02-04T16:39:49.723383 #579351]  INFO -- standby-centos-8:     +}
+I, [2020-02-04T16:39:49.726388 #579351]  INFO -- standby-centos-8:     - restore selinux security context
+I, [2020-02-04T16:39:49.726467 #579351]  INFO -- standby-centos-8:   * service[dhcpd] action enable (skipped due to only_if)
+I, [2020-02-04T16:39:49.726489 #579351]  INFO -- standby-centos-8:   * service[dhcpd] action start (skipped due to only_if)
+I, [2020-02-04T16:39:49.726506 #579351]  INFO -- standby-centos-8: Recipe: maxlab_firewall::update_firewalld
+I, [2020-02-04T16:39:50.199157 #579351]  INFO -- standby-centos-8:   * execute[add-service-ssh-permanent] action run
+I, [2020-02-04T16:39:50.199222 #579351]  INFO -- standby-centos-8:     - execute firewall-cmd --permanent --add-service=ssh --zone=dmz
+I, [2020-02-04T16:39:50.602931 #579351]  INFO -- standby-centos-8:   * execute[add-service-ssh-runtime] action run
+I, [2020-02-04T16:39:50.603056 #579351]  INFO -- standby-centos-8:     - execute firewall-cmd --add-service=ssh --zone=dmz
+I, [2020-02-04T16:39:50.603130 #579351]  INFO -- standby-centos-8: Recipe: maxlab_dhcp::deploy
+I, [2020-02-04T16:39:50.603176 #579351]  INFO -- standby-centos-8:   * service[dhcpd] action restart (skipped due to only_if)
+I, [2020-02-04T16:39:50.648650 #579351]  INFO -- standby-centos-8: 
+I, [2020-02-04T16:39:50.648755 #579351]  INFO -- standby-centos-8: Running handlers:
+I, [2020-02-04T16:39:50.648796 #579351]  INFO -- standby-centos-8: Running handlers complete
+I, [2020-02-04T16:39:50.648825 #579351]  INFO -- standby-centos-8: Chef Infra Client finished, 8/12 resources updated in 23 seconds
+I, [2020-02-04T16:39:50.684905 #579351]  INFO -- standby-centos-8: Downloading files from <standby-centos-8>
+I, [2020-02-04T16:39:50.690034 #579351]  INFO -- standby-centos-8: Finished converging <standby-centos-8> (0m46.73s).
+I, [2020-02-04T16:39:50.690209 #579351]  INFO -- standby-centos-8: -----> Setting up <standby-centos-8>...
+I, [2020-02-04T16:39:50.690797 #579351]  INFO -- standby-centos-8: Finished setting up <standby-centos-8> (0m0.00s).
+I, [2020-02-04T16:39:50.690905 #579351]  INFO -- standby-centos-8: -----> Verifying <standby-centos-8>...
+I, [2020-02-04T16:39:51.181678 #579351]  INFO -- standby-centos-8: Loaded tests from {:path=>".home.maxwell.projects.chef.maxlab.cookbooks.mylab_dhcp.test.integration.standby"} 
+I, [2020-02-04T16:39:51.614918 #579351]  INFO -- standby-centos-8: Finished verifying <standby-centos-8> (0m0.92s).
+I, [2020-02-04T16:39:51.615335 #579351]  INFO -- standby-centos-8: -----> Destroying <standby-centos-8>...
+I, [2020-02-04T16:39:53.738267 #579351]  INFO -- standby-centos-8: ==> default: Forcing shutdown of VM...
+I, [2020-02-04T16:39:54.994122 #579351]  INFO -- standby-centos-8: ==> default: Destroying VM and associated drives...
+I, [2020-02-04T16:39:55.596853 #579351]  INFO -- standby-centos-8: Vagrant instance <standby-centos-8> destroyed.
+I, [2020-02-04T16:39:55.597370 #579351]  INFO -- standby-centos-8: Finished destroying <standby-centos-8> (0m3.98s).
+I, [2020-02-04T16:39:55.598827 #579351]  INFO -- standby-centos-8: Finished testing <standby-centos-8> (1m42.62s).

@@ -1,0 +1,536 @@
+I, [2020-02-04T16:48:16.269202 #585672]  INFO -- server-centos-8: -----> Cleaning up any prior instances of <server-centos-8>
+I, [2020-02-04T16:48:16.269337 #585672]  INFO -- server-centos-8: -----> Destroying <server-centos-8>...
+I, [2020-02-04T16:48:16.269808 #585672]  INFO -- server-centos-8: Finished destroying <server-centos-8> (0m0.00s).
+I, [2020-02-04T16:48:16.269972 #585672]  INFO -- server-centos-8: -----> Testing <server-centos-8>
+I, [2020-02-04T16:48:16.270052 #585672]  INFO -- server-centos-8: -----> Creating <server-centos-8>...
+I, [2020-02-04T16:48:17.044801 #585672]  INFO -- server-centos-8: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2020-02-04T16:48:17.180724 #585672]  INFO -- server-centos-8: ==> default: Importing base box 'bento/centos-8'...
+I, [2020-02-04T16:48:26.807255 #585672]  INFO -- server-centos-8: [KProgress: 30%[KProgress: 50%[KProgress: 60%[KProgress: 80%[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
+I, [2020-02-04T16:48:27.028750 #585672]  INFO -- server-centos-8: ==> default: Checking if box 'bento/centos-8' version '202001.16.0' is up to date...
+I, [2020-02-04T16:48:27.830198 #585672]  INFO -- server-centos-8: ==> default: Setting the name of the VM: kitchen-mylab_bind-server-centos-8-bdeaebaa-3844-492e-9ee4-824429e66c11
+I, [2020-02-04T16:48:29.994143 #585672]  INFO -- server-centos-8: ==> default: Clearing any previously set network interfaces...
+I, [2020-02-04T16:48:30.102100 #585672]  INFO -- server-centos-8: ==> default: Preparing network interfaces based on configuration...
+I, [2020-02-04T16:48:30.103636 #585672]  INFO -- server-centos-8:     default: Adapter 1: nat
+I, [2020-02-04T16:48:30.225485 #585672]  INFO -- server-centos-8: ==> default: Forwarding ports...
+I, [2020-02-04T16:48:30.383426 #585672]  INFO -- server-centos-8:     default: 22 (guest) => 2222 (host) (adapter 1)
+I, [2020-02-04T16:48:30.710905 #585672]  INFO -- server-centos-8: ==> default: Running 'pre-boot' VM customizations...
+I, [2020-02-04T16:48:30.819763 #585672]  INFO -- server-centos-8: ==> default: Booting VM...
+I, [2020-02-04T16:48:31.140198 #585672]  INFO -- server-centos-8: ==> default: Waiting for machine to boot. This may take a few minutes...
+I, [2020-02-04T16:48:31.478975 #585672]  INFO -- server-centos-8:     default: SSH address: 127.0.0.1:2222
+I, [2020-02-04T16:48:31.479123 #585672]  INFO -- server-centos-8:     default: SSH username: vagrant
+I, [2020-02-04T16:48:31.479169 #585672]  INFO -- server-centos-8:     default: SSH auth method: private key
+I, [2020-02-04T16:48:55.607314 #585672]  INFO -- server-centos-8:     default: 
+I, [2020-02-04T16:48:55.607408 #585672]  INFO -- server-centos-8:     default: Vagrant insecure key detected. Vagrant will automatically replace
+I, [2020-02-04T16:48:55.607451 #585672]  INFO -- server-centos-8:     default: this with a newly generated keypair for better security.
+I, [2020-02-04T16:49:00.210504 #585672]  INFO -- server-centos-8:     default: 
+I, [2020-02-04T16:49:00.210576 #585672]  INFO -- server-centos-8:     default: Inserting generated public key within guest...
+I, [2020-02-04T16:49:00.599486 #585672]  INFO -- server-centos-8:     default: Removing insecure key from the guest if it's present...
+I, [2020-02-04T16:49:01.107422 #585672]  INFO -- server-centos-8:     default: Key inserted! Disconnecting and reconnecting using new SSH key...
+I, [2020-02-04T16:49:02.149069 #585672]  INFO -- server-centos-8: ==> default: Machine booted and ready!
+I, [2020-02-04T16:49:02.149812 #585672]  INFO -- server-centos-8: ==> default: Checking for guest additions in VM...
+I, [2020-02-04T16:49:02.285098 #585672]  INFO -- server-centos-8: ==> default: Setting hostname...
+I, [2020-02-04T16:49:03.727557 #585672]  INFO -- server-centos-8: ==> default: Mounting shared folders...
+I, [2020-02-04T16:49:03.728299 #585672]  INFO -- server-centos-8:     default: /tmp/omnibus/cache => /home/maxwell/.kitchen/cache
+I, [2020-02-04T16:49:04.796268 #585672]  INFO -- server-centos-8: ==> default: Machine not provisioned because `--no-provision` is specified.
+I, [2020-02-04T16:49:06.464018 #585672]  INFO -- server-centos-8: [SSH] Established
+I, [2020-02-04T16:49:06.464450 #585672]  INFO -- server-centos-8: Vagrant instance <server-centos-8> created.
+I, [2020-02-04T16:49:06.465005 #585672]  INFO -- server-centos-8: Finished creating <server-centos-8> (0m50.19s).
+I, [2020-02-04T16:49:06.465154 #585672]  INFO -- server-centos-8: -----> Converging <server-centos-8>...
+I, [2020-02-04T16:49:06.466869 #585672]  INFO -- server-centos-8: Preparing files for transfer
+I, [2020-02-04T16:49:06.467072 #585672]  INFO -- server-centos-8: Policy lock file doesn't exist, running `chef install` for Policyfile /home/maxwell/projects/chef/maxlab/policyfiles/tk_mylab_bind_server.rb...
+I, [2020-02-04T16:49:07.579922 #585672]  INFO -- server-centos-8: Building policy tk_mylab_bind_server
+I, [2020-02-04T16:49:07.580122 #585672]  INFO -- server-centos-8: Expanded run list: recipe[maxlab_firewall::base_firewalld], recipe[mylab_bind::deploy], recipe[maxlab_firewall::update_firewalld]
+I, [2020-02-04T16:49:07.580178 #585672]  INFO -- server-centos-8: Caching Cookbooks...
+I, [2020-02-04T16:49:07.580210 #585672]  INFO -- server-centos-8: Installing mylab_bind      >= 0.0.0 from path
+I, [2020-02-04T16:49:07.580628 #585672]  INFO -- server-centos-8: Installing maxlab_bind     >= 0.0.0 from path
+I, [2020-02-04T16:49:07.581014 #585672]  INFO -- server-centos-8: Installing maxlab_firewall >= 0.0.0 from path
+I, [2020-02-04T16:49:10.181231 #585672]  INFO -- server-centos-8: 
+I, [2020-02-04T16:49:10.181420 #585672]  INFO -- server-centos-8: Lockfile written to /home/maxwell/projects/chef/maxlab/policyfiles/tk_mylab_bind_server.lock.json
+I, [2020-02-04T16:49:10.796179 #585672]  INFO -- server-centos-8: Policy revision id: 1148eeddf48addfd24cef215143b2b869500c501fe7b0c4c5b04d19c981d5064
+I, [2020-02-04T16:49:10.868349 #585672]  INFO -- server-centos-8: Updating policy lock using `chef update`
+I, [2020-02-04T16:49:12.058865 #585672]  INFO -- server-centos-8: Attributes already up to date
+I, [2020-02-04T16:49:12.059644 #585672]  INFO -- server-centos-8: Building policy tk_mylab_bind_server
+I, [2020-02-04T16:49:12.059762 #585672]  INFO -- server-centos-8: Expanded run list: recipe[maxlab_firewall::base_firewalld], recipe[mylab_bind::deploy], recipe[maxlab_firewall::update_firewalld]
+I, [2020-02-04T16:49:12.059804 #585672]  INFO -- server-centos-8: Caching Cookbooks...
+I, [2020-02-04T16:49:12.059912 #585672]  INFO -- server-centos-8: Installing mylab_bind      >= 0.0.0 from path
+I, [2020-02-04T16:49:12.060510 #585672]  INFO -- server-centos-8: Installing maxlab_bind     >= 0.0.0 from path
+I, [2020-02-04T16:49:12.061042 #585672]  INFO -- server-centos-8: Installing maxlab_firewall >= 0.0.0 from path
+I, [2020-02-04T16:49:14.551495 #585672]  INFO -- server-centos-8: 
+I, [2020-02-04T16:49:14.552068 #585672]  INFO -- server-centos-8: Lockfile written to /home/maxwell/projects/chef/maxlab/policyfiles/tk_mylab_bind_server.lock.json
+I, [2020-02-04T16:49:15.006697 #585672]  INFO -- server-centos-8: Policy revision id: 1148eeddf48addfd24cef215143b2b869500c501fe7b0c4c5b04d19c981d5064
+I, [2020-02-04T16:49:15.038425 #585672]  INFO -- server-centos-8: Preparing dna.json
+I, [2020-02-04T16:49:15.038862 #585672]  INFO -- server-centos-8: Exporting cookbook dependencies from Policyfile /tmp/server-centos-8-sandbox-20200204-585672-1tc8zrg...
+I, [2020-02-04T16:49:19.607209 #585672]  INFO -- server-centos-8: Exported policy 'tk_mylab_bind_server' to /tmp/server-centos-8-sandbox-20200204-585672-1tc8zrg
+I, [2020-02-04T16:49:19.607379 #585672]  INFO -- server-centos-8: 
+I, [2020-02-04T16:49:19.607470 #585672]  INFO -- server-centos-8: To converge this system with the exported policy, run:
+I, [2020-02-04T16:49:19.607547 #585672]  INFO -- server-centos-8:   cd /tmp/server-centos-8-sandbox-20200204-585672-1tc8zrg
+I, [2020-02-04T16:49:19.607613 #585672]  INFO -- server-centos-8:   chef-client -z
+I, [2020-02-04T16:49:19.636238 #585672]  INFO -- server-centos-8: Removing non-cookbook files before transfer
+I, [2020-02-04T16:49:19.636581 #585672]  INFO -- server-centos-8: Preparing data_bags
+I, [2020-02-04T16:49:19.646644 #585672]  INFO -- server-centos-8: Preparing nodes
+I, [2020-02-04T16:49:19.646971 #585672]  INFO -- server-centos-8: Preparing validation.pem
+I, [2020-02-04T16:49:19.647295 #585672]  INFO -- server-centos-8: Preparing client.rb
+I, [2020-02-04T16:49:19.709910 #585672]  INFO -- server-centos-8: -----> Installing Chef install only if missing package
+I, [2020-02-04T16:49:19.713155 #585672]  INFO -- server-centos-8: Downloading https://omnitruck.chef.io/install.sh to file /tmp/install.sh
+I, [2020-02-04T16:49:19.713220 #585672]  INFO -- server-centos-8: Trying wget...
+I, [2020-02-04T16:49:19.910662 #585672]  INFO -- server-centos-8: Download complete.
+I, [2020-02-04T16:49:19.960733 #585672]  INFO -- server-centos-8: el 8 x86_64
+I, [2020-02-04T16:49:19.960828 #585672]  INFO -- server-centos-8: Getting information for chef stable  for el...
+I, [2020-02-04T16:49:19.960864 #585672]  INFO -- server-centos-8: downloading https://omnitruck.chef.io/stable/chef/metadata?v=&p=el&pv=8&m=x86_64
+I, [2020-02-04T16:49:19.960890 #585672]  INFO -- server-centos-8:   to file /tmp/install.sh.4178/metadata.txt
+I, [2020-02-04T16:49:19.961941 #585672]  INFO -- server-centos-8: trying wget...
+I, [2020-02-04T16:49:20.099987 #585672]  INFO -- server-centos-8: sha1	b4c3c270192d601881c9e0927b5f05ae5f3ed672
+I, [2020-02-04T16:49:20.100247 #585672]  INFO -- server-centos-8: sha256	9d6065d634880b56887db95e9c5189dd8de7b727e3e99b38fbaa15ef80326214
+I, [2020-02-04T16:49:20.100385 #585672]  INFO -- server-centos-8: url	https://packages.chef.io/files/stable/chef/15.7.32/el/8/chef-15.7.32-1.el7.x86_64.rpm
+I, [2020-02-04T16:49:20.100989 #585672]  INFO -- server-centos-8: version	15.7.32
+I, [2020-02-04T16:49:20.104330 #585672]  INFO -- server-centos-8: downloaded metadata file looks valid...
+I, [2020-02-04T16:49:20.131239 #585672]  INFO -- server-centos-8: /tmp/omnibus/cache/chef-15.7.32-1.el7.x86_64.rpm exists
+I, [2020-02-04T16:49:20.131422 #585672]  INFO -- server-centos-8: Comparing checksum with sha256sum...
+I, [2020-02-04T16:49:20.375668 #585672]  INFO -- server-centos-8: 
+I, [2020-02-04T16:49:20.375746 #585672]  INFO -- server-centos-8: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2020-02-04T16:49:20.375775 #585672]  INFO -- server-centos-8: 
+I, [2020-02-04T16:49:20.375798 #585672]  INFO -- server-centos-8: You are installing a package without a version pin.  If you are installing
+I, [2020-02-04T16:49:20.375820 #585672]  INFO -- server-centos-8: on production servers via an automated process this is DANGEROUS and you will
+I, [2020-02-04T16:49:20.375846 #585672]  INFO -- server-centos-8: be upgraded without warning on new releases, even to new major releases.
+I, [2020-02-04T16:49:20.375875 #585672]  INFO -- server-centos-8: Letting the version float is only appropriate in desktop, test, development or
+I, [2020-02-04T16:49:20.375896 #585672]  INFO -- server-centos-8: CI/CD environments.
+I, [2020-02-04T16:49:20.375915 #585672]  INFO -- server-centos-8: 
+I, [2020-02-04T16:49:20.375939 #585672]  INFO -- server-centos-8: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2020-02-04T16:49:20.375965 #585672]  INFO -- server-centos-8: 
+I, [2020-02-04T16:49:20.375985 #585672]  INFO -- server-centos-8: Installing chef 
+I, [2020-02-04T16:49:20.376004 #585672]  INFO -- server-centos-8: installing with rpm...
+I, [2020-02-04T16:49:20.439552 #585672]  INFO -- server-centos-8: warning: /tmp/omnibus/cache/chef-15.7.32-1.el7.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+I, [2020-02-04T16:49:20.638025 #585672]  INFO -- server-centos-8: Verifying...                                                            (100%)#                                 (100%)##                                (100%)###                               (100%)####                              (100%)#####                             (100%)######                            (100%)#######                           (100%)########                          (100%)#########                         (100%)##########                        (100%)###########                       (100%)############                      (100%)#############                     (100%)##############                    (100%)###############                   (100%)################                  (100%)#################                 (100%)##################                (100%)###################               (100%)####################              (100%)#####################             (100%)######################            (100%)#######################           (100%)########################          (100%)#########################         (100%)##########################        (100%)###########################       (100%)############################      (100%)#############################     (100%)##############################    (100%)###############################   (100%)################################  (100%)################################# (100%)################################# [100%]
+I, [2020-02-04T16:49:21.011366 #585672]  INFO -- server-centos-8: Preparing...                                                            (100%)#                                 (100%)##                                (100%)###                               (100%)####                              (100%)#####                             (100%)######                            (100%)#######                           (100%)########                          (100%)#########                         (100%)##########                        (100%)###########                       (100%)############                      (100%)#############                     (100%)##############                    (100%)###############                   (100%)################                  (100%)#################                 (100%)##################                (100%)###################               (100%)####################              (100%)#####################             (100%)######################            (100%)#######################           (100%)########################          (100%)#########################         (100%)##########################        (100%)###########################       (100%)############################      (100%)#############################     (100%)##############################    (100%)###############################   (100%)################################  (100%)################################# (100%)################################# [100%]
+I, [2020-02-04T16:49:21.067332 #585672]  INFO -- server-centos-8: Updating / installing...
+I, [2020-02-04T16:49:27.974273 #585672]  INFO -- server-centos-8:    1:chef-15.7.32-1.el7                                                 (  1%)#                                 (  4%)##                                (  7%)###                               ( 10%)####                              ( 13%)#####                             ( 16%)######                            ( 19%)#######                           ( 22%)########                          ( 25%)#########                         ( 28%)##########                        ( 31%)###########                       ( 34%)############                      ( 37%)#############                     ( 40%)##############                    ( 43%)###############                   ( 46%)################                  ( 49%)#################                 ( 51%)##################                ( 54%)###################               ( 57%)####################              ( 60%)#####################             ( 63%)######################            ( 66%)#######################           ( 69%)########################          ( 72%)#########################         ( 75%)##########################        ( 78%)###########################       ( 81%)############################      ( 84%)#############################     ( 87%)##############################    ( 90%)###############################   ( 93%)################################  ( 96%)################################# ( 99%)################################# [100%]
+I, [2020-02-04T16:49:28.700423 #585672]  INFO -- server-centos-8: Thank you for installing Chef Infra Client! For help getting started visit https://learn.chef.io
+I, [2020-02-04T16:49:28.800305 #585672]  INFO -- server-centos-8: Transferring files to <server-centos-8>
+I, [2020-02-04T16:49:31.990544 #585672]  INFO -- server-centos-8: +---------------------------------------------+
+I, [2020-02-04T16:49:31.990691 #585672]  INFO -- server-centos-8: [32m✔[0m 2 product licenses accepted.
+I, [2020-02-04T16:49:31.990735 #585672]  INFO -- server-centos-8: +---------------------------------------------+
+I, [2020-02-04T16:49:32.249460 #585672]  INFO -- server-centos-8: Starting Chef Infra Client, version 15.7.32
+I, [2020-02-04T16:49:33.824553 #585672]  INFO -- server-centos-8: Creating a new client identity for server-centos-8 using the validator key.
+I, [2020-02-04T16:49:33.952467 #585672]  INFO -- server-centos-8: Using policy 'tk_mylab_bind_server' at revision '1148eeddf48addfd24cef215143b2b869500c501fe7b0c4c5b04d19c981d5064'
+I, [2020-02-04T16:49:33.979738 #585672]  INFO -- server-centos-8: resolving cookbooks for run list: ["maxlab_firewall::base_firewalld@1.1.4 (7e61167)", "mylab_bind::deploy@1.0.1 (251a6b2)", "maxlab_firewall::update_firewalld@1.1.4 (7e61167)"]
+I, [2020-02-04T16:49:34.021955 #585672]  INFO -- server-centos-8: Synchronizing Cookbooks:
+I, [2020-02-04T16:49:34.037663 #585672]  INFO -- server-centos-8:   - maxlab_bind (1.2.1)
+I, [2020-02-04T16:49:34.061602 #585672]  INFO -- server-centos-8:   - mylab_bind (1.0.1)
+I, [2020-02-04T16:49:34.078255 #585672]  INFO -- server-centos-8:   - maxlab_firewall (1.1.4)
+I, [2020-02-04T16:49:34.078340 #585672]  INFO -- server-centos-8: Installing Cookbook Gems:
+I, [2020-02-04T16:49:34.078371 #585672]  INFO -- server-centos-8: Compiling Cookbooks...
+I, [2020-02-04T16:49:34.092919 #585672]  INFO -- server-centos-8: Converging 16 resources
+I, [2020-02-04T16:49:34.092983 #585672]  INFO -- server-centos-8: Recipe: maxlab_firewall::base_firewalld
+I, [2020-02-04T16:49:45.777104 #585672]  INFO -- server-centos-8:   * dnf_package[firewalld] action install (up to date)
+I, [2020-02-04T16:49:46.181963 #585672]  INFO -- server-centos-8:   * service[firewalld] action enable
+I, [2020-02-04T16:49:46.182069 #585672]  INFO -- server-centos-8:     - enable service service[firewalld]
+I, [2020-02-04T16:49:46.887582 #585672]  INFO -- server-centos-8:   * service[firewalld] action start
+I, [2020-02-04T16:49:46.887658 #585672]  INFO -- server-centos-8:     - start service service[firewalld]
+I, [2020-02-04T16:49:49.520531 #585672]  INFO -- server-centos-8:   * execute[set-default-zone] action run
+I, [2020-02-04T16:49:49.520613 #585672]  INFO -- server-centos-8:     - execute firewall-cmd --set-default-zone=dmz
+I, [2020-02-04T16:49:49.898312 #585672]  INFO -- server-centos-8:   * execute[set-default-interface-default-zone] action run
+I, [2020-02-04T16:49:49.898376 #585672]  INFO -- server-centos-8:     - execute firewall-cmd --change-interface=eth0 --zone=dmz
+I, [2020-02-04T16:49:49.898406 #585672]  INFO -- server-centos-8: Recipe: maxlab_bind::deploy
+I, [2020-02-04T16:49:58.279356 #585672]  INFO -- server-centos-8:   * dnf_package[bind] action install
+I, [2020-02-04T16:49:58.279449 #585672]  INFO -- server-centos-8:     - install version 32:9.11.4-26.P2.el8 of package bind
+I, [2020-02-04T16:50:02.224051 #585672]  INFO -- server-centos-8:   * dnf_package[bind-utils] action install
+I, [2020-02-04T16:50:02.224132 #585672]  INFO -- server-centos-8:     - install version 32:9.11.4-26.P2.el8 of package bind-utils
+I, [2020-02-04T16:50:02.224165 #585672]  INFO -- server-centos-8:   * template[/var/named/db.maxlab] action create
+I, [2020-02-04T16:50:02.224187 #585672]  INFO -- server-centos-8:     - create new file /var/named/db.maxlab
+I, [2020-02-04T16:50:02.224210 #585672]  INFO -- server-centos-8:     - update content in file /var/named/db.maxlab from none to 60f598
+I, [2020-02-04T16:50:02.224231 #585672]  INFO -- server-centos-8:     --- /var/named/db.maxlab	2020-02-04 23:50:02.233428640 +0000
+I, [2020-02-04T16:50:02.224261 #585672]  INFO -- server-centos-8:     +++ /var/named/.chef-db20200204-4420-10mu9ze.maxlab	2020-02-04 23:50:02.233428640 +0000
+I, [2020-02-04T16:50:02.224282 #585672]  INFO -- server-centos-8:     @@ -1 +1,104 @@
+I, [2020-02-04T16:50:02.224302 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.224322 #585672]  INFO -- server-centos-8:     +; This file deployed via chef maxlab_bind cookbook. DO NOT EDIT MANUALLY
+I, [2020-02-04T16:50:02.224341 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.224362 #585672]  INFO -- server-centos-8:     +; BIND forward data file for broadcast zone
+I, [2020-02-04T16:50:02.224382 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.224402 #585672]  INFO -- server-centos-8:     +; /var/named/db.maxlab
+I, [2020-02-04T16:50:02.224421 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.224441 #585672]  INFO -- server-centos-8:     +
+I, [2020-02-04T16:50:02.224461 #585672]  INFO -- server-centos-8:     +$TTL              8640
+I, [2020-02-04T16:50:02.224482 #585672]  INFO -- server-centos-8:     +
+I, [2020-02-04T16:50:02.224504 #585672]  INFO -- server-centos-8:     +@    IN    SOA    maxlab. maxwell.maxwellspangler.com. (
+I, [2020-02-04T16:50:02.224525 #585672]  INFO -- server-centos-8:     +                  2002042349         ; serial, todays date + todays serial #
+I, [2020-02-04T16:50:02.224546 #585672]  INFO -- server-centos-8:     +                  28880              ; refresh, seconds
+I, [2020-02-04T16:50:02.224566 #585672]  INFO -- server-centos-8:     +                  7200               ; retry, seconds
+I, [2020-02-04T16:50:02.224586 #585672]  INFO -- server-centos-8:     +                  3600000            ; expire, seconds
+I, [2020-02-04T16:50:02.224607 #585672]  INFO -- server-centos-8:     +                  600                ; minimum, seconds
+I, [2020-02-04T16:50:02.224627 #585672]  INFO -- server-centos-8:     +                  )
+I, [2020-02-04T16:50:02.224647 #585672]  INFO -- server-centos-8:     +        IN NS     core.maxlab.
+I, [2020-02-04T16:50:02.224666 #585672]  INFO -- server-centos-8:     +        IN NS     bank.maxlab.
+I, [2020-02-04T16:50:02.224685 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.224701 #585672]  INFO -- server-centos-8:     +; Aliases
+I, [2020-02-04T16:50:02.224722 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.224745 #585672]  INFO -- server-centos-8:     +flash1               IN  CNAME lenovoflash1.maxlab.
+I, [2020-02-04T16:50:02.224765 #585672]  INFO -- server-centos-8:     +flash2               IN  CNAME lenovoflash2.maxlab.
+I, [2020-02-04T16:50:02.224784 #585672]  INFO -- server-centos-8:     +flash3               IN  CNAME lenovoflash3.maxlab.
+I, [2020-02-04T16:50:02.224804 #585672]  INFO -- server-centos-8:     +flash4               IN  CNAME lenovoflash4.maxlab.
+I, [2020-02-04T16:50:02.224824 #585672]  INFO -- server-centos-8:     +flash5               IN  CNAME lenovoflash5.maxlab.
+I, [2020-02-04T16:50:02.224844 #585672]  INFO -- server-centos-8:     +maxsim               IN  CNAME filer.maxlab.
+I, [2020-02-04T16:50:02.224863 #585672]  INFO -- server-centos-8:     +www                  IN  CNAME filer.maxlab.
+I, [2020-02-04T16:50:02.224879 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.224898 #585672]  INFO -- server-centos-8:     +; network-infra
+I, [2020-02-04T16:50:02.224916 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.224940 #585672]  INFO -- server-centos-8:     +gateway              IN  A  192.168.9.1     ; Zyxel C110Z Centurylink Gateway
+I, [2020-02-04T16:50:02.224975 #585672]  INFO -- server-centos-8:     +wap                  IN  A  192.168.9.3     ; Netgear r6200v2 Wireless AP (DD-WRT)
+I, [2020-02-04T16:50:02.225004 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.225027 #585672]  INFO -- server-centos-8:     +; super-network-infra
+I, [2020-02-04T16:50:02.225053 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.225091 #585672]  INFO -- server-centos-8:     +firewall             IN  A  192.168.9.2     ; Netgear WNDR3700v2 Firewall (DD-WRT)
+I, [2020-02-04T16:50:02.225142 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.225169 #585672]  INFO -- server-centos-8:     +; vips
+I, [2020-02-04T16:50:02.225201 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.225233 #585672]  INFO -- server-centos-8:     +metric-submit        IN  A  192.168.9.20    ; VIP for submitting metrics to Graphite
+I, [2020-02-04T16:50:02.225262 #585672]  INFO -- server-centos-8:     +metric-query         IN  A  192.168.9.21    ; VIP for querying metrics from Graphite
+I, [2020-02-04T16:50:02.225297 #585672]  INFO -- server-centos-8:     +graphite             IN  A  192.168.9.22    ; VIP for Graphite Cluster
+I, [2020-02-04T16:50:02.225332 #585672]  INFO -- server-centos-8:     +grafana              IN  A  192.168.9.23    ; VIP for Grafana
+I, [2020-02-04T16:50:02.225368 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.225398 #585672]  INFO -- server-centos-8:     +; laptop
+I, [2020-02-04T16:50:02.225435 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.225462 #585672]  INFO -- server-centos-8:     +macbook              IN  A  192.168.9.35    ; Macbook Pro 2012 (Wired IP)
+I, [2020-02-04T16:50:02.225520 #585672]  INFO -- server-centos-8:     +macbookwifi          IN  A  192.168.9.36    ; Macbook Pro 2012 (Wifi IP)
+I, [2020-02-04T16:50:02.225569 #585672]  INFO -- server-centos-8:     +sarko                IN  A  192.168.9.40    ; Toshiba Z40 laptop (Wired IP)
+I, [2020-02-04T16:50:02.225604 #585672]  INFO -- server-centos-8:     +sarkowifi            IN  A  192.168.9.41    ; Toshiba Z40 laptop (Wifi IP)
+I, [2020-02-04T16:50:02.225635 #585672]  INFO -- server-centos-8:     +macbooknext          IN  A  192.168.9.42    ; Macbook Pro Next Logo (Wired IP)
+I, [2020-02-04T16:50:02.225655 #585672]  INFO -- server-centos-8:     +macbooknextwifi      IN  A  192.168.9.43    ; Macbook Pro Next Logo (Wifi IP)
+I, [2020-02-04T16:50:02.225672 #585672]  INFO -- server-centos-8:     +chaosusb             IN  A  192.168.9.44    ; Toshiba Z40 laptop chaosmonkey logo (Wired USB Ethernet)
+I, [2020-02-04T16:50:02.225692 #585672]  INFO -- server-centos-8:     +chaoswifi            IN  A  192.168.9.45    ; Toshiba Z40 laptop chaosmonkey logo (WIFI)
+I, [2020-02-04T16:50:02.225708 #585672]  INFO -- server-centos-8:     +mechsarko            IN  A  192.168.9.50    ; Toshiba Z40 laptop mech logo(Wired IP)
+I, [2020-02-04T16:50:02.225727 #585672]  INFO -- server-centos-8:     +mechsarkowifi        IN  A  192.168.9.51    ; Toshiba Z40 laptop mech logo (Wifi IP)
+I, [2020-02-04T16:50:02.225743 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.225758 #585672]  INFO -- server-centos-8:     +; mobile
+I, [2020-02-04T16:50:02.225772 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.225792 #585672]  INFO -- server-centos-8:     +maxwaxi5             IN  A  192.168.9.61    ; Apple iPhone 5
+I, [2020-02-04T16:50:02.225807 #585672]  INFO -- server-centos-8:     +maxwaxxr             IN  A  192.168.9.62    ; Apple iPhone Xr
+I, [2020-02-04T16:50:02.225823 #585672]  INFO -- server-centos-8:     +ipad                 IN  A  192.168.9.63    ; Apple iPad (2019 instance)
+I, [2020-02-04T16:50:02.225845 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.225861 #585672]  INFO -- server-centos-8:     +; hypervisor
+I, [2020-02-04T16:50:02.225875 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.225890 #585672]  INFO -- server-centos-8:     +lenovoflash1         IN  A  192.168.9.81    ; Lenovo B590 Hypervisor
+I, [2020-02-04T16:50:02.225905 #585672]  INFO -- server-centos-8:     +lenovoflash2         IN  A  192.168.9.82    ; Lenovo B590 Hypervisor
+I, [2020-02-04T16:50:02.225926 #585672]  INFO -- server-centos-8:     +lenovoflash3         IN  A  192.168.9.83    ; Lenovo B590 Hypervisor
+I, [2020-02-04T16:50:02.225942 #585672]  INFO -- server-centos-8:     +lenovoflash4         IN  A  192.168.9.91    ; Lenovo B590 Hypervisor
+I, [2020-02-04T16:50:02.225964 #585672]  INFO -- server-centos-8:     +lenovoflash5         IN  A  192.168.9.92    ; Lenovo B590 Hypervisor
+I, [2020-02-04T16:50:02.225980 #585672]  INFO -- server-centos-8:     +toshiprox1           IN  A  192.168.9.95    ; Toshiba Z40 Hypervisor
+I, [2020-02-04T16:50:02.225994 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.226013 #585672]  INFO -- server-centos-8:     +; infra
+I, [2020-02-04T16:50:02.226027 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.226042 #585672]  INFO -- server-centos-8:     +core                 IN  A  192.168.9.100   ; Core Infrastructure (DNS, DHCP, NTP)
+I, [2020-02-04T16:50:02.226057 #585672]  INFO -- server-centos-8:     +chef                 IN  A  192.168.9.101   ; Chef Infrastructure
+I, [2020-02-04T16:50:02.227568 #585672]  INFO -- server-centos-8:     +repo                 IN  A  192.168.9.102   ; Repository Infrastructure (TFTP, HTTP)
+I, [2020-02-04T16:50:02.227606 #585672]  INFO -- server-centos-8:     +stor                 IN  A  192.168.9.103   ; Repository Infrastructure (TFTP, HTTP) Repo Backup
+I, [2020-02-04T16:50:02.227629 #585672]  INFO -- server-centos-8:     +repomanual           IN  A  192.168.9.104   ; Repository Infrastructure (TFTP, HTTP) Manual Build
+I, [2020-02-04T16:50:02.227646 #585672]  INFO -- server-centos-8:     +bank                 IN  A  192.168.9.105   ; Core Infrastructure (DNS, DHCP, NTP) via Chef
+I, [2020-02-04T16:50:02.227666 #585672]  INFO -- server-centos-8:     +pxetest1             IN  A  192.168.9.122   ; PXE Boot testing VM 1
+I, [2020-02-04T16:50:02.227682 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.227697 #585672]  INFO -- server-centos-8:     +; graphite
+I, [2020-02-04T16:50:02.227718 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.227734 #585672]  INFO -- server-centos-8:     +graphite1            IN  A  192.168.9.120   ; Graphite Metric Server VM 1
+I, [2020-02-04T16:50:02.227749 #585672]  INFO -- server-centos-8:     +graphite2            IN  A  192.168.9.121   ; Graphite Metric Server VM 2
+I, [2020-02-04T16:50:02.227768 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.227783 #585672]  INFO -- server-centos-8:     +; vmlab
+I, [2020-02-04T16:50:02.227797 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.227813 #585672]  INFO -- server-centos-8:     +compare              IN  A  192.168.9.196   ; Dev VM for comparing results of Chef runs with other VMs
+I, [2020-02-04T16:50:02.227835 #585672]  INFO -- server-centos-8:     +blue                 IN  A  192.168.9.197   ; Development VM blue
+I, [2020-02-04T16:50:02.227851 #585672]  INFO -- server-centos-8:     +red                  IN  A  192.168.9.198   ; Development VM testing red
+I, [2020-02-04T16:50:02.227867 #585672]  INFO -- server-centos-8:     +green                IN  A  192.168.9.199   ; Development VM testing green
+I, [2020-02-04T16:50:02.227881 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.227896 #585672]  INFO -- server-centos-8:     +; NAS
+I, [2020-02-04T16:50:02.227914 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.227930 #585672]  INFO -- server-centos-8:     +laptopnas            IN  A  192.168.9.249   ; Lenovo B590 for use as NAS
+I, [2020-02-04T16:50:02.227945 #585672]  INFO -- server-centos-8:     +filer                IN  A  192.168.9.250   ; HP Data Vault X510 (NFS, Samba)
+I, [2020-02-04T16:50:02.227960 #585672]  INFO -- server-centos-8:     +synology             IN  A  192.168.9.251   ; Spruill Synologu DS218+ NAS
+I, [2020-02-04T16:50:02.227979 #585672]  INFO -- server-centos-8:     +aux                  IN  A  192.168.9.252   ; HP Data Vault X510 (NFS, Samba)
+I, [2020-02-04T16:50:02.322436 #585672]  INFO -- server-centos-8:     +central              IN  A  192.168.9.253   ; HP Data Vault X310 (NFS, Samba)
+I, [2020-02-04T16:50:02.340331 #585672]  INFO -- server-centos-8:     - restore selinux security context
+I, [2020-02-04T16:50:02.340406 #585672]  INFO -- server-centos-8:   * template[/var/named/db.9.168.192] action create
+I, [2020-02-04T16:50:02.340453 #585672]  INFO -- server-centos-8:     - create new file /var/named/db.9.168.192
+I, [2020-02-04T16:50:02.340478 #585672]  INFO -- server-centos-8:     - update content in file /var/named/db.9.168.192 from none to 620112
+I, [2020-02-04T16:50:02.340500 #585672]  INFO -- server-centos-8:     --- /var/named/db.9.168.192	2020-02-04 23:50:02.351202275 +0000
+I, [2020-02-04T16:50:02.340525 #585672]  INFO -- server-centos-8:     +++ /var/named/.chef-db20200204-4420-4qlv8x.9.168.192	2020-02-04 23:50:02.351202275 +0000
+I, [2020-02-04T16:50:02.340546 #585672]  INFO -- server-centos-8:     @@ -1 +1,94 @@
+I, [2020-02-04T16:50:02.340565 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.340586 #585672]  INFO -- server-centos-8:     +; This file deployed via chef maxlab_bind cookbook. DO NOT EDIT MANUALLY
+I, [2020-02-04T16:50:02.340606 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.340626 #585672]  INFO -- server-centos-8:     +; BIND reverse data file for broadcast zone
+I, [2020-02-04T16:50:02.340646 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.340666 #585672]  INFO -- server-centos-8:     +; /var/named/db.9.168.192
+I, [2020-02-04T16:50:02.340685 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.340705 #585672]  INFO -- server-centos-8:     +
+I, [2020-02-04T16:50:02.340726 #585672]  INFO -- server-centos-8:     +$TTL              8640
+I, [2020-02-04T16:50:02.340747 #585672]  INFO -- server-centos-8:     +
+I, [2020-02-04T16:50:02.340770 #585672]  INFO -- server-centos-8:     +@    IN    SOA    maxlab. maxwell.maxwellspangler.com. (
+I, [2020-02-04T16:50:02.340791 #585672]  INFO -- server-centos-8:     +                  2002042349         ; serial, todays date + todays serial #
+I, [2020-02-04T16:50:02.340815 #585672]  INFO -- server-centos-8:     +                  28880              ; refresh, seconds
+I, [2020-02-04T16:50:02.340836 #585672]  INFO -- server-centos-8:     +                  7200               ; retry, seconds
+I, [2020-02-04T16:50:02.340857 #585672]  INFO -- server-centos-8:     +                  3600000            ; expire, seconds
+I, [2020-02-04T16:50:02.340877 #585672]  INFO -- server-centos-8:     +                  600                ; minimum, seconds
+I, [2020-02-04T16:50:02.340898 #585672]  INFO -- server-centos-8:     +                  )
+I, [2020-02-04T16:50:02.340918 #585672]  INFO -- server-centos-8:     +        IN NS     core.maxlab.
+I, [2020-02-04T16:50:02.340938 #585672]  INFO -- server-centos-8:     +        IN NS     bank.maxlab.
+I, [2020-02-04T16:50:02.340954 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.340973 #585672]  INFO -- server-centos-8:     +; network-infra
+I, [2020-02-04T16:50:02.340992 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.341012 #585672]  INFO -- server-centos-8:     +1    IN  PTR  gateway.maxlab.           ; Zyxel C110Z Centurylink Gateway
+I, [2020-02-04T16:50:02.341033 #585672]  INFO -- server-centos-8:     +3    IN  PTR  wap.maxlab.               ; Netgear r6200v2 Wireless AP (DD-WRT)
+I, [2020-02-04T16:50:02.341054 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.341074 #585672]  INFO -- server-centos-8:     +; super-network-infra
+I, [2020-02-04T16:50:02.341132 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.341171 #585672]  INFO -- server-centos-8:     +2    IN  PTR  firewall.maxlab.          ; Netgear WNDR3700v2 Firewall (DD-WRT)
+I, [2020-02-04T16:50:02.341202 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.341226 #585672]  INFO -- server-centos-8:     +; vips
+I, [2020-02-04T16:50:02.341256 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.341281 #585672]  INFO -- server-centos-8:     +20   IN  PTR  metric-submit.maxlab.     ; VIP for submitting metrics to Graphite
+I, [2020-02-04T16:50:02.341309 #585672]  INFO -- server-centos-8:     +21   IN  PTR  metric-query.maxlab.      ; VIP for querying metrics from Graphite
+I, [2020-02-04T16:50:02.341341 #585672]  INFO -- server-centos-8:     +22   IN  PTR  graphite.maxlab.          ; VIP for Graphite Cluster
+I, [2020-02-04T16:50:02.341383 #585672]  INFO -- server-centos-8:     +23   IN  PTR  grafana.maxlab.           ; VIP for Grafana
+I, [2020-02-04T16:50:02.341409 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.341447 #585672]  INFO -- server-centos-8:     +; laptop
+I, [2020-02-04T16:50:02.341481 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.341515 #585672]  INFO -- server-centos-8:     +35   IN  PTR  macbook.maxlab.           ; Macbook Pro 2012 (Wired IP)
+I, [2020-02-04T16:50:02.341544 #585672]  INFO -- server-centos-8:     +36   IN  PTR  macbookwifi.maxlab.       ; Macbook Pro 2012 (Wifi IP)
+I, [2020-02-04T16:50:02.341578 #585672]  INFO -- server-centos-8:     +40   IN  PTR  sarko.maxlab.             ; Toshiba Z40 laptop (Wired IP)
+I, [2020-02-04T16:50:02.341612 #585672]  INFO -- server-centos-8:     +41   IN  PTR  sarkowifi.maxlab.         ; Toshiba Z40 laptop (Wifi IP)
+I, [2020-02-04T16:50:02.341642 #585672]  INFO -- server-centos-8:     +42   IN  PTR  macbooknext.maxlab.       ; Macbook Pro Next Logo (Wired IP)
+I, [2020-02-04T16:50:02.341673 #585672]  INFO -- server-centos-8:     +43   IN  PTR  macbooknextwifi.maxlab.   ; Macbook Pro Next Logo (Wifi IP)
+I, [2020-02-04T16:50:02.341701 #585672]  INFO -- server-centos-8:     +44   IN  PTR  chaosusb.maxlab.          ; Toshiba Z40 laptop chaosmonkey logo (Wired USB Ethernet)
+I, [2020-02-04T16:50:02.341733 #585672]  INFO -- server-centos-8:     +45   IN  PTR  chaoswifi.maxlab.         ; Toshiba Z40 laptop chaosmonkey logo (WIFI)
+I, [2020-02-04T16:50:02.341768 #585672]  INFO -- server-centos-8:     +50   IN  PTR  mechsarko.maxlab.         ; Toshiba Z40 laptop mech logo(Wired IP)
+I, [2020-02-04T16:50:02.341796 #585672]  INFO -- server-centos-8:     +51   IN  PTR  mechsarkowifi.maxlab.     ; Toshiba Z40 laptop mech logo (Wifi IP)
+I, [2020-02-04T16:50:02.341825 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.341850 #585672]  INFO -- server-centos-8:     +; mobile
+I, [2020-02-04T16:50:02.341884 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.341912 #585672]  INFO -- server-centos-8:     +61   IN  PTR  maxwaxi5.maxlab.          ; Apple iPhone 5
+I, [2020-02-04T16:50:02.341943 #585672]  INFO -- server-centos-8:     +62   IN  PTR  maxwaxxr.maxlab.          ; Apple iPhone Xr
+I, [2020-02-04T16:50:02.341976 #585672]  INFO -- server-centos-8:     +63   IN  PTR  ipad.maxlab.              ; Apple iPad (2019 instance)
+I, [2020-02-04T16:50:02.342005 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.342038 #585672]  INFO -- server-centos-8:     +; hypervisor
+I, [2020-02-04T16:50:02.342065 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.342102 #585672]  INFO -- server-centos-8:     +81   IN  PTR  lenovoflash1.maxlab.      ; Lenovo B590 Hypervisor
+I, [2020-02-04T16:50:02.342133 #585672]  INFO -- server-centos-8:     +82   IN  PTR  lenovoflash2.maxlab.      ; Lenovo B590 Hypervisor
+I, [2020-02-04T16:50:02.342164 #585672]  INFO -- server-centos-8:     +83   IN  PTR  lenovoflash3.maxlab.      ; Lenovo B590 Hypervisor
+I, [2020-02-04T16:50:02.342188 #585672]  INFO -- server-centos-8:     +91   IN  PTR  lenovoflash4.maxlab.      ; Lenovo B590 Hypervisor
+I, [2020-02-04T16:50:02.342213 #585672]  INFO -- server-centos-8:     +92   IN  PTR  lenovoflash5.maxlab.      ; Lenovo B590 Hypervisor
+I, [2020-02-04T16:50:02.342246 #585672]  INFO -- server-centos-8:     +95   IN  PTR  toshiprox1.maxlab.        ; Toshiba Z40 Hypervisor
+I, [2020-02-04T16:50:02.342270 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.342292 #585672]  INFO -- server-centos-8:     +; infra
+I, [2020-02-04T16:50:02.342318 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.342341 #585672]  INFO -- server-centos-8:     +100  IN  PTR  core.maxlab.              ; Core Infrastructure (DNS, DHCP, NTP)
+I, [2020-02-04T16:50:02.342364 #585672]  INFO -- server-centos-8:     +101  IN  PTR  chef.maxlab.              ; Chef Infrastructure
+I, [2020-02-04T16:50:02.342407 #585672]  INFO -- server-centos-8:     +102  IN  PTR  repo.maxlab.              ; Repository Infrastructure (TFTP, HTTP)
+I, [2020-02-04T16:50:02.342435 #585672]  INFO -- server-centos-8:     +103  IN  PTR  stor.maxlab.              ; Repository Infrastructure (TFTP, HTTP) Repo Backup
+I, [2020-02-04T16:50:02.342460 #585672]  INFO -- server-centos-8:     +104  IN  PTR  repomanual.maxlab.        ; Repository Infrastructure (TFTP, HTTP) Manual Build
+I, [2020-02-04T16:50:02.342485 #585672]  INFO -- server-centos-8:     +105  IN  PTR  bank.maxlab.              ; Core Infrastructure (DNS, DHCP, NTP) via Chef
+I, [2020-02-04T16:50:02.342520 #585672]  INFO -- server-centos-8:     +122  IN  PTR  pxetest1.maxlab.          ; PXE Boot testing VM 1
+I, [2020-02-04T16:50:02.342548 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.342575 #585672]  INFO -- server-centos-8:     +; graphite
+I, [2020-02-04T16:50:02.342602 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.342630 #585672]  INFO -- server-centos-8:     +120  IN  PTR  graphite1.maxlab.         ; Graphite Metric Server VM 1
+I, [2020-02-04T16:50:02.344621 #585672]  INFO -- server-centos-8:     +121  IN  PTR  graphite2.maxlab.         ; Graphite Metric Server VM 2
+I, [2020-02-04T16:50:02.344721 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.344750 #585672]  INFO -- server-centos-8:     +; vmlab
+I, [2020-02-04T16:50:02.344778 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.344803 #585672]  INFO -- server-centos-8:     +196  IN  PTR  compare.maxlab.           ; Dev VM for comparing results of Chef runs with other VMs
+I, [2020-02-04T16:50:02.344840 #585672]  INFO -- server-centos-8:     +197  IN  PTR  blue.maxlab.              ; Development VM blue
+I, [2020-02-04T16:50:02.344863 #585672]  INFO -- server-centos-8:     +198  IN  PTR  red.maxlab.               ; Development VM testing red
+I, [2020-02-04T16:50:02.344885 #585672]  INFO -- server-centos-8:     +199  IN  PTR  green.maxlab.             ; Development VM testing green
+I, [2020-02-04T16:50:02.344914 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.344936 #585672]  INFO -- server-centos-8:     +; NAS
+I, [2020-02-04T16:50:02.344970 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.344993 #585672]  INFO -- server-centos-8:     +249  IN  PTR  laptopnas.maxlab.         ; Lenovo B590 for use as NAS
+I, [2020-02-04T16:50:02.345023 #585672]  INFO -- server-centos-8:     +250  IN  PTR  filer.maxlab.             ; HP Data Vault X510 (NFS, Samba)
+I, [2020-02-04T16:50:02.345046 #585672]  INFO -- server-centos-8:     +251  IN  PTR  synology.maxlab.          ; Spruill Synologu DS218+ NAS
+I, [2020-02-04T16:50:02.345070 #585672]  INFO -- server-centos-8:     +252  IN  PTR  aux.maxlab.               ; HP Data Vault X510 (NFS, Samba)
+I, [2020-02-04T16:50:02.371282 #585672]  INFO -- server-centos-8:     +253  IN  PTR  central.maxlab.           ; HP Data Vault X310 (NFS, Samba)
+I, [2020-02-04T16:50:02.386811 #585672]  INFO -- server-centos-8:     - restore selinux security context
+I, [2020-02-04T16:50:02.386940 #585672]  INFO -- server-centos-8:   * template[/var/named/db.dmz] action create
+I, [2020-02-04T16:50:02.387010 #585672]  INFO -- server-centos-8:     - create new file /var/named/db.dmz
+I, [2020-02-04T16:50:02.387045 #585672]  INFO -- server-centos-8:     - update content in file /var/named/db.dmz from none to 6e5792
+I, [2020-02-04T16:50:02.387096 #585672]  INFO -- server-centos-8:     --- /var/named/db.dmz	2020-02-04 23:50:02.389401318 +0000
+I, [2020-02-04T16:50:02.387156 #585672]  INFO -- server-centos-8:     +++ /var/named/.chef-db20200204-4420-dzonow.dmz	2020-02-04 23:50:02.389401318 +0000
+I, [2020-02-04T16:50:02.387194 #585672]  INFO -- server-centos-8:     @@ -1 +1,33 @@
+I, [2020-02-04T16:50:02.387222 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.387255 #585672]  INFO -- server-centos-8:     +; This file deployed via chef maxlab_bind cookbook. DO NOT EDIT MANUALLY
+I, [2020-02-04T16:50:02.387297 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.387342 #585672]  INFO -- server-centos-8:     +; BIND forward data file for broadcast zone
+I, [2020-02-04T16:50:02.387369 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.387404 #585672]  INFO -- server-centos-8:     +; /var/named/db.dmz
+I, [2020-02-04T16:50:02.387433 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.387460 #585672]  INFO -- server-centos-8:     +
+I, [2020-02-04T16:50:02.387498 #585672]  INFO -- server-centos-8:     +$TTL              8640
+I, [2020-02-04T16:50:02.387535 #585672]  INFO -- server-centos-8:     +
+I, [2020-02-04T16:50:02.387565 #585672]  INFO -- server-centos-8:     +@    IN    SOA    dmz. maxwell.maxwellspangler.com. (
+I, [2020-02-04T16:50:02.387595 #585672]  INFO -- server-centos-8:     +                  2002042349         ; serial, todays date + todays serial #
+I, [2020-02-04T16:50:02.387635 #585672]  INFO -- server-centos-8:     +                  28880              ; refresh, seconds
+I, [2020-02-04T16:50:02.387679 #585672]  INFO -- server-centos-8:     +                  7200               ; retry, seconds
+I, [2020-02-04T16:50:02.387710 #585672]  INFO -- server-centos-8:     +                  3600000            ; expire, seconds
+I, [2020-02-04T16:50:02.387740 #585672]  INFO -- server-centos-8:     +                  600                ; minimum, seconds
+I, [2020-02-04T16:50:02.387775 #585672]  INFO -- server-centos-8:     +                  )
+I, [2020-02-04T16:50:02.387823 #585672]  INFO -- server-centos-8:     +        IN NS     pxetestf2.maxlab.
+I, [2020-02-04T16:50:02.387861 #585672]  INFO -- server-centos-8:     +        IN NS     core.maxlab.
+I, [2020-02-04T16:50:02.387901 #585672]  INFO -- server-centos-8:     +        IN NS     gateway.maxlab.
+I, [2020-02-04T16:50:02.387928 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.387965 #585672]  INFO -- server-centos-8:     +; Aliases
+I, [2020-02-04T16:50:02.387995 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.388026 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.388051 #585672]  INFO -- server-centos-8:     +; network-infra
+I, [2020-02-04T16:50:02.388076 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.388132 #585672]  INFO -- server-centos-8:     +gateway              IN  A  192.168.0.1     ; Zyxel C110Z Centurylink Gateway
+I, [2020-02-04T16:50:02.388177 #585672]  INFO -- server-centos-8:     +firewall             IN  A  192.168.0.2     ; Netgear WNDR3700v2 Firewall (DD-WRT)
+I, [2020-02-04T16:50:02.388204 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.388230 #585672]  INFO -- server-centos-8:     +; laptops
+I, [2020-02-04T16:50:02.388263 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.420944 #585672]  INFO -- server-centos-8:     +download             IN  A  192.168.0.248   ; Lenovo B590
+I, [2020-02-04T16:50:02.437890 #585672]  INFO -- server-centos-8:     - restore selinux security context
+I, [2020-02-04T16:50:02.511539 #585672]  INFO -- server-centos-8:   * template[/var/named/db.0.168.192] action create
+I, [2020-02-04T16:50:02.511674 #585672]  INFO -- server-centos-8:     - create new file /var/named/db.0.168.192
+I, [2020-02-04T16:50:02.511755 #585672]  INFO -- server-centos-8:     - update content in file /var/named/db.0.168.192 from none to 2a4c8c
+I, [2020-02-04T16:50:02.511806 #585672]  INFO -- server-centos-8:     --- /var/named/db.0.168.192	2020-02-04 23:50:02.518690390 +0000
+I, [2020-02-04T16:50:02.511851 #585672]  INFO -- server-centos-8:     +++ /var/named/.chef-db20200204-4420-1j13ox1.0.168.192	2020-02-04 23:50:02.518690390 +0000
+I, [2020-02-04T16:50:02.511888 #585672]  INFO -- server-centos-8:     @@ -1 +1,30 @@
+I, [2020-02-04T16:50:02.511929 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.511969 #585672]  INFO -- server-centos-8:     +; This file deployed via chef maxlab_bind cookbook. DO NOT EDIT MANUALLY
+I, [2020-02-04T16:50:02.512004 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.512076 #585672]  INFO -- server-centos-8:     +; BIND reverse data file for broadcast zone
+I, [2020-02-04T16:50:02.512140 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.512176 #585672]  INFO -- server-centos-8:     +; /var/named/db.0.168.192
+I, [2020-02-04T16:50:02.512218 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.512251 #585672]  INFO -- server-centos-8:     +
+I, [2020-02-04T16:50:02.512287 #585672]  INFO -- server-centos-8:     +$TTL              8640
+I, [2020-02-04T16:50:02.512330 #585672]  INFO -- server-centos-8:     +
+I, [2020-02-04T16:50:02.512368 #585672]  INFO -- server-centos-8:     +@    IN    SOA    dmz. maxwell.maxwellspangler.com. (
+I, [2020-02-04T16:50:02.512411 #585672]  INFO -- server-centos-8:     +                  2002042349         ; serial, todays date + todays serial #
+I, [2020-02-04T16:50:02.512452 #585672]  INFO -- server-centos-8:     +                  28880              ; refresh, seconds
+I, [2020-02-04T16:50:02.512517 #585672]  INFO -- server-centos-8:     +                  7200               ; retry, seconds
+I, [2020-02-04T16:50:02.512576 #585672]  INFO -- server-centos-8:     +                  3600000            ; expire, seconds
+I, [2020-02-04T16:50:02.512623 #585672]  INFO -- server-centos-8:     +                  600                ; minimum, seconds
+I, [2020-02-04T16:50:02.512665 #585672]  INFO -- server-centos-8:     +                  )
+I, [2020-02-04T16:50:02.512732 #585672]  INFO -- server-centos-8:     +        IN NS     pxetestf2.maxlab.
+I, [2020-02-04T16:50:02.512801 #585672]  INFO -- server-centos-8:     +        IN NS     core.maxlab.
+I, [2020-02-04T16:50:02.512875 #585672]  INFO -- server-centos-8:     +        IN NS     gateway.maxlab.
+I, [2020-02-04T16:50:02.512971 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.513131 #585672]  INFO -- server-centos-8:     +; network-infra
+I, [2020-02-04T16:50:02.513265 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.513356 #585672]  INFO -- server-centos-8:     +1    IN  PTR  gateway.dmz.              ; Zyxel C110Z Centurylink Gateway
+I, [2020-02-04T16:50:02.513448 #585672]  INFO -- server-centos-8:     +2    IN  PTR  firewall.dmz.             ; Netgear WNDR3700v2 Firewall (DD-WRT)
+I, [2020-02-04T16:50:02.513535 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.513618 #585672]  INFO -- server-centos-8:     +; laptops
+I, [2020-02-04T16:50:02.513666 #585672]  INFO -- server-centos-8:     +;
+I, [2020-02-04T16:50:02.611143 #585672]  INFO -- server-centos-8:     +248  IN  PTR  download.dmz.             ; Lenovo B590
+I, [2020-02-04T16:50:02.627411 #585672]  INFO -- server-centos-8:     - restore selinux security context
+I, [2020-02-04T16:50:02.693765 #585672]  INFO -- server-centos-8:   * template[/etc/named.conf] action create
+I, [2020-02-04T16:50:02.693866 #585672]  INFO -- server-centos-8:     - update content in file /etc/named.conf from 9ec834 to 228e89
+I, [2020-02-04T16:50:02.693904 #585672]  INFO -- server-centos-8:     --- /etc/named.conf	2019-11-11 18:47:41.000000000 +0000
+I, [2020-02-04T16:50:02.693944 #585672]  INFO -- server-centos-8:     +++ /etc/.chef-named20200204-4420-dahsna.conf	2020-02-04 23:50:02.655815160 +0000
+I, [2020-02-04T16:50:02.693979 #585672]  INFO -- server-centos-8:     @@ -7,16 +7,18 @@
+I, [2020-02-04T16:50:02.694016 #585672]  INFO -- server-centos-8:      // See /usr/share/doc/bind*/sample/ for example named configuration files.
+I, [2020-02-04T16:50:02.694050 #585672]  INFO -- server-centos-8:      //
+I, [2020-02-04T16:50:02.694077 #585672]  INFO -- server-centos-8:      
+I, [2020-02-04T16:50:02.694125 #585672]  INFO -- server-centos-8:     +acl maxlab { 127.0.0.0/8; 192.168.9.0/24; };
+I, [2020-02-04T16:50:02.694160 #585672]  INFO -- server-centos-8:     +
+I, [2020-02-04T16:50:02.694186 #585672]  INFO -- server-centos-8:      options {
+I, [2020-02-04T16:50:02.694218 #585672]  INFO -- server-centos-8:     -	listen-on port 53 { 127.0.0.1; };
+I, [2020-02-04T16:50:02.694249 #585672]  INFO -- server-centos-8:     -	listen-on-v6 port 53 { ::1; };
+I, [2020-02-04T16:50:02.694289 #585672]  INFO -- server-centos-8:     +	listen-on port 53 { 127.0.0.1; 10.0.2.15; };
+I, [2020-02-04T16:50:02.694322 #585672]  INFO -- server-centos-8:     +	listen-on-v6 port 53 { ::1; 10.0.2.15; };
+I, [2020-02-04T16:50:02.694372 #585672]  INFO -- server-centos-8:      	directory 	"/var/named";
+I, [2020-02-04T16:50:02.694411 #585672]  INFO -- server-centos-8:      	dump-file 	"/var/named/data/cache_dump.db";
+I, [2020-02-04T16:50:02.694456 #585672]  INFO -- server-centos-8:      	statistics-file "/var/named/data/named_stats.txt";
+I, [2020-02-04T16:50:02.694502 #585672]  INFO -- server-centos-8:      	memstatistics-file "/var/named/data/named_mem_stats.txt";
+I, [2020-02-04T16:50:02.694535 #585672]  INFO -- server-centos-8:      	secroots-file	"/var/named/data/named.secroots";
+I, [2020-02-04T16:50:02.694564 #585672]  INFO -- server-centos-8:      	recursing-file	"/var/named/data/named.recursing";
+I, [2020-02-04T16:50:02.694595 #585672]  INFO -- server-centos-8:     -	allow-query     { localhost; };
+I, [2020-02-04T16:50:02.694622 #585672]  INFO -- server-centos-8:     +	allow-query { localhost; 192.168.9.0/24; };
+I, [2020-02-04T16:50:02.694650 #585672]  INFO -- server-centos-8:      
+I, [2020-02-04T16:50:02.694675 #585672]  INFO -- server-centos-8:      	/* 
+I, [2020-02-04T16:50:02.694703 #585672]  INFO -- server-centos-8:      	 - If you are building an AUTHORITATIVE DNS server, do NOT enable recursion.
+I, [2020-02-04T16:50:02.694728 #585672]  INFO -- server-centos-8:     @@ -33,13 +35,20 @@
+I, [2020-02-04T16:50:02.694757 #585672]  INFO -- server-centos-8:      	dnssec-enable yes;
+I, [2020-02-04T16:50:02.694781 #585672]  INFO -- server-centos-8:      	dnssec-validation yes;
+I, [2020-02-04T16:50:02.694810 #585672]  INFO -- server-centos-8:      
+I, [2020-02-04T16:50:02.694834 #585672]  INFO -- server-centos-8:     +        forwarders {
+I, [2020-02-04T16:50:02.694868 #585672]  INFO -- server-centos-8:     +//                205.171.3.25;
+I, [2020-02-04T16:50:02.694897 #585672]  INFO -- server-centos-8:     +//                205.171.2.25;
+I, [2020-02-04T16:50:02.694922 #585672]  INFO -- server-centos-8:     +                  1.1.1.1;
+I, [2020-02-04T16:50:02.694946 #585672]  INFO -- server-centos-8:     +                  8.8.8.8;
+I, [2020-02-04T16:50:02.694977 #585672]  INFO -- server-centos-8:     +                  8.8.4.4;
+I, [2020-02-04T16:50:02.695001 #585672]  INFO -- server-centos-8:     +        };
+I, [2020-02-04T16:50:02.695031 #585672]  INFO -- server-centos-8:     +
+I, [2020-02-04T16:50:02.695055 #585672]  INFO -- server-centos-8:     +
+I, [2020-02-04T16:50:02.695108 #585672]  INFO -- server-centos-8:      	managed-keys-directory "/var/named/dynamic";
+I, [2020-02-04T16:50:02.695137 #585672]  INFO -- server-centos-8:      
+I, [2020-02-04T16:50:02.695162 #585672]  INFO -- server-centos-8:      	pid-file "/run/named/named.pid";
+I, [2020-02-04T16:50:02.695190 #585672]  INFO -- server-centos-8:      	session-keyfile "/run/named/session.key";
+I, [2020-02-04T16:50:02.695215 #585672]  INFO -- server-centos-8:      
+I, [2020-02-04T16:50:02.695242 #585672]  INFO -- server-centos-8:     -	/* https://fedoraproject.org/wiki/Changes/CryptoPolicy */
+I, [2020-02-04T16:50:02.695266 #585672]  INFO -- server-centos-8:     -	include "/etc/crypto-policies/back-ends/bind.config";
+I, [2020-02-04T16:50:02.695304 #585672]  INFO -- server-centos-8:      };
+I, [2020-02-04T16:50:02.695329 #585672]  INFO -- server-centos-8:      
+I, [2020-02-04T16:50:02.695352 #585672]  INFO -- server-centos-8:      logging {
+I, [2020-02-04T16:50:02.695374 #585672]  INFO -- server-centos-8:     @@ -52,6 +61,30 @@
+I, [2020-02-04T16:50:02.695401 #585672]  INFO -- server-centos-8:      zone "." IN {
+I, [2020-02-04T16:50:02.695424 #585672]  INFO -- server-centos-8:      	type hint;
+I, [2020-02-04T16:50:02.695446 #585672]  INFO -- server-centos-8:      	file "named.ca";
+I, [2020-02-04T16:50:02.695470 #585672]  INFO -- server-centos-8:     +};
+I, [2020-02-04T16:50:02.695503 #585672]  INFO -- server-centos-8:     +
+I, [2020-02-04T16:50:02.695526 #585672]  INFO -- server-centos-8:     +zone "maxlab" {
+I, [2020-02-04T16:50:02.695549 #585672]  INFO -- server-centos-8:     +        type master;
+I, [2020-02-04T16:50:02.695576 #585672]  INFO -- server-centos-8:     +        file "/var/named/db.maxlab";
+I, [2020-02-04T16:50:02.695599 #585672]  INFO -- server-centos-8:     +        allow-update { none; };
+I, [2020-02-04T16:50:02.695622 #585672]  INFO -- server-centos-8:     +};
+I, [2020-02-04T16:50:02.695643 #585672]  INFO -- server-centos-8:     +
+I, [2020-02-04T16:50:02.695666 #585672]  INFO -- server-centos-8:     +zone "9.168.192.in-addr.arpa" {
+I, [2020-02-04T16:50:02.695692 #585672]  INFO -- server-centos-8:     +        type master;
+I, [2020-02-04T16:50:02.695716 #585672]  INFO -- server-centos-8:     +        file "/var/named/db.9.168.192";
+I, [2020-02-04T16:50:02.695738 #585672]  INFO -- server-centos-8:     +        allow-update { none; };
+I, [2020-02-04T16:50:02.695761 #585672]  INFO -- server-centos-8:     +};
+I, [2020-02-04T16:50:02.695784 #585672]  INFO -- server-centos-8:     +
+I, [2020-02-04T16:50:02.695811 #585672]  INFO -- server-centos-8:     +zone "dmz" {
+I, [2020-02-04T16:50:02.695841 #585672]  INFO -- server-centos-8:     +        type master;
+I, [2020-02-04T16:50:02.695865 #585672]  INFO -- server-centos-8:     +        file "/var/named/db.dmz";
+I, [2020-02-04T16:50:02.695889 #585672]  INFO -- server-centos-8:     +        allow-update { none; };
+I, [2020-02-04T16:50:02.695911 #585672]  INFO -- server-centos-8:     +};
+I, [2020-02-04T16:50:02.695932 #585672]  INFO -- server-centos-8:     +
+I, [2020-02-04T16:50:02.695959 #585672]  INFO -- server-centos-8:     +zone "0.168.192.in-addr.arpa" {
+I, [2020-02-04T16:50:02.695985 #585672]  INFO -- server-centos-8:     +        type master;
+I, [2020-02-04T16:50:02.696010 #585672]  INFO -- server-centos-8:     +        file "/var/named/db.0.168.192";
+I, [2020-02-04T16:50:02.696036 #585672]  INFO -- server-centos-8:     +        allow-update { none; };
+I, [2020-02-04T16:50:02.696066 #585672]  INFO -- server-centos-8:      };
+I, [2020-02-04T16:50:02.696103 #585672]  INFO -- server-centos-8:      
+I, [2020-02-04T16:50:02.721060 #585672]  INFO -- server-centos-8:      include "/etc/named.rfc1912.zones";
+I, [2020-02-04T16:50:02.727986 #585672]  INFO -- server-centos-8:     - restore selinux security context
+I, [2020-02-04T16:50:03.046054 #585672]  INFO -- server-centos-8:   * service[named] action enable
+I, [2020-02-04T16:50:03.046138 #585672]  INFO -- server-centos-8:     - enable service service[named]
+I, [2020-02-04T16:50:03.336407 #585672]  INFO -- server-centos-8:   * service[named] action start
+I, [2020-02-04T16:50:03.336507 #585672]  INFO -- server-centos-8:     - start service service[named]
+I, [2020-02-04T16:50:03.336533 #585672]  INFO -- server-centos-8: Recipe: maxlab_firewall::update_firewalld
+I, [2020-02-04T16:50:03.797129 #585672]  INFO -- server-centos-8:   * execute[add-service-ssh-permanent] action run
+I, [2020-02-04T16:50:03.797225 #585672]  INFO -- server-centos-8:     - execute firewall-cmd --permanent --add-service=ssh --zone=dmz
+I, [2020-02-04T16:50:04.258336 #585672]  INFO -- server-centos-8:   * execute[add-service-ssh-runtime] action run
+I, [2020-02-04T16:50:04.258421 #585672]  INFO -- server-centos-8:     - execute firewall-cmd --add-service=ssh --zone=dmz
+I, [2020-02-04T16:50:04.774021 #585672]  INFO -- server-centos-8:   * execute[add-service-dns-permanent] action run
+I, [2020-02-04T16:50:04.774110 #585672]  INFO -- server-centos-8:     - execute firewall-cmd --permanent --add-service=dns --zone=dmz
+I, [2020-02-04T16:50:05.165821 #585672]  INFO -- server-centos-8:   * execute[add-service-dns-runtime] action run
+I, [2020-02-04T16:50:05.165891 #585672]  INFO -- server-centos-8:     - execute firewall-cmd --add-service=dns --zone=dmz
+I, [2020-02-04T16:50:05.165925 #585672]  INFO -- server-centos-8: Recipe: maxlab_bind::deploy
+I, [2020-02-04T16:50:05.348186 #585672]  INFO -- server-centos-8:   * service[named] action reload
+I, [2020-02-04T16:50:05.348328 #585672]  INFO -- server-centos-8:     - reload service service[named]
+I, [2020-02-04T16:50:05.417945 #585672]  INFO -- server-centos-8: 
+I, [2020-02-04T16:50:05.418060 #585672]  INFO -- server-centos-8: Running handlers:
+I, [2020-02-04T16:50:05.418121 #585672]  INFO -- server-centos-8: Running handlers complete
+I, [2020-02-04T16:50:05.418162 #585672]  INFO -- server-centos-8: Chef Infra Client finished, 18/19 resources updated in 33 seconds
+I, [2020-02-04T16:50:05.504453 #585672]  INFO -- server-centos-8: Downloading files from <server-centos-8>
+I, [2020-02-04T16:50:05.515160 #585672]  INFO -- server-centos-8: Finished converging <server-centos-8> (0m59.05s).
+I, [2020-02-04T16:50:05.515575 #585672]  INFO -- server-centos-8: -----> Setting up <server-centos-8>...
+I, [2020-02-04T16:50:05.517218 #585672]  INFO -- server-centos-8: Finished setting up <server-centos-8> (0m0.00s).
+I, [2020-02-04T16:50:05.517495 #585672]  INFO -- server-centos-8: -----> Verifying <server-centos-8>...
+I, [2020-02-04T16:50:06.141821 #585672]  INFO -- server-centos-8: Loaded tests from {:path=>".home.maxwell.projects.chef.maxlab.cookbooks.mylab_bind.test.integration.server"} 
+I, [2020-02-04T16:50:06.634112 #585672]  INFO -- server-centos-8: Finished verifying <server-centos-8> (0m1.11s).
+I, [2020-02-04T16:50:06.634539 #585672]  INFO -- server-centos-8: -----> Destroying <server-centos-8>...
+I, [2020-02-04T16:50:09.396292 #585672]  INFO -- server-centos-8: ==> default: Forcing shutdown of VM...
+I, [2020-02-04T16:50:10.720664 #585672]  INFO -- server-centos-8: ==> default: Destroying VM and associated drives...
+I, [2020-02-04T16:50:11.356914 #585672]  INFO -- server-centos-8: Vagrant instance <server-centos-8> destroyed.
+I, [2020-02-04T16:50:11.357584 #585672]  INFO -- server-centos-8: Finished destroying <server-centos-8> (0m4.72s).
+I, [2020-02-04T16:50:11.357829 #585672]  INFO -- server-centos-8: Finished testing <server-centos-8> (1m55.09s).

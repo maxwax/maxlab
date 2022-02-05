@@ -1,0 +1,193 @@
+I, [2020-02-10T23:43:29.839900 #471423]  INFO -- server-centos-8: -----> Cleaning up any prior instances of <server-centos-8>
+I, [2020-02-10T23:43:29.840055 #471423]  INFO -- server-centos-8: -----> Destroying <server-centos-8>...
+I, [2020-02-10T23:43:29.840595 #471423]  INFO -- server-centos-8: Finished destroying <server-centos-8> (0m0.00s).
+I, [2020-02-10T23:43:29.840753 #471423]  INFO -- server-centos-8: -----> Testing <server-centos-8>
+I, [2020-02-10T23:43:29.840839 #471423]  INFO -- server-centos-8: -----> Creating <server-centos-8>...
+I, [2020-02-10T23:43:30.206281 #471423]  INFO -- server-centos-8: Ignoring ffi-1.10.0 because its extensions are not built. Try: gem pristine ffi --version 1.10.0
+I, [2020-02-10T23:43:30.206489 #471423]  INFO -- server-centos-8: Ignoring json-2.2.0 because its extensions are not built. Try: gem pristine json --version 2.2.0
+I, [2020-02-10T23:43:30.207439 #471423]  INFO -- server-centos-8: Ignoring unf_ext-0.0.7.6 because its extensions are not built. Try: gem pristine unf_ext --version 0.0.7.6
+I, [2020-02-10T23:43:30.535292 #471423]  INFO -- server-centos-8: ------ Above is: require 'rubygems'
+I, [2020-02-10T23:43:30.696490 #471423]  INFO -- server-centos-8: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2020-02-10T23:43:30.816604 #471423]  INFO -- server-centos-8: ==> default: Importing base box 'bento/centos-8'...
+I, [2020-02-10T23:43:41.111689 #471423]  INFO -- server-centos-8: [KProgress: 30%[KProgress: 50%[KProgress: 60%[KProgress: 70%[KProgress: 80%[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
+I, [2020-02-10T23:43:41.354757 #471423]  INFO -- server-centos-8: ==> default: Checking if box 'bento/centos-8' version '202002.04.0' is up to date...
+I, [2020-02-10T23:43:42.077879 #471423]  INFO -- server-centos-8: ==> default: Setting the name of the VM: kitchen-mylab_plex-server-centos-8-cb72631c-46ed-43ec-af7c-867b3b658837
+I, [2020-02-10T23:43:43.602998 #471423]  INFO -- server-centos-8: ==> default: Clearing any previously set network interfaces...
+I, [2020-02-10T23:43:43.721829 #471423]  INFO -- server-centos-8: ==> default: Preparing network interfaces based on configuration...
+I, [2020-02-10T23:43:43.722053 #471423]  INFO -- server-centos-8:     default: Adapter 1: nat
+I, [2020-02-10T23:43:43.842344 #471423]  INFO -- server-centos-8: ==> default: Forwarding ports...
+I, [2020-02-10T23:43:44.000265 #471423]  INFO -- server-centos-8:     default: 22 (guest) => 2222 (host) (adapter 1)
+I, [2020-02-10T23:43:44.319534 #471423]  INFO -- server-centos-8: ==> default: Running 'pre-boot' VM customizations...
+I, [2020-02-10T23:43:44.415594 #471423]  INFO -- server-centos-8: ==> default: Booting VM...
+I, [2020-02-10T23:43:44.750008 #471423]  INFO -- server-centos-8: ==> default: Waiting for machine to boot. This may take a few minutes...
+I, [2020-02-10T23:43:45.090748 #471423]  INFO -- server-centos-8:     default: SSH address: 127.0.0.1:2222
+I, [2020-02-10T23:43:45.090881 #471423]  INFO -- server-centos-8:     default: SSH username: vagrant
+I, [2020-02-10T23:43:45.090931 #471423]  INFO -- server-centos-8:     default: SSH auth method: private key
+I, [2020-02-10T23:44:18.233898 #471423]  INFO -- server-centos-8:     default: 
+I, [2020-02-10T23:44:18.234052 #471423]  INFO -- server-centos-8:     default: Vagrant insecure key detected. Vagrant will automatically replace
+I, [2020-02-10T23:44:18.234162 #471423]  INFO -- server-centos-8:     default: this with a newly generated keypair for better security.
+I, [2020-02-10T23:44:23.141823 #471423]  INFO -- server-centos-8:     default: 
+I, [2020-02-10T23:44:23.141993 #471423]  INFO -- server-centos-8:     default: Inserting generated public key within guest...
+I, [2020-02-10T23:44:23.738256 #471423]  INFO -- server-centos-8:     default: Removing insecure key from the guest if it's present...
+I, [2020-02-10T23:44:24.402336 #471423]  INFO -- server-centos-8:     default: Key inserted! Disconnecting and reconnecting using new SSH key...
+I, [2020-02-10T23:44:25.758904 #471423]  INFO -- server-centos-8: ==> default: Machine booted and ready!
+I, [2020-02-10T23:44:25.760164 #471423]  INFO -- server-centos-8: ==> default: Checking for guest additions in VM...
+I, [2020-02-10T23:44:25.911689 #471423]  INFO -- server-centos-8: ==> default: Setting hostname...
+I, [2020-02-10T23:44:28.211379 #471423]  INFO -- server-centos-8: ==> default: Mounting shared folders...
+I, [2020-02-10T23:44:28.212068 #471423]  INFO -- server-centos-8:     default: /tmp/omnibus/cache => /home/maxwell/.kitchen/cache
+I, [2020-02-10T23:44:29.648043 #471423]  INFO -- server-centos-8: ==> default: Machine not provisioned because `--no-provision` is specified.
+I, [2020-02-10T23:44:32.904348 #471423]  INFO -- server-centos-8: [SSH] Established
+I, [2020-02-10T23:44:32.905058 #471423]  INFO -- server-centos-8: Vagrant instance <server-centos-8> created.
+I, [2020-02-10T23:44:32.905782 #471423]  INFO -- server-centos-8: Finished creating <server-centos-8> (1m3.06s).
+I, [2020-02-10T23:44:32.905936 #471423]  INFO -- server-centos-8: -----> Converging <server-centos-8>...
+I, [2020-02-10T23:44:32.907961 #471423]  INFO -- server-centos-8: Preparing files for transfer
+I, [2020-02-10T23:44:32.908160 #471423]  INFO -- server-centos-8: Installing cookbooks for Policyfile /home/maxwell/projects/chef/maxlab/policyfiles/tk_mylab_plex_server.rb using `chef install`
+I, [2020-02-10T23:44:35.549027 #471423]  INFO -- server-centos-8: Installing cookbooks from lock
+I, [2020-02-10T23:44:35.550015 #471423]  INFO -- server-centos-8: Installing maxlab_firewall 1.2.0
+I, [2020-02-10T23:44:35.552411 #471423]  INFO -- server-centos-8: Installing maxlab_plex     1.1.1
+I, [2020-02-10T23:44:35.553138 #471423]  INFO -- server-centos-8: Installing mylab_plex      1.0.0
+I, [2020-02-10T23:44:35.574500 #471423]  INFO -- server-centos-8: Updating policy lock using `chef update`
+I, [2020-02-10T23:44:37.923487 #471423]  INFO -- server-centos-8: Attributes already up to date
+I, [2020-02-10T23:44:37.925348 #471423]  INFO -- server-centos-8: Building policy tk_mylab_plex_server
+I, [2020-02-10T23:44:37.925511 #471423]  INFO -- server-centos-8: Expanded run list: recipe[maxlab_firewall::base_firewalld], recipe[mylab_plex::deploy], recipe[maxlab_firewall::update_firewalld]
+I, [2020-02-10T23:44:37.925564 #471423]  INFO -- server-centos-8: Caching Cookbooks...
+I, [2020-02-10T23:44:37.925692 #471423]  INFO -- server-centos-8: Installing maxlab_plex     >= 0.0.0 from path
+I, [2020-02-10T23:44:37.926400 #471423]  INFO -- server-centos-8: Installing mylab_plex      >= 0.0.0 from path
+I, [2020-02-10T23:44:37.927105 #471423]  INFO -- server-centos-8: Installing maxlab_firewall >= 0.0.0 from path
+I, [2020-02-10T23:44:41.226325 #471423]  INFO -- server-centos-8: 
+I, [2020-02-10T23:44:41.226521 #471423]  INFO -- server-centos-8: Lockfile written to /home/maxwell/projects/chef/maxlab/policyfiles/tk_mylab_plex_server.lock.json
+I, [2020-02-10T23:44:41.793127 #471423]  INFO -- server-centos-8: Policy revision id: f94cb1f780b88567143b69930beae9d5dae3b8f4b05489c46d8bb1f5bd7c2455
+I, [2020-02-10T23:44:41.838331 #471423]  INFO -- server-centos-8: Preparing dna.json
+I, [2020-02-10T23:44:41.838932 #471423]  INFO -- server-centos-8: Exporting cookbook dependencies from Policyfile /tmp/server-centos-8-sandbox-20200210-471423-1ai7emm...
+I, [2020-02-10T23:44:47.257275 #471423]  INFO -- server-centos-8: Exported policy 'tk_mylab_plex_server' to /tmp/server-centos-8-sandbox-20200210-471423-1ai7emm
+I, [2020-02-10T23:44:47.257440 #471423]  INFO -- server-centos-8: 
+I, [2020-02-10T23:44:47.257491 #471423]  INFO -- server-centos-8: To converge this system with the exported policy, run:
+I, [2020-02-10T23:44:47.257532 #471423]  INFO -- server-centos-8:   cd /tmp/server-centos-8-sandbox-20200210-471423-1ai7emm
+I, [2020-02-10T23:44:47.257572 #471423]  INFO -- server-centos-8:   chef-client -z
+I, [2020-02-10T23:44:47.296018 #471423]  INFO -- server-centos-8: Removing non-cookbook files before transfer
+I, [2020-02-10T23:44:47.296795 #471423]  INFO -- server-centos-8: Preparing data_bags
+I, [2020-02-10T23:44:47.315329 #471423]  INFO -- server-centos-8: Preparing nodes
+I, [2020-02-10T23:44:47.315851 #471423]  INFO -- server-centos-8: Preparing validation.pem
+I, [2020-02-10T23:44:47.316479 #471423]  INFO -- server-centos-8: Preparing client.rb
+I, [2020-02-10T23:44:47.412589 #471423]  INFO -- server-centos-8: -----> Installing Chef install only if missing package
+I, [2020-02-10T23:44:47.418461 #471423]  INFO -- server-centos-8: Downloading https://omnitruck.chef.io/install.sh to file /tmp/install.sh
+I, [2020-02-10T23:44:47.421688 #471423]  INFO -- server-centos-8: Trying wget...
+I, [2020-02-10T23:44:47.856799 #471423]  INFO -- server-centos-8: Download complete.
+I, [2020-02-10T23:44:47.925928 #471423]  INFO -- server-centos-8: el 8 x86_64
+I, [2020-02-10T23:44:47.926184 #471423]  INFO -- server-centos-8: Getting information for chef stable  for el...
+I, [2020-02-10T23:44:47.926338 #471423]  INFO -- server-centos-8: downloading https://omnitruck.chef.io/stable/chef/metadata?v=&p=el&pv=8&m=x86_64
+I, [2020-02-10T23:44:47.926415 #471423]  INFO -- server-centos-8:   to file /tmp/install.sh.4176/metadata.txt
+I, [2020-02-10T23:44:47.927809 #471423]  INFO -- server-centos-8: trying wget...
+I, [2020-02-10T23:44:48.417365 #471423]  INFO -- server-centos-8: sha1	15ee4fd0df70b3e3f320d4ebcefd250583086006
+I, [2020-02-10T23:44:48.418052 #471423]  INFO -- server-centos-8: sha256	57cdf26636ffd876277dcc865d70df34a178ad2ef99f36121dc576bf07f98894
+I, [2020-02-10T23:44:48.418286 #471423]  INFO -- server-centos-8: url	https://packages.chef.io/files/stable/chef/15.8.23/el/8/chef-15.8.23-1.el7.x86_64.rpm
+I, [2020-02-10T23:44:48.420577 #471423]  INFO -- server-centos-8: version	15.8.23
+I, [2020-02-10T23:44:48.435921 #471423]  INFO -- server-centos-8: downloaded metadata file looks valid...
+I, [2020-02-10T23:44:48.487011 #471423]  INFO -- server-centos-8: /tmp/omnibus/cache/chef-15.8.23-1.el7.x86_64.rpm exists
+I, [2020-02-10T23:44:48.487145 #471423]  INFO -- server-centos-8: Comparing checksum with sha256sum...
+I, [2020-02-10T23:44:48.740622 #471423]  INFO -- server-centos-8: 
+I, [2020-02-10T23:44:48.740780 #471423]  INFO -- server-centos-8: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2020-02-10T23:44:48.740828 #471423]  INFO -- server-centos-8: 
+I, [2020-02-10T23:44:48.740851 #471423]  INFO -- server-centos-8: You are installing a package without a version pin.  If you are installing
+I, [2020-02-10T23:44:48.740871 #471423]  INFO -- server-centos-8: on production servers via an automated process this is DANGEROUS and you will
+I, [2020-02-10T23:44:48.740920 #471423]  INFO -- server-centos-8: be upgraded without warning on new releases, even to new major releases.
+I, [2020-02-10T23:44:48.740969 #471423]  INFO -- server-centos-8: Letting the version float is only appropriate in desktop, test, development or
+I, [2020-02-10T23:44:48.741015 #471423]  INFO -- server-centos-8: CI/CD environments.
+I, [2020-02-10T23:44:48.741056 #471423]  INFO -- server-centos-8: 
+I, [2020-02-10T23:44:48.741098 #471423]  INFO -- server-centos-8: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2020-02-10T23:44:48.741162 #471423]  INFO -- server-centos-8: 
+I, [2020-02-10T23:44:48.741220 #471423]  INFO -- server-centos-8: Installing chef 
+I, [2020-02-10T23:44:48.741258 #471423]  INFO -- server-centos-8: installing with rpm...
+I, [2020-02-10T23:44:48.841915 #471423]  INFO -- server-centos-8: warning: /tmp/omnibus/cache/chef-15.8.23-1.el7.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+I, [2020-02-10T23:44:49.209302 #471423]  INFO -- server-centos-8: Verifying...                                                            (100%)#                                 (100%)##                                (100%)###                               (100%)####                              (100%)#####                             (100%)######                            (100%)#######                           (100%)########                          (100%)#########                         (100%)##########                        (100%)###########                       (100%)############                      (100%)#############                     (100%)##############                    (100%)###############                   (100%)################                  (100%)#################                 (100%)##################                (100%)###################               (100%)####################              (100%)#####################             (100%)######################            (100%)#######################           (100%)########################          (100%)#########################         (100%)##########################        (100%)###########################       (100%)############################      (100%)#############################     (100%)##############################    (100%)###############################   (100%)################################  (100%)################################# (100%)################################# [100%]
+I, [2020-02-10T23:44:49.736425 #471423]  INFO -- server-centos-8: Preparing...                                                            (100%)#                                 (100%)##                                (100%)###                               (100%)####                              (100%)#####                             (100%)######                            (100%)#######                           (100%)########                          (100%)#########                         (100%)##########                        (100%)###########                       (100%)############                      (100%)#############                     (100%)##############                    (100%)###############                   (100%)################                  (100%)#################                 (100%)##################                (100%)###################               (100%)####################              (100%)#####################             (100%)######################            (100%)#######################           (100%)########################          (100%)#########################         (100%)##########################        (100%)###########################       (100%)############################      (100%)#############################     (100%)##############################    (100%)###############################   (100%)################################  (100%)################################# (100%)################################# [100%]
+I, [2020-02-10T23:44:49.848395 #471423]  INFO -- server-centos-8: Updating / installing...
+I, [2020-02-10T23:44:57.987360 #471423]  INFO -- server-centos-8:    1:chef-15.8.23-1.el7                                                 (  1%)#                                 (  4%)##                                (  7%)###                               ( 10%)####                              ( 13%)#####                             ( 16%)######                            ( 19%)#######                           ( 22%)########                          ( 25%)#########                         ( 28%)##########                        ( 31%)###########                       ( 34%)############                      ( 37%)#############                     ( 40%)##############                    ( 43%)###############                   ( 46%)################                  ( 49%)#################                 ( 51%)##################                ( 54%)###################               ( 57%)####################              ( 60%)#####################             ( 63%)######################            ( 66%)#######################           ( 69%)########################          ( 72%)#########################         ( 75%)##########################        ( 78%)###########################       ( 81%)############################      ( 84%)#############################     ( 87%)##############################    ( 90%)###############################   ( 93%)################################  ( 96%)################################# ( 99%)################################# [100%]
+I, [2020-02-10T23:44:58.716639 #471423]  INFO -- server-centos-8: Thank you for installing Chef Infra Client! For help getting started visit https://learn.chef.io
+I, [2020-02-10T23:44:59.450820 #471423]  INFO -- server-centos-8: Transferring files to <server-centos-8>
+I, [2020-02-10T23:45:03.023343 #471423]  INFO -- server-centos-8: +---------------------------------------------+
+I, [2020-02-10T23:45:03.023435 #471423]  INFO -- server-centos-8: [32m✔[0m 2 product licenses accepted.
+I, [2020-02-10T23:45:03.023468 #471423]  INFO -- server-centos-8: +---------------------------------------------+
+I, [2020-02-10T23:45:03.187122 #471423]  INFO -- server-centos-8: Starting Chef Infra Client, version 15.8.23
+I, [2020-02-10T23:45:05.021516 #471423]  INFO -- server-centos-8: Creating a new client identity for server-centos-8 using the validator key.
+I, [2020-02-10T23:45:05.098361 #471423]  INFO -- server-centos-8: Using policy 'tk_mylab_plex_server' at revision 'f94cb1f780b88567143b69930beae9d5dae3b8f4b05489c46d8bb1f5bd7c2455'
+I, [2020-02-10T23:45:05.113705 #471423]  INFO -- server-centos-8: resolving cookbooks for run list: ["maxlab_firewall::base_firewalld@1.2.0 (7bfa6a6)", "mylab_plex::deploy@1.0.0 (2cdf924)", "maxlab_firewall::update_firewalld@1.2.0 (7bfa6a6)"]
+I, [2020-02-10T23:45:05.140744 #471423]  INFO -- server-centos-8: Synchronizing Cookbooks:
+I, [2020-02-10T23:45:05.203162 #471423]  INFO -- server-centos-8:   - maxlab_plex (1.1.1)
+I, [2020-02-10T23:45:05.233957 #471423]  INFO -- server-centos-8:   - mylab_plex (1.0.0)
+I, [2020-02-10T23:45:05.259409 #471423]  INFO -- server-centos-8:   - maxlab_firewall (1.2.0)
+I, [2020-02-10T23:45:05.259503 #471423]  INFO -- server-centos-8: Installing Cookbook Gems:
+I, [2020-02-10T23:45:05.259552 #471423]  INFO -- server-centos-8: Compiling Cookbooks...
+I, [2020-02-10T23:45:05.277727 #471423]  INFO -- server-centos-8: Converging 10 resources
+I, [2020-02-10T23:45:05.277828 #471423]  INFO -- server-centos-8: Recipe: maxlab_firewall::base_firewalld
+I, [2020-02-10T23:45:13.526174 #471423]  INFO -- server-centos-8:   * dnf_package[firewalld] action install (up to date)
+I, [2020-02-10T23:45:13.898050 #471423]  INFO -- server-centos-8:   * service[firewalld] action enable
+I, [2020-02-10T23:45:13.898118 #471423]  INFO -- server-centos-8:     - enable service service[firewalld]
+I, [2020-02-10T23:45:14.497731 #471423]  INFO -- server-centos-8:   * service[firewalld] action start
+I, [2020-02-10T23:45:14.497797 #471423]  INFO -- server-centos-8:     - start service service[firewalld]
+I, [2020-02-10T23:45:17.336417 #471423]  INFO -- server-centos-8:   * execute[set-default-zone] action run
+I, [2020-02-10T23:45:17.336555 #471423]  INFO -- server-centos-8:     - execute firewall-cmd --set-default-zone=dmz
+I, [2020-02-10T23:45:18.265353 #471423]  INFO -- server-centos-8:   * execute[set-default-interface-default-zone] action run
+I, [2020-02-10T23:45:18.265575 #471423]  INFO -- server-centos-8:     - execute firewall-cmd --change-interface=eth0 --zone=dmz
+I, [2020-02-10T23:45:18.265643 #471423]  INFO -- server-centos-8: Recipe: maxlab_plex::deploy
+I, [2020-02-10T23:45:18.265684 #471423]  INFO -- server-centos-8:   * yum_repository[PlexRepo] action create
+I, [2020-02-10T23:45:18.288058 #471423]  INFO -- server-centos-8:     * template[/etc/yum.repos.d/PlexRepo.repo] action create
+I, [2020-02-10T23:45:18.288165 #471423]  INFO -- server-centos-8:       - create new file /etc/yum.repos.d/PlexRepo.repo
+I, [2020-02-10T23:45:18.288228 #471423]  INFO -- server-centos-8:       - update content in file /etc/yum.repos.d/PlexRepo.repo from none to 61f26e
+I, [2020-02-10T23:45:18.288266 #471423]  INFO -- server-centos-8:       --- /etc/yum.repos.d/PlexRepo.repo	2020-02-11 06:45:20.492606640 +0000
+I, [2020-02-10T23:45:18.288301 #471423]  INFO -- server-centos-8:       +++ /etc/yum.repos.d/.chef-PlexRepo20200211-4421-1pkmpw6.repo	2020-02-11 06:45:20.492606640 +0000
+I, [2020-02-10T23:45:18.288340 #471423]  INFO -- server-centos-8:       @@ -1 +1,11 @@
+I, [2020-02-10T23:45:18.288371 #471423]  INFO -- server-centos-8:       +# This file was generated by Chef
+I, [2020-02-10T23:45:18.288401 #471423]  INFO -- server-centos-8:       +# Do NOT modify this file by hand.
+I, [2020-02-10T23:45:18.288447 #471423]  INFO -- server-centos-8:       +
+I, [2020-02-10T23:45:18.288478 #471423]  INFO -- server-centos-8:       +[PlexRepo]
+I, [2020-02-10T23:45:18.288518 #471423]  INFO -- server-centos-8:       +name=Yum Repository
+I, [2020-02-10T23:45:18.288547 #471423]  INFO -- server-centos-8:       +baseurl=https://downloads.plex.tv/repo/rpm/$basearch/
+I, [2020-02-10T23:45:18.288576 #471423]  INFO -- server-centos-8:       +enabled=1
+I, [2020-02-10T23:45:18.288605 #471423]  INFO -- server-centos-8:       +fastestmirror_enabled=0
+I, [2020-02-10T23:45:18.288634 #471423]  INFO -- server-centos-8:       +gpgcheck=1
+I, [2020-02-10T23:45:18.288662 #471423]  INFO -- server-centos-8:       +gpgkey=https://downloads.plex.tv/plex-keys/PlexSign.key
+I, [2020-02-10T23:45:18.336402 #471423]  INFO -- server-centos-8:       - change mode from '' to '0644'
+I, [2020-02-10T23:45:18.340724 #471423]  INFO -- server-centos-8:       - restore selinux security context
+I, [2020-02-10T23:45:18.883198 #471423]  INFO -- server-centos-8:     * execute[yum clean metadata PlexRepo] action run
+I, [2020-02-10T23:45:18.883304 #471423]  INFO -- server-centos-8:       - execute yum clean metadata --disablerepo=* --enablerepo=PlexRepo
+I, [2020-02-10T23:45:19.786535 #471423]  INFO -- server-centos-8:     * execute[yum-makecache-PlexRepo] action run
+I, [2020-02-10T23:45:19.786618 #471423]  INFO -- server-centos-8:       - execute yum -q -y makecache --disablerepo=* --enablerepo=PlexRepo
+I, [2020-02-10T23:45:19.805295 #471423]  INFO -- server-centos-8:     * ruby_block[package-cache-reload-PlexRepo] action create
+I, [2020-02-10T23:45:19.805376 #471423]  INFO -- server-centos-8:       - execute the ruby block package-cache-reload-PlexRepo
+I, [2020-02-10T23:45:19.805407 #471423]  INFO -- server-centos-8:     * execute[yum clean metadata PlexRepo] action nothing (skipped due to action :nothing)
+I, [2020-02-10T23:45:19.805427 #471423]  INFO -- server-centos-8:     * execute[yum-makecache-PlexRepo] action nothing (skipped due to action :nothing)
+I, [2020-02-10T23:45:19.805445 #471423]  INFO -- server-centos-8:     * ruby_block[package-cache-reload-PlexRepo] action nothing (skipped due to action :nothing)
+I, [2020-02-10T23:45:19.805461 #471423]  INFO -- server-centos-8:   
+I, [2020-02-10T23:46:40.729692 #471423]  INFO -- server-centos-8:   * dnf_package[seed-install-plexmediaserver] action install
+I, [2020-02-10T23:46:40.729762 #471423]  INFO -- server-centos-8:     - install version 0:1.18.6.2368-97add474d.x86_64 of package plexmediaserver
+I, [2020-02-10T23:46:40.729786 #471423]  INFO -- server-centos-8: Recipe: maxlab_firewall::update_firewalld
+I, [2020-02-10T23:46:41.913522 #471423]  INFO -- server-centos-8:   * execute[add-service-ssh-permanent] action run
+I, [2020-02-10T23:46:41.913605 #471423]  INFO -- server-centos-8:     - execute firewall-cmd --permanent --add-service=ssh --zone=dmz
+I, [2020-02-10T23:46:43.309398 #471423]  INFO -- server-centos-8:   * execute[add-service-ssh-runtime] action run
+I, [2020-02-10T23:46:43.309499 #471423]  INFO -- server-centos-8:     - execute firewall-cmd --add-service=ssh --zone=dmz
+I, [2020-02-10T23:46:44.050437 #471423]  INFO -- server-centos-8:   * execute[add-service-http-permanent] action run
+I, [2020-02-10T23:46:44.050525 #471423]  INFO -- server-centos-8:     - execute firewall-cmd --permanent --add-service=http --zone=dmz
+I, [2020-02-10T23:46:44.946996 #471423]  INFO -- server-centos-8:   * execute[add-service-http-runtime] action run
+I, [2020-02-10T23:46:44.947086 #471423]  INFO -- server-centos-8:     - execute firewall-cmd --add-service=http --zone=dmz
+I, [2020-02-10T23:46:45.332763 #471423]  INFO -- server-centos-8: 
+I, [2020-02-10T23:46:45.332833 #471423]  INFO -- server-centos-8: Running handlers:
+I, [2020-02-10T23:46:45.332867 #471423]  INFO -- server-centos-8: Running handlers complete
+I, [2020-02-10T23:46:45.332893 #471423]  INFO -- server-centos-8: Chef Infra Client finished, 14/18 resources updated in 01 minutes 41 seconds
+I, [2020-02-10T23:46:47.442920 #471423]  INFO -- server-centos-8: Downloading files from <server-centos-8>
+I, [2020-02-10T23:46:47.447026 #471423]  INFO -- server-centos-8: Finished converging <server-centos-8> (2m14.54s).
+I, [2020-02-10T23:46:47.447220 #471423]  INFO -- server-centos-8: -----> Setting up <server-centos-8>...
+I, [2020-02-10T23:46:47.448042 #471423]  INFO -- server-centos-8: Finished setting up <server-centos-8> (0m0.00s).
+I, [2020-02-10T23:46:47.448180 #471423]  INFO -- server-centos-8: -----> Verifying <server-centos-8>...
+I, [2020-02-10T23:46:54.485896 #471423]  INFO -- server-centos-8: Loaded tests from {:path=>".home.maxwell.projects.chef.maxlab.cookbooks.mylab_plex.test.integration.deploy"} 
+I, [2020-02-10T23:46:58.627190 #471423]  INFO -- server-centos-8: Finished verifying <server-centos-8> (0m11.18s).
+I, [2020-02-10T23:46:58.627730 #471423]  INFO -- server-centos-8: -----> Destroying <server-centos-8>...
+I, [2020-02-10T23:46:59.182579 #471423]  INFO -- server-centos-8: Ignoring ffi-1.10.0 because its extensions are not built. Try: gem pristine ffi --version 1.10.0
+I, [2020-02-10T23:46:59.182999 #471423]  INFO -- server-centos-8: Ignoring json-2.2.0 because its extensions are not built. Try: gem pristine json --version 2.2.0
+I, [2020-02-10T23:46:59.184171 #471423]  INFO -- server-centos-8: Ignoring unf_ext-0.0.7.6 because its extensions are not built. Try: gem pristine unf_ext --version 0.0.7.6
+I, [2020-02-10T23:46:59.777479 #471423]  INFO -- server-centos-8: ------ Above is: require 'rubygems'
+I, [2020-02-10T23:47:01.827638 #471423]  INFO -- server-centos-8: ==> default: Forcing shutdown of VM...
+I, [2020-02-10T23:47:02.992977 #471423]  INFO -- server-centos-8: ==> default: Destroying VM and associated drives...
+I, [2020-02-10T23:47:03.584221 #471423]  INFO -- server-centos-8: Vagrant instance <server-centos-8> destroyed.
+I, [2020-02-10T23:47:03.584733 #471423]  INFO -- server-centos-8: Finished destroying <server-centos-8> (0m4.96s).
+I, [2020-02-10T23:47:03.587542 #471423]  INFO -- server-centos-8: Finished testing <server-centos-8> (3m33.75s).
