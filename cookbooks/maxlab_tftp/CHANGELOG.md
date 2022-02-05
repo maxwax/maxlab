@@ -1,5 +1,10 @@
 # maxlab_tftp CHANGELOG
 
+# 1.4.0
+
+* Modified kitchen.yml to use maxlab-centos-chef vagrant base box
+* Renamed test files for consistency with other cookbooks
+
 # 1.3.0
 
 * Renaming references to tftp_server as tftp for consistency with other cookbooks and services.
