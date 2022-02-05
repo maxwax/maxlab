@@ -2,6 +2,11 @@
 
 Deploy a DHCP server
 
+# 1.3.0
+
+* Modified kitchen.yml to use maxlab-centos-chef vagrant base box
+* Renamed test files for consistency with other cookbooks
+
 # 1.2.2
 
 * deploy.rb: Stamp top of dhcpd.conf file with network and subnet name, replacing old data bag name which is not used anymore.

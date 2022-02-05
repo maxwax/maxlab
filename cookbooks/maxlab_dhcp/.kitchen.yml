@@ -16,7 +16,7 @@ verifier:
   name: inspec
 
 platforms:
-  - name: centos-8
+  - name: maxlab-centos-chef
 
 suites:
   - name: primary
@@ -25,6 +25,7 @@ suites:
       inspec_tests:
         - test/integration/primary
     attributes:
+      kitchen_testing_maxlab: true
     provisioner:
        policyfile: ../../policyfiles/tk_maxlab_dhcp_server_primary.rb
 
@@ -34,5 +35,6 @@ suites:
       inspec_tests:
         - test/integration/standby
     attributes:
+      kitchen_testing_maxlab: true
     provisioner:
        policyfile: ../../policyfiles/tk_maxlab_dhcp_server_standby.rb
