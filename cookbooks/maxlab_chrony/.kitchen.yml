@@ -13,7 +13,7 @@ verifier:
   name: inspec
 
 platforms:
-  - name: centos-8
+  - name: maxlab-centos-chef
 
 suites:
   - name: client
@@ -21,6 +21,7 @@ suites:
       inspec_tests:
         - test/integration/client
     attributes:
+      kitchen_testing_maxlab: true
     provisioner:
        policyfile: ../../policyfiles/tk_maxlab_chrony_client.rb
 
@@ -30,5 +31,6 @@ suites:
       inspec_tests:
         - test/integration/server
     attributes:
+      kitchen_testing_maxlab: true
     provisioner:
        policyfile: ../../policyfiles/tk_maxlab_chrony_server.rb

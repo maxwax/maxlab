@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of the maxlab_chrony cookbook.
 
+# 1.5.0
+
+* Modified kitchen.yml to use maxlab-centos-chef vagrant base box
+* Renamed test files for consistency with other cookbook
+
 # 1.4.1 Rename policyfiles
 
 * Renaming all test kitchen policyfiles as tk_<pfile_name>
