@@ -1,5 +1,10 @@
 # maxlab_smartd CHANGELOG
 
+# 1.3.0
+
+* Modified kitchen.yml to use maxlab-centos-chef vagrant base box
+* Renamed test files for consistency with other cookbooks
+
 # Add default smartd package
 
 * Added else to OS case statement that selects package to install
