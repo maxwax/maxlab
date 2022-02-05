@@ -1,5 +1,10 @@
 # maxlab_users CHANGELOG
 
+# 1.3.0
+
+* Modified kitchen.yml to use maxlab-centos-chef vagrant base box
+* Renamed test files for consistency with other cookbooks
+
 # 1.2.3
 
 * Ensure we create a user's home directory.
