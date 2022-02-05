@@ -13,41 +13,45 @@ verifier:
   name: inspec
 
 platforms:
-  - name: centos-8
+  - name: maxlab-centos-chef
 
 suites:
-  - name: kitchen
+  - name: filer
     run_list:
     verifier:
       inspec_tests:
-        - test/integration/service
+        - test/integration/default
     attributes:
+      kitchen_testing_maxlab: true
     provisioner:
-       policyfile: ../../policyfiles/tk_maxlab_samba_server_kitchen.rb
+       policyfile: ../../policyfiles/tk_maxlab_samba_server_filer.rb
 
-  - name: primary
+  - name: aux
     run_list:
     verifier:
       inspec_tests:
-        - test/integration/noservice
+        - test/integration/default
     attributes:
+      kitchen_testing_maxlab: true
     provisioner:
-       policyfile: ../../policyfiles/tk_maxlab_samba_server_primary.rb
+       policyfile: ../../policyfiles/tk_maxlab_samba_server_aux.rb
 
-  - name: auxillary
+  - name: central
     run_list:
     verifier:
       inspec_tests:
-        - test/integration/noservice
+        - test/integration/default
     attributes:
+      kitchen_testing_maxlab: true
     provisioner:
-       policyfile: ../../policyfiles/tk_maxlab_samba_server_auxillary.rb
+       policyfile: ../../policyfiles/tk_maxlab_samba_server_central.rb
 
-  - name: laptopnas
+  - name: depot
     run_list:
     verifier:
       inspec_tests:
-        - test/integration/noservice
+        - test/integration/default
     attributes:
+      kitchen_testing_maxlab: true
     provisioner:
-       policyfile: ../../policyfiles/tk_maxlab_samba_server_laptopnas.rb
+       policyfile: ../../policyfiles/tk_maxlab_samba_server_depot.rb

@@ -1,6 +1,6 @@
 # Policyfile.rb - Describe how you want Chef Infra server to build your system.
 
-name 'tk_maxlab_samba_server_laptopnas'
+name 'tk_maxlab_samba_server_aux'
 
 default_source :supermarket
 
@@ -13,7 +13,7 @@ cookbook 'maxlab_firewall',   path: '../cookbooks/maxlab_firewall'
 
 default['config_firewall']['base_config'] = 'base_firewall.maxlab.dmz'
 
-default['instance_config_samba']['instance'] = 'maxlab_samba_laptopnas'
+default['instance_config_samba']['instance'] = 'maxlab_samba_aux'
 # Networking config type: 'node' = real node, don't attempt to start config_samba
 # 'testkitchen' = start samba and verify services in Test Kitchen
 default['instance_config_samba']['instance_type'] = 'node'

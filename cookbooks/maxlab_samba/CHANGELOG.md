@@ -1,5 +1,12 @@
 # maxlab_samba CHANGELOG
 
+# 1.3.0
+
+* Updated kitchen.yml to use maxlab-centos-chef vagrant base box
+* Using consistent test directory names
+* Removing obsolete policyfiles from nodes and test kitchen functionality no longer used
+* Service nmb can't start in vagrant's VM because it needs the 192.168.9.0/24 network, so this currently fails in vagrant.   Future work needed, moving on for now.
+
 # 1.2.4 Use 'redhat' not 'rhel'
 
 * Replaced 'rhel' with 'redhat' in attribute file OS detection.
