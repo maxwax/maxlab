@@ -2,13 +2,20 @@
   "id": "maxlab_nfs_client_plex",
   "doc": "NFS client configuration for plex.maxlab",
   "cfg": {
+    "directory_tree" : {
+      "net": {
+        "directory": "/net",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      }
+    },
     "mounts" : {
       "central-audiovideo": {
         "enabled": true,
         "comment": "Audiovideo files on central at /srv/audiovideo",
         "nfs_server": "central.maxlab",
         "nfs_share": "/srv/audiovideo",
-        "local_parent_directory": "/net",
         "local_mount_directory": "/net/audiovideo",
         "nfs_version": "nfs4",
         "nfs_options": "rw,soft,intr,rsize=4096,wsize=4096,noexec,nosuid",
@@ -22,7 +29,6 @@
         "comment": "AV Archive files on central at /srv/avarchive",
         "nfs_server": "central.maxlab",
         "nfs_share": "/srv/avarchive",
-        "local_parent_directory": "/net",
         "local_mount_directory": "/net/avarchive",
         "nfs_version": "nfs4",
         "nfs_options": "rw,soft,intr,rsize=4096,wsize=4096,noexec,nosuid",
@@ -36,7 +42,6 @@
         "comment": "AV files on small 320G drive",
         "nfs_server": "central.maxlab",
         "nfs_share": "/srv/tv320",
-        "local_parent_directory": "/net",
         "local_mount_directory": "/net/tv320",
         "nfs_version": "nfs4",
         "nfs_options": "rw,soft,intr,rsize=4096,wsize=4096,noexec,nosuid",

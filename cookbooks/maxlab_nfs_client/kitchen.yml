@@ -13,23 +13,16 @@ verifier:
   name: inspec
 
 platforms:
-  - name: centos-8
+  - name: maxlab-centos-chef
 
 suites:
-  - name: sample
-    run_list:
-    verifier:
-      inspec_tests:
-        - test/integration/sample
-    attributes:
-    provisioner:
-       policyfile: ../../policyfiles/tk_maxlab_nfs_client_sample.rb
-
   - name: plex
     run_list:
     verifier:
       inspec_tests:
-        - test/integration/client
+        - test/integration/default
+        - test/integration/plex
     attributes:
+      kitchen_testing_maxlab: true
     provisioner:
        policyfile: ../../policyfiles/tk_maxlab_nfs_client_plex.rb

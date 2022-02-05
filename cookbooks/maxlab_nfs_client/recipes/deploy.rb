@@ -22,47 +22,52 @@ config_nfs_client = data_bag_item('config_nfs_client', config_id)
 # Empty array to hold lines to be added to /etc/fstab
 nfs_mount_lines = {}
 
+# Create directories that will serve as the structure to host
+# NFS share directories.  Ex: Create /net for share /net/audiovideo
+config_nfs_client['cfg']['directory_tree'].each do | id, details|
+
+  directory details['directory'] do
+    owner details['owner']
+    group details['group']
+    mode details['mode']
+
+    recursive false
+
+    action :create
+
+    # not_if is crtiical.
+    # Attempting to execute this directory resource on an existing
+    # directory may result in an SELinux 'restorecon -R' being
+    # issued to restore the context of MANY files mounted at
+    # an existing filesystem mount point.
+
+    not_if { File.directory?(details['directory']) }
+  end
+end
+
 # Piece by piece construct a hash entry that configures an NFS mount point with one or more allowed clients and one or more allowed options per client.
 # ex: /srv/mount_point_dir hostname1(rw,no_root_squash) hostname2(rw)
 config_nfs_client['cfg']['mounts'].sort.each do | nfs_share_id, nfs_share_details|
 
-  # Create a parent directory like /net
-  # This is lazy to use a dedicated variable but quick, easy and SAFE
-  directory nfs_share_details['local_parent_directory'] do
-    owner nfs_share_details['owner']
-    group nfs_share_details['group']
-    mode nfs_share_details['mode']
-
-    recursive false
-
-    action :create
-
-    # not_if is crtiical.
-    # Attempting to execute this directory resource on an existing
-    # directory may result in an SELinux 'restorecon -R' being
-    # issued to restore the context of MANY files mounted at
-    # an existing filesystem mount point.
-
-    not_if { File.directory?(nfs_share_details['local_parent_directory']) }
-  end
-
   # Make the mount directory within the parent directory
-  directory nfs_share_details['local_mount_directory'] do
-    owner nfs_share_details['owner']
-    group nfs_share_details['group']
-    mode nfs_share_details['mode']
+  if node.exist?('kitchen_testing_maxlab')
+    directory nfs_share_details['local_mount_directory'] do
+      owner nfs_share_details['owner']
+      group nfs_share_details['group']
+      mode nfs_share_details['mode']
 
-    recursive false
+      recursive false
 
-    action :create
+      action :create
 
-    # not_if is crtiical.
-    # Attempting to execute this directory resource on an existing
-    # directory may result in an SELinux 'restorecon -R' being
-    # issued to restore the context of MANY files mounted at
-    # an existing filesystem mount point.
+      # not_if is crtiical.
+      # Attempting to execute this directory resource on an existing
+      # directory may result in an SELinux 'restorecon -R' being
+      # issued to restore the context of MANY files mounted at
+      # an existing filesystem mount point.
 
-    not_if { File.directory?(nfs_share_details['local_mount_directory']) }
+      not_if { File.directory?(nfs_share_details['local_mount_directory']) }
+    end
   end
 
   # Safety: Clear this variable within our loop
