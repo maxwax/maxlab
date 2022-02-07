@@ -475,6 +475,15 @@
           "base": "maxlab_vmlab",
           "mac_address": "22:9c:5a:c6:76:0f"
         },
+        "127": {
+          "node_name": "plexdata",
+          "description": "Plex Media Server on coalbox dedicated NIC",
+          "type": "node",
+          "group": "plex",
+          "os:": "CentOS",
+          "base": "maxlab_vmlab",
+          "mac_address": "6e:b0:56:c5:9a:06"
+        },
         "130": {
           "node_name": "sco5",
           "description": "SCO Openserver 5.0.7 Vintage node",

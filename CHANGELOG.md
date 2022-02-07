@@ -1,6 +1,10 @@
 
 # maxlab CHANGELOG
 
+# 1.2.2
+
+* Add plexdata dns/dhcp entry for second nic on Plex VM
+
 # 1.2.1
 
 * Add dns/dhcp for coalbridge1 and coalbridge2, two additional IP ports on hypervisor coalbox.  Used to give direct wire access to virtual machines like Plex.
