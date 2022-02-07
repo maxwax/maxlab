@@ -484,6 +484,24 @@
           "base": "Openserver5",
           "mac_address": "08:00:27:12:F4:1A"
         },
+        "246": {
+          "node_name": "coalbridge1",
+          "description": "Gigabit port 2 on coalbox hypervisor",
+          "type": "node",
+          "group": "hypervisor",
+          "os:": "Proxmox",
+          "base": "maxlab_proxmox",
+          "mac_address": "00:22:64:89:18:be"
+        },
+        "247": {
+          "node_name": "coalbridge2",
+          "description": "Gigabit port 3 on coalbox hypervisor",
+          "type": "node",
+          "group": "hypervisor",
+          "os:": "Proxmox",
+          "base": "maxlab_proxmox",
+          "mac_address": "00:22:64:89:45:13"
+        },
         "248": {
           "node_name": "depot",
           "description": "HP MediaSmart Server EX495 (NFS, Samba)",

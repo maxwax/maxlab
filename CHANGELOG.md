@@ -1,6 +1,18 @@
 
 # maxlab CHANGELOG
 
+# 1.2.1
+
+* Add dns/dhcp for coalbridge1 and coalbridge2, two additional IP ports on hypervisor coalbox.  Used to give direct wire access to virtual machines like Plex.
+
+# 1.2
+
+* Massive cleanup of maxlab repository
+* All kichen.yml files within cookbooks updated to use a modified version of bento/centos-8 called maxlab-centos-chef.
+** This modified box uses updated vault.centos.org repos now that mirror.centos.org repos are gone
+** It has Chef pre-installed for speed (will need to periodically update that)
+** It allows all kitchen files to use centos as an easy to spin up vagrant VM and by using an abstracted name, I can change the box to Stream or something else and not have to modify all the kitchen.yml files.
+
 # 1.1.24
 
 * Added maxlab_base::deploy-bare-metal to policyfiles for filer, aux, central and depot.  This deploys components that provide direct hardware support on bare metal nodes but allows maxlab_base::deploy to skip deploying them within virtual machines.
