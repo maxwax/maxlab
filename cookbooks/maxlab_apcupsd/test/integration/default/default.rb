@@ -1,9 +1,4 @@
-# # encoding: utf-8
-
 # Inspec test for recipe maxlab_apcupsd::deploy
-
-#
-#
 
 describe package('apcupsd') do
   it { should be_installed }

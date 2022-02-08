@@ -2,13 +2,7 @@
 # Cookbook:: maxlab_apcupsd
 # Recipe:: deploy
 #
-# Copyright:: 2020, The Authors, All Rights Reserved.
-
-=begin
-#<
-Deploy the apcups daemon to monitor an APC UPS unit.
-#>
-=end
+# Copyright:: 2020, Maxwell Spangler, All Rights Reserved.
 
 # Deploy packages for the apcupsd service
 package node['apcupsd']['packages'] do
@@ -21,7 +15,7 @@ config_id = node['instance_config_apcupsd']['instance']
 
 # 2022-0126 OBSOLETE USE OF DATA BAG, using attributes in policyfile instead
 # Retrieve the data bag with apcsupd config information for this node
-#config_apcupsd = data_bag_item('config_apcupsd', config_id)
+# config_apcupsd = data_bag_item('config_apcupsd', config_id)
 
 # Deploy the system-wide configuration file for apcupsd on this node
 template '/etc/apcupsd/apcupsd.conf' do
@@ -31,9 +25,9 @@ template '/etc/apcupsd/apcupsd.conf' do
   group 'root'
   mode '0644'
 
-  variables ({
+  variables({
       config_id: config_id,
-      config_apcupsd: node['apcupsd']['config']
+      config_apcupsd: node['apcupsd']['config'],
   })
 
   action :create
@@ -47,9 +41,9 @@ template '/etc/apcupsd/apccontrol' do
   group 'root'
   mode '0755'
 
-  variables ({
+  variables({
       config_id: config_id,
-      sysadmin: node['apcupsd']['config']['sysadmin']
+      sysadmin: node['apcupsd']['config']['sysadmin'],
   })
 
   action :create
@@ -65,33 +59,27 @@ service_zone = node['maxlab_firewall']['default_interface_zone']
 # Ex: Append 'dns' to 'ssh http https' (list of already allowed services)
 if node['apcupsd']['firewalld'].key?('services')
   node['apcupsd']['firewalld']['services'].each do |service_string|
-
-    if not node['maxlab_firewall']['zones'][service_zone]['services'].include? service_string
+    unless node['maxlab_firewall']['zones'][service_zone]['services'].include? service_string
       node.normal['maxlab_firewall']['zones'][service_zone]['services'] << service_string
     end
-
   end
 end
 
 # Append individual port definitions
 if node['apcupsd']['firewalld'].key?('ports')
   node['apcupsd']['firewalld']['ports'].each do |port_string|
-
-    if not node['maxlab_firewall']['zones'][service_zone]['ports'].include? port_string
+    unless node['maxlab_firewall']['zones'][service_zone]['ports'].include? port_string
       node.normal['maxlab_firewall']['zones'][service_zone]['ports'] << port_string
     end
-
   end
 end
 
 # Append individual sources definitions
 if node['apcupsd']['firewalld'].key?('sources')
   node['apcupsd']['firewalld']['sources'].each do |source_string|
-
-    if not node['maxlab_firewall']['zones'][source_zone]['sources'].include? source_string
+    unless node['maxlab_firewall']['zones'][source_zone]['sources'].include? source_string
       node.normal['maxlab_firewall']['zones'][source_zone]['sources'] << source_string
     end
-
   end
 end
 
@@ -105,18 +93,17 @@ node['apcupsd']['services'].each do |service_name|
 end
 
 # Deploy logging script regardless of whether we schedule it with cron
-cookbook_file "/usr/local/bin/log-apc-ups-stats" do
-  source "usr/local/bin/log-apc-ups-stats"
+cookbook_file '/usr/local/bin/log-apc-ups-stats' do
+  source 'usr/local/bin/log-apc-ups-stats'
   owner 'root'
   group 'root'
-  mode 0755
+  mode '0755'
   action :create
 end
 
 if node['apcupsd']['config']['enable_logger'] == true
-
   cron 'cron_job_apcups_logger' do
-    command "/usr/local/bin/log-apc-ups-stats"
+    command '/usr/local/bin/log-apc-ups-stats'
 
     month  node['apcupsd']['config']['log_month']
     day    node['apcupsd']['config']['log_day']

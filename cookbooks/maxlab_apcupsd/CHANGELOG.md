@@ -1,5 +1,13 @@
 # maxlab_apcupsd CHANGELOG
 
+# 1.2.1
+
+* Cookstyle cleanup: use single quotes in many places
+* Cookstyle cleanup: Use quotes around file or directory modes
+* Cookstyle cleanup: Trailing comma in hashes
+* Cookstyle cleanup: Remove some old non-standard commenting
+* Cookstyle cleanup: switch a not condition to unless
+
 # 1.2.0
 
 * Modified kitchen.yml to use maxlab-centos-chef vagrant base box
