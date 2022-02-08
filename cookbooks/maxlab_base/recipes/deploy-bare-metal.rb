@@ -4,15 +4,8 @@
 #
 # Copyright:: 2019, Maxwell Spangler, All Rights Reserved.
 
-
-=begin
-#<
-Deploy repos, repo commands, packages and scripts required to support bare metal hardware components.
-#>
-=end
-
 # Ex: 'rhel8', 'centos7', 'fedora30'
-platform_and_version = node['platform'] + node['platform_version'].split('.')[0]
+platform_and_version = node['platform'] + node['platform_version'].to_i.to_s
 
 # Consult this table to determine the config_os data bag that defines this OSver
 os_table = data_bag_item('config_os_table', 'os_table')
@@ -25,7 +18,6 @@ config_os = data_bag_item('config_os', this_os)
 
 # Download rpm packages that configure repos for this OS. Ex: rpmfusion
 config_os['repo_packages_bare_metal'].each do |pkg_name, pkg_details|
-
   remote_file "/tmp/#{pkg_details['filename']}" do
     source pkg_details['source']
     action :create
@@ -43,15 +35,12 @@ config_os['repo_packages_bare_metal'].each do |pkg_name, pkg_details|
   file "/tmp/#{pkg_name}" do
     action :delete
   end
-
 end
 
 # Execute any commands related to enabling base repos
 # Ex: Red Hat 7 requires an additional 'subscription-manager' command
-config_os['repo_config_commands_bare_metal'].each do |config_item, config_commands|
-
+config_os['repo_config_commands_bare_metal'].each do |_config_item, config_commands|
   config_commands.each do |command_name, exec_command|
-
     execute command_name do
       command exec_command
     end
@@ -65,9 +54,7 @@ end
 
 # Deploy OS specific scripts for things like /etc/bashrc
 config_os['default_scripts_bare_metal'].each do |dir_name, dir_config|
-
   dir_config.each do |file_name, file_config|
-
     template "#{dir_name}/#{file_name}" do
       source "#{this_os}/#{file_config['subdir']}/#{file_name}.erb"
 
@@ -78,5 +65,4 @@ config_os['default_scripts_bare_metal'].each do |dir_name, dir_config|
       action :create
     end
   end
-
 end

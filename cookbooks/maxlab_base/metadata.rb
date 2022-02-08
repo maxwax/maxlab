@@ -3,7 +3,6 @@ maintainer 'Maxwell Spangler'
 maintainer_email 'maxcode@maxwellspangler.com'
 license 'All Rights Reserved'
 description 'Construct a base configuration environment on each node'
-long_description 'Construct a base configuration environment on each node'
 version '1.5.0'
 chef_version '>= 13.0'
 

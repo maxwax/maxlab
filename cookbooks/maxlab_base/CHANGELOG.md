@@ -1,5 +1,14 @@
 # maxlab_base CHANGELOG
 
+# 1.5.1
+
+* Cookstyle cleanup: Remove long description from metadata.rb
+* Cookstyle cleanup: Lots of empty lines removed, meh.
+* Cookstyle cleanup: Modify spec file to use Centos 8, add redhat 8
+* Cookstyle cleanup: Construct platform using to_i.to_s on version
+* Cookstyle cleanup: remove unrequired encoding spec on test file
+
+
 # 1.5.0
 
 * Modified kitchen.yml to use maxlab-centos-chef vagrant base box
