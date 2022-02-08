@@ -1,6 +1,10 @@
 
 # maxlab CHANGELOG
 
+# 1.2.3
+
+* Updated README.md explaining this code base after two years of use
+
 # 1.2.2
 
 * Add plexdata dns/dhcp entry for second nic on Plex VM

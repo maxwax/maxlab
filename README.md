@@ -6,38 +6,58 @@ This code base exists to support my needs only, but I'm sharing it on github to 
 
 You are free to explore it and copy code as you like, but any support is limited to occasional questions to guide you in the right direction.
 
-## My target platform is:
+This code base was originally developed in the fall of 2019 as a learning project for my Chef skills.  Some of the code is basic and has flaws, while other code developed more recently feels more 'right' and higher quality to me.  If you explore, know this is not a textbook example of how to do things, but a set of possible methods and styles.
 
-* Centos 8.1 VM nodes running on a KVM based Proxmox 6 hypervisor cluster
-* SELinux enabled in enforcing mode
-* firewalld for network firewalling
-* Limited support in some recipes for Centos 7 and Centos 6
+### My target platform is (Updated 2022-0204)+
 
-## Principles
+* My lab is a mixture of Red Hat Enterprise Linux (RHEL) 8 on NAS servers and Proxmox as a hypervisor with virtual machines on other nodes.
 
-I deploy services using the following principles:
+* I'm using CentOS 8 for lab nodes and experimenting with CentOS Stream.
 
-* **Cookbooks should contain logic** on how to deploy services
+* The lab is small: four NAS, two hypervisors, and only a few virtual machines.
+  * I don't need more, but this code base lets me expand and scale as I like.
 
-* **Data bags provide configuration choices** such as names of resources, directories to be used, sizes of filesystems, etc.
+## Goals
 
-Ideally, a generic-enough cookbook with two custom data bags driving the configuration should allow two unique instances of the service to be deployed only by modifying the data bag and not the code.
+When I started this project, I had a list of "Principles" that served as goals for what I wanted to accomplish in an environment I control.
 
-* **Code should be sufficiently documented**.  I want enough comments so that I can quickly and easily understand the intentions and the implementation of my code when reviewing it many months after writing it.
+My expectations are more pragmatic now that I've seen the complexity involved and the time required to create code that is just for a home lab.
 
-* **Code should prioritize readability over speed or efficiency**.  This is Chef code. Knowing *what* it is supposed to do and *how* it does it is more important than trying to be clever or make it go faster.  You may see me construct a filename in a variable and use it once in a Chef resource just to space out the complexity of the code, for example.
+#### Original goals:
 
-* **Roles are used to deploy services**.  There are pros and cons to this, but my primary goal is to set a service instance ID alongside a set of recipes in the runlist to deploy that service.  The recipe then uses the ID to load a specific data bag and it then deploy a unique instance of that service.
+* Make generic cookbooks that could be shared in a community and allow their operation to be configured and customized.
+* Place all configuration data in data bags to separate code from data.
+* Use a sophisticated understanding of Chef attribute layers
+* Use wrapper cookbooks to override the configuration of generic cookbooks
+* Use wrapper cookbooks to extend the capabilities of generic cookbooks
 
-* **Aim toward using this in the cloud**. I'm trying to make choices that support deployment in a cloud environment.  This means avoiding easy traps like associating a named host with a service configuration and instead letting that service run on any node with the right role or tag associations.
+#### Current goals:
 
-### Where I'm lazy and imperfect
+* **Write cookbooks focused on my personal needs but allow for flexibility of use in the future.**
+  * The time required to create high quality generic cookbooks is rewarding in community projects but not this personal project.
+* **Use policyfiles to organize services as runlists, attributes and dependencies.**
+  * I love policyfiles for fixing so many things that were broken without them.
+  * Never use roles.
+* **Use data bags where appropriate to configure the operation of cookbooks.**
+  * Data bags (such as config_network) can make organizing a large list of similar information (like network nodes) very easy to understand and maintain.
+* **Use attributes within policyfiles to configure services.**
+  * This allows clear documentation of how service deployment A and service deployment B differ.
+* **Code should be documented.**
+  * I continue to strive to find a balance between too little and too much, but none is not acceptable.
+* **Code should be clear and readable.**
+  * When possible, I'd like to return to code a year later and be able to understand it because it is kept simple in visual presentation and how it implements steps and algorithms.
+  * I'd rather it be slower and verbose than fast and clever.
+* **Code should have Test Kitchen automated testing.**
+  * At least some. At least the ability to execute 'kitchen test' and have it demonstrate it can complete without error.
+  * I don't write comprehensive test because after writing code I'll deploy it and test it for real.
+* **Continue to aim towards cloud-centric operation.**
+  * Deploy services via Chef (not by hand)
+  * Deploy updates and modifications via Chef (not by hand)
+  * Destroy a node and build a new node instead of excessively debugging a faulty node
+  * Nodes should be able to provision without another node in the lab as a dependency.
 
-Since this is a personal project without a collaborative code review, you'll see me break some of my principles.  Sometimes my code will be less generic than it should be and there won't be enough support for non-target platforms or features I'm not using.  This should reinforce how important it is to have others review your code.  *Small details matter.*
+#### Where my code is imperfect
 
-## Community Cookbooks
-
-In the past, I've written wrapper cookbooks with wrapper cookbook attributes that replace community cookbook default attributes.  This is how the Chef community teaches this practice and its OK.  This lets me leverage community cookbook's logic to get things done, but *it mixes code and data in the wrapper cookbook and defeats my principles.*
-
-So, in this lab, I'll be using a method of storing my configuration values in a data bag, loading the values into a wrapper cookbook recipe and then using those values to over ride the community cookbook's default values.  This lets me *wrap* a community cookbook but using my data bag based pattern.
-
+* Sometimes I don't have or want to take the time to do things right and the solution is a hack
+* Sometimes I'm not aware of a better solution and I use a legacy method
+* Sometimes I'm focused on simple, readable code rather than clever tricks.
