@@ -1,3 +1,5 @@
+inherit_from: .rubocop_todo.yml
+
 # This file maintains maxwell's preferred ruby style 2022-0208
 
 #
@@ -24,3 +26,12 @@ Layout/EmptyLinesAroundBlockBody:
     - 'spec/**/*.rb'
     - 'test/**/*.rb'
   EnforcedStyle: empty_lines
+
+#
+# Don't expect a comma after the last element in a multi-line hash
+#
+
+Style/TrailingCommaInHashLiteral:
+  Exclude:
+    - 'recipes/deploy.rb'
+  EnforcedStyleForMultiline: comma
