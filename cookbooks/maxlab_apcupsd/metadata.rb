@@ -3,7 +3,7 @@ maintainer 'Maxwell Spangler'
 maintainer_email 'maxcode@maxwellspangler.com'
 license 'All Rights Reserved'
 description 'Deploy apcups to monitor APC Uninterruptable Power Supply (UPS) units.'
-version '1.2.0'
+version '1.2.2'
 chef_version '>= 14.0'
 
 # The `issues_url` points to the location where issues for this cookbook are

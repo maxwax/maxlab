@@ -40,6 +40,7 @@ end
 # Execute any commands related to enabling base repos
 # Ex: Red Hat 7 requires an additional 'subscription-manager' command
 config_os['repo_config_commands_bare_metal'].each do |_config_item, config_commands|
+
   config_commands.each do |command_name, exec_command|
     execute command_name do
       command exec_command
@@ -54,6 +55,7 @@ end
 
 # Deploy OS specific scripts for things like /etc/bashrc
 config_os['default_scripts_bare_metal'].each do |dir_name, dir_config|
+
   dir_config.each do |file_name, file_config|
     template "#{dir_name}/#{file_name}" do
       source "#{this_os}/#{file_config['subdir']}/#{file_name}.erb"

@@ -6,15 +6,12 @@ default['apcupsd']['packages'] = [ 'apcupsd' ]
 # Ex: 'rhel8', 'centos7', 'fedora30'
 platform_and_version = node['platform'] + node['platform_version'].to_i.to_s
 
-case platform_and_version
-
-when 'redhat7', 'centos7'
-  default['apcupsd']['packages'] = [ 'apcupsd' ]
-
-when 'redhat8', 'centos8'
-  default['apcupsd']['packages'] = [ 'apcupsd' ]
-
-end
+default['apcupsd']['packages'] = case platform_and_version
+                                 when 'redhat7', 'centos7'
+                                   [ 'apcupsd' ]
+                                 when 'redhat8', 'centos8'
+                                   [ 'apcupsd' ]
+                                 end
 
 #  Services required to be running for NFS server operations
 default['apcupsd']['services'] = [ 'apcupsd' ]

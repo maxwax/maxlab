@@ -1,5 +1,10 @@
 # maxlab_apcupsd CHANGELOG
 
+# 1.2.2
+
+* Cookstyle cleanup: reformat case statement
+* Cookstyle cleanup: remove comma after last element in multi hash list
+
 # 1.2.1
 
 * Cookstyle cleanup: use single quotes in many places

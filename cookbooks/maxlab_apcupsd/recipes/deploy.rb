@@ -27,7 +27,7 @@ template '/etc/apcupsd/apcupsd.conf' do
 
   variables({
       config_id: config_id,
-      config_apcupsd: node['apcupsd']['config'],
+      config_apcupsd: node['apcupsd']['config']
   })
 
   action :create
@@ -43,7 +43,7 @@ template '/etc/apcupsd/apccontrol' do
 
   variables({
       config_id: config_id,
-      sysadmin: node['apcupsd']['config']['sysadmin'],
+      sysadmin: node['apcupsd']['config']['sysadmin']
   })
 
   action :create
