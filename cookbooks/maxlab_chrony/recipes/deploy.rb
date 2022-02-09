@@ -2,13 +2,7 @@
 # Cookbook:: maxlab_chrony
 # Recipe:: deploy
 #
-# Copyright:: 2019, The Authors, All Rights Reserved.
-
-=begin
-#<
-Configure the Chrony NTP client in a standard fashion.
-#>
-=end
+# Copyright:: 2019, Maxwell Spangler, All Rights Reserved.
 
 # Load client or server node attributes into a variable for easier
 # access and code readability.
@@ -16,24 +10,22 @@ Configure the Chrony NTP client in a standard fashion.
 # Also set the time source to the first local ntp-server tagged node
 # or the upstream internet NTP server
 case node['instance_config_chrony']['instance_type']
-
-  when 'client'
-    config_chrony = node['chrony']['client'].to_h
-
-    ntp_server = search(:node, "tags:ntp-server")[0]['fqdn']
-
-  when 'server'
-    config_chrony = node['chrony']['server'].to_h
-
-    ntp_server = node['env']['maxlab']['upstream_ntp']
-
+when 'client'
+  config_chrony = node['chrony']['client'].to_h
+  ntp_server = search(:node, 'tags:ntp-server')[0]['fqdn']
+when 'server'
+  config_chrony = node['chrony']['server'].to_h
+  ntp_server = node['env']['maxlab']['upstream_ntp']
 end
 
 # Identify the first network and subnet from the chrony config
 #
-# If the config has multiple, we can currently only use one, so use first
-# This is a bad limitation, but OK, for now, for our home lab use
-network_id, subnet_id = node['chrony']['serve_chrony_for'].first
+network_id, subnet_id_list = node['chrony']['serve_chrony_for'].first
+
+# Select only the first subnet if there are more than one
+# Currently this cookbook only configures chrony to support one subnet
+# bad 2019 code I don't feel like completely fixing right now.
+subnet_id = subnet_id_list.first
 
 # Load network configuration for this network ID only
 full_config_network = data_bag_item('config_network', network_id)
@@ -52,70 +44,75 @@ cfg_pool = "#{config_chrony['options']['pool']['config']} #{ntp_server} #{config
 config_chrony['options']['pool']['config'] = cfg_pool
 
 # Temp variables which will reset json data bag values
-cfg_allow= ""
-cfg_bindacqaddress = ""
-cfg_cmd_allow = ""
-cfg_bindcmdaddress = ""
+# cfg_allow = ''
+# cfg_bindacqaddr = ''
+# cfg_cmd_allow = ''
+# cfg_bindcmdaddr = ''
 
 # Auto configure options for allowing NTP client access
-if config_chrony['options'].has_key?('allow')
+if config_chrony['options'].key?('allow')
 
-  case config_chrony['options']['allow']['value']
-    when 'auto_subnet'
-      # Construct using this node's default subnet, ex:'192.168.75.0/24'
-      cfg_allow = "#{config_chrony['options']['allow']['config']} #{subnet_id}/#{subnet_info['network_mask']}"
-    else
-      # Constrct using manually configured 'value' key
-      cfg_allow = "#{config_chrony['options']['allow']['config']} #{config_chrony['options']['allow']['value']}"
-  end
+  cfg_allow = case config_chrony['options']['allow']['value']
+              when 'auto_subnet'
+                # Construct using this node's def. subnet, ex:'192.168.75.0/24'
+                "#{config_chrony['options']['allow']['config']} #{subnet_id}/#{subnet_info['network_mask']}"
+              else
+                # Constrct using manually configured 'value' key
+                "#{config_chrony['options']['allow']['config']} #{config_chrony['options']['allow']['value']}"
+              end
 
-  # Replace the data bag value with a auto configured command to drop in cfg file
+  # Replace the data bag value with a auto config command to drop in cfg file
   config_chrony['options']['allow']['config'] = cfg_allow
 end
 
 # Auto configure options for cmdallowing chroncy client command
-if config_chrony['options'].has_key?('cmdallow')
+if config_chrony['options'].key?('cmdallow')
 
-  case config_chrony['options']['cmdallow']['value']
-    when 'auto_subnet'
-      cfg_cmdallow = "#{config_chrony['options']['cmdallow']['config']} #{subnet_id}/#{subnet_info['network_mask']}"
-    else
-      cfg_cmdallow = "#{config_chrony['options']['cmdallow']['config']} #{config_chrony['options']['cmdallow']['value']}"
-  end
-  config_chrony['options']['cmdallow']['config'] = cfg_cmdallow
+  cfg_cmd_allow = case config_chrony['options']['cmdallow']['value']
+                  when 'auto_subnet'
+                    "#{config_chrony['options']['cmdallow']['config']} #{subnet_id}/#{subnet_info['network_mask']}"
+                  else
+                    "#{config_chrony['options']['cmdallow']['config']} #{config_chrony['options']['cmdallow']['value']}"
+                  end
+
+  config_chrony['options']['cmdallow']['config'] = cfg_cmd_allow
 end
 
 # Auto configure binding of an IP address to serve Chrony commands
-if config_chrony['options'].has_key?('bindcmdaddress')
+if config_chrony['options'].key?('bindcmdaddress')
 
-  case config_chrony['options']['bindcmdaddress']['value']
-    when 'auto_ipaddress'
-      cfg_bindcmdaddress = "#{config_chrony['options']['bindcmdaddress']['config']} #{node['ipaddress']}"
-    else
-      cfg_bindcmdaddress = "#{config_chrony['options']['bindcmdaddress']['config']} #{node['ipaddress']} #{config_chrony['options']['bindcmdaddress']['value']}"
-  end
-  config_chrony['options']['bindcmdaddress']['config'] = cfg_bindcmdaddress
+  cfg_bindcmdaddr = case config_chrony['options']['bindcmdaddress']['value']
+                    when 'auto_ipaddress'
+                      "#{config_chrony['options']['bindcmdaddress']['config']} #{node['ipaddress']}"
+                    else
+                      "#{config_chrony['options']['bindcmdaddress']['config']} #{node['ipaddress']} #{config_chrony['options']['bindcmdaddress']['value']}"
+                    end
+  config_chrony['options']['bindcmdaddress']['config'] = cfg_bindcmdaddr
 end
 
 # Auto configure binding of an IP address to serve Chrony commands
-if config_chrony['options'].has_key?('bindacqaddress')
+if config_chrony['options'].key?('bindacqaddress')
 
-  case config_chrony['options']['bindacqaddress']['value']
-    when 'auto_ipaddress'
-      cfg_bindacqaddress = "#{config_chrony['options']['bindacqaddress']['config']} #{node['ipaddress']}"
-    else
-      cfg_bindacqaddress = "#{config_chrony['options']['bindacqaddress']['config']} #{node['ipaddress']} #{config_chrony['options']['bindacqaddress']['value']}"
-  end
-  config_chrony['options']['bindacqaddress']['config'] = cfg_bindacqaddress
+  cfg_bindacqaddr = case config_chrony['options']['bindacqaddress']['value']
+                    when 'auto_ipaddress'
+                      "#{config_chrony['options']['bindacqaddress']['config']} #{node['ipaddress']}"
+                    else
+                      "#{config_chrony['options']['bindacqaddress']['config']} #{node['ipaddress']} #{config_chrony['options']['bindacqaddress']['value']}"
+                    end
+  config_chrony['options']['bindacqaddress']['config'] = cfg_bindacqaddr
 end
 
 # Catches Redhat/Centos/Fedora/etc
 os_dist  = node['platform_family']
-os_major = node['platform_version'].split('.')[0]
+os_major = node['platform_version'].to_i.to_s
+
+log "os_dist #{os_dist}"
+log "os_major #{os_major}"
 
 # Install packages for Chrony
-chrony_packages = node['chrony']['packages'][os_dist][os_major].each do |pkg, ver|
-  if ver != 'any'
+node['chrony']['packages'][os_dist][os_major].each do |pkg, ver|
+
+  if ver == 'any'
     package pkg do
       action :install
     end
@@ -130,7 +127,7 @@ end
 # Master Chrony configuration file
 template '/etc/chrony.conf' do
   source 'chrony.conf.erb'
-  variables (
+  variables(
     {
       config_chrony: config_chrony
     }
@@ -152,7 +149,7 @@ if node['instance_config_chrony']['instance_type'] == 'server'
   if node['chrony']['firewall']['firewalld'].key?('services')
     node['chrony']['firewall']['firewalld']['services'].each do |service_string|
 
-      if not node['maxlab_firewall']['zones'][service_zone]['services'].include? service_string
+      unless node['maxlab_firewall']['zones'][service_zone]['services'].include? service_string
         node.normal['maxlab_firewall']['zones'][service_zone]['services'] << service_string
       end
 
@@ -163,7 +160,7 @@ if node['instance_config_chrony']['instance_type'] == 'server'
   if node['chrony']['firewall']['firewalld'].key?('ports')
     node['chrony']['firewall']['firewalld']['ports'].each do |port_string|
 
-      if not node['maxlab_firewall']['zones'][service_zone]['ports'].include? port_string
+      unless node['maxlab_firewall']['zones'][service_zone]['ports'].include? port_string
         node.normal['maxlab_firewall']['zones'][service_zone]['ports'] << port_string
       end
 
@@ -174,7 +171,7 @@ if node['instance_config_chrony']['instance_type'] == 'server'
   if node['chrony']['firewall']['firewalld'].key?('sources')
     node['chrony']['firewall']['firewalld']['sources'].each do |source_string|
 
-      if not node['maxlab_firewall']['zones'][source_zone]['sources'].include? source_string
+      unless node['maxlab_firewall']['zones'][source_zone]['sources'].include? source_string
         node.normal['maxlab_firewall']['zones'][source_zone]['sources'] << source_string
       end
 
@@ -192,8 +189,8 @@ service 'chronyd' do
 end
 
 case node['instance_config_chrony']['instance_type']
-  when 'server'
-    tag('ntp-server')
-  when 'client'
-    tag('ntp-client')
+when 'server'
+  tag('ntp-server')
+when 'client'
+  tag('ntp-client')
 end

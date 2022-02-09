@@ -2,6 +2,17 @@
 
 This file is used to list changes made in each version of the maxlab_chrony cookbook.
 
+# 1.5.1
+
+* Fixing some old bugs: set a list of subnets from the serve_chrony_for attribute, then set subnet_id to the first one.  The existing code was working but confusing in this regard
+* Cookstyle cleanup: Remove utf-8 encoding from tests
+* Cookstyle cleanup: set platform_version using .to_i.to_s
+* Cookstyle cleanup: spec/unit remove Ubuntu, set Redhat 8 and Centos 8
+* Cookstyle cleanup: remove long description from metadata.rb
+* Cookstyle cleanup: Replacing double quotes with single quotes per Ruby style guide
+* Cookstyle cleanup: Using recommended formatting for case statements
+* Cookstyle cleanup: Assign variable to output of case statement
+
 # 1.5.0
 
 * Modified kitchen.yml to use maxlab-centos-chef vagrant base box
