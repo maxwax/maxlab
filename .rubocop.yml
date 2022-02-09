@@ -1,3 +1,5 @@
+inherit_from: .rubocop_todo.yml
+
 # This file maintains maxwell's preferred ruby style 2022-0208
 
 #
