@@ -1,6 +1,13 @@
 
 # maxlab CHANGELOG
 
+# 1.2.4
+
+* Rename .rubocop-master.yml to rubocop-master.yml without dot in front
+* Add TargetRubyVersion: 3.0 to rubocop files
+* Add Style/TrailingCommaInArrayLiteral: rule to rubocop -- don't check for trailing comma in an array of literals
+* Update TrailingCommaInHashLiteral: wildcards recipes/*.rb and attributes/*.rb
+
 # 1.2.3
 
 * Updated README.md explaining this code base after two years of use

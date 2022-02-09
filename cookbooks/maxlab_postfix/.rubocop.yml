@@ -1,5 +1,8 @@
 # This file maintains maxwell's preferred ruby style 2022-0208
 
+AllCops:
+  TargetRubyVersion: 3.0
+
 #
 # Ignore cookstyle complaints about the use of normal attributes
 # I specifically use normal attributes with firewall attributes
@@ -31,5 +34,16 @@ Layout/EmptyLinesAroundBlockBody:
 
 Style/TrailingCommaInHashLiteral:
   Exclude:
-    - 'recipes/deploy.rb'
+    - 'recipes/*.rb'
+    - 'attributes/*.rb'
+  EnforcedStyleForMultiline: comma
+
+#
+# Don't expect a comma after the last element in a literal array
+#
+
+Style/TrailingCommaInArrayLiteral:
+  Exclude:
+    - 'recipes/*.rb'
+    - 'attributes/*.rb'
   EnforcedStyleForMultiline: comma
