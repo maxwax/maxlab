@@ -2,6 +2,16 @@
 
 Cookbook for deploying DNS service using BIND on Redhat platform Linux distributions
 
+# 1.3.1
+
+* Cookstyle cleanup: remove long description from metadata.rb
+* Cookstyle cleanup: use single quotes in many places
+* Cookstyle cleanup: Use quotes around file or directory modes
+* Cookstyle cleanup: Trailing comma in hashes
+* Cookstyle cleanup: Remove some old non-standard commenting
+* Cookstyle cleanup: switch a not condition to unless
+* Cookstyle cleanup: Assign variables to case statement return not within case
+
 # 1.3.0
 
 * Modified kitchen.yml to use maxlab-centos-chef vagrant base box

@@ -3,7 +3,6 @@ maintainer 'Maxwell Spangler'
 maintainer_email 'maxcode@maxwellspangler.com'
 license 'All Rights Reserved'
 description 'Installs/Configures BIND DNS services on Red Hat based Linux distributions'
-long_description 'Installs/Configures BIND DNS servvices on Red Hat based Linux distributions'
 version '1.3.0'
 chef_version '>= 13.0'
 
