@@ -20,7 +20,7 @@ Chef/Correctness/NodeNormal:
 
 Layout/EmptyLinesAroundBlockBody:
   Exclude:
-    - 'recipes/deploy.rb'
+    - 'recipes/*.rb'
     - 'spec/**/*.rb'
     - 'test/**/*.rb'
   EnforcedStyle: empty_lines
