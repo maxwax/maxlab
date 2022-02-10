@@ -1,5 +1,3 @@
-# # encoding: utf-8
-
 # Inspec test for recipe maxlab_plex::default
 
 # The Inspec reference, with examples and extensive documentation, can be
@@ -30,5 +28,5 @@ end
 
 describe command('curl -I localhost:32400') do
   its('exit_status') { should cmp 0 }
-  its('stdout') { should match (/.*(200\ OK).*/) }
+  its('stdout') { should match(/.*(200\ OK).*/) }
 end
