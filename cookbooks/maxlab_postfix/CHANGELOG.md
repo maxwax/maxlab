@@ -8,7 +8,7 @@
 * Cookstyle cleanup: Use node['platform_version'].to_i.to_s
 * Cookstyle cleanup: Remove long description from metadata.rb
 * Cookstyle cleanup: Remove non-standard comment syntax #<>
-* Cookstyle clenaup: Remove block comments
+* Cookstyle cleanup: Remove block comments
 
 # 1.3.0
 
