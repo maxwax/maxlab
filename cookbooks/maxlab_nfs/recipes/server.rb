@@ -2,13 +2,7 @@
 # Cookbook:: maxlab_nfs
 # Recipe:: server
 #
-# Copyright:: 2020, The Authors, All Rights Reserved.
-
-=begin
-#<
-Deploy a very basic NFS server that support NFSv3 or NFSv4 services.
-#>
-=end
+# Copyright:: 2020, Maxwell Spangler, All Rights Reserved.
 
 # Install requires packages to support NFS from node attributes
 package node['nfs']['packages'] do
@@ -29,7 +23,7 @@ config_nfs_server = data_bag_item('config_nfs_server', config_id)
 # If the filesystem /srv/filerdata is not mounted, this code will create
 # /srv/filerdata/mydata on the root filesystem and it will be hidden if
 # /srv/filerdata is mounted on top of it.
-config_nfs_server['cfg']['directory_tree'].each do | id, details|
+config_nfs_server['cfg']['directory_tree'].each do |_id, details|
 
   directory details['directory'] do
     owner details['owner']
@@ -56,7 +50,7 @@ exports_lines = {}
 # For each NFS share, construct a line for /etc/exports to define the share
 # and how it should be shared to client nodes
 # ex: /srv/mount_point_dir hostname1(rw,no_root_squash) hostname2(rw)
-config_nfs_server['cfg']['exports'].sort.each do | mount_point, mount_details|
+config_nfs_server['cfg']['exports'].sort.each do |mount_point, mount_details|
 
   # IF this attribute is set, we're in Test Kitchen, so make these directories
   # to mock up actual storage on mounted drives
@@ -81,17 +75,17 @@ config_nfs_server['cfg']['exports'].sort.each do | mount_point, mount_details|
   end
 
   # Comment out non-enabled filesystems
-  if mount_details['enabled'] == true
-    export_text = "#{mount_point} "
-  else
-    export_text = "##{mount_point} "
-  end
+  export_text = if mount_details['enabled'] == true
+                  "#{mount_point} "
+                else
+                  "##{mount_point} "
+                end
 
   mount_details['clients'].sort.each do |client_name, client_details|
 
     # Reject and do not include clients with no configured options
     # this should not occur, but is protection against mis-configured data bags
-    if client_details['options'].length > 0
+    unless client_details['options'].empty?
 
       # start of allowed client definition
       export_text << "#{client_name}("
@@ -103,14 +97,14 @@ config_nfs_server['cfg']['exports'].sort.each do | mount_point, mount_details|
         if first_opt
           first_opt = false
         else
-          export_text << ","
+          export_text << ','
         end
 
         export_text << "#{nfs_client_opt}"
 
       end
       # All options provided, close the host definition
-      export_text << ") "
+      export_text << ') '
     end
 
     exports_lines[mount_point] = {
@@ -127,7 +121,7 @@ template '/etc/exports' do
   group 'root'
   mode '0644'
 
-  variables ({
+  variables({
       exports_lines: exports_lines,
       config_id: config_id
   })
@@ -153,7 +147,7 @@ service_zone = node['maxlab_firewall']['default_interface_zone']
 if node['nfs']['firewalld'].key?('services')
   node['nfs']['firewalld']['services'].each do |service_string|
 
-    if not node['maxlab_firewall']['zones'][service_zone]['services'].include? service_string
+    unless node['maxlab_firewall']['zones'][service_zone]['services'].include? service_string
       node.normal['maxlab_firewall']['zones'][service_zone]['services'] << service_string
     end
 
@@ -164,7 +158,7 @@ end
 if node['nfs']['firewalld'].key?('ports')
   node['nfs']['firewalld']['ports'].each do |port_string|
 
-    if not node['maxlab_firewall']['zones'][service_zone]['ports'].include? port_string
+    unless node['maxlab_firewall']['zones'][service_zone]['ports'].include? port_string
       node.normal['maxlab_firewall']['zones'][service_zone]['ports'] << port_string
     end
 
@@ -175,7 +169,7 @@ end
 if node['nfs']['firewalld'].key?('sources')
   node['nfs']['firewalld']['sources'].each do |source_string|
 
-    if not node['maxlab_firewall']['zones'][source_zone]['sources'].include? source_string
+    unless node['maxlab_firewall']['zones'][source_zone]['sources'].include? source_string
       node.normal['maxlab_firewall']['zones'][source_zone]['sources'] << source_string
     end
 
