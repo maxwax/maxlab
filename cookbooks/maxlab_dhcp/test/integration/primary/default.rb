@@ -1,5 +1,3 @@
-d# # encoding: utf-8
-
 # Inspec test for recipe maxlab_chrony::default
 
 # The Inspec reference, with examples and extensive documentation, can be

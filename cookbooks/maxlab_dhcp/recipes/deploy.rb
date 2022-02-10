@@ -2,25 +2,17 @@
 # Cookbook:: maxlab_dhcp
 # Recipe:: default
 #
-# Copyright:: 2019, The Authors, All Rights Reserved.
+# Copyright:: 2019, Maxwell Spangler, All Rights Reserved.
 
-=begin
-#<
-Deploy a DHCP server.
-#>
-=end
-
-# Load data bag configuration for a specific DHCP server instance
-#config_dhcp = data_bag_item('config_dhcp', node['config_dhcp']['instance'])
 config_dhcp = node['dhcp']
 
 ## Catches Redhat/Centos/Fedora/etc
 os_dist  = node['platform_family']
-os_major = node['platform_version'].split('.')[0]
+os_major = node['platform_version'].to_i.to_s
 
 # Install packages for DHCP
-dhcp_packages = node['dhcp']['packages'][os_dist][os_major].each do |pkg, ver|
-  if ver == "any"
+node['dhcp']['packages'][os_dist][os_major].each do |pkg, ver|
+  if ver == 'any'
     package pkg do
       action :install
     end
@@ -34,10 +26,10 @@ end
 
 subnets = {}
 
-# Hack: drop this in the config file header.
+# HACK: drop this in the config file header.
 # Only works if dhcp serves only one network, one subnet.
 # Fix later. 2020-02-15 maxwell
-config_header = ""
+config_header = ''
 
 # Iterate over each network supported by this DHCP server
 config_dhcp['serve_dhcp_for'].each do |network_id, subnet_id|
@@ -52,13 +44,17 @@ config_dhcp['serve_dhcp_for'].each do |network_id, subnet_id|
   # subnet info and all will be populated in the dhcpd.conf file
   subnets[subnet_id] = config_network['subnet'][subnet_id]
 
-  # Construct a string of DNS servers in format "A, B, C"
-  dns_list = ""
+  # Construct a string of DNS servers in format 'A, B, C'
+  dns_list = ''
   subnets[subnet_id]['dns']['domain_name_servers'].each do |dns_target|
-    if not dns_list == ""
-      dns_list = dns_list + ", "
+
+    unless dns_list == ''
+      # Append to dns_list
+      dns_list += ', '
     end
-    dns_list = dns_list + dns_target
+
+    # Append to dns_list
+    dns_list += + dns_target
   end
   subnets[subnet_id]['dns_list'] = dns_list
 
@@ -68,8 +64,7 @@ config_dhcp['serve_dhcp_for'].each do |network_id, subnet_id|
   groups = {}
 
   subnets[subnet_id]['groups'].each do |group_name, group_options|
-    if not groups.has_key?(group_name['group']) and
-       not group_options['dhcp'] == false
+    unless groups.key?(group_name['group']) && group_options['dhcp'] == false
       groups[group_name] = group_options
     end
   end
@@ -77,19 +72,21 @@ config_dhcp['serve_dhcp_for'].each do |network_id, subnet_id|
   # Next, scan all nodes defined in the config_network json and
   # include any groups assigned to nodes but not defined in json's groups{}
   # section.  Do not append groups for nodes that fail to have a MAC address
-  subnets[subnet_id]['nodes'].each do |node_ip, node_info|
+  subnets[subnet_id]['nodes'].each do |_node_ip, node_info|
 
-    if not groups.has_key?(node_info['group']) and
-       node_info.has_key?('mac_address')
+    unless groups.key?(node_info['group'])
+
+      # if this hash doesn't have this field, don't try to evaluate it
+      next if !node_info.key?('mac_address')
 
       # Do not include this node's group
       # if the node does not have a MAC address VALUE - it may be a VIP
-      if not node_info['mac_address'].empty?
-        groups[node_info['group']] = {
-          "dhcp": true,
-          "dhcp_option": []
-        }
-      end
+      next if node_info['mac_address'].empty?
+
+      groups[node_info['group']] = {
+        'dhcp': true,
+        'dhcp_option': []
+      }
     end
   end
 
@@ -122,7 +119,7 @@ service_zone = node['maxlab_firewall']['default_interface_zone']
 if config_dhcp['firewall']['firewalld'].key?('service')
   config_dhcp['firewall']['firewalld']['service'].each do |service_string|
 
-    if not node['maxlab_firewall']['zones'][service_zone]['services'].include? service_string
+    unless node['maxlab_firewall']['zones'][service_zone]['services'].include? service_string
       node.normal['maxlab_firewall']['zones'][service_zone]['services'] << service_string
     end
 
@@ -133,7 +130,7 @@ end
 if config_dhcp['firewall']['firewalld'].key?('ports')
   config_dhcp['firewall']['firewalld']['ports'].each do |port_string|
 
-    if not node['maxlab_firewall']['zones'][service_zone]['ports'].include? port_string
+    unless node['maxlab_firewall']['zones'][service_zone]['ports'].include? port_string
       node.normal['maxlab_firewall']['zones'][service_zone]['ports'] << port_string
     end
 
@@ -144,27 +141,13 @@ end
 if config_dhcp['firewall']['firewalld'].key?('sources')
   config_dhcp['firewall']['firewalld']['sources'].each do |source_string|
 
-    if not node['maxlab_firewall']['zones'][source_zone]['sources'].include? source_string
+    unless node['maxlab_firewall']['zones'][source_zone]['sources'].include? source_string
       node.normal['maxlab_firewall']['zones'][source_zone]['sources'] << source_string
     end
 
   end
 end
 #---
-
-# # Acquire one node that is a dhcp-server and the primary dhcp-server
-# dhcp_nodes = search(:node, "tags:dhcp-server AND tags:dhcp-primary")
-#
-# # We might get more than one, but we should get only one if tags are managed
-# enable_dhcp = false
-# dhcp_nodes.each do |this_node|
-#   puts "CHECKING #{this_node}"
-#   # if this node is in the list of primary-dhcp servers, then enable it.
-#   if this_node['hostname'] == node['hostname']
-#     enable_dhcp = true
-#   end
-#
-# end
 
 # Ensure the service starts on boot and is reloaded upon config file updates
 service 'dhcpd' do

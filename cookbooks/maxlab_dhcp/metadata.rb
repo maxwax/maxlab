@@ -3,7 +3,6 @@ maintainer 'Maxwell Spangler'
 maintainer_email 'maxcode@maxwellspangler.com'
 license 'All Rights Reserved'
 description 'Deploy a DHCP server on Red Hat Linux systems'
-long_description 'Deploy a DHCP server on Red Hat Linux systems'
 version '1.3.0'
 chef_version '>= 13.0'
 
