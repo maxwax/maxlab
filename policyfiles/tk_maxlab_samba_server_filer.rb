@@ -8,8 +8,8 @@ run_list "recipe[maxlab_firewall::base_firewalld]",
          "recipe[maxlab_samba::server]",
          "recipe[maxlab_firewall::update_firewalld]"
 
-cookbook 'maxlab_samba', path: '../cookbooks/maxlab_samba'
-cookbook 'maxlab_firewall',   path: '../cookbooks/maxlab_firewall'
+cookbook 'maxlab_samba',    path: '../cookbooks/maxlab_samba'
+cookbook 'maxlab_firewall', path: '../cookbooks/maxlab_firewall'
 
 default['config_firewall']['base_config'] = 'base_firewall.maxlab.dmz'
 
