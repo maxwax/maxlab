@@ -1,5 +1,3 @@
-# # encoding: utf-8
-
 # Inspec test for recipe maxlab_nfs_client::client
 
 # Check for NFS client directories on node plex.maxlab

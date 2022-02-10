@@ -1,5 +1,15 @@
 # maxlab_nfs CHANGELOG
 
+# 1.2.1
+
+* Cookstyle cleanup: Replace double quotes with single quotes as recommended
+* Cookstyle cleanup: remove utf8 encoding on tests
+* Cookstyle cleanup: Add Redhat 8, Centos 8, remove Ubuntu from spec file
+* Cookstyle cleanup: Use node['platform_version'].to_i.to_s
+* Cookstyle cleanup: Remove long description from metadata.rb
+* Cookstyle cleanup: Remove non-standard comment syntax #<>
+* Cookstyle clenaup: Remove block comments
+
 # 1.2.0
 
 * Updating kitchen.yml to use common tests in default and plex
