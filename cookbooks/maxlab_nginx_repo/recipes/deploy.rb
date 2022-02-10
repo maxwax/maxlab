@@ -2,27 +2,21 @@
 # Cookbook:: maxlab_nginx_repo
 # Recipe:: deploy
 #
-# Copyright:: 2019, The Authors, All Rights Reserved.
-
-=begin
-#<
-Deploy a simple instance of nginx to serve basic files via HTTP in maxlab.
-#>
-=end
+# Copyright:: 2019, Maxwell Spangler, All Rights Reserved.
 
 config_nginx_repo = node['nginx_repo']
 
 # Load network information for the network this kickstart config uses
-config_network = data_bag_item('config_network', config_nginx_repo['network'])
+# config_network = data_bag_item('config_network', config_nginx_repo['network'])
 
 # Pull subnet specific info from the overall network
-subnet_info = config_network['subnet'][config_nginx_repo['subnet']]
+# subnet_info = config_network['subnet'][config_nginx_repo['subnet']]
 
 package %w(nginx) do
   action :install
 end
 
-config_nginx_repo['servers'].each do |sname, sconfig|
+config_nginx_repo['servers'].each do |_sname, sconfig|
   directory sconfig['root_dir'] do
     owner config_nginx_repo['owner']
     group config_nginx_repo['group']
@@ -84,25 +78,32 @@ end
 
 include_recipe 'selinux_policy::install'
 
-config_nginx_repo['servers'].each do |sname, sconfig|
+config_nginx_repo['servers'].each do |_sname, sconfig|
 
   http_dir = sconfig['root_dir']
 
+  root_dirs =
+          ['/', '/bin', '/boot', '/dev', '/etc', '/home', '/lib',
+          '/lib64', '/media', '/mnt', '/net', '/opt', '/proc',
+          '/root', '/run', '/sbin', '/srv', '/net', '/sys',
+          '/tmp', '/usr', '/var']
+
   # Don't let us submit bad data and change the SELinux policy of root dirs
-  if not ['/','/bin','/boot','/dev','/etc','/home','/lib',
-          '/lib64','/media','/mnt','/net','/opt','/proc',
-          '/root','/run','/sbin','/srv','/net','/sys',
-          '/tmp','/usr','/var'].include?(http_dir)
+  # unless ['/', '/bin', '/boot', '/dev', '/etc', '/home', '/lib',
+  #         '/lib64', '/media', '/mnt', '/net', '/opt', '/proc',
+  #         '/root', '/run', '/sbin', '/srv', '/net', '/sys',
+  #         '/tmp', '/usr', '/var'].include?(http_dir)
+  next if root_dirs.include?(http_dir)
 
-    selinux_policy_fcontext "#{http_dir}(/.*)?" do
-      secontext 'httpd_sys_content_t'
-    end
-
-    execute 'restore-file-contexts' do
-      command "restorecon -R #{http_dir}"
-      action :run
-    end
+  selinux_policy_fcontext "#{http_dir}(/.*)?" do
+    secontext 'httpd_sys_content_t'
   end
+
+  execute 'restore-file-contexts' do
+    command "restorecon -R #{http_dir}"
+    action :run
+  end
+
 end
 
 # Warning - firewalld specific, won't work on Red hat < 7, Debian, etc
@@ -116,7 +117,7 @@ service_zone = node['maxlab_firewall']['default_interface_zone']
 if config_nginx_repo['firewall']['firewalld'].key?('services')
   config_nginx_repo['firewall']['firewalld']['services'].each do |service_string|
 
-    if not node['maxlab_firewall']['zones'][service_zone]['services'].include? service_string
+    unless node['maxlab_firewall']['zones'][service_zone]['services'].include? service_string
       node.normal['maxlab_firewall']['zones'][service_zone]['services'] << service_string
     end
 
@@ -127,7 +128,7 @@ end
 if config_nginx_repo['firewall']['firewalld'].key?('ports')
   config_nginx_repo['firewall']['firewalld']['ports'].each do |port_string|
 
-    if not node['maxlab_firewall']['zones'][service_zone]['ports'].include? port_string
+    unless node['maxlab_firewall']['zones'][service_zone]['ports'].include? port_string
       node.normal['maxlab_firewall']['zones'][service_zone]['ports'] << port_string
     end
 
@@ -138,7 +139,7 @@ end
 if config_nginx_repo['firewall']['firewalld'].key?('sources')
   config_nginx_repo['firewall']['firewalld']['sources'].each do |source_string|
 
-    if not node['maxlab_firewall']['zones'][source_zone]['sources'].include? source_string
+    unless node['maxlab_firewall']['zones'][source_zone]['sources'].include? source_string
       node.normal['maxlab_firewall']['zones'][source_zone]['sources'] << source_string
     end
 

@@ -1,5 +1,3 @@
-# # encoding: utf-8
-
 # Inspec test for recipe maxlab_nginx_repo::default
 
 # The Inspec reference, with examples and extensive documentation, can be
@@ -39,5 +37,5 @@ end
 
 describe command('curl -I localhost') do
   its('exit_status') { should cmp 0 }
-  its('stdout') { should match (/.*(200\ OK).*/) }
+  its('stdout') { should match(/.*(200\ OK).*/) }
 end

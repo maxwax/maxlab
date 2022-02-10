@@ -7,11 +7,11 @@
 require 'spec_helper'
 
 describe 'maxlab_nginx_repo::default' do
-  context 'When all attributes are default, on Ubuntu 16.04' do
+  context 'When all attributes are default, on Redhat 8' do
     let(:chef_run) do
       # for a complete list of available platforms and versions see:
       # https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
-      runner = ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '16.04')
+      runner = ChefSpec::ServerRunner.new(platform: 'redhat', version: '8')
       runner.converge(described_recipe)
     end
 
@@ -20,11 +20,11 @@ describe 'maxlab_nginx_repo::default' do
     end
   end
 
-  context 'When all attributes are default, on CentOS 7.4.1708' do
+  context 'When all attributes are default, on CentOS 8' do
     let(:chef_run) do
       # for a complete list of available platforms and versions see:
       # https://github.com/customink/fauxhai/blob/master/PLATFORMS.md
-      runner = ChefSpec::ServerRunner.new(platform: 'centos', version: '7.4.1708')
+      runner = ChefSpec::ServerRunner.new(platform: 'centos', version: '8')
       runner.converge(described_recipe)
     end
 
