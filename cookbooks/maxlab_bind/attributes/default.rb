@@ -23,10 +23,10 @@ default['bind']['packages']['rhel']['7']['bind-utils'] = 'any'
 default['bind']['firewall']['firewalld']['services'] = [ 'dns' ]
 
 # Allow these ports via firewalld
-default['bind']['firewall']['firewalld']['ports'] = [ ]
+default['bind']['firewall']['firewalld']['ports'] = []
 
 # Allow these sources via firewalld
-default['bind']['firewall']['firewalld']['sources'] = [ ]
+default['bind']['firewall']['firewalld']['sources'] = []
 
 #
 # bind service attributes
