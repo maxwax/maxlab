@@ -2,13 +2,7 @@
 # Cookbook:: maxlab_samba
 # Recipe:: server
 #
-# Copyright:: 2020, The Authors, All Rights Reserved.
-
-=begin
-#<
-Deloy a basic SAMBA file server.
-#>
-=end
+# Copyright:: 2020, Maxwell Spangler, All Rights Reserved.
 
 package node['samba']['packages'] do
   action :install
@@ -17,12 +11,12 @@ end
 config_id = node['instance_config_samba']['instance']
 
 # Retrieve the data bag with samba config information for this node
-config_samba_server = data_bag_item('config_samba_server',  config_id)
+config_samba_server = data_bag_item('config_samba_server', config_id)
 
 config_sections = {}
 config_block = []
 
-config_samba_server['cfg']['sections'].each do | section_name, section_details|
+config_samba_server['cfg']['sections'].each do |section_name, section_details|
 
   config_block = []
 
@@ -30,8 +24,8 @@ config_samba_server['cfg']['sections'].each do | section_name, section_details|
 
     # If array, Append array elements separated by spaces
     # else just append value which should be a string
-    if value.class.to_s == "Array"
-      mystr = ""
+    if value.class.to_s == 'Array'
+      mystr = ''
       value.each do |e|
         mystr << "#{e} "
       end
@@ -51,7 +45,7 @@ template '/etc/samba/smb.conf' do
   group 'root'
   mode '0644'
 
-  variables ({
+  variables({
     config_sections: config_sections,
     config_id: config_id
   })
@@ -70,7 +64,7 @@ service_zone = node['maxlab_firewall']['default_interface_zone']
 if node['samba']['firewalld'].key?('services')
   node['samba']['firewalld']['services'].each do |service_string|
 
-    if not node['maxlab_firewall']['zones'][service_zone]['services'].include? service_string
+    unless node['maxlab_firewall']['zones'][service_zone]['services'].include? service_string
       node.normal['maxlab_firewall']['zones'][service_zone]['services'] << service_string
     end
 
@@ -81,7 +75,7 @@ end
 if node['samba']['firewalld'].key?('ports')
   node['samba']['firewalld']['ports'].each do |port_string|
 
-    if not node['maxlab_firewall']['zones'][service_zone]['ports'].include? port_string
+    unless node['maxlab_firewall']['zones'][service_zone]['ports'].include? port_string
       node.normal['maxlab_firewall']['zones'][service_zone]['ports'] << port_string
     end
 
@@ -92,7 +86,7 @@ end
 if node['samba']['firewalld'].key?('sources')
   node['samba']['firewalld']['sources'].each do |source_string|
 
-    if not node['maxlab_firewall']['zones'][source_zone]['sources'].include? source_string
+    unless node['maxlab_firewall']['zones'][source_zone]['sources'].include? source_string
       node.normal['maxlab_firewall']['zones'][source_zone]['sources'] << source_string
     end
 
@@ -102,8 +96,15 @@ end
 #---
 
 node['samba']['services'].each do |service_name|
-  service service_name do
-    action [ :enable, :start, :reload ]
+
+  # We can't easily start nmb in Test Kitchen so skip it when
+  # the service is nmb and we're operating in test kitchen per
+  # node attribute set in kitchen.yml only
+
+  unless service_name == "nmb" && node['kitchen_testing_maxlab'] == true
+    service service_name do
+      action [ :enable, :start, :reload ]
+    end
   end
 end
 
