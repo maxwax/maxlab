@@ -1,5 +1,16 @@
 # maxlab_users CHANGELOG
 
+# 1.3.1
+
+* Modify base recipe general.rb to handle test kitchen and non test kitchen cases so I can eliminate the redundant test kitchen only recipe general_kitchen.rb
+* Cookstyle cleanup: Replace double quotes with single quotes as recommended
+* Cookstyle cleanup: remove utf8 encoding on tests
+* Cookstyle cleanup: Add Redhat 8, Centos 8, remove Ubuntu from spec file
+* Cookstyle cleanup: Use node['platform_version'].to_i.to_s
+* Cookstyle cleanup: Remove long description from metadata.rb
+* Cookstyle cleanup: Remove non-standard comment syntax #<>
+* Cookstyle clenaup: Remove block comments
+
 # 1.3.0
 
 * Modified kitchen.yml to use maxlab-centos-chef vagrant base box

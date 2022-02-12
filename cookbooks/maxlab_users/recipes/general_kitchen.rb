@@ -2,13 +2,7 @@
 # Cookbook:: maxlab_users
 # Recipe:: general_kitchen
 #
-# Copyright:: 2020, The Authors, All Rights Reserved.
-
-=begin
-#<
-Deploy standard users, adding 1000 to each to avoid colliding with vagrant VM users and groups
-#>
-=end
+# Copyright:: 2020, Maxwell Spangler, All Rights Reserved.
 
 config_servicesets = data_bag_item('config_servicesets', 'maxlab_global')
 config_groups = data_bag_item('config_groups', 'maxlab_global')
@@ -17,7 +11,7 @@ config_users = data_bag_item('config_users', 'maxlab_global')
 service_set = 'general'
 
 # Create all groups defined in this service set
-config_servicesets[service_set]['groups'].each do | groupname |
+config_servicesets[service_set]['groups'].each do |groupname|
 
   group_id = config_groups[groupname]['gid'].to_i + 1000
 
@@ -27,11 +21,10 @@ config_servicesets[service_set]['groups'].each do | groupname |
 
     action :create
   end
-
 end
 
 # Create all users defined in this service set
-config_servicesets[service_set]['users'].each do | username |
+config_servicesets[service_set]['users'].each do |username|
 
   user_id  = config_users[username]['uid'].to_i   + 1000
   group_id = config_users[username]['group'].to_i + 1000
@@ -46,7 +39,6 @@ config_servicesets[service_set]['users'].each do | username |
 
     action :create
   end
-
 end
 
 tag('users-general')

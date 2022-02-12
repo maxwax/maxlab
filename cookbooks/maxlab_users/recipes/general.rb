@@ -2,13 +2,7 @@
 # Cookbook:: maxlab_users
 # Recipe:: general
 #
-# Copyright:: 2020, The Authors, All Rights Reserved.
-
-=begin
-#<
-Deploy standard users and groups based on data bag configuration rules.
-#>
-=end
+# Copyright:: 2020, Maxwell Spangler, All Rights Reserved.
 
 config_servicesets = data_bag_item('config_servicesets', 'maxlab_global')
 config_groups = data_bag_item('config_groups', 'maxlab_global')
@@ -17,38 +11,59 @@ config_users = data_bag_item('config_users', 'maxlab_global')
 service_set = 'general'
 
 # Create all groups defined in this service set
-config_servicesets[service_set]['groups'].each do | groupname |
+config_servicesets[service_set]['groups'].each do |groupname|
+
+  # If we're running in Test Kitchen then bump group IDs up by 1000
+  case node['kitchen_testing_maxlab']
+  when true
+    group_id = config_groups[groupname]['gid'].to_i + 1000
+  when false
+    group_id = config_users[username]['group']
+  end
 
   group groupname do
-    gid config_groups['gid']
+    # gid config_groups['gid']
+    gid group_id
     system false
 
     action :create
   end
-
 end
 
 # Create all users defined in this service set
-config_servicesets[service_set]['users'].each do | username |
+config_servicesets[service_set]['users'].each do |username|
+
+  # If we're running in Test Kitchen then bump group IDs up by 1000
+  case node['kitchen_testing_maxlab']
+  when true
+    user_id  = config_users[username]['uid'].to_i   + 1000
+    group_id = config_users[username]['group'].to_i + 1000
+  when false
+    user_id  = config_users[username]['uid']
+    group_id = config_users[username]['group']
+  end
 
   # Ensure this exists
   directory "/home/#{username}" do
-    owner config_users[username]['uid']
-    group config_users[username]['group']
-    mode 0755
+    # owner config_users[username]['uid']
+    # group config_users[username]['group']
+    owner user_id
+    group group_id
+    mode '0755'
     action :create
   end
 
   user username do
-    uid config_users[username]['uid']
-    gid config_users[username]['group']
+    # uid config_users[username]['uid']
+    # gid config_users[username]['group']
+    uid user_id
+    gid group_id
     shell config_users[username]['shell']
     comment config_users[username]['fullname']
     home "/home/#{username}"
 
     action :create
   end
-
 end
 
 tag('users-general')
