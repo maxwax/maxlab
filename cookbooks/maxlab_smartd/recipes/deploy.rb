@@ -2,27 +2,18 @@
 # Cookbook:: maxlab_smartd
 # Recipe:: deploy
 #
-# Copyright:: 2020, The Authors, All Rights Reserved.
-
-=begin
-#<
-Install smartmontools to monitor S.M.A.R.T. storage health attributes and configure smartd for monitoring.
-#>
-=end
+# Copyright:: 2020, Maxwell Spangler, All Rights Reserved.
 
 # Ex: 'redhat8', 'centos7', 'fedora30'
-platform_and_version = node['platform'] + node['platform_version'].split('.')[0]
+platform_and_version = node['platform'] + node['platform_version'].to_i.to_s
 
-case platform_and_version
-  when 'redhat7', 'centos7'
-    smart_pkg = 'smartmontools'
-  when 'redhat8', 'centos8'
-    smart_pkg = 'smartmontools'
-  when 'debian10'
-    smart_pkg = 'smartmontools'
-  else
-    smart_pkg = 'smartmontools'
-end
+# Normally this would be explicitly called out for each OS
+# but cookstyle/rubocop didn't like multiple conditions with the same value
+# So expand this as values differ
+smart_pkg = case platform_and_version
+            when 'redhat7', 'centos7', 'redhat8', 'centos8'
+              'smartmontools'
+            end
 
 # CENTOS OR DEBIAN
 package smart_pkg do
@@ -33,7 +24,7 @@ end
 smartd_config_lines = []
 
 # Hold a single constructed smartd config line for a DEVICESCAN directive here:
-devicescan_config_line = ""
+devicescan_config_line = ''
 
 # Using attibutes, for each defined device, build a branch in the smartd_config
 # hash tree containing a construced smartd configuration directive.
@@ -44,27 +35,27 @@ node['smartd']['cfg']['devices'].each do |smart_device, smart_device_opts|
 
   config_line = "#{smart_device}"
 
-  if smart_device_opts['target_email'] != ""
-    config_line = config_line + " -m #{smart_device_opts['target_email']}"
+  if smart_device_opts['target_email'] != ''
+    config_line += " -m #{smart_device_opts['target_email']}"
   end
 
   if smart_device_opts['standard_health_check'] == true
-    config_line = config_line + " -a"
+    config_line += ' -a'
   end
 
   if smart_device_opts['startup_email_test'] == true
-    config_line = config_line + " -M test"
+    config_line += ' -M test'
   end
 
-  config_line = config_line + " -M exec #{smart_device_opts['notify_script']}"
+  config_line += " -M exec #{smart_device_opts['notify_script']}"
 
   smart_device_opts['misc_options'].each do |opt_text|
-    config_line = config_line + " #{opt_text}"
+    config_line += " #{opt_text}"
   end
 
   # Append this line to an array of config lines
   # BUT, if this is the DEVICESCAN line, it must go last, so set it aside.
-  if smart_device != "DEVICESCAN"
+  if smart_device != 'DEVICESCAN'
     smartd_config_lines << config_line
   else
     devicescan_config_line = config_line
@@ -74,27 +65,25 @@ end
 
 # If we encountered one (more more) DEVICESCAN lines,
 # append it now so it will be the last line in the array & last in config file
-if devicescan_config_line != nil
+unless devicescan_config_line.nil?
   smartd_config_lines << devicescan_config_line
 end
 
 template '/etc/smartmontools/smartd.conf' do
-  source "smartd.conf.erb"
+  source 'smartd.conf.erb'
 
-  owner "root"
-  group "root"
-  mode "0744"
+  owner 'root'
+  group 'root'
+  mode '0744'
 
-  variables (
-    {
+  variables({
       smartd_config_lines: smartd_config_lines
-    }
-  )
+  })
 
   action :create
 end
 
-service "smartd" do
+service 'smartd' do
   action [:enable, :start]
 end
 

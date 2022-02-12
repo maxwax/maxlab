@@ -4,7 +4,6 @@
 platform_and_version = node['platform'] + node['platform_version'].to_i.to_s
 
 case platform_and_version
-
 when 'redhat8', 'centos8'
   # Packages required to support this service
   default['samba']['packages'] = %w( samba samba-common samba-libs )
