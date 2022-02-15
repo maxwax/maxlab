@@ -6,6 +6,7 @@
       "2111": {
         "interactive": {
           "menu_label": "CentOS Linux 8.5.2111 'Interactive install'",
+          "kickstart": false,
           "template": "ks-centos8-interactive.erb",
           "group": "1",
           "network": "maxlab",
@@ -108,6 +109,7 @@
         },
         "base": {
           "menu_label": "CentOS Linux 8.5.2111 'Base' node",
+          "kickstart": true,
           "template": "ks-centos8.erb",
           "group": "1",
           "network": "maxlab",
@@ -210,6 +212,7 @@
         },
         "base-xfs": {
           "menu_label": "CentOS Linux 8.5.2111 'base-xfs' node using XFS",
+          "kickstart": true,
           "template": "ks-centos8.erb",
           "group": "2",
           "network": "maxlab",
@@ -312,6 +315,7 @@
         },
         "manyfs": {
           "menu_label": "CentOS Linux 8.5.2111 'manyfs' node with many filesystems",
+          "kickstart": true,
           "template": "ks-centos8.erb",
           "group": "3",
           "network": "maxlab",
@@ -438,6 +442,7 @@
         },
         "XL": {
           "menu_label": "CentOS Linux 8.5.2111 'XL' node with large filesystems",
+          "kickstart": true,
           "template": "ks-centos8.erb",
           "group": "3",
           "network": "maxlab",
@@ -552,6 +557,7 @@
       "1905": {
         "base": {
           "menu_label": "CentOS Linux 8.1905 'Base' node",
+          "kickstart": true,
           "template": "ks-centos8.erb",
           "group": "1",
           "network": "maxlab",
@@ -654,6 +660,7 @@
         },
         "base-xfs": {
           "menu_label": "CentOS Linux 8.1905 'base-xfs' node using XFS",
+          "kickstart": true,
           "template": "ks-centos8.erb",
           "group": "2",
           "network": "maxlab",
@@ -756,6 +763,7 @@
         },
         "manyfs": {
           "menu_label": "CentOS Linux 8.1905 'manyfs' node with many filesystems",
+          "kickstart": true,
           "template": "ks-centos8.erb",
           "group": "3",
           "network": "maxlab",
@@ -882,6 +890,7 @@
         },
         "XL": {
           "menu_label": "CentOS Linux 8.1905 'XL' node with large filesystems",
+          "kickstart": true,
           "template": "ks-centos8.erb",
           "group": "3",
           "network": "maxlab",
@@ -996,6 +1005,7 @@
       "1908": {
         "base": {
           "menu_label": "CentOS Linux 7.1908 'Base' node",
+          "kickstart": true,
           "template": "ks-centos8.erb",
           "group": "1",
           "network": "maxlab",

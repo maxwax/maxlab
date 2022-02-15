@@ -1,11 +1,11 @@
 {
   "id": "tools",
-  "dist_label": "Tools",
+  "dist_label": "MS-DOS based tools",
   "tools": {
     "1": {
       "0": {
         "base": {
-          "menu_label": "Tools",
+          "menu_label": "AMI BIOS Firmware (MS-DOS)",
           "boot_type": "linux",
           "tool_type": "image",
           "group": "1",
@@ -18,7 +18,7 @@
           "bootloader_options": ""
         },
         "sff7000": {
-          "menu_label": "Tools",
+          "menu_label": "HP dc7700 SFF Rompaq (MS-DOS)",
           "boot_type": "linux",
           "tool_type": "image",
           "group": "2",
@@ -31,7 +31,7 @@
           "bootloader_options": ""
         },
         "SAS 8433elp": {
-          "menu_label": "Tools",
+          "menu_label": "LSI Logic 8433ELP SAS firmware (MS-DOS)",
           "boot_type": "linux",
           "tool_type": "image",
           "group": "3",

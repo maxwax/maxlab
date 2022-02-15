@@ -3,15 +3,16 @@
   "dist_label": "Red Hat Enterprise Linux",
   "rhel": {
     "8": {
-      "1": {
+      "5": {
         "base": {
-          "menu_label": "Red Hat Linux 8.1 'base' node",
+          "menu_label": "Red Hat Linux 8.5 'base' node",
+          "kickstart": false,
           "template": "ks-centos8.erb",
           "group": "1",
           "network": "maxlab",
           "subnet": "192.168.9.0",
           "url": "dist/rhel",
-          "isodir": "rhel-8.1-x86_64-dvd",
+          "isodir": "rhel-8.5-x86_64-dvd",
           "interface": "eth0",
           "root_device": "sda",
           "bootloader_options": "nopti noibrs noibpb",

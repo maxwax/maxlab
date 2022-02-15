@@ -1,5 +1,28 @@
 # maxlab_pxe CHANGELOG
 
+# 1.3.3
+
+* Modify deploy.rb to check whether an secret is available via chef-vault or if we need to fall back to just a data bag because we're running in Test Kitchen
+* Rename the testing subdir and recipe to match the deploy.rb name
+* Rename kickstart files unique to centos8-stream as ks-centos8-stream and ks-centos8-stream-interactive
+* After downloading and untarring the initial PXE boot kernel/initrd images.tar file, create a flag file stating this has been done and skip this activity on subsequent chef-client runs. This saves a lot of time when you just want to update kickstart config files, etc.
+* Added images_flag_file to config_pxe/pxeconfig stating the name of the file to check in order to skip downloading and untarring an initial images dataset.
+* Added additional guards around installing requires packages like untar. Saves time if we've already got it installed and don't have to call yum to check it.
+* New related data bag config_kickstart/centos_stream
+* Updated config_kickstart/rhel for RHEL 8.5 from 8.1
+* Updated tools PXE menu items to be user-friendly unique names describing what they are
+* Added kickstart true/false to each PXE menu entry for use in adding ks= parameter, or leaving it off. WIP.
+
+# 1.3.2
+
+* Cookstyle cleanup: Replace double quotes with single quotes as recommended
+* Cookstyle cleanup: remove utf8 encoding on tests
+* Cookstyle cleanup: Add Redhat 8, Centos 8, remove Ubuntu from spec file
+* Cookstyle cleanup: Use node['platform_version'].to_i.to_s
+* Cookstyle cleanup: Remove long description from metadata.rb
+* Cookstyle cleanup: Remove non-standard comment syntax #<>
+* Cookstyle clenaup: Remove block comments
+
 # 1.3.1
 
 * Updated kitchen to use maxlab-centos-chef vagrant base box

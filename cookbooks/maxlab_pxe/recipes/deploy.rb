@@ -2,13 +2,7 @@
 # Cookbook:: maxlab_pxe
 # Recipe:: deploy
 #
-# Copyright:: 2019, The Authors, All Rights Reserved.
-
-=begin
-#<
-Deploy PXE files: Kickstart files for Linux distributions, PXE menus for all.
-#>
-=end
+# Copyright:: 2019, Maxwell Spangler, All Rights Reserved.
 
 #
 # Use chef-vault to load encrypted sasl_passwd config
@@ -23,7 +17,14 @@ end
 
 include_recipe 'chef-vault'
 
-rootpw = ChefVault::Item.load('secret_pxe', 'secret_maxlab_pxe')['password']
+# This facilitates running the cookbook in production where chef-vault
+# secrets are avaialble, but also in Test Kitchen where it will fall back
+# to using a local data bag for the required values
+if ChefVault::Item.vault?('secret_pxe', 'secret_maxlab_pxe')
+  rootpw = ChefVault::Item.load('secret_pxe', 'secret_maxlab_pxe')['password']
+else
+  rootpw = data_bag_item('secret_pxe', 'secret_maxlab_pxe')['password']
+end
 
 #
 # PXE configuration
@@ -74,7 +75,7 @@ config_pxe['kickstart_configs'].each do |dist_id|
       local_passwords_dist_dir = "#{local_passwords_dir}/#{dist_id}"
 
       # Ensures all directories exist
-      %W[
+      %W(
          #{local_kickstart_dir}
          #{local_kickstart_dist_dir}
          #{local_scripts_dir}
@@ -82,12 +83,12 @@ config_pxe['kickstart_configs'].each do |dist_id|
          #{local_stubs_dir}
          #{local_stubs_dist_dir}
          #{local_passwords_dist_dir}
-      ].each do |dirname|
+      ).each do |dirname|
 
         directory dirname do
           owner config_pxe['user']
           group config_pxe['group']
-          mode 0755
+          mode '0755'
           recursive true
           action :create
         end
@@ -113,18 +114,16 @@ config_pxe['kickstart_configs'].each do |dist_id|
         url_kickstart_file = "#{url_kickstart_dist_dir}/ks-#{linux_config_id}.ks"
 
         # Deploy most of our kickstart commands to this stub file
-        stub_file = "#{local_stubs_dist_dir}/stub-#{linux_config_id}.ks"
+        # stub_file = "#{local_stubs_dist_dir}/stub-#{linux_config_id}.ks"
 
         # URL to repo containing ISO software files via HTTP
         dist_url = "#{node['env']['maxlab']['dist_url']}/#{dist_id}/#{ksconfig['isodir']}"
 
-        # Deploy the stub file
-#        template stub_file do
         template kickstart_file do
           source "kickstart/#{ksconfig['template']}"
           owner config_pxe['user']
           group config_pxe['group']
-          mode 0755
+          mode '0755'
           variables(
             ksconfig: ksconfig,
             subnet_info: subnet_info,
@@ -161,7 +160,7 @@ config_pxe['kickstart_configs'].each do |dist_id|
             source "kickstart/#{script_cfg['filename']}.erb"
             owner config_pxe['user']
             group config_pxe['group']
-            mode 0755
+            mode '0755'
           end
 
           execute "#{script_name}" do
@@ -246,7 +245,7 @@ config_pxe['netboot_configs'].each do |tool_id|
         dist_label = netboot_config['dist_label']
 
         tool_release_id = "#{tool_id}-#{major}.#{minor}"
-        tool_config_id = "#{tool_release_id}-#{config_name}"
+#        tool_config_id = "#{tool_release_id}-#{config_name}"
 
         # We construct this along the way
         unless pxe_menu.key? tool_id
@@ -280,50 +279,50 @@ config_pxe['netboot_configs'].each do |tool_id|
         # Handle options for specific types of net booting software
         case boot_config['tool_type']
 
-          when 'clonezilla'
+        when 'clonezilla'
 
-            pm = {
-              'dist_label' => "#{netboot_config['dist_label']}",
-              'menu_label' => "#{boot_config['menu_label']}",
-              'kernel_text' => "#{config_pxe['default_kernel_dir']}/#{tool_id}/#{tool_release_id}/#{config_pxe['default_kernel_fname']}",
-              'initrd_text' => "initrd=#{config_pxe['default_initrd_dir']}/#{tool_id}/#{tool_release_id}/#{config_pxe['default_initrd_fname']}",
-              'bootloader_options' => "#{boot_config['bootloader_options']}",
-              'append_text' => ""
-            }
+          pm = {
+            'dist_label' => "#{netboot_config['dist_label']}",
+            'menu_label' => "#{boot_config['menu_label']}",
+            'kernel_text' => "#{config_pxe['default_kernel_dir']}/#{tool_id}/#{tool_release_id}/#{config_pxe['default_kernel_fname']}",
+            'initrd_text' => "initrd=#{config_pxe['default_initrd_dir']}/#{tool_id}/#{tool_release_id}/#{config_pxe['default_initrd_fname']}",
+            'bootloader_options' => "#{boot_config['bootloader_options']}",
+            'append_text' => ''
+          }
 
-            # After hash constructed, concatenate these values together
-            pm['append_text'] << "#{pm['initrd_text']} #{pm['bootloader_options']}"
+          # After hash constructed, concatenate these values together
+          pm['append_text'] << "#{pm['initrd_text']} #{pm['bootloader_options']}"
 
-            # Append all elements of clonezilla specific boot options
-            boot_config['clonezilla']['kernel_options'].each do |opt|
-              pm['append_text'] << " " + opt
-            end
+          # Append all elements of clonezilla specific boot options
+          boot_config['clonezilla']['kernel_options'].each do |opt|
+            pm['append_text'] << ' ' + opt
+          end
 
-            # Construct a kernel option
-            pm['append_text'] << " " +
-              boot_config['clonezilla']['image_repo_command'] + " " +
-              boot_config['clonezilla']['image_repo_proto'] + " " +
-              boot_config['clonezilla']['image_repo_url'] + " " +
-              boot_config['clonezilla']['image_repo_mountpoint'] + "'"
+          # Construct a kernel option
+          pm['append_text'] << ' ' +
+            boot_config['clonezilla']['image_repo_command'] + ' ' +
+            boot_config['clonezilla']['image_repo_proto'] + ' ' +
+            boot_config['clonezilla']['image_repo_url'] + ' ' +
+            boot_config['clonezilla']['image_repo_mountpoint'] + "'"
 
-            pm['append_text'] << " " +
-              boot_config['clonezilla']['squashfs_cmd'] +
-              boot_config['clonezilla']['squashfs_url']
+          pm['append_text'] << ' ' +
+            boot_config['clonezilla']['squashfs_cmd'] +
+            boot_config['clonezilla']['squashfs_url']
 
-          # Ex: MS-DOS Firmware Upgrade Images
-          when 'image'
+        # Ex: MS-DOS Firmware Upgrade Images
+        when 'image'
 
-            pm = {
-             'dist_label' => "#{netboot_config['dist_label']}",
-             'menu_label' => "#{boot_config['menu_label']}",
-             'kernel_text' => "#{boot_config['image']['kernel']}",
-             'initrd_text' => "#{boot_config['image']['append']}",
-             'bootloader_options' => "#{boot_config['bootloader_options']}",
-              'append_text' => ""
-            }
+          pm = {
+           'dist_label' => "#{netboot_config['dist_label']}",
+           'menu_label' => "#{boot_config['menu_label']}",
+           'kernel_text' => "#{boot_config['image']['kernel']}",
+           'initrd_text' => "#{boot_config['image']['append']}",
+           'bootloader_options' => "#{boot_config['bootloader_options']}",
+            'append_text' => ''
+          }
 
-            # After hash constructed, concatenate these values together
-            pm['append_text'] << "#{pm['initrd_text']} #{pm['bootloader_options']}"
+          # After hash constructed, concatenate these values together
+          pm['append_text'] << "#{pm['initrd_text']} #{pm['bootloader_options']}"
 
         end
 
@@ -335,14 +334,14 @@ config_pxe['netboot_configs'].each do |tool_id|
 end
 
 # Create PXE menu directories as needed, but don't make /var/lib recursively
-%W[
+%W(
   #{config_pxe['pxelinux_cfg_root']}
   #{config_pxe['pxelinux_cfg_dir']}
-].each do |dirname|
+).each do |dirname|
   directory dirname do
     owner config_pxe['user']
     group config_pxe['group']
-    mode 0755
+    mode '0755'
     recursive false
     action :create
   end
@@ -357,10 +356,10 @@ pxe_default_file = "#{config_pxe['pxelinux_cfg_dir']}/default"
 # Ex: '/var/lib/tftpboot/pxelinux.cfg/default"
 template pxe_default_file do
 
-  source "pxelinux.cfg/pxe_default.erb"
+  source 'pxelinux.cfg/pxe_default.erb'
   owner config_pxe['user']
   group config_pxe['group']
-  mode 0755
+  mode '0755'
 
   variables(
     pxe_menu: pxe_menu,
@@ -375,7 +374,7 @@ pxe_menu.each do |dist_id, dist_cfg|
     action :create
     owner config_pxe['user']
     group config_pxe['group']
-    mode 0755
+    mode '0755'
   end
 
   menu_main = "#{config_pxe['pxelinux_cfg_dir']}/#{dist_id}/main.conf"
@@ -383,10 +382,10 @@ pxe_menu.each do |dist_id, dist_cfg|
   # Ex: '/var/lib/tftpboot/pxelinux.cfg/rhel/main.conf
   template menu_main do
 
-    source "pxelinux.cfg/pxe_menu_main.conf.erb"
+    source 'pxelinux.cfg/pxe_menu_main.conf.erb'
     owner config_pxe['user']
     group config_pxe['group']
-    mode 0755
+    mode '0755'
 
     variables(
       dist_label: dist_cfg['dist_label'],
@@ -401,15 +400,15 @@ pxe_menu.each do |dist_id, dist_cfg|
 
       linux_release_id = "#{dist_id}-#{major}.#{minor}"
 
-      menu_release = "#{config_pxe['pxelinux_cfg_dir']}/#{dist_id}/main.conf"
+#      menu_release = "#{config_pxe['pxelinux_cfg_dir']}/#{dist_id}/main.conf"
 
       # Ex: '/var/lib/tftpboot/pxelinux.cfg/redhat/redhat81.conf'
       template "#{config_pxe['pxelinux_cfg_dir']}/#{dist_id}/#{linux_release_id}.conf" do
 
-        source "pxelinux.cfg/pxe_menu_dist_version.conf.erb"
+        source 'pxelinux.cfg/pxe_menu_dist_version.conf.erb'
         owner config_pxe['user']
         group config_pxe['group']
-        mode 0744
+        mode '0744'
 
         variables(
           linux_release_id: linux_release_id,

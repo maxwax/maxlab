@@ -1,5 +1,3 @@
-# # encoding: utf-8
-
 # Inspec test for recipe maxlab_pxe::deploy
 
 describe directory('/repo/kickstart') do
@@ -65,6 +63,6 @@ end
 
 # Ensure firewalld allows incoming tftp service
 describe command('firewall-cmd --list-services') do
-  its('stdout') { should match /.*(tftp).*/}
+  its('stdout') { should match /.*(tftp).*/ }
   its('exit_status') { should cmp 0 }
 end
