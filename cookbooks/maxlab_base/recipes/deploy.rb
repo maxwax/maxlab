@@ -2,7 +2,7 @@
 # Cookbook:: maxlab_base
 # Recipe:: deploy
 #
-# Copyright:: 2019, The Authors, All Rights Reserved.
+# Copyright:: 2019, Maxwell Spangler, All Rights Reserved.
 
 # Ex: 'rhel8', 'centos7', 'fedora30'
 platform_and_version = node['platform'] + node['platform_version'].to_i.to_s
@@ -18,18 +18,19 @@ config_os = data_bag_item('config_os', this_os)
 
 # Download rpm packages that configure repos for this OS. Ex: rpmfusion
 config_os['repo_packages'].each do |pkg_name, pkg_details|
+
   remote_file "/tmp/#{pkg_details['filename']}" do
     source pkg_details['source']
     action :create
 
-    not_if { node['packages'].key? pkg_name }
+    not_if { node['packages'].key? pkg_details['not_if_package'] }
   end
 
   package pkg_name do
     source "/tmp/#{pkg_details['filename']}"
     action :install
 
-    not_if { node['packages'].key? pkg_name }
+    not_if { node['packages'].key? pkg_details['not_if_package'] }
   end
 
   file "/tmp/#{pkg_name}" do
@@ -39,11 +40,17 @@ end
 
 # Execute any commands related to enabling base repos
 # Ex: Red Hat 7 requires an additional 'subscription-manager' command
-config_os['repo_config_commands'].each do |_config_item, config_commands|
-  config_commands.each do |command_name, exec_command|
-    execute command_name do
-      command exec_command
-    end
+config_os['repo_config_commands'].each do |_command_name, cmd_details|
+
+  execute cmd_details['command'] do
+    command cmd_details['command']
+
+    guard_interpreter :bash
+
+    # Skip this if we see a repo for codeready-builder enabled
+    # Not the best guard, but its fast and good enough for me right now
+    not_if %(#{cmd_details['not_if']})
+
   end
 end
 

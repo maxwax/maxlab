@@ -1,5 +1,10 @@
 # maxlab_base CHANGELOG
 
+# 1.5.2
+
+* Don't deploy each repo_package package if it is already installed. Save chef-client execution time.
+* Don't execute repo_config_commands such as subscribing to RHEL repos if the repo appears to already exist and be enabled. Saves a lot of time.
+
 # 1.5.1
 
 * Cookstyle cleanup: Remove long description from metadata.rb
