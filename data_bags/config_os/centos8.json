@@ -5,12 +5,12 @@
     "rpmfusion-free-release-8": {
       "source": "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm",
       "filename": "rpmfusion-free-release-8.noarch.rpm",
-      "not_if_package": "rpm-fusion-free"
+      "not_if_package": "rpmfusion-free-release"
     },
     "rpmfusion-nonfree-release-8": {
       "source": "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm",
       "filename": "rpmfusion-nonfree-release-8.noarch.rpm",
-      "not_if_package": "rpm-fusion-nonfree"
+      "not_if_package": "rpmfusion-nonfree-release"
     }
   },
   "repo_packages_bare_metal": {
