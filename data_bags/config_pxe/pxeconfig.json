@@ -2,9 +2,9 @@
   "id": "pxeconfig",
   "doc": "This PXE configuration serves the Maxlab home lab",
   "kickstart_configs": [
-    "centos",
     "centos_stream",
-    "rhel"
+    "rhel",
+    "centos"
   ],
   "netboot_configs": [
     "clonezilla",
@@ -27,5 +27,6 @@
   "images_source": {
     "http": "http://maxwellspangler.com/s3/maxlab",
     "filename": "images-dirs.tar"
-  }
+  },
+  "images_flag_file": "flag-images-deployed.txt"
 }
