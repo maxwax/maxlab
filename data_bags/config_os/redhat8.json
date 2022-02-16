@@ -4,14 +4,16 @@
   "repo_packages": {
     "epel-8": {
       "source": "https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm",
-      "filename": "epel-release-latest-8-noarch.rpm"
+      "filename": "epel-release-latest-8-noarch.rpm",
+      "not_if_package": "epel-release"
     }
   },
   "repo_packages_bare_metal": {
   },
   "repo_config_commands": {
     "enable-codeready-builder": {
-      "subscribe-to-codeready-builder": "ARCH=$( /bin/arch ); subscription-manager repos --enable \"codeready-builder-for-rhel-8-${ARCH}-rpms\""
+      "command": "ARCH=$( /bin/arch ); subscription-manager repos --enable \"codeready-builder-for-rhel-8-${ARCH}-rpms\"",
+      "not_if": "egrep -A 11 --no-filename codeready-builder-for-rhel /etc/yum.repos.d/* | grep enabled | grep 1"
     }
   },
   "repo_config_commands_bare_metal": {
