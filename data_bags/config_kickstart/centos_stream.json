@@ -3,7 +3,7 @@
   "dist_label": "CentOS Stream",
   "centos_stream": {
     "8": {
-      "Stream": {
+      "x": {
         "interactive": {
           "menu_label": "Interactive install",
           "kickstart": false,
