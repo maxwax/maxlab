@@ -23,4 +23,4 @@ suites:
     attributes:
       kitchen_testing_maxlab: true
     provisioner:
-       policyfile: ../../policyfiles/tk_maxlab_tftp.rb
+       policyfile: Policyfile.rb

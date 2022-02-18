@@ -1,5 +1,10 @@
 # maxlab_tftp CHANGELOG
 
+# 1.4.2
+
+* Install required TFTP packages as a single call to the package resource that can install all of them in one request, not iterating over the array to install each individually. This reduces execution time of the recipe.
+* Move policyfile from policyfiles directory to cookbook's Policyfile.rb and adjust paths for local access
+
 # 1.4.1
 
 * Cookstyle cleanup: Replace double quotes with single quotes as recommended

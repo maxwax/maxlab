@@ -6,11 +6,8 @@
 
 config_tftp = data_bag_item('config_tftp', node['instance_config_tftp']['instance'])
 
-%W( tftp tftp-server xinetd ).each do |pkg|
-
-  package pkg do
-    action :install
-  end
+package %W( tftp tftp-server xinetd ) do
+  action :install
 end
 
 template '/etc/xinetd.d/tftp-server' do
