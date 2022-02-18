@@ -1,5 +1,14 @@
 # maxlab_pxe CHANGELOG
 
+# 1.3.4
+
+* Using 'archive_file' instead of manually calling untar to extract images.tar file
+* Moving Test Kitchen policyfile from policyfiles directory to cookbook directory
+* Updated kitchen.yml to use local Policyfile.rb
+* Updated tests to reflect an initial PXE boot server will only have minimal files, so removed legacy Centos 6, 7, 8 and rhel 6, 7 and 8.0/1 files.
+* Don't create /var/lib/tftpboot/images directory because the new use of archive_file wants to create that instead
+
+
 # 1.3.3
 
 * Modify deploy.rb to check whether an secret is available via chef-vault or if we need to fall back to just a data bag because we're running in Test Kitchen
@@ -21,7 +30,7 @@
 * Cookstyle cleanup: Use node['platform_version'].to_i.to_s
 * Cookstyle cleanup: Remove long description from metadata.rb
 * Cookstyle cleanup: Remove non-standard comment syntax #<>
-* Cookstyle clenaup: Remove block comments
+* Cookstyle cleanup: Remove block comments
 
 # 1.3.1
 
@@ -30,7 +39,7 @@
 
 # 1.3.0
 
-* Introducing ks-centos-8-interactive.rb template to generate a kickstart file that allows a lightly guided, but manuall installation process.
+* Introducing ks-centos-8-interactive.rb template to generate a kickstart file that allows a lightly guided, but manual installation process.
 * Added centos_stream OS branch in config_pxe pxeconfig databag for Centos Stream to be on its own menu
 
 # 1.2.3

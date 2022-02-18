@@ -30,4 +30,4 @@ suites:
         # Instruct chef_vault_item to use local raw files when vaulted data is not available.
         databags_fallback: true
     provisioner:
-       policyfile: ../../policyfiles/tk_maxlab_pxe.rb
+       policyfile: Policyfile.rb
