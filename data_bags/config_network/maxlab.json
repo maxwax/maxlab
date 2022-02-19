@@ -242,7 +242,7 @@
           "mac_address": "a4:34:d9:6a:63:b9"
         },
         "42": {
-          "node_name": "macbooknext",
+          "node_name": "nextpro",
           "description": "Macbook Pro Next Logo (Wired IP)",
           "type": "node",
           "group": "laptop",
@@ -251,7 +251,7 @@
           "mac_address": "38:c9:86:2e:ee:49"
         },
         "43": {
-          "node_name": "macbooknextwifi",
+          "node_name": "nextprowifi",
           "description": "Macbook Pro Next Logo (Wifi IP)",
           "type": "node",
           "group": "laptop",
