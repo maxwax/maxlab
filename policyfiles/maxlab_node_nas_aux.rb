@@ -12,17 +12,19 @@ run_list "recipe[maxlab_firewall::base_firewalld]",
          "recipe[maxlab_chrony::deploy]",
          "recipe[maxlab_nfs::server]",
          "recipe[maxlab_samba::server]",
+         "recipe[maxlab_powerpanel::deploy]",
          "recipe[maxlab_postfix::deploy]",
          "recipe[maxlab_firewall::update_firewalld]"
 
-cookbook 'maxlab_firewall', path: '../cookbooks/maxlab_firewall'
-cookbook 'maxlab_base',     path: '../cookbooks/maxlab_base'
-cookbook 'maxlab_users',    path: '../cookbooks/maxlab_users'
-cookbook 'maxlab_smartd',   path: '../cookbooks/maxlab_smartd'
-cookbook 'maxlab_chrony',   path: '../cookbooks/maxlab_chrony'
-cookbook 'maxlab_nfs',      path: '../cookbooks/maxlab_nfs'
-cookbook 'maxlab_samba',    path: '../cookbooks/maxlab_samba'
-cookbook 'maxlab_postfix',  path: '../cookbooks/maxlab_postfix'
+cookbook 'maxlab_firewall',   path: '../cookbooks/maxlab_firewall'
+cookbook 'maxlab_base',       path: '../cookbooks/maxlab_base'
+cookbook 'maxlab_users',      path: '../cookbooks/maxlab_users'
+cookbook 'maxlab_smartd',     path: '../cookbooks/maxlab_smartd'
+cookbook 'maxlab_chrony',     path: '../cookbooks/maxlab_chrony'
+cookbook 'maxlab_nfs',        path: '../cookbooks/maxlab_nfs'
+cookbook 'maxlab_samba',      path: '../cookbooks/maxlab_samba'
+cookbook 'maxlab_postfix',    path: '../cookbooks/maxlab_postfix'
+cookbook 'maxlab_powerpanel', path: '../cookbooks/maxlab_powerpanel'
 
 cookbook 'chef-vault'
 
@@ -41,6 +43,9 @@ default['instance_config_samba']['instance'] = 'maxlab_samba_aux'
 
 # From role service_postfix_instance_maxlab_postfix
 default['instance_config_postfix']['instance'] = 'maxlab_postfix'
+
+# The config_powerpanel data bag used to configure powerpanel on this node
+default['instance_config_powerpanel']['instance'] = 'maxlab_powerpanel_aux'
 
 # Previously environment variables
 default['env']['maxlab']['repo_url']          = "http://repo.maxlab"
