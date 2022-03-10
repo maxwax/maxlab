@@ -63,10 +63,6 @@
         }
       },
       "aliases": {
-        "flash1": "lenovoflash1.maxlab",
-        "flash2": "lenovoflash2.maxlab",
-        "flash3": "lenovoflash3.maxlab",
-        "maxsim": "filer.maxlab",
         "www": "filer.maxlab"
       },
       "groups": {
