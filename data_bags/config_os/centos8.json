@@ -20,21 +20,22 @@
   "repo_config_commands_bare_metal": {
   },
   "default_packages": [
-    "vim",
     "atop",
-    "bpytop",
-    "htop",
     "bmon",
-    "iftop",
-    "nmon",
-    "netcat",
-    "tree",
-    "wget",
-    "tar",
+    "bpytop",
     "bzip2",
-    "which",
+    "dnstop",
+    "htop",
+    "iftop",
+    "netcat",
+    "nmon",
+    "policycoreutils-python-utils",
     "rsync",
-    "policycoreutils-python-utils"
+    "tar",
+    "tree",
+    "vim",
+    "wget",
+    "which"
   ],
   "default_packages_bare_metal": [
     "lm_sensors"
