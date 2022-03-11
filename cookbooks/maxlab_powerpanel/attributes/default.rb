@@ -13,11 +13,11 @@ default['powerpanel']['version'] = '1.4.1'
 platform_and_version = node['platform'] + node['platform_version'].to_i.to_s
 
 default['powerpanel']['packages'] = case platform_and_version
-                                 when 'redhat7', 'centos7'
-                                   [ 'powerpanel' ]
-                                 when 'redhat8', 'centos8'
-                                   [ 'powerpanel' ]
-                                 end
+                                    when 'redhat7', 'centos7'
+                                      [ 'powerpanel' ]
+                                    when 'redhat8', 'centos8'
+                                      [ 'powerpanel' ]
+                                    end
 
 #  Services required to be running for NFS server operations
 default['powerpanel']['services'] = [ 'pwrstatd' ]
