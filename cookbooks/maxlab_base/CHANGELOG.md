@@ -1,5 +1,9 @@
 # maxlab_base CHANGELOG
 
+# 1.5.3
+
+Adding 'kitchen_testing_maxlab: true' to .kitchen.yml and checking in current cookbook version.
+
 # 1.5.2
 
 * Don't deploy each repo_package package if it is already installed. Save chef-client execution time.
