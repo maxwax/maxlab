@@ -264,6 +264,15 @@
           "base": "maxlab_chaos",
           "mac_address": "44:85:00:4d:84:51"
         },
+        "46": {
+          "node_name": "chaoswifiwhite",
+          "description": "Toshiba Z40 laptop chaosmonkey logo (WIFI White Dongle)",
+          "type": "node",
+          "group": "laptop",
+          "os:": "Linux",
+          "base": "maxlab_chaos",
+          "mac_address": "d0:37:45:2a:fd:ad"
+        },
         "50": {
           "node_name": "mechsarko",
           "description": "Toshiba Z40 laptop mech logo(Wired IP)",
