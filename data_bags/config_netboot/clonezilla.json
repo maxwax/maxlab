@@ -18,7 +18,7 @@
             "image_repo_url": "aux.maxlab:/srv/auxdata/clonezilla",
             "image_repo_mountpoint": "/home/partimag",
             "squashfs_cmd": "fetch=",
-            "squashfs_url": "tftp://repo.maxlab/images/clonezilla/filesystem.squashfs",
+            "squashfs_url": "tftp://repo.maxlab/images/clonezilla/clonezilla-2.6.4-10-amd64/filesystem.squashfs",
             "kernel_options": [
               "boot=live",
               "username=user",
