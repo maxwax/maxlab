@@ -210,15 +210,6 @@
           "base": "_na",
           "mac_address": "18:0c:ac:33:0d:3e"
         },
-        "35": {
-          "node_name": "macbook",
-          "description": "Macbook Pro 2012 (Wired IP)",
-          "type": "node",
-          "group": "laptop",
-          "os:": "MacOS",
-          "base": "_na",
-          "mac_address": "0c:4d:e9:cb:52:1c"
-        },
         "40": {
           "node_name": "sarko",
           "description": "Toshiba Z40 laptop (Wired IP)",
