@@ -1,6 +1,11 @@
 
 # maxlab CHANGELOG
 
+# 1.2.5
+
+* Add node 'fedoravm' so Fedora testing VM can have DNS and static IP
+* Moving .rubocop.yml from individual cookbook directories to top level Chef repo
+
 # 1.2.4
 
 * Rename .rubocop-master.yml to rubocop-master.yml without dot in front
