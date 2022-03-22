@@ -96,3 +96,23 @@ end
 describe file('/usr/local/etc/shell-history') do
   it { should exist }
 end
+
+describe file('/usr/local/bin/cron-backup-history') do
+  it { should exist }
+end
+
+describe crontab(user: 'maxwell') do
+  its('commands') { should include '/usr/local/bin/cron-backup-history' }
+  its('user') { should include 'maxwell'}
+  its('minutes') { should cmp '0' }
+  its('hours') { should cmp '12' }
+  its('weekdays') { should cmp '0' }
+end
+
+describe crontab(user: 'root') do
+  its('commands') { should include '/usr/local/bin/cron-backup-history' }
+  its('user') { should include 'root'}
+  its('minutes') { should cmp '0' }
+  its('hours') { should cmp '12' }
+  its('weekdays') { should cmp '0' }
+end

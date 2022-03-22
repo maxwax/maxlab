@@ -54,7 +54,7 @@ package config_os['default_packages_bare_metal'] do
 end
 
 # Deploy OS specific scripts for things like /etc/bashrc
-config_os['default_scripts_bare_metal'].each do |dir_name, dir_config|
+config_os['default_os_scripts_bare_metal'].each do |dir_name, dir_config|
 
   dir_config.each do |file_name, file_config|
     template "#{dir_name}/#{file_name}" do

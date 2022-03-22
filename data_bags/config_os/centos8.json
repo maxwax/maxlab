@@ -40,7 +40,7 @@
   "default_packages_bare_metal": [
     "lm_sensors"
   ],
-  "default_scripts": {
+  "default_os_scripts": {
     "/etc": {
       "bashrc": {
         "subdir": "etc",
@@ -64,6 +64,36 @@
       }
     }
   },
-  "default_scripts_bare_metal": {
+  "default_os_scripts_bare_metal": {
+  },
+  "default_scripts_generic": {
+    "/usr/local/bin": {
+      "cron-backup-history": {
+        "subdir": "usr/local/bin",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      }
+    }
+  },
+  "cron_jobs": {
+    "cron-backup-history-maxwell": {
+      "command": "/usr/local/bin/cron-backup-history",
+      "minute": "0",
+      "hour": "12",
+      "day": "*",
+      "month": "*",
+      "day_of_week": "0",
+      "user": "maxwell"
+    },
+    "cron-backup-history-root": {
+      "command": "/usr/local/bin/cron-backup-history",
+      "minute": "0",
+      "hour": "12",
+      "day": "*",
+      "month": "*",
+      "day_of_week": "0",
+      "user": "root"
+    }
   }
 }

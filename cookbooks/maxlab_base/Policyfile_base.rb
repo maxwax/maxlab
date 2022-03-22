@@ -4,9 +4,11 @@ name 'tk_maxlab_base'
 
 default_source :supermarket
 
-run_list "recipe[maxlab_base::deploy]"
+run_list  "recipe[maxlab_users::general]",
+          "recipe[maxlab_base::deploy]"
 
-cookbook 'maxlab_base', path: '../cookbooks/maxlab_base'
+cookbook 'maxlab_base',  path: '../maxlab_base'
+cookbook 'maxlab_users', path: '../maxlab_users'
 
 # Previously environment variables
 default['env']['maxlab']['repo_url']          = "http://repo.maxlab"

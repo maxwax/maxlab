@@ -41,5 +41,59 @@
         "mode": "0755"
       }
     }
+  },
+  "default_os_scripts_bare_metal": {
+    "/etc": {
+      "bashrc": {
+        "subdir": "etc",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      }
+    },
+    "/usr/local/etc": {
+      "shell-basics": {
+        "subdir": "usr/local/etc",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      },
+      "shell-history": {
+        "subdir": "usr/local/etc",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      }
+    }
+  },
+  "default_scripts_generic": {
+    "/usr/local/bin": {
+      "cron-backup-history": {
+        "subdir": "usr/local/bin",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      }
+    }
+  },
+  "cron_jobs": {
+    "cron-backup-history-maxwell": {
+      "command": "/usr/local/bin/cron-backup-history",
+      "minute": "0",
+      "hour": "12",
+      "day": "*",
+      "month": "*",
+      "day_of_week": "0",
+      "user": "maxwell"
+    },
+    "cron-backup-history-root": {
+      "command": "/usr/local/bin/cron-backup-history",
+      "minute": "0",
+      "hour": "12",
+      "day": "*",
+      "month": "*",
+      "day_of_week": "0",
+      "user": "root"
+    }
   }
 }

@@ -1,5 +1,20 @@
 # maxlab_base CHANGELOG
 
+# 1.6.3
+
+* New code to deploy default_scripts_generic starting with file cron-backup-history.
+* Deploy cron jobs for user 'maxwell' and 'root' to execute cron-backup-history to archive $HOME/.bash_history_eternal
+* Moved policyfile for Test Kitchen use from policyfiles directory to cookbook directory.
+* Added tests to ensure cronjobs for maxwell and root include cron-backup-history command
+* Modified .gitignore to ignore Policyfile*.lock.json
+* Added cron_jobs section to data bags config_os for centos8, redhat6, 7, and 8
+
+# 1.6.2
+
+* Renaming attribute default_scripts to default_os_scripts to reflect that it is OS specific.
+* Renaming attribute default_scripts_bare_metal to default_os_scripts_bare_metal to reflect that it is OS specific.
+* Introducing default_scripts_generic for scripts that are files in the cookbook maxlab_base that are deployed without templating and across all Linux distributions and versions.  No need to be a template.
+
 # 1.6.1
 
 * Updating shell-history script to match history options used on personal workstation. Mostly $HOME/.bash_history_eternal not $HOME/.bash_history, etc.

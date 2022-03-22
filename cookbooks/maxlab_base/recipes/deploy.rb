@@ -60,7 +60,7 @@ package config_os['default_packages'] do
 end
 
 # Deploy OS specific scripts for things like /etc/bashrc
-config_os['default_scripts'].each do |dir_name, dir_config|
+config_os['default_os_scripts'].each do |dir_name, dir_config|
   dir_config.each do |file_name, file_config|
     template "#{dir_name}/#{file_name}" do
       source "#{this_os}/#{file_config['subdir']}/#{file_name}.erb"
@@ -71,5 +71,34 @@ config_os['default_scripts'].each do |dir_name, dir_config|
 
       action :create
     end
+  end
+end
+
+# Deploy OS specific scripts for things like /etc/bashrc
+config_os['default_scripts_generic'].each do |dir_name, dir_config|
+  dir_config.each do |file_name, file_config|
+    cookbook_file "#{dir_name}/#{file_name}" do
+      source "#{dir_name}/#{file_name}"
+
+      owner file_config['owner']
+      group file_config['group']
+      mode file_config['mode']
+
+      action :create
+    end
+  end
+end
+
+config_os['cron_jobs'].each do |cron_id, cron_cfg|
+  cron cron_id do
+    command     cron_cfg['command']
+    minute      cron_cfg['minute']
+    hour        cron_cfg['hour']
+    day         cron_cfg['day']
+    month       cron_cfg['month']
+    weekday     cron_cfg['day_of_week']
+    user        cron_cfg['user']
+
+    action :create
   end
 end

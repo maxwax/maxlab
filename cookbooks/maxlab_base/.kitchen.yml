@@ -23,7 +23,7 @@ suites:
     attributes:
       kitchen_testing_maxlab: true
     provisioner:
-       policyfile: ../../policyfiles/tk_maxlab_base.rb
+       policyfile: Policyfile_base.rb
 
   - name: bare-metal
     verifier:
@@ -33,4 +33,4 @@ suites:
     attributes:
       kitchen_testing_maxlab: true
     provisioner:
-       policyfile: ../../policyfiles/tk_maxlab_base_bare_metal.rb
+       policyfile: Policyfile_bare_metal.rb
