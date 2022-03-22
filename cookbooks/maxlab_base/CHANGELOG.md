@@ -1,5 +1,9 @@
 # maxlab_base CHANGELOG
 
+# 1.6.0
+
+* Removed template directories for os debian, redhat7 and redhat6 since they are not supported and not tested.  Obsolete
+
 # 1.5.3
 
 Adding 'kitchen_testing_maxlab: true' to .kitchen.yml and checking in current cookbook version.
