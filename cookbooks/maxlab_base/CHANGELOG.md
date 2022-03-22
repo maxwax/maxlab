@@ -1,5 +1,9 @@
 # maxlab_base CHANGELOG
 
+# 1.6.1
+
+* Updating shell-history script to match history options used on personal workstation. Mostly $HOME/.bash_history_eternal not $HOME/.bash_history, etc.
+
 # 1.6.0
 
 * Removed template directories for os debian, redhat7 and redhat6 since they are not supported and not tested.  Obsolete

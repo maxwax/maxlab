@@ -3,7 +3,7 @@ maintainer 'Maxwell Spangler'
 maintainer_email 'maxcode@maxwellspangler.com'
 license 'All Rights Reserved'
 description 'Construct a base configuration environment on each node'
-version '1.6.0'
+version '1.6.1'
 chef_version '>= 13.0'
 
 # The `issues_url` points to the location where issues for this cookbook are
