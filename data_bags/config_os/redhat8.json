@@ -55,7 +55,7 @@
         "group": "root",
         "mode": "0755"
       }
-    }
+    },
     "/usr/local/etc": {
       "shell-basics": {
         "subdir": "usr/local/etc",
