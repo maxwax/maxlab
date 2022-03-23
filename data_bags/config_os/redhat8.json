@@ -48,14 +48,6 @@
         "mode": "0755"
       }
     },
-    "/usr/local/bin": {
-      "cron-backup-history": {
-        "subdir": "usr/local/bin",
-        "owner": "root",
-        "group": "root",
-        "mode": "0755"
-      }
-    },
     "/usr/local/etc": {
       "shell-basics": {
         "subdir": "usr/local/etc",
@@ -72,28 +64,6 @@
     }
   },
   "default_os_scripts_bare_metal": {
-    "/etc": {
-      "bashrc": {
-        "subdir": "etc",
-        "owner": "root",
-        "group": "root",
-        "mode": "0755"
-      }
-    },
-    "/usr/local/etc": {
-      "shell-basics": {
-        "subdir": "usr/local/etc",
-        "owner": "root",
-        "group": "root",
-        "mode": "0755"
-      },
-      "shell-history": {
-        "subdir": "usr/local/etc",
-        "owner": "root",
-        "group": "root",
-        "mode": "0755"
-      }
-    }
   },
   "default_scripts_generic": {
     "/usr/local/bin": {
