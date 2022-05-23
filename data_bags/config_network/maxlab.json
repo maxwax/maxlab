@@ -279,7 +279,7 @@
           "type": "node",
           "group": "laptop",
           "os:": "Fedora Linux",
-          "base": "maxlab_proxmox",
+          "base": "maxlab_sarko",
           "mac_address": "b8:6b:23:8a:78:ce"
         },
         "51": {
@@ -288,8 +288,26 @@
           "type": "node",
           "group": "laptop",
           "os:": "Fedora Linux",
-          "base": "maxlab_proxmox",
+          "base": "maxlab_sarko",
           "mac_address": "44:85:00:4D:BF:B6"
+        },
+        "52": {
+          "node_name": "metal",
+          "description": "HP Elitebook 940 G8 with Network dongle",
+          "type": "node",
+          "group": "laptop",
+          "os:": "Fedora Linux",
+          "base": "maxlab_sarko",
+          "mac_address": "a0:ce:c8:c0:f4:03"
+        },
+        "53": {
+          "node_name": "metalwifi",
+          "description": "HP Elitebook 940 G8 integrated WIFI",
+          "type": "node",
+          "group": "laptop",
+          "os:": "Fedora Linux",
+          "base": "maxlab_sarko",
+          "mac_address": "2a:f0:33:02:06:ad"
         },
         "61": {
           "node_name": "maxwaxi5",
