@@ -47,6 +47,16 @@
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
+          },
+          "metal.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "metalwifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
           }
         }
       },
@@ -96,6 +106,16 @@
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
+          },
+          "metal.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "metalwifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
           }
         }
       },
@@ -117,6 +137,16 @@
             ]
           },
           "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "metal.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "metalwifi.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
@@ -146,6 +176,16 @@
             ]
           },
           "coalbox.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "metal.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "metalwifi.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
