@@ -18,6 +18,11 @@
         "mode": "0755",
         "comment": "Audiovideo storage",
         "clients": {
+          "depot.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
           "macbooknext.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
@@ -72,6 +77,11 @@
         "mode": "0755",
         "comment": "Audiovideo auxillary storage",
         "clients": {
+          "depot.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
           "macbooknext.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
@@ -126,6 +136,11 @@
         "mode": "0755",
         "comment": "Audiovideo auxillary storage 320G drive",
         "clients": {
+          "depot.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
           "macbooknext.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
