@@ -1,6 +1,12 @@
 
 # maxlab CHANGELOG
 
+# 1.2.6
+
+* Added node 'metaldock' for NIC embedded within metal's Thunderbolt Dock via updated config_network 'maxlab'.
+* Added node 'metal' and 'metalwifi' for new HP Elitebook via updated config_network 'maxlab'.
+* Added NFS shares allowing metal, metalwifi, metaldock via updated config_nfs_server data bags.
+
 # 1.2.5
 
 * Add node 'fedoravm' so Fedora testing VM can have DNS and static IP

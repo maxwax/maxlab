@@ -309,6 +309,15 @@
           "base": "maxlab_sarko",
           "mac_address": "2a:f0:33:02:06:ad"
         },
+        "54": {
+          "node_name": "metaldock",
+          "description": "HP Elitebook 940 G8 on Thunderbolt Dock",
+          "type": "node",
+          "group": "laptop",
+          "os:": "Fedora Linux",
+          "base": "maxlab_sarko",
+          "mac_address": "50:81:40:40:89:F9"
+        },
         "61": {
           "node_name": "maxwaxi5",
           "description": "Apple iPhone 5",

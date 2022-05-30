@@ -57,6 +57,11 @@
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
+          },
+          "metaldock.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
           }
         }
       },
@@ -116,6 +121,11 @@
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
+          },
+          "metaldock.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
           }
         }
       },
@@ -147,6 +157,11 @@
             ]
           },
           "metalwifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "metaldock.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
@@ -186,6 +201,11 @@
             ]
           },
           "metalwifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "metaldock.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
