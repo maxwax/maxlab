@@ -1,0 +1,104 @@
+{
+  "id": "maxlab_nfs_pixie",
+  "doc": "NFS server configuration for pixie",
+  "cfg": {
+    "directory_tree" : {
+      "srv": {
+        "directory": "/srv",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      }
+    },
+    "exports" : {
+      "/srv/teraxfiles": {
+        "enabled": true,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
+        "comment": "Archives storage",
+        "clients": {
+          "sarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "mechsarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "mechsarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "metal.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "metalwifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "metaldock.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      },
+      "/srv/x320": {
+        "enabled": true,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
+        "comment": "Archives storage",
+        "clients": {
+          "sarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "sarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "mechsarko.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "mechsarkowifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "metal.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "metalwifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "metaldock.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
