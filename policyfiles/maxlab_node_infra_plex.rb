@@ -7,7 +7,8 @@ default_source :supermarket
 run_list "recipe[maxlab_firewall::base_firewalld]",
          "recipe[maxlab_base::deploy]",
          "recipe[maxlab_users::general]",
-         "recipe[maxlab_nfs_client::deploy]",
+         # "recipe[maxlab_nfs_client::deploy]",
+         "recipe[maxlab_nfs::server]",
          "recipe[maxlab_chrony::deploy]",
          "recipe[maxlab_postfix::deploy]",
          "recipe[maxlab_plex::deploy]",
@@ -16,7 +17,9 @@ run_list "recipe[maxlab_firewall::base_firewalld]",
 cookbook 'maxlab_firewall',   path: '../cookbooks/maxlab_firewall'
 cookbook 'maxlab_base',       path: '../cookbooks/maxlab_base'
 cookbook 'maxlab_users',      path: '../cookbooks/maxlab_users'
-cookbook 'maxlab_nfs_client', path: '../cookbooks/maxlab_nfs_client'
+cookbook 'maxlab_smartd',     path: '../cookbooks/maxlab_smartd'
+# cookbook 'maxlab_nfs_client', path: '../cookbooks/maxlab_nfs_client'
+cookbook 'maxlab_nfs',        path: '../cookbooks/maxlab_nfs'
 cookbook 'maxlab_plex',       path: '../cookbooks/maxlab_plex'
 cookbook 'maxlab_chrony',     path: '../cookbooks/maxlab_chrony'
 cookbook 'maxlab_postfix',    path: '../cookbooks/maxlab_postfix'
@@ -30,11 +33,11 @@ default['config_firewall']['base_config'] = 'base_firewall.maxlab.dmz'
 default['instance_config_chrony']['instance'] = 'chrony.maxlab'
 default['instance_config_chrony']['instance_type'] = 'client'
 
-# From role service_nfs_instance_maxlab_nfs_testred
-default['instance_config_nfs_client']['instance'] = 'maxlab_nfs_client_plex'
+# # From role service_nfs_instance_maxlab_nfs_testred
+# default['instance_config_nfs_client']['instance'] = 'maxlab_nfs_client_plex'
 
-# From role service_samba_instance_maxlab_samba_testred
-#default['instance_config_samba']['instance'] = 'maxlab_samba_media'
+# From role service_nfs_instance_maxlab_nfs_testred
+default['instance_config_nfs']['instance'] = 'maxlab_nfs_plex'
 
 # From role service_postfix_instance_maxlab_postfix
 default['instance_config_postfix']['instance'] = 'maxlab_postfix'
