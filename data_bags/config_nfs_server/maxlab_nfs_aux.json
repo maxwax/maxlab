@@ -18,12 +18,12 @@
         "mode": "0755",
         "comment": "Archive storage",
         "clients": {
-          "macbooknext.maxlab": {
+          "nextpro.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
           },
-          "macbooknextwifi.maxlab": {
+          "nextprowifi.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]

@@ -23,12 +23,12 @@
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
           },
-          "macbooknext.maxlab": {
+          "nextpro.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
           },
-          "macbooknextwifi.maxlab": {
+          "nextprowifi.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
@@ -87,12 +87,12 @@
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
           },
-          "macbooknext.maxlab": {
+          "nextpro.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
           },
-          "macbooknextwifi.maxlab": {
+          "nextprowifi.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
@@ -151,12 +151,12 @@
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
           },
-          "macbooknext.maxlab": {
+          "nextpro.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
           },
-          "macbooknextwifi.maxlab": {
+          "nextprowifi.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
