@@ -8,16 +8,7 @@
   "package_name": "plexmediaserver",
   "service_name": "plexmediaserver",
   "directories": [
-    "/srv/audiovideo/Video/Buddhism",
-    "/srv/audiovideo/Video/Movies/Unwatched",
-    "/srv/audiovideo/Video/Television",
-    "/srv/audiovideo/Video/youtube",
-    "/srv/audiovideo/Music",
-    "/srv/avarchive/ApD",
-    "/srv/avarchive/Classic",
-    "/srv/avarchive/Classic-Watched",
-    "/srv/avarchive/Documentary",
-    "/srv/avarchive/Watched"
+    "/srv/av4tb/audiovideo"
   ],
   "firewall": {
     "firewalld": {
