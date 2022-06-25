@@ -11,7 +11,7 @@
       }
     },
     "exports" : {
-      "/srv/av4tb": {
+      "/srv/av": {
         "enabled": true,
         "owner": "maxwell",
         "group": "maxwell",

@@ -8,7 +8,7 @@
   "package_name": "plexmediaserver",
   "service_name": "plexmediaserver",
   "directories": [
-    "/srv/av4tb/audiovideo"
+    "/srv/av"
   ],
   "firewall": {
     "firewalld": {
