@@ -435,6 +435,15 @@
           "base": "maxlab_vmlab",
           "mac_address": "A6:09:7F:86:B3:8A"
         },
+        "107": {
+          "node_name": "metrics",
+          "description": "Metrics Server",
+          "type": "node",
+          "group": "infra",
+          "os:": "CentOS",
+          "base": "maxlab_vmlab",
+          "mac_address": "62:a8:b3:f3:86:c7"
+        },
         "110": {
           "node_name": "core-centos",
           "description": "Core Infrastructure (DNS, DHCP, NTP)",
