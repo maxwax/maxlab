@@ -21,6 +21,7 @@
   },
   "default_packages": [
     "atop",
+    "binutils",
     "bmon",
     "bpytop",
     "bzip2",
