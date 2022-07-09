@@ -1,5 +1,10 @@
 # maxlab_nfs CHANGELOG
 
+# 1.2.2
+
+* Minor change to test for plex node NFS client ensuring that /net/av exists.
+** Obsolete anyway, but cleanup, still.
+
 # 1.2.1
 
 * Cookstyle cleanup: Replace double quotes with single quotes as recommended
