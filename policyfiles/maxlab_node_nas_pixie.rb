@@ -9,6 +9,7 @@ run_list "recipe[maxlab_firewall::base_firewalld]",
          "recipe[maxlab_users::general]",
          "recipe[maxlab_chrony::deploy]",
          "recipe[maxlab_nfs::server]",
+         "recipe[maxlab_prometheus::exporter]",
          "recipe[maxlab_firewall::update_firewalld]"
 
 cookbook 'maxlab_firewall', path: '../cookbooks/maxlab_firewall'
@@ -16,6 +17,7 @@ cookbook 'maxlab_base',     path: '../cookbooks/maxlab_base'
 cookbook 'maxlab_users',    path: '../cookbooks/maxlab_users'
 cookbook 'maxlab_chrony',   path: '../cookbooks/maxlab_chrony'
 cookbook 'maxlab_nfs',      path: '../cookbooks/maxlab_nfs'
+cookbook 'maxlab_prometheus', path: '../cookbooks/maxlab_prometheus'
 
 cookbook 'chef-vault'
 
@@ -41,6 +43,7 @@ default['env']['maxlab']['dist_url']          = "http://repo.maxlab/dist"
 default['env']['maxlab']['iso_url']           = "http://repo.maxlab/iso"
 default['env']['maxlab']['files_url']         = "http://repo.maxlab/files"
 default['env']['maxlab']['typefaces_url']     = "http://repo.maxlab/files/typefaces"
+default['env']['maxlab']['tarballs_url']      = "http://repo.maxlab/files/tarballs"
 default['env']['maxlab']['chef_url']          = "https://chef.maxlab/organizations/maxlab"
 default['env']['maxlab']['tftp_url']          = "http://repo.maxlab"
 default['env']['maxlab']['upstream_ntp']      = "2.centos.pool.ntp.org"
