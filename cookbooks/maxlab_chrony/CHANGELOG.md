@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of the maxlab_chrony cookbook.
 
+# 1.5.2
+
+* Minor change to set a default NTP server
+* Avoid searching for other Chef nodes that are tagged as NTP servers IF we're running in a Test Kitchen VM.
+* This change lets me enable chrony_client with local Test Kitchen VMs like Prometheus servers.
+
 # 1.5.1
 
 * Fixing some old bugs: set a list of subnets from the serve_chrony_for attribute, then set subnet_id to the first one.  The existing code was working but confusing in this regard

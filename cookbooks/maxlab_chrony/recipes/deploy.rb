@@ -4,15 +4,26 @@
 #
 # Copyright:: 2019, Maxwell Spangler, All Rights Reserved.
 
+# Default NTP server to upstream. Works in test kitchen
+ntp_server = node['env']['maxlab']['upstream_ntp']
+
 # Load client or server node attributes into a variable for easier
 # access and code readability.
 
 # Also set the time source to the first local ntp-server tagged node
 # or the upstream internet NTP server
+
 case node['instance_config_chrony']['instance_type']
 when 'client'
   config_chrony = node['chrony']['client'].to_h
-  ntp_server = search(:node, 'tags:ntp-server')[0]['fqdn']
+
+  # If we're not running in Test Kitchen, set an NTP server
+  unless node['kitchen_testing_maxlab']
+
+    ntp_server = search(:node, 'tags:ntp-server')[0]['fqdn']
+
+  end
+
 when 'server'
   config_chrony = node['chrony']['server'].to_h
   ntp_server = node['env']['maxlab']['upstream_ntp']
