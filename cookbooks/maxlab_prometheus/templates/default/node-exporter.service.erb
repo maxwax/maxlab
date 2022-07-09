@@ -1,0 +1,17 @@
+# Deployed with Chef, do not edit.
+
+[Unit]
+Description=Prometheus Node Exporter Service
+Wants=network.target
+After=syslog.target network.target
+
+[Service]
+User=<%= node['prometheus']['node_exporter']['user'] %>
+Group=<%= node['prometheus']['node_exporter']['group'] %>
+WorkingDirectory=<%= node['prometheus']['node_exporter']['WorkingDirectory'] %>
+ExecReload=kill -1 ${MAINPID}
+ExecStop=kill ${MAINPID}
+ExecStart=<%= node['prometheus']['node_exporter']['deploy_executable'] %>
+
+[Install]
+WantedBy=multi-user.target

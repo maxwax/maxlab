@@ -1,0 +1,20 @@
+# Deployed with Chef, do not edit.
+
+[Unit]
+Description=Prometheus Server
+Wants=network.target
+After=syslog.target network.target
+
+[Service]
+User=<%= node['prometheus']['server']['user'] %>
+Group=<%= node['prometheus']['server']['group'] %>
+WorkingDirectory=<%= node['prometheus']['server']['WorkingDirectory'] %>
+ExecReload=kill -1 ${MAINPID}
+ExecStop=kill ${MAINPID}
+ExecStart=<%= node['prometheus']['server']['deploy_executable'] %> \
+  --config.file="<%= node['prometheus']['server']['config.file'] %>" \
+  --storage.tsdb.path="<%= node['prometheus']['server']['storage.tsdb.path'] %>" \
+  --storage.tsdb.retention.time="<%= node['prometheus']['server']['tsdb.retention.time'] %>"
+
+[Install]
+WantedBy=multi-user.target

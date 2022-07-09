@@ -1,0 +1,7 @@
+{
+  "id": "maxlab_prom_node_exporter",
+  "doc": "Prometheus node_exporter basic configuration",
+  "cfg": {
+    "info": "This is not currently in use, but a placeholder."
+  }
+}

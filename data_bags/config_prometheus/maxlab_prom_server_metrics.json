@@ -1,0 +1,7 @@
+{
+  "id": "maxlab_prom_server_metrics",
+  "doc": "Configuration for maxlab Prometheus Server",
+  "cfg": {
+    "info": "This is not currently in use, but a placeholder."
+  }
+}

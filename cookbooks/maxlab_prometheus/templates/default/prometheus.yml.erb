@@ -1,0 +1,26 @@
+# This file deployed via Chef maxlab_prometheus::server - DO NOT EDIT
+
+global:
+  scrape_interval: <%= node['prometheus']['server']['scrape_interval'] %>
+  evaluation_interval: <%= node['prometheus']['server']['evaluation_interval'] %>
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          # - alertmanager:9093
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+scrape_configs:
+
+<% @scrape_configs.each do |job_name, job_config| %>
+  - job_name: "<%= job_name %>"
+    static_configs:
+      - targets: <%= job_config['static_configs']['targets'] %>
+
+<% end %>
