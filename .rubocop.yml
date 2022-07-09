@@ -36,7 +36,7 @@ Style/TrailingCommaInHashLiteral:
   Exclude:
     - 'recipes/*.rb'
     - 'attributes/*.rb'
-  EnforcedStyleForMultiline: comma
+  EnforcedStyleForMultiline: no_comma
 
 #
 # Don't expect a comma after the last element in a literal array
@@ -46,4 +46,4 @@ Style/TrailingCommaInArrayLiteral:
   Exclude:
     - 'recipes/*.rb'
     - 'attributes/*.rb'
-  EnforcedStyleForMultiline: comma
+  EnforcedStyleForMultiline: no_comma
