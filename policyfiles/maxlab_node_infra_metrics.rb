@@ -69,6 +69,11 @@ default['prometheus']['server']['scrape_configs'] = {
       'targets': [ 'core.maxlab:9100' ],
     },
   },
+  'chef.maxlab': {
+    'static_configs': {
+      'targets': [ 'chef.maxlab:9100' ],
+    },
+  },
   'plex.maxlab': {
     'static_configs': {
       'targets': [ 'plex.maxlab:9100' ],
