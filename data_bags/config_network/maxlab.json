@@ -307,7 +307,7 @@
           "group": "laptop",
           "os:": "Fedora Linux",
           "base": "maxlab_sarko",
-          "mac_address": "2a:f0:33:02:06:ad"
+          "mac_address": "80:45:DD:FC:9A:EA"
         },
         "54": {
           "node_name": "metaldock",
