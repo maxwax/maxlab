@@ -1,0 +1,31 @@
+{
+  "id": "pixie",
+  "doc": "Archive node pixie base configuration",
+  "repo_packages": {
+  },
+  "repo_packages_bare_metal": {
+  },
+  "repo_config_commands": {
+  },
+  "repo_config_commands_bare_metal": {
+  },
+  "sw_install_commands": {
+    "gallery-dl": {
+      "command": "python3 -m pip install -U gallery-dl"
+    }
+  },
+  "default_packages": [
+    "ffmpeg",
+    "youtube-dl"
+  ],
+  "default_packages_bare_metal": [
+  ],
+  "default_os_scripts": {
+  },
+  "default_os_scripts_bare_metal": {
+  },
+  "default_scripts_generic": {
+  },
+  "cron_jobs": {
+  }
+}
