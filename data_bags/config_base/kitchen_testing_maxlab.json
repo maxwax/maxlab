@@ -1,0 +1,26 @@
+{
+  "id": "kitchen_testing_maxlab",
+  "doc": "Archive node pixie base configuration",
+  "repo_packages": {
+  },
+  "repo_packages_bare_metal": {
+  },
+  "repo_config_commands": {
+  },
+  "repo_config_commands_bare_metal": {
+  },
+  "sw_install_commands": {
+  },
+  "default_packages": [
+  ],
+  "default_packages_bare_metal": [
+  ],
+  "default_os_scripts": {
+  },
+  "default_os_scripts_bare_metal": {
+  },
+  "default_scripts_generic": {
+  },
+  "cron_jobs": {
+  }
+}
