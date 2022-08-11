@@ -1,5 +1,11 @@
 # maxlab_base CHANGELOG
 
+# 1.7
+
+* New recipe deploy_svc_base, a quick clone of deploy but instead of using a config_os data bag for configuration values to drive the work, use a config_base data bag with configuration values related to the node's service irregardless of the node's OS.  Primary example: Deploy extra av files on av service nodes.
+* Introduce sw_install_commands to data bag to execute Python pip or Ruby gem install commands
+* Added databag config_base kitchen_testing_maxlab for local kitchen testing config to drive deploy_svc_base recipe.
+
 # 1.6.3
 
 * New code to deploy default_scripts_generic starting with file cron-backup-history.
