@@ -6,6 +6,7 @@ default_source :supermarket
 
 run_list "recipe[maxlab_firewall::base_firewalld]",
          "recipe[maxlab_base::deploy]",
+         "recipe[maxlab_base::deploy_svc_base]",
          "recipe[maxlab_users::general]",
          "recipe[maxlab_chrony::deploy]",
          "recipe[maxlab_nfs::server]",
@@ -20,6 +21,9 @@ cookbook 'maxlab_nfs',      path: '../cookbooks/maxlab_nfs'
 cookbook 'maxlab_prometheus', path: '../cookbooks/maxlab_prometheus'
 
 cookbook 'chef-vault'
+
+# ID a config_base data bag to configure services for this type of node
+default['config_base']['id'] = 'pixie'
 
 # From role base_firewall_maxlab_nas
 default['config_firewall']['base_config'] = 'base_firewall.maxlab.nas'
