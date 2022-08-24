@@ -11,7 +11,7 @@
       }
     },
     "exports" : {
-      "/srv/teraxfiles": {
+      "/srv/redfiles": {
         "enabled": true,
         "owner": "maxwell",
         "group": "maxwell",
