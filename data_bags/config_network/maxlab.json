@@ -714,6 +714,33 @@
           "base": "maxlab_vmlab",
           "mac_address": "fe:94:96:bf:6f:36"
         },
+        "102": {
+          "node_name": "repo",
+          "description": "Repository Infrastructure (TFTP, HTTP) (Redhat)",
+          "type": "node",
+          "group": "infra",
+          "os:": "RHEL",
+          "base": "maxlab_vmlab",
+          "mac_address": "B6:3F:69:0A:46:7F"
+        },
+        "103": {
+          "node_name": "stor",
+          "description": "Repository Infrastructure (TFTP, HTTP) Repo Backup",
+          "type": "node",
+          "group": "infra",
+          "os:": "CentOS",
+          "base": "maxlab_vmlab",
+          "mac_address": "56:B7:37:87:7A:51"
+        },
+        "105": {
+          "node_name": "bank",
+          "description": "Core Infrastructure (DNS, DHCP, NTP) via Chef",
+          "type": "node",
+          "group": "infra",
+          "os:": "CentOS",
+          "base": "maxlab_vmlab",
+          "mac_address": "DE:38:CB:BB:14:FE"
+        },
         "106": {
           "node_name": "pixie",
           "description": "Archive file server",
