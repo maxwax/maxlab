@@ -44,7 +44,7 @@ default['bind']['network_mask'] = 24
 # Domain name (for DNS config file)
 default['bind']['domain_name'] = 'maxlab'
 # Allow dns requests on this network
-default['bind']['acl'] = '192.168.9.0/24'
+default['bind']['acl'] = '192.168.9.0/24; 192.168.100.0/24;'
 # Listen on this IPv4 port
 default['bind']['listen_on_port_ipv4'] = '53'
 # Listen on this IPv4 address. Use 'ipaddress' for auto-configure to each node
@@ -58,7 +58,7 @@ default['bind']['config_listen_on_address_ipv6'] = 'ipaddress'
 # Listen on this IPv6 specific address (if not auto configured above)
 default['bind']['listen_on_address_ipv6'] = ''
 # Allow queries from this network
-default['bind']['allow_query'] = '192.168.9.0/24'
+default['bind']['allow_query'] = '192.168.9.0/24; 192.168.100.0/24;'
 # Allow DNS recursion to root level servers
 default['bind']['recursion'] = 'yes'
 # Enable/Disable dnssec
