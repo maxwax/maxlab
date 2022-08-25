@@ -2,6 +2,14 @@
 
 Deploy a DHCP server
 
+# 1.4 Multi-homed DHCP server
+
+* Support multiple subnets in the same network id data bags
+* Adding 192.168.100.0/24 subnet for vm to vm networking on hypervisor coalbox
+* In DHCP server node policyfile, set hash of network_id 'maxlab' to an array of one or more subnets to support.
+* Modify deploy.rb to continue to support multiple network_ids and iterate over them, but now each individual network_id (data bag config) may have more than one subnet that needs to be configured
+* Add first_subnet variable so that when deploying hostnames in the first (primary) subnet, each host will be deployed as its name only, but for uniqueness, hostnames in other subnets will be deployed prefixed by the subnet's domain name such as 'vmnet-core' and 'vmnet-plex'.  This fulfills the requirement that each hostname in an dhcpd.conf file be unique regardless of subnet.
+
 # 1.3.1
 
 * Cookstyle cleanup: Replace double quotes with single quotes as recommended

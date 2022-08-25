@@ -46,7 +46,7 @@ subnet <%= sub_id %> netmask <%= sub_info['netmask'] %> {
     <% sub_info['nodes'].sort.each do |node_ip, node_info| %>
       <% if node_info['group'] == each_group %>
     # <%= node_info['description'] %>
-    host <%= node_info['node_name'] %> {
+    host <%= node_info['node_name'] %><% if sub_id != @first_subnet %>-<%= sub_info['domain_name'] %><% end %> {
       hardware ethernet <%= node_info['mac_address'] %>;
       fixed-address <%= sub_info['network_prefix'] %>.<%= node_ip %>;
     }
@@ -57,4 +57,5 @@ subnet <%= sub_id %> netmask <%= sub_info['netmask'] %> {
 
   <% end %>
 }
+
 <% end %>

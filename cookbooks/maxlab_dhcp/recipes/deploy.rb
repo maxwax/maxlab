@@ -31,68 +31,88 @@ subnets = {}
 # Fix later. 2020-02-15 maxwell
 config_header = ''
 
+first_subnet = ''
+
+# OLD code, removed 2022-0824, for short term reference delete later.
 # Iterate over each network supported by this DHCP server
-config_dhcp['serve_dhcp_for'].each do |network_id, subnet_id|
+# config_dhcp['serve_dhcp_for'].each do |network_id, subnet_id|
 
-  # Stamp the config file with this in its header
-  config_header = "network #{network_id}, subnet #{subnet_id}"
+# Iterate over a network_id name and one or more subnet_ids
+# A single network_id + subnet = 'maxlab': '192.168.9.0'
+# A multi-homed DHCP server = 'maxlab': [ '192.168.9.0', '192.168.100.0']
+config_dhcp['serve_dhcp_for'].each do |network_id, subnet_id_list|
 
-  # Load data bag configuration for the network (subnets, netmasks, etc)
-  config_network = data_bag_item('config_network', network_id)
 
-  # The DHCP server may serve > 1 subnet, so add each subnet to a hash of
-  # subnet info and all will be populated in the dhcpd.conf file
-  subnets[subnet_id] = config_network['subnet'][subnet_id]
+  # Track this so individual host names in dhcpd.conf for primary subnet
+  # are deployed as native host name, while additional subnet host declarations
+  # will be <subnets-domain-name>-<hostname> for uniqueness throughout
+  # dhcpd.conf config file.
+  first_subnet = subnet_id_list[0]
 
-  # Construct a string of DNS servers in format 'A, B, C'
-  dns_list = ''
-  subnets[subnet_id]['dns']['domain_name_servers'].each do |dns_target|
+  # Now iterate over each subnet_id for each network_id:
+  subnet_id_list.each do |subnet_id|
 
-    unless dns_list == ''
+    # Stamp the config file with this in its header
+    config_header = "network #{network_id}, subnet #{subnet_id}"
+
+    # Load data bag configuration for the network (subnets, netmasks, etc)
+    config_network = data_bag_item('config_network', network_id)
+
+    # The DHCP server may serve > 1 subnet, so add each subnet to a hash of
+    # subnet info and all will be populated in the dhcpd.conf file
+    subnets[subnet_id] = config_network['subnet'][subnet_id]
+
+    # Construct a string of DNS servers in format 'A, B, C'
+    dns_list = ''
+    subnets[subnet_id]['dns']['domain_name_servers'].each do |dns_target|
+
+      unless dns_list == ''
+        # Append to dns_list
+        dns_list += ', '
+      end
+
       # Append to dns_list
-      dns_list += ', '
+      dns_list += + dns_target
+    end
+    subnets[subnet_id]['dns_list'] = dns_list
+
+    # Construct a hash of groups with options so we can organize dhcpd.conf
+    # with groups, include group-specific options and exclude things like VIPs
+    # First, gather all groups explicitly defined in the config_network json
+    groups = {}
+
+    subnets[subnet_id]['groups'].each do |group_name, group_options|
+      unless groups.key?(group_name['group']) && group_options['dhcp'] == false
+        groups[group_name] = group_options
+      end
     end
 
-    # Append to dns_list
-    dns_list += + dns_target
-  end
-  subnets[subnet_id]['dns_list'] = dns_list
+    # Next, scan all nodes defined in the config_network json and
+    # include any groups assigned to nodes but not defined in json's groups{}
+    # section.  Do not append groups for nodes that fail to have a MAC address
+    subnets[subnet_id]['nodes'].each do |_node_ip, node_info|
 
-  # Construct a hash of groups with options so we can organize dhcpd.conf
-  # with groups, include group-specific options and exclude things like VIPs
-  # First, gather all groups explicitly defined in the config_network json
-  groups = {}
+      unless groups.key?(node_info['group'])
 
-  subnets[subnet_id]['groups'].each do |group_name, group_options|
-    unless groups.key?(group_name['group']) && group_options['dhcp'] == false
-      groups[group_name] = group_options
+        # if this hash doesn't have this field, don't try to evaluate it
+        next if !node_info.key?('mac_address')
+
+        # Do not include this node's group
+        # if the node does not have a MAC address VALUE - it may be a VIP
+        next if node_info['mac_address'].empty?
+
+        groups[node_info['group']] = {
+          'dhcp': true,
+          'dhcp_option': []
+        }
+      end
     end
+
+    # Assign our list of groups to this subnet's config_network hash
+    # We'll pass this to the template for unified access of network info
+    subnets[subnet_id]['groups'] = groups
+
   end
-
-  # Next, scan all nodes defined in the config_network json and
-  # include any groups assigned to nodes but not defined in json's groups{}
-  # section.  Do not append groups for nodes that fail to have a MAC address
-  subnets[subnet_id]['nodes'].each do |_node_ip, node_info|
-
-    unless groups.key?(node_info['group'])
-
-      # if this hash doesn't have this field, don't try to evaluate it
-      next if !node_info.key?('mac_address')
-
-      # Do not include this node's group
-      # if the node does not have a MAC address VALUE - it may be a VIP
-      next if node_info['mac_address'].empty?
-
-      groups[node_info['group']] = {
-        'dhcp': true,
-        'dhcp_option': []
-      }
-    end
-  end
-
-  # Assign our list of groups to this subnet's config_network hash
-  # We'll pass this to the template for unified access of network info
-  subnets[subnet_id]['groups'] = groups
 
 end
 
@@ -103,7 +123,8 @@ template '/etc/dhcp/dhcpd.conf' do
     {
       config_dhcp: config_dhcp,
       subnets: subnets,
-      config_header: config_header
+      config_header: config_header,
+      first_subnet: first_subnet
     }
   )
 end
