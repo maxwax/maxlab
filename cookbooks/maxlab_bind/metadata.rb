@@ -3,7 +3,7 @@ maintainer 'Maxwell Spangler'
 maintainer_email 'maxcode@maxwellspangler.com'
 license 'All Rights Reserved'
 description 'Installs/Configures BIND DNS services on Red Hat based Linux distributions'
-version '1.3.0'
+version '1.4.0'
 chef_version '>= 13.0'
 
 # The `issues_url` points to the location where issues for this cookbook are

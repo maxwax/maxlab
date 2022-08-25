@@ -2,6 +2,15 @@
 
 Cookbook for deploying DNS service using BIND on Redhat platform Linux distributions
 
+# 1.4 Support multiple networks/subnets in the same shared network id
+
+* Support multiple subnets sharing the same data bag network config file.
+* Identify each subnet via domain name and not overall data bag network id.
+* Configure a zone in named.conf for each subnet via domain name
+* Ensure a forward file is created for each subnet via domain name as identifier for filename.
+* Cookstyle cleanup on deploy.rb, lots of extra line spacing added, trailing commas removed
+* Removed some static semicolons from named.conf file. Semicolons will be provided within cookbook attribute values to meet named.conf syntax requirements.
+
 # 1.3.1
 
 * Cookstyle cleanup: remove long description from metadata.rb
