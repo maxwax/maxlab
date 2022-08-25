@@ -7,28 +7,28 @@
 // See /usr/share/doc/bind*/sample/ for example named configuration files.
 //
 
-acl <%= @config_bind['domain_name'] %> { 127.0.0.0/8; <%= @config_bind['acl'] %>; };
+acl <%= @config_bind['domain_name'] %> { 127.0.0.0/8; <%= @config_bind['acl'] %> };
 
 options {
-	listen-on port <%= @config_bind['listen_on_port_ipv4'] %> { 127.0.0.1; <%= @cfg_listen_ipv4 %>; };
-	listen-on-v6 port <%= @config_bind['listen_on_port_ipv6'] %> { ::1; <%= @cfg_listen_ipv6 %>; };
+	listen-on port <%= @config_bind['listen_on_port_ipv4'] %> { 127.0.0.1; <% @config_listen_on_ipv4_list.each do |ipv4_addr| %> <%= ipv4_addr %>; <% end %> };
+	listen-on-v6 port <%= @config_bind['listen_on_port_ipv6'] %> { ::1; <% @config_listen_on_ipv6_list.each do |ipv6_addr| %> <%= ipv4_addr %>; <% end %>  };
 	directory 	"/var/named";
 	dump-file 	"/var/named/data/cache_dump.db";
 	statistics-file "/var/named/data/named_stats.txt";
 	memstatistics-file "/var/named/data/named_mem_stats.txt";
 	secroots-file	"/var/named/data/named.secroots";
 	recursing-file	"/var/named/data/named.recursing";
-	allow-query { localhost; <%= @config_bind['allow_query'] %>; };
+	allow-query { localhost; <%= @config_bind['allow_query'] %> };
 
-	/* 
+	/*
 	 - If you are building an AUTHORITATIVE DNS server, do NOT enable recursion.
-	 - If you are building a RECURSIVE (caching) DNS server, you need to enable 
-	   recursion. 
-	 - If your recursive DNS server has a public IP address, you MUST enable access 
+	 - If you are building a RECURSIVE (caching) DNS server, you need to enable
+	   recursion.
+	 - If your recursive DNS server has a public IP address, you MUST enable access
 	   control to limit queries to your legitimate users. Failing to do so will
-	   cause your server to become part of large scale DNS amplification 
+	   cause your server to become part of large scale DNS amplification
 	   attacks. Implementing BCP38 within your network would greatly
-	   reduce such attack surface 
+	   reduce such attack surface
 	*/
 	recursion <%= @config_bind['recursion'] %>;
 
@@ -36,8 +36,6 @@ options {
 	dnssec-validation <%= @config_bind['dnssec_validation'] %>;
 
         forwarders {
-//                205.171.3.25;
-//                205.171.2.25;
 <% @config_bind['forwarders'].each do |fwd_ip| %>
                   <%= fwd_ip %>;
 <% end %>
@@ -77,4 +75,3 @@ zone "<%= zone %>" {
 <% end %>
 include "/etc/named.rfc1912.zones";
 include "/etc/named.root.key";
-
