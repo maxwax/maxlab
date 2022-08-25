@@ -36,7 +36,7 @@ default['instance_config_chrony']['instance_type'] = 'server'
 default['config_bind']['instance'] = 'dns_server.maxlab'
 
 # From role service_dhcp_instance_core
-default['dhcp']['serve_dhcp_for']['maxlab'] = "192.168.9.0"
+default['dhcp']['serve_dhcp_for']['maxlab'] = [ '192.168.9.0', '192.168.100.0' ]
 default['dhcp']['instance_config_dhcp']['primary'] = true
 
 # From role service_postfix_instance_maxlab_postfix
