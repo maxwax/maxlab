@@ -23,7 +23,7 @@
         ],
         "acl": "192.168.20.0/24",
         "listen_on_port_ipv4": 53,
-        "listen_on_address_ipv4": "192.168.20.100",
+        "listen_on_address_ipv4": "",
         "listen_on_port_ipv6": 53,
         "listen_on_address_ipv6": "",
         "allow_query": "192.168.20.0/24",
