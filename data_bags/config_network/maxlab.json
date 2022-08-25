@@ -607,6 +607,132 @@
           "mac_address": "00:26:2d:02:b2:58"
         }
       }
+    },
+    "192.168.100.0": {
+      "network_prefix": "192.168.100",
+      "network_mask": 24,
+      "netmask": "255.255.255.0",
+      "broadcast_address": "192.168.100.255",
+      "routers": "192.168.100.2",
+      "ntp_servers": "192.168.100.100",
+      "domain_name": "vmnet",
+      "dns": {
+        "ttl": 8640,
+        "soa_domain": "vmnet",
+        "soa_email": "maxwell.maxwellspangler.com",
+        "refresh": 28880,
+        "retry": 7200,
+        "expire": 3600000,
+        "minimum": 600,
+        "NS": [ "core.vmnet" ],
+        "domain_name_servers": [
+          "192.168.100.100"
+        ],
+        "acl": "192.168.100.0/24",
+        "listen_on_port_ipv4": 53,
+        "listen_on_address_ipv4": "192.168.100.100",
+        "listen_on_port_ipv6": 53,
+        "listen_on_address_ipv6": "",
+        "allow_query": "192.168.100.0/24",
+        "recursion": "yes",
+        "dnssec_enable": "yes",
+        "dnssec_validation": "yes",
+        "forwarders": [
+          "1.1.1.1",
+          "8.8.8.8",
+          "8.8.4.4"
+        ],
+        "zones": {
+          "vmnet": {
+            "type": "master",
+            "allow_update": "none"
+          },
+          "100.168.192.in-addr.arpa": {
+            "type": "master",
+            "allow_update": "none"
+          }
+        }
+      },
+      "dhcp_options": {
+        "default_lease_time": 1440,
+        "max_lease_time": 1440,
+        "ip_forwarding": "off",
+        "pxe_options": {
+          "root_path": "/var/lib/tftpboot",
+          "filename": "/pxelinux.0",
+          "next_server": "192.168.100.102"
+        },
+        "dhcp_range": {
+          "start": 200,
+          "end": 240
+        }
+      },
+      "aliases": {
+      },
+      "groups": {
+        "NAS": {
+          "dhcp": true,
+          "dhcp_option": []
+        },
+        "hypervisor": {
+          "dhcp": true,
+          "dhcp_option": []
+        },
+        "infra": {
+          "dhcp": true,
+          "dhcp_option": []
+        },
+        "laptop": {
+          "dhcp": true,
+          "dhcp_option": []
+        },
+        "mobile": {
+          "dhcp": true,
+          "dhcp_option": [
+          ]
+        },
+        "network-infra": {
+          "dhcp": true,
+          "dhcp_option": []
+        },
+        "vips": {
+          "dhcp": false,
+          "dhcp_option": []
+        },
+        "vmlab": {
+          "dhcp": true,
+          "dhcp_option": []
+        }
+      },
+      "nodes": {
+        "100": {
+          "node_name": "core",
+          "description": "Core Infrastructure (DNS, DHCP, NTP) via Chef (on RHEL)",
+          "type": "node",
+          "group": "infra",
+          "os:": "RHEL",
+          "base": "maxlab_vmlab",
+          "mac_address": "fe:94:96:bf:6f:36"
+        },
+        "106": {
+          "node_name": "pixie",
+          "description": "Archive file server",
+          "type": "node",
+          "group": "infra",
+          "os:": "CentOS",
+          "base": "maxlab_vmlab",
+          "mac_address": "66:F9:18:6B:10:DF"
+        },
+        "120": {
+          "node_name": "plex",
+          "description": "Plex Media Server on coalbox",
+          "type": "node",
+          "group": "plex",
+          "os:": "CentOS",
+          "base": "maxlab_vmlab",
+          "mac_address": "E6:22:76:BA:A4:85"
+        }
+      }
     }
   }
 }
