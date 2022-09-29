@@ -211,6 +211,20 @@
             ]
           }
         }
+      },
+      "/srv/filerdata/clonezilla": {
+        "enabled": false,
+        "owner": "maxwell",
+        "group": "maxwell",
+        "mode": "0755",
+        "comment": "Clonezilla storage on Filer",
+        "clients": {
+          "*": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          }
+        }
       }
     }
   }
