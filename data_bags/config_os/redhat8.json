@@ -30,6 +30,7 @@
     "netcat",
     "nmon",
     "policycoreutils-python-utils",
+    "pv",
     "rsync",
     "tar",
     "tree",
