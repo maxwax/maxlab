@@ -1,0 +1,27 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  always_update_cookbooks: true
+  cookbooks_path: ../../cookbooks
+  data_bags_path: ../../data_bags
+  nodes_path: test/integration/nodes
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: maxlab-centos-chef
+
+suites:
+  - name: server
+    run_list:
+    verifier:
+      inspec_tests:
+        - test/integration/grafana_server
+    attributes:
+      kitchen_testing_maxlab: true
+    provisioner:
+       policyfile: ../../policyfiles/tk_maxlab_grafana_server.rb

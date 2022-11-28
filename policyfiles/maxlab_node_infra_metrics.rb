@@ -10,6 +10,7 @@ run_list 'recipe[maxlab_firewall::base_firewalld]',
          'recipe[maxlab_chrony::deploy]',
          'recipe[maxlab_prometheus::server]',
          'recipe[maxlab_prometheus::exporter]',
+         'recipe[maxlab_grafana::server]',
          'recipe[maxlab_firewall::update_firewalld]'
 
 cookbook 'maxlab_firewall',   path: '../cookbooks/maxlab_firewall'
@@ -17,6 +18,7 @@ cookbook 'maxlab_base',       path: '../cookbooks/maxlab_base'
 cookbook 'maxlab_users',      path: '../cookbooks/maxlab_users'
 cookbook 'maxlab_chrony',     path: '../cookbooks/maxlab_chrony'
 cookbook 'maxlab_prometheus', path: '../cookbooks/maxlab_prometheus'
+cookbook 'maxlab_grafana',    path: '../cookbooks/maxlab_grafana'
 
 # From role base_firewall_maxlab_nas
 default['config_firewall']['base_config'] = 'base_firewall.maxlab.dmz'
