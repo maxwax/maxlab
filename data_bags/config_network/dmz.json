@@ -79,13 +79,21 @@
           "os:": "DD-WRT",
           "mac_address": "c4:04:15:44:cf:12"
         },
-        "248": {
-          "node_name": "download",
+        "246": {
+          "node_name": "downloadold",
           "description": "Lenovo B590",
           "type": "node",
           "group": "laptops",
           "os:": "CentOS",
           "mac_address": "3c:97:0e:a7:8c:19"
+        },
+        "248": {
+          "node_name": "download",
+          "description": "Download Robot",
+          "type": "node",
+          "group": "laptops",
+          "os:": "Rocky",
+          "mac_address": "3C:97:0E:A7:8F:B8"
         }
       }
     }

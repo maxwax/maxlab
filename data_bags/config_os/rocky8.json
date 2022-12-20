@@ -1,0 +1,100 @@
+{
+  "id": "rocky8",
+  "doc": "Distribution and version specific provisioning for CentOS 8",
+  "repo_packages": {
+    "rpmfusion-free-release-8": {
+      "source": "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm",
+      "filename": "rpmfusion-free-release-8.noarch.rpm",
+      "not_if_package": "rpmfusion-free-release"
+    },
+    "rpmfusion-nonfree-release-8": {
+      "source": "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm",
+      "filename": "rpmfusion-nonfree-release-8.noarch.rpm",
+      "not_if_package": "rpmfusion-nonfree-release"
+    }
+  },
+  "repo_packages_bare_metal": {
+  },
+  "repo_config_commands": {
+  },
+  "repo_config_commands_bare_metal": {
+  },
+  "default_packages": [
+    "atop",
+    "binutils",
+    "bmon",
+    "bpytop",
+    "bzip2",
+    "dnstop",
+    "htop",
+    "iftop",
+    "netcat",
+    "nmon",
+    "policycoreutils-python-utils",
+    "rsync",
+    "tar",
+    "tree",
+    "vim",
+    "wget",
+    "which"
+  ],
+  "default_packages_bare_metal": [
+    "lm_sensors"
+  ],
+  "default_os_scripts": {
+    "/etc": {
+      "bashrc": {
+        "subdir": "etc",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      }
+    },
+    "/usr/local/etc": {
+      "shell-basics": {
+        "subdir": "usr/local/etc",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      },
+      "shell-history": {
+        "subdir": "usr/local/etc",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      }
+    }
+  },
+  "default_os_scripts_bare_metal": {
+  },
+  "default_scripts_generic": {
+    "/usr/local/bin": {
+      "cron-backup-history": {
+        "subdir": "usr/local/bin",
+        "owner": "root",
+        "group": "root",
+        "mode": "0755"
+      }
+    }
+  },
+  "cron_jobs": {
+    "cron-backup-history-maxwell": {
+      "command": "/usr/local/bin/cron-backup-history",
+      "minute": "0",
+      "hour": "12",
+      "day": "*",
+      "month": "*",
+      "day_of_week": "0",
+      "user": "maxwell"
+    },
+    "cron-backup-history-root": {
+      "command": "/usr/local/bin/cron-backup-history",
+      "minute": "0",
+      "hour": "12",
+      "day": "*",
+      "month": "*",
+      "day_of_week": "0",
+      "user": "root"
+    }
+  }
+}

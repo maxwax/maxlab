@@ -1,6 +1,16 @@
 
 # maxlab CHANGELOG
 
+# 1.3.0
+
+* Added OS rocky8 to config_os data bags
+
+* Added OS rocky8 to config_os_table data bags
+
+* Added new 'download.dmz' node and moved old node to 'downloadold.dmz'
+
+
+
 # 1.2.6
 
 * Added node 'metaldock' for NIC embedded within metal's Thunderbolt Dock via updated config_network 'maxlab'.

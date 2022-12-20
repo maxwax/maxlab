@@ -13,6 +13,18 @@
     "doc": "Red Hat Linux v6",
     "config_os": "redhat6"
   },
+  "rocky9": {
+    "doc": "Rocky Linux 9",
+    "config_os": "centos9"
+  },
+  "rocky8": {
+    "doc": "Rocky Linux v8",
+    "config_os": "rocky8"
+  },
+  "centos9": {
+    "doc": "CentOS Stream 9",
+    "config_os": "centos9"
+  },
   "centos8": {
     "doc": "CentOS Linux v8",
     "config_os": "centos8"
