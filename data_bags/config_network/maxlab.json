@@ -732,6 +732,15 @@
           "base": "maxlab_vmlab",
           "mac_address": "56:B7:37:87:7A:51"
         },
+        "104": {
+          "node_name": "fedorastation",
+          "description": "Fedora VM for Station cookbook testing",
+          "type": "node",
+          "group": "infra",
+          "os:": "Fedora",
+          "base": "station",
+          "mac_address": "08:00:27:9c:0d:07"
+        },
         "105": {
           "node_name": "bank",
           "description": "Core Infrastructure (DNS, DHCP, NTP) via Chef",
