@@ -15,11 +15,11 @@
     "users": [ "plex" ],
     "groups": [ "plex" ]
   },
-  "xcode": {
+  "pixie": {
     "doc": "Backup Archives",
-    "min": 1200,
-    "max": 1200,
-    "users": [ "xcode" ],
-    "groups": [ "xcode" ]
+    "min": 1000,
+    "max": 1984,
+    "users": [ "maxwell", "pris" ],
+    "groups": [ "maxwell", "pris", "pfiles" ]
   }
 }
