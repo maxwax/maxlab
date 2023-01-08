@@ -5,21 +5,23 @@
     "doc": "Normal user also enables samba access",
     "uid": 1000,
     "group": "maxwell",
+    "other_groups": [ ],
     "fullname": "Maxwell Spangler",
     "shell": "/bin/bash"
   },
   "plex": {
     "doc": "Plex Media Server services",
     "uid": 1200,
-    "gid": "plex",
     "group": "plex",
+    "other_groups": [ ],
     "fullname": "Plex Media Server",
     "shell": "/sbin/nologin"
   },
   "pris": {
     "doc": "Archives",
     "uid": 1983,
-    "group": "pfiles",
+    "group": "pris",
+    "other_groups": [ "pfiles" ],
     "fullname": "Backup Archives",
     "shell": "/bin/bash"
   },
@@ -27,6 +29,7 @@
     "doc": "Archives",
     "uid": 1984,
     "group": "pfiles",
+    "other_groups": [ ],
     "fullname": "Backup Archives",
     "shell": "/bin/bash"
   }
