@@ -33,6 +33,9 @@ cookbook 'chef-vault'
 # From role base_firewall_maxlab_nas
 default['config_firewall']['base_config'] = 'base_firewall.maxlab.nas'
 
+# Defines the base set of users and groups to be deployed
+default['config_serviceset'] = 'general'
+
 # From role client_chrony_maxlab
 default['instance_config_chrony']['instance'] = 'chrony.maxlab'
 default['instance_config_chrony']['instance_type'] = 'client'

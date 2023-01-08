@@ -32,6 +32,9 @@ cookbook 'chef-vault'
 # The config_firewall data bag used to configure basic network rules
 default['config_firewall']['base_config'] = 'base_firewall.maxlab.nas'
 
+# Defines the base set of users and groups to be deployed
+default['config_serviceset'] = 'general'
+
 # The config_chrony data bag used to configure chrony on this node
 default['instance_config_chrony']['instance'] = 'chrony.maxlab'
 default['instance_config_chrony']['instance_type'] = 'client'
