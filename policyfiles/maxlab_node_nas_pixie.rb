@@ -25,6 +25,9 @@ cookbook 'chef-vault'
 # ID a config_base data bag to configure services for this type of node
 default['config_base']['id'] = 'pixie'
 
+# Defines the base set of users and groups to be deployed
+default['config_serviceset'] = 'pixie'
+
 # From role base_firewall_maxlab_nas
 default['config_firewall']['base_config'] = 'base_firewall.maxlab.nas'
 
