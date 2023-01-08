@@ -23,6 +23,9 @@ cookbook 'maxlab_grafana',    path: '../cookbooks/maxlab_grafana'
 # From role base_firewall_maxlab_nas
 default['config_firewall']['base_config'] = 'base_firewall.maxlab.dmz'
 
+# Defines the base set of users and groups to be deployed
+default['config_serviceset'] = 'general'
+
 # From role client_chrony_maxlab
 default['instance_config_chrony']['instance'] = 'chrony.maxlab'
 default['instance_config_chrony']['instance_type'] = 'client'
