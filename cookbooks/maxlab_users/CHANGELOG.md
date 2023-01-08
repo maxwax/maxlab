@@ -1,5 +1,13 @@
 # maxlab_users CHANGELOG
 
+# 1.4.0
+
+* Refactored code to be cleaner and perform the following
+* Pay attention to the serviceset attribute defined in a policyfile to determine what serviceset applies to a node. From that get a list of users and groups required to be deployed.
+* Create any groups defined by the serviceset for services on this node.
+* Create any users defined by the serviceset for services on this node.
+* Ensure users are also members of non-primary groups when required.
+
 # 1.3.1
 
 * Modify base recipe general.rb to handle test kitchen and non test kitchen cases so I can eliminate the redundant test kitchen only recipe general_kitchen.rb
