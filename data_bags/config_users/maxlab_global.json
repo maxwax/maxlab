@@ -11,7 +11,7 @@
   },
   "plex": {
     "doc": "Plex Media Server services",
-    "uid": 1200,
+    "uid": 994,
     "group": "plex",
     "other_groups": [ ],
     "fullname": "Plex Media Server",
