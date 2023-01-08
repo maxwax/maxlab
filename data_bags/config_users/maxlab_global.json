@@ -8,18 +8,26 @@
     "fullname": "Maxwell Spangler",
     "shell": "/bin/bash"
   },
-  "xcode": {
-    "doc": "Backup Archive Owner",
-    "uid": 1300,
-    "group": "xcode",
-    "fullname": "Backup Archives",
-    "shell": "/bin/bash"
-  },
   "plex": {
     "doc": "Plex Media Server services",
     "uid": 1200,
     "gid": "plex",
+    "group": "plex",
     "fullname": "Plex Media Server",
     "shell": "/sbin/nologin"
+  },
+  "pris": {
+    "doc": "Archives",
+    "uid": 1983,
+    "group": "pfiles",
+    "fullname": "Backup Archives",
+    "shell": "/bin/bash"
+  },
+  "pfiles": {
+    "doc": "Archives",
+    "uid": 1984,
+    "group": "pfiles",
+    "fullname": "Backup Archives",
+    "shell": "/bin/bash"
   }
 }
