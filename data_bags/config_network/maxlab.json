@@ -480,15 +480,6 @@
           "base": "maxlab_vmlab",
           "mac_address": "56:0c:07:4b:fb:72"
         },
-        "122": {
-          "node_name": "centos",
-          "description": "CentOS experimental node",
-          "type": "node",
-          "group": "vmlab",
-          "os:": "CentOS",
-          "base": "maxlab_vmlab",
-          "mac_address": "fa:32:a8:b8:08:31"
-        },
         "123": {
           "node_name": "exper",
           "description": "Experimental VM node on coalbox",
@@ -508,31 +499,31 @@
           "mac_address": "12:6c:b6:0a:71:a2"
         },
         "125": {
-          "node_name": "stream1",
-          "description": "Experimental CentOS Stream node 1",
+          "node_name": "kub1",
+          "description": "Kubernetes K1 cluster node1",
           "type": "node",
-          "group": "vmlab",
-          "os:": "CentOS_Stream",
+          "group": "k8s",
+          "os:": "Rocky8",
+          "base": "maxlab_vmlab",
+          "mac_address": "fa:32:a8:b8:08:31"
+        },
+        "126": {
+          "node_name": "kub2",
+          "description": "Kubernetes K1 cluster node2",
+          "type": "node",
+          "group": "k8s",
+          "os:": "Rock8",
           "base": "maxlab_vmlab",
           "mac_address": "5e:b3:f6:68:98:e6"
         },
-        "126": {
-          "node_name": "stream2",
-          "description": "Experimental CentOS Stream node 2",
+        "127": {
+          "node_name": "kub3",
+          "description": "Kubernetes K1 cluster node3",
           "type": "node",
-          "group": "vmlab",
-          "os:": "CentOS_Stream",
+          "group": "k8s",
+          "os:": "Rocky8",
           "base": "maxlab_vmlab",
           "mac_address": "22:9c:5a:c6:76:0f"
-        },
-        "127": {
-          "node_name": "plexdata",
-          "description": "Plex Media Server on coalbox dedicated NIC",
-          "type": "node",
-          "group": "vmlab",
-          "os:": "CentOS",
-          "base": "maxlab_vmlab",
-          "mac_address": "6e:b0:56:c5:9a:06"
         },
         "130": {
           "node_name": "sco5",
@@ -542,6 +533,33 @@
           "os:": "Openserver5",
           "base": "Openserver5",
           "mac_address": "08:00:27:12:F4:1A"
+        },
+        "131": {
+          "node_name": "kate1",
+          "description": "VirtualBox VM cluster node 1",
+          "type": "node",
+          "group": "k8s",
+          "os:": "Rocky8",
+          "base": "maxlab_vmlab",
+          "mac_address": "08:00:27:04:c5:c4"
+        },
+        "132": {
+          "node_name": "kate2",
+          "description": "VirtualBox VM cluster node 2",
+          "type": "node",
+          "group": "k8s",
+          "os:": "Rocky8",
+          "base": "maxlab_vmlab",
+          "mac_address": "08:00:27:88:cb:ad"
+        },
+        "133": {
+          "node_name": "kate3",
+          "description": "VirtualBox VM cluster node 3",
+          "type": "node",
+          "group": "k8s",
+          "os:": "Rocky8",
+          "base": "maxlab_vmlab",
+          "mac_address": "08:00:27:e2:a6:5e"
         },
         "246": {
           "node_name": "coalbridge1",
