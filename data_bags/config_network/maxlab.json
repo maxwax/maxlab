@@ -561,6 +561,33 @@
           "base": "maxlab_vmlab",
           "mac_address": "08:00:27:e2:a6:5e"
         },
+        "134": {
+          "node_name": "kate4",
+          "description": "VirtualBox VM cluster node 4",
+          "type": "node",
+          "group": "k8s",
+          "os:": "Rocky8",
+          "base": "maxlab_vmlab",
+          "mac_address": "08:00:27:04:c5:c4"
+        },
+        "135": {
+          "node_name": "kate5",
+          "description": "VirtualBox VM cluster node 5",
+          "type": "node",
+          "group": "k8s",
+          "os:": "Rocky8",
+          "base": "maxlab_vmlab",
+          "mac_address": "08:00:27:b9:c4:73"
+        },
+        "136": {
+          "node_name": "kate6",
+          "description": "VirtualBox VM cluster node 6",
+          "type": "node",
+          "group": "k8s",
+          "os:": "Rocky8",
+          "base": "maxlab_vmlab",
+          "mac_address": "08:00:27:60:0e:4b"
+        },
         "246": {
           "node_name": "coalbridge1",
           "description": "Gigabit port 2 on coalbox hypervisor",
