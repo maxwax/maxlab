@@ -568,7 +568,7 @@
           "group": "k8s",
           "os:": "Rocky8",
           "base": "maxlab_vmlab",
-          "mac_address": "08:00:27:04:c5:c4"
+          "mac_address": "08:00:27:c6:c8:35"
         },
         "135": {
           "node_name": "kate5",
