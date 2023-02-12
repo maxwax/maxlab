@@ -291,18 +291,9 @@
           "base": "maxlab_sarko",
           "mac_address": "44:85:00:4D:BF:B6"
         },
-        "52": {
-          "node_name": "metal",
-          "description": "HP Elitebook 940 G8 with Network dongle",
-          "type": "node",
-          "group": "laptop",
-          "os:": "Fedora Linux",
-          "base": "maxlab_sarko",
-          "mac_address": "a0:ce:c8:c0:f4:03"
-        },
         "53": {
           "node_name": "metalwifi",
-          "description": "HP Elitebook 940 G8 integrated WIFI",
+          "description": "HP Elitebook 840 G8 integrated WIFI",
           "type": "node",
           "group": "laptop",
           "os:": "Fedora Linux",
@@ -311,7 +302,7 @@
         },
         "54": {
           "node_name": "metaldock",
-          "description": "HP Elitebook 940 G8 on Thunderbolt Dock",
+          "description": "HP Elitebook 840 G8 on Thunderbolt Dock",
           "type": "node",
           "group": "laptop",
           "os:": "Fedora Linux",
@@ -344,24 +335,6 @@
           "os:": "ios",
           "base": "_na",
           "mac_address": "14:95:ce:ea:94:14"
-        },
-        "81": {
-          "node_name": "lenovoflash1",
-          "description": "Lenovo B590 Hypervisor",
-          "type": "node",
-          "group": "hypervisor",
-          "os:": "Proxmox",
-          "base": "maxlab_proxmox",
-          "mac_address": "3c:97:0e:a8:f2:e2"
-        },
-        "82": {
-          "node_name": "lenovoflash2",
-          "description": "Lenovo B590 Hypervisor",
-          "type": "node",
-          "group": "hypervisor",
-          "os:": "Proxmox",
-          "base": "maxlab_proxmox",
-          "mac_address": "3c:97:0e:a7:8f:b8"
         },
         "95": {
           "node_name": "toshiprox",
@@ -408,15 +381,6 @@
           "base": "maxlab_vmlab",
           "mac_address": "A2:B0:07:BD:2F:FB"
         },
-        "104": {
-          "node_name": "fedoravm",
-          "description": "Fedora testing in a VM",
-          "type": "node",
-          "group": "vmlab",
-          "os:": "Fedora",
-          "base": "maxlab_vmlab",
-          "mac_address": "08:00:27:9D:6E:CF"
-        },
         "105": {
           "node_name": "bank",
           "description": "Core Infrastructure (DNS, DHCP, NTP) via Chef",
@@ -444,24 +408,6 @@
           "base": "maxlab_vmlab",
           "mac_address": "62:a8:b3:f3:86:c7"
         },
-        "110": {
-          "node_name": "core-centos",
-          "description": "Core Infrastructure (DNS, DHCP, NTP)",
-          "type": "node",
-          "group": "infra",
-          "os:": "CentOS",
-          "base": "maxlab_vmlab",
-          "mac_address": "8e:28:fa:de:d7:9f"
-        },
-        "111": {
-          "node_name": "repo-centos",
-          "description": "Repository Infrastructure (TFTP, HTTP)",
-          "type": "node",
-          "group": "infra",
-          "os:": "CentOS",
-          "base": "maxlab_vmlab",
-          "mac_address": "5E:CC:11:BD:17:19"
-        },
         "120": {
           "node_name": "plex",
           "description": "Plex Media Server on coalbox",
@@ -470,15 +416,6 @@
           "os:": "CentOS",
           "base": "maxlab_vmlab",
           "mac_address": "66:74:fb:01:9a:9c"
-        },
-        "121": {
-          "node_name": "fedora",
-          "description": "Fedora experimental node",
-          "type": "node",
-          "group": "vmlab",
-          "os:": "Fedora",
-          "base": "maxlab_vmlab",
-          "mac_address": "56:0c:07:4b:fb:72"
         },
         "123": {
           "node_name": "exper",
@@ -497,33 +434,6 @@
           "os:": "CentOS",
           "base": "maxlab_vmlab",
           "mac_address": "12:6c:b6:0a:71:a2"
-        },
-        "125": {
-          "node_name": "kub1",
-          "description": "Kubernetes K1 cluster node1",
-          "type": "node",
-          "group": "k8s",
-          "os:": "Rocky8",
-          "base": "maxlab_vmlab",
-          "mac_address": "fa:32:a8:b8:08:31"
-        },
-        "126": {
-          "node_name": "kub2",
-          "description": "Kubernetes K1 cluster node2",
-          "type": "node",
-          "group": "k8s",
-          "os:": "Rock8",
-          "base": "maxlab_vmlab",
-          "mac_address": "5e:b3:f6:68:98:e6"
-        },
-        "127": {
-          "node_name": "kub3",
-          "description": "Kubernetes K1 cluster node3",
-          "type": "node",
-          "group": "k8s",
-          "os:": "Rocky8",
-          "base": "maxlab_vmlab",
-          "mac_address": "22:9c:5a:c6:76:0f"
         },
         "130": {
           "node_name": "sco5",
@@ -587,6 +497,60 @@
           "os:": "Rocky8",
           "base": "maxlab_vmlab",
           "mac_address": "08:00:27:60:0e:4b"
+        },
+        "141": {
+          "node_name": "kube1",
+          "description": "Kubernetes cluster kube master node 1",
+          "type": "node",
+          "group": "k8s",
+          "os:": "Rocky8",
+          "base": "maxlab_vmlab",
+          "mac_address": "fa:32:a8:b8:08:31"
+        },
+        "142": {
+          "node_name": "kube2",
+          "description": "Kubernetes cluster kube master node 2",
+          "type": "node",
+          "group": "k8s",
+          "os:": "Rocky8",
+          "base": "maxlab_vmlab",
+          "mac_address": "5e:b3:f6:68:98:e6"
+        },
+        "143": {
+          "node_name": "kube3",
+          "description": "Kubernetes cluster kube master node 3",
+          "type": "node",
+          "group": "k8s",
+          "os:": "Rocky8",
+          "base": "maxlab_vmlab",
+          "mac_address": "22:9c:5a:c6:76:0f"
+        },
+        "144": {
+          "node_name": "kube4",
+          "description": "Kubernetes cluster kube worker node 1",
+          "type": "node",
+          "group": "k8s",
+          "os:": "Rocky8",
+          "base": "maxlab_vmlab",
+          "mac_address": "7e:13:b5:48:96:62"
+        },
+        "145": {
+          "node_name": "kube5",
+          "description": "Kubernetes cluster kube worker node 2",
+          "type": "node",
+          "group": "k8s",
+          "os:": "Rocky8",
+          "base": "maxlab_vmlab",
+          "mac_address": "d6:77:da:b5:65:4a"
+        },
+        "146": {
+          "node_name": "kube6",
+          "description": "Kubernetes cluster kube worker node 3",
+          "type": "node",
+          "group": "k8s",
+          "os:": "Rocky8",
+          "base": "maxlab_vmlab",
+          "mac_address": "ce:e3:67:39:75:de"
         },
         "246": {
           "node_name": "coalbridge1",
