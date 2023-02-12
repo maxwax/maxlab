@@ -104,4 +104,9 @@ default['prometheus']['server']['scrape_configs'] = {
       'targets': [ 'coalbox.maxlab:9100' ],
     },
   },
+  'toshiprox.maxlab': {
+    'static_configs': {
+      'targets': [ 'toshiprox.maxlab:9100' ],
+    },
+  },
 }
