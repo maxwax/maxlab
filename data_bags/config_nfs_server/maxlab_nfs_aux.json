@@ -18,6 +18,11 @@
         "mode": "0755",
         "comment": "Archive storage",
         "clients": {
+          "depot.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
           "nextpro.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
