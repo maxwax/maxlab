@@ -18,6 +18,16 @@
         "mode": "0755",
         "comment": "Archives storage",
         "clients": {
+          "filer.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "aux.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
           "nextpro.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
@@ -44,114 +54,6 @@
             ]
           },
           "mechsarkowifi.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "metalwifi.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "metaldock.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          }
-        }
-      },
-      "/srv/terawd": {
-        "enabled": true,
-        "owner": "maxwell",
-        "group": "maxwell",
-        "mode": "0755",
-        "comment": "Archives storage",
-        "clients": {
-          "nextpro.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "nextprowifi.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "sarko.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "sarkowifi.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "mechsarko.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "mechsarkowifi.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "central.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "metalwifi.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "metaldock.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          }
-        }
-      },
-      "/srv/depotroot": {
-        "enabled": true,
-        "owner": "maxwell",
-        "group": "maxwell",
-        "mode": "0755",
-        "comment": "Archives storage",
-        "clients": {
-          "nextpro.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "nextprowifi.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "sarko.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "sarkowifi.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "mechsarko.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "mechsarkowifi.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "central.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
@@ -168,7 +70,6 @@
           }
         }
       }
-
     }
   }
 }
