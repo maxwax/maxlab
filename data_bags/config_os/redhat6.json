@@ -18,7 +18,7 @@
   "default_packages": [
     "vim", "atop", "htop", "nc", "tree", "wget", "policycoreutils-python"
   ],
-  "default_scripts": {
+  "default_os_scripts": {
     "/etc": {
       "bashrc": {
         "subdir": "etc",

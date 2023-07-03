@@ -36,7 +36,8 @@
     "tree",
     "vim",
     "wget",
-    "which"
+    "which",
+    "ncdu"
   ],
   "default_packages_bare_metal": [
     "lm_sensors"
