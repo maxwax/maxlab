@@ -489,6 +489,42 @@
           "base": "maxlab_vmlab",
           "mac_address": "08:00:27:60:0e:4b"
         },
+        "137": {
+          "node_name": "rocky92a",
+          "description": "Rocky Linux 92 node A",
+          "type": "node",
+          "group": "vmlab",
+          "os:": "Rocky9",
+          "base": "maxlab_vmlab",
+          "mac_address": "08:00:27:99:2c:ca"
+        },
+        "138": {
+          "node_name": "rocky92b",
+          "description": "Rocky Linux 92 node B",
+          "type": "node",
+          "group": "vmlab",
+          "os:": "Rocky9",
+          "base": "maxlab_vmlab",
+          "mac_address": "08:00:27:ba:0e:90"
+        },
+        "139": {
+          "node_name": "rocky88",
+          "description": "Rocky Linux 8.8",
+          "type": "node",
+          "group": "vmlab",
+          "os:": "Rocky8",
+          "base": "maxlab_vmlab",
+          "mac_address": "08:00:27:78:6e:94"
+        },
+        "140": {
+          "node_name": "rocky7",
+          "description": "Rocky Linux 7",
+          "type": "node",
+          "group": "vmlab",
+          "os:": "Rocky7",
+          "base": "maxlab_vmlab",
+          "mac_address": "08:00:27:27:37:a5"
+        },
         "141": {
           "node_name": "kube1",
           "description": "Kubernetes cluster kube master node 1",
