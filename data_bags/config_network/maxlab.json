@@ -508,7 +508,7 @@
           "mac_address": "08:00:27:ba:0e:90"
         },
         "139": {
-          "node_name": "rocky88",
+          "node_name": "rocky88a",
           "description": "Rocky Linux 8.8",
           "type": "node",
           "group": "vmlab",
