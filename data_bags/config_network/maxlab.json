@@ -579,6 +579,15 @@
           "base": "maxlab_vmlab",
           "mac_address": "ce:e3:67:39:75:de"
         },
+        "147": {
+          "node_name": "rocky88b",
+          "description": "Rocky Linux 8.8",
+          "type": "node",
+          "group": "vmlab",
+          "os:": "Rocky8",
+          "base": "maxlab_vmlab",
+          "mac_address": "08:00:27:43:ff:b3"
+        },
         "246": {
           "node_name": "coalbridge1",
           "description": "Gigabit port 2 on coalbox hypervisor",
