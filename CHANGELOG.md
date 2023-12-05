@@ -1,6 +1,10 @@
 
 # maxlab CHANGELOG
 
+# 1.3.1
+
+* Add Macbook Pro M1 to config_network for DNS/DHCP
+
 # 1.3.0
 
 * Added OS rocky8 to config_os data bags
