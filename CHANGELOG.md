@@ -1,6 +1,11 @@
 
 # maxlab CHANGELOG
 
+# 1.3.2
+
+* Add correct dock Ethernet MAC address to config_network for Macbook Pro work
+* Rename work laptop pinndock and pinnwifi
+
 # 1.3.1
 
 * Add Macbook Pro M1 to config_network for DNS/DHCP
