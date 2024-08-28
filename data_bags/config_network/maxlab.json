@@ -606,6 +606,24 @@
           "base": "maxlab_vmlab",
           "mac_address": "08:00:27:43:ff:b3"
         },
+        "148": {
+          "node_name": "splunksearch2",
+          "description": "Rocky Linux 8.10 Splunk Server Lab",
+          "type": "node",
+          "group": "vmlab",
+          "os:": "Rocky8",
+          "base": "maxlab_vmlab",
+          "mac_address": "08:00:27:ec:09:30"
+        },
+        "149": {
+          "node_name": "splunkclient",
+          "description": "Rocky Linux 8.10 Splunk Client Lab",
+          "type": "node",
+          "group": "vmlab",
+          "os:": "Rocky8",
+          "base": "maxlab_vmlab",
+          "mac_address": "08:00:27:0c:49:72"
+        },
         "246": {
           "node_name": "coalbridge1",
           "description": "Gigabit port 2 on coalbox hypervisor",
