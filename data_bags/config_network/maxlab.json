@@ -607,7 +607,7 @@
           "mac_address": "08:00:27:43:ff:b3"
         },
         "148": {
-          "node_name": "splunksearch2",
+          "node_name": "splunksearch",
           "description": "Rocky Linux 8.10 Splunk Server Lab",
           "type": "node",
           "group": "vmlab",
