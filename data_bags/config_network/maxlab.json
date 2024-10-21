@@ -417,6 +417,60 @@
           "base": "maxlab_vmlab",
           "mac_address": "62:a8:b3:f3:86:c7"
         },
+        "111": {
+          "node_name": "newplex",
+          "description": "Plex Media Server on coalbox",
+          "type": "node",
+          "group": "plex",
+          "os:": "RHEL",
+          "base": "maxlab_vmlab",
+          "mac_address": "72:12:b1:ef:58:6f"
+        },
+        "112": {
+          "node_name": "newpixie",
+          "description": "Archive File Server",
+          "type": "node",
+          "group": "infra",
+          "os:": "RHEL",
+          "base": "maxlab_vmlab",
+          "mac_address": "d2:20:39:a1:28:7e"
+        },
+        "113": {
+          "node_name": "newmetrics",
+          "description": "Metrics Server",
+          "type": "node",
+          "group": "infra",
+          "os:": "RHEL",
+          "base": "maxlab_vmlab",
+          "mac_address": "96:32:a6:8d:28:83"
+        },
+        "114": {
+          "node_name": "newchef",
+          "description": "Chef Server",
+          "type": "node",
+          "group": "infra",
+          "os:": "RHEL",
+          "base": "maxlab_vmlab",
+          "mac_address": "16:f2:29:3c:af:6b"
+        },
+        "115": {
+          "node_name": "newrepo",
+          "description": "File Server",
+          "type": "node",
+          "group": "infra",
+          "os:": "RHEL",
+          "base": "maxlab_vmlab",
+          "mac_address": "3a:2d:a3:cc:48:af"
+        },
+        "116": {
+          "node_name": "mule",
+          "description": "File Server",
+          "type": "node",
+          "group": "infra",
+          "os:": "RHEL",
+          "base": "maxlab_vmlab",
+          "mac_address": "b6:f4:af:20:0c:f8"
+        },
         "120": {
           "node_name": "plex",
           "description": "Plex Media Server on coalbox",
