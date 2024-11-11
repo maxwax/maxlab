@@ -48,6 +48,14 @@
         "browseable": "yes",
         "read only": "no",
         "create mask": "0700"
+      },
+      "library-scans": {
+        "path": "/srv/filerdata/library-scans",
+        "comment": "Library Scans Archives",
+        "valid users": [ "maxwell" ],
+        "browseable": "yes",
+        "read only": "no",
+        "create mask": "0700"
       }
     }
   }
