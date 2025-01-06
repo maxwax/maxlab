@@ -678,6 +678,15 @@
           "base": "maxlab_vmlab",
           "mac_address": "08:00:27:0c:49:72"
         },
+        "244": {
+          "node_name": "miniframe",
+          "description": "HP Elite SFF 805 Proxmox Host",
+          "type": "node",
+          "group": "hypervisor",
+          "os:": "Proxmox",
+          "base": "maxlab_proxmox",
+          "mac_address": "28:c5:c8:79:03:4d"
+        },
         "246": {
           "node_name": "coalbridge1",
           "description": "Gigabit port 2 on coalbox hypervisor",
