@@ -1,6 +1,10 @@
 
 # maxlab CHANGELOG
 
+# Many years later
+
+Testing change after renaming `master` to `main`
+
 # 1.3.2
 
 * Add correct dock Ethernet MAC address to config_network for Macbook Pro work
