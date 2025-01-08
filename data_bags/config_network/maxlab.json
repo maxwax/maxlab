@@ -111,7 +111,7 @@
           "base": "_na",
           "mac_address": "C4:04:15:44:CF:11"
         },
-        "5": {
+        "4": {
           "node_name": "wap",
           "description": "Netgear R7800",
           "type": "appliances",
@@ -263,6 +263,24 @@
           "os:": "Linux",
           "base": "maxlab_chaos",
           "mac_address": "d0:37:45:2a:fd:ad"
+        },
+        "47": {
+          "node_name": "alloy",
+          "description": "HP Elitebook 845 G10 Mediatek Wifi",
+          "type": "node",
+          "group": "laptop",
+          "os:": "Linux",
+          "base": "maxlab_alloy",
+          "mac_address": "76:bb:15:91:28:d8"
+        },
+        "48": {
+          "node_name": "alloydock",
+          "description": "HP elitebook 845 G10 Wired Thunderbolt Dock",
+          "type": "node",
+          "group": "laptop",
+          "os:": "Linux",
+          "base": "maxlab_chaos",
+          "mac_address": "2c:58:b9:69:f6:5f"
         },
         "50": {
           "node_name": "mechsarko",
