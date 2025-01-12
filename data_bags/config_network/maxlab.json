@@ -300,8 +300,17 @@
           "base": "maxlab_sarko",
           "mac_address": "44:85:00:4D:BF:B6"
         },
+        "52": {
+          "node_name": "ugreen",
+          "description": "Ugreen usb-c adapter for laptops",
+          "type": "node",
+          "group": "dongle",
+          "os:": "dongle",
+          "base": "dongle",
+          "mac_address": "c8:a3:62:67:48:61"
+        },
         "53": {
-          "node_name": "metalwifi",
+          "node_name": "metal",
           "description": "HP Elitebook 840 G8 integrated WIFI",
           "type": "node",
           "group": "laptop",
