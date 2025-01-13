@@ -256,12 +256,12 @@
           "mac_address": "44:85:00:4d:84:51"
         },
         "46": {
-          "node_name": "chaoswifiwhite",
-          "description": "Toshiba Z40 laptop chaosmonkey logo (WIFI White Dongle)",
+          "node_name": "metalwhite",
+          "description": "HP Elitebook 840 G8 Metal via tp-link USB-A Ethernet adapter",
           "type": "node",
           "group": "laptop",
-          "os:": "Linux",
-          "base": "maxlab_chaos",
+          "os:": "Fedora Linux",
+          "base": "maxlab_sarko",
           "mac_address": "d0:37:45:2a:fd:ad"
         },
         "47": {
