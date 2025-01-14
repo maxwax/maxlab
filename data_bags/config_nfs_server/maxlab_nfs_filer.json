@@ -58,7 +58,7 @@
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
           },
-          "metal.maxlab": {
+          "metalwifi.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
@@ -231,7 +231,7 @@
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
           },
-          "metal.maxlab": {
+          "metalwifi.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
@@ -276,12 +276,7 @@
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
           },
-          "metal.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "metalwhite.maxlab": {
+          "metalwifi.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]

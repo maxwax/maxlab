@@ -58,7 +58,12 @@
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
           },
-          "metal.maxlab": {
+          "metalwifi.maxlab": {
+            "options": [
+              "rw", "async", "no_root_squash", "no_all_squash"
+            ]
+          },
+          "metalwhite.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
@@ -117,12 +122,12 @@
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
           },
-          "metal.maxlab": {
+          "metalwifi.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
           },
-          "metal.maxlab": {
+          "metalwhite.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
@@ -181,12 +186,12 @@
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
           },
-          "metal.maxlab": {
+          "metalwifi.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
           },
-          "metal.maxlab": {
+          "metalwhite.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
@@ -225,12 +230,12 @@
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
           },
-          "metal.maxlab": {
+          "metalwifi.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
           },
-          "metal.maxlab": {
+          "metalwifi.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
@@ -269,12 +274,7 @@
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
           },
-          "metal.maxlab": {
-            "options": [
-              "rw", "async", "no_root_squash", "no_all_squash"
-            ]
-          },
-          "metal.maxlab": {
+          "metalwifi.maxlab": {
             "options": [
               "rw", "async", "no_root_squash", "no_all_squash"
             ]
