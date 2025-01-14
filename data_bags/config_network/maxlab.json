@@ -310,7 +310,7 @@
           "mac_address": "c8:a3:62:67:48:61"
         },
         "53": {
-          "node_name": "metal",
+          "node_name": "metalwifi",
           "description": "HP Elitebook 840 G8 integrated WIFI",
           "type": "node",
           "group": "laptop",
