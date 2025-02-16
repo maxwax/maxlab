@@ -928,7 +928,7 @@
           "group": "infra",
           "os:": "CentOS",
           "base": "maxlab_vmlab",
-          "mac_address": "66:F9:18:6B:10:DF"
+          "mac_address": "BC:24:11:AF:8B:48"
         },
         "120": {
           "node_name": "plex",
@@ -937,7 +937,7 @@
           "group": "plex",
           "os:": "CentOS",
           "base": "maxlab_vmlab",
-          "mac_address": "E6:22:76:BA:A4:85"
+          "mac_address": "BC:24:11:AC:aB:a5"
         }
       }
     }
