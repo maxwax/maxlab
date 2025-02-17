@@ -937,7 +937,7 @@
           "group": "plex",
           "os:": "CentOS",
           "base": "maxlab_vmlab",
-          "mac_address": "BC:24:11:AC:aB:a5"
+          "mac_address": "66:74:fb:01:9a:9c"
         }
       }
     }
