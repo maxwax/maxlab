@@ -4,9 +4,9 @@
   "general": {
     "doc": "Real users, etc.",
     "min": 1000,
-    "max": 1099,
-    "users": [ "maxwell" ],
-    "groups": [ "maxwell" ]
+    "max": 1500,
+    "users": [ "maxwell", "ansible" ],
+    "groups": [ "maxwell", "ansible" ]
   },
   "plex": {
     "doc": "Plex Media Server",

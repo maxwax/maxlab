@@ -1,6 +1,9 @@
 {
   "id": "maxlab_global",
   "doc": "Global users in maxlab",
+  "ansible": {
+    "gid": 1500 
+  },
   "maxwell": {
     "gid": 1000
   },
