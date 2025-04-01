@@ -1,6 +1,14 @@
 {
   "id": "maxlab_global",
   "doc": "Global users in maxlab",
+  "ansible": {
+    "doc": "Ansible automation",
+    "uid": 1500,
+    "group": "ansible",
+    "other_groups": [ ],
+    "fullname": "Ansible automation",
+    "shell": "/bin/bash"
+  },
   "maxwell": {
     "doc": "Normal user also enables samba access",
     "uid": 1000,
