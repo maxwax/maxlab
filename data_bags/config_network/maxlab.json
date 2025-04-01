@@ -535,175 +535,49 @@
           "mac_address": "08:00:27:12:F4:1A"
         },
         "131": {
-          "node_name": "kate1",
-          "description": "VirtualBox VM cluster node 1",
+          "node_name": "rocky1",
+          "description": "Ansible Lab node 1",
           "type": "node",
-          "group": "k8s",
+          "group": "vmlab",
           "os:": "Rocky8",
           "base": "maxlab_vmlab",
-          "mac_address": "08:00:27:04:c5:c4"
+          "mac_address": "bc:24:11:0d:14:b5"
         },
         "132": {
-          "node_name": "kate2",
-          "description": "VirtualBox VM cluster node 2",
+          "node_name": "rocky2",
+          "description": "Ansible Lab node 2",
           "type": "node",
-          "group": "k8s",
+          "group": "vmlab",
           "os:": "Rocky8",
           "base": "maxlab_vmlab",
-          "mac_address": "08:00:27:88:cb:ad"
+          "mac_address": "bc:24:11:c9:a1:9c"
         },
         "133": {
-          "node_name": "kate3",
-          "description": "VirtualBox VM cluster node 3",
+          "node_name": "rocky3",
+          "description": "Ansible Lab node 3",
           "type": "node",
-          "group": "k8s",
+          "group": "vmlab",
           "os:": "Rocky8",
           "base": "maxlab_vmlab",
-          "mac_address": "08:00:27:e2:a6:5e"
+          "mac_address": "bc:24:11:02:34:80"
         },
         "134": {
-          "node_name": "kate4",
-          "description": "VirtualBox VM cluster node 4",
+          "node_name": "rocky4",
+          "description": "Ansible Lab node 4",
           "type": "node",
-          "group": "k8s",
+          "group": "vmlab",
           "os:": "Rocky8",
           "base": "maxlab_vmlab",
-          "mac_address": "08:00:27:c6:c8:35"
+          "mac_address": "bc:24:11:0B:8F:6E"
         },
         "135": {
-          "node_name": "kate5",
-          "description": "VirtualBox VM cluster node 5",
-          "type": "node",
-          "group": "k8s",
-          "os:": "Rocky8",
-          "base": "maxlab_vmlab",
-          "mac_address": "08:00:27:b9:c4:73"
-        },
-        "136": {
-          "node_name": "kate6",
-          "description": "VirtualBox VM cluster node 6",
-          "type": "node",
-          "group": "k8s",
-          "os:": "Rocky8",
-          "base": "maxlab_vmlab",
-          "mac_address": "08:00:27:60:0e:4b"
-        },
-        "137": {
-          "node_name": "rocky92a",
-          "description": "Rocky Linux 92 node A",
-          "type": "node",
-          "group": "vmlab",
-          "os:": "Rocky9",
-          "base": "maxlab_vmlab",
-          "mac_address": "08:00:27:99:2c:ca"
-        },
-        "138": {
-          "node_name": "rocky92b",
-          "description": "Rocky Linux 92 node B",
-          "type": "node",
-          "group": "vmlab",
-          "os:": "Rocky9",
-          "base": "maxlab_vmlab",
-          "mac_address": "08:00:27:ba:0e:90"
-        },
-        "139": {
-          "node_name": "rocky88a",
-          "description": "Rocky Linux 8.8",
+          "node_name": "rocky5",
+          "description": "Ansible Lab node 5",
           "type": "node",
           "group": "vmlab",
           "os:": "Rocky8",
           "base": "maxlab_vmlab",
-          "mac_address": "08:00:27:78:6e:94"
-        },
-        "140": {
-          "node_name": "rocky7",
-          "description": "Rocky Linux 7",
-          "type": "node",
-          "group": "vmlab",
-          "os:": "Rocky7",
-          "base": "maxlab_vmlab",
-          "mac_address": "08:00:27:27:37:a5"
-        },
-        "141": {
-          "node_name": "kube1",
-          "description": "Kubernetes cluster kube master node 1",
-          "type": "node",
-          "group": "k8s",
-          "os:": "Rocky8",
-          "base": "maxlab_vmlab",
-          "mac_address": "fa:32:a8:b8:08:31"
-        },
-        "142": {
-          "node_name": "kube2",
-          "description": "Kubernetes cluster kube master node 2",
-          "type": "node",
-          "group": "k8s",
-          "os:": "Rocky8",
-          "base": "maxlab_vmlab",
-          "mac_address": "5e:b3:f6:68:98:e6"
-        },
-        "143": {
-          "node_name": "kube3",
-          "description": "Kubernetes cluster kube master node 3",
-          "type": "node",
-          "group": "k8s",
-          "os:": "Rocky8",
-          "base": "maxlab_vmlab",
-          "mac_address": "22:9c:5a:c6:76:0f"
-        },
-        "144": {
-          "node_name": "kube4",
-          "description": "Kubernetes cluster kube worker node 1",
-          "type": "node",
-          "group": "k8s",
-          "os:": "Rocky8",
-          "base": "maxlab_vmlab",
-          "mac_address": "7e:13:b5:48:96:62"
-        },
-        "145": {
-          "node_name": "kube5",
-          "description": "Kubernetes cluster kube worker node 2",
-          "type": "node",
-          "group": "k8s",
-          "os:": "Rocky8",
-          "base": "maxlab_vmlab",
-          "mac_address": "d6:77:da:b5:65:4a"
-        },
-        "146": {
-          "node_name": "kube6",
-          "description": "Kubernetes cluster kube worker node 3",
-          "type": "node",
-          "group": "k8s",
-          "os:": "Rocky8",
-          "base": "maxlab_vmlab",
-          "mac_address": "ce:e3:67:39:75:de"
-        },
-        "147": {
-          "node_name": "rocky88b",
-          "description": "Rocky Linux 8.8",
-          "type": "node",
-          "group": "vmlab",
-          "os:": "Rocky8",
-          "base": "maxlab_vmlab",
-          "mac_address": "08:00:27:43:ff:b3"
-        },
-        "148": {
-          "node_name": "splunksearch",
-          "description": "Rocky Linux 8.10 Splunk Server Lab",
-          "type": "node",
-          "group": "vmlab",
-          "os:": "Rocky8",
-          "base": "maxlab_vmlab",
-          "mac_address": "08:00:27:ec:09:30"
-        },
-        "149": {
-          "node_name": "splunkclient",
-          "description": "Rocky Linux 8.10 Splunk Client Lab",
-          "type": "node",
-          "group": "vmlab",
-          "os:": "Rocky8",
-          "base": "maxlab_vmlab",
-          "mac_address": "08:00:27:0c:49:72"
+          "mac_address": "bc:24:11:34:09:95"
         },
         "244": {
           "node_name": "miniframe",
@@ -713,24 +587,6 @@
           "os:": "Proxmox",
           "base": "maxlab_proxmox",
           "mac_address": "28:c5:c8:79:03:4d"
-        },
-        "246": {
-          "node_name": "coalbridge1",
-          "description": "Gigabit port 2 on coalbox hypervisor",
-          "type": "node",
-          "group": "hypervisor",
-          "os:": "Proxmox",
-          "base": "maxlab_proxmox",
-          "mac_address": "00:22:64:89:18:be"
-        },
-        "247": {
-          "node_name": "coalbridge2",
-          "description": "Gigabit port 3 on coalbox hypervisor",
-          "type": "node",
-          "group": "hypervisor",
-          "os:": "Proxmox",
-          "base": "maxlab_proxmox",
-          "mac_address": "00:22:64:89:45:13"
         },
         "248": {
           "node_name": "depot",
