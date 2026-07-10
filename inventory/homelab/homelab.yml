@@ -1,0 +1,53 @@
+---
+# Inventory for Maxwell's homelab - equivalent to production
+
+all:
+  children:
+
+    # Virtual machines using current Red Hat 10, Rocky 10 or equivalent
+    targets_rhel10:
+      hosts:
+        mockplex.maxlab: 
+          ansible_host: 192.168.56.107
+        mockpixie.maxlab: 
+          ansible_host: 192.168.56.108
+        mockmetrics.maxlab: 
+          ansible_host: 192.168.56.109
+        mockrepo.maxlab: 
+          ansible_host: 192.168.56.102
+
+    # Virtual machines limited to RHEL8 due to host hardware limitations
+    targets_rhel8:
+      hosts:
+        mockcore.maxlab: 
+          ansible_host: 192.168.56.101
+        mockfiler.maxlab: 
+          ansible_host: 192.168.56.121
+        mockaux.maxlab: 
+          ansible_host: 192.168.56.122
+        mockdepot.maxlab: 
+          ansible_host: 192.168.56.123
+
+    dns_servers:
+      hosts:
+        mockcore.maxlab:
+
+    dhcp_servers:
+      hosts:
+        mockcore.maxlab:
+
+    nfs_servers:
+      hosts:
+        mockpixie.maxlab:
+        mockfiler.maxlab:
+        mockaux.maxlab:
+        mockdepot.maxlab:
+
+    grafana_server:
+      hosts:
+        mockmetrics.maxlab:
+
+    mockplex_server:
+      hosts:
+        mockplex.maxlab:
+
